@@ -1,0 +1,25 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<svg viewBox="-2 -4 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Layer_1" transform="translate(-2, -4)" style="enable-background:new 0 0 32 32">
+    <g id="Image">
+      <path d="M29, 4L3, 4C2.5, 4 2, 4.5 2, 5L2, 27C2, 27.5 2.5, 28 3, 28L29, 28C29.5, 28 30, 27.5 30, 27L30, 5C30, 4.5 29.5, 4 29, 4zM28, 26L4, 26L4, 6L28, 6L28, 26z" style="fill:#D1D1D1" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(-2.00000190734863, -4.00000023841858)" style="enable-background:new 0 0 32 32">
+    <g id="Image">
+      <circle cx="21" cy="11" r="3" style="fill:#D1D1D1" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(-2, -4)" style="enable-background:new 0 0 32 32">
+    <g id="Image">
+      <polygon points="20,24 10,14 6,18 6,24  " style="fill:#D1D1D1" />
+    </g>
+  </g>
+  <g id="Layer_1" transform="translate(-2, -4)" style="enable-background:new 0 0 32 32">
+    <g id="Image">
+      <g class="st1">
+        <polygon points="22,24 18,20 20,18 26,24   " style="fill:#D1D1D1" />
+      </g>
+    </g>
+  </g>
+</svg>

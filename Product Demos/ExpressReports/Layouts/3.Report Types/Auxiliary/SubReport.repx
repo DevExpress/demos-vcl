@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="25.2.1.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v25.2, Version=25.2.1.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Report1" DisplayName="SubReport" PageWidthF="850" PageHeightF="1100" Version="25.2" RequestParameters="false" FilterString="[CustomerID] = ?customerIDParameter And [PurchaseDate] Between(?dateRangeParameter_Start, ?dateRangeParameter_End)" DataMember="Orders" DataSource="#Ref-0">
+  <Parameters>
+    <Item1 Ref="3" Visible="false" ValueInfo="32" Name="customerIDParameter" Type="#Ref-2" />
+    <Item2 Ref="6" Description="Date range" ValueSourceSettings="#Ref-4" Name="dateRangeParameter" Type="#Ref-5" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="7" ControlType="TopMarginBand" Name="topMarginBand1">
+      <StylePriority Ref="8" UseBorderDashStyle="false" />
+    </Item1>
+    <Item2 Ref="9" ControlType="GroupHeaderBand" Name="GroupHeader0" HeightF="23" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+      <GroupFields>
+        <Item1 Ref="10" FieldName="CustomerID" />
+      </GroupFields>
+      <Controls>
+        <Item1 Ref="11" ControlType="XRTable" Name="xrTable1" TextAlignment="TopLeft" SizeF="628,23" LocationFloat="0,0" Font="Tahoma, 9.75pt, style=Bold" ForeColor="Black" BackColor="255,210,215,227" Padding="0,0,0,0,100" BorderColor="255,174,182,193">
+          <Rows>
+            <Item1 Ref="12" ControlType="XRTableRow" Name="xrTableRow1" Weight="1" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="13" ControlType="XRTableCell" Name="xrTableCell1" Weight="0.12738853503184713" Text="No." TextAlignment="MiddleCenter" Font="Tahoma, 8.25pt, style=Bold" Padding="2,2,0,0,100" Borders="All" />
+                <Item2 Ref="14" ControlType="XRTableCell" Name="xrTableCell10" Weight="0.10828025477707007" Text="ID" TextAlignment="MiddleCenter" Font="Tahoma, 8.25pt, style=Bold" Padding="2,2,0,0,100" Borders="Top, Right, Bottom" />
+                <Item3 Ref="15" ControlType="XRTableCell" Name="xrTableCell2" Weight="0.1910828025477707" Text="Purchase Date" TextAlignment="MiddleCenter" Font="Tahoma, 8.25pt, style=Bold" Padding="2,2,0,0,100" Borders="Top, Right, Bottom" />
+                <Item4 Ref="16" ControlType="XRTableCell" Name="xrTableCell13" Weight="0.14331210191082802" Text="Time" TextAlignment="MiddleCenter" Font="Tahoma, 8.25pt, style=Bold" Padding="2,2,0,0,100" Borders="Top, Right, Bottom" />
+                <Item5 Ref="17" ControlType="XRTableCell" Name="xrTableCell16" Weight="0.2484076433121019" Text="Payment Type" TextAlignment="MiddleCenter" Font="Tahoma, 8.25pt, style=Bold" Padding="2,2,0,0,100" Borders="Top, Right, Bottom" />
+                <Item6 Ref="18" ControlType="XRTableCell" Name="xrTableCell3" Weight="0.18152866242038215" Text="Amount" TextAlignment="MiddleCenter" Font="Tahoma, 8.25pt, style=Bold" Padding="2,2,0,0,100" Borders="Top, Right, Bottom" />
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item2>
+    <Item3 Ref="19" ControlType="DetailBand" Name="Detail" HeightF="19" TextAlignment="TopLeft" EvenStyleName="EvenStyle" OddStyleName="OddStyle" Padding="0,0,0,0,100">
+      <Controls>
+        <Item1 Ref="20" ControlType="XRTable" Name="xrTable2" TextAlignment="TopLeft" SizeF="628,19" LocationFloat="0,0" Font="Times New Roman, 9.75pt" Padding="0,0,0,0,100">
+          <Rows>
+            <Item1 Ref="21" ControlType="XRTableRow" Name="xrTableRow2" Weight="1" TextAlignment="TopLeft" EvenStyleName="EvenStyle" OddStyleName="OddStyle" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="22" ControlType="XRTableCell" Name="clNo" Weight="0.12738853503184713" TextAlignment="MiddleCenter" Padding="2,2,0,0,100" Borders="Left, Right, Bottom">
+                  <Summary Ref="23" Running="Group" />
+                  <ExpressionBindings>
+                    <Item1 Ref="24" EventName="BeforePrint" PropertyName="Text" Expression="sumCount(ID)" />
+                  </ExpressionBindings>
+                </Item1>
+                <Item2 Ref="25" ControlType="XRTableCell" Name="clID" Weight="0.10828025477707007" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="26" EventName="BeforePrint" PropertyName="Text" Expression="ID" />
+                  </ExpressionBindings>
+                </Item2>
+                <Item3 Ref="27" ControlType="XRTableCell" Name="clDate" Weight="0.1910828025477707" TextFormatString="{0:d}" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="28" EventName="BeforePrint" PropertyName="Text" Expression="PurchaseDate" />
+                  </ExpressionBindings>
+                </Item3>
+                <Item4 Ref="29" ControlType="XRTableCell" Name="clTime" Weight="0.14331210191082802" TextFormatString="{0:t}" TextAlignment="MiddleRight" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="30" EventName="BeforePrint" PropertyName="Text" Expression="Time" />
+                  </ExpressionBindings>
+                </Item4>
+                <Item5 Ref="31" ControlType="XRTableCell" Name="clPaymentType" Weight="0.2484076433121019" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="32" EventName="BeforePrint" PropertyName="Text" Expression="PaymentType" />
+                  </ExpressionBindings>
+                </Item5>
+                <Item6 Ref="33" ControlType="XRTableCell" Name="clAmount" Weight="0.18152866242038215" TextFormatString="{0:c2}" TextAlignment="MiddleRight" Padding="2,2,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="34" EventName="BeforePrint" PropertyName="Text" Expression="PaymentAmount" />
+                  </ExpressionBindings>
+                </Item6>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item3>
+    <Item4 Ref="35" ControlType="GroupFooterBand" Name="GroupFooter0" HeightF="40" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+      <Controls>
+        <Item1 Ref="36" ControlType="XRTable" Name="xrTable3" TextAlignment="TopLeft" SizeF="628,23" LocationFloat="0,8" Font="Times New Roman, 9.75pt" Padding="0,0,0,0,100">
+          <Rows>
+            <Item1 Ref="37" ControlType="XRTableRow" Name="xrTableRow3" Weight="1" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="38" ControlType="XRTableCell" Name="clOrderCount" Weight="0.21019108280254778" TextFormatString="{0:'Order count: '#}" XlsxFormatString="&quot;Order count: &quot;#" TextAlignment="MiddleCenter" Font="Tahoma, 8.25pt, style=Bold" BackColor="255,210,215,227" Padding="2,2,0,0,100" BorderColor="255,174,182,193" Borders="All">
+                  <Summary Ref="39" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="40" EventName="BeforePrint" PropertyName="Text" Expression="sumCount(ID)" />
+                  </ExpressionBindings>
+                </Item1>
+                <Item2 Ref="41" ControlType="XRTableCell" Name="xrTableCell8" Weight="0.42038216560509556" TextAlignment="TopLeft" Padding="2,2,0,0,100" />
+                <Item3 Ref="42" ControlType="XRTableCell" Name="clTotal" Weight="0.36942675159235666" TextFormatString="Total Amount:  {0:c2}" XlsxFormatString="&quot;Total Amount: &quot;$#,##0.00" TextAlignment="MiddleCenter" Font="Tahoma, 8.25pt, style=Bold" BackColor="255,210,215,227" Padding="2,2,0,0,100" BorderColor="255,174,182,193" Borders="All">
+                  <Summary Ref="43" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="44" EventName="BeforePrint" PropertyName="Text" Expression="sumSum(PaymentAmount)" />
+                  </ExpressionBindings>
+                </Item3>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item4>
+    <Item5 Ref="45" ControlType="BottomMarginBand" Name="bottomMarginBand1" />
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="46" Name="EvenStyle" BorderStyle="Inset" Font="Tahoma, 8.25pt" ForeColor="Black" BackColor="255,239,243,250" BorderColor="255,210,215,227" Sides="Right, Bottom" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+    <Item2 Ref="47" Name="OddStyle" BorderStyle="Inset" Font="Tahoma, 8.25pt" ForeColor="Black" BackColor="Transparent" BorderColor="255,210,215,227" Sides="Right, Bottom" StringFormat="Near;Near;0;None;Character;Default" BorderWidthSerializable="1" />
+  </StyleSheet>
+  <ReportPrintOptions Ref="48" PrintOnEmptyDataSource="false" />
+  <ParameterPanelLayoutItems>
+    <Item1 Ref="49" LayoutItemType="Parameter" Parameter="#Ref-3" />
+    <Item2 Ref="50" LayoutItemType="Parameter" Parameter="#Ref-6" />
+  </ParameterPanelLayoutItems>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v25.2" Name="dsOrders1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0iZHNPcmRlcnMxIj48Q29ubmVjdGlvbiBOYW1lPSJIb21lc0Nvbm5lY3Rpb25TdHJpbmciIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IlNlbGVjdFF1ZXJ5IiBOYW1lPSJPcmRlcnMiPjxUYWJsZXM+PFRhYmxlIE5hbWU9Ik9yZGVycyIgLz48L1RhYmxlcz48Q29sdW1ucz48Q29sdW1uIFRhYmxlPSJPcmRlcnMiIE5hbWU9IklEIiAvPjxDb2x1bW4gVGFibGU9Ik9yZGVycyIgTmFtZT0iQ3VzdG9tZXJJRCIgLz48Q29sdW1uIFRhYmxlPSJPcmRlcnMiIE5hbWU9IlB1cmNoYXNlRGF0ZSIgLz48Q29sdW1uIFRhYmxlPSJPcmRlcnMiIE5hbWU9IlRpbWUiIC8+PENvbHVtbiBUYWJsZT0iT3JkZXJzIiBOYW1lPSJQYXltZW50VHlwZSIgLz48Q29sdW1uIFRhYmxlPSJPcmRlcnMiIE5hbWU9IlBheW1lbnRBbW91bnQiIC8+PC9Db2x1bW5zPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJkc09yZGVyczEiPjxWaWV3IE5hbWU9Ik9yZGVycyI+PEZpZWxkIE5hbWU9IklEIiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0iQ3VzdG9tZXJJRCIgVHlwZT0iSW50NjQiIC8+PEZpZWxkIE5hbWU9IlB1cmNoYXNlRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IlRpbWUiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJQYXltZW50VHlwZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQYXltZW50QW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjwvVmlldz48L0RhdGFTZXQ+PC9SZXN1bHRTY2hlbWE+PENvbm5lY3Rpb25PcHRpb25zIENsb3NlQ29ubmVjdGlvbj0idHJ1ZSIgLz48L1NxbERhdGFTb3VyY2U+" />
+    <Item2 Ref="51" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v25.2" Name="dsCust1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0iZHNDdXN0MSI+PENvbm5lY3Rpb24gTmFtZT0iSG9tZXNDb25uZWN0aW9uU3RyaW5nIiBGcm9tQXBwQ29uZmlnPSJ0cnVlIiAvPjxRdWVyeSBUeXBlPSJTZWxlY3RRdWVyeSIgTmFtZT0iQ3VzdG9tZXJzIj48VGFibGVzPjxUYWJsZSBOYW1lPSJDdXN0b21lcnMiIC8+PC9UYWJsZXM+PENvbHVtbnM+PENvbHVtbiBUYWJsZT0iQ3VzdG9tZXJzIiBOYW1lPSJJRCIgLz48Q29sdW1uIFRhYmxlPSJDdXN0b21lcnMiIE5hbWU9IkNvbXBhbnkiIC8+PENvbHVtbiBUYWJsZT0iQ3VzdG9tZXJzIiBOYW1lPSJPY2N1cGF0aW9uIiAvPjxFeHByZXNzaW9uIEFsaWFzPSJQZXJzb25OYW1lIj5Db25jYXQoW0N1c3RvbWVyc10uW0ZpcnN0TmFtZV0sICcgJywgW0N1c3RvbWVyc10uW0xhc3ROYW1lXSk8L0V4cHJlc3Npb24+PC9Db2x1bW5zPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJkc0N1c3QxIj48VmlldyBOYW1lPSJDdXN0b21lcnMiPjxGaWVsZCBOYW1lPSJJRCIgVHlwZT0iSW50NjQiIC8+PEZpZWxkIE5hbWU9IkNvbXBhbnkiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT2NjdXBhdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQZXJzb25OYW1lIiBUeXBlPSJVbmtub3duIiAvPjwvVmlldz48L0RhdGFTZXQ+PC9SZXN1bHRTY2hlbWE+PENvbm5lY3Rpb25PcHRpb25zIENsb3NlQ29ubmVjdGlvbj0idHJ1ZSIgLz48L1NxbERhdGFTb3VyY2U+" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v25.2" Ref="2" Content="System.Int32" Type="System.Type" />
+    <Item2 Ref="4" ObjectType="DevExpress.XtraReports.Parameters.RangeParametersSettings, DevExpress.Printing.v25.2.Core" StartParameter="#Ref-52" EndParameter="#Ref-53" />
+    <Item3 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v25.2" Ref="5" Content="System.DateTime" Type="System.Type" />
+    <Item4 Ref="52" ObjectType="DevExpress.XtraReports.Parameters.RangeStartParameter, DevExpress.Printing.v25.2.Core" ValueInfo="2016-11-20" Name="dateRangeParameter_Start" />
+    <Item5 Ref="53" ObjectType="DevExpress.XtraReports.Parameters.RangeEndParameter, DevExpress.Printing.v25.2.Core" ValueInfo="2016-12-20" Name="dateRangeParameter_End" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

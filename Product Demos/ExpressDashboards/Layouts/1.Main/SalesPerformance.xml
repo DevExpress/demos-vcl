@@ -1,0 +1,537 @@
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Sales Performance" Alignment="Left" />
+  <DataSources>
+
+
+
+
+    <JsonDataSource Name="Monthly Sales" ConnectionName="TotalSalesConnection" RootElement="MonthlySales" ComponentName="dsMonthlySales">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="MonthlySales" Selected="true" NodeType="Array">
+            <Node Name="Category" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="CurrentDate" Type="System.Nullable`1[System.DateTime]" Selected="true" NodeType="Property" />
+            <Node Name="Product" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="Revenue" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="RevenueTarget" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="UnitsSold" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="UnitsSoldTarget" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+          </Node>
+          <Node Name="TotalSales" Selected="false" NodeType="Array">
+            <Node Name="Category" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="Product" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="RevenueQTD" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="RevenueQTDTarget" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="RevenueYTD" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="RevenueYTDTarget" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="UnitsSoldYTD" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+            <Node Name="UnitsSoldYTDTarget" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+      <Filter>[Category] In(?Categories) And [Product] In(?Products)</Filter>
+    </JsonDataSource>
+
+    <JsonDataSource Name="Monthly Sales for Filter" ConnectionName="TotalSalesConnection" RootElement="MonthlySales" ComponentName="dsMonthlySalesForFilter">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="MonthlySales" Selected="true" NodeType="Array">
+            <Node Name="Category" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="CurrentDate" Type="System.Nullable`1[System.DateTime]" Selected="true" NodeType="Property" />
+            <Node Name="Product" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="Revenue" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="RevenueTarget" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="UnitsSold" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="UnitsSoldTarget" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+          </Node>
+          <Node Name="TotalSales" Selected="false" NodeType="Array">
+            <Node Name="Category" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="Product" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="RevenueQTD" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="RevenueQTDTarget" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="RevenueYTD" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="RevenueYTDTarget" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="UnitsSoldYTD" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+            <Node Name="UnitsSoldYTDTarget" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+      <Filter>[Category] In(?Categories)</Filter>
+    </JsonDataSource>
+
+    <JsonDataSource Name="Total Sales" ConnectionName="TotalSalesConnection" RootElement="TotalSales" ComponentName="dsTotalSales">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="MonthlySales" Selected="false" NodeType="Array">
+            <Node Name="Category" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="CurrentDate" Type="System.Nullable`1[System.DateTime]" Selected="false" NodeType="Property" />
+            <Node Name="Product" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="Revenue" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="RevenueTarget" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="UnitsSold" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+            <Node Name="UnitsSoldTarget" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+          </Node>
+          <Node Name="TotalSales" Selected="true" NodeType="Array">
+            <Node Name="Category" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="Product" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="RevenueQTD" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="RevenueQTDTarget" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="RevenueYTD" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="RevenueYTDTarget" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="UnitsSoldYTD" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="UnitsSoldYTDTarget" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+      <Filter>[Category] In(?Categories) And [Product] In(?Products)</Filter>
+    </JsonDataSource>
+
+    <JsonDataSource Name="Total Sales for Filter" ConnectionName="TotalSalesConnection" RootElement="TotalSales" ComponentName="dsTotalSalesForFilter">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="MonthlySales" Selected="false" NodeType="Array">
+            <Node Name="Category" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="CurrentDate" Type="System.Nullable`1[System.DateTime]" Selected="false" NodeType="Property" />
+            <Node Name="Product" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="Revenue" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="RevenueTarget" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="UnitsSold" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+            <Node Name="UnitsSoldTarget" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+          </Node>
+          <Node Name="TotalSales" Selected="true" NodeType="Array">
+            <Node Name="Category" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="Product" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="RevenueQTD" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="RevenueQTDTarget" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="RevenueYTD" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="RevenueYTDTarget" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="UnitsSoldYTD" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="UnitsSoldYTDTarget" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+    </JsonDataSource>
+
+    <JsonDataSource Name="Key Metrics" ConnectionName="TotalSalesConnection" RootElement="KeyMetrics" ComponentName="dsKeyMetrics">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="KeyMetrics" Selected="true" NodeType="Object">
+            <Node Name="AvgOrderSizeYTD" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="AvgOrderSizeYTDTarget" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="ExpensesYTD" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="ExpensesYTDTarget" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="MarketShare" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="NewCustomersYTD" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="NewCustomersYTDTarget" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="ProfitYTD" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="ProfitYTDTarget" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="RevenueYTD" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="RevenueYTDTarget" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+          </Node>
+          <Node Name="MonthlySales" Selected="false" NodeType="Array">
+            <Node Name="Category" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="CurrentDate" Type="System.Nullable`1[System.DateTime]" Selected="false" NodeType="Property" />
+            <Node Name="Product" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="Revenue" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="RevenueTarget" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="UnitsSold" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+            <Node Name="UnitsSoldTarget" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+          </Node>
+          <Node Name="TotalSales" Selected="false" NodeType="Array">
+            <Node Name="Category" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="Product" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="RevenueQTD" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="RevenueQTDTarget" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="RevenueYTD" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="RevenueYTDTarget" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="UnitsSoldYTD" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+            <Node Name="UnitsSoldYTDTarget" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+    </JsonDataSource>
+
+  </DataSources>
+  <Parameters>
+    <Parameter Name="Categories" AllowMultiselect="true">
+      <Values>
+        <Value>Accessories</Value>
+        <Value>Bikes</Value>
+        <Value>Clothing</Value>
+        <Value>Components</Value>
+      </Values>
+      <DynamicListLookUpSettings DataSourceName="dsTotalSalesForFilter" ValueMember="Category" DisplayMember="Category" />
+    </Parameter>
+    <Parameter Name="Products" AllowMultiselect="true" SelectAllValues="true">     
+      <DynamicListLookUpSettings DataSourceName="dsMonthlySalesForFilter" ValueMember="Product" DisplayMember="Product" />
+    </Parameter>
+  </Parameters>
+  <Items>
+    <Grid ComponentName="gridProductSales" Name="Product Sales YTD" ShowCaption="false" DataSource="dsTotalSales">
+      <DataItems>
+        <Dimension DataMember="Category" DefaultId="DataItem0" />
+        <Measure DataMember="RevenueYTDTarget" DefaultId="DataItem5" />
+        <Measure DataMember="RevenueYTD" DefaultId="DataItem3" />
+        <Measure DataMember="RevenueYTD" DefaultId="DataItem4" />
+        <Measure DataMember="UnitsSoldYTD" DefaultId="DataItem6" />
+        <Measure DataMember="UnitsSoldYTDTarget" DefaultId="DataItem8" />
+        <Measure DataMember="UnitsSoldYTD" DefaultId="DataItem7" />
+        <Dimension DataMember="Product" DefaultId="DataItem1" />
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" DataItem="DataItem3" DataItemApplyTo="DataItem1">
+          <FormatConditionTopBottom Rank="10">
+            <IconSettings IconType="ShapeGreenCircle" />
+          </FormatConditionTopBottom>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 2" DataItem="DataItem3" DataItemApplyTo="DataItem1">
+          <FormatConditionTopBottom TopBottomType="Bottom" Rank="10">
+            <IconSettings IconType="ShapeRedCircle" />
+          </FormatConditionTopBottom>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 3" DataItem="DataItem3">
+          <FormatConditionAverage AverageType="AboveOrEqual">
+            <AppearanceSettings AppearanceType="FontGreen" />
+          </FormatConditionAverage>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 4" DataItem="DataItem3">
+          <FormatConditionAverage AverageType="Below">
+            <AppearanceSettings AppearanceType="FontRed" />
+          </FormatConditionAverage>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Name="Product" Weight="108.802287323787">
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="Category" Weight="64.13142952011836">
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="Revenue YTD" Weight="46.882286407810668">
+          <Measure DefaultId="DataItem3" />
+          <Totals>
+            <Total Type="Sum" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridDeltaColumn Name="Revenue YTD vs Target" Weight="85.803429840710081">
+          <ActualValue DefaultId="DataItem4" />
+          <TargetValue DefaultId="DataItem5" />
+          <DeltaOptions ResultIndicationThreshold="1" ValueType="PercentVariation" />
+        </GridDeltaColumn>
+        <GridMeasureColumn Name="Units Sold YTD" Weight="70.32342961171598">
+          <Measure DefaultId="DataItem6" />
+          <Totals>
+            <Total Type="Sum" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridDeltaColumn Name="Units Sold YTD vs Target" Weight="80.813894052614671">
+          <ActualValue DefaultId="DataItem7" />
+          <TargetValue DefaultId="DataItem8" />
+          <DeltaOptions ResultIndicationThreshold="1" />
+        </GridDeltaColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ShowVerticalLines="false" ColumnWidthMode="Manual" />
+      <ColumnFilterOptions ShowFilterRow="true" UpdateTotals="true" />
+    </Grid>
+    <Card ComponentName="cardKeyMetrics" Name="Key Metrics YTD" ShowCaption="false" DataSource="dsKeyMetrics" ContentLineCount="2">
+      <InteractivityOptions IgnoreMasterFilters="true" />
+      <DataItems>
+        <Measure DataMember="MarketShare" DefaultId="DataItem10">
+          <NumericFormat FormatType="Percent" Precision="0" />
+        </Measure>
+        <Measure DataMember="NewCustomersYTDTarget" DefaultId="DataItem9" />
+        <Measure DataMember="NewCustomersYTD" DefaultId="DataItem8" />
+        <Measure DataMember="AvgOrderSizeYTDTarget" DefaultId="DataItem7" />
+        <Measure DataMember="AvgOrderSizeYTD" DefaultId="DataItem6" />
+        <Measure DataMember="ProfitYTDTarget" DefaultId="DataItem5" />
+        <Measure DataMember="ProfitYTD" DefaultId="DataItem4" />
+        <Measure DataMember="ExpensesYTD" DefaultId="DataItem2" />
+        <Measure DataMember="RevenueYTD" DefaultId="DataItem0" />
+        <Measure DataMember="ExpensesYTDTarget" DefaultId="DataItem3" />
+        <Measure DataMember="RevenueYTDTarget" DefaultId="DataItem1" />
+      </DataItems>
+      <Card Name="Revenue YTD">
+        <ActualValue DefaultId="DataItem0" />
+        <TargetValue DefaultId="DataItem1" />
+        <AbsoluteVariationNumericFormat FormatType="Currency" />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="100" Type="Lightweight">
+          <MainValue Visible="true" ValueType="AbsoluteVariation" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <DeltaIndicator Visible="false" />
+          <Sparkline Visible="false" />
+        </LayoutTemplate>
+      </Card>
+      <Card Name="Expenses YTD">
+        <ActualValue DefaultId="DataItem2" />
+        <TargetValue DefaultId="DataItem3" />
+        <AbsoluteVariationNumericFormat FormatType="Currency" />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="100" Type="Lightweight">
+          <MainValue Visible="true" ValueType="AbsoluteVariation" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <DeltaIndicator Visible="false" />
+          <Sparkline Visible="false" />
+        </LayoutTemplate>
+      </Card>
+      <Card Name="Profit YTD">
+        <ActualValue DefaultId="DataItem4" />
+        <TargetValue DefaultId="DataItem5" />
+        <AbsoluteVariationNumericFormat FormatType="Currency" />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="100" Type="Lightweight">
+          <MainValue Visible="true" ValueType="AbsoluteVariation" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <DeltaIndicator Visible="false" />
+          <Sparkline Visible="false" />
+        </LayoutTemplate>
+      </Card>
+      <Card Name="Avg Order Size">
+        <ActualValue DefaultId="DataItem6" />
+        <TargetValue DefaultId="DataItem7" />
+        <AbsoluteVariationNumericFormat FormatType="Currency" />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="100" Type="Lightweight">
+          <MainValue Visible="true" ValueType="AbsoluteVariation" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <DeltaIndicator Visible="false" />
+          <Sparkline Visible="false" />
+        </LayoutTemplate>
+      </Card>
+      <Card Name="New Customers">
+        <ActualValue DefaultId="DataItem8" />
+        <TargetValue DefaultId="DataItem9" />
+        <AbsoluteVariationNumericFormat FormatType="Currency" />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="100" Type="Lightweight">
+          <MainValue Visible="true" ValueType="AbsoluteVariation" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <DeltaIndicator Visible="false" />
+          <Sparkline Visible="false" />
+        </LayoutTemplate>
+      </Card>
+      <Card Name="Market Share">
+        <ActualValue DefaultId="DataItem10" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="100" Type="Lightweight">
+          <MainValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <DeltaIndicator Visible="false" />
+          <Sparkline Visible="false" />
+        </LayoutTemplate>
+      </Card>
+    </Card>
+    <Chart ComponentName="chartProductMonthlySales" Name="" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="dsMonthlySales">
+      <ColoringOptions UseGlobalColors="false" />
+      <DataItems>
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="Month" DefaultId="DataItem1" />
+        <Dimension DataMember="Product" TopNEnabled="true" TopNMeasure="DataItem0" DefaultId="DataItem2" />
+        <Measure DataMember="Revenue" DefaultId="DataItem0" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" Title="Revenue" />
+          <Series>
+            <Simple Name="Revenue (Sum)">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem2" Name="Revenue by Category" DataSource="dsTotalSales" IsMasterFilterCrossDataSource="true" Rotated="true">
+      <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="Category" SortOrder="Descending" DefaultId="DataItem0" />
+        <Measure DataMember="RevenueYTD" Name="Revenue" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <ColorScheme>
+        <Entry DataSource="dsTotalSales" Color="-8155736">
+          <MeasureKey>
+            <Definition DataMember="RevenueYTD" />
+          </MeasureKey>
+        </Entry>
+      </ColorScheme>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem1" />
+              <PointLabelOptions ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+    </Chart>
+    <ChoroplethMap ComponentName="choroplethMapSalesByState" Name="Sales by State" DataSource="dsTotalSales" IsMasterFilterCrossDataSource="true" ShapefileArea="USA" AttributeName="NAME" IncludeSummaryValueToShapeTitle="true">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="State" DefaultId="DataItem0" />
+        <Measure DataMember="RevenueYTD" DefaultId="DataItem1" />
+        <Measure DataMember="RevenueYTD" DefaultId="DataItem2" />
+        <Measure DataMember="RevenueYTDTarget" DefaultId="DataItem3" />
+        <Measure DataMember="RevenueQTD" DefaultId="DataItem4" />
+        <Measure DataMember="RevenueQTD" DefaultId="DataItem5" />
+        <Measure DataMember="RevenueQTDTarget" DefaultId="DataItem6" />
+      </DataItems>
+      <ViewArea TopLatitude="48.233955447560852" BottomLatitude="22.765636291415312" LeftLongitude="-129.11846424529793" RightLongitude="-59.966911396617569" CenterPointLatitude="36.537126331764014" CenterPointLongitude="-94.553819669725485" CreateViewerPaddings="false" />
+      <MapLegend Position="TopCenter" />
+      <WeightedLegend />
+      <AttributeDimension DefaultId="DataItem0" />
+      <Maps>
+        <ValueMap Name="Revenue YTD" ValueName="Revenue">
+          <Value DefaultId="DataItem1" />
+          <CustomScale>
+            <RangeStop>1</RangeStop>
+            <RangeStop>2</RangeStop>
+            <RangeStop>3</RangeStop>
+            <RangeStop>4</RangeStop>
+            <RangeStop>6</RangeStop>
+            <RangeStop>8</RangeStop>
+            <RangeStop>10</RangeStop>
+            <RangeStop>12</RangeStop>
+            <RangeStop>14</RangeStop>
+            <RangeStop>16</RangeStop>
+            <RangeStop>20</RangeStop>
+            <RangeStop>30</RangeStop>
+            <RangeStop>50</RangeStop>
+            <RangeStop>90</RangeStop>
+          </CustomScale>
+          <GradientPalette StartColor="-13194546" EndColor="-41622" />
+        </ValueMap>
+        <DeltaMap Name="Revenue YTD vs Target" ActualValueName="Revenue" DeltaName="vs Target">
+          <ActualValue DefaultId="DataItem2" />
+          <TargetValue DefaultId="DataItem3" />
+          <AbsoluteVariationNumericFormat />
+          <PercentVariationNumericFormat />
+          <PercentOfTargetNumericFormat />
+        </DeltaMap>
+        <ValueMap Name="Revenue QTD" ValueName="Revenue">
+          <Value DefaultId="DataItem4" />
+          <CustomScale>
+            <RangeStop>1</RangeStop>
+            <RangeStop>2</RangeStop>
+            <RangeStop>3</RangeStop>
+            <RangeStop>4</RangeStop>
+            <RangeStop>6</RangeStop>
+            <RangeStop>8</RangeStop>
+            <RangeStop>10</RangeStop>
+            <RangeStop>12</RangeStop>
+            <RangeStop>14</RangeStop>
+            <RangeStop>16</RangeStop>
+            <RangeStop>20</RangeStop>
+            <RangeStop>30</RangeStop>
+            <RangeStop>50</RangeStop>
+            <RangeStop>90</RangeStop>
+          </CustomScale>
+          <GradientPalette StartColor="-13194546" EndColor="-41622" />
+        </ValueMap>
+        <DeltaMap Name="Revenue QTD vs Target" ActualValueName="Revenue" DeltaName="vs Target">
+          <ActualValue DefaultId="DataItem5" />
+          <TargetValue DefaultId="DataItem6" />
+          <AbsoluteVariationNumericFormat />
+          <PercentVariationNumericFormat />
+          <PercentOfTargetNumericFormat />
+        </DeltaMap>
+      </Maps>
+    </ChoroplethMap>
+    <Card ComponentName="cardDashboardItem1" Name="Cards 1" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="dsMonthlySales" ContentArrangementMode="FixedRowCount" ContentLineCount="1">
+      <DataItems>
+        <Measure DataMember="Revenue" DefaultId="DataItem0" />
+        <Dimension DataMember="Product" DateTimeGroupInterval="Month" TopNEnabled="true" TopNMeasure="DataItem0" DefaultId="DataItem2" />
+        <Measure DataMember="RevenueTarget" DefaultId="DataItem1" />
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="MonthYear" DefaultId="DataItem3" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Card>
+        <ActualValue DefaultId="DataItem0" />
+        <TargetValue DefaultId="DataItem1" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="125" MaxWidth="270" Type="Compact">
+          <MainValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <BottomSubValue1 Visible="true" ValueType="AbsoluteVariation" DimensionIndex="0" />
+          <BottomSubValue2 Visible="true" ValueType="PercentVariation" DimensionIndex="0" />
+          <DeltaIndicator Visible="true" />
+          <Sparkline Visible="true" />
+        </LayoutTemplate>
+      </Card>
+      <SparklineArgument DefaultId="DataItem3" />
+    </Card>
+  </Items>
+  <Groups>
+    <Group ComponentName="groupDashboardItem1" Name="Top 5 Products - Monthly Sales">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+    </Group>
+  </Groups>
+  <LayoutOptions>
+    <Width Mode="Fixed" Value="1200" />
+    <Height Mode="Fixed" Value="1800" />
+  </LayoutOptions>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical" Weight="100">
+      <LayoutItem DashboardItem="cardKeyMetrics" Weight="16.977401240396937" />
+      <LayoutGroup Weight="48.285956821279527">
+        <LayoutItem DashboardItem="choroplethMapSalesByState" Weight="68.778358354552367" />
+        <LayoutItem DashboardItem="chartDashboardItem2" Weight="48.285956821279527" />
+      </LayoutGroup>
+      <LayoutGroup DashboardItem="groupDashboardItem1" Weight="87.589425094411581">
+        <LayoutGroup Orientation="Vertical" Weight="57.516157346850193">
+          <LayoutItem DashboardItem="chartProductMonthlySales" Weight="78.761734515607472" />
+          <LayoutItem DashboardItem="cardDashboardItem1" Weight="23.560749873386939" />
+        </LayoutGroup>
+      </LayoutGroup>
+      <LayoutItem DashboardItem="gridProductSales" Weight="82.265491961209989" />
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+    <Description>
+      [
+      "This sample dashboard displays YTD sales performance data.",
+      "Cards at the top compare key sales metrics against a target. The Map item displays sales by state. Use the Values button to change map data (switch between layers with YTD numbers, QTD numbers, or associated target comparison). Select states to filter data in the rest of dashboard controls. Note that the Revenue by Category chart also allows end-user selection and data filtering. The Top 5 Products chart and associated cards with sparklines illustrate monthly sales for best-selling products. Finally, the Grid item displays sales by product, flags top 10 and bottom 10 products with circles, and highlights revenue values (indicates whether they fall above or below the average).",
+      "The dashboard has a fixed size. Scroll down to view all items.",
+      "Dashboard parameters allow you to filter data by categories and products."
+      ]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/117166/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/choropleth-map","text":"Choropleth Map"},{"href":"https://docs.devexpress.com/Dashboard/117163/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/cards","text":"Cards"},{"href":"https://docs.devexpress.com/Dashboard/402204/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/grid/conditional-formatting","text":"Conditional Formatting  "},{"href":"https://docs.devexpress.com/Dashboard/119497/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/grid/columns/delta-column","text":"Delta Column"}, {"href":"https://docs.devexpress.com/Dashboard/403847/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/grid/column-filter","text":"Column Filter"}, {"href":"https://docs.devexpress.com/Dashboard/404895/web-dashboard/create-dashboards-on-the-web/data-analysis/dashboard-parameters/cascading-parameters","text":"Cascading Parameters"}]</Links>
+  </CustomProperties>
+</Dashboard>

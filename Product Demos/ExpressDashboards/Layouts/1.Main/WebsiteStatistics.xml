@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Website Statistics" Alignment="Left" />
+  <DataSources>
+
+    <JsonDataSource Name="Site Visitors" ConnectionName="WebsiteStatisticsConnection" RootElement="Employees" ComponentName="siteVisitosDataSource">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="Employees" Selected="true" NodeType="Array">
+            <Node Name="Browser" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="BrowserDetails" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="Count" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="Date" Type="System.Nullable`1[System.DateTime]" Selected="true" NodeType="Property" />
+            <Node Name="TrafficSource" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="TrafficSourceDetails" Type="System.String" Selected="true" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+      <CalculatedFields>
+        <CalculatedField Name="BrowserName" Expression="Concat([Browser], ' (', [BrowserDetails], ')')" DataType="Auto" />
+      </CalculatedFields>
+    </JsonDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="trafficSourceChart" Name="Visitors" ParentContainer="trafficSourceGroup" DataSource="siteVisitosDataSource">
+      <DataItems>
+        <Dimension DataMember="TrafficSource" DefaultId="DataItem1" />
+        <Dimension DataMember="Date" DateTimeGroupInterval="MonthYear" DefaultId="DataItem0" />
+        <Measure DataMember="Count" Name="Users Count" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem1" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple SeriesType="StackedSplineArea">
+              <Value DefaultId="DataItem2" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <TreeView ComponentName="trafficSourceFilter" Name="Traffic Source" ParentContainer="trafficSourceGroup" DataSource="siteVisitosDataSource">
+      <DataItems>
+        <Dimension DataMember="TrafficSource" DefaultId="DataItem0" />
+        <Dimension DataMember="TrafficSourceDetails" DefaultId="DataItem1" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+        <Dimension DefaultId="DataItem1" />
+      </FilterDimensions>
+    </TreeView>
+    <TreeView ComponentName="browsersFilter" Name="Browser" ParentContainer="browsersGroup" DataSource="siteVisitosDataSource">
+      <DataItems>
+        <Dimension DataMember="Browser" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </TreeView>
+    <Chart ComponentName="browsersChart" Name="Browser Usage" ParentContainer="browsersGroup" DataSource="siteVisitosDataSource" Rotated="true">
+      <DataItems>
+        <Measure DataMember="Count" Name="Users Count" DefaultId="DataItem2" />
+        <Dimension DataMember="BrowserName" ColoringMode="Hue" SortByMeasure="DataItem2" TopNEnabled="true" TopNShowOthers="true" TopNMeasure="DataItem2" DefaultId="DataItem0" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem2" />
+              <PointLabelOptions OverlappingMode="None" ContentType="Argument, Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+      <AxisX Visible="false" Reverse="true" />
+    </Chart>
+  </Items>
+  <Groups>
+    <Group ComponentName="browsersGroup" Name="Browser statistics" ShowCaption="false" />
+    <Group ComponentName="trafficSourceGroup" Name=" Traffic Sources Overview" ShowCaption="false">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+    </Group>
+  </Groups>
+  <ColorScheme>
+    <Entry DataSource="siteVisitosDataSource" Color="-6987919">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="BrowserName" />
+          <Value Type="System.String" Value="Chrome Latest" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="siteVisitosDataSource" Color="-6987919">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="BrowserName" />
+          <Value Type="System.String" Value="Chrome Others" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="siteVisitosDataSource" Color="-8022426">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="BrowserName" />
+          <Value Type="System.String" Value="Firefox Latest" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="siteVisitosDataSource" Color="-8022426">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="BrowserName" />
+          <Value Type="System.String" Value="Firefox Others" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="siteVisitosDataSource" Color="-8492916">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="BrowserName" />
+          <Value Type="System.String" Value="IE 11" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="siteVisitosDataSource" Color="-8492916">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="BrowserName" />
+          <Value Type="System.String" Value="IE 8" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="siteVisitosDataSource" Color="-8492916">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="BrowserName" />
+          <Value Type="System.String" Value="IE 9" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="siteVisitosDataSource" Color="-8492916">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="BrowserName" />
+          <Value Type="System.String" Value="IE Others" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="siteVisitosDataSource" Color="-10523243">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="BrowserName" />
+          <Value Type="System.String" Value="Opera O Mini" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="siteVisitosDataSource" Color="-10523243">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="BrowserName" />
+          <Value Type="System.String" Value="Opera Others" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="siteVisitosDataSource" Color="-5482852">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="BrowserName" />
+          <Value Type="System.String" Value="Safari Others" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+  </ColorScheme>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup DashboardItem="trafficSourceGroup" Weight="46.99029126213592">
+        <LayoutItem DashboardItem="trafficSourceFilter" Weight="18.97018970189702" />
+        <LayoutItem DashboardItem="trafficSourceChart" Weight="81.02981029810299" />
+      </LayoutGroup>
+      <LayoutGroup DashboardItem="browsersGroup" Weight="53.027522935779814">
+        <LayoutItem DashboardItem="browsersFilter" Weight="18.97018970189702" />
+        <LayoutItem DashboardItem="browsersChart" Weight="81.02981029810299" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+    <Description>["The dashboard displays website statistics including traffic information and browser usage.","The top dashboard group visualizes variations related to visitor count and allows you to filter data by traffic sources using the tree view on the left. The bottom group displays browser usage for different browsers."]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/117172/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/dashboard-item-group","text":"Dashboard Group"},{"href":"https://docs.devexpress.com/Dashboard/117367/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/filter-elements/filter-elements-overview","text":"Filter Elements"},{"href":"https://docs.devexpress.com/Dashboard/117159/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/chart","text":"Charts"}]</Links>
+  </CustomProperties>
+</Dashboard>

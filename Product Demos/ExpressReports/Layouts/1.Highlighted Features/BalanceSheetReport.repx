@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="24.2.5.0" Ref="0" ControlType="XtraReportsDemos.BalanceSheetReport.Report, DevExpress.DemoReports.v24.2, Version=24.2.5.0, Culture=neutral, PublicKeyToken=4c3bc44151be4b47" Name="BalanceSheetReport" DisplayName="Balance Sheet" Margins="72, 72, 42, 42" PageWidth="850" PageHeight="1100" Version="24.2" Font="Arial, 9.75pt">
+  <Bands>
+    <Item1 Ref="1" ControlType="TopMarginBand" Name="TopMargin" HeightF="42" />
+    <Item2 Ref="2" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="42" />
+    <Item3 Ref="3" ControlType="DetailBand" Name="Detail" HeightF="181">
+      <Controls>
+        <Item1 Ref="5" ControlType="XRCrossTab" Name="xrCrossTab1" GeneralStyleName="CrossTabGeneralStyle" DataAreaStyleName="CrossTabDataStyle" HeaderAreaStyleName="CrossTabHeaderStyle" TotalAreaStyleName="CrossTabTotalStyle" DataSource="#Ref-4" SizeF="655.8791,181" LocationFloat="0,0">
+          <LayoutOptions Ref="6" CornerHeaderDisplayMode="None" HierarchicalRowLayout="true" />
+          <RowFields>
+            <Item1 Ref="7" SortOrder="None" FieldName="Type" />
+            <Item2 Ref="8" SortOrder="None" FieldName="SubType" />
+            <Item3 Ref="9" SortOrder="None" FieldName="Name" />
+          </RowFields>
+          <ColumnFields>
+            <Item1 Ref="10" GroupInterval="DateYear" FieldName="Date" />
+          </ColumnFields>
+          <DataFields>
+            <Item1 Ref="11" FieldName="Value" />
+          </DataFields>
+          <ColumnDefinitions>
+            <Item1 Ref="12" Width="32.68535" Visible="false" />
+            <Item2 Ref="13" Width="28.19376" Visible="false" />
+            <Item3 Ref="14" Width="375" />
+            <Item4 Ref="15" Width="110" />
+            <Item5 Ref="16" Width="110" Visible="false" />
+          </ColumnDefinitions>
+          <RowDefinitions>
+            <Item1 Ref="17" Height="28" />
+            <Item2 Ref="18" Height="25.5" />
+            <Item3 Ref="19" Height="25.5" />
+            <Item4 Ref="20" Height="25.5" />
+            <Item5 Ref="21" Height="25.5" />
+            <Item6 Ref="22" Height="25.5" />
+            <Item7 Ref="23" Height="25.5" Visible="false" />
+          </RowDefinitions>
+          <Cells>
+            <Item1 Ref="24" ControlType="XRCrossTabCell" Name="xrCrossTabCell2" TextFormatString="{0:#,##0.00;(#,##0.00);-}" ColumnIndex="3" RowIndex="3">
+              <ExpressionBindings>
+                <Item1 Ref="25" EventName="BeforePrint" PropertyName="BackColor" Expression="iif([Arguments.GroupRowIndex] % 2 == 1, Rgb(249, 250, 252), ?)" />
+              </ExpressionBindings>
+            </Item1>
+            <Item2 Ref="26" ControlType="XRCrossTabCell" Name="xrCrossTabCell3" ColumnIndex="3" RowIndex="0" TextAlignment="TopRight" ForeColor="255,113,128,150" BackColor="255,241,243,248" Padding="6,6,7,0,100" BorderColor="255,113,128,150" Borders="Bottom" BorderWidth="2" />
+            <Item3 Ref="27" ControlType="XRCrossTabCell" Name="xrCrossTabCell4" ColumnIndex="0" RowIndex="1" ColumnSpan="3" />
+            <Item4 Ref="28" ControlType="XRCrossTabCell" Name="xrCrossTabCell5" ColumnIndex="4" RowIndex="0" Text="Grand Total" TextAlignment="TopRight" ForeColor="255,113,128,150" BackColor="255,241,243,248" BorderColor="255,113,128,150" Borders="Bottom" BorderWidth="2" />
+            <Item5 Ref="29" ControlType="XRCrossTabCell" Name="xrCrossTabCell6" TextFormatString="{0:#,##0.00;(#,##0.00);-}" ColumnIndex="4" RowIndex="3" Font="Arial, 9pt">
+              <ExpressionBindings>
+                <Item1 Ref="30" EventName="BeforePrint" PropertyName="BackColor" Expression="iif([Arguments.GroupRowIndex] % 2 == 1, Rgb(249, 250, 252), ?)" />
+              </ExpressionBindings>
+            </Item5>
+            <Item6 Ref="31" ControlType="XRCrossTabCell" Name="xrCrossTabCell7" ColumnIndex="0" RowIndex="6" ColumnSpan="3" Text="Grand Total" />
+            <Item7 Ref="32" ControlType="XRCrossTabCell" Name="xrCrossTabCell8" TextFormatString="{0:#,##0.00;(#,##0.00);-}" ColumnIndex="3" RowIndex="6" />
+            <Item8 Ref="33" ControlType="XRCrossTabCell" Name="xrCrossTabCell9" TextFormatString="{0:#,##0.00;(#,##0.00);-}" ColumnIndex="4" RowIndex="6" />
+            <Item9 Ref="34" ControlType="XRCrossTabCell" Name="xrCrossTabCell10" ColumnIndex="2" RowIndex="3" Font="Arial, 8.25pt" ForeColor="255,113,128,150" Padding="42,6,6,6,100">
+              <ExpressionBindings>
+                <Item1 Ref="35" EventName="BeforePrint" PropertyName="BackColor" Expression="iif([Arguments.GroupRowIndex] % 2 == 1, Rgb(249, 250, 252), ?)" />
+              </ExpressionBindings>
+            </Item9>
+            <Item10 Ref="36" ControlType="XRCrossTabCell" Name="xrCrossTabCell11" TextFormatString="Total {0}" ColumnIndex="0" RowIndex="5" ColumnSpan="3" BackColor="255,249,250,252" Borders="Bottom" BorderWidth="2" />
+            <Item11 Ref="37" ControlType="XRCrossTabCell" Name="xrCrossTabCell12" TextFormatString="{0:#,##0.00;(#,##0.00);-}" ColumnIndex="3" RowIndex="5" BackColor="255,249,250,252" Borders="Bottom" BorderWidth="2" />
+            <Item12 Ref="38" ControlType="XRCrossTabCell" Name="xrCrossTabCell13" TextFormatString="{0:#,##0.00;(#,##0.00);-}" ColumnIndex="4" RowIndex="5" BackColor="255,249,250,252" Borders="Bottom" BorderWidth="2" />
+            <Item13 Ref="39" ControlType="XRCrossTabCell" Name="crossTabHeaderCell1" ColumnIndex="0" RowIndex="0" ColumnSpan="3" BackColor="255,241,243,248" Borders="Bottom" BorderWidth="2" />
+            <Item14 Ref="40" ControlType="XRCrossTabCell" Name="crossTabCell1" ColumnIndex="3" RowIndex="1" ColumnSpan="2" />
+            <Item15 Ref="41" ControlType="XRCrossTabCell" Name="crossTabCell2" ColumnIndex="3" RowIndex="2" ColumnSpan="2" BackColor="255,249,250,252" />
+            <Item16 Ref="42" ControlType="XRCrossTabCell" Name="crossTabHeaderCell2" ColumnIndex="1" RowIndex="2" ColumnSpan="2" BackColor="255,249,250,252" Padding="24,6,6,6,100" />
+            <Item17 Ref="43" ControlType="XRCrossTabCell" Name="crossTabHeaderCell3" TextFormatString="Total {0}" ColumnIndex="1" RowIndex="4" ColumnSpan="2" Padding="24,6,6,6,100" Borders="Bottom" BorderWidth="2" />
+            <Item18 Ref="44" ControlType="XRCrossTabCell" Name="crossTabTotalCell1" TextFormatString="{0:#,##0.00;(#,##0.00);-}" ColumnIndex="3" RowIndex="4" Borders="Bottom" BorderWidth="2" />
+            <Item19 Ref="45" ControlType="XRCrossTabCell" Name="crossTabTotalCell2" TextFormatString="{0:#,##0.00;(#,##0.00);-}" ColumnIndex="4" RowIndex="4" Borders="Bottom" BorderWidth="2" />
+            <Item20 Ref="46" ControlType="XRCrossTabCell" Name="crossTabCell3" ColumnIndex="0" RowIndex="2" RowSpan="3" />
+            <Item21 Ref="47" ControlType="XRCrossTabCell" Name="crossTabCell4" ColumnIndex="1" RowIndex="3" />
+          </Cells>
+        </Item1>
+      </Controls>
+    </Item3>
+    <Item4 Ref="48" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="70">
+      <Controls>
+        <Item1 Ref="49" ControlType="XRLabel" Name="xrLabel2" Multiline="true" CanGrow="false" Text="(Dollars in Millions)" AnchorHorizontal="Both" SizeF="706.0001,18.83332" LocationFloat="0,39" StyleName="SubtitleStyle">
+          <StylePriority Ref="50" UsePadding="false" />
+        </Item1>
+        <Item2 Ref="51" ControlType="XRLabel" Name="xrLabel1" Multiline="true" CanGrow="false" Text="Balance Sheet" AnchorHorizontal="Both" SizeF="706,39" LocationFloat="0,0" StyleName="TitleStyle" Font="Arial, 25pt">
+          <StylePriority Ref="52" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+        </Item2>
+      </Controls>
+    </Item4>
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="53" Name="CrossTabGeneralStyle" BorderStyle="Inset" Padding="6,6,6,6,100" Font="Arial, 8.25pt" ForeColor="255,113,128,150" BackColor="White" BorderColor="255,113,128,150" StringFormat="Near;Near;0;None;Character;GenericDefault" />
+    <Item2 Ref="54" Name="CrossTabDataStyle" BorderStyle="Inset" StringFormat="Far;Near;0;None;Character;GenericDefault" TextAlignment="TopRight" />
+    <Item3 Ref="55" Name="CrossTabTotalStyle" BorderStyle="Inset" Font="Arial, 8.25pt, style=Bold" ForeColor="255,24,32,45" StringFormat="Far;Near;0;None;Character;GenericDefault" TextAlignment="TopRight" />
+    <Item4 Ref="56" Name="CrossTabHeaderStyle" BorderStyle="Inset" Font="Arial, 8.25pt, style=Bold" ForeColor="255,24,32,45" StringFormat="Near;Near;0;None;Character;GenericDefault" TextAlignment="TopLeft" />
+    <Item5 Ref="57" Name="TitleStyle" BorderStyle="Inset" Font="Arial, 24pt" ForeColor="255,26,32,45" StringFormat="Near;Center;0;None;Character;GenericDefault" TextAlignment="MiddleLeft" />
+    <Item6 Ref="58" Name="SubtitleStyle" BorderStyle="Inset" Padding="2,2,2,2,100" Font="Arial, 7.5pt" ForeColor="255,113,128,150" StringFormat="Near;Near;0;None;Character;GenericDefault" />
+  </StyleSheet>
+  <ComponentStorage>
+    <Item1 Ref="4" ObjectType="DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v24.2" Name="objectDataSource1" Base64="PE9iamVjdERhdGFTb3VyY2UgTmFtZT0ib2JqZWN0RGF0YVNvdXJjZTEiPjxEYXRhU291cmNlIFR5cGU9Ilh0cmFSZXBvcnRzRGVtb3MuQmFsYW5jZVNoZWV0UmVwb3J0LkJhbGFuY2VTaGVldERhdGEsIERldkV4cHJlc3MuRGVtb1JlcG9ydHMudjI0LjIsIFZlcnNpb249MjQuMi41LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NGMzYmM0NDE1MWJlNGI0NyIgLz48RGF0YU1lbWJlcj5HZXREYXRhPC9EYXRhTWVtYmVyPjxDb25zdHJ1Y3RvciAvPjwvT2JqZWN0RGF0YVNvdXJjZT4=" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

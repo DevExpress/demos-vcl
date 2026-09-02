@@ -1,0 +1,2 @@
+inherited frmRichEditRibbonUI: TfrmRichEditRibbonUI
+end

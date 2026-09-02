@@ -1,0 +1,191 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<ProjectGuid>{44556C79-C16C-4C39-9A5F-71CB001175BF}</ProjectGuid>
+		<MainSource>MailClient.dpr</MainSource>
+		<Base>True</Base>
+		<Config Condition="'$(Config)'==''">Debug</Config>
+		<ProjectName Condition="'$(ProjectName)'==''">MailClient</ProjectName>
+		<TargetedPlatforms>1</TargetedPlatforms>
+		<AppType>Application</AppType>
+		<FrameworkType>VCL</FrameworkType>
+		<ProjectVersion>20.4</ProjectVersion>
+		<Platform Condition="'$(Platform)'==''">Win32</Platform>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+		<Base>true</Base>
+	</PropertyGroup>
+	<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+		<Base_Win32>true</Base_Win32>
+		<CfgParent>Base</CfgParent>
+		<Base>true</Base>
+	</PropertyGroup>
+	<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+		<Base_Win64>true</Base_Win64>
+		<CfgParent>Base</CfgParent>
+		<Base>true</Base>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+		<Cfg_1>true</Cfg_1>
+		<CfgParent>Base</CfgParent>
+		<Base>true</Base>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+		<Cfg_2>true</Cfg_2>
+		<CfgParent>Base</CfgParent>
+		<Base>true</Base>
+	</PropertyGroup>
+	<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+		<Cfg_2_Win32>true</Cfg_2_Win32>
+		<CfgParent>Cfg_2</CfgParent>
+		<Cfg_2>true</Cfg_2>
+		<Base>true</Base>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Base)'!=''">
+		<DCC_E>false</DCC_E>
+		<DCC_F>false</DCC_F>
+		<DCC_K>false</DCC_K>
+		<DCC_N>false</DCC_N>
+		<DCC_S>false</DCC_S>
+		<DCC_ExeOutput>.\</DCC_ExeOutput>
+		<DCC_ImageBase>00400000</DCC_ImageBase>
+		<SanitizedProjectName>MailClient</SanitizedProjectName>
+		<DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;$(DCC_Namespace)</DCC_Namespace>
+		<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+		<VerInfo_Locale>1033</VerInfo_Locale>
+		<VerInfo_Keys>CompanyName=Developer Express Inc.;FileDescription=$(MSBuildProjectName);FileVersion=2026.1.0.0;InternalName=;LegalCopyright=Copyright (c) 1998-2026 Developer Express Inc.;LegalTrademarks=;OriginalFilename=MailClient.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=Mail Client;ProductVersion=2026.1;Comments=</VerInfo_Keys>
+		<VerInfo_MajorVer>2026</VerInfo_MajorVer>
+		<VerInfo_MinorVer>1</VerInfo_MinorVer>
+		<AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+		<AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+		<AppEnableHighDPI>true</AppEnableHighDPI>  <VerInfo_Release>4</VerInfo_Release>
+  </PropertyGroup>
+	<PropertyGroup Condition="'$(Base_Win32)'!=''">
+		<DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+		<BT_BuildType>Debug</BT_BuildType>
+		<UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+		<UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Base_Win64)'!=''">
+		<UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+		<UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Cfg_1)'!=''">
+		<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+		<DCC_DebugInformation>0</DCC_DebugInformation>
+		<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+		<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Cfg_2)'!=''">
+		<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		<DCC_Optimize>false</DCC_Optimize>
+		<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+		<DCC_RangeChecking>true</DCC_RangeChecking>
+		<DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+		<DCC_MapFile>3</DCC_MapFile>
+		<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+	</PropertyGroup>
+	<ItemGroup>
+		<DelphiCompile Include="$(MainSource)">
+			<MainSource>MainSource</MainSource>
+		</DelphiCompile>
+		<DCCReference Include="..\..\Product Demos\Common\dxAboutDemo.pas"/>
+		<DCCReference Include="..\..\Product Demos\Common\dxDemoUtils.pas"/>
+		<DCCReference Include="MailClientDemoBase.pas">
+			<Form>MailClientDemoBaseFrame</Form>
+			<DesignClass>TFrame</DesignClass>
+		</DCCReference>
+		<DCCReference Include="MailClientDemoCalendar.pas">
+			<Form>MailClientDemoCalendarFrame</Form>
+			<DesignClass>TFrame</DesignClass>
+		</DCCReference>
+		<DCCReference Include="MailClientDemoMain.pas">
+			<Form>fmMailClientDemoMain</Form>
+		</DCCReference>
+		<DCCReference Include="MailClientDemoData.pas">
+			<Form>DM</Form>
+			<DesignClass>TDataModule</DesignClass>
+		</DCCReference>
+		<DCCReference Include="MailClientDemoBaseGrid.pas">
+			<Form>MailClientDemoBaseGridFrame</Form>
+			<DesignClass>TFrame</DesignClass>
+		</DCCReference>
+		<DCCReference Include="MailClientDemoMails.pas">
+			<Form>MailClientDemoMailsFrame</Form>
+			<DesignClass>TFrame</DesignClass>
+		</DCCReference>
+		<DCCReference Include="MailClientDemoContacts.pas">
+			<Form>MailClientDemoContactsFrame</Form>
+			<DesignClass>TFrame</DesignClass>
+		</DCCReference>
+		<DCCReference Include="MailClientDemoTasks.pas">
+			<Form>MailClientDemoTasksFrame</Form>
+			<DesignClass>TFrame</DesignClass>
+		</DCCReference>
+		<DCCReference Include="fmMailUnit.pas">
+			<Form>fmMail</Form>
+		</DCCReference>
+		<DCCReference Include="fmWhomSelectUnit.pas">
+			<Form>fmWhomSelect</Form>
+		</DCCReference>
+		<DCCReference Include="fmBaseEditUnit.pas">
+			<Form>fmBaseEdit</Form>
+		</DCCReference>
+		<DCCReference Include="fmContactUnit.pas">
+			<Form>fmContact</Form>
+		</DCCReference>
+		<DCCReference Include="fmTaskUnit.pas">
+			<Form>fmTask</Form>
+		</DCCReference>
+		<DCCReference Include="dxMailClientDemoUtils.pas"/>
+		<DCCReference Include="fmTaskCustomDateUnit.pas">
+			<Form>fmTaskCustomDate</Form>
+		</DCCReference>
+		<DCCReference Include="MailCloseDialog.pas">
+			<Form>fmMailCloseDialog</Form>
+		</DCCReference>
+		<DCCReference Include="MailClientDateNavigator.pas">
+			<Form>Frame1</Form>
+			<DesignClass>TFrame</DesignClass>
+		</DCCReference>
+		<DCCReference Include="MainClientDemoPrinting.pas">
+			<Form>frmPrinting</Form>
+			<DesignClass>TFrame</DesignClass>
+		</DCCReference>
+		<DCCReference Include="LocalizationStrs.pas"/>
+		<DCCReference Include="SelectLanguageUnit.pas">
+			<Form>fmSelectLanguage</Form>
+		</DCCReference>
+		<BuildConfiguration Include="Base">
+			<Key>Base</Key>
+		</BuildConfiguration>
+		<BuildConfiguration Include="Release">
+			<Key>Cfg_1</Key>
+			<CfgParent>Base</CfgParent>
+		</BuildConfiguration>
+		<BuildConfiguration Include="Debug">
+			<Key>Cfg_2</Key>
+			<CfgParent>Base</CfgParent>
+		</BuildConfiguration>
+	</ItemGroup>
+	<ProjectExtensions>
+		<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+		<Borland.ProjectType/>
+		<BorlandProject>
+			<Delphi.Personality>
+				<Source>
+					<Source Name="MainSource">MailClient.dpr</Source>
+				</Source>
+			</Delphi.Personality>
+			<Platforms>
+				<Platform value="Win32">True</Platform>
+				<Platform value="Win64">False</Platform>
+			</Platforms>
+		</BorlandProject>
+		<ProjectFileVersion>12</ProjectFileVersion>
+	</ProjectExtensions>
+	<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+	<Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+	<Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
+</Project>

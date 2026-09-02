@@ -1,0 +1,2 @@
+inherited frmRichEditStyles: TfrmRichEditStyles
+end

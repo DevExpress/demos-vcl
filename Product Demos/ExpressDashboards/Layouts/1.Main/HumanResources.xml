@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Human Resources" Alignment="Left" />
+  <DataSources>
+    <JsonDataSource Name="Departments" ConnectionName="HumanResourcesConnection" RootElement="Departments" ComponentName="dsDepartments">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="Departments" Selected="true" NodeType="Array">
+            <Node Name="CurrentDate" Type="System.Nullable`1[System.DateTime]" Selected="true" NodeType="Property" />
+            <Node Name="Department" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="HeadCount" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="RetiredCount" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="StaffTurnover" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="StaffTurnoverCritical" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+          </Node>
+          <Node Name="Employees" Selected="false" NodeType="Array">
+            <Node Name="Bonus" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="CurrentDate" Type="System.Nullable`1[System.DateTime]" Selected="false" NodeType="Property" />
+            <Node Name="Department" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="Employee" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="Overtime" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="Salary" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="SickLeaveDays" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+            <Node Name="VacationDays" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+    </JsonDataSource>
+    <JsonDataSource Name="Employees" ConnectionName="HumanResourcesConnection" RootElement="Employees" ComponentName="dsEmployees">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="Departments" Selected="false" NodeType="Array">
+            <Node Name="CurrentDate" Type="System.Nullable`1[System.DateTime]" Selected="false" NodeType="Property" />
+            <Node Name="Department" Type="System.String" Selected="false" NodeType="Property" />
+            <Node Name="HeadCount" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+            <Node Name="RetiredCount" Type="System.Nullable`1[System.Int64]" Selected="false" NodeType="Property" />
+            <Node Name="StaffTurnover" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+            <Node Name="StaffTurnoverCritical" Type="System.Nullable`1[System.Double]" Selected="false" NodeType="Property" />
+          </Node>
+          <Node Name="Employees" Selected="true" NodeType="Array">
+            <Node Name="Bonus" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="CurrentDate" Type="System.Nullable`1[System.DateTime]" Selected="true" NodeType="Property" />
+            <Node Name="Department" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="Employee" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="Overtime" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="Salary" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="SickLeaveDays" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="VacationDays" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+    </JsonDataSource>
+  </DataSources>
+  <Items>
+    <Pie ComponentName="piePayrollStructureSum" Name="Payroll Structure Summary" ShowCaption="false" ParentContainer="groupDashboardItem2" DataSource="dsEmployees" PieType="Donut" LabelContentType="Argument">
+      <DataItems>
+        <Measure DataMember="Overtime" Name="Overtime" DefaultId="DataItem2" />
+        <Measure DataMember="Bonus" Name="Bonus" DefaultId="DataItem1" />
+        <Measure DataMember="Salary" Name="Salary" DefaultId="DataItem0" />
+      </DataItems>
+      <Values>
+        <Value DefaultId="DataItem0" />
+        <Value DefaultId="DataItem1" />
+        <Value DefaultId="DataItem2" />
+      </Values>
+    </Pie>
+    <Grid ComponentName="gridStaffTurnoverTime" Name="Staff Turnover through Time" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="dsDepartments" IsMasterFilterCrossDataSource="true">
+      <InteractivityOptions IgnoreMasterFilters="true" MasterFilterMode="Single" IsDrillDownEnabled="true" />
+      <DataItems>
+        <Measure DataMember="StaffTurnoverCritical" SummaryType="Average" DefaultId="DataItem5" />
+        <Measure DataMember="StaffTurnover" SummaryType="Average" DefaultId="DataItem2">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+        <Dimension DataMember="CurrentDate" Name="Year" SortOrder="Descending" DefaultId="DataItem3" />
+        <Dimension DataMember="CurrentDate" Name="Month" DateTimeGroupInterval="Month" DefaultId="DataItem0" />
+        <Measure DataMember="StaffTurnover" SummaryType="Average" DefaultId="DataItem4">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" DataItem="DataItem2">
+          <FormatConditionGradientRangeBar ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Decimal" Value="0" />
+                  <BarStyleSettings PredefinedColor="GradientYellow" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Decimal" Value="20" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Decimal" Value="40" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Decimal" Value="60" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Decimal" Value="80" />
+                  <BarStyleSettings PredefinedColor="GradientRed" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+            <BarOptions ShowBarOnly="true" />
+          </FormatConditionGradientRangeBar>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Name="Year" Weight="55.819501043633835">
+          <Dimension DefaultId="DataItem3" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="Month">
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="Turnover" Weight="84.44488619421529">
+          <Measure DefaultId="DataItem2" />
+          <Totals>
+            <Total Type="Auto" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridDeltaColumn Name="Turnover" Weight="84.73561276215088">
+          <ActualValue DefaultId="DataItem4" />
+          <TargetValue DefaultId="DataItem5" />
+          <DeltaOptions ResultIndicationMode="WarningIfGreater" ValueType="ActualValue" />
+        </GridDeltaColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ShowVerticalLines="false" ColumnWidthMode="Manual" />
+      <ColumnFilterOptions />
+    </Grid>
+    <Card ComponentName="cardStaffTurnoverByDept" Name=" Staff Turnover by Department" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="dsDepartments" IsMasterFilterCrossDataSource="true" ContentArrangementMode="FixedColumnCount" ContentLineCount="2">
+      <InteractivityOptions MasterFilterMode="Single" />
+      <DataItems>
+        <Dimension DataMember="Department" DefaultId="DataItem2" />
+        <Measure DataMember="StaffTurnoverCritical" SummaryType="Average" DefaultId="DataItem1" />
+        <Measure DataMember="StaffTurnover" SummaryType="Average" DefaultId="DataItem0">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+      </DataItems>
+      <FormatRules>
+        <CardItemDeltaFormatRule Name="Format Rule 1" DeltaValueType="PercentVariation" CardId="DataItem0">
+          <FormatConditionTopBottom TopBottomType="Bottom" Rank="1">
+            <AppearanceSettings AppearanceType="FontGreen" />
+          </FormatConditionTopBottom>
+          <CardFormatRuleLayoutElement LayoutItemApplyTo="PercentVariation" />
+        </CardItemDeltaFormatRule>
+        <CardItemDeltaFormatRule Name="Format Rule 2" DeltaValueType="PercentVariation" CardId="DataItem0">
+          <FormatConditionTopBottom TopBottomType="Bottom" Rank="1">
+            <AppearanceSettings AppearanceType="FontGreen" />
+          </FormatConditionTopBottom>
+          <CardFormatRuleLayoutElement LayoutItemApplyTo="AbsoluteVariation" />
+        </CardItemDeltaFormatRule>
+        <CardItemDeltaFormatRule Name="Format Rule 3" DeltaValueType="PercentVariation" CardId="DataItem0">
+          <FormatConditionTopBottom TopBottomType="Bottom" Rank="1">
+            <AppearanceSettings AppearanceType="FontGreen" />
+          </FormatConditionTopBottom>
+          <CardFormatRuleLayoutElement />
+        </CardItemDeltaFormatRule>
+      </FormatRules>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Card Name="StaffTurnover (Average) vs StaffTurnoverCritical (Average)">
+        <ActualValue DefaultId="DataItem0" />
+        <TargetValue DefaultId="DataItem1" />
+        <CardDeltaOptions ResultIndicationMode="WarningIfGreater" />
+        <AbsoluteVariationNumericFormat FormatType="Percent" Precision="1" />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate Type="Stretched">
+          <TopValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <MainValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <BottomValue1 Visible="true" ValueType="PercentVariation" DimensionIndex="0" />
+          <BottomValue2 Visible="true" ValueType="AbsoluteVariation" DimensionIndex="0" />
+          <DeltaIndicator Visible="true" />
+          <Sparkline Visible="true" />
+        </LayoutTemplate>
+      </Card>
+    </Card>
+    <Pie ComponentName="pieAbsenceReasonSum" Name="Absence Reason Summary" ShowCaption="false" ParentContainer="groupDashboardItem3" DataSource="dsEmployees" PieType="Donut" LabelContentType="Argument">
+      <DataItems>
+        <Measure DataMember="SickLeaveDays" Name="Sick Leave" DefaultId="DataItem1">
+          <NumericFormat FormatType="General" />
+        </Measure>
+        <Measure DataMember="VacationDays" Name="Vacation" DefaultId="DataItem0">
+          <NumericFormat FormatType="General" />
+        </Measure>
+      </DataItems>
+      <Values>
+        <Value DefaultId="DataItem0" />
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartPayrollStructure" Name="Payroll Structure for Top 5 Employees" ShowCaption="false" ParentContainer="groupDashboardItem2" DataSource="dsEmployees">
+      <DataItems>
+        <Dimension DataMember="Employee" TopNEnabled="true" TopNMeasure="DataItem0" DefaultId="DataItem3" />
+        <Measure DataMember="Salary" DefaultId="DataItem0" />
+        <Measure DataMember="Bonus" DefaultId="DataItem1" />
+        <Measure DataMember="Overtime" DefaultId="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem3" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" Title="Value" />
+          <Series>
+            <Simple Name="Salary">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+            <Simple Name="Bonus">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+            <Simple Name="Overtime">
+              <Value DefaultId="DataItem2" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend InsidePosition="TopRightVertical" />
+      <AxisX TitleVisible="true" Title="Top 5 Employees" />
+    </Chart>
+    <Chart ComponentName="chartAbsenseDuration" Name="Absence Duration for Top 5 Employees" ShowCaption="false" ParentContainer="groupDashboardItem3" DataSource="dsEmployees">
+      <DataItems>
+        <Dimension DataMember="Employee" TopNEnabled="true" TopNMeasure="DataItem0" DefaultId="DataItem2" />
+        <Measure DataMember="VacationDays" DefaultId="DataItem0">
+          <NumericFormat FormatType="General" />
+        </Measure>
+        <Measure DataMember="SickLeaveDays" DefaultId="DataItem1">
+          <NumericFormat FormatType="General" />
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" Title="Value" />
+          <Series>
+            <Simple Name="Vacation">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+            <Simple Name="Sick Leave">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <AxisX TitleVisible="true" Title="Top 5 Employees" />
+    </Chart>
+  </Items>
+  <Groups>
+    <Group ComponentName="groupDashboardItem2" Name="Payroll Structure">
+      <InteractivityOptions IgnoreMasterFilters="false" IsMasterFilter="true" />
+    </Group>
+    <Group ComponentName="groupDashboardItem3" Name="Absence Duration">
+      <InteractivityOptions IgnoreMasterFilters="false" IsMasterFilter="true" />
+    </Group>
+    <Group ComponentName="groupDashboardItem1" Name="Turnover">
+      <InteractivityOptions IgnoreMasterFilters="false" IsMasterFilter="true" />
+    </Group>
+  </Groups>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical" Weight="100">
+      <LayoutGroup Weight="100">
+        <LayoutGroup DashboardItem="groupDashboardItem1" Weight="80.98812837329258">
+          <LayoutGroup Orientation="Vertical" Weight="48.9385020912659">
+            <LayoutItem DashboardItem="cardStaffTurnoverByDept" Weight="40.74338252419958" />
+            <LayoutItem DashboardItem="gridStaffTurnoverTime" Weight="44.131559133672994" />
+          </LayoutGroup>
+        </LayoutGroup>
+        <LayoutGroup Orientation="Vertical" Weight="126.40389009472942">
+          <LayoutGroup DashboardItem="groupDashboardItem3" Weight="83.64071807179572">
+            <LayoutGroup Orientation="Vertical" Weight="37.01330568320597">
+              <LayoutGroup Weight="38.47364918442427">
+                <LayoutItem DashboardItem="chartAbsenseDuration" Weight="32.656139231538695" />
+                <LayoutItem DashboardItem="pieAbsenceReasonSum" Weight="29.376712972386585" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup DashboardItem="groupDashboardItem2" Weight="112.43198926722455">
+            <LayoutGroup Orientation="Vertical" Weight="31.97112620851387">
+              <LayoutItem DashboardItem="chartPayrollStructure" Weight="38.49826726102856" />
+            </LayoutGroup>
+            <LayoutItem DashboardItem="piePayrollStructureSum" Weight="28.62486813927359" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+    <Description>["The dashboard displays human resources department statistics.","The grid and cards show staff turnover through time and staff turnover breakdown by department respectively. If the turnover rate exceeds 1%, the value gets marked with a warning - an orange circle. You can select cards to filter data in bar charts and pies by department. Bar charts and pies show payroll structure and work absence reason statistics for top 10 employees and for the entire company."]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/17868/winforms-dashboard/winforms-designer/create-dashboards-in-the-winforms-designer/appearance-customization/coloring","text":"Coloring"},{"href":"https://docs.devexpress.com/Dashboard/402204/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/grid/conditional-formatting","text":"Conditional Formatting"},{"href":"https://docs.devexpress.com/Dashboard/117061/web-dashboard/create-dashboards-on-the-web/interactivity/drill-down","text":"Drill-Down"},{"href":"https://docs.devexpress.com/Dashboard/117060/web-dashboard/create-dashboards-on-the-web/interactivity/master-filtering","text":"Master Filtering"}]</Links>
+  </CustomProperties>
+</Dashboard>

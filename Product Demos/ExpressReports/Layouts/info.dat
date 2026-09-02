@@ -1,0 +1,332 @@
+[BalanceSheetReport]
+Group=Highlighted Features
+Caption=Balance Sheet
+Hide=1
+HideReason=Object-based
+Description=This demo illustrates how to use the Cross Tab control to create a Balance Sheet report. In this demo, the Cross Tab's HierarchicalRowLayout property is enabled to display rows in a tree-like form. Grand total values and field headers are hidden, and column field values are grouped by years. The GroupRowIndex variable is used in expressions to apply odd and even row styles.\n\nRefer to the Sales Summary Report demo for another Cross Tab layout.\n\n[url=https://docs.devexpress.com/XtraReports/401303/create-reports/create-a-balance-sheet]See Documentation[/url]
+Order=000
+
+[CarryoverSummaryReport]
+Group=Highlighted Features
+Caption=Carryover Summary
+Hide=1
+HideReason=Object-based
+Description=This demo shows the calculation of carried forward/brought forward summaries in a report. Carried forward is the practice of automatically transferring specific values or calculations from one reporting period to another. In this demo, calculated running summaries are transferred from the report's footer to the header of the next page.\n\nThe report includes XRLabel controls placed in the GroupHeaderBand and GroupFooterBand that are bound to the expression sumCarryoverSum([Amount]). This expression allows you to display the current amount on each page. The records span across multiple pages, and the summary in the footer of the first page is repeated in the header of subsequent pages.
+Order=011
+
+[ChartReport]
+Group=Highlighted Features
+Caption=Chart
+Hide=1
+HideReason=C#-code for bottom charts amd custom legend markers
+Description=You can use the DevExpress Reporting Chart control to add charts to your reports. In this demo, the Chart control displays sales data collected from different sources, and FederationDataSource is used to combine these sources into one data source. The chart's Data Member is set to the Categories.CategoriesProducts relation.\n\n[url=https://docs.devexpress.com/XtraReports/15039/detailed-guide-to-devexpress-reporting/use-report-controls/use-charts]See Documentation[/url]
+Order=010
+
+[EmbeddedPDFContent]
+Group=Highlighted Features
+Caption=Embedded PDF Content
+Hide=0
+Description=This demo illustrates an invoice report that includes a PDF specification for each invoice item. The [url=https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRPdfContent]XRPdfContent[/url] control is used to embed PDF specification pages and make their paper kind the same as in the invoice report. Report controls are used to add additional information to the PDF pages, such as item description, item price, line, logo image, and sequential page numbers.\n\n[url=https://docs.devexpress.com/XtraReports/403421/create-reports/create-a-report-with-embedded-pdf-content]See Documentation[/url]
+Order=009
+SubReportFileName=Auxiliary\SubReportEmbeddedPDFContent.repx
+
+[HierarchicalReport]
+Group=Highlighted Features
+Caption=Hierarchical Report
+Hide=1
+HideReason=Object-based
+Description=This demo shows how to print hierarchical data in a tree view. In this report, the detail band's HierarchyPrintOptions property is used to specify the ParentID / ID data relation. Drill-Down is enabled to allow users to expand and collapse hierarchy levels in Print Preview.\n\n[url=https://docs.devexpress.com/XtraReports/400925/create-reports/create-a-hierarchical-report]See Documentation[/url]
+Order=007
+
+[InvoiceReport]
+Group=Highlighted Features
+Caption=Invoice
+Hide=0
+Description=This demo illustrates a sample Invoice report. Refer to the [url=https://docs.devexpress.com/XtraReports/14651/get-started-with-devexpress-reporting]Get Started with DevExpress Reporting[/url] documentation section and the [url=https://www.youtube.com/playlist?list=PL8h4jt35t1wixmi-yv3Wj6FSJMEa08npR]DevExpress Reporting[/url] video channel for details on how to create reports.\n\n[url=https://docs.devexpress.com/XtraReports/117229/create-reports/create-an-invoice]See Documentation[/url]
+Order=002
+
+[MasterDetailReport]
+Group=Highlighted Features
+Caption=Master-Detail Report
+Hide=0
+Description=This demo illustrates the use of Detail Report bands when generating a [url=https://docs.devexpress.com/XtraReports/4785/create-reports/create-a-master-detail-report-with-a-detail-report-band]master-detail report[/url]. The report displays the invoice data where the Detail Report lists the products ordered.
+Order=001
+
+[PdfVisualSignature]
+Group=Highlighted Features
+Caption=PDF Visual Signature
+Hide=1
+HideReason=C# code to add signing property
+Description=This demo adds a visual signature to a report.\n\nThe document is an agreement that requires signatures from two sides - a client and a contractor. The report includes two [url=https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRPdfSignature]XRPdfSignature[/url] controls that will hold those signatures. The demo allows you to sign the agreement as a client. Open the <b>Export Options</b> panel, expand the [url=https://docs.devexpress.com/XtraReports/2574/detailed-guide-to-devexpress-reporting/store-and-distribute-reports/export-reports/export-to-pdf?f=+export+options#export-from-document-viewer-web-platforms]PDF Export Options[/url] section, and select an entry from the <b>Signature</b> drop-down list. Export the document and open it to see a visual signature. The second party can sign the document in Adobe Acrobat Reader.\n\n[url=https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.WebDocumentViewer.IPdfSignatureOptionsProviderAsync?v=23.1]See Documentation[/url]
+Order=006
+
+[ProfitAndLossReport]
+Group=Highlighted Features
+Caption=Profit And Loss Report
+Hide=1
+HideReason=Object-based
+Description=This demo illustrates how to use vertical bands to create a sample profit and loss statement. These bands allow you to design reports where record fields are arranged vertically, and records are printed horizontally.\n\nIn the Parameters Panel, select the data range to examine incomes and expenses for a specific fiscal period.\n\n[url=https://docs.devexpress.com/XtraReports/400316/create-reports/create-a-vertical-report]See Documentation[/url]
+Order=003
+
+[ReportMergingWithPdf]
+Group=Highlighted Features
+Caption=Report Merging With PDF
+Hide=0
+Description=In this invoice demo, a report document is merged with PDF content. The report includes an [url=https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRPdfContent]XRPdfContent[/url] control that adds a PDF specification document for each product ordered.\n\n[url=https://docs.devexpress.com/XtraReports/401691/create-reports/create-a-report-merged-with-pdf]See Documentation[/url]
+Order=005
+
+[TableReport]
+Group=Highlighted Features
+Caption=Table Report
+Hide=0
+Description=This demo illustrates how to use the Table control to create a table report. This control allows you to draw a data-aware table and apply report styles (for example, to odd and even table rows).\nIn this demo, the XRTableCell.TextFitMode property is used to adjust the Supplier column's font size and occupy the available cell space.\n\n[url=https://docs.devexpress.com/XtraReports/4784/create-reports/create-a-table-report]See Documentation[/url]
+Order=008
+
+[VehicleInspectionReport]
+Group=Highlighted Features
+Caption=Vehicle Inspection Report
+Hide=1
+HideReason=C# code to apply Language parameters
+Description=This demo illustrates a localized report that incorporates design and text variations that target different languages and cultures. Select a language report parameter to preview the localized version. You can run the Report Designer to edit text translations and create culture-specific design.\n\n[url=https://docs.devexpress.com/XtraReports/401573/detailed-guide-to-devexpress-reporting/globalize-and-localize-reports/localize-reports]See Documentation[/url]\n\nA report in this demo uses the Check Box, Label and Picture Box controls in edit mode to create a customizable Vehicle Inspection Report. Labels allow you to input car data and leave inspection comments. Check Box controls use custom SVG glyphs and are grouped in a way that allows them to behave like radio buttons. The Picture Box uses Signature edit mode, and allows you to specify car damage after external examination.\n\n[url=https://docs.devexpress.com/XtraReports/117343/detailed-guide-to-devexpress-reporting/provide-interactivity/edit-content-in-print-preview]See Documentation[/url]
+Order=004
+
+[CharacterCombReport]
+Group=Interactions
+Caption=E-Form
+Hide=0
+Description=This demo illustrates how to use the Character Comb control to create a fillable application form in Print Preview. In this form, the Character Comb and Picture Box controls are set to edit mode to allow end users to fill the cells, choose a predefined image, and draw a signature.\n\n[url=https://docs.devexpress.com/XtraReports/118134/create-reports/create-an-interactive-e-form]See Documentation[/url]
+Order=104
+
+[Drill-Down Report]
+Group=Interactions
+Caption=Drill-Down Report
+Hide=0
+Description=This demo illustrates the power of [url=https://docs.devexpress.com/XtraReports/14956/detailed-guide-to-devexpress-reporting/provide-interactivity/create-drill-down-reports]drill-down reports[/url] – a document with expandable/collapsible sections in Preview mode. The report displays invoices where the expandable/collapsible section of the report lists purchased products.
+Order=100
+
+[DrillThroughReport]
+Group=Interactions
+Caption=Drill-Through Report
+Hide=0
+Description=This demo implements a drill-through report. In Preview mode, click "Order Detail" cells in the main report to navigate to a detail report and view extended order information.
+Order=101
+
+[EmployeePerformanceReview]
+Group=Interactions
+Caption=Employee Performance Review
+Hide=0
+Description=DevExpress Reporting allows you to create forms, polls, and surveys you can fill in Print Preview. In this demo, content editing is enabled for the Check Box controls and allows you to choose one of predefined options.\n\n[url=https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRCheckBox.EditOptions]See Documentation[/url]
+Order=102
+
+[InteractiveSortingReport]
+Group=Interactions
+Caption=Interactive Sorting
+Hide=0
+Description=DevExpress Reporting allows you to enable sorting in Print Preview with no code. In this demo, end users can sort report groups and detail data.\n\n[url=https://docs.devexpress.com/XtraReports/5527/detailed-guide-to-devexpress-reporting/provide-interactivity/sort-a-report-in-print-preview]See Documentation[/url]
+Order=103
+
+[LabelReport]
+Group=Report Controls
+_Group=Report Types
+Caption=Label Report
+Hide=0
+Description=The DevExpress Report Wizard allows you to choose between more than 1500 predefined label types and specify label options. This demo report is created using the Report Wizard and can be printed on a specific label printer.\n\n[url=https://docs.devexpress.com/XtraReports/4792/create-reports/create-labels-and-badges]See Documentation[/url]
+Order=707
+_Order=202
+
+[MultiColumnReport]
+Group=Report Types
+Caption=Multi-Column Report
+Hide=1
+HideReason=Object-based
+Description=In this demo, the Detail band's MultiColumn property is specified to display report data in several columns. In the Parameters panel, you can select columns layout and see how grouped and ungrouped data is arranged in columns.\n\n[url=https://docs.devexpress.com/XtraReports/4786/create-reports/create-a-multi-column-report]See Documentation[/url]
+Order=201
+
+[ReportMergingReport]
+Group=Report Types
+Caption=Report Merging
+Hide=1
+HideReason=C# code to reorder on properties change and Unsupported proper SubReport saving
+Description=In this demo, pages with charts belong to a separate report that is merged to the base report. For this, the base report contains the Subreport control with the Generate Own Pages option enabled. This option allows you to print/export the subreport on individual pages and preserve reports' page settings and orientation.\n\n[url=https://docs.devexpress.com/XtraReports/400691/detailed-guide-to-devexpress-reporting/merge-reports/merge-reports-use-data-driven-page-sequence]See Documentation[/url]
+Order=203
+
+[SideBySideReport]
+Group=Report Types
+Caption=Side-By-Side Report
+Hide=0
+Description=This demo illustrates how to use two Subreport controls to create a report that compares employee metrics. These controls are associated with a single report and display data filtered by different employee IDs.\n\n[url=https://docs.devexpress.com/XtraReports/4787/create-reports/create-a-side-by-side-report]See Documentation[/url]
+Order=204
+SubReportFileName=Auxiliary\SideBySideSubReport.repx
+
+[SubreportReport]
+Group=Report Types
+Caption=Subreports
+Hide=0
+Description=This demo illustrates how to use the Subreport control to create master-detail reports. This approach is useful if your data source does not contain ADO.NET relationships or if you want to associate the Subreport control with a detail report you use across reports.\nRefer to the Master-Detail Report demo to see another approach to create master-detail reports.\n\n[url=https://docs.devexpress.com/XtraReports/4629/create-reports/create-a-master-detail-report-with-a-subreport]See Documentation[/url]
+Order=200
+SubReportFileName=Auxiliary\SubReport.repx
+
+[FallCatalogReport]
+Group=Real-life Reports
+Caption=Fall Catalog
+Hide=1
+HideReason=C# code to reorder on properties change
+Description=This demo illustrates a real-life report that includes the following: \n- a table of contents and document map that refer to product categories; \n- grouping and sorting by a category name; \n- labels with summary expressions; \n- data filtering by a custom type parameter.
+Order=302
+
+[ProductListReport]
+Group=Real-life Reports
+Caption=Products List
+Hide=0
+Description=This demo illustrates a table report with a calculated field that is used to group data and generate a document map.
+Order=301
+
+[RestaurantMenu]
+Group=Real-life Reports
+Caption=Restaurant Menu
+Hide=1
+HideReason=Object-based
+Description=This demo illustrates how to use a detail band's multi-column settings to create a two-column restaurant menu. The report is bound to data and includes multiple groups. Each group represents a different category and sub-category of meals and beverages.
+Order=304
+
+[RollPaper]
+Group=Real-life Reports
+Caption=Roll Paper
+Hide=0
+Description=In this demo, the report's PaperKind property is set to Custom and the RollPaper property is enabled. This allows you to specify the roll paper's width and print the generated document as a single, uninterrupted page.
+Order=300
+
+[SalesSummaryReport]
+Group=Real-life Reports
+Caption=Sales Summary Report
+Hide=0
+Description=This demo illustrates how to use the Cross Tab control to create a Sales Summary report. In this demo, the Cross Tab calculates automatic totals and grand totals across all row and column fields. The top left corner displays row field headers, and row field values are grouped by quarter.\n\nRefer to the Balance Sheet demo for another Cross Tab layout.\n\n[url=https://docs.devexpress.com/XtraReports/4226/create-reports/create-a-cross-tab-report]See Documentation[/url]
+Order=303
+
+[AnchoringReport]
+Group=Layout Features
+Caption=Anchoring
+Hide=1
+HideReason=C# code to make and handle Landscape parameter
+Description=In this demo, the report controls' Anchor Horizontally and Anchor Vertically properties are specified to maintain the distance to the container's edges when you change the page's layout (Landscape parameter).
+Order=401
+
+[CrossBandContent]
+Group=Layout Features
+Caption=Cross-Band Content
+Hide=0
+Description=This demo illustrates how you can display Group Header content across a group. The Group Header's PrintAcrossBands property is active and the controls within the band are printed as a background layer for subsequent Group Header, Detail and Group Footer bands. The Detail band's FillEmptySpace property is enabled to get rid of the gap between details and totals.\n\n[url=https://docs.devexpress.com/XtraReports/401300/create-reports/create-a-report-with-cross-band-content-and-populated-empty-space]See Documentation[/url]
+Order=403
+
+[Hidden Columns]
+Group=Layout Features
+Caption=Hidden Columns
+Hide=0
+Description=DevExpress Reporting allows you to specify how to process hidden cells in reports. In this demo, use the parameter in the Parameters panel to hide a column and see the XRTable.ProcessHiddenCellMode property's Resize Cells Proportionally mode in action: when a column is hidden, the remaining columns are resized, and empty space is eliminated.\n\n[url=https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRTable.ProcessHiddenCellMode]See Documentation[/url]\n\nImage licensing information: [url=https://www.devexpress.com/carimages]https://www.devexpress.com/carimages[/url]
+Order=402
+
+[ShrinkGrowReport]
+Group=Layout Features
+Caption=Shrink and Grow
+Hide=0
+Description=You can enable the CanShrink and CanGrow properties for labels, table cells and rich text controls to set non-fixed heights. In this demo, the CanGrow property is enabled for the cell that is bound to the About data field. This cell has a different height depending on the bound content.
+Order=400
+
+[CalculatedFieldsReport]
+Group=Data Binding
+Caption=Calculated Fields
+Hide=1
+HideReason=C#-code for apply parameter changing
+Description=DevExpress reports allows you to create calculated fields based on the data fields from the report's data source. This demo illustrates several expressions based on the data and are displayed in the last report column.\n\n[url=https://docs.devexpress.com/XtraReports/4801/detailed-guide-to-devexpress-reporting/shape-report-data/use-calculated-fields]See Documentation[/url]
+Order=501
+
+[LargeDatasetReport]
+Group=Data Binding
+Caption=Large Dataset
+Hide=1
+HideReason=Object-based
+Description=[B]dx[/B]Formatted[URL=http://x.com]Label[/URL]1\nline 2
+Order=503
+
+[MailMergeReport]
+Group=Report Controls
+_Group=Data Binding
+Caption=Rich Text and Mail Merge
+Hide=0
+Description=This demo illustrates how to use Mail Merge and the Rich Text control within DevExpress Reports. The Report Designer displays Rich Text controls with data field names enclosed in square brackets. In Print Preview these names are substituted with data from the report's data source.\n\n[url=https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.UI.XRRichText]See Documentation[/url]
+Order=706
+_Order=502
+
+[PivotGridAndChart]
+Group=Data Binding
+Caption=Pivot Grid And Chart
+Hide=1
+HideReason=C#-code for apply parameter changing
+Description=This demo illustrates how to use a linked Pivot Grid and Chart controls in your report. In this demo, the Chart's DataSource property is set to the Pivot Grid instance. You can change chart options in the Parameters panel to visualize different data from the Pivot Grid.\n\n[url=https://docs.devexpress.com/XtraReports/14320/detailed-guide-to-devexpress-reporting/use-report-controls/use-charts/link-a-chart-and-a-pivot-grid]See Documentation[/url]
+Order=500
+
+[ConditionalFormattingReport]
+Group=Appearance
+Caption=Conditional Formatting
+Hide=1
+HideReason=C# code to apply properties change
+Description=[B]dx[/B]Formatted[URL=http://x.com]Label[/URL]1\nline 2
+Order=600
+
+[BarCodeReport]
+Group=Report Controls
+Caption=Bar Code
+Hide=0
+Description=This report demonstrates all bar code types the BarCode control supports and the AutoModule option the BarCode control exposes. Enable this option in the Parameters panel to automatically calculate the width of the narrowest bar or space based on the control's size.\n\n[url=https://docs.devexpress.com/XtraReports/1313/detailed-guide-to-devexpress-reporting/use-report-controls/use-bar-codes/add-bar-codes-to-reports]See Documentation[/url]
+Order=701
+
+[CrossBandControlsReport]
+Group=Report Controls
+Caption=Cross-Band Controls
+Hide=1
+HideReason=C# code to make owner-draw control with Z sign on property change
+Description=This demo illustrates how to use the Cross-Band Line and Cross-Band Box controls in reports to draw lines and rectangles across several bands and through the entire page.\n\n[url=https://docs.devexpress.com/XtraReports/2605/detailed-guide-to-devexpress-reporting/use-report-controls#cross-band-line-and-box]See Documentation[/url]
+Order=704
+
+[Custom Control]
+Group=Report Controls
+Caption=Custom Control
+Hide=1
+HideReason=Object-based and C# code
+Description=[B]dx[/B]Formatted[URL=http://x.com]Label[/URL]1\nline 2
+Order=705
+
+[ShapeReport]
+Group=Report Controls
+Caption=Shape
+Hide=0
+Description=This demo illustrates the shapes that you can add to your report using the Shape control.\n\n[url=https://docs.devexpress.com/XtraReports/2605/detailed-guide-to-devexpress-reporting/use-report-controls#shape]See Documentation[/url]
+Order=702
+
+[SparklineReport]
+Group=Report Controls
+Caption=Sparkline
+Hide=1
+HideReason=C# code to get sparkline data
+Description=DevExpress Reporting allows you to use the Sparkline control with conditional markers in reports. In this demo report, the table contains sparklines that display monthly payment statistics for each customer. The blue and red markers in this demo specify the lowest and highest values.\n\n[url=https://docs.devexpress.com/XtraReports/2605/detailed-guide-to-devexpress-reporting/use-report-controls#sparkline]See Documentation[/url]
+Order=700
+
+[SwissQRBillReport]
+Group=Report Controls
+Caption=Swiss QR Bill
+Hide=1
+HideReason=Object-based
+Description=This demo illustrates how to use the DevExpress Bar Code report control to incorporate a Swiss QR Code into a report.\n\n[url=https://docs.devexpress.com/XtraReports/400351/create-reports/create-a-swiss-qr-bill]See Documentation[/url]
+Order=703
+
+HideReasons= Not exists in WebForms to save from:
+TODO=save by VS designer from C:\Projects\dxvcs\Win\DevExpress.XtraReports\DevExpress.DemoReports
+
+"AIPoweredInvoiceReport" = "AIPoweredInvoiceReport"
+"AIPoweredReportDesigner" = "AIPoweredReportDesigner"
+"CachedDocumentSource" = "CachedDocumentSource" // Object-based, c# code
+"ColorSchemeCustomization" = "ColorSchemeCustomization"
+"PollingReport" = "PollingReport"  // Object-based, c# code
+"ReportDesigner" = "ReportDesigner"
+"RichText" = "RichText"
+

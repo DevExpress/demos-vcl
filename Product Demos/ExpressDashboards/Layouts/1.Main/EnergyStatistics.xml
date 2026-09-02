@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Energy Statistics" Alignment="Left" />
+  <DataSources>
+    <JsonDataSource Name="Countries" ConnectionName="EnergyStatisticsConnection" RootElement="mdCountries" ComponentName="dsCountries">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="mdCountries" Selected="true" NodeType="Array">
+            <Node Name="Country" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="EnergyType" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="Import" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="Latitude" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="Longitude" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="Production" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="RecId" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="Year" Type="System.Nullable`1[System.DateTime]" Selected="true" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+      <CalculatedFields>
+        <CalculatedField Name="YearImport" Expression="ToDecimal(Iif(GetYear([Year]) = ?Year, [Import], 0))" DataType="Object" />
+        <CalculatedField Name="YearProduction" Expression="ToDecimal(Iif(GetYear([Year]) = ?Year, [Production], 0))" DataType="Object" />
+        <CalculatedField Name="YearTotal" Expression="ToDecimal([YearProduction] + [YearImport])" DataType="Object" />
+        <CalculatedField Name="DomesticShare" Expression="ToDecimal(Iif(Sum([YearTotal]) = 0, 0, Sum([YearProduction]) / Sum([YearTotal])))" DataType="Object" />
+      </CalculatedFields>
+    </JsonDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="Year" Type="System.Int32" Value="2009">
+      <StaticListLookUpSettings>
+        <Values>
+          <Value>1999</Value>
+          <Value>2000</Value>
+          <Value>2001</Value>
+          <Value>2002</Value>
+          <Value>2003</Value>
+          <Value>2004</Value>
+          <Value>2005</Value>
+          <Value>2006</Value>
+          <Value>2007</Value>
+          <Value>2008</Value>
+          <Value>2009</Value>
+        </Values>
+      </StaticListLookUpSettings>
+    </Parameter>
+  </Parameters>
+  <Items>
+    <Grid ComponentName="gridProductionImportByCountry" Name="Energy Statistics by Country" ShowCaption="false" DataSource="dsCountries">
+      <DataItems>
+        <Dimension DataMember="Country" DefaultId="DataItem0" />
+        <Measure DataMember="YearProduction" DefaultId="DataItem1">
+          <NumericFormat FormatType="Number" />
+        </Measure>
+        <Measure DataMember="YearProduction" DefaultId="DataItem4" />
+        <Measure DataMember="YearImport" DefaultId="DataItem3">
+          <NumericFormat FormatType="Number" />
+        </Measure>
+        <Measure DataMember="Production" DefaultId="DataItem5">
+          <NumericFormat FormatType="Number" />
+        </Measure>
+        <Dimension DataMember="Year" DefaultId="DataItem2" />
+        <Measure DataMember="DomesticShare" Name="Domestic Share" SummaryType="Count" DefaultId="DataItem6">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" DataItem="DataItem6">
+          <FormatConditionValue Condition="GreaterOrEqual">
+            <AppearanceSettings AppearanceType="FontGreen" />
+            <Value1 Type="System.Decimal" Value="0.5" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 2" DataItem="DataItem6">
+          <FormatConditionValue Condition="Less">
+            <AppearanceSettings AppearanceType="FontYellow" />
+            <Value1 Type="System.Decimal" Value="0.5" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 3" DataItem="DataItem6">
+          <FormatConditionValue>
+            <AppearanceSettings AppearanceType="FontRed" />
+            <Value1 Type="System.Int32" Value="0" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridHyperlinkColumn Weight="56.77010499243434" UriPattern="http://en.wikipedia.org/wiki/{0}">
+          <DisplayValue DefaultId="DataItem0" />
+        </GridHyperlinkColumn>
+        <GridMeasureColumn Weight="53.883489484344466">
+          <Measure DefaultId="DataItem6" />
+        </GridMeasureColumn>
+        <GridDeltaColumn Name="Import" Weight="51.95907914561787">
+          <ActualValue DefaultId="DataItem3" />
+          <TargetValue DefaultId="DataItem4" />
+          <DeltaOptions ResultIndicationMode="WarningIfGreater" ValueType="ActualValue" />
+        </GridDeltaColumn>
+        <GridMeasureColumn Name="Production" Weight="46.50658318589254">
+          <Measure DefaultId="DataItem1" />
+        </GridMeasureColumn>
+        <GridSparklineColumn Name="Trend" Weight="46.17582515892391">
+          <SparklineValue DefaultId="DataItem5" />
+          <SparklineOptions ViewType="Bar" HighlightStartEndPoints="false" />
+        </GridSparklineColumn>
+      </GridColumns>
+      <SparklineArgument DefaultId="DataItem2" />
+      <GridOptions EnableBandedRows="true" ShowHorizontalLines="false" ShowVerticalLines="false" ColumnWidthMode="Manual" />
+      <ColumnFilterOptions />
+    </Grid>
+    <PieMap ComponentName="mapProduction" Name="Energy Statistics by Country" DataSource="dsCountries" ShapefileArea="Europe" ShapeTitleAttributeName="NAME">
+      <InteractivityOptions IgnoreMasterFilters="true" MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="Country" DefaultId="DataItem5" />
+        <Measure DataMember="YearImport" Name="Import" DefaultId="DataItem2">
+          <NumericFormat FormatType="Number" />
+        </Measure>
+        <Dimension DataMember="EnergyType" DefaultId="DataItem3" />
+        <Measure DataMember="YearProduction" Name="Production" DefaultId="DataItem4">
+          <NumericFormat FormatType="Number" />
+        </Measure>
+        <Dimension DataMember="Longitude" DefaultId="DataItem1" />
+        <Dimension DataMember="Latitude" DefaultId="DataItem0" />
+      </DataItems>
+      <ViewArea TopLatitude="56.010089871737286" BottomLatitude="33.92145349565476" LeftLongitude="-22.636469611018924" RightLongitude="32.121162968197766" CenterPointLatitude="46.056090189822854" CenterPointLongitude="4.718641278090959" CreateViewerPaddings="false" />
+      <MapLegend Visible="true" Position="BottomRight" />
+      <WeightedLegend Visible="true" Position="BottomLeft" />
+      <Latitude DefaultId="DataItem0" />
+      <Longitude DefaultId="DataItem1" />
+      <TooltipDimensions>
+        <TooltipDimension DefaultId="DataItem5" />
+      </TooltipDimensions>
+      <Argument DefaultId="DataItem3" />
+      <Values>
+        <Value DefaultId="DataItem4" />
+        <Value DefaultId="DataItem2" />
+      </Values>
+    </PieMap>
+    <Card ComponentName="cardProductionImportByType" Name="Energy Statistics by Type - Production vs Import" ShowCaption="false" DataSource="dsCountries" FilterString="[DataItem0] In ('Petroleum Products', 'Solid Fuels', 'Gases')" ContentArrangementMode="FixedColumnCount">
+      <InteractivityOptions MasterFilterMode="Single" />
+      <DataItems>
+        <Dimension DataMember="EnergyType" DefaultId="DataItem0" />
+        <Measure DataMember="YearProduction" DefaultId="DataItem1">
+          <NumericFormat FormatType="Number" />
+        </Measure>
+        <Measure DataMember="YearImport" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem0" />
+      </SeriesDimensions>
+      <Card>
+        <ActualValue DefaultId="DataItem1" />
+        <TargetValue DefaultId="DataItem2" />
+        <CardDeltaOptions ResultIndicationMode="WarningIfLess" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="120" Type="Centered">
+          <MainValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <BottomSubValue1 Visible="true" ValueType="AbsoluteVariation" DimensionIndex="0" />
+          <BottomSubValue2 Visible="true" ValueType="PercentVariation" DimensionIndex="0" />
+          <DeltaIndicator Visible="true" />
+          <Sparkline Visible="true" />
+        </LayoutTemplate>
+      </Card>
+    </Card>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Weight="100">
+      <LayoutGroup Orientation="Vertical" Weight="77.75437914193364">
+        <LayoutItem DashboardItem="cardProductionImportByType" Weight="35.246420189595824" />
+        <LayoutGroup Weight="87.81436791675283">
+          <LayoutGroup Orientation="Vertical" Weight="47.15792446592147">
+            <LayoutGroup Weight="107.42142910729076">
+              <LayoutGroup Orientation="Vertical" Weight="56.74432150587439">
+                <LayoutItem DashboardItem="gridProductionImportByCountry" Weight="71.05280101966328" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </LayoutGroup>
+      <LayoutItem DashboardItem="mapProduction" Weight="116.80835665296783" />
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+    <Description>["The dashboard shows energy statistics by country.","The pie map shows the energy production and import for European countries and indicates the contribution of each energy type to the total values. Cards show energy production compared to import for the selected countries for each energy type. Switch between cards to see the domestic share and the variation of the energy production over time for each country shown in the grid. The dashboard parameters allows you to display energy statistics for a certain year."]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/117870/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/geo-point-maps/pie-map","text":"Pie Map"},{"href":"https://docs.devexpress.com/Dashboard/119498/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/grid/columns/sparkline-column","text":"Sparklines"},{"href":"https://docs.devexpress.com/Dashboard/402204/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/grid/conditional-formatting","text":"Conditional Formatting"},{"href":"https://docs.devexpress.com/Dashboard/117062/web-dashboard/create-dashboards-on-the-web/data-analysis/dashboard-parameters","text":"Dashboard Parameters"}]</Links>
+  </CustomProperties>
+</Dashboard>

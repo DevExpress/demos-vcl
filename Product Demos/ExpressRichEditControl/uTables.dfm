@@ -1,0 +1,2 @@
+inherited frmRichEditTables: TfrmRichEditTables
+end

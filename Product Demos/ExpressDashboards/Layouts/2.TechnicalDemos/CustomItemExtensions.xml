@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Custom Items - Technical Demo" Alignment="Left" />
+  <DataSources>
+    <ExtractFileDataSource ComponentName="dashboardExtractDataSource1" Name="Extract Data Source 1">
+      <FileName>|DataDirectory|CustomItemExtensions.dat</FileName>
+      <Parameters />
+    </ExtractFileDataSource>
+  </DataSources>
+  <Items>
+    <CustomItem ComponentName="customItemOnlineMap" Name="Country" DataSource="dashboardExtractDataSource1" IsMasterFilterCrossDataSource="true" CustomItemType="OnlineMap">
+      <InteractivityOptions MasterFilterMode="Single" />
+      <DataItems>
+        <Dimension DataMember="Latitude" DefaultId="DataItem0" />
+        <Dimension DataMember="Longitude" DefaultId="DataItem1" />
+      </DataItems>
+      <SliceTables>
+        <SliceTable Name="SliceTable1">
+          <Dimensions>
+            <Dimension DefaultId="DataItem0" />
+            <Dimension DefaultId="DataItem1" />
+          </Dimensions>
+        </SliceTable>
+      </SliceTables>
+      <InteractivityTargets>
+        <Dimension DefaultId="DataItem0" />
+        <Dimension DefaultId="DataItem1" />
+      </InteractivityTargets>
+      <CustomMetadata>
+        <Latitude ItemType="Dimension" DefaultId="DataItem0" />
+        <Longitude ItemType="Dimension" DefaultId="DataItem1" />
+      </CustomMetadata>
+    </CustomItem>
+    <CustomItem ComponentName="customItemWebPage" Name="League Description" DataSource="dashboardExtractDataSource1" CustomItemType="WebPage">
+      <DataItems>
+        <Dimension DataMember="Country Code" DefaultId="DataItem0" />
+      </DataItems>
+      <SliceTables>
+        <SliceTable Name="SliceTable1">
+          <Dimensions>
+            <Dimension DefaultId="DataItem0" />
+          </Dimensions>
+        </SliceTable>
+      </SliceTables>
+      <CustomMetadata>
+        <Attribute DefaultId="DataItem0" />
+      </CustomMetadata>
+    </CustomItem>
+    <CustomItem ComponentName="customItemFunnelD3" Name="Number of Champions League Winning Teams" DataSource="dashboardExtractDataSource1" IsMasterFilterCrossDataSource="true" CustomItemType="FunnelD3">
+      <InteractivityOptions IsDrillDownEnabled="true" />
+      <DataItems>
+        <Measure DataMember="Count" SummaryType="Max" DefaultId="DataItem0" />
+        <Dimension DataMember="Stage" SortOrder="Descending" ColoringMode="Hue" SortByMeasure="DataItem0" DefaultId="DataItem1" />
+        <Dimension DataMember="Period" SortOrder="Descending" ColoringMode="Hue" SortByMeasure="DataItem0" DefaultId="DataItem2" />
+      </DataItems>
+      <SliceTables>
+        <SliceTable Name="SliceTable1">
+          <Dimensions>
+            <Dimension DefaultId="DataItem1" />
+            <Dimension DefaultId="DataItem2" />
+          </Dimensions>
+          <Measures>
+            <Measure DefaultId="DataItem0" />
+          </Measures>
+        </SliceTable>
+      </SliceTables>
+      <InteractivityTargets>
+        <Dimension DefaultId="DataItem1" />
+        <Dimension DefaultId="DataItem2" />
+      </InteractivityTargets>
+      <ColoringDimensions>
+        <Dimension DefaultId="DataItem1" />
+        <Dimension DefaultId="DataItem2" />
+      </ColoringDimensions>
+      <ColoringMeasures>
+        <Measure DefaultId="DataItem0" />
+      </ColoringMeasures>
+      <CustomMetadata>
+        <Values>
+          <Item1 ItemType="Measure" DefaultId="DataItem0" />
+        </Values>
+        <Arguments>
+          <Item1 ItemType="Dimension" DefaultId="DataItem1" />
+          <Item2 ItemType="Dimension" DefaultId="DataItem2" />
+        </Arguments>
+      </CustomMetadata>
+    </CustomItem>
+    <TextBox ComponentName="textBoxDemoDescription" Name="Demo Description" ShowCaption="false">
+      <Text>{\rtf1\deff0{\fonttbl{\f0 Calibri;}{\f1 Segoe UI;}{\f2 Times New Roman;}{\f3 Arial;}}{\colortbl ;\red0\green0\blue255 ;\red255\green255\blue255 ;}{\*\defchp \f1}{\stylesheet {\sqformat\ql\f2 Normal;}{\*\cs1\f1 Default Paragraph Font;}{\*\cs2\ul\f2\cf1 Hyperlink;}{\*\cs3\sbasedon1\f2 line number;}{\*\ts4\tsrowd\fs22\ql\tsvertalt\tscellcbpat2\tscellpct0\cltxlrtb Normal Table;}{\*\ts5\tsrowd\f3\fs22\ql\trbrdrt\brdrs\brdrw10\trbrdrl\brdrs\brdrw10\trbrdrb\brdrs\brdrw10\trbrdrr\brdrs\brdrw10\trbrdrh\brdrs\brdrw10\trbrdrv\brdrs\brdrw10\tsvertalt\tscellcbpat2\tscellpct0\cltxlrtb Table Simple 1;}}{\*\listoverridetable}{\info}\nouicompat\splytwnine\htmautsp\expshrtn\spltpgpar\deftab720\sectd\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\headery720\footery720\pgwsxn11906\pghsxn16838\cols1\colsx720\pard\plain\ql\nowidctlpar{\f1\cf0\cs1 This demo demonstrates how you can implement a custom dashboard item as a client-side extension. This is a way to extend the existing Web Dashboard control functionality in your application. You can render any HTML content inside the custom item. To get more information about custom item creation, review the  }{\field\dxfldcodeview{\*\fldinst{\ul\f1\cf1 HYPERLINK "https://docs.devexpress.com/Dashboard/117546/web-dashboard/ui-elements-and-customization/create-a-custom-item"}}{\fldrslt{\ul\f1\cf1 Custom Item}}}{\f1\cf0\cs1   topic.}{\f1\cf0\cs1 \line }{\f1\cf0\cs1 Note that we provide only the capability to create custom dashboard items. We do not ship a predefined set of custom items with the DevExpress Dashboard components.}{\f1\cf0\cs1 \line }{\*\bkmkstart _dx_frag_StartFragment}{\*\bkmkend _dx_frag_StartFragment}{\f1\cf0\cs1 In this demo, you can find the following additional items: }{\field\dxfldcodeview{\*\fldinst{\ul\f1\cf1 HYPERLINK "https://github.com/DevExpress/dashboard-extensions/blob/master/docs/online-map-item.md"}}{\fldrslt{\ul\f1\cf1 Online Map}}}{\f1\cf0\cs1 , }{\field\dxfldcodeview{\*\fldinst{\ul\f1\cf1 HYPERLINK "https://github.com/DevExpress/dashboard-extensions/blob/master/docs/webpage-item.md"}}{\fldrslt{\ul\f1\cf1 Web Page}}}{\f1\cf0\cs1 , and }{\field\dxfldcodeview{\*\fldinst{\ul\f1\cf1 HYPERLINK "https://github.com/DevExpress/dashboard-extensions/blob/master/docs/funnel-d3-item.md"}}{\fldrslt{\ul\f1\cf1 Funnel D3}}}{\f1\cf0\cs1 .}\f1\cf0\par}</Text>
+    </TextBox>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical" Weight="100">
+      <LayoutGroup Weight="82.86649693168404">
+        <LayoutItem DashboardItem="customItemWebPage" Weight="68.03223640026863" />
+        <LayoutGroup Orientation="Vertical" Weight="31.967763599731363">
+          <LayoutItem DashboardItem="customItemOnlineMap" Weight="48.060071936147672" />
+          <LayoutItem DashboardItem="customItemFunnelD3" Weight="51.939928063852328" />
+        </LayoutGroup>
+      </LayoutGroup>
+      <LayoutItem DashboardItem="textBoxDemoDescription" Weight="17.133503068315957" />
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+    <Description>["The dashboard displays information about professional football divisions and their results.","The demo demonstrates how to add a custom dashboard item to extend the existing Web Dashboard control functionality. The custom FunnelD3 item uses a third-party library to create a funnel chart. The Online Map displays data over the Azure and Bing maps. Select a country in the Online Map to show information about the corresponding football league in the custom Web Page item.","Note that we do not ship a predefined set of custom items with the DevExpress Dashboard components."]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/400302/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/custom-item#custom-item-gallery","text":"Custom Items on GitHub"}, {"href":"https://docs.devexpress.com/Dashboard/117543/web-dashboard/concepts-and-terminology/extensions","text":"Extensions"},{"href":"https://docs.devexpress.com/Dashboard/117546/web-dashboard/advanced-customization/create-a-custom-item","text":"Custom Items"}]</Links>
+  </CustomProperties>
+</Dashboard>

@@ -1,0 +1,2 @@
+inherited frmRichEditDocumentViewsAndLayouts: TfrmRichEditDocumentViewsAndLayouts
+end

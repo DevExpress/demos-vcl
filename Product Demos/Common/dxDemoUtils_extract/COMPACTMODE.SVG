@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+	<style type="text/css" xml:space="preserve">
+		.Black{fill:#737374;}
+		.Yellow{fill:#FCB01B;}
+		.Green{fill:#129C49;}
+		.Blue{fill:#387CB7;}
+		.Red{fill:#D02127;}
+		.White{fill:#FFFFFF;}
+		.st0{opacity:0.5;}
+		.st1{opacity:0.75;}
+		.st2{opacity:0.25;}
+		.st3{display:none;fill:#737374;}</style>
+	<path class="Blue" d="M4,20v-4H0v-2h4v-4l5,5L4,20z M21,15l5,5v-4h4v-2h-4v-4L21,15z M15,9l5-5l-4,0l0-4l-2,0l0,4l-4,0L15,9z M15,21 l-5,5l4,0l0,4h2l0-4l4,0L15,21z"/>
+	<g class="st0">
+		<path class="Black" d="M19,20h-8c-0.6,0-1-0.5-1-1v-8c0-0.6,0.4-1,1-1h8c0.5,0,1,0.4,1,1v8C20,19.5,19.5,20,19,20z"/>
+	</g>
+</svg>

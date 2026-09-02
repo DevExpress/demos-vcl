@@ -1,0 +1,2 @@
+inherited frmRichEditBulletsAndNumbering: TfrmRichEditBulletsAndNumbering
+end

@@ -1,0 +1,879 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="24.2.5.0" Ref="0" ControlType="XtraReportsDemos.BarCodes.BarCodeTypesReport, DevExpress.DemoReports.v24.2, Version=24.2.5.0, Culture=neutral, PublicKeyToken=4c3bc44151be4b47" Name="BarCodeReport" DisplayName="BarCode" Margins="98, 80, 86, 93" PageWidth="850" PageHeight="1100" Version="24.2" RequestParameters="false">
+  <Parameters>
+    <Item1 Ref="2" Description="AutoModule" ValueInfo="False" Name="AutoModuleParameter" Type="#Ref-1" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="3" ControlType="DetailBand" Name="Detail" HeightF="4108.133" TextAlignment="TopLeft" BackColor="255,235,235,235" Padding="0,0,0,0,100">
+      <Controls>
+        <Item1 Ref="4" ControlType="XRTable" Name="xrTable2" TextAlignment="TopLeft" SizeF="670,4108.133" LocationFloat="0,0" Padding="0,0,0,0,96" BorderColor="White" Borders="Left">
+          <Rows>
+            <Item1 Ref="5" ControlType="XRTableRow" Name="xrTableRow36" Weight="0.11324286715924584" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="6" ControlType="XRTableCell" Name="xrTableCell106" Weight="0.14936854190585536" Multiline="true" Text="Aztec Code" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="255,235,235,235" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="7" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="8" ControlType="XRTableCell" Name="xrTableCell107" Weight="0.3773823191733639" Multiline="true" TextAlignment="TopLeft" BackColor="255,235,235,235" Padding="2,2,0,0,100" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="9" ControlType="XRBarCode" Name="xrBarCode37" Module="5" Alignment="MiddleCenter" ShowText="false" Text=" &#xA;https://devexpress.com" SizeF="250.7628,130.1645" LocationFloat="1.041664,0" Padding="5,5,5,5,100">
+                      <Symbology Ref="10" Name="AztecCode" />
+                      <ExpressionBindings>
+                        <Item1 Ref="11" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="12" UsePadding="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="13" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="14" ControlType="XRTableCell" Name="xrTableCell108" Weight="0.47324913892078074" Multiline="true" Text="Named after the resemblance of the central finder pattern to an Aztec pyramid, Aztec Code has the potential to use less space than other matrix barcodes because it does not require a surrounding blank &quot;quiet zone&quot;. Aztec codes are widely used for transport ticketing." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="255,235,235,235" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="15" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="16" UseBackColor="false" />
+            </Item1>
+            <Item2 Ref="17" ControlType="XRTableRow" Name="xrTableRow22" Weight="0.11324286715924584" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="18" ControlType="XRTableCell" Name="xrTableCell64" Weight="0.14936854190585536" Multiline="true" Text="Micro QR Code" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="White" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="19" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="20" ControlType="XRTableCell" Name="xrTableCell65" Weight="0.3773823191733639" Multiline="true" TextAlignment="TopLeft" BackColor="255,235,235,235" Padding="2,2,0,0,100" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="21" ControlType="XRBarCode" Name="xrBarCode38" Module="4" Alignment="MiddleCenter" ShowText="false" Text="devexpress.com" SizeF="250.7628,130.1645" LocationFloat="1.041664,0" BackColor="White" Padding="25,25,25,25,100">
+                      <Symbology Ref="22" Name="MicroQRCode" CompactionMode="Byte" Version="AutoVersion" />
+                      <ExpressionBindings>
+                        <Item1 Ref="23" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="24" UseBackColor="false" UsePadding="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="25" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="26" ControlType="XRTableCell" Name="xrTableCell66" Weight="0.47324913892078074" Multiline="true" Text="Micro QR Code displays a position detection pattern in a single corner, compared to three corners in regular QR Codes. This code type also requires a smaller margin. These configuration adjustments allow you to print the code in more compact areas." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="White" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="27" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="28" UseBackColor="false" />
+            </Item2>
+            <Item3 Ref="29" ControlType="XRTableRow" Name="xrTableRow34" Weight="0.11324286715924584" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="30" ControlType="XRTableCell" Name="xrTableCell100" Weight="0.14936854190585536" Multiline="true" Text="GS1 QR Code" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="255,235,235,235" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="31" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="32" ControlType="XRTableCell" Name="xrTableCell101" Weight="0.3773823191733639" Multiline="true" Text="xrTableCell101" TextAlignment="TopLeft" BackColor="255,235,235,235" Padding="2,2,0,0,100" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="33" ControlType="XRBarCode" Name="xrBarCode35" Module="3" Alignment="MiddleCenter" ShowText="false" Text="010123456789012890DEVEXPRESS" SizeF="250.7628,130.1645" LocationFloat="1.041664,0" Padding="5,5,5,5,100" BorderWidth="0">
+                      <Symbology Ref="34" Name="QRCodeGS1" />
+                      <ExpressionBindings>
+                        <Item1 Ref="35" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="36" UsePadding="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="37" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="38" ControlType="XRTableCell" Name="xrTableCell102" Weight="0.47324913892078074" Multiline="true" Text="GS1 QR Code is based on the QR Code barcode standard and allows you to encode GS1 system application identifiers (AI) into two-dimensional barcodes.  It was designed specifically for the exchange of advanced package information such as lot number, product ID and quantity. GS1 QR Code inherits the character set and size specifications from QR Code." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="255,235,235,235" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="39" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="40" UseBackColor="false" />
+            </Item3>
+            <Item4 Ref="41" ControlType="XRTableRow" Name="xrTableRow33" Weight="0.14259301930216561" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="42" ControlType="XRTableCell" Name="xrTableCell97" Weight="0.14936854190585536" Multiline="true" Text="&#xD;&#xA;EPC QR Code" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="White" Padding="2,2,0,0,100">
+                  <StylePriority Ref="43" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="44" ControlType="XRTableCell" Name="xrTableCell98" Weight="0.3773823191733639" Multiline="true" Text="xrTableCell98" TextAlignment="TopLeft" BackColor="White" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="45" ControlType="XRBarCode" Name="xrBarCode39" Module="3" AutoModule="true" Alignment="MiddleCenter" ShowText="false" Text="BCD&#xD;&#xA;002&#xD;&#xA;1&#xD;&#xA;SCT&#xD;&#xA;&#xD;&#xA;François D'Alsace S.A.&#xD;&#xA;FR1420041010050500013M02606&#xD;&#xA;EUR100.00&#xD;&#xA;&#xD;&#xA;Client:Marie Louise La Lune" SizeF="251.8045,163.9004" LocationFloat="1.041664,0" Font="Arial, 8pt" Padding="20,20,20,20,100" BorderWidth="0">
+                      <Symbology Ref="46" Name="QRCodeEPC">
+                        <FrameOptions Ref="47" Name="PaymentServicesAustria" />
+                      </Symbology>
+                      <StylePriority Ref="48" UseFont="false" UsePadding="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="49" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="50" ControlType="XRTableCell" Name="xrTableCell99" Weight="0.47324913892078074" Multiline="true" Text="The EPC QR code is a special type of QR code that the European Payments Council (EPC) has standardized for the convenience of electronic payments in the Single Euro Payments Area (SEPA). Users can scan this code with their mobile banking apps and initiate SEPA credit transfers. The QR code contains encoded payment details such as IBAN, amount and beneficiary information, reducing errors and manual entry. This simplifies payment processing, improves accuracy and overall service quality.&#xD;&#xA;The EPC QR Code also introduces built-in support for Austrian Payment Services." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="White" Padding="6,4,2,2,100">
+                  <StylePriority Ref="51" UseBackColor="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="52" UseBackColor="false" />
+            </Item4>
+            <Item5 Ref="53" ControlType="XRTableRow" Name="xrTableRow35" Weight="0.202767668776585" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="54" ControlType="XRTableCell" Name="xrTableCell103" Weight="0.14936854190585536" Multiline="true" Text="QR Code" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="255,235,235,235" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="55" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="56" ControlType="XRTableCell" Name="xrTableCell104" Weight="0.3773823191733639" Multiline="true" Text="xrTableCell104" TextAlignment="TopLeft" BackColor="255,235,235,235" Padding="2,2,0,0,100" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="57" ControlType="XRBarCode" Name="xrBarCode23" Module="3" AutoModule="true" Alignment="MiddleCenter" ShowText="false" Text="URL:http://www.devexpress.com" SizeF="237.0375,118.6522" LocationFloat="9.999985,114.248" Padding="5,5,5,5,100" BorderWidth="0">
+                      <Symbology Ref="58" Name="QRCode" CompactionMode="Byte" Version="Version2">
+                        <FrameOptions Ref="59" Name="Rectangle" Text="SCAN ME" TextPosition="Top" />
+                      </Symbology>
+                      <ExpressionBindings>
+                        <Item1 Ref="60" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="61" UsePadding="false" UseBorderWidth="false" />
+                    </Item1>
+                    <Item2 Ref="62" ControlType="XRBarCode" Name="xrBarCode36" Module="3.2" Alignment="TopCenter" ShowText="false" Text="URL:http://www.devexpress.com" SizeF="237.0374,114.248" LocationFloat="9.999985,0" Padding="0,0,0,0,100" BorderWidth="0">
+                      <Symbology Ref="63" Name="QRCode" CompactionMode="Byte" ErrorCorrectionLevel="H" Version="Version1" Logo="svg,77u/PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyNiAyNyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJMYXllcl8xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxNTAgMjciPg0KICA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM0QTRBNEE7fQoJLnN0MXtmaWxsOiNGNzgxMTk7fQo8L3N0eWxlPg0KICA8Zz4NCiAgICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMjYiIGhlaWdodD0iMjciIHN0eWxlPSJzdHJva2U6cmdiKDAsIDAsIDApO2ZpbGwtcnVsZTpub256ZXJvO3BhaW50LW9yZGVyOnN0cm9rZTt2ZWN0b3ItZWZmZWN0Om5vbi1zY2FsaW5nLXN0cm9rZTtzdHJva2Utd2lkdGg6MHB4O2ZpbGw6cmdiKDIzNSwgMjM1LCAyMzUpIiAvPg0KICAgIDxwYXRoIGQ9Ik0gMS43NjEgMjIgQyAxLjEzOSAyMi44IDAuNjIyIDIzLjUgMC4yMDcgMjQuMSBDIDAuMTA0IDI0LjIgMCAyNC43IDAgMjUuMSBMIDAgMjUuNiBDIDAgMjYuNCAwLjYyMiAyNyAxLjU1NCAyNyBMIDI0LjQ0NiAyNyBDIDI1LjI3NSAyNyAyNiAyNi40IDI2IDI1LjUgTCAyNiA4LjUgQyAxMy4zNjMgMTAuNyA1LjgwMSAxNy4yIDEuNzYxIDIyIFoiIGNsYXNzPSJzdDAiIC8+DQogICAgPHBhdGggZD0iTSAyNC40NCAwIEwgMS41NiAwIEMgMC42MjQgMCAwIDAuNiAwIDEuNSBMIDAgMTQuNyBDIDQuNTc2IDEwLjEgMTIuNTg0IDUuMSAyNC45NiAzLjcgQyAyNS4yNzIgMy43IDI2IDMuNSAyNiAyLjcgTCAyNiAxLjUgQyAyNiAwLjYgMjUuMzc2IDAgMjQuNDQgMCBaIiBjbGFzcz0ic3QxIiAvPg0KICA8L2c+DQo8L3N2Zz4=" />
+                      <StylePriority Ref="64" UsePadding="false" UseBorderWidth="false" />
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="65" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="66" ControlType="XRTableCell" Name="xrTableCell105" Weight="0.47324913892078074" Multiline="true" Text="QR (Quick Response) code is a popular two-dimensional matrix barcode that consists of black modules arranged in a square pattern on the white background. The information encoded may be text, URL or other data. This barcode type has a wide area of application including both commercial tracking applications and convenience-oriented applications aimed at mobile phone users." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="255,235,235,235" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="67" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="68" UseBackColor="false" />
+            </Item5>
+            <Item6 Ref="69" ControlType="XRTableRow" Name="xrTableRow32" Weight="0.10288096147870091" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="70" ControlType="XRTableCell" Name="xrTableCell94" Weight="0.14936854190585536" Multiline="true" Text="GS1-128 SSCC" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="White" Padding="2,2,0,0,100">
+                  <StylePriority Ref="71" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="72" ControlType="XRTableCell" Name="xrTableCell95" Weight="0.3773823191733639" Multiline="true" Text="xrTableCell95" TextAlignment="TopLeft" BackColor="White" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="73" ControlType="XRBarCode" Name="xrBarCode34" Module="1.45" TextAlignment="BottomCenter" Text="00614141234567890" SizeF="251.7462,75" LocationFloat="1.100014,23" Padding="10,10,0,0,100" BorderWidth="0">
+                      <Symbology Ref="74" Name="SSCC" />
+                      <ExpressionBindings>
+                        <Item1 Ref="75" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="76" UseBorderWidth="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="77" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="78" ControlType="XRTableCell" Name="xrTableCell96" Weight="0.47324913892078074" Multiline="true" Text="The Serial Shipping Container Code (SSCC) is the GS1 identification key used to identify the logistics unit. It is an 18-digit number that consists of an extension digit, a GS1 company prefix, a serial reference, and a check digit. The SSCC is encoded in a GS1-128 barcode.&#xD;&#xA;The SSCC allows you to track a logistic unit individually to support order and delivery tracking and automated&#xD;&#xA;receipt of goods." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="White" Padding="6,4,2,2,100">
+                  <StylePriority Ref="79" UseBackColor="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="80" UseBackColor="false" />
+            </Item6>
+            <Item7 Ref="81" ControlType="XRTableRow" Name="xrTableRow31" Weight="0.10177710951000171" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="82" ControlType="XRTableCell" Name="xrTableCell91" Weight="0.14936854190585536" Multiline="true" Text="Deutsche Post Identcode" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="255,235,235,235" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="83" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="84" ControlType="XRTableCell" Name="xrTableCell92" Weight="0.3773823191733639" Multiline="true" Text="xrTableCell92" TextAlignment="TopLeft" BackColor="255,235,235,235" Padding="2,2,0,0,100" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="85" ControlType="XRBarCode" Name="xrBarCode32" Module="1.5" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="12345678901" SizeF="246.9505,70" LocationFloat="4.149498,36.98541" Padding="10,10,0,0,100" Borders="None" BorderWidth="0">
+                      <Symbology Ref="86" Name="DeutschePostIdentcode" WideNarrowRatio="3" />
+                      <ExpressionBindings>
+                        <Item1 Ref="87" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="88" UseBackColor="false" UsePadding="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="89" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="90" ControlType="XRTableCell" Name="xrTableCell93" Weight="0.47324913892078074" Multiline="true" Text="Deutsche Post Identcode symbology, also referred to as Deutsche Post AG IdentCode, German Postal 2 of 5 IdentCode, Deutsche Frachtpost IdentCode, or Deutsche Post AG (DHL), is used by German Post (Deutsche Post AG).&#xD;&#xA;The barcode contains a tracking number that identifies the customer (sender) and the mail item. The value to encode should consist of 2 digits for distribution center ID, 3 digits for customer ID, and 6 digits for mailing number." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="255,235,235,235" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="91" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="92" UseBackColor="false" />
+            </Item7>
+            <Item8 Ref="93" ControlType="XRTableRow" Name="xrTableRow30" Weight="0.090177202136186976" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="94" ControlType="XRTableCell" Name="xrTableCell88" Weight="0.14936854190585536" Multiline="true" Text="Deutsche Post Leitcode" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="White" Padding="2,2,0,0,100">
+                  <StylePriority Ref="95" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="96" ControlType="XRTableCell" Name="xrTableCell89" Weight="0.3773823191733639" Multiline="true" Text="xrTableCell89" TextAlignment="TopLeft" BackColor="White" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="97" ControlType="XRBarCode" Name="xrBarCode33" Module="1.25" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="1234567890123" SizeF="250.9938,70.00003" LocationFloat="1.85,18" Padding="10,10,0,0,100" Borders="None">
+                      <Symbology Ref="98" Name="DeutschePostLeitcode" WideNarrowRatio="3" />
+                      <ExpressionBindings>
+                        <Item1 Ref="99" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="100" UseBackColor="false" UsePadding="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="101" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="102" ControlType="XRTableCell" Name="xrTableCell90" Weight="0.47324913892078074" Multiline="true" Text="The Deutsche Post Leitcode symbology, or German Postal 2 of 5 LeitCode, LeitCode, or CodeLeitcode, is used by Deutsche Post AG (Deutsche Frachtpost).&#xD;&#xA;This barcode identifies the destination. The value to encode consists of 5 digits for Postal Code (Postleitzahl, PLZ), 3 digits for Street ID/number, 3 digits for House number, and 2 digits for Product code." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="White" Padding="6,4,2,2,100">
+                  <StylePriority Ref="103" UseBackColor="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="104" UseBackColor="false" />
+            </Item8>
+            <Item9 Ref="105" ControlType="XRTableRow" Name="xrTableRow28" Weight="0.0752236289479637" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="106" ControlType="XRTableCell" Name="xrTableCell82" Weight="0.14936854190585536" Multiline="true" Text="Pharmacode&#xD;&#xA;One-Track" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="255,235,235,235" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="107" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="108" ControlType="XRTableCell" Name="xrTableCell83" Weight="0.3773823191733639" Multiline="true" Text="xrTableCell83" TextAlignment="TopLeft" BackColor="255,235,235,235" Padding="2,2,0,0,100" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="109" ControlType="XRBarCode" Name="xrBarCode30" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="101070" SizeF="241.8044,70" LocationFloat="4.344994,10" Padding="10,10,0,0,100" Borders="None" BorderWidth="0">
+                      <Symbology Ref="110" Name="Pharmacode" />
+                      <ExpressionBindings>
+                        <Item1 Ref="111" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="112" UseBackColor="false" UsePadding="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="113" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="114" ControlType="XRTableCell" Name="xrTableCell84" Weight="0.47324913892078074" Multiline="true" Text="Pharmacode, also known as Pharmaceutical Binary code, is a barcode standard used for in-house inventory control and security verification in the pharmaceutical industry.&#xD;&#xA;One-Track is a one-dimensional (1D) symbology used in the packaging of pharmaceutical products." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="255,235,235,235" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="115" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="116" UseBackColor="false" />
+            </Item9>
+            <Item10 Ref="117" ControlType="XRTableRow" Name="xrTableRow29" Weight="0.091261359178677309" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="118" ControlType="XRTableCell" Name="xrTableCell85" Weight="0.14936854190585536" Multiline="true" Text="Pharmacode&#xD;&#xA;Two-Track" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="White" Padding="2,2,0,0,100">
+                  <StylePriority Ref="119" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="120" ControlType="XRTableCell" Name="xrTableCell86" Weight="0.3773823191733639" Multiline="true" Text="xrTableCell86" TextAlignment="TopLeft" BackColor="White" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="121" ControlType="XRBarCode" Name="xrBarCode31" Module="4" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="32598755" SizeF="250.25,65" LocationFloat="1.846199,19" Padding="10,10,0,0,100" Borders="None" BorderWidth="0">
+                      <Symbology Ref="122" Name="Pharmacode" PharmacodeType="TwoTrack" />
+                      <ExpressionBindings>
+                        <Item1 Ref="123" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="124" UseBackColor="false" UsePadding="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="125" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="126" ControlType="XRTableCell" Name="xrTableCell87" Weight="0.47324913892078074" Multiline="true" Text="Pharmacode, also known as Pharmaceutical Binary code, is a barcode standard used for in-house inventory control and security verification in the pharmaceutical industry.&#xD;&#xA;Two-Track is a one-dimensional (1D) symbology used in the packaging of pharmaceutical products. Two-Track uses the vertical positioning of half bars together with full bars to encode data." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="White" Padding="6,4,2,2,100">
+                  <StylePriority Ref="127" UseBackColor="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="128" UseBackColor="false" />
+            </Item10>
+            <Item11 Ref="129" ControlType="XRTableRow" Name="xrTableRow26" Weight="0.18413069809413266" BackColor="White">
+              <Cells>
+                <Item1 Ref="130" ControlType="XRTableCell" Name="xrTableCell76" Weight="0.14936854190585536" Text="DataBar" TextAlignment="MiddleCenter" Font="Tahoma, 8.25pt" BackColor="255,235,235,235" BorderColor="White" BorderWidth="0">
+                  <StylePriority Ref="131" UseFont="false" UseBackColor="false" UseBorderColor="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="132" ControlType="XRTableCell" Name="xrTableCell77" Weight="0.3773823191733639" Text="xrTableCell77" BackColor="255,235,235,235" BorderColor="White" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="133" ControlType="XRBarCode" Name="xrBarCode28" Module="1.75" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="123456789" AnchorVertical="Both" SizeF="246.9467,47" LocationFloat="4.149467,164.6449" BackColor="255,235,235,235" Padding="5,5,4,0,100" BorderWidth="0">
+                      <Symbology Ref="134" Name="DataBar" Type="Truncated" SegmentsInRow="4" />
+                      <ExpressionBindings>
+                        <Item1 Ref="135" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="136" UseBackColor="false" UsePadding="false" UseBorderWidth="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="137" ControlType="XRBarCode" Name="xrBarCode27" Module="1.75" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="01906141410000153202000150" AnchorVertical="Both" SizeF="247.6923,160.4833" LocationFloat="3.149467,1" Font="Times New Roman, 8.75pt" BackColor="255,235,235,235" Padding="5,5,4,0,100" BorderWidth="0">
+                      <Symbology Ref="138" Name="DataBar" Type="ExpandedStacked" SegmentsInRow="4" />
+                      <ExpressionBindings>
+                        <Item1 Ref="139" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="140" UseFont="false" UseBackColor="false" UsePadding="false" UseBorderWidth="false" UseTextAlignment="false" />
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="141" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="142" ControlType="XRTableCell" Name="xrTableCell78" Weight="0.47324913892078074" Multiline="true" Text="GS1 DataBar bar code is based on a family of symbols most commonly seen in the GS1 DataBar Coupon. &#xD;&#xA;In addition to encoding Application Identifier (01) GTIN, GS1 DataBar Expanded and GS1 DataBar Expanded Stacked can encode additional GS1 Application Identifiers (such as sell-by date, weight, and lot number). Each symbol has a capacity of up to 74 characters. These attributes can help in controlling shrinkage, optimizing product replenishment, and improving the traceability of a product at the point of sale.&#xD;&#xA;This demo illustrates the Expanded Stacked and Truncated varieties of the GS1 DataBar bar code." TextAlignment="MiddleJustify" Font="Tahoma, 8.25pt" BackColor="255,235,235,235" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="143" UseFont="false" UseBackColor="false" UsePadding="false" UseBorderColor="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="144" UseBackColor="false" />
+            </Item11>
+            <Item12 Ref="145" ControlType="XRTableRow" Name="xrTableRow25" Weight="0.12569404028090733">
+              <Cells>
+                <Item1 Ref="146" ControlType="XRTableCell" Name="xrTableCell73" Weight="0.14936854190585536" Text="UPC Shipping Container Symbol (ITF-14)" TextAlignment="MiddleCenter" Font="Tahoma, 8.25pt" BackColor="White">
+                  <StylePriority Ref="147" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="148" ControlType="XRTableCell" Name="xrTableCell74" Weight="0.3773823191733639" Text="xrTableCell74" BackColor="White">
+                  <Controls>
+                    <Item1 Ref="149" ControlType="XRBarCode" Name="xrBarCode26" Module="1.2" Alignment="MiddleCenter" TextAlignment="BottomCenter" Text="1234567890123" SizeF="251,100" LocationFloat="1.846186,21" Padding="10,10,4,2,100" BorderWidth="0">
+                      <Symbology Ref="150" Name="ITF14" WideNarrowRatio="3" />
+                      <ExpressionBindings>
+                        <Item1 Ref="151" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="152" UsePadding="false" UseBorderWidth="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="153" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="154" ControlType="XRTableCell" Name="xrTableCell75" Weight="0.47324913892078074" Multiline="true" Text="This bar code is used to mark packaging materials that contain products labeled with a UPC or EAN product identification number. This bar code provides a GS1 implementation of an Interleaved 2 of 5 bar code for encoding a Global Trade Item Number (an identifier for trade items developed by GS1). &#xD;&#xA;This bar code always uses a total of 14 digits. The thick black border around the symbol (the Bearer Bar) is intended to enhance the bar code reading reliability." TextAlignment="MiddleJustify" Font="Tahoma, 8.25pt" BackColor="White" Padding="6,4,2,2,100">
+                  <StylePriority Ref="155" UseFont="false" UseBackColor="false" UsePadding="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+            </Item12>
+            <Item13 Ref="156" ControlType="XRTableRow" Name="xrTableRow24" Weight="0.084533517554900531" StyleName="TextPaddingStyle" BackColor="White">
+              <Cells>
+                <Item1 Ref="157" ControlType="XRTableCell" Name="xrTableCell70" Weight="0.14936854190585536" Text="Data Matrix GS1" TextAlignment="MiddleCenter" BackColor="255,235,235,235" BorderWidth="0">
+                  <StylePriority Ref="158" UseBackColor="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="159" ControlType="XRTableCell" Name="xrTableCell71" Weight="0.3773823191733639" Text="xrTableCell71" BackColor="255,235,235,235" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="160" ControlType="XRBarCode" Name="xrBarCode25" Alignment="MiddleCenter" ShowText="false" Text="010031234567890621123456789012#300144" SizeF="237.0375,75.88062" LocationFloat="9.999985,11.28455" Padding="10,10,10,10,100" BorderWidth="0">
+                      <Symbology Ref="161" Name="DataMatrixGS1" />
+                      <ExpressionBindings>
+                        <Item1 Ref="162" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="163" UseBackColor="false" UsePadding="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="164" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="165" ControlType="XRTableCell" Name="xrTableCell72" Weight="0.47324913892078074" Text="GS1 DataMatrix uses a special start combination to differentiate the GS1 DataMatrix symbol from the other Data Matrix ECC 200 symbols. This is achieved by using the Function 1 Symbol Character (FNC1) in the first position of the data encoded. It enables scanners to process the information according to the GS1 System Rules." TextAlignment="MiddleJustify" BackColor="255,235,235,235" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="166" UseBackColor="false" UsePadding="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="167" UseBackColor="false" />
+            </Item13>
+            <Item14 Ref="168" ControlType="XRTableRow" Name="xrTableRow23" Weight="0.094268648395414073">
+              <Cells>
+                <Item1 Ref="169" ControlType="XRTableCell" Name="xrTableCell67" Weight="0.14936854190585536" Text="Intelligent Mail" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" BackColor="White">
+                  <StylePriority Ref="170" UseBackColor="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="171" ControlType="XRTableCell" Name="xrTableCell68" Weight="0.3773823191733639" Text="xrTableCell68">
+                  <Controls>
+                    <Item1 Ref="172" ControlType="XRBarCode" Name="xrBarCode24" Module="1.75" Alignment="MiddleCenter" ShowText="false" Text="4408200000012345678991203" AnchorVertical="Both" SizeF="251,108.3549" LocationFloat="1.846218,3.178914E-05" BackColor="White" Padding="2,2,0,0,100">
+                      <Symbology Ref="173" Name="IntelligentMail" />
+                      <ExpressionBindings>
+                        <Item1 Ref="174" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="175" UseBackColor="false" UsePadding="false" />
+                    </Item1>
+                  </Controls>
+                </Item2>
+                <Item3 Ref="176" ControlType="XRTableCell" Name="xrTableCell69" Weight="0.47324913892078074" Text="The Intelligent Mail Barcode (IM barcode) is a 65-bar code for use on mail in the United States. This barcode is intended to provide greater information and functionality than its predecessors POSTNET and PLANET. Intelligent Mail barcode has also been referred to as One Code Solution and 4-State Customer Barcode abbreviated 4CB, 4-CB or USPS4CB." TextAlignment="MiddleJustify" Font="Tahoma, 8.25pt" BackColor="White" Padding="6,4,2,2,100">
+                  <StylePriority Ref="177" UseFont="false" UseBackColor="false" UsePadding="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+            </Item14>
+            <Item15 Ref="178" ControlType="XRTableRow" Name="xrTableRow27" Weight="0.13272603021968232">
+              <Cells>
+                <Item1 Ref="179" ControlType="XRTableCell" Name="xrTableCell79" Weight="0.14936854190585536" Text="Intelligent Mail Package" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" BackColor="255,235,235,235" BorderWidth="0">
+                  <StylePriority Ref="180" UseBackColor="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="181" ControlType="XRTableCell" Name="xrTableCell80" Weight="0.3773823191733639" Text="xrTableCell80" BackColor="255,235,235,235">
+                  <Controls>
+                    <Item1 Ref="182" ControlType="XRBarCode" Name="xrBarCode29" Module="0.65" Alignment="MiddleCenter" ShowText="false" Text="9212391234567812345671" AnchorVertical="Both" SizeF="250.9962,152.559" LocationFloat="1.850037,0" Padding="5,5,5,5,100" BorderWidth="0">
+                      <Symbology Ref="183" Name="IntelligentMailPackage" />
+                      <ExpressionBindings>
+                        <Item1 Ref="184" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="185" UsePadding="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="186" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="187" ControlType="XRTableCell" Name="xrTableCell81" Weight="0.47324913892078074" Text="The Intelligent Mail Package Barcode (IMPB) was developed for the use on mail in the United States. Barcodes of this symbology are used only for packages as opposed to Intelligent Mail barcodes, which are used for postcards, letters, and flats. The Intelligent Mail Package Barcode is capable of encoding package tracking information required for more efficient sorting and delivering of packages with the capability of piece-level tracking." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" BackColor="255,235,235,235" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="188" UseFont="false" UseBackColor="false" UsePadding="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+            </Item15>
+            <Item16 Ref="189" ControlType="XRTableRow" Name="xrTableRow21" Weight="0.16560617116237181" BackColor="White">
+              <Cells>
+                <Item1 Ref="190" ControlType="XRTableCell" Name="xrTableCell61" Weight="0.14936854190585536" Text="Data Matrix" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle">
+                  <StylePriority Ref="191" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="192" ControlType="XRTableCell" Name="xrTableCell62" Weight="0.3773823191733639" Text="xrTableCell62" TextAlignment="MiddleCenter">
+                  <Controls>
+                    <Item1 Ref="193" ControlType="XRBarCode" Name="xrBarCode22" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" ShowText="false" Text="Data Matrix code is a two-dimensional matrix barcode consisting of black and white &quot;cells&quot; arranged in a rectangular pattern. The information to be encoded can be text or raw data. Every Data Matrix is composed of two solid adjacent borders in an &quot;L&quot; shape (called the &quot;finder pattern&quot;) and two other borders consisting of alternating dark and light &quot;cells&quot; or modules (called the &quot;timing pattern&quot;). Within these borders are rows and columns of cells that encode information. The finder pattern is used to locate and orient the symbol while the timing pattern provides a count of the number of rows and columns in the symbol." AnchorVertical="Both" SizeF="251.7462,190.3522" LocationFloat="1.100014,0" Padding="10,10,10,10,100">
+                      <Symbology Ref="194" Name="DataMatrix" />
+                      <ExpressionBindings>
+                        <Item1 Ref="195" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="196" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="197" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="198" ControlType="XRTableCell" Name="xrTableCell63" Weight="0.47324913892078074" Multiline="true" Text="Data Matrix code is a two-dimensional matrix barcode consisting of black and white &quot;cells&quot; arranged in a rectangular pattern. The information to be encoded can be text or raw data. Every Data Matrix is composed of two solid adjacent borders in an &quot;L&quot; shape (called the &quot;finder pattern&quot;) and two other borders consisting of alternating dark and light &quot;cells&quot; or modules (called the &quot;timing pattern&quot;). Within these borders are rows and columns of cells that encode information. The finder pattern is used to locate and orient the symbol while the timing pattern provides a count of the number of rows and columns in the symbol.&#xD;&#xA;(NOTE: This text is encoded by the barcode on the left)" TextAlignment="MiddleJustify" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100">
+                  <StylePriority Ref="199" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="200" UseBackColor="false" />
+            </Item16>
+            <Item17 Ref="201" ControlType="XRTableRow" Name="xrTableRow20" Weight="0.1436397802694781">
+              <Cells>
+                <Item1 Ref="202" ControlType="XRTableCell" Name="xrTableCell58" Weight="0.14936854190585536" Text="PDF417" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" BorderWidth="0">
+                  <StylePriority Ref="203" UseBackColor="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="204" ControlType="XRTableCell" Name="xrTableCell59" Weight="0.3773823191733639" Text="xrTableCell59" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="205" ControlType="XRBarCode" Name="xrBarCode21" Module="1" Alignment="TopCenter" ShowText="false" Text="PDF417 (Portable Data File) is a stacked linear two-dimensional barcode used in a variety of applications: primarily transport, postal, identification card and inventory management. It was invented by Ynjiun Wang at Symbol Technologies in 1991, and has spawned an Open Source decoder project together with an Open Source encoder. The PDF417 barcode is also called a symbol barcode and usually consists of 3 to 90 rows, each of which is like a small linear bar code." AnchorVertical="Both" SizeF="248.5011,162.1217" LocationFloat="2.345001,2.000244" Padding="10,10,4,0,100" BorderWidth="0">
+                      <Symbology Ref="206" Name="PDF417" Columns="9" Rows="36" ErrorCorrectionLevel="Level0" />
+                      <ExpressionBindings>
+                        <Item1 Ref="207" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="208" UsePadding="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="209" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="210" ControlType="XRTableCell" Name="xrTableCell60" Weight="0.47324913892078074" Multiline="true" Text="PDF417 (Portable Data File) is a stacked linear two-dimensional barcode used in a variety of applications: primarily transport, postal, identification card and inventory management. It was invented by Ynjiun Wang at Symbol Technologies in 1991, and has spawned an Open Source decoder project together with an Open Source encoder. The PDF417 barcode is also called a symbol barcode and usually consists of 3 to 90 rows, each of which is like a small linear bar code.&#xD;&#xA;(NOTE: This text is encoded by the barcode on the left)" TextAlignment="MiddleJustify" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="211" UseBackColor="false" UsePadding="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="212" UseBackColor="false" />
+            </Item17>
+            <Item18 Ref="213" ControlType="XRTableRow" Name="xrTableRow2" Weight="0.062805762830391229" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="214" ControlType="XRTableCell" Name="xrTableCell4" Weight="0.14936854190585536" Multiline="true" Text="Codabar" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100">
+                  <StylePriority Ref="215" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="216" ControlType="XRTableCell" Name="xrTableCell5" Weight="0.3773823191733639" Text="xrTableCell5" TextAlignment="MiddleCenter" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="217" ControlType="XRBarCode" Name="xrBarCode1" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="0123456789+-/:.$" SizeF="250,60" LocationFloat="1.1,12" Padding="20,20,4,0,100" Borders="None">
+                      <Symbology Ref="218" Name="Codabar" WideNarrowRatio="2" />
+                      <ExpressionBindings>
+                        <Item1 Ref="219" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="220" UseBackColor="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="221" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="222" ControlType="XRTableCell" Name="xrTableCell6" Weight="0.47324913892078074" Text="Codabar was developed in 1972 by Pitney Bowes, Inc. It is a discrete, self-checking symbology that may encode 16 different characters, plus an additional 4 start/stop characters. This symbology is used by U.S. blood banks, photo labs, and on FedEx airbills." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100">
+                  <StylePriority Ref="223" UseBackColor="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="224" UseBackColor="false" />
+            </Item18>
+            <Item19 Ref="225" ControlType="XRTableRow" Name="xrTableRow3" Weight="0.080640303642661892" TextAlignment="TopLeft" BackColor="255,235,235,235" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="226" ControlType="XRTableCell" Name="xrTableCell7" Weight="0.14936854190585536" Multiline="true" Text="Code 11" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="227" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="228" ControlType="XRTableCell" Name="xrTableCell8" Weight="0.3773823191733639" Text="xrTableCell8" TextAlignment="TopLeft" Padding="2,2,0,0,100" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="229" ControlType="XRBarCode" Name="xrBarCode2" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="0123456" SizeF="250,60" LocationFloat="1.1,18" Padding="20,20,4,0,100" Borders="None" BorderWidth="0">
+                      <Symbology Ref="230" Name="Code11" />
+                      <ExpressionBindings>
+                        <Item1 Ref="231" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="232" UseBackColor="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="233" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="234" ControlType="XRTableCell" Name="xrTableCell9" Weight="0.47324913892078074" Text="Code 11, also known as USD-8, was developed as a high-density numeric-only symbology. It is used primarily in labeling telecommunications equipment. The symbology is discrete and is able to encode the numbers 0 through 9, the dash symbol (-), and start/stop characters." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="235" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="236" UseBackColor="false" />
+            </Item19>
+            <Item20 Ref="237" ControlType="XRTableRow" Name="xrTableRow4" Weight="0.12950549263905303" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="238" ControlType="XRTableCell" Name="xrTableCell10" Weight="0.14936854190585536" Multiline="true" Text="Code 128" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100">
+                  <StylePriority Ref="239" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="240" ControlType="XRTableCell" Name="xrTableCell11" Weight="0.3773823191733639" Text="xrTableCell11" TextAlignment="TopLeft" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="241" ControlType="XRBarCode" Name="xrBarCode3" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="XRBarCode 0123456" SizeF="250,60" LocationFloat="1.1,42" Padding="20,20,4,0,100" Borders="None">
+                      <Symbology Ref="242" Name="Code128" CharacterSet="CharsetAuto" />
+                      <ExpressionBindings>
+                        <Item1 Ref="243" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="244" UseBackColor="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="245" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="246" ControlType="XRTableCell" Name="xrTableCell12" Weight="0.47324913892078074" Text="Code 128 is a very effective, high-density symbology which permits the encoding of alphanumeric data. The symbology includes a checksum digit for verification, and the barcode may also be verified character-by-character verifying the parity of each data byte. This symbology has been widely implemented in many applications where a relatively large amount of data must be encoded in a relatively small amount of space. It's specific structure also allows numeric data to be encoded at, effectively, double-density." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100">
+                  <StylePriority Ref="247" UseBackColor="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="248" UseBackColor="false" />
+            </Item20>
+            <Item21 Ref="249" ControlType="XRTableRow" Name="xrTableRow5" Weight="0.090355568115820725" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="250" ControlType="XRTableCell" Name="xrTableCell13" Weight="0.14936854190585536" Multiline="true" Text="EAN128" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="251" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="252" ControlType="XRTableCell" Name="xrTableCell14" Weight="0.3773823191733639" Text="xrTableCell14" TextAlignment="TopLeft" Padding="2,2,0,0,100" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="253" ControlType="XRBarCode" Name="xrBarCode4" Module="0.8" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="XRBarCode 0123456" SizeF="242.8879,59" LocationFloat="4.149467,23.8335" Padding="20,20,4,0,100" Borders="None" BorderWidth="0">
+                      <Symbology Ref="254" Name="EAN128" CharacterSet="CharsetAuto" />
+                      <ExpressionBindings>
+                        <Item1 Ref="255" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="256" UseBackColor="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="257" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="258" ControlType="XRTableCell" Name="xrTableCell15" Weight="0.47324913892078074" Text="UCC/EAN-128 was developed to provide a worldwide format and standard for exchanging common data between companies. While other barcodes simply encode data with no respect for what the data represents, UCC/EAN-128 encodes data and encodes what that data represents." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="259" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="260" UseBackColor="false" />
+            </Item21>
+            <Item22 Ref="261" ControlType="XRTableRow" Name="xrTableRow8" Weight="0.0881799351031717" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="262" ControlType="XRTableCell" Name="xrTableCell22" Weight="0.14936854190585536" Multiline="true" Text="Code 39" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100">
+                  <StylePriority Ref="263" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="264" ControlType="XRTableCell" Name="xrTableCell23" Weight="0.3773823191733639" Text="xrTableCell23" TextAlignment="TopLeft" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="265" ControlType="XRBarCode" Name="xrBarCode5" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="XRBARCODE" SizeF="250,60" LocationFloat="1.1,20" Padding="20,20,4,0,100" Borders="None">
+                      <Symbology Ref="266" Name="Code39" WideNarrowRatio="3" />
+                      <ExpressionBindings>
+                        <Item1 Ref="267" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="268" UseBackColor="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="269" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="270" ControlType="XRTableCell" Name="xrTableCell24" Weight="0.47324913892078074" Text="Code 39, the first alpha-numeric symbology to be developed, is still widely used-especially in non-retail environments. It is the standard bar code used by the United States Department of Defense, and is also used by the Health Industry Bar Code Council (HIBCC). Code 39 is also known as &quot;3 of 9 Code&quot; and &quot;USD-3&quot;." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100">
+                  <StylePriority Ref="271" UseBackColor="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="272" UseBackColor="false" />
+            </Item22>
+            <Item23 Ref="273" ControlType="XRTableRow" Name="xrTableRow9" Weight="0.083830793097216263" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="274" ControlType="XRTableCell" Name="xrTableCell25" Weight="0.14936854190585536" Multiline="true" Text="Code 39 Extended" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="275" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="276" ControlType="XRTableCell" Name="xrTableCell26" Weight="0.3773823191733639" Text="xrTableCell26" TextAlignment="TopLeft" Padding="2,2,0,0,100" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="277" ControlType="XRBarCode" Name="xrBarCode6" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="BarCODE" SizeF="250,60" LocationFloat="1.1,18" Padding="20,20,4,0,100" Borders="None" BorderWidth="0">
+                      <Symbology Ref="278" Name="Code39Extended" WideNarrowRatio="3" />
+                      <ExpressionBindings>
+                        <Item1 Ref="279" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="280" UseBackColor="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="281" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="282" ControlType="XRTableCell" Name="xrTableCell27" Weight="0.47324913892078074" Text="It is possible, using Code 39's &quot;Full ASCII Mode&quot; to encode all 128 ASCII characters. This is accomplished by using the $, /, %, and + symbols as &quot;shift&quot; characters. Those characters combined with the single character that follows indicate which Full ASCII character is to be used." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="283" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="284" UseBackColor="false" />
+            </Item23>
+            <Item24 Ref="285" ControlType="XRTableRow" Name="xrTableRow10" Weight="0.092530570560227524" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="286" ControlType="XRTableCell" Name="xrTableCell28" Weight="0.14936854190585536" Multiline="true" Text="Code 93" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100">
+                  <StylePriority Ref="287" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="288" ControlType="XRTableCell" Name="xrTableCell29" Weight="0.3773823191733639" Text="xrTableCell29" TextAlignment="TopLeft" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="289" ControlType="XRBarCode" Name="xrBarCode7" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="XRBARCODE" SizeF="250,60" LocationFloat="1.1,21" Padding="20,20,4,0,100" Borders="None">
+                      <Symbology Ref="290" Name="Code93" />
+                      <ExpressionBindings>
+                        <Item1 Ref="291" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="292" UseBackColor="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="293" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="294" ControlType="XRTableCell" Name="xrTableCell30" Weight="0.47324913892078074" Text="Code 93 was designed to complement and improve upon Code 39. Code 93 is similar in that it, like Code 39, can represent the full ASCII character set by using combinations of 2 characters. It differs in that Code 93 is a continuous symbology and produces denser code. It also encodes 47 characters compared to Code 39's 43 characters." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100">
+                  <StylePriority Ref="295" UseBackColor="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="296" UseBackColor="false" />
+            </Item24>
+            <Item25 Ref="297" ControlType="XRTableRow" Name="xrTableRow11" Weight="0.0686058224492926" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="298" ControlType="XRTableCell" Name="xrTableCell31" Weight="0.14936854190585536" Multiline="true" Text="Code 93 Extended" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="299" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="300" ControlType="XRTableCell" Name="xrTableCell32" Weight="0.3773823191733639" Text="xrTableCell32" TextAlignment="TopLeft" Padding="2,2,0,0,100" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="301" ControlType="XRBarCode" Name="xrBarCode8" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="XRBarCode" SizeF="250,60" LocationFloat="1.1,9" Padding="20,20,4,0,100" Borders="None" BorderWidth="0">
+                      <Symbology Ref="302" Name="Code93Extended" />
+                      <ExpressionBindings>
+                        <Item1 Ref="303" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="304" UseBackColor="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="305" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="306" ControlType="XRTableCell" Name="xrTableCell33" Weight="0.47324913892078074" Text="It is possible, using Code 93's &quot;Full ASCII Mode&quot; to encode all 128 ASCII characters. This is accomplished by using the ($), (/), (%), and (+) symbols as &quot;shift&quot; characters. Those characters combined with the single character that follows indicate which Full ASCII character is to be used." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="307" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="308" UseBackColor="false" />
+            </Item25>
+            <Item26 Ref="309" ControlType="XRTableRow" Name="xrTableRow12" Weight="0.063530478230094292" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="310" ControlType="XRTableCell" Name="xrTableCell34" Weight="0.14936854190585536" Multiline="true" Text="Industrial&#xD;&#xA;2 of 5" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100">
+                  <StylePriority Ref="311" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="312" ControlType="XRTableCell" Name="xrTableCell35" Weight="0.3773823191733639" Text="xrTableCell35" TextAlignment="TopLeft" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="313" ControlType="XRBarCode" Name="xrBarCode9" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="0123456789" SizeF="250,60" LocationFloat="1.1,7" Padding="20,20,4,0,100" Borders="None">
+                      <Symbology Ref="314" Name="Industrial2of5" />
+                      <ExpressionBindings>
+                        <Item1 Ref="315" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="316" UseBackColor="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="317" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="318" ControlType="XRTableCell" Name="xrTableCell36" Weight="0.47324913892078074" Text="Standard 2 of 5 is a low-density numeric symbology that has been with us since the 1960s. It has been used in the photofinishing and warehouse sorting industries, as well as sequentially numbering airline tickets." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100">
+                  <StylePriority Ref="319" UseBackColor="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="320" UseBackColor="false" />
+            </Item26>
+            <Item27 Ref="321" ControlType="XRTableRow" Name="xrTableRow13" Weight="0.087455435424183117" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="322" ControlType="XRTableCell" Name="xrTableCell37" Weight="0.14936854190585536" Multiline="true" Text="Matrix&#xD;&#xA;2 of 5" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="323" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="324" ControlType="XRTableCell" Name="xrTableCell38" Weight="0.3773823191733639" Text="xrTableCell38" TextAlignment="TopLeft" Padding="2,2,0,0,100" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="325" ControlType="XRBarCode" Name="xrBarCode10" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="00123456789" SizeF="250,60" LocationFloat="1.1,21" Padding="20,20,4,0,100" Borders="None" BorderWidth="0">
+                      <Symbology Ref="326" Name="Matrix2of5" />
+                      <ExpressionBindings>
+                        <Item1 Ref="327" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="328" UseBackColor="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="329" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="330" ControlType="XRTableCell" Name="xrTableCell39" Weight="0.47324913892078074" Text="Matrix 2 of 5 is a linear 1D barcode. Matrix 2 of 5 is self-checking numeric-only barcode. Unlike Interleaved 2 of 5, all of the information is encoded in the bars; the spaces are of fixed width and used only to separate the bars. Matrix 2 of 5 is used primarily for warehouse sorting, photo finishing, and airline ticket marking." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="331" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="332" UseBackColor="false" />
+            </Item27>
+            <Item28 Ref="333" ControlType="XRTableRow" Name="xrTableRow6" Weight="0.059905205334885074" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="334" ControlType="XRTableCell" Name="xrTableCell16" Weight="0.14936854190585536" Multiline="true" Text="Interleaved&#xD;&#xA;2 of 5" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100">
+                  <StylePriority Ref="335" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="336" ControlType="XRTableCell" Name="xrTableCell17" Weight="0.3773823191733639" Text="xrTableCell17" TextAlignment="TopLeft" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="337" ControlType="XRBarCode" Name="xrBarCode11" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="0123456789" SizeF="250,60" LocationFloat="1.1,6" Padding="20,20,4,0,100" Borders="None">
+                      <Symbology Ref="338" Name="Interleaved2of5" WideNarrowRatio="3" />
+                      <ExpressionBindings>
+                        <Item1 Ref="339" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="340" UseBackColor="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="341" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="342" ControlType="XRTableCell" Name="xrTableCell18" Weight="0.47324913892078074" Text="Interleaved 2 of 5 is a higher-density numeric symbology based upon the Standard 2 of 5 symbology. It is used primarily in the distribution and warehouse industry." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100">
+                  <StylePriority Ref="343" UseBackColor="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="344" UseBackColor="false" />
+            </Item28>
+            <Item29 Ref="345" ControlType="XRTableRow" Name="xrTableRow7" Weight="0.066431042363160886" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="346" ControlType="XRTableCell" Name="xrTableCell19" Weight="0.14936854190585536" Multiline="true" Text="EAN13" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="347" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="348" ControlType="XRTableCell" Name="xrTableCell20" Weight="0.3773823191733639" Text="xrTableCell20" TextAlignment="TopLeft" Padding="2,2,0,0,100" BorderWidth="0">
+                  <Controls>
+                    <Item1 Ref="349" ControlType="XRBarCode" Name="xrBarCode12" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="978531800111" SizeF="250,60" LocationFloat="1.1,12" Padding="20,20,4,0,100" Borders="None" BorderWidth="0">
+                      <Symbology Ref="350" Name="EAN13" />
+                      <ExpressionBindings>
+                        <Item1 Ref="351" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="352" UseBackColor="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="353" UseBackColor="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="354" ControlType="XRTableCell" Name="xrTableCell21" Weight="0.47324913892078074" Text="EAN-13, based upon the UPC-A standard, was implemented by the International Article Numbering Association (EAN) in Europe." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="355" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="356" UseBackColor="false" />
+            </Item29>
+            <Item30 Ref="357" ControlType="XRTableRow" Name="xrTableRow14" Weight="0.0555552137211925" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="358" ControlType="XRTableCell" Name="xrTableCell40" Weight="0.14936854190585536" Multiline="true" Text="EAN8" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100">
+                  <StylePriority Ref="359" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="360" ControlType="XRTableCell" Name="xrTableCell41" Weight="0.3773823191733639" Text="xrTableCell41" TextAlignment="TopLeft" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="361" ControlType="XRBarCode" Name="xrBarCode13" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="0123456" SizeF="250,60" LocationFloat="1.1,2" Padding="20,20,4,0,100" Borders="None">
+                      <Symbology Ref="362" Name="EAN8" />
+                      <ExpressionBindings>
+                        <Item1 Ref="363" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="364" UseBackColor="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="365" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="366" ControlType="XRTableCell" Name="xrTableCell42" Weight="0.47324913892078074" Text="EAN-8 is the EAN equivalent of UPC-E in the sense that it provides a &quot;short&quot; barcode for small packages." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100">
+                  <StylePriority Ref="367" UseBackColor="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="368" UseBackColor="false" />
+            </Item30>
+            <Item31 Ref="369" ControlType="XRTableRow" Name="xrTableRow15" Weight="0.096155415332787889" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="370" ControlType="XRTableCell" Name="xrTableCell43" Weight="0.14936854190585536" Multiline="true" Text="MSI/Plessey" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="371" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="372" ControlType="XRTableCell" Name="xrTableCell44" Weight="0.3773823191733639" Text="xrTableCell44" TextAlignment="TopLeft" Padding="2,2,0,0,100" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="373" ControlType="XRBarCode" Name="xrBarCode14" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="0123456789" SizeF="250,62.11206" LocationFloat="1.1,25" Padding="20,20,4,0,100" Borders="None" BorderWidth="0">
+                      <Symbology Ref="374" Name="CodeMSI" />
+                      <ExpressionBindings>
+                        <Item1 Ref="375" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="376" UseBackColor="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="377" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="378" ControlType="XRTableCell" Name="xrTableCell45" Weight="0.47324913892078074" Text="MSI was developed by the MSI Data Corporation, based on the original Plessey Code. MSI, also known as Modified Plessey, is used primarily to mark retail shelves for inventory control. MSI is a continuous, non-self-checking symbology. While the length of an MSI barcode can be of any length, a given application usually implements a fixed-length code." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="379" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="380" UseBackColor="false" />
+            </Item31>
+            <Item32 Ref="381" ControlType="XRTableRow" Name="xrTableRow16" Weight="0.085280652019271208" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="382" ControlType="XRTableCell" Name="xrTableCell46" Weight="0.14936854190585536" Multiline="true" Text="UPC-A" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100">
+                  <StylePriority Ref="383" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="384" ControlType="XRTableCell" Name="xrTableCell47" Weight="0.3773823191733639" Text="xrTableCell47" TextAlignment="TopLeft" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="385" ControlType="XRBarCode" Name="xrBarCode15" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="78534235463" SizeF="250,60" LocationFloat="1.1,19" Padding="20,20,4,0,100" Borders="None">
+                      <Symbology Ref="386" Name="UPCA" />
+                      <ExpressionBindings>
+                        <Item1 Ref="387" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="388" UseBackColor="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="389" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="390" ControlType="XRTableCell" Name="xrTableCell48" Weight="0.47324913892078074" Text="The &quot;UPC-A barcode&quot; is by far the most common and well-known symbology, at least in the United States. An UPC-A barcode is the barcode you will find on virtually every consumer good on the shelves of your local supermarket, as well as books, magazines, and newspapers. It is commonly called simply a &quot;UPC barcode&quot; or &quot;UPC Symbol.&quot;" TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100">
+                  <StylePriority Ref="391" UseBackColor="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="392" UseBackColor="false" />
+            </Item32>
+            <Item33 Ref="393" ControlType="XRTableRow" Name="xrTableRow17" Weight="0.088449476476530772" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="394" ControlType="XRTableCell" Name="xrTableCell49" Weight="0.14936854190585536" Multiline="true" Text="UPC-E" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="395" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="396" ControlType="XRTableCell" Name="xrTableCell50" Weight="0.3773823191733639" Text="xrTableCell50" TextAlignment="TopLeft" Padding="2,2,0,0,100" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="397" ControlType="XRBarCode" Name="xrBarCode16" Module="1" Alignment="MiddleCenter" TextAlignment="MiddleCenter" Text="4210000526" SizeF="250,60" LocationFloat="1.04174,20" Padding="20,20,4,0,100" Borders="None" BorderWidth="0">
+                      <Symbology Ref="398" Name="UPCE0" />
+                      <ExpressionBindings>
+                        <Item1 Ref="399" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="400" UseBackColor="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Controls>
+                  <StylePriority Ref="401" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="402" ControlType="XRTableCell" Name="xrTableCell51" Weight="0.47324913892078074" Text="UPC-E is a variation of UPC-A which allows for a more compact barcode by eliminating &quot;extra&quot; zeros. Since the resulting UPC-E barcode is about half the size as an UPC-A barcode, UPC-E is generally used on products with very small packaging where a full UPC-A barcode couldn't reasonably fit." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="403" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="404" UseBackColor="false" />
+            </Item33>
+            <Item34 Ref="405" ControlType="XRTableRow" Name="xrTableRow18" Weight="0.13984097407903812" TextAlignment="TopLeft" BackColor="White" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="406" ControlType="XRTableCell" Name="xrTableCell52" Weight="0.14936854190585536" Multiline="true" Text="EAN13&#xD;&#xA;with&#xD;&#xA;UPC Suppl. 2" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100">
+                  <StylePriority Ref="407" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="408" ControlType="XRTableCell" Name="xrTableCell53" Weight="0.3773823191733639" Text="xrTableCell53" TextAlignment="TopLeft" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="409" ControlType="XRBarCode" Name="xrBarCode19" Module="1" TextAlignment="BottomCenter" Text="01" SizeF="83.84622,60" LocationFloat="159,48.3335" Padding="0,0,4,0,100" Borders="None">
+                      <Symbology Ref="410" Name="UPCSupplemental2" />
+                      <ExpressionBindings>
+                        <Item1 Ref="411" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="412" UseBackColor="false" />
+                    </Item1>
+                    <Item2 Ref="413" ControlType="XRBarCode" Name="xrBarCode17" Module="1" TextAlignment="MiddleCenter" Text="978531800111" SizeF="133,60" LocationFloat="25.00001,48.3335" Padding="10,10,4,0,100" Borders="None">
+                      <Symbology Ref="414" Name="EAN13" />
+                      <ExpressionBindings>
+                        <Item1 Ref="415" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="416" UseBackColor="false" />
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="417" UseBackColor="false" />
+                </Item2>
+                <Item3 Ref="418" ControlType="XRTableCell" Name="xrTableCell54" Weight="0.47324913892078074" Text="2-digit supplemental barcodes should only be used with magazines, newspapers and other such periodicals. The 2-digit supplement represent the issue number of the magazine. This is useful so that the product code itself (contained in the main barcode) is constant for the magazine such that each issue of the magazine doesn't have to have its own unique barcode. Nevertheless, the 2-digit supplement can be used to track which issue of the magazine is being sold, perhaps for sales analysis or restocking purposes." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100">
+                  <StylePriority Ref="419" UseBackColor="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="420" UseBackColor="false" />
+            </Item34>
+            <Item35 Ref="421" ControlType="XRTableRow" Name="xrTableRow19" Weight="0.058001705662949148" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+              <Cells>
+                <Item1 Ref="422" ControlType="XRTableCell" Name="xrTableCell55" Weight="0.14936854190585536" Multiline="true" Text="EAN13&#xD;&#xA;with&#xD;&#xA;UPC Suppl. 5" TextAlignment="MiddleCenter" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100" BorderWidth="0">
+                  <StylePriority Ref="423" UseBackColor="false" UseBorderWidth="false" />
+                </Item1>
+                <Item2 Ref="424" ControlType="XRTableCell" Name="xrTableCell56" Weight="0.3773823191733639" Text="xrTableCell56" TextAlignment="TopLeft" Padding="2,2,0,0,100" Borders="Left, Right" BorderWidth="1">
+                  <Controls>
+                    <Item1 Ref="425" ControlType="XRBarCode" Name="xrBarCode18" Module="1" TextAlignment="MiddleCenter" Text="978531800111" SizeF="133,60" LocationFloat="25,0" Padding="10,10,4,0,100" Borders="None" BorderWidth="0">
+                      <Symbology Ref="426" Name="EAN13" />
+                      <ExpressionBindings>
+                        <Item1 Ref="427" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="428" UseBackColor="false" UseBorderWidth="false" />
+                    </Item1>
+                    <Item2 Ref="429" ControlType="XRBarCode" Name="xrBarCode20" Module="1" TextAlignment="BottomCenter" Text="01234" SizeF="75,60" LocationFloat="158,0" Padding="0,0,4,0,100" Borders="None" BorderWidth="0">
+                      <Symbology Ref="430" Name="UPCSupplemental5" />
+                      <ExpressionBindings>
+                        <Item1 Ref="431" EventName="BeforePrint" PropertyName="AutoModule" Expression="?AutoModuleParameter" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="432" UseBackColor="false" UseBorderWidth="false" />
+                    </Item2>
+                  </Controls>
+                  <StylePriority Ref="433" UseBackColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item2>
+                <Item3 Ref="434" ControlType="XRTableCell" Name="xrTableCell57" Weight="0.47324913892078074" Text="5-digit supplemental barcodes are used on books to indicate a suggested retail price." TextAlignment="MiddleJustify" StyleName="TextPaddingStyle" Font="Tahoma, 8.25pt" Padding="6,4,2,2,100" BorderWidth="0">
+                  <StylePriority Ref="435" UseBackColor="false" UseBorderWidth="false" />
+                </Item3>
+              </Cells>
+              <StylePriority Ref="436" UseBackColor="false" />
+            </Item35>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item1>
+    <Item2 Ref="437" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="32" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+      <Controls>
+        <Item1 Ref="438" ControlType="XRLabel" Name="xrLabel1" Text="Note: " TextAlignment="BottomLeft" SizeF="42,25" LocationFloat="0,0" Font="Tahoma, 8.25pt, style=Bold" Padding="2,2,0,0,100" Borders="Bottom" />
+        <Item2 Ref="439" ControlType="XRLabel" Name="xrLabel3" Text="You may print the following barcodes and then read them by any suitable barcode scanner" TextAlignment="BottomJustify" SizeF="627,25" LocationFloat="43,0" Font="Tahoma, 8.25pt" Padding="2,2,0,0,100" Borders="Bottom" />
+      </Controls>
+    </Item2>
+    <Item3 Ref="440" ControlType="PageHeaderBand" Name="PageHeader" HeightF="34" TextAlignment="TopLeft" Font="Tahoma, 8.25pt, style=Bold" ForeColor="White" BackColor="Black" Padding="0,0,0,0,100" BorderColor="White" Borders="Left">
+      <Controls>
+        <Item1 Ref="441" ControlType="XRTable" Name="xrTable1" TextAlignment="TopLeft" SizeF="670,34" LocationFloat="0,0" Padding="0,0,0,0,96">
+          <Rows>
+            <Item1 Ref="442" ControlType="XRTableRow" Name="xrTableRow1" Weight="1" TextAlignment="TopLeft" Padding="0,0,0,0,96">
+              <Cells>
+                <Item1 Ref="443" ControlType="XRTableCell" Name="xrTableCell1" Weight="0.14936854190585536" Text="Symbology" TextAlignment="MiddleCenter" Padding="2,2,0,0,100" />
+                <Item2 Ref="444" ControlType="XRTableCell" Name="xrTableCell2" Weight="0.3773823191733639" Text="Example" TextAlignment="MiddleCenter" Padding="2,2,0,0,100" />
+                <Item3 Ref="445" ControlType="XRTableCell" Name="xrTableCell3" Weight="0.47324913892078074" Text="Description" TextAlignment="MiddleCenter" Padding="2,2,0,0,100" />
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item3>
+    <Item4 Ref="446" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="93" TextAlignment="TopLeft" Padding="0,0,0,0,100">
+      <Controls>
+        <Item1 Ref="447" ControlType="XRPictureBox" Name="xrPictureBox4" Padding="0,0,0,0,100" ImageSource="svg,77u/PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgd2lkdGg9IjE1MHB4IiBoZWlnaHQ9IjMwcHgiIHZpZXdCb3g9IjAgMCAxNTAgMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0ibm9uZSI+DQogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxNTAiIGhlaWdodD0iMzAiIGZpbGw9IiNFNUU1RTUiIC8+DQogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxNTAiIGhlaWdodD0iMzAiIGZpbGw9IndoaXRlIiAvPg0KICA8cGF0aCBkPSJNMi45NjI5NSAyNS4wNzMxSDI2LjE2MTVWNS4xNjY0OEgyLjk2Mjk1VjI1LjA3MzFaIiBmaWxsPSJ3aGl0ZSIgLz4NCiAgPHBhdGggZD0iTTM3LjYzNTIgMjAuMzY3MkMzNy4yMTIyIDIwLjM2NzIgMzYuNzQ2NyAyMC4zNjcyIDM2LjQyOTggMjAuMzAyVjguNjE0MjlDMzYuNzY4IDguNTUwNzkgMzcuMjU0MiA4LjQ4NTMzIDM3LjkwOTUgOC40ODUzM0M0MC44MDY5IDguNDg1MzMgNDIuNjA0NCAxMC4zNDk4IDQyLjYwNDQgMTQuMTIzMkM0Mi42MDQ0IDE4LjUwMzEgNDAuNjE2NSAyMC4zODkgMzcuNjM1MiAyMC4zNjcyVjIwLjM2NzJaTTM3LjUyOTUgNS45NjkzMkMzNS45NDM1IDUuOTY5MzIgMzQuNDYzNCA2LjEwMDA2IDMzLjMyMDggNi4zMTcwMlYyMi43MDhDMzQuMTQ1NiAyMi44MTc4IDM1LjM1MTEgMjIuOTI2NiAzNi44NTI5IDIyLjkyNjZDMzkuNjg1OCAyMi45MjY2IDQxLjk0OTMgMjIuMjUzMSA0My40Mjk2IDIwLjg4ODRDNDQuNjc2OSAxOS43Mzc3IDQ1Ljg4MjMgMTcuNjU3NiA0NS44ODIzIDE0LjA3ODFDNDUuODgyMyAxMS4wNjQzIDQ0Ljk3MzIgOS4wMDQ1MSA0My40Mjk2IDcuNzA0ODdDNDIuMDc2NCA2LjU1NTk2IDQwLjIzNTcgNS45NjkzMiAzNy41Mjk1IDUuOTY5MzIiIGZpbGw9IiMzOTM1MzYiIC8+DQogIDxwYXRoIGQ9Ik01MC40Mzc3IDE1LjQ2NjFDNTAuNTIyMiAxNC4yNzM5IDUxLjE1NyAxMi42Njk1IDUyLjY1ODMgMTIuNjY5NUM1NC4yMDIgMTIuNjY5NSA1NC42ODg5IDE0LjIwODYgNTQuNjY3NiAxNS40NjYxSDUwLjQzNzdaTTUyLjg0ODQgMTAuNDM2N0M0OS40MDIyIDEwLjQzNjcgNDcuNDU2IDEzLjQyOTYgNDcuNDU2IDE2Ljg5ODFDNDcuNDU2IDIwLjY0ODEgNDkuNTI4NSAyMi45OTA5IDUzLjE2NjQgMjIuOTkwOUM1NC42MjU3IDIyLjk5MDkgNTUuOTk5NSAyMi43MjkyIDU2Ljk3MjggMjIuMjk4Mkw1Ni41Mjg0IDIwLjA4NUM1NS43MjQ5IDIwLjM2NzIgNTQuODE1OCAyMC41ODQyIDUzLjY1MjggMjAuNTg0MkM1MS45NjA4IDIwLjU4NDIgNTAuNTIyMiAxOS43NjA3IDUwLjQzNzcgMTcuNzAwMUg1Ny40Nzk1QzU3LjU0MzcgMTcuMzU0IDU3LjU2NDkgMTYuODk4MSA1Ny41NjQ5IDE2LjQyMThDNTcuNTY0OSAxMi41MTc4IDU1LjcwMzcgMTAuNDM2NyA1Mi44NDg0IDEwLjQzNjciIGZpbGw9IiMzOTM1MzYiIC8+DQogIDxwYXRoIGQ9Ik02Ni4zMDQ3IDEwLjY5NjRMNjQuODI1MiAxNi41NTA0QzY0LjU3MDQgMTcuNjE0MSA2NC4zNTkgMTguNTg5OCA2NC4xNjg0IDE5LjYyODlINjQuMTA2MkM2My45MTYgMTguNTg5OCA2My43MDM3IDE3LjU5MjMgNjMuNDQ5OSAxNi41NTA0TDYxLjkwNjIgMTAuNjk2NEg1OC41NDM3TDYyLjQ5ODggMjIuNzc0M0g2NS41MjI1TDY5LjU0MDcgMTAuNjk2NEg2Ni4zMDQ3IiBmaWxsPSIjMzkzNTM2IiAvPg0KICA8cGF0aCBkPSJNNC41NjMwNyAyMS42NjczQzMuOTY5NTEgMjIuNDIzNiAzLjUyODE1IDIzLjA5MzcgMy4xOTE5MyAyMy43MjE3QzMuMTA4NzkgMjMuODc0IDIuOTYyOTUgMjQuMzI3OSAyLjk2Mjk1IDI0LjYzMDlWMjUuMDczMUMyLjk2Mjk1IDI1LjgyNjEgMy41NjQyMyAyNi40NDQyIDQuMzAwNzIgMjYuNDQ0MkgyNC44MjQ4QzI1LjU2MDYgMjYuNDQ0MiAyNi4xNjE1IDI1LjgyNjEgMjYuMTYxNSAyNS4wNzMxVjguODgxNjhDMTQuOTE0MiAxMC45MTQ5IDguMDk3NzcgMTcuMTU5NiA0LjU2MzA3IDIxLjY2NzNaIiBmaWxsPSIjMzkzNTM2IiAvPg0KICA8cGF0aCBkPSJNNzQuNDczMSAxNS40NDQ0SDc5Ljc4MzdWMTIuODIxOEg3NC40NzMxVjguNzg4OTJIODAuMTAwOFY2LjEwMDA1SDcxLjM0NDJWMjIuNzc0M0g4MC40Mzg1VjIwLjA4NUg3NC40NzMxVjE1LjQ0NDQiIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik05Mi4yNjU3IDEwLjY5NjRIODguOTQ0N0w4Ny44ODY0IDEyLjg2NDNDODcuNTkwMSAxMy40OTM2IDg3LjMxNyAxNC4xNDQ2IDg3LjAyMTIgMTQuNzkzN0g4Ni45Nzc4Qzg2LjY4MSAxNC4xODg1IDg2LjQwODQgMTMuNTU3NSA4Ni4wNjkxIDEyLjg4Nkw4NC45NDkxIDEwLjY5NjRIODEuNDgxNUw4NC45Njk5IDE2LjY2MDJMODEuMzk1MSAyMi43NzQzSDg0LjczNThMODUuODM2NSAyMC40MzI1Qzg2LjEzMTggMTkuODAyNiA4Ni40Mjg2IDE5LjE3MyA4Ni43MDM3IDE4LjUyNDVIODYuNzQ3MUM4Ny4wNDM0IDE5LjE3MyA4Ny4zMTcgMTkuODAyNiA4Ny42MzM2IDIwLjQzMjVMODguNzk2IDIyLjc3NDNIOTIuMzA4MUw4OC43NTUxIDE2LjUyODlMOTIuMjY1NyAxMC42OTY0WiIgZmlsbD0iI0Y0NzIxNiIgLz4NCiAgPHBhdGggZD0iTTk5LjEwMjcgMjAuNDk1OEM5OC4wNDQ5IDIwLjQ5NTggOTcuMDA4NCAxOS42NTIzIDk3LjAwODQgMTcuODk1NVYxNS42Mzk2Qzk3LjAwODQgMTQuMTg4NSA5Ny45NjA1IDEzLjAxNjIgOTkuMTY2NCAxMy4wMTYyQzEwMC43MDkgMTMuMDE2MiAxMDEuNTEzIDE0LjU3ODEgMTAxLjUxMyAxNi43MjU0QzEwMS41MTMgMTguODkyOCAxMDAuNjg4IDIwLjQ5NTggOTkuMTAyNyAyMC40OTU4Wk0xMDAuMjAyIDEwLjQzNjdDOTguNjc4NSAxMC40MzY3IDk3LjQ3MzYgMTEuMTA5MyA5Ni43MTI2IDEyLjM0NDFIOTYuNjY5MUw5Ni41MjE1IDEwLjY5NjRIOTMuNzkzMUM5My44MzYxIDExLjgwMjQgOTMuODc5IDEzLjA4MDkgOTMuODc5IDE0LjY0MzhWMjcuNjEwMUg5Ny4wMDg0VjIxLjYwMzRIOTcuMDUxNEM5Ny41NTggMjIuNDA0MSA5OC41NTMxIDIzLjAxMjYgOTkuODQxIDIzLjAxMjZDMTAyLjIzMSAyMy4wMTI2IDEwNC42ODQgMjEuMDYxNSAxMDQuNjg0IDE2LjYxNTNDMTA0LjY4NCAxMi45MDg0IDEwMi43ODIgMTAuNDM2NyAxMDAuMjAyIDEwLjQzNjciIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xMDkuNzA1IDEyLjgwMDZIMTA5LjYxOEwxMDkuNDkzIDEwLjY5NjRIMTA2LjgwNkMxMDYuODQ5IDExLjc3OTQgMTA2Ljg5MSAxMi45NzM3IDEwNi44OTEgMTQuNDY5M1YyMi43NzQzSDExMC4wMjJWMTYuNTI4OUMxMTAuMDIyIDE0LjQ2OTMgMTExLjA5OCAxMy40OTM2IDExMi41MTYgMTMuNDkzNkMxMTIuODM1IDEzLjQ5MzYgMTEzLjA4OCAxMy41MTUgMTEzLjMyMSAxMy41NTc1VjEwLjUwMUMxMTMuMTA5IDEwLjQ1NzQgMTEyLjkxNyAxMC40MzY3IDExMi42MjIgMTAuNDM2N0MxMTEuNTIyIDEwLjQzNjcgMTEwLjI1NSAxMS4yMzc3IDEwOS43MDUgMTIuODAwNloiIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xMTcuNDA1IDE1LjQ2NjFDMTE3LjQ5MSAxNC4yNzM5IDExOC4xMjUgMTIuNjY5NSAxMTkuNjI2IDEyLjY2OTVDMTIxLjE3IDEyLjY2OTUgMTIxLjY1NyAxNC4yMDg2IDEyMS42MzYgMTUuNDY2MUgxMTcuNDA1Wk0xMTkuODE2IDEwLjQzNjdDMTE2LjM2OSAxMC40MzY3IDExNC40MjQgMTMuNDI5NiAxMTQuNDI0IDE2Ljg5ODFDMTE0LjQyNCAyMC42NDgxIDExNi40OTUgMjIuOTkwOSAxMjAuMTM0IDIyLjk5MDlDMTIxLjU5MyAyMi45OTA5IDEyMi45NjcgMjIuNzI5MiAxMjMuOTQxIDIyLjI5ODJMMTIzLjQ5NyAyMC4wODVDMTIyLjY5MyAyMC4zNjcyIDEyMS43ODQgMjAuNTg0MiAxMjAuNjIxIDIwLjU4NDJDMTE4LjkyOSAyMC41ODQyIDExNy40OTEgMTkuNzYwNyAxMTcuNDA1IDE3LjcwMDFIMTI0LjQ0OEMxMjQuNTExIDE3LjM1NCAxMjQuNTMzIDE2Ljg5ODEgMTI0LjUzMyAxNi40MjE4QzEyNC41MzMgMTIuNTE3OCAxMjIuNjcgMTAuNDM2NyAxMTkuODE2IDEwLjQzNjciIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xMzEuMDMxIDE1LjQ4OTNDMTI5LjY3OCAxNC45MDI4IDEyOS4yMzQgMTQuNTU1MyAxMjkuMjM0IDEzLjg4NDlDMTI5LjIzNCAxMy4yMzI4IDEyOS43NDEgMTIuNzM1MyAxMzAuNjkxIDEyLjczNTNDMTMxLjU4IDEyLjczNTMgMTMyLjQwNiAxMy4wODA5IDEzMi45MTMgMTMuMzYzMUwxMzMuNTA2IDExLjEwOTNDMTMyLjgyOSAxMC43NDAxIDEzMS43OTQgMTAuNDM2NyAxMzAuNTg4IDEwLjQzNjdDMTI3Ljk2NCAxMC40MzY3IDEyNi4yNzQgMTIuMDgzNiAxMjYuMjc0IDE0LjI1MTdDMTI2LjI3NCAxNS41NzU5IDEyNy4wNzUgMTYuODU0IDEyOS4yNzYgMTcuNzY0NEMxMzAuNTY2IDE4LjMyODEgMTMwLjk2NyAxOC43MTgzIDEzMC45NjcgMTkuNDU1NEMxMzAuOTY3IDIwLjE5NDggMTMwLjQ0MSAyMC42NzEyIDEyOS4zMzggMjAuNjcxMkMxMjguMzY3IDIwLjY3MTIgMTI3LjIwMiAyMC4yMzY3IDEyNi41OSAxOS44NjcyTDEyNS45OTggMjIuMTg3OEMxMjYuNzc5IDIyLjY2NjkgMTI4LjAzIDIyLjk5MDkgMTI5LjMxOCAyMi45OTA5QzEzMi4yNTkgMjIuOTkwOSAxMzMuOTQ5IDIxLjQ3MTkgMTMzLjk0OSAxOS4xNzNDMTMzLjk0OSAxNy41MDU3IDEzMy4wMTkgMTYuMzMyOCAxMzEuMDMxIDE1LjQ4OTNaIiBmaWxsPSIjRjQ3MjE2IiAvPg0KICA8cGF0aCBkPSJNMTQwLjQwNSAxNS40ODkzQzEzOS4wNTEgMTQuOTAyOCAxMzguNjA5IDE0LjU1NTMgMTM4LjYwOSAxMy44ODQ5QzEzOC42MDkgMTMuMjMyOCAxMzkuMTE2IDEyLjczNTMgMTQwLjA2NyAxMi43MzUzQzE0MC45NTQgMTIuNzM1MyAxNDEuNzgxIDEzLjA4MDkgMTQyLjI4NyAxMy4zNjMxTDE0Mi44OCAxMS4xMDkzQzE0Mi4yMDMgMTAuNzQwMSAxNDEuMTY3IDEwLjQzNjcgMTM5Ljk2MyAxMC40MzY3QzEzNy4zMzggMTAuNDM2NyAxMzUuNjQ3IDEyLjA4MzYgMTM1LjY0NyAxNC4yNTE3QzEzNS42NDcgMTUuNTc1OSAxMzYuNDQ5IDE2Ljg1NCAxMzguNjUgMTcuNzY0NEMxMzkuOTM5IDE4LjMyODEgMTQwLjM0MSAxOC43MTgzIDE0MC4zNDEgMTkuNDU1NEMxNDAuMzQxIDIwLjE5NDggMTM5LjgxNCAyMC42NzEyIDEzOC43MTMgMjAuNjcxMkMxMzcuNzQxIDIwLjY3MTIgMTM2LjU3NiAyMC4yMzY3IDEzNS45NjQgMTkuODY3MkwxMzUuMzcyIDIyLjE4NzhDMTM2LjE1MyAyMi42NjY5IDEzNy40MDQgMjIuOTkwOSAxMzguNjkyIDIyLjk5MDlDMTQxLjYzMiAyMi45OTA5IDE0My4zMjMgMjEuNDcxOSAxNDMuMzIzIDE5LjE3M0MxNDMuMzIzIDE3LjUwNTcgMTQyLjM5NCAxNi4zMzI4IDE0MC40MDUgMTUuNDg5MyIgZmlsbD0iI0Y0NzIxNiIgLz4NCiAgPHBhdGggZD0iTTI0LjgyNDggMi42NTg1OEg0LjMwMDcyQzMuNTY0MjMgMi42NTg1OCAyLjk2Mjk1IDMuMjc1NDkgMi45NjI5NSA0LjAzMlYxNi42NDY1QzcuMDI1MDYgMTIuMjY2NiAxNC4yNTU0IDcuNDgxNTcgMjUuMjc5NyA2LjE3NzE2QzI1LjU3MjEgNi4xNDM1NCAyNi4xNjE1IDYuMDA0MSAyNi4xNjE1IDUuMTY2NDhWNC4wMzJDMjYuMTYxNSAzLjI3NTQ5IDI1LjU2MDYgMi42NTg1OCAyNC44MjQ4IDIuNjU4NTgiIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xNDYuMDM3IDkuNzY1NzdIMTQ1LjczOVY5LjEyNjk0SDE0NS45ODZDMTQ2LjI2MyA5LjEyNjk0IDE0Ni40MDEgOS4yMzE3NSAxNDYuNDAxIDkuNDQxNjJDMTQ2LjQwMSA5LjUzOTM0IDE0Ni4zNjggOS42MTc2MiAxNDYuMzAzIDkuNjc2OTZDMTQ2LjIzOCA5LjczNjEgMTQ2LjE0OSA5Ljc2NTc3IDE0Ni4wMzcgOS43NjU3N1pNMTQ2LjMzNCA5Ljk4ODFWOS45Nzg1OEMxNDYuNjggOS44ODk5OCAxNDYuODUzIDkuNjk0NzkgMTQ2Ljg1MyA5LjM5MTk1QzE0Ni44NTMgOS4xOTc3MiAxNDYuNzgzIDkuMDQ2MDMgMTQ2LjY0MSA4LjkzNjY2QzE0Ni40OTkgOC44MjY4OSAxNDYuMjkzIDguNzcyMSAxNDYuMDIzIDguNzcyMUgxNDUuMzE5VjEwLjk4MTRIMTQ1LjczOVYxMC4wOTQ1SDE0NS45MjNDMTQ2LjA1NiAxMC4wOTQ1IDE0Ni4xNiAxMC4yMDQxIDE0Ni4yMzUgMTAuNDIzMkwxNDYuNDI5IDEwLjk4MTRIMTQ2LjkyOUwxNDYuNjcxIDEwLjM1MjRDMTQ2LjU4NyAxMC4xNDU3IDE0Ni40NzQgMTAuMDI0MyAxNDYuMzM0IDkuOTg4MSIgZmlsbD0iI0Y0NzIxNiIgLz4NCiAgPHBhdGggZD0iTTE0Ny4wOTQgMTAuOTcyOUMxNDYuODA4IDExLjI2MjQgMTQ2LjQ2IDExLjQwNzQgMTQ2LjA1IDExLjQwNzRDMTQ1LjYzNyAxMS40MDc0IDE0NS4yODcgMTEuMjY0MiAxNDUuMDAxIDEwLjk3OEMxNDQuNzE1IDEwLjY5MTYgMTQ0LjU3MiAxMC4zMzI1IDE0NC41NzIgOS45MDA0NkMxNDQuNTcyIDkuNDc2MjEgMTQ0LjcxMiA5LjExOTA1IDE0NC45OTMgOC44Mjg2N0MxNDUuMjc0IDguNTM4NzQgMTQ1LjYyNiA4LjM5MzU4IDE0Ni4wNSA4LjM5MzU4QzE0Ni40NjggOC4zOTM1OCAxNDYuODE3IDguNTM3NTMgMTQ3LjEgOC44MjU1M0MxNDcuMzgzIDkuMTEzMTIgMTQ3LjUyNCA5LjQ3MTUgMTQ3LjUyNCA5LjkwMDQ2QzE0Ny41MjQgMTAuMzI2MyAxNDcuMzgyIDEwLjY4MzcgMTQ3LjA5NCAxMC45NzI5VjEwLjk3MjlaTTE0Ny4zMDIgOC42Mzk2QzE0Ni45NjcgOC4zMDgzMSAxNDYuNTU0IDguMTQyOTUgMTQ2LjA2IDguMTQyOTVDMTQ1LjU2IDguMTQyOTUgMTQ1LjE0IDguMzEzNjggMTQ0LjgwMSA4LjY1NTI1QzE0NC40NjIgOC45OTY0MSAxNDQuMjkyIDkuNDEzMTIgMTQ0LjI5MiA5LjkwNTIyQzE0NC4yOTIgMTAuNDExNiAxNDQuNDYgMTAuODI4OSAxNDQuNzk1IDExLjE1NzZDMTQ1LjEyOSAxMS40ODY1IDE0NS41NDYgMTEuNjUwOSAxNDYuMDQ1IDExLjY1MDlDMTQ2LjUzNiAxMS42NTA5IDE0Ni45NTIgMTEuNDgxMiAxNDcuMjkzIDExLjE0MjRDMTQ3LjYzNCAxMC44MDMzIDE0Ny44MDQgMTAuMzg2MiAxNDcuODA0IDkuODkwNzlDMTQ3LjgwNCA5LjM4ODAxIDE0Ny42MzcgOC45NzA2OSAxNDcuMzAyIDguNjM5NiIgZmlsbD0iI0Y0NzIxNiIgLz4NCjwvc3ZnPg==" Sizing="AutoSize" UseImageResolution="false" NavigateUrl="http://www.devexpress.com/Products/NET/Reporting/" SizeF="156.25,31.25" LocationFloat="249,22" />
+      </Controls>
+    </Item4>
+    <Item5 Ref="448" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="86" />
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="449" Name="TextPaddingStyle" BorderStyle="Inset" Font="Tahoma, 8.25pt" StringFormat="Near;Near;0;None;Character;GenericDefault" />
+  </StyleSheet>
+  <Watermarks>
+    <Item1 Ref="450" Id="Watermark1" />
+  </Watermarks>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="1" Content="System.Boolean" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Customer Support" Alignment="Left" />
+  <DataSources>
+    <JsonDataSource Name="Customer Support" ConnectionName="CustomerSupportConnection" RootElement="Data" ComponentName="dsCustomerSupport">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="Data" Selected="true" NodeType="Array">
+            <Node Name="Customer" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="Employee" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="IssueType" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="IssueTypeIndex" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="Opened" Type="System.Nullable`1[System.DateTime]" Selected="true" NodeType="Property" />
+            <Node Name="ProductName" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="ResolvedTime" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+      <CalculatedFields>
+        <CalculatedField Name="UrgentCount" Expression="aggr(CountNotNull(Iif([IssueType] = 'Urgent', ToStr([Opened]), null)))" DataType="Auto" />
+        <CalculatedField Name="NormalCount" Expression="aggr(CountNotNull(Iif([IssueType] = 'Normal', ToStr([Opened]), null)))" DataType="Auto" />
+        <CalculatedField Name="CriticalCount" Expression="aggr(CountNotNull(Iif([IssueType] = 'Critical', ToStr([Opened]), null)))" DataType="Auto" />
+      </CalculatedFields>
+    </JsonDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartProcessedIssuesByPlatform" Name="Processed Issues Count by Platform / Employee" DataSource="dsCustomerSupport" Rotated="true">
+      <InteractivityOptions IsDrillDownEnabled="true" />
+      <DataItems>
+        <Dimension DataMember="IssueType" SortByMeasure="DataItem5" DefaultId="DataItem0" />
+        <Measure DataMember="Opened" SummaryType="Count" DefaultId="DataItem1">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Dimension DataMember="ProductName" SortByMeasure="DataItem1" TopNCount="3" TopNMeasure="DataItem1" DefaultId="DataItem2" />
+        <Dimension DataMember="Employee" SortByMeasure="DataItem1" DefaultId="DataItem4" />
+        <Measure DataMember="IssueTypeIndex" DefaultId="DataItem5" />
+      </DataItems>
+      <HiddenMeasures>
+        <Measure DefaultId="DataItem5" />
+      </HiddenMeasures>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem0" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem2" />
+        <Argument DefaultId="DataItem4" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" Title="Issue Count">
+            <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+          </AxisY>
+          <Series>
+            <Simple Name="Opened (Count)" SeriesType="StackedBar">
+              <Value DefaultId="DataItem1" />
+              <PointLabelOptions ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" IsInsidePosition="true" InsidePosition="BottomRightVertical" />
+    </Chart>
+    <DateFilter ComponentName="dateFilterDashboardItem1" Name="Date Filter 1" ShowCaption="false" ParentContainer="groupDashboardItem2" DataSource="dsCustomerSupport" SelectedDateTimePeriodIndex="Year to date">
+      <DataItems>
+        <Dimension DataMember="Opened" Name="Date" DateTimeGroupInterval="MonthYear" DefaultId="DataItem0" />
+        <Dimension DataMember="IssueType" DefaultId="DataItem1" />
+        <Measure DataMember="Opened" SummaryType="Count" DefaultId="DataItem2" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension DefaultId="DataItem1" />
+      </HiddenDimensions>
+      <HiddenMeasures>
+        <Measure DefaultId="DataItem2" />
+      </HiddenMeasures>
+      <Dimension DefaultId="DataItem0" />
+      <DateTimePeriods>
+        <DateTimePeriod Name="3 Months">
+          <StartLimit>
+            <FlowDateTimePeriodLimit Interval="Month" Offset="-2" />
+          </StartLimit>
+        </DateTimePeriod>
+        <DateTimePeriod Name="6 Months">
+          <StartLimit>
+            <FlowDateTimePeriodLimit Interval="Month" Offset="-5" />
+          </StartLimit>
+        </DateTimePeriod>
+        <DateTimePeriod Name="Year to date">
+          <StartLimit>
+            <FlowDateTimePeriodLimit />
+          </StartLimit>
+          <EndLimit>
+            <FlowDateTimePeriodLimit Interval="Day" />
+          </EndLimit>
+        </DateTimePeriod>
+      </DateTimePeriods>
+    </DateFilter>
+    <Chart ComponentName="chartAvgResponseTimeByPlatform" Name="Average Response Time by Platform / Employee" DataSource="dsCustomerSupport">
+      <InteractivityOptions IsDrillDownEnabled="true" />
+      <DataItems>
+        <Measure DataMember="ResolvedTime" SummaryType="Average" DefaultId="DataItem1" />
+        <Dimension DataMember="IssueType" SortByMeasure="DataItem0" DefaultId="DataItem3" />
+        <Dimension DataMember="ProductName" SortOrder="Descending" DefaultId="DataItem2" />
+        <Measure DataMember="IssueTypeIndex" SummaryType="Min" DefaultId="DataItem0" />
+        <Dimension DataMember="Employee" SortByMeasure="DataItem1" DefaultId="DataItem5" />
+      </DataItems>
+      <HiddenMeasures>
+        <Measure DefaultId="DataItem0" />
+      </HiddenMeasures>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem3" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem2" />
+        <Argument DefaultId="DataItem5" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="Response Time, Hours" />
+          <Series>
+            <Simple Name="ResolvedTime (Average)">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+    </Chart>
+    <Chart ComponentName="chartOpenedIssuesByMonth" Name="Opened Issues by Month" DataSource="dsCustomerSupport">
+      <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
+      <InteractivityOptions IgnoreMasterFilters="true" />
+      <DataItems>
+        <Dimension DataMember="Opened" DateTimeGroupInterval="Month" DefaultId="DataItem2" />
+        <Measure DataMember="Opened" SummaryType="Count" FilterString="IsLastYear([DataItem1])" DefaultId="DataItem3" />
+        <Measure DataMember="Opened" SummaryType="Count" FilterString="IsThisYear([DataItem1])" DefaultId="DataItem0" />
+        <Dimension DataMember="Opened" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension DefaultId="DataItem1" />
+      </HiddenDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+      <ColorScheme>
+        <Entry DataSource="dsCustomerSupport" PaletteIndex="0">
+          <MeasureKey>
+            <Definition DataMember="Opened" SummaryType="Count" FilterString="IsLastYear([DataItem1])">
+              <Definitions>
+                <DimensionDefinition Name="DataItem1" DataMember="Opened" DateTimeGroupInterval="DayMonthYear" />
+              </Definitions>
+            </Definition>
+          </MeasureKey>
+        </Entry>
+        <Entry DataSource="dsCustomerSupport" PaletteIndex="1">
+          <MeasureKey>
+            <Definition DataMember="Opened" SummaryType="Count" FilterString="IsThisYear([DataItem1])">
+              <Definitions>
+                <DimensionDefinition Name="DataItem1" DataMember="Opened" DateTimeGroupInterval="DayMonthYear" />
+              </Definitions>
+            </Definition>
+          </MeasureKey>
+        </Entry>
+      </ColorScheme>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" Title="Opened (Count)" />
+          <Series>
+            <Simple Name="Previous year - Opened" SeriesType="Line">
+              <Value DefaultId="DataItem3" />
+              <CustomProperties>
+                <DashStyleProperty>dot</DashStyleProperty>
+              </CustomProperties>
+            </Simple>
+            <Simple Name="Current year - Opened" SeriesType="Line">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartAvgResponseTimeByMonth" Name="Average Response Time (h) by Month" DataSource="dsCustomerSupport">
+      <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
+      <InteractivityOptions IgnoreMasterFilters="true" />
+      <DataItems>
+        <Dimension DataMember="Opened" DateTimeGroupInterval="Month" ColoringMode="None" DefaultId="DataItem2" />
+        <Measure DataMember="ResolvedTime" SummaryType="Average" FilterString="IsLastYear([DataItem1])" DefaultId="DataItem0" />
+        <Measure DataMember="ResolvedTime" SummaryType="Average" FilterString="IsThisYear([DataItem1])" DefaultId="DataItem3" />
+        <Dimension DataMember="Opened" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension DefaultId="DataItem1" />
+      </HiddenDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+      <ColorScheme>
+        <Entry DataSource="dsCustomerSupport" PaletteIndex="0">
+          <MeasureKey>
+            <Definition DataMember="ResolvedTime" SummaryType="Average" FilterString="IsLastYear([DataItem1])">
+              <Definitions>
+                <DimensionDefinition Name="DataItem1" DataMember="Opened" DateTimeGroupInterval="DayMonthYear" />
+              </Definitions>
+            </Definition>
+          </MeasureKey>
+        </Entry>
+        <Entry DataSource="dsCustomerSupport" PaletteIndex="1">
+          <MeasureKey>
+            <Definition DataMember="ResolvedTime" SummaryType="Average" FilterString="IsThisYear([DataItem1])">
+              <Definitions>
+                <DimensionDefinition Name="DataItem1" DataMember="Opened" DateTimeGroupInterval="DayMonthYear" />
+              </Definitions>
+            </Definition>
+          </MeasureKey>
+        </Entry>
+      </ColorScheme>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" Title="Response Time (Average)" />
+          <Series>
+            <Simple Name="Previous year - Response Time (Average)" SeriesType="Line">
+              <Value DefaultId="DataItem0" />
+              <CustomProperties>
+                <DashStyleProperty>dot</DashStyleProperty>
+              </CustomProperties>
+            </Simple>
+            <Simple Name="Current year - Response Time (Average)" SeriesType="Line">
+              <Value DefaultId="DataItem3" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <TextBox ComponentName="textBoxDashboardItem1" Name="Bug Count" ShowCaption="false" ParentContainer="groupDashboardItem2" DataSource="dsCustomerSupport">
+      <DataItems>
+        <Measure DataMember="UrgentCount" SummaryType="Max" DefaultId="DataItem0">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="NormalCount" SummaryType="Max" DefaultId="DataItem2">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="Opened" SummaryType="Count" DefaultId="DataItem3">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="CriticalCount" SummaryType="Max" DefaultId="DataItem1">
+          <NumericFormat FormatType="Number" Precision="0" Unit="Ones" IncludeGroupSeparator="true" />
+        </Measure>
+      </DataItems>
+      <Text>{\rtf1\deff0{\fonttbl{\f0 Calibri;}{\f1 Segoe UI;}{\f2 Times New Roman;}}{\colortbl ;\red0\green0\blue255 ;\red255\green255\blue255 ;\red255\green158\blue5 ;\red207\green15\blue46 ;\red80\green153\blue228 ;}{\*\defchp \f1\fs22}{\stylesheet {\ql Normal;}{\*\cs1\f1\fs22 Default Paragraph Font;}{\*\cs2\f1\fs22\cf1 Hyperlink;}{\*\ts3\tsrowd\fs22\ql\tsvertalt\tscellcbpat2\tscellpct0\cltxlrtb Normal Table;}}{\*\listoverridetable}{\info}\nouicompat\splytwnine\htmautsp\expshrtn\spltpgpar\deftab720\sectd\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\headery720\footery720\pgwsxn11906\pghsxn16838\cols1\colsx720\pard\plain\qc\sa160{\f2\cf0\cs1   }{\fs22\cf0\cs1  }{\f1\fs22\cf0\cs1 Bug Count}{\f1\cf0\cs1 :}{\f1\cf0\cs1 \tab }{\field\dxfldcodeview{\*\fldinst{\f1\fs28\cf0\cs1 docvariable DataItem3}}{\fldrslt{\f1\fs28\cf0\cs1 Opened (Count)}}}{\f1\fs28\cf0\cs1  }\f1\fs22\cf0\par\trowd\irow0\irowband0\trleft0\trftsWidth1\trautofit1\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx10\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx20\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx30\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx40\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx50\pard\plain\ql\intbl{\fs22\cf0\cs1    }{\f1\fs22\cf0\cs1 Urgent:}\f1\fs22\cf0\cell\pard\plain\qc\intbl{\field\dxfldcodeview{\*\fldinst{\f1\cf3\cs1 docvariable DataItem0}}{\fldrslt{\f1\cf3\cs1 UrgentCount (Max)}}}\f1\fs22\cf0\cell\pard\plain\qc\intbl{\fs22\cf0\cs1  }\f1\fs22\cf0\cell\pard\plain\ql\intbl{\f1\fs22\cf0\cs1  Critical:}\f1\fs22\cf0\cell\pard\plain\qc\intbl{\field\dxfldcodeview{\*\fldinst{\f1\cf4\cs1 docvariable DataItem1}}{\fldrslt{\f1\cf4\cs1 CriticalCount (Max)}}}\f1\fs22\cf0\cell\trowd\irow0\irowband0\trleft0\trftsWidth1\trautofit1\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx10\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx20\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx30\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx40\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx50\row\trowd\irow1\irowband1\lastrow\trleft0\trftsWidth1\trautofit1\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx10\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx20\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx30\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx40\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx50\pard\plain\ql\intbl{\f1\fs22\cf0\cs1   }{\fs22\cf0\cs1  }{\f1\fs22\cf0\cs1 Normal:}\f1\fs22\cf0\cell\pard\plain\qc\intbl{\field\dxfldcodeview{\*\fldinst{\f1\cf5\cs1 docvariable DataItem2}}{\fldrslt{\f1\cf5\cs1 NormalCount (Max)}}}\f1\fs22\cf0\cell\pard\plain\qc\intbl{\fs22\cf0\cs1  }\f1\fs22\cf0\cell\pard\plain\ql\intbl\f1\fs22\cf0\cell\pard\plain\qc\intbl\f1\fs22\cf0\cell\trowd\irow1\irowband1\lastrow\trleft0\trftsWidth1\trautofit1\tblindtype3\tblind0\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx10\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx20\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx30\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx40\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth1920\cellx50\row\pard\plain\ql\sa160\f1\fs22\cf0\par}</Text>
+      <Values>
+        <Value DefaultId="DataItem0" />
+        <Value DefaultId="DataItem2" />
+        <Value DefaultId="DataItem3" />
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </TextBox>
+  </Items>
+  <Groups>
+    <Group ComponentName="groupDashboardItem2" Name="Statistics by Platform / Employee" ShowCaption="false">
+      <InteractivityOptions IsMasterFilter="true" />
+    </Group>
+  </Groups>
+  <ColorScheme>
+    <Entry DataSource="dsCustomerSupport" Color="-3124640">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="IssueType" />
+          <Value Type="System.String" Value="Critical" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="dsCustomerSupport" Color="-16287">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="IssueType" />
+          <Value Type="System.String" Value="Urgent" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+    <Entry DataSource="dsCustomerSupport" Color="-2890245">
+      <DimensionKeys>
+        <DimensionKey>
+          <Definition DataMember="IssueType" />
+          <Value Type="System.String" Value="Normal" />
+        </DimensionKey>
+      </DimensionKeys>
+    </Entry>
+  </ColorScheme>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup Orientation="Vertical" Weight="85.54421768707483">
+        <LayoutGroup Weight="42.54473161033797">
+          <LayoutItem DashboardItem="chartOpenedIssuesByMonth" Weight="42.54473161033797" />
+          <LayoutItem DashboardItem="chartAvgResponseTimeByMonth" Weight="42.54473161033797" />
+        </LayoutGroup>
+        <LayoutGroup Weight="57.45526838966203">
+          <LayoutGroup DashboardItem="groupDashboardItem2" Weight="37.1965411644096">
+            <LayoutGroup Orientation="Vertical" Weight="23.829572168641278">
+              <LayoutItem DashboardItem="textBoxDashboardItem1" Weight="15.598886771243718" />
+              <LayoutItem DashboardItem="dateFilterDashboardItem1" Weight="44.99694876524457" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutItem DashboardItem="chartProcessedIssuesByPlatform" Weight="55.27662236741017" />
+          <LayoutItem DashboardItem="chartAvgResponseTimeByPlatform" Weight="70.51885178145022" />
+        </LayoutGroup>
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+    <Description>["The dashboard shows data from customer support service statistics and compares the data between periods.","Charts show the number of opened issues through time, the number of processed issues by platform, the average response time by month and by platform. In both bar charts, you can drill down from platforms to support engineers. The Date Filter allows you to select a time interval to filter data by date and compare the data in different periods."
+	]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/117159/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/chart","text":"Charts"},{"href":"https://docs.devexpress.com/Dashboard/400693/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/date-filter","text":"Date Filter"},{"href":"https://docs.devexpress.com/Dashboard/117061/web-dashboard/create-dashboards-on-the-web/interactivity/drill-down","text":"Drill Down"}, {"href":"https://docs.devexpress.com/Dashboard/401702/web-dashboard/advanced-customization/create-custom-properties", "text":"Custom Properties"}]</Links>
+  </CustomProperties>
+</Dashboard>

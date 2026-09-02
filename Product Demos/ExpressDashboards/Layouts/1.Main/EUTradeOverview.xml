@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="gsw-FR">
+  <Title Text="EU Trade Overview 2015" Alignment="Left" />
+  <DataSources>
+    <ExtractFileDataSource ComponentName="dashboardExtractDataSource1" Name="Extract Data Source 1">
+      <CalculatedFields>
+        <CalculatedField Name="Export_Value" Expression="Iif([FLOW] = 'EXPORT', [VALUE], 0)" DataType="Auto" />
+        <CalculatedField Name="Import_Value" Expression="Iif([FLOW] = 'IMPORT', [VALUE], 0)" DataType="Auto" />
+      </CalculatedFields>
+      <FileName>|DataDirectory|EUTradeOverview.dat</FileName>
+      <Parameters />
+      <SavedSchema>
+        <Column>
+          <Name>FLOW</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Partner</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Product_Group</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Product</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>PERIOD</Name>
+          <Type>System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>VALUE</Name>
+          <Type>System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+      </SavedSchema>
+    </ExtractFileDataSource>
+  </DataSources>
+  <Items>
+    <ListBox ComponentName="listBoxFilterPartner" Name="Partner" ParentContainer="pageDashboardItem1" DataSource="dashboardExtractDataSource1" ListBoxType="Radio">
+      <DataItems>
+        <Dimension DataMember="Partner" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <ListBox ComponentName="listBoxFilterProductGroup" Name="Month" ParentContainer="pageDashboardItem1" DataSource="dashboardExtractDataSource1">
+      <DataItems>
+        <Dimension DataMember="PERIOD" Name="Period" DateTimeGroupInterval="Month" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Pie ComponentName="pieImportVsExport" Name="Import vs Export" ShowCaption="false" DataSource="dashboardExtractDataSource1" LabelContentType="ArgumentValueAndPercent" TooltipContentType="None" LabelPosition="Inside">
+      <DataItems>
+        <Measure DataMember="Import_Value" Name="Import" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+        <Measure DataMember="Export_Value" Name="Export" DefaultId="DataItem1">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+      </DataItems>
+      <Values>
+        <Value DefaultId="DataItem0" />
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </Pie>
+    <TabContainer ComponentName="tabContainerDashboardItem1" Name="Trade Flows">
+      <Pages>
+        <Page ComponentName="pageDashboardItem1" Name="Filters">
+          <InteractivityOptions IgnoreMasterFilters="true" />
+        </Page>
+        <Page ComponentName="pageDashboardItem2" Name="Product - Export" />
+        <Page ComponentName="pageDashboardItem3" Name="Product - Import">
+          <InteractivityOptions IsMasterFilter="false" />
+        </Page>
+      </Pages>
+    </TabContainer>
+    <Treemap ComponentName="treemapDashboardItem1" Name="Product" ParentContainer="pageDashboardItem2" DataSource="dashboardExtractDataSource1">
+      <ColoringOptions MeasuresColoringMode="None" />
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Measure DataMember="Export_Value" Name="Export" DefaultId="DataItem3">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+        <Dimension DataMember="Product_Group" Name="Product Group" GroupChildValues="true" DefaultId="DataItem1" />
+        <Dimension DataMember="Product" DefaultId="DataItem2" />
+        <Measure DataMember="Import_Value" Name="Import" DefaultId="DataItem0" />
+      </DataItems>
+      <Values>
+        <Value DefaultId="DataItem3" />
+        <Value DefaultId="DataItem0" />
+      </Values>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+    </Treemap>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="Product Group" ParentContainer="pageDashboardItem1" DataSource="dashboardExtractDataSource1">
+      <DataItems>
+        <Dimension DataMember="Product_Group" Name="Product Group" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+    <Card ComponentName="cardDashboardItem1" Name="Import / Export per Partner" ParentContainer="pageDashboardItem3" DataSource="dashboardExtractDataSource1">
+      <DataItems>
+        <Measure DataMember="Import_Value" DefaultId="DataItem0" />
+        <Measure DataMember="Export_Value" DefaultId="DataItem1" />
+        <Dimension DataMember="Partner" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Card>
+        <ActualValue DefaultId="DataItem0" />
+        <TargetValue DefaultId="DataItem1" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="270" MaxWidth="270" Type="Centered">
+          <MainValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <BottomSubValue1 Visible="true" ValueType="TargetValue" DimensionIndex="0" />
+          <BottomSubValue2 Visible="true" ValueType="PercentVariation" DimensionIndex="0" />
+          <DeltaIndicator Visible="true" />
+          <Sparkline Visible="true" />
+        </LayoutTemplate>
+      </Card>
+    </Card>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Weight="100">
+      <LayoutTabContainer DashboardItem="tabContainerDashboardItem1" Weight="77.275139757880268">
+        <LayoutTabPage DashboardItem="pageDashboardItem2">
+          <LayoutItem DashboardItem="treemapDashboardItem1" Weight="77.670837343599615" />
+        </LayoutTabPage>
+        <LayoutTabPage DashboardItem="pageDashboardItem3">
+          <LayoutItem DashboardItem="cardDashboardItem1" />
+        </LayoutTabPage>
+        <LayoutTabPage DashboardItem="pageDashboardItem1">
+          <LayoutItem DashboardItem="listBoxFilterPartner" Weight="44.062947067238916" />
+          <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="28.755364806866954" />
+          <LayoutItem DashboardItem="listBoxFilterProductGroup" Weight="28.755364806866954" />
+        </LayoutTabPage>
+      </LayoutTabContainer>
+      <LayoutItem DashboardItem="pieImportVsExport" Weight="22.724860242119739" />
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+    <Description>["The dashboard provides insights to trade statistics between EU and its main partners in 2015. ","A Treemap dashboard item visualizes import and export statistics by product groups and individual products. You can switch between import and export values using a drop-down menu in the Treemap caption. Use the Partner filter element to select a trading partner. Use the Product Group filter element to select a product group."]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/117176/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/treemap","text":"Treemap"},{"href":"https://docs.devexpress.com/Dashboard/117367/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/filter-elements/filter-elements-overview","text":"Filter Elements"},{"href":"https://docs.devexpress.com/Dashboard/400300/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/tab-container","text":"Tabs"}]</Links>
+  </CustomProperties>
+</Dashboard>
