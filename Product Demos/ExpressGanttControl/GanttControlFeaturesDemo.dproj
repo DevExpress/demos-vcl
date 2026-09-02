@@ -1,6 +1,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
-		<ProjectGuid>{33785C26-FF8B-40A1-9A60-449C1B01AA47}</ProjectGuid>
+		<ProjectGuid>{9310ED77-2C4F-4043-A0FD-4C6279312A46}</ProjectGuid>
 		<ProjectVersion>20.4</ProjectVersion>
 		<FrameworkType>VCL</FrameworkType>
 		<Base>True</Base>
@@ -71,10 +71,10 @@
 		<SanitizedProjectName>GanttControlFeaturesDemo.dpr</SanitizedProjectName>
 		<VerInfo_Locale>1033</VerInfo_Locale>
 		<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-		<VerInfo_Keys>CompanyName=Developer Express Inc.;FileDescription=$(MSBuildProjectName);FileVersion=2026.1.0.0;InternalName=;LegalCopyright=Copyright (c) 1998-2026 Developer Express Inc.;LegalTrademarks=;OriginalFilename=GanttControlFeaturesDemo.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=ExpressGanttControl;ProductVersion=2026.1;Comments=</VerInfo_Keys>
+		<VerInfo_Keys>CompanyName=Developer Express Inc.;FileDescription=$(MSBuildProjectName);FileVersion=2026.2.0.0;InternalName=;LegalCopyright=Copyright (c) 1998-2026 Developer Express Inc.;LegalTrademarks=;OriginalFilename=GanttControlFeaturesDemo.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=ExpressGanttControl;ProductVersion=2026.2;Comments=</VerInfo_Keys>
 		<VerInfo_MajorVer>2026</VerInfo_MajorVer>
-		<VerInfo_MinorVer>1</VerInfo_MinorVer>
-		<VerInfo_Release>4</VerInfo_Release>
+		<VerInfo_MinorVer>2</VerInfo_MinorVer>
+		<VerInfo_Release>1</VerInfo_Release>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Base_Win32)'!=''">
 		<DCC_UsePackage>$(DCC_UsePackage)</DCC_UsePackage>

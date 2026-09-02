@@ -54,7 +54,7 @@ const
   dxMapControlPath = 'ExMapControl';
   dxGaugeControlPath = 'ExGauges';
   dxRichEditControlPath = 'Rich_Editor';
-  dxPDFViewerPath = 'pdfviewer';
+  dxPDFViewerPath = 'PDFViewer';
   dxEditorsPath = 'ExEditors';
   dxEMFPath = '#Pricing';
   dxWizardControlPath = 'ExWizardControl';
@@ -646,7 +646,7 @@ begin
     Result := 'PNG';
 end;
 
-procedure InitBarItem(ABarItem: TdxBarItem; AIemLinks: TdxBarItemLinks; ACaption: string;
+procedure InitBarItem(ABarItem: TdxBarItem; AItemLinks: TdxBarItemLinks; ACaption: string;
   ATag: Integer; AUseSVGImages: Boolean; AGlyphName: string = ''; const ALargeGlyphName: string = '';
   const ADescription: string = ''; AHasSeparator: Boolean = False);
 var
@@ -670,7 +670,7 @@ begin
       LargeGlyph.LoadFromResource(HInstance, ALargeGlyphName, AResType);
     Tag := ATag;
   end;
-  AIemLinks.Add(ABarItem).BeginGroup := AHasSeparator;
+  AItemLinks.Add(ABarItem).BeginGroup := AHasSeparator;
 end;
 
 function AddSubItem(AItemLinks: TdxBarItemLinks; ACaption: string;
@@ -854,6 +854,7 @@ end;
 function CreateSkinSelector(ABar: TdxBar): TdxRibbonSkinSelector;
 begin
   Result := TdxRibbonSkinSelector.CreateSkinSelector(ABar, GetSkinResFileName);
+  Result.PaletteChooserOptions.InRibbon.ShowCurrentPalette := True;
 end;
 
 function GetCaptionWithoutAmpersand(const ACaption: string): string;

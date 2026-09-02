@@ -1,6 +1,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
-		<ProjectGuid>{4F931E02-37D9-4D6C-872F-349572A73B38}</ProjectGuid>
+		<ProjectGuid>{8F41A5AE-99C2-42BE-822D-A01C1DF7266F}</ProjectGuid>
 		<ProjectVersion>20.4</ProjectVersion>
 		<FrameworkType>VCL</FrameworkType>
 		<Base>True</Base>
@@ -71,10 +71,10 @@
 		<SanitizedProjectName>OrgChartFeaturesDemo.dpr</SanitizedProjectName>
 		<VerInfo_Locale>1033</VerInfo_Locale>
 		<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-		<VerInfo_Keys>CompanyName=Developer Express Inc.;FileDescription=$(MSBuildProjectName);FileVersion=2026.1.0.0;InternalName=;LegalCopyright=Copyright (c) 1998-2026 Developer Express Inc.;LegalTrademarks=;OriginalFilename=OrgChartFeaturesDemo.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=ExpressOrgChart;ProductVersion=2026.1;Comments=</VerInfo_Keys>
+		<VerInfo_Keys>CompanyName=Developer Express Inc.;FileDescription=$(MSBuildProjectName);FileVersion=2026.2.0.0;InternalName=;LegalCopyright=Copyright (c) 1998-2026 Developer Express Inc.;LegalTrademarks=;OriginalFilename=OrgChartFeaturesDemo.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=ExpressOrgChart;ProductVersion=2026.2;Comments=</VerInfo_Keys>
 		<VerInfo_MajorVer>2026</VerInfo_MajorVer>
-		<VerInfo_MinorVer>1</VerInfo_MinorVer>
-		<VerInfo_Release>4</VerInfo_Release>
+		<VerInfo_MinorVer>2</VerInfo_MinorVer>
+		<VerInfo_Release>1</VerInfo_Release>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Base_Win32)'!=''">
 		<DCC_UsePackage>$(DCC_UsePackage)</DCC_UsePackage>

@@ -185,13 +185,13 @@ type
     procedure bliFormCornersClick(Sender: TObject);
     procedure bDevModeClick(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure dxNavBarOfficeNavigationBar1Click(Sender: TObject);
     procedure dxRibbon1TabChanged(Sender: TdxCustomRibbon);
     procedure dxRibbon1TabChanging(Sender: TdxCustomRibbon; ANewTab: TdxRibbonTab; var Allow: Boolean);
     procedure dxRibbon1ApplicationMenuClick(Sender: TdxCustomRibbon; var AHandled: Boolean);
     procedure dxRibbon1Resize(Sender: TObject);
     procedure lbViewNormalClick(Sender: TObject);
     procedure lbViewReadingClick(Sender: TObject);
+    procedure dxNavBarOfficeNavigationBar1SelectionChanged(Sender: TObject);
   private
     FMailFormsManager: TdxMailFormsManager;
     FNavBarHintLink: TdxNavBarItemLink;
@@ -270,7 +270,6 @@ type
   TdxLayoutSplitterItemAccess = class(TdxLayoutSplitterItem);
   TcxControlAccess = class(TcxControl);
   TdxCustomRibbonAccess = class(TdxCustomRibbon);
-  TdxRibbonSkinSelectorInRibbonPaletteOptionsAccess = class(TdxRibbonSkinSelectorInRibbonPaletteOptions);
 
 constructor TfmMailClientDemoMain.Create(AOwner: TComponent);
 begin
@@ -312,8 +311,6 @@ begin
 
   FSkinSelector := CreateSkinSelector(tbColorSchemes);
   FSkinSelector.Links[0].Index := 0;
-  tbColorSchemes.ItemLinks.FindByItem(FSkinSelector).ViewLevels := [ivlLargeIconWithText, ivlSmallIconWithText];
-  TdxRibbonSkinSelectorInRibbonPaletteOptionsAccess(FSkinSelector.PaletteChooserOptions.InRibbon).ShowCurrentPaletteInRibbon := True;
   FSkinSelector.OnPaletteChanged := SkinSelectorPaletteChanged;
   FSkinSelector.OnSkinChanged := SkinSelectorSkinChanged;
   FSkinSelector.SetSkin('WXI');
@@ -358,7 +355,6 @@ begin
   rtAppointment.Context := dxRibbon1.Contexts[0];
   bbTouchMode.Down := SkinController.TouchMode;
   dxNavBarOfficeNavigationBar1.Items.SelectedItem := dxNavBarOfficeNavigationBar1.Items[0];
-  dxNavBarOfficeNavigationBar1.OnClick(Self);
   if Height > Monitor.Height - 150 then
   begin
     Height := Monitor.Height - 150;
@@ -548,7 +544,6 @@ end;
 procedure TfmMailClientDemoMain.bNavigationMailClick(Sender: TObject);
 begin
   dxNavBarOfficeNavigationBar1.Items.SelectedItem := dxNavBarOfficeNavigationBar1.Items[TdxBarButton(Sender).Tag];
-  dxNavBarOfficeNavigationBar1.OnClick(Self);
 end;
 
 procedure TfmMailClientDemoMain.btnTodayClick(Sender: TObject);
@@ -615,7 +610,6 @@ procedure TfmMailClientDemoMain.OpenFrame(AFrameID: Integer);
 begin
   RibbonBackstageView.Visible := False;
   dxNavBarOfficeNavigationBar1.Items.SelectedItem := dxNavBarOfficeNavigationBar1.Items[AFrameID];
-  dxNavBarOfficeNavigationBar1.OnClick(Self);
 end;
 
 function TfmMailClientDemoMain.SetNodeCaption(ARootNode: TcxTreeListNode;
@@ -776,7 +770,8 @@ begin
   actQATBelowRibbon.Checked := dxRibbon1.QuickAccessToolbar.Position = qtpBelowRibbon;
 end;
 
-procedure TfmMailClientDemoMain.dxNavBarOfficeNavigationBar1Click(Sender: TObject);
+procedure TfmMailClientDemoMain.dxNavBarOfficeNavigationBar1SelectionChanged(
+  Sender: TObject);
 begin
   dxRibbon1.Tabs[1].Active := True;
   dxMailClientDemoFrameManager.ShowFrame(dxNavBarOfficeNavigationBar1.Items.SelectedItem.Index, gbFramesDisplay);

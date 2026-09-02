@@ -1,6 +1,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
-		<ProjectGuid>{799324DC-6F84-4B61-B747-F6DE367316B0}</ProjectGuid>
+		<ProjectGuid>{7DBFCB08-0F7A-487D-AA8C-59AEC64ECF38}</ProjectGuid>
 		<ProjectVersion>20.4</ProjectVersion>
 		<FrameworkType>VCL</FrameworkType>
 		<Base>True</Base>
@@ -71,10 +71,10 @@
 		<SanitizedProjectName>NavBarFeaturesDemo.dpr</SanitizedProjectName>
 		<VerInfo_Locale>1033</VerInfo_Locale>
 		<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-		<VerInfo_Keys>CompanyName=Developer Express Inc.;FileDescription=$(MSBuildProjectName);FileVersion=2026.1.0.0;InternalName=;LegalCopyright=Copyright (c) 1998-2026 Developer Express Inc.;LegalTrademarks=;OriginalFilename=NavBarFeaturesDemo.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=ExpressNavBar;ProductVersion=2026.1;Comments=</VerInfo_Keys>
+		<VerInfo_Keys>CompanyName=Developer Express Inc.;FileDescription=$(MSBuildProjectName);FileVersion=2026.2.0.0;InternalName=;LegalCopyright=Copyright (c) 1998-2026 Developer Express Inc.;LegalTrademarks=;OriginalFilename=NavBarFeaturesDemo.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=ExpressNavBar;ProductVersion=2026.2;Comments=</VerInfo_Keys>
 		<VerInfo_MajorVer>2026</VerInfo_MajorVer>
-		<VerInfo_MinorVer>1</VerInfo_MinorVer>
-		<VerInfo_Release>4</VerInfo_Release>
+		<VerInfo_MinorVer>2</VerInfo_MinorVer>
+		<VerInfo_Release>1</VerInfo_Release>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Base_Win32)'!=''">
 		<DCC_UsePackage>$(DCC_UsePackage)</DCC_UsePackage>

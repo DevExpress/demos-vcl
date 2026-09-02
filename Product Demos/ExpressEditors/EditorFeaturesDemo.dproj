@@ -1,6 +1,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
-		<ProjectGuid>{CE2BA2B1-82D4-4FBF-A217-BF0952EDD415}</ProjectGuid>
+		<ProjectGuid>{093CF70C-F80B-4D15-90A0-8D233596888C}</ProjectGuid>
 		<ProjectVersion>20.4</ProjectVersion>
 		<FrameworkType>VCL</FrameworkType>
 		<Base>True</Base>
@@ -71,10 +71,10 @@
 		<SanitizedProjectName>EditorFeaturesDemo.dpr</SanitizedProjectName>
 		<VerInfo_Locale>1033</VerInfo_Locale>
 		<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-		<VerInfo_Keys>CompanyName=Developer Express Inc.;FileDescription=$(MSBuildProjectName);FileVersion=2026.1.0.0;InternalName=;LegalCopyright=Copyright (c) 1998-2026 Developer Express Inc.;LegalTrademarks=;OriginalFilename=EditorFeaturesDemo.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=ExpressEditors;ProductVersion=2026.1;Comments=</VerInfo_Keys>
+		<VerInfo_Keys>CompanyName=Developer Express Inc.;FileDescription=$(MSBuildProjectName);FileVersion=2026.2.0.0;InternalName=;LegalCopyright=Copyright (c) 1998-2026 Developer Express Inc.;LegalTrademarks=;OriginalFilename=EditorFeaturesDemo.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=ExpressEditors;ProductVersion=2026.2;Comments=</VerInfo_Keys>
 		<VerInfo_MajorVer>2026</VerInfo_MajorVer>
-		<VerInfo_MinorVer>1</VerInfo_MinorVer>
-		<VerInfo_Release>4</VerInfo_Release>
+		<VerInfo_MinorVer>2</VerInfo_MinorVer>
+		<VerInfo_Release>1</VerInfo_Release>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Base_Win32)'!=''">
 		<DCC_UsePackage>$(DCC_UsePackage)</DCC_UsePackage>

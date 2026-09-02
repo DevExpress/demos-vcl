@@ -57,9 +57,9 @@
 		<DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;$(DCC_Namespace)</DCC_Namespace>
 		<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
 		<VerInfo_Locale>1033</VerInfo_Locale>
-		<VerInfo_Keys>CompanyName=Developer Express Inc.;FileDescription=$(MSBuildProjectName);FileVersion=2026.1.0.0;InternalName=;LegalCopyright=Copyright (c) 1998-2026 Developer Express Inc.;LegalTrademarks=;OriginalFilename=DashboardsFeaturesDemo.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=ExpressDashboards;ProductVersion=2026.1;Comments=</VerInfo_Keys>
+		<VerInfo_Keys>CompanyName=Developer Express Inc.;FileDescription=$(MSBuildProjectName);FileVersion=2026.2.0.0;InternalName=;LegalCopyright=Copyright (c) 1998-2026 Developer Express Inc.;LegalTrademarks=;OriginalFilename=DashboardsFeaturesDemo.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=ExpressDashboards;ProductVersion=2026.2;Comments=</VerInfo_Keys>
 		<VerInfo_MajorVer>2026</VerInfo_MajorVer>
-		<VerInfo_MinorVer>1</VerInfo_MinorVer>
+		<VerInfo_MinorVer>2</VerInfo_MinorVer>
 		<AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
 		<AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
 		<AppEnableHighDPI>true</AppEnableHighDPI>
@@ -67,7 +67,7 @@
 		<DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
 		<FeatureFilesAdded>SQLite</FeatureFilesAdded>
 		<PostBuildEvent><![CDATA[copy /Y "$(BDS)\Redist\win32\WebView2Loader.dll" $(OUTPUTDIR)
-$(PostBuildEvent)]]></PostBuildEvent>  <VerInfo_Release>4</VerInfo_Release>
+$(PostBuildEvent)]]></PostBuildEvent>  <VerInfo_Release>1</VerInfo_Release>
   </PropertyGroup>
 	<PropertyGroup Condition="'$(Base_Win32)'!=''">
 		<DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>

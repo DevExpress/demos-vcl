@@ -1023,7 +1023,7 @@ object fmMailClientDemoMain: TfmMailClientDemoMain
     OptionsView.UseRibbonArea = True
     OptionsView.ShowItemsAsButtons = True
     TabOrder = 6
-    OnClick = dxNavBarOfficeNavigationBar1Click
+    OnSelectionChanged = dxNavBarOfficeNavigationBar1SelectionChanged
     ExplicitTop = 124
     ExplicitHeight = 733
   end
