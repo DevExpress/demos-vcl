@@ -1,6 +1,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
-		<ProjectGuid>{43331710-3160-4F41-98A6-9D379D5DC2FE}</ProjectGuid>
+		<ProjectGuid>{DE000000-0000-0000-0000-0000DA7E9398}</ProjectGuid>
 		<ProjectVersion>20.4</ProjectVersion>
 		<FrameworkType>VCL</FrameworkType>
 		<Base>True</Base>
