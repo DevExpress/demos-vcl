@@ -17,25 +17,25 @@ type
     cmbMaskKind: TcxComboBox;
     dxLayoutItem2: TdxLayoutItem;
     dxLayoutGroup4: TdxLayoutGroup;
-    lgStandart: TdxLayoutGroup;
+    lgStandard: TdxLayoutGroup;
     lgRegularExpr: TdxLayoutGroup;
     dxLayoutEmptySpaceItem2: TdxLayoutEmptySpaceItem;
     edMask: TcxTextEdit;
     dxLayoutItem3: TdxLayoutItem;
-    mdStandart: TdxMemData;
-    mdStandartMask: TStringField;
-    mdStandartDescription: TStringField;
-    mdStandartSourceText: TStringField;
-    dsStandart: TDataSource;
-    grStandartDBTableView1: TcxGridDBTableView;
-    grStandartLevel1: TcxGridLevel;
-    grStandart: TcxGrid;
+    mdStandard: TdxMemData;
+    mdStandardMask: TStringField;
+    mdStandardDescription: TStringField;
+    mdStandardSourceText: TStringField;
+    dsStandard: TDataSource;
+    grStandardDBTableView1: TcxGridDBTableView;
+    grStandardLevel1: TcxGridLevel;
+    grStandard: TcxGrid;
     dxLayoutItem4: TdxLayoutItem;
-    grStandartDBTableView1Description: TcxGridDBColumn;
-    grStandartDBTableView1SourceText: TcxGridDBColumn;
-    mdStandartExpectedMaskedText: TStringField;
-    grStandartDBTableView1ExpectedMaskedText: TcxGridDBColumn;
-    btnSetStandartSample: TcxButton;
+    grStandardDBTableView1Description: TcxGridDBColumn;
+    grStandardDBTableView1SourceText: TcxGridDBColumn;
+    mdStandardExpectedMaskedText: TStringField;
+    grStandardDBTableView1ExpectedMaskedText: TcxGridDBColumn;
+    btnSetStandardSample: TcxButton;
     dxLayoutItem5: TdxLayoutItem;
     dxLayoutLabeledItem1: TdxLayoutLabeledItem;
     mdRegularExpr: TdxMemData;
@@ -54,9 +54,9 @@ type
     mdRegularExprSamples: TMemoField;
     lsiSpaceRegular: TdxLayoutEmptySpaceItem;
     procedure cmbMaskKindPropertiesChange(Sender: TObject);
-    procedure mdStandartAfterScroll(DataSet: TDataSet);
-    procedure btnSetStandartSampleClick(Sender: TObject);
-    procedure grStandartDBTableView1CellDblClick(Sender: TcxCustomGridTableView;
+    procedure mdStandardAfterScroll(DataSet: TDataSet);
+    procedure btnSetStandardSampleClick(Sender: TObject);
+    procedure grStandardDBTableView1CellDblClick(Sender: TcxCustomGridTableView;
       ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton; AShift: TShiftState; var AHandled: Boolean);
     procedure edMaskPropertiesChange(Sender: TObject);
   private
@@ -80,7 +80,7 @@ uses
 
 procedure TfrmMaskEdit.CheckControlStartProperties;
 begin
-  mdStandart.LoadFromBinaryFile(dmMain.DataPath + 'MaskEditStandart.dat');
+  mdStandard.LoadFromBinaryFile(dmMain.DataPath + 'MaskEditStandard.dat');
   mdRegularExpr.LoadFromBinaryFile(dmMain.DataPath + 'MaskEditRegularExpr.dat');
   cmbMaskKindPropertiesChange(cmbMaskKind);
 end;
@@ -88,7 +88,7 @@ end;
 function TfrmMaskEdit.GetActualDataSource: TDataSource;
 begin
   if cmbMaskKind.ItemIndex = 0 then
-    Result := dsStandart
+    Result := dsStandard
   else
     Result := dsRegularExpr;
 end;
@@ -106,8 +106,8 @@ end;
 procedure TfrmMaskEdit.cmbMaskKindPropertiesChange(Sender: TObject);
 begin
   MaskEdit.Properties.MaskKind := TcxEditMaskKind(cmbMaskKind.ItemIndex);
-  lgStandart.Visible := MaskEdit.Properties.MaskKind = emkStandard;
-  lgRegularExpr.Visible := not lgStandart.Visible;
+  lgStandard.Visible := MaskEdit.Properties.MaskKind = emkStandard;
+  lgRegularExpr.Visible := not lgStandard.Visible;
   edMask.Text := ActualDataSource.DataSet.FieldByName('Mask').AsString;
   MaskEdit.Text := '';
 end;
@@ -117,21 +117,21 @@ begin
   MaskEdit.Properties.EditMask := edMask.Text;
 end;
 
-procedure TfrmMaskEdit.mdStandartAfterScroll(DataSet: TDataSet);
+procedure TfrmMaskEdit.mdStandardAfterScroll(DataSet: TDataSet);
 begin
   edMask.Text := ActualDataSource.DataSet.FieldByName('Mask').AsString;
   MaskEdit.Text := '';
 end;
 
-procedure TfrmMaskEdit.btnSetStandartSampleClick(Sender: TObject);
+procedure TfrmMaskEdit.btnSetStandardSampleClick(Sender: TObject);
 begin
-  MaskEdit.Text := mdStandart.FieldByName('SourceText').AsString;
+  MaskEdit.Text := mdStandard.FieldByName('SourceText').AsString;
 end;
 
-procedure TfrmMaskEdit.grStandartDBTableView1CellDblClick(Sender: TcxCustomGridTableView;
+procedure TfrmMaskEdit.grStandardDBTableView1CellDblClick(Sender: TcxCustomGridTableView;
   ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton; AShift: TShiftState; var AHandled: Boolean);
 begin
-  btnSetStandartSample.Click;
+  btnSetStandardSample.Click;
 end;
 
 initialization

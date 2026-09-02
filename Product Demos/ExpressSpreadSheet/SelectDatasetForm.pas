@@ -12,7 +12,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, dxSpreadSheetReportDesigner,
   cxControls, cxLookAndFeels, cxLookAndFeelPainters, Vcl.Menus,
   dxLayoutContainer, dxLayoutControlAdapters, cxClasses, Vcl.StdCtrls,
-  cxButtons, cxContainer, cxEdit, cxListBox, dxLayoutControl, dxForms;
+  cxButtons, cxContainer, cxEdit, cxListBox, dxLayoutControl, dxForms, dxLayoutcxEditAdapters, cxCustomListBox;
 
 type
   TfrmSelectDataset = class(TdxForm)

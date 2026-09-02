@@ -650,7 +650,7 @@ object PDFViewer: TPDFViewer
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonZoomtoPageLevel'
+          ItemName = 'dxBarLargeButtonZoomToPageLevel'
         end
         item
           Visible = True
@@ -734,7 +734,7 @@ object PDFViewer: TPDFViewer
       SyncImageIndex = False
       ImageIndex = 20
     end
-    object dxBarLargeButtonZoomtoPageLevel: TdxBarLargeButton
+    object dxBarLargeButtonZoomToPageLevel: TdxBarLargeButton
       Action = dxPDFViewerZoomToPageLevel
       Category = 5
       ButtonStyle = bsChecked

@@ -7,7 +7,7 @@ program PDFViewerDemo;
 
 uses
   Vcl.Forms, dxUIAClasses,
-  dxSplashUnit in '..\Common\dxSplashUnit.pas' {TfrmSplash},
+  dxSplashUnit in '..\Common\dxSplashUnit.pas',
   uPDFViewer in 'uPDFViewer.pas' {frmPDFViewer},
   dxAboutDemo in '..\Common\dxAboutDemo.pas' {dxAboutDemoForm},
   uDocumentEditor in '..\Common\uDocumentEditor.pas',

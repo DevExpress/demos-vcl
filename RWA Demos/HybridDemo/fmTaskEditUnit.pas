@@ -66,9 +66,6 @@ implementation
 {$R *.dfm}
 
 uses
-{$IFDEF DELPHI16}
-  System.UITypes,
-{$ENDIF}
   System.Math, LocalizationStrs;
 
 function TfmTaskEdit.DataSet: TDataSet;

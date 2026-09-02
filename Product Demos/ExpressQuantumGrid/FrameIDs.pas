@@ -15,9 +15,9 @@ const
   FilteringGroupIndex           = 9;
   OutDatedStyles                = 10;
 
-  NewAndHighlitedFeatureFrameBase = 1000;
+  NewAndHighlightedFeatureFrameBase = 1000;
 
-  GridFixedColumnsFrameID = NewAndHighlitedFeatureFrameBase + 1;
+  GridFixedColumnsFrameID = NewAndHighlightedFeatureFrameBase + 1;
   OfficeCompactViewFrameID = GridFixedColumnsFrameID + 1;
   GridCustomRowLayoutFrameID = OfficeCompactViewFrameID + 1;
   TableViewHotTrackFrameID = GridCustomRowLayoutFrameID + 1;
@@ -41,8 +41,8 @@ const
   GridCardViewFrameID = GridChartViewFrameID + 1;
   GridLayoutViewFrameID = GridCardViewFrameID + 1;
   GridLayoutViewCarouselModeFrameID = GridLayoutViewFrameID + 1;
-  GridLayotViewGroupScrollingFrameID = GridLayoutViewCarouselModeFrameID + 1;
-  GridWinExplorerViewFrameID = GridLayotViewGroupScrollingFrameID + 1;
+  GridLayoutViewGroupScrollingFrameID = GridLayoutViewCarouselModeFrameID + 1;
+  GridWinExplorerViewFrameID = GridLayoutViewGroupScrollingFrameID + 1;
   GridCalloutPopupViewFrameID = GridWinExplorerViewFrameID + 1;
   GridFixedGroupsFrameID = GridCalloutPopupViewFrameID + 1;
   GridRatingControlFrameID = GridFixedGroupsFrameID + 1;
@@ -142,7 +142,7 @@ resourcestring
   GridRatingControlFrameName = 'Rating Control';
   GridWinExplorerViewFrameName = 'WinExplorer View';
   GridCalloutPopupFrameName = 'Callout Popup';
-  GridPoviderModeFrameName = 'Provider Mode';
+  GridProviderModeFrameName = 'Provider Mode';
   GridCardViewFrameName = 'Card View';
   GridViewsFrameName = 'View Architecture';
   GridDataSummariesFrameName = 'Data Summaries';
@@ -163,7 +163,7 @@ resourcestring
   GridDragDropFrameName = 'Drag && Drop Rows';
   GridBuildInNavigatorFrameName = 'Data Navigation';
   GridWinMinerFrameName = 'Custom Draw';
-  GridCellSelectonFrameName = 'Cell Selection';
+  GridCellSelectionFrameName = 'Cell Selection';
   GridCellMergingFrameName = 'Cell Merging';
   GridChartViewFrameName = 'Chart View';
   GridLayoutViewFrameName = 'Layout View';

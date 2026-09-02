@@ -12,7 +12,7 @@ uses
   cxGridDBTableView, cxGridLevel, cxGridCustomView, cxGrid, cxCurrencyEdit, dxMapControlTypes,
   dxMapControlOpenStreetMapImageryDataProvider, dxMapItem, dxCustomMapItemLayer, dxMapItemLayer, dxMapLayer,
   dxMapImageTileLayer, dxMapControl, cxGroupBox,
-  cxDataControllerConditionalFormattingRulesManagerDialog, dxDateRanges;
+  cxDataControllerConditionalFormattingRulesManagerDialog, dxDateRanges, System.Net.URLClient, dxScrollbarAnnotations;
 
 type
   TfrmSaleView = class(TfrmBase)

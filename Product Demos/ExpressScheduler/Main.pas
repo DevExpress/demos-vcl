@@ -123,7 +123,7 @@ type
     ComboBoxItem: TcxEditRepositoryComboBoxItem;
     RichItem: TcxEditRepositoryRichItem;
     dxBarPopupMenu: TdxBarPopupMenu;
-    pmGenerageHolidaysEvents: TPopupMenu;
+    pmGenerateHolidaysEvents: TPopupMenu;
     miGenerateHolidaysEventsForAllResources: TMenuItem;
     miGenerateHolidaysEventsOnlyESPN: TMenuItem;
     miGenerateHolidaysEventsForEUROSPORTNEWSandFOXFOOTY: TMenuItem;
@@ -537,6 +537,7 @@ type
     procedure GetResourceStream(const AName: string; AStream: TStream);
     procedure LinkTabs;
     procedure LoadUnboundData;
+    procedure LoadDataFromFile;
     // inspector notifications
     // procedure OnHideInspector(Sender: TObject);
     // procedure OnInspectorChanged(Sender: TObject);
@@ -578,6 +579,7 @@ const
 implementation
 
 uses
+  dxXMLDoc,
   dxProgress, Winapi.ShellAPI, cxFormats, System.Win.Registry,
   dxCustomEditor, SelectStorageUnit, dxOffice11, System.Math,
   dxDemoObjectInspector, cxSchedulerEditorFormManager,
@@ -593,272 +595,8 @@ const
   EventsCount: array [0 .. 21] of Integer = (12, 18, 14, 14, 22, 10, 16, 20,
     31, 17, 22, 12, 12, 6, 8, 4, 4, 7, 11, 7, 5, 8);
 
-  SportEvents: array [0 .. 279] of string = ('Basketball Qualifying - Men',
-    'Basketball Qualifying - Women', 'Basketball First Group Phase - Men',
-    'Basketball First Group Phase - Women', 'Basketball Quarterfinals - Men',
-    'Basketball Quarterfinals - Women', 'Basketball Semifinals - Men',
-    'Basketball Semifinals - Women', 'Basketball Places 3/4 - Men',
-    'Basketball Places 3/4 - Women', 'Basketball Finals - Men',
-    'Basketball Finals - Women',
-
-    'Boxing - Lamon Brewster (32-2) vs. Luan Krasniqi (28-1-1) (WBO heavyweight belt)'
-      ,
-    'Boxing - (PPV) Antonio Tarver (23-3) vs. Roy Jones (49-3) (IBO light heavyweight belt)'
-      ,
-    'Boxing - ((Showtime) James Toney (68-4-2) vs. Dominick Guinn (25-2-1)'
-      ,
-    'Boxing - (Nicolay Valuev (41-0) vs. TBA',
-    'Boxing - (Danilo Haussler (25-3) vs. TBA'
-      ,
-    'Boxing - (Cengiz Koc (22-1) vs. TBA'
-      ,
-    'Boxing - ((PPV) Diego Corrales (40-2) vs. Jose Luis Castillo (52-7-1)'
-      ,
-    'Boxing - ((WBC and WBO lightweight belts) (PPV) Carlos Hernandez vs. Bobby Pacquiao'
-      ,
-    'Boxing - ((PPV) Jorge Arce vs. Hussein Hussein'
-      ,
-    'Boxing - (Vince Philips (47-9-1) vs. Reynaldo Pelonia (35-21-3)', 'Boxing - (Kili Madrid (6-0-1) vs. Donny Fosmire (10-7)', 'Boxing - (Nelson Zepeda (1-0-1) vs. Kaleo Padilla (0-0)', 'Boxing - (Justin Mercado (1-1) vs. Waldo Rojas (0-0)', 'Boxing - (Illima Vicente (0-0) vs. Jenny Houts (0-0)', 'Boxing - (Tomasz Adamek (29-0) vs. Thomas Ulrich (28-1) (WBC light heavyweight belt)', 'Boxing - ((Showtime) Jeff Lacy (20-0) vs. Joe Calzaghe (39-0) (IBF, IBO and WBO super middleweight belts)', 'Boxing - (Jermain Taylor vs. Bernard Hopkins', 'Boxing - (Ronald "Winky" Wright vs. TBA',
-
-    'Tennis - Australian Open', 'Tennis - Pacific Life Open',
-    'Tennis - NASDAQ-100 Open', 'Tennis - Tennis Masters Monte Carlo',
-    'Tennis - Telecom Italia Masters Roma', 'Tennis - Tennis Masters Hamburg',
-    'Tennis - Roland Garros', 'Tennis - Wimbledon',
-    'Tennis - Tennis Masters Montreal',
-    'Tennis - Western and Southern Financial Group Masters',
-    'Tennis - US Open', 'Tennis - Tennis Masters Madrid',
-    'Tennis - BNP Paribas Masters', 'Tennis - Tennis Masters Cup',
-
-    'Weightlifting 48 Kg - Women  - Final',
-    'Weightlifting 56 Kg - Men  - Final',
-    'Weightlifting 53 Kg - Women  - Final',
-    'Weightlifting 62 Kg - Men  - Final',
-    'Weightlifting 63 Kg - Women  - Final',
-    'Weightlifting 69 Kg - Men  - Final',
-    'Weightlifting 69 Kg - Women  - Final',
-    'Weightlifting 77 Kg - Men  - Final',
-    'Weightlifting 75 Kg - Women  - Final',
-    'Weightlifting 75kg - Women  - Final',
-    'Weightlifting 85 Kg - Men  - Final',
-    'Weightlifting 94 Kg - Men  - Final',
-    'Weightlifting 105 Kg - Men  - Final',
-    'Weightlifting 105kg - Men  - Final',
-
-    'Fencing - Sabre - Men - 1st Round', 'Fencing - Sabre - Men - Round 2',
-    'Fencing - Sabre - Men - 3rd Round',
-    'Fencing - Sabre - Men - Quarter final'
-      , 'Fencing - Sabre - Men - Semi-finals',
-    'Fencing - Sabre - Men - Final', 'Fencing - Épée - Women - 1st Round',
-    'Fencing - Épée - Women - Round 2', 'Fencing - Épée - Women - 3rd Round',
-    'Fencing - Épée - Women - Quarter final',
-    'Fencing - Épée - Women - Semi-finals', 'Fencing - Épée - Women - Final',
-    'Fencing - Épée - Women/Team - 1st Round',
-    'Fencing - Épée - Women/Team - Quarter final',
-    'Fencing - Épée - Women/Team - Semi-finals',
-    'Fencing - Épée - Women/Team - Final', 'Fencing - Foil - Men - 1st Round',
-    'Fencing - Foil - Men - Round 2', 'Fencing - Foil - Men - 3rd Round',
-    'Fencing - Foil - Men - Quarter final',
-    'Fencing - Foil - Men - Semi-finals',
-    'Fencing - Foil - Men - Final',
-
-    'Soccer 1st Round - *Men''s Preliminaries - Men',
-    'Soccer 1st Round - *Women''s Preliminaries - Women',
-    'Soccer Quarter final - *Men''s Quarterfinal - Men',
-    'Soccer Quarter final - *Women''s Quarterfinal - Women',
-    'Soccer Semi-finals - *Women''s Semifinal - Men',
-    'Soccer Semi-finals - *Women''s Semifinal - Women',
-    'Soccer places 3/4 - *Men''s Bronze Medal Match - Men',
-    'Soccer places 3/4 - *Women''s Bronze Medal Match - Women',
-    'Soccer Final - *Men''s Gold Medal Match - Men',
-    'Soccer Final - *Women''s Gold Medal Match - Women',
-
-    'Artistic Gymnastics - Men - Qualifying',
-    'Artistic Gymnastics - Women - Qualifying',
-    'Artistic Gymnastics - Men/Team - Final',
-    'Artistic Gymnastics - Women/Team - Final',
-    'Artistic Gymnastics - Individual All-Around - Men - Final',
-    'Artistic Gymnastics - Individual All-Around - Women - Final',
-    'Artistic Gymnastics - Floor Exercise - Men - Final',
-    'Artistic Gymnastics - Vault - Women - Final',
-    'Artistic Gymnastics - Uneven Bars - Women - Final',
-    'Artistic Gymnastics - Pommel Horse - Men - Final',
-    'Artistic Gymnastics - Rings - Men - Final',
-    'Artistic Gymnastics - Vault - Men - Final',
-    'Artistic Gymnastics - Beam - Women - Final',
-    'Artistic Gymnastics - Parallel Bars - Men - Final',
-    'Artistic Gymnastics - Floor Exercise - Women - Final',
-    'Artistic Gymnastics - Horizontal Bar - Men - Final',
-
-    'Canoe - Slalom C1 - Men - Heats', 'Canoe - Slalom C1 - Men - Heats',
-    'Canoe - Slalom C1 - Men - Semi-finals', 'Canoe - Slalom C1 - Men - Final',
-    'Canoe - Slalom C2 - Men - Heats', 'Canoe - Slalom C2 - Men - Heats',
-    'Canoe - Slalom C2 - Men - Semi-finals', 'Canoe - Slalom C2 - Men - Final',
-    'Canoe - Flatwater C1 - 1000m - Men - Heats',
-    'Canoe - Flatwater C2 - 1000m - Men - Heats',
-    'Canoe - Flatwater C1 - 500m - Men - Heats',
-    'Canoe - Flatwater C2 - 500m - Men - Heats',
-    'Canoe - Flatwater C1 - 1000m - Men - Semi-finals',
-    'Canoe - Flatwater C2 - 1000m - Men - Semi-finals',
-    'Canoe - Flatwater C1 - 500m - Men - Semi-finals',
-    'Canoe - Flatwater C2 - 500m - Men - Semi-finals',
-    'Canoe - Flatwater C1 - 1000m - Men - Final',
-    'Canoe - Flatwater C2 - 1000m - Men - Final',
-    'Canoe - Flatwater C1 - 500m - Men - Final',
-    'Canoe - Flatwater C2 - 500m - Men - Final',
-
-    'Kayak - Slalom K1 - Women - Heats', 'Kayak - Slalom K1 - Women - Heats',
-    'Kayak - Slalom K1 - Women - Semi-finals',
-    'Kayak - Slalom K1 - Women - Final', 'Kayak - Slalom K2 - Men - Heats',
-    'Kayak - Slalom K2 - Men - Heats', 'Kayak - Slalom K2 - Men - Semi-finals',
-    'Kayak - Slalom K1 - Men - Final',
-    'Kayak - Flatwater K1 - 1000m - Men - Heats',
-    'Kayak - Flatwater K4 - 500m - Women - Heats',
-    'Kayak - Flatwater K2 - 1000m - Men - Heats',
-    'Kayak - Flatwater K4 - 1000m - Men - Heats',
-    'Kayak - Flatwater K1 - 500m - Men - Heats',
-    'Kayak - Flatwater K2 - 500m - Men - Heats',
-    'Kayak - Flatwater K2 - 500m - Women - Heats',
-    'Kayak - Flatwater K1 - 1000m - Men - Semi-finals',
-    'Kayak - Flatwater K4 - 500m - Women - Semi-finals',
-    'Kayak - Flatwater K2 - 1000m - Men - Semi-finals',
-    'Kayak - Flatwater K4 - 1000m - Men - Semi-finals',
-    'Kayak - Flatwater K1 - 500m - Men - Semi-finals',
-    'Kayak - Flatwater K1 - 500m - Women - Semi-finals',
-    'Kayak - Flatwater K2 - 500m - Men - Semi-finals',
-    'Kayak - Flatwater K2 - 500m - Women - Semi-finals',
-    'Kayak - Flatwater K1 - 1000m - Men - Final',
-    'Kayak - Flatwater K4 - 500m - Women - Final',
-    'Kayak - Flatwater K2 - 1000m - Men - Final',
-    'Kayak - Flatwater K4 - 1000m - Men - Final',
-    'Kayak - Flatwater K1 - 500m - Men - Final',
-    'Kayak - Flatwater K1 - 500m - Women - Final',
-    'Kayak - Flatwater K2 - 500m - Men - Final',
-    'Kayak - Flatwater K2 - 500m - Women - Final',
-
-    'Wrestling - Greco-Roman 55kg - Men - Qualifying',
-    'Wrestling - Greco-Roman 66kg - Men - Qualifying',
-    'Wrestling - Greco-Roman 84kg - Men - Qualifying',
-    'Wrestling - Greco-Roman 120kg - Men - Qualifying',
-    'Wrestling - Greco-Roman 55kg - Men - Semi-finals',
-    'Wrestling - Greco-Roman 66kg - Men - Semi-finals',
-    'Wrestling - Greco-Roman 84kg - Men - Semi-finals',
-    'Wrestling - Greco-Roman 120kg - Men - Semi-finals',
-    'Wrestling - Greco-Roman 96kg - Men - Qualifying',
-    'Wrestling - Greco-Roman 55kg - Men - Final',
-    'Wrestling - Greco-Roman 66kg - Men - Final',
-    'Wrestling - Greco-Roman 84kg - Men - Final',
-    'Wrestling - Greco-Roman 120kg - Men - Final',
-    'Wrestling - Greco-Roman 55kg - Men - Play Off',
-    'Wrestling - Greco-Roman 66kg - Men - Play Off',
-    'Wrestling - Greco-Roman 84kg - Men - Play Off',
-    'Wrestling - Greco-Roman 120kg - Men - Play Off',
-
-    'Equestrianism - Individual Eventing Dressage - 1st Day',
-    'Equestrianism - Team Eventing Dressage - 1st Day',
-    'Equestrianism - Individual Eventing Dressage - 2nd Day',
-    'Equestrianism - Team Eventing Dressage - 2nd Day',
-    'Equestrianism - Individual Eventing Cross Country - Final',
-    'Equestrianism - Team Eventing Cross Country - Final',
-    'Equestrianism - Team Eventing Jumping - Final',
-    'Equestrianism - Individual Eventing Jumping - Qualifying',
-    'Equestrianism - Individual Eventing Jumping - Final',
-    'Equestrianism - Individual Dressage Grand Prix - 1st Day',
-    'Equestrianism - Team Dressage Grand Prix - 1st Day',
-    'Equestrianism - Individual Dressage Grand Prix - 2nd Day',
-    'Equestrianism - Team Dressage Grand Prix - 2nd Day',
-    'Equestrianism - Individual Jumping - Qualifying',
-    'Equestrianism - Individual Dressage Grand Prix Special - Final',
-    'Equestrianism - Team Jumping - Final',
-    'Equestrianism - Individual Jumping - Qualifying',
-    'Equestrianism - Individual Jumping - Qualifying',
-    'Equestrianism - Team Jumping - Final',
-    'Equestrianism - Individual Dressage Grand Prix Freestyle - Final',
-    'Equestrianism - Individual Jumping - Final',
-    'Equestrianism - Individual Jumping - Final',
-
-    'Sailing - Men''s 470 - Race 01', 'Sailing - Women''s 470 - Race 01',
-    'Sailing - Men''s 470 - Race 02', 'Sailing - Women''s 470 - Race 02',
-    'Sailing - Finn - Race 1', 'Sailing - Yngling - Race 1',
-    'Sailing - Finn - Race 2', 'Sailing - Yngling - Race 2',
-    'Sailing - Laser - Race 1', 'Sailing - Women''s Mistral - Race 01',
-    'Sailing - Men''s Mistral - Race 02', 'Sailing - 49er - Race 1',
-
-    'Swimming - Men''s 400m Individual Medley - Heat 1',
-    'Swimming - Men''s 400m Individual Medley - Heat 2',
-    'Swimming - Women''s 100m Butterfly - Heat 1',
-    'Swimming - Men''s 400m Freestyle - Heat 1',
-    'Swimming - Women''s 400m Individual Medley - Heat 1',
-    'Swimming - Women''s 400m Individual Medley - Heat 2',
-    'Swimming - Men''s 100m Breaststroke - Heat 1',
-    'Swimming - Men''s 100m Breaststroke - Heat 2',
-    'Swimming - Women''s 4 x 100m Freestyle Relay - Heat 1',
-    'Swimming - Women''s 4 x 100m Freestyle Relay - Heat 2',
-    'Swimming - Women''s 100m Butterfly Semifinal 1',
-    'Swimming - Women''s 4 x 100m Freestyle Relay Final',
-
-    'Diving - Women''s Synchronised 3m Springboard Final',
-    'Diving - Men''s Synchronised 3m Springboard Final',
-    'Diving - Women''s Synchronised 10m Platform Final',
-    'Diving - Men''s Synchronised 10m Platform Final',
-    'Diving - Women''s 10m Platform Preliminary',
-    'Diving - Men''s 10m Platform Semifinal',
-
-    'Handball - Men''s Preliminaries - Pool A Match 1 - Spain - Korea',
-    'Handball - Women''s Preliminaries - Pool A Match 1 - China - Hungary',
-    'Handball - Men''s Classification 11-12 Match 31 - Slovenia - Egypt',
-    'Handball - Women''s Classification 9-10 Match 21 - Greece - Angola',
-    'Handball - Men''s Classification 9-10 Match 32 - Brazil - Iceland',
-    'Handball - Women''s Quarterfinal Match 22 - Ukraine - Spain',
-    'Handball - Men''s Semifinal Match 40 - Germany - Russia',
-    'Handball - Women''s Semifinal Match 27 - France - Korea',
-
-    'Gymnastics - Men - Qualifying', 'Gymnastics - Women - Qualifying',
-    'Gymnastics - Men/Team - Final', 'Gymnastics - Women/Team - Final',
-
-    'Athletics - Women''s 100m Round 1 - Heat 1',
-    'Athletics - Men''s 100m Round 1 - Heat 1',
-    'Athletics - Men''s 100m Semifinal 1', 'Athletics - Women''s 100m Final',
-
-    'Shooting - Men''s 10m Air Pistol Qualification',
-    'Shooting - Men''s 10m Air Pistol Final',
-    'Shooting - Women''s 10m Air Pistol Pre-event Training',
-    'Shooting - Men''s 10m Air Pistol Medal Ceremony',
-    'Shooting - Women''s 10m Air Pistol Qualification',
-    'Shooting - Men''s 50m Pistol Qualification',
-    'Shooting - Women''s 25m Pistol Final',
-
-    'Archery - Women''s Individual 1/32 Eliminations',
-    'Archery - Men''s Individual 1/32 Eliminations',
-    'Archery - Women''s Individual 1/16 Eliminations',
-    'Archery - Men''s Individual 1/16 Eliminations',
-    'Archery - Women''s Individual 1/8 Eliminations',
-    'Archery - Men''s Individual 1/8 Eliminations',
-    'Archery - Women''s Individual Quarterfinal 1',
-    'Archery - Men''s Individual Quarterfinal 1',
-    'Archery - Men''s Individual Semifinal 1',
-    'Archery - Men''s Individual Bronze Medal Match',
-    'Archery - Women''s Team Gold Medal Match',
-
-    'Cycling - Men''s Road Race', 'Cycling - Women''s Road Race',
-    'Cycling - Women''s Individual Time Trial',
-    'Cycling - Men''s Individual Time Trial',
-    'Cycling - Women''s Sprint 1/8 Finals',
-    'Cycling - Women''s Individual Pursuit Final',
-    'Cycling - Men''s Sprint 1/8 Finals',
-
-    'Water Polo - Men''s Preliminaries - Group B - EGY - AUS',
-    'Water Polo - Women''s Classification 7th-8th - KAZ - CAN',
-    'Water Polo - Women''s Quarterfinal 02 - ITA - HUN',
-    'Water Polo - Women Bronze Medal Game', 'Water Polo - Men''s Semifinal 02',
-
-    'Volleyball - Women''s Preliminaries - Pool B Match 1 - CUB - GER',
-    'Volleyball - Men''s Preliminaries - Pool A Match 1 - SCG - POL',
-    'Volleyball - Women''s Quarterfinal 04 - JPN - CHN',
-    'Volleyball - Men''s Quarterfinal 03 - GRE - USA',
-    'Volleyball - Women''s Semifinal 02 - CUB - CHN',
-    'Volleyball - Men''s Semifinal 02 - USA - BRA',
-    'Volleyball - Women''s Gold Medal Match - RUS - CHN',
-    'Volleyball - Men''s Bronze Medal Match - RUS - USA');
+var
+  SportEvents: array of string;
 
   dxSchedulerDemoDescriptions: array[TcxSchedulerDemo] of string = (
     '',
@@ -1225,7 +963,7 @@ begin
         begin
           SelectStorage(0);
           Scheduler.Storage := UnboundStorageTwo;
-          Scheduler.DialogsStyle := TcxShedulerDemoEventEditorFormStyleInfo.GetName;
+          Scheduler.DialogsStyle := TcxSchedulerDemoEventEditorFormStyleInfo.GetName;
           lgTemplate.Visible := not dxbtnDataBindingBound.Down;
         end;
       scdHolidays:
@@ -1716,6 +1454,7 @@ end;
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
   inherited;
+  LoadDataFromFile;
   dxRibbonBackstageViewMinMenuWidth := ScaleFactor.Apply(150);
   CreateDialogStylesMenuItem(bsiStylesEditor);
   lcControlBoxGroup_Root.LayoutDirection := ldVertical;
@@ -1866,6 +1605,32 @@ begin
   lgYearView.Tag := Integer(scdYearView);
   lgMonthView.Tag := Integer(scdMonth);
   lgReminders.Tag := Integer(scdReminders);
+end;
+
+procedure TfrmMain.LoadDataFromFile;
+var
+  ADoc: TdxXMLDocument;
+  ASportEventsNode, APeopleNode: TdxXMLNode;
+  I: Integer;
+begin
+  ADoc := TdxXMLDocument.Create();
+  try
+    ADoc.LoadFromFile('Data\Data.xml');
+    if ADoc.FindChild(['Root', 'SportEvents'], ASportEventsNode) then
+    begin
+      SetLength(SportEvents, ASportEventsNode.Count);
+      for I := 0 to ASportEventsNode.Count - 1 do
+        SportEvents[I] := APeopleNode.Items[I].TextAsString;
+    end;
+    if ADoc.FindChild(['Root', 'People'], APeopleNode) then
+    begin
+      ComboBoxItem.Properties.Items.Clear;
+      for I := 0 to APeopleNode.Count - 1 do
+        ComboBoxItem.Properties.Items.Add(APeopleNode.Items[I].TextAsString);
+    end;
+  finally
+    ADoc.Free;
+  end;
 end;
 
 procedure TfrmMain.LoadUnboundData;
@@ -2378,7 +2143,7 @@ var
   APoint: TPoint;
 begin
   APoint := btnGenerateHolidaysEvents.ClientToScreen(Point(0, 0));
-  pmGenerageHolidaysEvents.Popup(APoint.X, APoint.Y);
+  pmGenerateHolidaysEvents.Popup(APoint.X, APoint.Y);
 end;
 
 procedure TfrmMain.btnGenerateMoreEventsClick(Sender: TObject);
@@ -2424,7 +2189,7 @@ begin
         AEvent.State := Random(4);
         AEvent.LabelColor := EventLabelColors[Random(11)];
         AType := Random(Length(StartIndexes));
-        AEvent.Caption := SportEvents[StartIndexes[Atype] + Random(EventsCount[AType])];
+        AEvent.Caption := SportEvents[StartIndexes[AType] + Random(EventsCount[AType])];
         EventsCommand.Parameters[0].Value := Double(AEvent.Start);
         EventsCommand.Parameters[1].Value := Double(AEvent.Finish);
         EventsCommand.Parameters[2].Value := AEvent.Caption;

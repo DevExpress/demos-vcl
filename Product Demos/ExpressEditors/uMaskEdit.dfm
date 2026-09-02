@@ -38,16 +38,16 @@ inherited frmMaskEdit: TfrmMaskEdit
       TabOrder = 2
       Width = 442
     end
-    object grStandart: TcxGrid [3]
+    object grStandard: TcxGrid [3]
       Left = 268
       Top = 147
       Width = 203
       Height = 226
       TabOrder = 3
-      object grStandartDBTableView1: TcxGridDBTableView
+      object grStandardDBTableView1: TcxGridDBTableView
         Navigator.Buttons.CustomButtons = <>
-        OnCellDblClick = grStandartDBTableView1CellDblClick
-        DataController.DataSource = dsStandart
+        OnCellDblClick = grStandardDBTableView1CellDblClick
+        DataController.DataSource = dsStandard
         DataController.Summary.DefaultGroupSummaryItems = <>
         DataController.Summary.FooterSummaryItems = <>
         DataController.Summary.SummaryGroups = <>
@@ -56,33 +56,33 @@ inherited frmMaskEdit: TfrmMaskEdit
         OptionsSelection.CellSelect = False
         OptionsView.ColumnAutoWidth = True
         OptionsView.GroupByBox = False
-        object grStandartDBTableView1Description: TcxGridDBColumn
+        object grStandardDBTableView1Description: TcxGridDBColumn
           DataBinding.FieldName = 'Description'
           Width = 78
         end
-        object grStandartDBTableView1SourceText: TcxGridDBColumn
+        object grStandardDBTableView1SourceText: TcxGridDBColumn
           Caption = 'Source Text'
           DataBinding.FieldName = 'SourceText'
           Width = 79
         end
-        object grStandartDBTableView1ExpectedMaskedText: TcxGridDBColumn
+        object grStandardDBTableView1ExpectedMaskedText: TcxGridDBColumn
           Caption = 'Expected Masked Text'
           DataBinding.FieldName = 'ExpectedMaskedText'
           Width = 134
         end
       end
-      object grStandartLevel1: TcxGridLevel
-        GridView = grStandartDBTableView1
+      object grStandardLevel1: TcxGridLevel
+        GridView = grStandardDBTableView1
       end
     end
-    object btnSetStandartSample: TcxButton [4]
+    object btnSetStandardSample: TcxButton [4]
       Left = 268
       Top = 379
       Width = 203
       Height = 25
       Caption = 'Assign Source Text to the Sample Editor'
       TabOrder = 4
-      OnClick = btnSetStandartSampleClick
+      OnClick = btnSetStandardSampleClick
     end
     object grRegularExpr: TcxGrid [5]
       Left = 477
@@ -92,7 +92,7 @@ inherited frmMaskEdit: TfrmMaskEdit
       TabOrder = 5
       object cxGridDBTableView1: TcxGridDBTableView
         Navigator.Buttons.CustomButtons = <>
-        OnCellDblClick = grStandartDBTableView1CellDblClick
+        OnCellDblClick = grStandardDBTableView1CellDblClick
         DataController.DataSource = dsRegularExpr
         DataController.Summary.DefaultGroupSummaryItems = <>
         DataController.Summary.FooterSummaryItems = <>
@@ -165,7 +165,7 @@ inherited frmMaskEdit: TfrmMaskEdit
       ShowBorder = False
       Index = 4
     end
-    object lgStandart: TdxLayoutGroup
+    object lgStandard: TdxLayoutGroup
       Parent = dxLayoutGroup4
       AlignHorz = ahClient
       AlignVert = avClient
@@ -208,29 +208,29 @@ inherited frmMaskEdit: TfrmMaskEdit
       Index = 3
     end
     object dxLayoutItem4: TdxLayoutItem
-      Parent = lgStandart
+      Parent = lgStandard
       AlignHorz = ahClient
       AlignVert = avClient
       CaptionOptions.Text = 'cxGrid1'
       CaptionOptions.Visible = False
-      Control = grStandart
+      Control = grStandard
       ControlOptions.OriginalHeight = 200
       ControlOptions.OriginalWidth = 250
       ControlOptions.ShowBorder = False
       Index = 0
     end
     object dxLayoutItem5: TdxLayoutItem
-      Parent = lgStandart
+      Parent = lgStandard
       CaptionOptions.Text = 'cxButton1'
       CaptionOptions.Visible = False
-      Control = btnSetStandartSample
+      Control = btnSetStandardSample
       ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 75
       ControlOptions.ShowBorder = False
       Index = 1
     end
     object dxLayoutLabeledItem1: TdxLayoutLabeledItem
-      Parent = lgStandart
+      Parent = lgStandard
       CaptionOptions.Text = 'Type your text in the Sample editor'
       Index = 2
     end
@@ -289,37 +289,37 @@ inherited frmMaskEdit: TfrmMaskEdit
       Index = 0
     end
   end
-  object mdStandart: TdxMemData
+  object mdStandard: TdxMemData
     Indexes = <>
     SortOptions = []
-    AfterScroll = mdStandartAfterScroll
+    AfterScroll = mdStandardAfterScroll
     Left = 48
     Top = 56
-    object mdStandartMask: TStringField
+    object mdStandardMask: TStringField
       FieldName = 'Mask'
       Size = 50
     end
-    object mdStandartDescription: TStringField
+    object mdStandardDescription: TStringField
       FieldName = 'Description'
     end
-    object mdStandartSourceText: TStringField
+    object mdStandardSourceText: TStringField
       FieldName = 'SourceText'
       Size = 50
     end
-    object mdStandartExpectedMaskedText: TStringField
+    object mdStandardExpectedMaskedText: TStringField
       FieldName = 'ExpectedMaskedText'
       Size = 30
     end
   end
-  object dsStandart: TDataSource
-    DataSet = mdStandart
+  object dsStandard: TDataSource
+    DataSet = mdStandard
     Left = 48
     Top = 112
   end
   object mdRegularExpr: TdxMemData
     Indexes = <>
     SortOptions = []
-    AfterScroll = mdStandartAfterScroll
+    AfterScroll = mdStandardAfterScroll
     Left = 144
     Top = 56
     object mdRegularExprMask: TStringField

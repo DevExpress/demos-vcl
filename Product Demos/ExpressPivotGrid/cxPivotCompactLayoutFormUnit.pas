@@ -13,7 +13,7 @@ uses
 
 type
   TfrmCompactLayout = class(TfrmSalesPerson)
-    lsplCutomizationForm: TdxLayoutSplitterItem;
+    lsplCustomizationForm: TdxLayoutSplitterItem;
     grbCustomization: TcxGroupBox;
     liCustomization: TdxLayoutItem;
     dxLayoutLabeledItem1: TdxLayoutLabeledItem;
@@ -43,7 +43,7 @@ begin
   else
     PivotGrid.Customization.Site := nil;
   liCustomization.Visible := PivotGrid.Customization.Visible;
-  lsplCutomizationForm.Visible := liCustomization.Visible;
+  lsplCustomizationForm.Visible := liCustomization.Visible;
 end;
 
 procedure TfrmCompactLayout.FormShow(Sender: TObject);

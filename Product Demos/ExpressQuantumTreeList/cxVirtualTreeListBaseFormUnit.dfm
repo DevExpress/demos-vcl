@@ -15,12 +15,11 @@ inherited cxVirtualTreeListDemoUnitForm: TcxVirtualTreeListDemoUnitForm
     object cxVirtualTreeList: TcxVirtualTreeList [0]
       Left = 10
       Top = 41
-      Width = 1000
+      Width = 1002
       Height = 421
       Bands = <
         item
         end>
-      Navigator.Buttons.CustomButtons = <>
       OptionsBehavior.ChangeDelay = 1000
       ScrollbarAnnotations.CustomAnnotations = <>
       TabOrder = 3
@@ -33,8 +32,6 @@ inherited cxVirtualTreeListDemoUnitForm: TcxVirtualTreeListDemoUnitForm
         Position.ColIndex = 0
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clnName: TcxTreeListColumn
         Caption.Text = 'Text'
@@ -42,8 +39,6 @@ inherited cxVirtualTreeListDemoUnitForm: TcxVirtualTreeListDemoUnitForm
         Position.ColIndex = 1
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clnDate: TcxTreeListColumn
         Caption.Text = 'Date'
@@ -52,8 +47,6 @@ inherited cxVirtualTreeListDemoUnitForm: TcxVirtualTreeListDemoUnitForm
         Position.ColIndex = 2
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
     end
     object chkSmartLoadMode: TcxCheckBox [1]
@@ -65,7 +58,7 @@ inherited cxVirtualTreeListDemoUnitForm: TcxVirtualTreeListDemoUnitForm
       Transparent = True
     end
     object btFullExpand: TcxButton [2]
-      Left = 136
+      Left = 137
       Top = 10
       Width = 102
       Height = 25
@@ -74,7 +67,7 @@ inherited cxVirtualTreeListDemoUnitForm: TcxVirtualTreeListDemoUnitForm
       OnClick = btFullExpandClick
     end
     object sbMain: TdxStatusBar [3]
-      Left = 260
+      Left = 261
       Top = 10
       Width = 668
       Height = 20
@@ -92,11 +85,6 @@ inherited cxVirtualTreeListDemoUnitForm: TcxVirtualTreeListDemoUnitForm
           Width = 120
         end>
       PaintStyle = stpsUseLookAndFeel
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Tahoma'
-      Font.Style = []
     end
     inherited lgMainGroup: TdxLayoutGroup
       LayoutDirection = ldVertical
@@ -126,7 +114,7 @@ inherited cxVirtualTreeListDemoUnitForm: TcxVirtualTreeListDemoUnitForm
       CaptionOptions.Visible = False
       Control = chkSmartLoadMode
       ControlOptions.OriginalHeight = 21
-      ControlOptions.OriginalWidth = 104
+      ControlOptions.OriginalWidth = 105
       ControlOptions.ShowBorder = False
       Index = 0
     end

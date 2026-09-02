@@ -1,11 +1,11 @@
-unit maindata;
+unit MainData;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
   Data.DB, Vcl.ImgList, cxDBEditRepository, Data.Win.ADODB, cxEditRepositoryItems, cxEdit,
-  Datasnap.DBClient, dxmdaset, cxClasses, MidasLib, cxImageList, cxGraphics, dxDemoUtils;
+  Datasnap.DBClient, dxmdaset, cxClasses, MidasLib, cxImageList, cxGraphics, dxDemoUtils, System.ImageList;
 
 type
   TdmMain = class(TDataModule)

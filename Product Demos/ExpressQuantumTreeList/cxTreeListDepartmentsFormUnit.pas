@@ -65,7 +65,7 @@ procedure TfrmDepartments.InitData;
    begin
      Result := TcxTreeList(TreeList).AddChild(AParent);
      Result.AssignValues(AValues);
-     Result.Imageindex := AImageIndex;
+     Result.ImageIndex := AImageIndex;
    end;
 
 var

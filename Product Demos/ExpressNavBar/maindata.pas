@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
   Data.DB, Vcl.ImgList, cxDBEditRepository, cxEditRepositoryItems, cxEdit,
-  Datasnap.DBClient, cxGraphics, cxClasses, dxmdaset, MidasLib, cxImageList, cxSchedulerStorage;
+  Datasnap.DBClient, cxGraphics, cxClasses, dxmdaset, MidasLib, cxImageList, cxSchedulerStorage, System.ImageList;
 
 const
   dxAddressDelimiter = ';';

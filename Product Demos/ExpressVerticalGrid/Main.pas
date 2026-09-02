@@ -22,7 +22,8 @@ uses
   dxLayoutLookAndFeels, dxLayoutContainer, dxLayoutControl, dxPScxDBEditorLnks,
   dxPSTextLnk, dxPSdxLCLnk, dxRibbonCustomizationForm, dxScreenTip, dxCustomHint, cxHint, cxImageList, cxImage, Vcl.Menus,
   dxLayoutControlAdapters, Vcl.StdCtrls, cxButtons, dxNavBarStyles, dxGalleryControl, dxRibbonBackstageViewGalleryControl,
-  dxBevel, cxGroupBox, dxRibbonBackstageView;
+  dxBevel, cxGroupBox, dxRibbonBackstageView, dxCore, cxGeometry, dxFramedControl, dxShellDialogs, System.Actions,
+  System.ImageList, dxPanel;
 
 type
   TfrmMain = class(TfrmMainBase)

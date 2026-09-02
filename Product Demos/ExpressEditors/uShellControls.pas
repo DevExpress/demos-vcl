@@ -262,10 +262,10 @@ end;
 procedure TfrmShellControls.GetLVItemInfoByItemIndex(AIndex: Integer; var
     AFileInfo: TSHFileInfo);
 var
-  Aidl: PItemIDList;
+  AIdl: PItemIDList;
 begin
-  Aidl := lvFiles.GetItemAbsolutePIDL(AIndex);
-  GetItemInfo(Aidl, AFileInfo);
+  AIdl := lvFiles.GetItemAbsolutePIDL(AIndex);
+  GetItemInfo(AIdl, AFileInfo);
 end;
 
 procedure TfrmShellControls.InitializeShellLargeImages;

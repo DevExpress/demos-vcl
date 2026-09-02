@@ -1,8 +1,8 @@
 inherited frmLoanCalculator: TfrmLoanCalculator
   Width = 1248
   Height = 619
-  Font.Name = 'Segoe UI'
-  ParentFont = False
+  ExplicitWidth = 1248
+  ExplicitHeight = 619
   object cxGroupBox1: TcxGroupBox
     Left = 0
     Top = 0
@@ -50,15 +50,15 @@ inherited frmLoanCalculator: TfrmLoanCalculator
       Width = 853
       object cxGroupBox5: TcxGroupBox
         Left = 233
-        Top = 18
+        Top = 22
         Align = alClient
         Style.BorderStyle = ebsNone
         TabOrder = 0
-        Height = 170
+        Height = 166
         Width = 618
         object cxLabel5: TcxLabel
           Left = 2
-          Top = 80
+          Top = 84
           Align = alTop
           Caption = 'Your Monthly Payment'
           ParentFont = False
@@ -69,14 +69,15 @@ inherited frmLoanCalculator: TfrmLoanCalculator
           Style.Font.Style = [fsBold]
           Style.IsFontAssigned = True
           Properties.Alignment.Horz = taCenter
+          TabOrder = 0
           Transparent = True
           AnchorX = 309
         end
-        object lblMontlyPayment: TcxLabel
+        object lblMonthlyPayment: TcxLabel
           Left = 2
-          Top = 104
+          Top = 109
           Align = alTop
-          Caption = 'lblMontlyPayment'
+          Caption = 'lblMonthlyPayment'
           ParentFont = False
           Style.Font.Charset = DEFAULT_CHARSET
           Style.Font.Color = clWindowText
@@ -85,12 +86,13 @@ inherited frmLoanCalculator: TfrmLoanCalculator
           Style.Font.Style = []
           Style.IsFontAssigned = True
           Properties.Alignment.Horz = taCenter
+          TabOrder = 1
           Transparent = True
           AnchorX = 309
         end
         object cxGroupBox6: TcxGroupBox
           Left = 2
-          Top = 18
+          Top = 22
           Align = alTop
           Style.BorderStyle = ebsNone
           TabOrder = 2
@@ -100,16 +102,17 @@ inherited frmLoanCalculator: TfrmLoanCalculator
       end
       object cxGroupBox4: TcxGroupBox
         Left = 2
-        Top = 18
+        Top = 22
         Align = alLeft
         Style.BorderStyle = ebsNone
         TabOrder = 1
-        Height = 170
+        Height = 166
         Width = 231
         object cxLabel6: TcxLabel
           Left = 7
           Top = 17
           Caption = 'Loan Amount:'
+          TabOrder = 0
           Transparent = True
         end
         object seLoan: TcxSpinEdit
@@ -140,12 +143,14 @@ inherited frmLoanCalculator: TfrmLoanCalculator
           Left = 7
           Top = 48
           Caption = 'Interest Rate:'
+          TabOrder = 3
           Transparent = True
         end
         object cxLabel3: TcxLabel
           Left = 7
           Top = 78
           Caption = 'Term of Loan:'
+          TabOrder = 4
           Transparent = True
         end
         object cbTerms: TcxComboBox
@@ -162,6 +167,7 @@ inherited frmLoanCalculator: TfrmLoanCalculator
           Left = 7
           Top = 108
           Caption = 'Start Month:'
+          TabOrder = 6
           Transparent = True
         end
         object cbStartMonths: TcxComboBox
@@ -211,9 +217,7 @@ inherited frmLoanCalculator: TfrmLoanCalculator
       BorderStyle = cxcbsNone
       TabOrder = 0
       object cxGrid1DBTableView1: TcxGridDBTableView
-        Navigator.Buttons.CustomButtons = <>
         DataController.DataSource = dtsMonthlyPayments
-        DataController.Summary.DefaultGroupSummaryItems = <>
         DataController.Summary.FooterSummaryItems = <
           item
             Format = '$,0;-$,0'
@@ -227,7 +231,6 @@ inherited frmLoanCalculator: TfrmLoanCalculator
             FieldName = 'Principal'
             Column = cxGrid1DBTableView1Principal
           end>
-        DataController.Summary.SummaryGroups = <>
         OptionsData.Editing = False
         OptionsData.Inserting = False
         OptionsSelection.CellSelect = False

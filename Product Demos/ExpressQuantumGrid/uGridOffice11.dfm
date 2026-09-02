@@ -6,7 +6,7 @@ inherited frmGridOffice11: TfrmGridOffice11
   inherited PanelDescription: TdxPanel
     Top = 516
     Width = 1024
-    ExplicitTop = 519
+    ExplicitTop = 516
     ExplicitWidth = 1024
     inherited lcBottomFrame: TdxLayoutControl
       Width = 1024
@@ -17,20 +17,15 @@ inherited frmGridOffice11: TfrmGridOffice11
     Width = 735
     Height = 516
     ExplicitWidth = 735
-    ExplicitHeight = 519
+    ExplicitHeight = 516
     inherited Grid: TcxGrid
       Width = 735
       Height = 516
       ExplicitWidth = 735
-      ExplicitHeight = 519
+      ExplicitHeight = 516
       object TableView: TcxGridTableView
-        Navigator.Buttons.CustomButtons = <>
         FindPanel.DisplayMode = fpdmAlways
-        ScrollbarAnnotations.CustomAnnotations = <>
         OnCellClick = TableViewCellClick
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
         DataController.OnCompare = TableViewDataControllerCompare
         OptionsBehavior.FixedGroups = True
         OptionsCustomize.GroupBySorting = True
@@ -261,7 +256,7 @@ inherited frmGridOffice11: TfrmGridOffice11
       Height = 516
       inherited lcFrame: TdxLayoutControl
         Height = 496
-        ExplicitHeight = 499
+        ExplicitHeight = 496
         inherited lgSetupTools: TdxLayoutGroup
           Visible = False
         end

@@ -17,7 +17,7 @@ uses
   dxBarBuiltInMenu, cxSchedulerTreeListBrowser, cxSchedulerRibbonStyleEventEditor, dxSkinsCore, dxSkinsDefaultPainters,
   cxGroupBox, cxCheckGroup, cxImageComboBox, cxCalendar, Datasnap.DBClient, cxMemo, cxRichEdit, dxMessageDialog,
   cxGridDBDataDefinitions, dxmdaset, dxCalloutPopup, dxLayoutControlAdapters, cxPC, dxFormattedLabel,
-  cxGridWinExplorerView, cxGridDBWinExplorerView, dxScrollbarAnnotations;
+  cxGridWinExplorerView, cxGridDBWinExplorerView, dxScrollbarAnnotations, System.ImageList;
 
 const
   bkRoot    = 0;
@@ -62,7 +62,7 @@ type
     dxNavBar1: TdxNavBar;
     liLeftMenu: TdxLayoutItem;
     nbgContact: TdxNavBarGroup;
-    nbgSheduler: TdxNavBarGroup;
+    nbgScheduler: TdxNavBarGroup;
     nbgMail: TdxNavBarGroup;
     nbgSettings: TdxNavBarGroup;
     nbiNewContact: TdxNavBarItem;
@@ -82,13 +82,13 @@ type
     nbInplaceFocusedInbox: TdxNavBarItem;
     nbInplaceMessageList: TdxNavBarItem;
     nbInplaceReadingPane: TdxNavBarItem;
-    nbInplaceSingature: TdxNavBarItem;
+    nbInplaceSignature: TdxNavBarItem;
     nbInplaceNotifications: TdxNavBarItem;
     nbInplaceAbout: TdxNavBarItem;
     ilMedium: TcxImageList;
     nbiSchedulerNewEvent: TdxNavBarItem;
     nbiSchedulerCalendar: TdxNavBarItem;
-    nbiSchedulerBithDate: TdxNavBarItem;
+    nbiSchedulerBirthDate: TdxNavBarItem;
     nbiSchedulerMSCalendar: TdxNavBarItem;
     nbgDevExpressAccount: TdxNavBarGroup;
     nbgMicrosoftAccount: TdxNavBarGroup;
@@ -98,11 +98,11 @@ type
     nbiMailAccount1: TdxNavBarItem;
     nbiMailAccount2: TdxNavBarItem;
     nbiMailAccount3: TdxNavBarItem;
-    nbiFileterMailAll: TdxNavBarItem;
-    nbiFileterMailRead: TdxNavBarItem;
-    nbiFileterMailToday: TdxNavBarItem;
-    nbiFileterMailYesterday: TdxNavBarItem;
-    nbiFileterMailImportance: TdxNavBarItem;
+    nbiFilterMailAll: TdxNavBarItem;
+    nbiFilterMailRead: TdxNavBarItem;
+    nbiFilterMailToday: TdxNavBarItem;
+    nbiFilterMailYesterday: TdxNavBarItem;
+    nbiFilterMailImportance: TdxNavBarItem;
     lgContentCenter: TdxLayoutGroup;
     dxLayoutGroup1: TdxLayoutGroup;
     dxNavBar1Item1: TdxNavBarItem;
@@ -110,8 +110,8 @@ type
     dxNavBar1Item3: TdxNavBarItem;
     dxNavBar1Group1: TdxNavBarGroup;
     dxNavBar1Group1Control: TdxNavBarGroupControl;
-    lcContacsGroup_Root: TdxLayoutGroup;
-    lcContacs: TdxLayoutControl;
+    lcContactsGroup_Root: TdxLayoutGroup;
+    lcContacts: TdxLayoutControl;
     dxLayoutCheckBoxItem1: TdxLayoutCheckBoxItem;
     dxLayoutCheckBoxItem2: TdxLayoutCheckBoxItem;
     dxLayoutCheckBoxItem3: TdxLayoutCheckBoxItem;
@@ -188,7 +188,7 @@ type
     cxGrid1DBTableView1HomePhone: TcxGridDBColumn;
     ContactsTitleColumn: TcxGridDBColumn;
     procedure nbgContactClick(Sender: TObject);
-    procedure nbgShedulerClick(Sender: TObject);
+    procedure nbgSchedulerClick(Sender: TObject);
     procedure FormResize(Sender: TObject);
     procedure dxNavBar1OnCustomDrawLinkSelection(Sender: TObject; ACanvas: TCanvas; AViewInfo: TdxNavBarLinkViewInfo;
       var AHandled: Boolean);
@@ -212,14 +212,14 @@ type
     procedure nbiFilterContactsSalesClick(Sender: TObject);
     procedure nbiFilterContactsEngineeringClick(Sender: TObject);
     procedure nbiFilterContactsShippingClick(Sender: TObject);
-    procedure nbiFileterMailReadClick(Sender: TObject);
-    procedure nbiFileterMailAllClick(Sender: TObject);
-    procedure nbiFileterMailImportanceClick(Sender: TObject);
-    procedure nbiFileterMailTodayClick(Sender: TObject);
-    procedure nbiFileterMailYesterdayClick(Sender: TObject);
+    procedure nbiFilterMailReadClick(Sender: TObject);
+    procedure nbiFilterMailAllClick(Sender: TObject);
+    procedure nbiFilterMailImportanceClick(Sender: TObject);
+    procedure nbiFilterMailTodayClick(Sender: TObject);
+    procedure nbiFilterMailYesterdayClick(Sender: TObject);
     procedure dxNavBar1GetOverlaySize(Sender: TObject; var AWidth, AHeight: Integer);
     procedure nbgContactSelectedLinkChanged(Sender: TObject);
-    procedure nbgShedulerSelectedLinkChanged(Sender: TObject);
+    procedure nbgSchedulerSelectedLinkChanged(Sender: TObject);
     procedure nbgMailSelectedLinkChanged(Sender: TObject);
     procedure DataSource1DataChange(Sender: TObject; Field: TField);
     procedure cxGrid1DBTableView1PhonesGetDataText(Sender: TcxCustomGridTableItem; ARecordIndex: Integer;
@@ -248,7 +248,7 @@ type
     procedure LookAndFeelChanged;
     procedure PopulateRichWithChildrenMailsList;
     procedure SetColumnsCaptions;
-    procedure SetContatcsFilterValues(const AValues: array of string);
+    procedure SetContactsFilterValues(const AValues: array of string);
     procedure SetMailFilterValues(AColumn: TcxGridDBColumn; const AValues: array of Variant);
     procedure UpdateMailPreview;
   public
@@ -461,7 +461,7 @@ end;
 procedure TfrmHamburgerMenu.tvMainFocusedRecordChanged(Sender: TcxCustomGridTableView; APrevFocusedRecord,
   AFocusedRecord: TcxCustomGridRecord; ANewItemRecordFocusingChanged: Boolean);
 begin
-  UpdatemailPreview;
+  UpdateMailPreview;
 end;
 
 procedure TfrmHamburgerMenu.UpdateMailPreview;
@@ -526,10 +526,10 @@ end;
 
 procedure TfrmHamburgerMenu.SetColumnsCaptions;
 
-  procedure SetCaptions(AFromCpt, ADateCpt: string);
+  procedure SetCaptions(AFromCaption, ADateCaption: string);
   begin
-    dbcFrom.Caption := AFromCpt;
-    dbcDateOnly.Caption := ADateCpt;
+    dbcFrom.Caption := AFromCaption;
+    dbcDateOnly.Caption := ADateCaption;
   end;
 
 begin
@@ -537,7 +537,7 @@ begin
   dbcDate.Caption := cxGetResourceString(@sDate);
 end;
 
-procedure TfrmHamburgerMenu.SetContatcsFilterValues(const AValues: array of string);
+procedure TfrmHamburgerMenu.SetContactsFilterValues(const AValues: array of string);
 
   procedure SetFilterValues(ADataController: TcxGridDBDataController; AColumn: TcxGridDBColumn;
     const AValues: array of string);
@@ -607,7 +607,7 @@ begin
       dxLayoutCxLookAndFeel2.ItemOptions.CaptionOptions.TextColor := dxNavBar1.DefaultStyles.Item.Font.Color;
       dxLayoutCxLookAndFeel2.ItemOptions.CaptionOptions.TextDisabledColor := dxLayoutCxLookAndFeel2.ItemOptions.CaptionOptions.TextColor;
       dxLayoutCxLookAndFeel2.ItemOptions.CaptionOptions.TextHotColor := dxLayoutCxLookAndFeel2.ItemOptions.CaptionOptions.TextColor;
-      dxLayoutStandardLookAndFeel1.GroupOptions.Color := dxNavBar1.ViewInfo.BgBackColor;
+      dxLayoutStandardLookAndFeel1.GroupOptions.Color := dxNavBar1.ViewInfo.BgBackColor; 
     end);
   FLinkSelectionColor := dxNavBar1.DefaultStyles.Item.Font.Color;
 end;
@@ -638,7 +638,7 @@ begin
   Scheduler.GoToDate(Scheduler.SelectedDays[0], vmMonth);
 
   LookAndFeelChanged;
-  UpdatemailPreview;
+  UpdateMailPreview;
 end;
 
 procedure TfrmHamburgerMenu.FormResize(Sender: TObject);
@@ -656,7 +656,7 @@ begin
         liTopMenu.Control := dxNavBar1;
         liTopMenu.ControlOptions.ShowBorder := False;
         dxNavBar1.OptionsBehavior.HamburgerMenu.DisplayMode := dmOverlayMinimal;
-        dxLayoutStandardLookAndFeel1.GroupOptions.Color := dxNavBar1.ViewInfo.BgBackColor;
+        dxLayoutStandardLookAndFeel1.GroupOptions.Color := dxNavBar1.ViewInfo.BgBackColor; 
       end
       else
       begin
@@ -769,7 +769,7 @@ begin
   nbgMail.SelectedLinkIndex := -1;
 end;
 
-procedure TfrmHamburgerMenu.nbgShedulerClick(Sender: TObject);
+procedure TfrmHamburgerMenu.nbgSchedulerClick(Sender: TObject);
 begin
   PerformWithLayoutLocking(procedure
     begin
@@ -779,74 +779,74 @@ begin
     end);
 end;
 
-procedure TfrmHamburgerMenu.nbgShedulerSelectedLinkChanged(Sender: TObject);
+procedure TfrmHamburgerMenu.nbgSchedulerSelectedLinkChanged(Sender: TObject);
 begin
-  nbgSheduler.SelectedLinkIndex := -1;
+  nbgScheduler.SelectedLinkIndex := -1;
 end;
 
-procedure TfrmHamburgerMenu.nbiFileterMailAllClick(Sender: TObject);
+procedure TfrmHamburgerMenu.nbiFilterMailAllClick(Sender: TObject);
 begin
   tvMain.DataController.Filter.Root.Clear;
 end;
 
-procedure TfrmHamburgerMenu.nbiFileterMailImportanceClick(Sender: TObject);
+procedure TfrmHamburgerMenu.nbiFilterMailImportanceClick(Sender: TObject);
 begin
   SetMailFilterValues(dbcPriority, [2]);
 end;
 
-procedure TfrmHamburgerMenu.nbiFileterMailReadClick(Sender: TObject);
+procedure TfrmHamburgerMenu.nbiFilterMailReadClick(Sender: TObject);
 begin
   SetMailFilterValues(dbcIsUnread, [0]);
 end;
 
-procedure TfrmHamburgerMenu.nbiFileterMailTodayClick(Sender: TObject);
+procedure TfrmHamburgerMenu.nbiFilterMailTodayClick(Sender: TObject);
 begin
   SetMailFilterValues(dbcDate, [Date]);
 end;
 
-procedure TfrmHamburgerMenu.nbiFileterMailYesterdayClick(Sender: TObject);
+procedure TfrmHamburgerMenu.nbiFilterMailYesterdayClick(Sender: TObject);
 begin
   SetMailFilterValues(dbcDate, [Date - 1]);
 end;
 
 procedure TfrmHamburgerMenu.nbiFilterContactsAllClick(Sender: TObject);
 begin
-  SetContatcsFilterValues([]);
+  SetContactsFilterValues([]);
 end;
 
 procedure TfrmHamburgerMenu.nbiFilterContactsEngineeringClick(Sender: TObject);
 begin
-  SetContatcsFilterValues(['Engin']);
+  SetContactsFilterValues(['Engin']);
 end;
 
 procedure TfrmHamburgerMenu.nbiFilterContactsHumanResourcesClick(Sender: TObject);
 begin
-  SetContatcsFilterValues(['HR']);
+  SetContactsFilterValues(['HR']);
 end;
 
 procedure TfrmHamburgerMenu.nbiFilterContactsITClick(Sender: TObject);
 begin
-  SetContatcsFilterValues(['Admin']);
+  SetContactsFilterValues(['Admin']);
 end;
 
 procedure TfrmHamburgerMenu.nbiFilterContactsManagementClick(Sender: TObject);
 begin
-  SetContatcsFilterValues(['CEO', 'COO', 'Director']);
+  SetContactsFilterValues(['CEO', 'COO', 'Director']);
 end;
 
 procedure TfrmHamburgerMenu.nbiFilterContactsSalesClick(Sender: TObject);
 begin
-  SetContatcsFilterValues(['Sales', 'sales']);
+  SetContactsFilterValues(['Sales', 'sales']);
 end;
 
 procedure TfrmHamburgerMenu.nbiFilterContactsShippingClick(Sender: TObject);
 begin
-  SetContatcsFilterValues(['Shipp']);
+  SetContactsFilterValues(['Shipping']);
 end;
 
 procedure TfrmHamburgerMenu.nbiFilterContactsSupportClick(Sender: TObject);
 begin
-  SetContatcsFilterValues(['Support']);
+  SetContactsFilterValues(['Support']);
 end;
 
 procedure TfrmHamburgerMenu.nbiSchedulerNewEventClick(Sender: TObject);

@@ -91,13 +91,10 @@ implementation
 {$R *.dfm}
 
 uses
-{$IFDEF DELPHI16}
-  System.UITypes,
-{$ENDIF}
   MainUnit, cxGeometry, dxFilterPopupWindow, LocalizationStrs, dxFilterValueContainer;
 
 type
-  TdxCustomFilterValueContainerAcccess = class(TdxCustomFilterValueContainer);
+  TdxCustomFilterValueContainerAccess = class(TdxCustomFilterValueContainer);
   TdxTileBarItemAccess = class(TdxTileBarItem);
   TdxTileControlDetailSiteAccess = class(TdxTileControlDetailSite);
   TFilterPopupAccess = class(TdxFilterPopupWindow);
@@ -125,7 +122,7 @@ var
 begin
   Sender.Styles.GetContentParams(nil, AViewParams);
   AFilterPopup := TFilterPopupAccess(Sender.GridView.Controller.FilterPopup);
-  AStyle := TdxCustomFilterValueContainerAcccess(AFilterPopup.FilterValueContainer).Style;
+  AStyle := TdxCustomFilterValueContainerAccess(AFilterPopup.FilterValueContainer).Style;
   AStyle.Font := AViewParams.Font;
   AStyle.Font.Color := AViewParams.TextColor;
 end;

@@ -13,7 +13,7 @@ uses
   Vcl.ActnList, dxRibbon, ColorPicker, MainData, dxSkinsdxBarPainter,
   dxRichEdit.NativeApi, dxRichEdit.Control.SpellChecker, dxRichEdit.Dialogs.EventArgs,
   dxLayoutContainer, dxLayoutLookAndFeels,
-  dxRichEdit.Control.Core, dxLayoutControl;
+  dxRichEdit.Control.Core, dxLayoutControl, System.Actions;
 
 type
   TfrmRichEditDocumentRestrictions = class(TfrmRichEditFrame)
@@ -263,7 +263,7 @@ type
     procedure UpdateCharacterFormatting;
     procedure UpdateCharacterStyle;
     procedure UpdateContentTabs;
-    procedure UpdateHeadersFoters;
+    procedure UpdateHeadersFooters;
     procedure UpdateHyperlinks;
     procedure UpdateInsertNew;
     procedure UpdateMultiLevel;
@@ -361,7 +361,7 @@ begin
 //  RichEditControl.Options.DocumentCapabilities.
 end;
 
-procedure TfrmRichEditDocumentRestrictions.UpdateHeadersFoters;
+procedure TfrmRichEditDocumentRestrictions.UpdateHeadersFooters;
 begin
   RichEditControl.Options.DocumentCapabilities.HeadersFooters := GetOptionValue(cbHeadersFooters.Checked);
 end;
@@ -388,7 +388,7 @@ begin
   UpdateCharacterFormatting;
   UpdateCharacterStyle;
   UpdateContentTabs;
-  UpdateHeadersFoters;
+  UpdateHeadersFooters;
   UpdateHyperlinks;
   UpdateInsertNew;
   UpdateMultiLevel;

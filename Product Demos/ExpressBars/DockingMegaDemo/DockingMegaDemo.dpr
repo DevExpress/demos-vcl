@@ -7,7 +7,7 @@ program DockingMegaDemo;
 
 uses
   Vcl.Forms, dxUIAClasses,
-  dxSplashUnit in '..\..\Common\dxSplashUnit.pas' {TfrmSplash},
+  dxSplashUnit in '..\..\Common\dxSplashUnit.pas',
   DockingMegaDemoMain in 'DockingMegaDemoMain.pas' {DockingMegaDemoMainForm},
   dxAboutDemo in '..\..\Common\dxAboutDemo.pas' {dxAboutDemoForm},
   dxDemoUtils in '..\..\Common\dxDemoUtils.pas';

@@ -10,17 +10,15 @@ object frmPDFViewer: TfrmPDFViewer
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = True
   Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  PixelsPerInch = 96
   TextHeight = 13
   object dxRibbon1: TdxRibbon
     Left = 0
     Top = 0
     Width = 1184
-    Height = 165
+    Height = 173
     ApplicationButton.Visible = False
     BarManager = dxBarManager1
     CapitalizeTabCaptions = bDefault
@@ -33,6 +31,7 @@ object frmPDFViewer: TfrmPDFViewer
     TabAreaToolbar.Toolbar = dxBarManager1Bar2
     TabOrder = 0
     TabStop = False
+    ExplicitWidth = 1180
     object dxRibbonTabHome: TdxRibbonTab
       Active = True
       Caption = 'Demo'
@@ -56,9 +55,6 @@ object frmPDFViewer: TfrmPDFViewer
         item
           Caption = 'View'
           ToolbarName = 'dxBarZoom'
-        end
-        item
-          Caption = 'sdasdas'
         end
         item
           ToolbarName = 'barExport'
@@ -91,9 +87,9 @@ object frmPDFViewer: TfrmPDFViewer
   end
   object dxPDFViewer1: TdxPDFViewer
     Left = 0
-    Top = 165
+    Top = 173
     Width = 1184
-    Height = 480
+    Height = 470
     Align = alClient
     OptionsFindPanel.Alignment = fpalTopRight
     OptionsNavigationPane.Attachments.Glyph.SourceDPI = 96
@@ -180,14 +176,14 @@ object frmPDFViewer: TfrmPDFViewer
     OnSearchProgress = dxPDFViewer1SearchProgress
     OnSelectedPageChanged = dxPDFViewer1SelectedPageChanged
     OnZoomFactorChanged = dxPDFViewer1ZoomFactorChanged
-    ExplicitTop = 132
-    ExplicitHeight = 513
+    ExplicitWidth = 1180
+    ExplicitHeight = 469
   end
   object dxRibbonStatusBar1: TdxRibbonStatusBar
     Left = 0
-    Top = 645
+    Top = 643
     Width = 1184
-    Height = 25
+    Height = 27
     Color = clBtnFace
     Panels = <
       item
@@ -230,11 +226,12 @@ object frmPDFViewer: TfrmPDFViewer
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
+    ParentFont = False
     object dxRibbonStatusBar1Container5: TdxStatusBarContainerControl
       Left = 763
       Top = 0
       Width = 152
-      Height = 25
+      Height = 27
       object tbZoom: TdxZoomTrackBar
         Left = 0
         Top = 0
@@ -242,7 +239,7 @@ object frmPDFViewer: TfrmPDFViewer
         Properties.FirstRange.Frequency = 5
         Properties.OnChange = tbZoomPropertiesChange
         TabOrder = 0
-        Height = 25
+        Height = 27
         Width = 152
       end
     end
@@ -250,7 +247,7 @@ object frmPDFViewer: TfrmPDFViewer
       Left = 1063
       Top = 0
       Width = 102
-      Height = 25
+      Height = 27
     end
   end
   object dxBarManager1: TdxBarManager
@@ -478,7 +475,7 @@ object frmPDFViewer: TfrmPDFViewer
     object dxBarInfo: TdxBar
       Caption = 'DevExpress'
       CaptionButtons = <>
-      DockedLeft = 949
+      DockedLeft = 948
       DockedTop = 0
       FloatLeft = 1105
       FloatTop = 8
@@ -909,8 +906,8 @@ object frmPDFViewer: TfrmPDFViewer
       Caption = 'New Skin Chooser'
       Category = 0
       Visible = ivAlways
-      ItemLinks = <>
       OnSkinChanged = dxSkinChooserGalleryItem1SkinChanged
+      ItemLinks = <>
     end
     object btnAbout: TdxBarLargeButton
       Caption = 'About'
@@ -1046,6 +1043,7 @@ object frmPDFViewer: TfrmPDFViewer
       Hint = 'New Item'
       Visible = ivAlways
       PropertiesClassName = 'TcxProgressBarProperties'
+      Properties.PeakSize = 3
       Properties.PeakValue = 100.000000000000000000
       InternalEditValue = nil
     end
@@ -1055,6 +1053,7 @@ object frmPDFViewer: TfrmPDFViewer
       Hint = 'New Item'
       Visible = ivAlways
       PropertiesClassName = 'TcxProgressBarProperties'
+      Properties.PeakSize = 3
     end
     object bbAbortTextSearch: TdxBarButton
       Caption = 'Abort'
@@ -1390,7 +1389,7 @@ object frmPDFViewer: TfrmPDFViewer
         item
           Position = ipContinuesRow
           Visible = True
-          ItemName = 'dxBarLargeButtonZoomtoPageLevel'
+          ItemName = 'dxBarLargeButtonZoomToPageLevel'
         end
         item
           Position = ipContinuesRow
@@ -1475,7 +1474,7 @@ object frmPDFViewer: TfrmPDFViewer
       SyncImageIndex = False
       ImageIndex = 9
     end
-    object dxBarLargeButtonZoomtoPageLevel: TdxBarLargeButton
+    object dxBarLargeButtonZoomToPageLevel: TdxBarLargeButton
       Action = dxPDFViewerZoomToPageLevelAction
       Category = 1
       ButtonStyle = bsChecked
@@ -1555,7 +1554,7 @@ object frmPDFViewer: TfrmPDFViewer
         item
           Position = ipContinuesRow
           Visible = True
-          ItemName = 'dxBarLargeButtonZoomtoPageLevel'
+          ItemName = 'dxBarLargeButtonZoomToPageLevel'
         end
         item
           Position = ipContinuesRow
@@ -1935,12 +1934,14 @@ object frmPDFViewer: TfrmPDFViewer
   end
   object cxLookAndFeelController1: TcxLookAndFeelController
     Kind = lfOffice11
+    NativeStyle = False
     SkinName = 'UserSkin'
     Left = 888
     Top = 144
   end
   object dxSkinController1: TdxSkinController
     Kind = lfOffice11
+    NativeStyle = False
     SkinName = 'UserSkin'
     Left = 848
     Top = 144

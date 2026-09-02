@@ -7,19 +7,21 @@ inherited dxNavBarControlDemoUnitForm1: TdxNavBarControlDemoUnitForm1
   inherited lcMain: TdxLayoutControl
     Width = 853
     Height = 538
+    ExplicitWidth = 853
+    ExplicitHeight = 538
     object cxGroupBox3: TcxGroupBox [0]
       Left = 10
       Top = 10
       PanelStyle.Active = True
       ParentBackground = False
       ParentColor = False
-      Style.Color = 16053234
+      Style.Color = clBtnFace
       TabOrder = 0
       Height = 480
-      Width = 667
+      Width = 669
       object cxImage1: TcxImage
-        Left = 3
-        Top = 3
+        Left = 2
+        Top = 2
         Align = alClient
         Properties.FitMode = ifmProportionalStretch
         Properties.ReadOnly = True
@@ -29,20 +31,22 @@ inherited dxNavBarControlDemoUnitForm1: TdxNavBarControlDemoUnitForm1
         Style.HotTrack = False
         TabOrder = 0
         Transparent = True
-        Height = 373
-        Width = 352
+        ExplicitWidth = 354
+        Height = 375
+        Width = 356
       end
       object dxNavBar1: TdxNavBar
-        Left = 355
-        Top = 3
+        Left = 358
+        Top = 2
         Width = 309
-        Height = 373
+        Height = 375
         Align = alRight
         ActiveGroupIndex = 0
         TabOrder = 1
         View = 20
         OptionsBehavior.Common.AllowChildGroups = True
         OptionsBehavior.Common.AllowExpandAnimation = True
+        ExplicitLeft = 356
         object dxNavBar1Group1: TdxNavBarGroup
           Caption = 'Properties'
           SelectedLinkIndex = -1
@@ -96,7 +100,7 @@ inherited dxNavBarControlDemoUnitForm1: TdxNavBarControlDemoUnitForm1
         end
         object dxNavBar1Group2Control: TdxNavBarGroupControl
           Left = 2
-          Top = 73
+          Top = 357
           Width = 288
           Height = 298
           Caption = 'dxNavBar1Group2Control'
@@ -220,7 +224,7 @@ inherited dxNavBarControlDemoUnitForm1: TdxNavBarControlDemoUnitForm1
         end
         object gcFilters: TdxNavBarGroupControl
           Left = 2
-          Top = -217
+          Top = 61
           Width = 288
           Height = 198
           Caption = 'gcFilters'
@@ -307,18 +311,21 @@ inherited dxNavBarControlDemoUnitForm1: TdxNavBarControlDemoUnitForm1
             Left = 23
             Top = 8
             Caption = 'R:'
+            TabOrder = 3
             Transparent = True
           end
           object cxLabel2: TcxLabel
             Left = 23
             Top = 33
             Caption = 'G:'
+            TabOrder = 4
             Transparent = True
           end
           object cxLabel3: TcxLabel
             Left = 23
             Top = 58
             Caption = 'B:'
+            TabOrder = 5
             Transparent = True
           end
         end
@@ -361,20 +368,22 @@ inherited dxNavBarControlDemoUnitForm1: TdxNavBarControlDemoUnitForm1
             Left = 22
             Top = 31
             Caption = 'Contrast:'
+            TabOrder = 2
             Transparent = True
           end
           object cxLabel5: TcxLabel
             Left = 23
             Top = 8
             Caption = 'Brightness:'
+            TabOrder = 3
             Transparent = True
           end
         end
       end
       object dxGalleryControl2: TdxGalleryControl
-        Left = 3
-        Top = 376
-        Width = 661
+        Left = 2
+        Top = 377
+        Width = 665
         Height = 101
         Align = alBottom
         AutoSizeMode = asAutoHeight
@@ -387,6 +396,7 @@ inherited dxNavBarControlDemoUnitForm1: TdxNavBarControlDemoUnitForm1
         OptionsView.Item.Text.AlignVert = vaCenter
         TabOrder = 2
         OnItemClick = dxGalleryControl2ItemClick
+        ExplicitWidth = 663
         object dxGalleryControl2Group1: TdxGalleryControlGroup
           Caption = 'New Group'
           ShowCaption = False

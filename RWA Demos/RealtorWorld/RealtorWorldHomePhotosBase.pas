@@ -11,7 +11,7 @@ uses
 type
   TfrmHomePhotosBase = class(TfrmBase)
     tcHomePhotos: TdxTileControl;
-    tcHomePhotosdxTileControlGroup1: TdxTileControlGroup;
+    tcHomePhotosControlGroup1: TdxTileControlGroup;
     cxSplitter1: TcxSplitter;
     procedure cxSplitter1BeforeClose(Sender: TObject; var AllowClose: Boolean);
   private

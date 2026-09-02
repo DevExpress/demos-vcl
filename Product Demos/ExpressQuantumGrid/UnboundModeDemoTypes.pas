@@ -16,7 +16,7 @@ const
   biBoardHeight = 45;
 
   imSmile = 2;
-  imAstonisment = 3;
+  imAstonishment = 3;
   imWon = 4;
   imLost = 5;
 

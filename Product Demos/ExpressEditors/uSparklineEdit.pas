@@ -180,8 +180,8 @@ procedure TfrmSparklineEdit.InitializeData;
 const
   ASeriesCount = 2;
   AIntervalCount = 20;
-  Xmin = 0;
-  Xmax = 20;
+  XMin = 0;
+  XMax = 20;
 var
   AProperties: TdxSparklineProperties;
   ADataController: TcxCustomDataController;
@@ -189,7 +189,7 @@ var
   dX, ACurrentX: Real;
 begin
   AProperties := SparklineEdit.Properties as TdxSparklineProperties;
-  dX := (Xmax - Xmin) / AIntervalCount;
+  dX := (XMax - XMin) / AIntervalCount;
   for ASeriesIndex := 0 to ASeriesCount - 1 do
   begin
     AProperties.Series.Add;
@@ -199,7 +199,7 @@ begin
       ADataController.RecordCount := AIntervalCount + 1;
       for AIndex := 0 to AIntervalCount do
       begin
-        ACurrentX := Xmin + dX * AIndex;
+        ACurrentX := XMin + dX * AIndex;
         ADataController.Values[AIndex, AProperties.Series[ASeriesIndex].DataIndex] := GetValue(ACurrentX, ASeriesIndex);
       end;
     finally
@@ -219,7 +219,7 @@ procedure TfrmSparklineEdit.SetSparklineEditProperties;
   end;
 
 var
-  ASeria: TdxSparklineSeries;
+  ASeries: TdxSparklineSeries;
 begin
   if FSettingPropertiesInProcess then
     Exit;
@@ -228,31 +228,31 @@ begin
   try
     SparklineEdit.Properties.Antialiasing := acAntialiasing.Checked;
 
-    ASeria := SparklineEdit.Properties.Series[0];
-    ASeria.Color := edColor1.ColorValue;
-    ASeria.LineWidth := ScaleFactor.Apply(edLineWidth1.Value);
-    ASeria.MarkerSize := ScaleFactor.Apply(edMarkerSize1.Value);
-    ASeria.SeriesType := TdxSparklineSeriesType(cmbSeriesType1.ItemIndex);
-    ASeria.StartPointColor := InternalGetColor(acStartPoint1.Checked, liStartPointColor1);
-    ASeria.EndPointColor := InternalGetColor(acEndPoint1.Checked, liEndPointColor1);
-    ASeria.MinPointColor := InternalGetColor(acMinPoint1.Checked, liMinPointColor1);
-    ASeria.MaxPointColor := InternalGetColor(acMaxPoint1.Checked, liMaxPointColor1);
+    ASeries := SparklineEdit.Properties.Series[0];
+    ASeries.Color := edColor1.ColorValue;
+    ASeries.LineWidth := ScaleFactor.Apply(edLineWidth1.Value);
+    ASeries.MarkerSize := ScaleFactor.Apply(edMarkerSize1.Value);
+    ASeries.SeriesType := TdxSparklineSeriesType(cmbSeriesType1.ItemIndex);
+    ASeries.StartPointColor := InternalGetColor(acStartPoint1.Checked, liStartPointColor1);
+    ASeries.EndPointColor := InternalGetColor(acEndPoint1.Checked, liEndPointColor1);
+    ASeries.MinPointColor := InternalGetColor(acMinPoint1.Checked, liMinPointColor1);
+    ASeries.MaxPointColor := InternalGetColor(acMaxPoint1.Checked, liMaxPointColor1);
     if not FShowMarkers1WasChanged then
       acShowMarkers1.Checked := cmbSeriesType1.ItemIndex = 1;
-    ASeria.MarkerColor := InternalGetColor(acShowMarkers1.Checked, liMarkerPointColor1);
+    ASeries.MarkerColor := InternalGetColor(acShowMarkers1.Checked, liMarkerPointColor1);
 
-    ASeria := SparklineEdit.Properties.Series[1];
-    ASeria.Color := edColor2.ColorValue;
-    ASeria.LineWidth := ScaleFactor.Apply(edLineWidth2.Value);
-    ASeria.MarkerSize := ScaleFactor.Apply(edMarkerSize2.Value);
-    ASeria.SeriesType := TdxSparklineSeriesType(cmbSeriesType2.ItemIndex);
-    ASeria.StartPointColor := InternalGetColor(acStartPoint2.Checked, liStartPointColor2);
-    ASeria.EndPointColor := InternalGetColor(acEndPoint2.Checked, liEndPointColor2);
-    ASeria.MinPointColor := InternalGetColor(acMinPoint2.Checked, liMinPointColor2);
-    ASeria.MaxPointColor := InternalGetColor(acMaxPoint2.Checked, liMaxPointColor2);
+    ASeries := SparklineEdit.Properties.Series[1];
+    ASeries.Color := edColor2.ColorValue;
+    ASeries.LineWidth := ScaleFactor.Apply(edLineWidth2.Value);
+    ASeries.MarkerSize := ScaleFactor.Apply(edMarkerSize2.Value);
+    ASeries.SeriesType := TdxSparklineSeriesType(cmbSeriesType2.ItemIndex);
+    ASeries.StartPointColor := InternalGetColor(acStartPoint2.Checked, liStartPointColor2);
+    ASeries.EndPointColor := InternalGetColor(acEndPoint2.Checked, liEndPointColor2);
+    ASeries.MinPointColor := InternalGetColor(acMinPoint2.Checked, liMinPointColor2);
+    ASeries.MaxPointColor := InternalGetColor(acMaxPoint2.Checked, liMaxPointColor2);
     if not FShowMarkers2WasChanged then
       acShowMarkers2.Checked := cmbSeriesType2.ItemIndex = 1;
-    ASeria.MarkerColor := InternalGetColor(acShowMarkers2.Checked, liMarkerPointColor2);
+    ASeries.MarkerColor := InternalGetColor(acShowMarkers2.Checked, liMarkerPointColor2);
   finally
     FSettingPropertiesInProcess := False;
   end;

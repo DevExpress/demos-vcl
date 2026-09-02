@@ -37,7 +37,7 @@ type
     FontDialog1: TFontDialog;
     flMain: TdxFormattedLabel;
     reBBCode: TcxRichEdit;
-    cbHyperlincColor: TcxColorComboBox;
+    cbHyperlinkColor: TcxColorComboBox;
     dxLayoutGroup9: TdxLayoutGroup;
     cbWordWrap: TdxLayoutCheckBoxItem;
     cbShowEndEllipsis: TdxLayoutCheckBoxItem;
@@ -81,7 +81,7 @@ type
     procedure acSupExecute(Sender: TObject);
     procedure acSubExecute(Sender: TObject);
     procedure reBBCodePropertiesEditValueChanged(Sender: TObject);
-    procedure cbHyperlincColorPropertiesEditValueChanged(Sender: TObject);
+    procedure cbHyperlinkColorPropertiesEditValueChanged(Sender: TObject);
     procedure cbWordWrapClick(Sender: TObject);
     procedure cbShowEndEllipsisClick(Sender: TObject);
     procedure lrbLeftClick(Sender: TObject);
@@ -253,9 +253,9 @@ begin
   reBBCode.SelStart := reBBCode.SelStart - 4;
 end;
 
-procedure TfrmFormattedLabel.cbHyperlincColorPropertiesEditValueChanged(Sender: TObject);
+procedure TfrmFormattedLabel.cbHyperlinkColorPropertiesEditValueChanged(Sender: TObject);
 begin
-  flMain.Properties.HyperlinkColor := cbHyperlincColor.ColorValue;
+  flMain.Properties.HyperlinkColor := cbHyperlinkColor.ColorValue;
 end;
 
 procedure TfrmFormattedLabel.cbShowEndEllipsisClick(Sender: TObject);

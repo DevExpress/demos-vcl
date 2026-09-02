@@ -1,5 +1,4 @@
 object dmMain: TdmMain
-  OldCreateOrder = False
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
   Height = 613
@@ -9055,7 +9054,6 @@ object dmMain: TdmMain
       Lookup = True
     end
     object mdModelsCylinders: TIntegerField
-      DisplayLabel = 'Cylinders'
       FieldName = 'Cylinders'
     end
     object mdModelsHorsepower: TWideStringField
@@ -9375,13 +9373,8 @@ object dmMain: TdmMain
     Left = 544
     Top = 184
     object GridViewRepositoryDBBandedTableView: TcxGridDBBandedTableView
-      Navigator.Buttons.CustomButtons = <>
-      ScrollbarAnnotations.CustomAnnotations = <>
       DataController.DataSource = dsTrademark
       DataController.KeyFieldNames = 'ID'
-      DataController.Summary.DefaultGroupSummaryItems = <>
-      DataController.Summary.FooterSummaryItems = <>
-      DataController.Summary.SummaryGroups = <>
       OptionsView.GroupByBox = False
       OptionsView.Header = False
       OptionsView.BandHeaders = False
@@ -45065,7 +45058,6 @@ object dmMain: TdmMain
       Visible = False
     end
     object mdCarOrdersCylinders: TIntegerField
-      DisplayLabel = 'Cylinders'
       FieldName = 'Cylinders'
     end
     object mdCarOrdersSalesDate: TDateField

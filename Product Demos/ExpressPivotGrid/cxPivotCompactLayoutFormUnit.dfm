@@ -6,7 +6,6 @@ inherited frmCompactLayout: TfrmCompactLayout
   OnShow = FormShow
   ExplicitWidth = 1027
   ExplicitHeight = 579
-  PixelsPerInch = 96
   TextHeight = 13
   inherited lcMain: TdxLayoutControl
     Width = 1027
@@ -14,8 +13,8 @@ inherited frmCompactLayout: TfrmCompactLayout
     ExplicitWidth = 1027
     ExplicitHeight = 579
     inherited DBPivotGrid: TcxDBPivotGrid
-      Left = 326
-      Width = 525
+      Left = 324
+      Width = 529
       Height = 518
       Customization.AvailableFieldsSorted = True
       Customization.Site = cxPivotGridDemoUnitForm.Owner
@@ -33,8 +32,8 @@ inherited frmCompactLayout: TfrmCompactLayout
       OptionsView.TotalsForSingleValues = True
       TabOrder = 1
       OnCustomization = DBPivotGridCustomization
-      ExplicitLeft = 326
-      ExplicitWidth = 525
+      ExplicitLeft = 324
+      ExplicitWidth = 529
       ExplicitHeight = 518
       inherited pgfCountry: TcxDBPivotGridField
         Hidden = True
@@ -117,7 +116,7 @@ inherited frmCompactLayout: TfrmCompactLayout
       PanelStyle.Active = True
       ParentBackground = False
       ParentColor = False
-      Style.Color = 16053234
+      Style.Color = clBtnFace
       TabOrder = 0
       Transparent = True
       Height = 518
@@ -139,7 +138,7 @@ inherited frmCompactLayout: TfrmCompactLayout
     inherited dxLayoutItem1: TdxLayoutItem
       Index = 2
     end
-    object lsplCutomizationForm: TdxLayoutSplitterItem
+    object lsplCustomizationForm: TdxLayoutSplitterItem
       Parent = lgMainGroup
       SizeOptions.AssignedValues = [sovSizableHorz, sovSizableVert]
       SizeOptions.SizableHorz = False

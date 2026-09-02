@@ -59,11 +59,11 @@ const
      (Name: 'Discount'; Area: faData), (Name: 'Extended Price'; Area: faData),
      (Name: 'Order'; Area: faRow), (Name: 'Product Name'; Area: faRow));
   Quantity: array[0..5] of TLayoutInfo =
-    ((Name: 'Order'; Area: fafilter), (Name: 'Unit Price'; Area: faFilter),
+    ((Name: 'Order'; Area: faFilter), (Name: 'Unit Price'; Area: faFilter),
      (Name: 'Discount'; Area: faFilter), (Name: 'Extended Price'; Area: faFilter),
      (Name: 'Quantity'; Area: faData), (Name: 'Product Name'; Area: faRow));
   UnitPrice: array[0..5] of TLayoutInfo =
-    ((Name: 'Order'; Area: fafilter), (Name: 'Quantity'; Area: faFilter),
+    ((Name: 'Order'; Area: faFilter), (Name: 'Quantity'; Area: faFilter),
      (Name: 'Discount'; Area: faFilter), (Name: 'Extended Price'; Area: faFilter),
      (Name: 'Unit Price'; Area: faData), (Name: 'Product Name'; Area: faRow));
 

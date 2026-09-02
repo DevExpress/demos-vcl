@@ -454,31 +454,31 @@ procedure TfrmWizardControlDemoMain.FormCreate(Sender: TObject);
   end;
 
 var
-  ASetupSettngsForm: TdxWizardControlDemoSetupForm;
+  ASetupSettingsForm: TdxWizardControlDemoSetupForm;
 begin
   FInstallingItems := TStringList.Create;
   mmEULA.Lines.LoadFromFile(Application.GetNamePath + sdxEULAPath);
 
-  ASetupSettngsForm := TdxWizardControlDemoSetupForm.Create(nil);
+  ASetupSettingsForm := TdxWizardControlDemoSetupForm.Create(nil);
   try
-    if ASetupSettngsForm.ShowModal = mrOk then
+    if ASetupSettingsForm.ShowModal = mrOk then
     begin
-      wcMain.OptionsAnimate.TransitionEffect := ASetupSettngsForm.TransitionEffect;
-      wcMain.ViewStyle := ASetupSettngsForm.ViewStyle;
-      wcMain.OptionsViewStyleAero.EnableTitleAero := not ASetupSettngsForm.SkinForm;
+      wcMain.OptionsAnimate.TransitionEffect := ASetupSettingsForm.TransitionEffect;
+      wcMain.ViewStyle := ASetupSettingsForm.ViewStyle;
+      wcMain.OptionsViewStyleAero.EnableTitleAero := not ASetupSettingsForm.SkinForm;
       if wcMain.ViewStyle = wcvsAero then
         SetupAeroStyle;
-      if ASetupSettngsForm.dxSetupFormLayoutControlGroup_Root.LayoutLookAndFeel is TdxLayoutCxLookAndFeel then
+      if ASetupSettingsForm.dxSetupFormLayoutControlGroup_Root.LayoutLookAndFeel is TdxLayoutCxLookAndFeel then
         SetupLayoutLookAndFeel(dxLayoutCxLookAndFeel)
       else
         SetupLayoutLookAndFeel(dxLayoutStandardLookAndFeel);
-      if ASetupSettngsForm.SkinForm then
+      if ASetupSettingsForm.SkinForm then
         FSkinController := TdxSkinController.Create(Self);
     end
     else
       FSilentClose := True;
   finally
-    ASetupSettngsForm.Free;
+    ASetupSettingsForm.Free;
   end;
 end;
 

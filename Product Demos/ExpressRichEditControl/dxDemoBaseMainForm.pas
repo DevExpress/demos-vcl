@@ -26,7 +26,8 @@ uses
   dxLayoutControl, dxLayoutcxEditAdapters, dxLayoutLookAndFeels, dxPScxDBEditorLnks, dxPSTextLnk, dxPSdxLCLnk, 
   dxRibbonCustomizationForm, dxSkinsCore,  dxScreenTip, dxCustomHint, cxHint, cxImageList, cxImage, dxLayoutControlAdapters, 
   cxButtons, dxSpellCheckerUtils,  dxRibbonBackstageView, dxDemoPrintFrame, cxScrollBox, dxGallery, dxGalleryControl,
-  dxRibbonBackstageViewGalleryControl, dxBevel, cxGroupBox, dxPSdxSpreadSheetLnk;
+  dxRibbonBackstageViewGalleryControl, dxBevel, cxGroupBox, dxPSdxSpreadSheetLnk, dxPSRichEditControlLnk,
+  System.Actions, System.ImageList;
 
 const
   dxFirstNavBarGroupIndex = 1;
@@ -310,7 +311,7 @@ end;
 
 procedure TfrmMainBase.UpdateBaseMenuOptions;
 const
-  AItemVisibile: array[Boolean] of TdxBarItemVisible = (ivNever, ivAlways);
+  AItemVisible: array[Boolean] of TdxBarItemVisible = (ivNever, ivAlways);
 
   procedure CheckPrintAndExportCaption;
   begin
@@ -322,12 +323,12 @@ const
   end;
 
 begin
-  biExportTo.Visible := AItemVisibile[IsExportOptionsAvailable];
+  biExportTo.Visible := AItemVisible[IsExportOptionsAvailable];
   if IsPrintOptionsAvailable then
   begin
     biPrintPreview.Visible := ivAlways;
     biPrint.Visible := ivAlways;
-    biPageSetup.Visible := AItemVisibile[NeedPageSetup];
+    biPageSetup.Visible := AItemVisible[NeedPageSetup];
   end
   else
   begin

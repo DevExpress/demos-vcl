@@ -10,7 +10,7 @@ uses
   Vcl.Forms, dxUIAClasses,
   dxPScxTLLnk,
   cxFilter,
-  dxSplashUnit in '..\Common\dxSplashUnit.pas' {TfrmSplash},
+  dxSplashUnit in '..\Common\dxSplashUnit.pas',
   cxCustomTreeListBaseFormUnit in 'cxCustomTreeListBaseFormUnit.pas' {cxCustomTreeListDemoUnitForm},
   cxUnboundTreeListBaseFormUnit in 'cxUnboundTreeListBaseFormUnit.pas' {cxUnboundTreeListDemoUnitForm},
   cxTreeListPlanetsFormUnit in 'cxTreeListPlanetsFormUnit.pas' {frmPlanets},

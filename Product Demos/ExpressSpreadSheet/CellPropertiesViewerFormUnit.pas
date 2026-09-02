@@ -18,7 +18,10 @@ uses
   cxMaskEdit, cxDropDownEdit, dxSpreadSheet, dxLayoutControl, dxCore, dxCoreClasses, dxHashUtils,
   dxSpreadSheetCoreHistory, dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules,
   dxSpreadSheetPrinting, cxClasses, dxSpreadSheetContainers,
-  dxSpreadSheetHyperlinks, dxSpreadSheetUtils, Vcl.ExtCtrls, dxSpreadSheetStyles;
+  dxSpreadSheetHyperlinks, dxSpreadSheetUtils, Vcl.ExtCtrls, dxSpreadSheetStyles, dxSpreadSheetCoreFormulas,
+  dxSpreadSheetCoreStyles, dxSpreadSheetCoreStrs, dxSpreadSheetFormattedTextUtils, cxFilter, dxScrollbarAnnotations,
+  Vcl.ExtActns, System.Actions, Vcl.ActnList, Vcl.StdActns, cxSplitter, dxSpreadSheetFormulaBar, cxTrackBar,
+  dxZoomTrackBar;
 
 type
   { TdxCustomCellPersistent }
@@ -310,7 +313,7 @@ begin
   Result := True;
 end;
 
-{ TdxSpreaqdSheetRangeAdapter }
+{ TdxCellPersistent }
 
 constructor TdxCellPersistent.Create(ASpreadSheet: TdxSpreadSheet);
 begin
@@ -325,7 +328,7 @@ begin
   FreeAndNil(FStyle);
 end;
 
-{ TdxSpreadSheetCustomCellPersistent }
+{ TdxCustomCellPersistent }
 
 constructor TdxCustomCellPersistent.Create(ASpreadSheet: TdxSpreadSheet);
 begin

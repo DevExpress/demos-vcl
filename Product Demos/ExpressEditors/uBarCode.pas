@@ -187,7 +187,7 @@ begin
       case tcMain.TabIndex of
         0: memText.Text := '01234-56789';
         1, 3: memText.Text := 'ABC-1234';
-        2, 4, 5: memText.Text := 'Abc-123';
+        2, 4, 5: memText.Text := 'Abc-123'; 
         6, 11: memText.Text := '0123456';
         7, 8, 9: memText.Text := '012345678901';
         10: memText.Text := '01234567890';

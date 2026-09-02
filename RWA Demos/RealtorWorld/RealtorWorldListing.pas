@@ -12,7 +12,7 @@ uses
   cxGridDBTableView, cxGridLevel, cxClasses, cxGridCustomView, cxGrid,
   cxImage, cxTextEdit, cxMemo, cxRichEdit, dxGDIPlusClasses, cxGeometry,
   cxTrackBar, Vcl.Menus, Vcl.StdCtrls, cxButtons, System.Math, Vcl.Buttons, RealtorWorldBaseFrame,
-  RealtorWorldHomePhotosBase;
+  RealtorWorldHomePhotosBase, Vcl.Imaging.jpeg;
 
 const
   UM_MAKEIMAGECENTRE = WM_USER + 1;

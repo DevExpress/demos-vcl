@@ -1,13 +1,9 @@
 inherited frmInplaceEditorsGrid: TfrmInplaceEditorsGrid
   inherited PanelGrid: TdxPanel
     inherited Grid: TcxGrid
+      Height = 667
       object GridTableView: TcxGridTableView
-        Navigator.Buttons.CustomButtons = <>
-        ScrollbarAnnotations.CustomAnnotations = <>
         OnGetCellHeight = GridTableViewGetCellHeight
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
         OptionsView.ShowEditButtons = gsebAlways
         OptionsView.CellAutoHeight = True
         OptionsView.GroupByBox = False
@@ -201,8 +197,6 @@ inherited frmInplaceEditorsGrid: TfrmInplaceEditorsGrid
     Left = 360
     Top = 48
     object GridViewRepositoryDBTableView: TcxGridDBTableView
-      Navigator.Buttons.CustomButtons = <>
-      ScrollbarAnnotations.CustomAnnotations = <>
       DataController.DataSource = dmMain.dsDXCustomers
       DataController.KeyFieldNames = 'ID'
       DataController.Summary.DefaultGroupSummaryItems = <
@@ -240,7 +234,6 @@ inherited frmInplaceEditorsGrid: TfrmInplaceEditorsGrid
           Kind = skCount
           Column = GridDBTableViewFIRSTNAME
         end>
-      DataController.Summary.SummaryGroups = <>
       OptionsBehavior.IncSearch = True
       OptionsData.DeletingConfirmation = False
       OptionsView.ColumnAutoWidth = True

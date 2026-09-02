@@ -188,7 +188,7 @@ inherited frmRangeControl: TfrmRangeControl
     object cbAutoFormatScaleCaptions: TcxCheckBox [11]
       Left = 10000
       Top = 10000
-      Caption = 'Autoformat Scale Captions'
+      Caption = 'AutoFormat Scale Captions'
       Properties.OnChange = cbAutoFormatScaleCaptionsPropertiesChange
       State = cbsChecked
       Style.BorderColor = clWindowFrame

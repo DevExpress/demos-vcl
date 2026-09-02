@@ -14,18 +14,18 @@ object fmMain: TfmMain
   Font.Style = []
   Position = poScreenCenter
   OnCreate = FormCreate
-  TextHeight = 14
+  TextHeight = 15
   object dxLayoutControl1: TdxLayoutControl
     Left = 0
-    Top = 26
+    Top = 30
     Width = 1016
-    Height = 720
+    Height = 716
     Align = alClient
     TabOrder = 4
     LayoutLookAndFeel = dxLayoutSkinLookAndFeel1
     DesignSize = (
       1016
-      720)
+      716)
     object cxGrid1: TcxGrid
       Left = 10000
       Top = 10000
@@ -34,12 +34,7 @@ object fmMain: TfmMain
       TabOrder = 10
       Visible = False
       object cxGrid1DBTableView1: TcxGridDBTableView
-        Navigator.Buttons.CustomButtons = <>
-        ScrollbarAnnotations.CustomAnnotations = <>
         DataController.DataSource = DataSource1
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
         OptionsView.CellAutoHeight = True
         object cxGrid1DBTableView1RecId: TcxGridDBColumn
           DataBinding.FieldName = 'RecId'
@@ -85,8 +80,8 @@ object fmMain: TfmMain
       end
     end
     object btnCheckSpelling: TcxButton
-      Left = 10
-      Top = 685
+      Left = 12
+      Top = 679
       Width = 122
       Height = 25
       Action = aCheckSpelling
@@ -94,8 +89,8 @@ object fmMain: TfmMain
       TabOrder = 11
     end
     object cxButton1: TcxButton
-      Left = 925
-      Top = 685
+      Left = 923
+      Top = 679
       Width = 81
       Height = 25
       Action = actExit
@@ -103,38 +98,38 @@ object fmMain: TfmMain
       TabOrder = 12
     end
     object edtName: TcxTextEdit
-      Left = 314
-      Top = 206
+      Left = 316
+      Top = 226
       Anchors = [akLeft, akTop, akRight]
       Style.HotTrack = False
       Style.TransparentBorder = False
       TabOrder = 0
       Text = 'Nancy Davolio'
-      Width = 443
+      Width = 437
     end
     object deBirthDate: TcxDateEdit
-      Left = 314
-      Top = 263
+      Left = 316
+      Top = 294
       Anchors = [akLeft, akTop, akRight]
       EditValue = 17875d
       Style.HotTrack = False
       Style.TransparentBorder = False
       TabOrder = 3
-      Width = 443
+      Width = 437
     end
     object edtObjective: TcxTextEdit
-      Left = 314
-      Top = 234
+      Left = 316
+      Top = 260
       Anchors = [akLeft, akTop, akRight]
       Style.HotTrack = False
       Style.TransparentBorder = False
       TabOrder = 1
-      Text = 'Sales Reprseentative'
-      Width = 443
+      Text = 'Sales Representative'
+      Width = 436
     end
     object reAbout: TcxRichEdit
-      Left = 314
-      Top = 320
+      Left = 316
+      Top = 362
       Anchors = [akLeft, akTop, akRight]
       Properties.ScrollBars = ssVertical
       Lines.Strings = (
@@ -157,21 +152,21 @@ object fmMain: TfmMain
       Style.TransparentBorder = False
       TabOrder = 6
       Height = 81
-      Width = 443
+      Width = 436
     end
-    object edtAdress: TcxTextEdit
-      Left = 314
-      Top = 291
+    object edtAddress: TcxTextEdit
+      Left = 316
+      Top = 328
       Anchors = [akLeft, akTop, akRight]
       Style.HotTrack = False
       Style.TransparentBorder = False
       TabOrder = 4
       Text = 'USA, Woshington, Seattle, 507-20th Ave. E. Apt. 2A'
-      Width = 443
+      Width = 436
     end
     object cxButton2: TcxButton
-      Left = 763
-      Top = 234
+      Left = 759
+      Top = 262
       Width = 23
       Height = 23
       Anchors = [akTop, akRight]
@@ -184,8 +179,8 @@ object fmMain: TfmMain
       OnClick = cxButton2Click
     end
     object cxButton3: TcxButton
-      Left = 763
-      Top = 291
+      Left = 759
+      Top = 330
       Width = 23
       Height = 23
       Anchors = [akTop, akRight]
@@ -198,8 +193,8 @@ object fmMain: TfmMain
       OnClick = cxButton3Click
     end
     object cxButton4: TcxButton
-      Left = 763
-      Top = 349
+      Left = 759
+      Top = 391
       Width = 23
       Height = 23
       Anchors = [akTop, akRight]
@@ -212,8 +207,8 @@ object fmMain: TfmMain
       OnClick = cxButton4Click
     end
     object memInterests: TcxMemo
-      Left = 314
-      Top = 407
+      Left = 316
+      Top = 450
       Anchors = [akLeft, akTop, akRight, akBottom]
       Lines.Strings = (
         'Sprot, music, '
@@ -223,12 +218,12 @@ object fmMain: TfmMain
       Style.HotTrack = False
       Style.TransparentBorder = False
       TabOrder = 8
-      Height = 237
-      Width = 443
+      Height = 184
+      Width = 436
     end
     object cxButton5: TcxButton
-      Left = 763
-      Top = 514
+      Left = 759
+      Top = 530
       Width = 23
       Height = 23
       Anchors = [akTop, akRight]
@@ -5706,7 +5701,7 @@ object fmMain: TfmMain
       Offsets.Right = 29
       CaptionOptions.Text = 'Name:'
       Control = edtName
-      ControlOptions.OriginalHeight = 22
+      ControlOptions.OriginalHeight = 27
       ControlOptions.OriginalWidth = 391
       ControlOptions.ShowBorder = False
       Index = 0
@@ -5717,7 +5712,7 @@ object fmMain: TfmMain
       AlignVert = avTop
       CaptionOptions.Text = 'Objective:'
       Control = edtObjective
-      ControlOptions.OriginalHeight = 22
+      ControlOptions.OriginalHeight = 27
       ControlOptions.OriginalWidth = 391
       ControlOptions.ShowBorder = False
       Index = 0
@@ -5741,7 +5736,7 @@ object fmMain: TfmMain
       Offsets.Right = 29
       CaptionOptions.Text = 'Birth Date:'
       Control = deBirthDate
-      ControlOptions.OriginalHeight = 22
+      ControlOptions.OriginalHeight = 27
       ControlOptions.OriginalWidth = 391
       ControlOptions.ShowBorder = False
       Index = 0
@@ -5763,8 +5758,8 @@ object fmMain: TfmMain
       SizeOptions.AssignedValues = [sovSizableHorz]
       SizeOptions.SizableHorz = False
       CaptionOptions.Text = 'Address:'
-      Control = edtAdress
-      ControlOptions.OriginalHeight = 22
+      Control = edtAddress
+      ControlOptions.OriginalHeight = 27
       ControlOptions.OriginalWidth = 391
       ControlOptions.ShowBorder = False
       Index = 0
@@ -5993,7 +5988,7 @@ object fmMain: TfmMain
     DockControlHeights = (
       0
       0
-      26
+      30
       0)
     object dxBarManager1Bar1: TdxBar
       Caption = 'Main Menu'
@@ -6226,7 +6221,6 @@ object fmMain: TfmMain
     end
   end
   object dxSkinController: TdxSkinController
-    NativeStyle = True
     Left = 96
     Top = 368
   end

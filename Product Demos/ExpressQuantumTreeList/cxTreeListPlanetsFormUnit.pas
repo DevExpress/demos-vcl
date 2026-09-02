@@ -110,7 +110,7 @@ end;
 
 procedure TfrmPlanets.LoadData;
 const
-  FileName = 'nineplanets.txt';
+  FileName = 'NinePlanets.txt';
   AHeaderLineCount = 2;
   AParentKeyField = 2;
   AKeyField = 0;

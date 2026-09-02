@@ -9,7 +9,7 @@ uses
   System.UITypes,
 {$ENDIF}
   System.Types, Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms,
-  Vcl.Dialogs, dxDemoBaseMainForm, cxGraphics, cxControls, cxLookAndFeels,
+  Vcl.Dialogs, System.ImageList, dxDemoBaseMainForm, cxGraphics, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, dxRibbonSkins, dxRibbonCustomizationForm, cxContainer,
   cxEdit, dxLayoutcxEditAdapters, dxPSGlbl, dxPSUtl, dxPSEngn, dxPrnPg, dxBkgnd,
   dxWrap, dxPrnDev, dxPSCompsProvider, dxPSFillPatterns, dxPSEdgePatterns,

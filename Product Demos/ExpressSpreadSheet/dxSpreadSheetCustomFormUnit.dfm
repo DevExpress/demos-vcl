@@ -1,19 +1,18 @@
 inherited dxSpreadSheetDemoCustomForm: TdxSpreadSheetDemoCustomForm
   inherited lcCustom: TdxLayoutControl
-    Top = 36
-    Height = 269
-    ExplicitTop = 27
-    ExplicitHeight = 278
+    Top = 40
+    Height = 265
+    ExplicitTop = 36
+    ExplicitHeight = 269
     object pnlSite: TPanel [0]
-      Left = 3
-      Top = 3
-      Width = 445
-      Height = 211
+      Left = 10
+      Top = 10
+      Width = 431
+      Height = 207
       BevelOuter = bvNone
       TabOrder = 0
     end
     inherited lcCustomGroup_Root: TdxLayoutGroup
-      LayoutLookAndFeel = frmMain.dxLayoutSkinLookAndFeel1
       ItemIndex = 1
     end
     object lgSpreadSheet: TdxLayoutGroup
@@ -22,7 +21,6 @@ inherited dxSpreadSheetDemoCustomForm: TdxSpreadSheetDemoCustomForm
       AlignVert = avClient
       CaptionOptions.Text = 'New Group'
       CaptionOptions.Visible = False
-      ButtonOptions.Buttons = <>
       ShowBorder = False
       Index = 1
     end
@@ -44,24 +42,18 @@ inherited dxSpreadSheetDemoCustomForm: TdxSpreadSheetDemoCustomForm
     Left = 3
     Top = 3
     Width = 445
-    Height = 19
+    Height = 23
     Align = alTop
     TabOrder = 1
-    ExplicitLeft = 0
-    ExplicitTop = 0
-    ExplicitWidth = 451
   end
   object Splitter: TcxSplitter
     AlignWithMargins = True
     Left = 3
-    Top = 25
+    Top = 29
     Width = 445
     Height = 8
     Margins.Top = 0
     AlignSplitter = salTop
     Control = ssFormulaBar
-    ExplicitLeft = 0
-    ExplicitTop = 19
-    ExplicitWidth = 451
   end
 end

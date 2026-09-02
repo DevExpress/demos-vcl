@@ -34,6 +34,8 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
     InfoPanel.Hyperlink = 'http://www.devexpress.com'
     OnButtonClick = wcMainButtonClick
     OnPageChanging = wcMainPageChanging
+    ExplicitWidth = 596
+    ExplicitHeight = 432
     object wcpWelcomePage: TdxWizardControlPage
       Header.Description = ' '
       Header.Title = 'Welcome'
@@ -41,7 +43,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
         Left = 0
         Top = 0
         Width = 578
-        Height = 325
+        Height = 297
         Align = alClient
         ParentBackground = True
         TabOrder = 0
@@ -59,6 +61,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
             'y and enabled state of buttons in response to user actions.'
           Style.HotTrack = False
           Properties.WordWrap = True
+          TabOrder = 1
           Transparent = True
           Width = 556
         end
@@ -70,14 +73,16 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
             ' it makes no changes to your file system or registry.'
           Style.HotTrack = False
           Properties.WordWrap = True
+          TabOrder = 2
           Transparent = True
           Width = 556
         end
         object lbProcessNext: TcxLabel
           Left = 11
-          Top = 297
+          Top = 269
           Caption = 'Click Next to continue.'
           Style.HotTrack = False
+          TabOrder = 0
           Transparent = True
         end
         object lcWelcomePageGroup_Root: TdxLayoutGroup
@@ -132,7 +137,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
         Left = 0
         Top = 0
         Width = 578
-        Height = 325
+        Height = 297
         Align = alClient
         ParentBackground = True
         TabOrder = 0
@@ -150,12 +155,12 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
           Style.HotTrack = False
           Style.TransparentBorder = True
           TabOrder = 0
-          Height = 280
+          Height = 252
           Width = 556
         end
         object cbAcceptEULA: TcxCheckBox
           Left = 11
-          Top = 297
+          Top = 269
           Caption = 'I accept this EULA'
           Style.BorderColor = clWindowFrame
           Style.BorderStyle = ebs3D
@@ -205,7 +210,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
         Left = 0
         Top = 0
         Width = 578
-        Height = 325
+        Height = 297
         Align = alClient
         ParentBackground = True
         TabOrder = 0
@@ -215,7 +220,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
         ExplicitHeight = 296
         DesignSize = (
           578
-          325)
+          297)
         object rbModify: TcxRadioButton
           Left = 71
           Top = 11
@@ -281,6 +286,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
           Style.HotTrack = False
           Style.TransparentBorder = False
           Properties.WordWrap = True
+          TabOrder = 1
           Transparent = True
           Width = 476
         end
@@ -294,6 +300,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
           Style.HotTrack = False
           Style.TransparentBorder = False
           Properties.WordWrap = True
+          TabOrder = 3
           Transparent = True
           Width = 476
         end
@@ -305,6 +312,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
           Style.HotTrack = False
           Style.TransparentBorder = False
           Properties.WordWrap = True
+          TabOrder = 5
           Transparent = True
           Width = 476
         end
@@ -406,7 +414,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
         Left = 0
         Top = 0
         Width = 578
-        Height = 325
+        Height = 297
         Align = alClient
         ParentBackground = True
         TabOrder = 0
@@ -418,7 +426,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
           Left = 11
           Top = 11
           Width = 556
-          Height = 249
+          Height = 221
           Items = <
             item
               Text = 'RAD Studio 2010'
@@ -463,7 +471,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
         end
         object cbInstallForAllUsers: TcxCheckBox
           Left = 11
-          Top = 266
+          Top = 238
           Caption = 'Install for all users'
           State = cbsChecked
           Style.BorderColor = clWindowFrame
@@ -474,7 +482,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
         end
         object cbInstallHelp: TcxCheckBox
           Left = 11
-          Top = 293
+          Top = 265
           Caption = 'Install help'
           State = cbsChecked
           Style.BorderColor = clWindowFrame
@@ -535,7 +543,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
         Left = 0
         Top = 0
         Width = 578
-        Height = 325
+        Height = 297
         Align = alClient
         ParentBackground = True
         TabOrder = 0
@@ -558,7 +566,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
           Left = 11
           Top = 41
           Width = 556
-          Height = 273
+          Height = 245
           Indent = 19
           Options.ShowNonFolders = False
           ReadOnly = True
@@ -612,7 +620,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
         Left = 0
         Top = 0
         Width = 578
-        Height = 325
+        Height = 297
         Align = alClient
         ParentBackground = True
         TabOrder = 0
@@ -628,6 +636,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
           Style.HotTrack = False
           Style.TransparentBorder = False
           Properties.Alignment.Horz = taCenter
+          TabOrder = 0
           Transparent = True
           AnchorX = 289
         end
@@ -641,6 +650,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
           Style.HotTrack = False
           Style.TransparentBorder = False
           Properties.Alignment.Horz = taCenter
+          TabOrder = 1
           Transparent = True
           AnchorX = 289
         end
@@ -652,6 +662,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
           Style.TransparentBorder = False
           Properties.Alignment.Horz = taCenter
           Properties.Alignment.Vert = taVCenter
+          TabOrder = 2
           Transparent = True
           AnchorX = 289
           AnchorY = 116
@@ -664,6 +675,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
           Style.TransparentBorder = False
           Properties.Alignment.Horz = taCenter
           Properties.Alignment.Vert = taVCenter
+          TabOrder = 3
           Transparent = True
           AnchorX = 289
           AnchorY = 135
@@ -724,7 +736,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
         Left = 0
         Top = 0
         Width = 578
-        Height = 325
+        Height = 297
         Align = alClient
         ParentBackground = True
         TabOrder = 0
@@ -735,7 +747,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
           Left = 11
           Top = 11
           Width = 556
-          Height = 253
+          Height = 225
           BorderStyle = cxcbsNone
           Color = clBtnFace
           Enabled = False
@@ -747,7 +759,7 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
         end
         object pbInstallationProgress: TcxProgressBar
           Left = 11
-          Top = 293
+          Top = 265
           Properties.PeakValue = 15.000000000000000000
           Style.BorderColor = clWindowFrame
           Style.BorderStyle = ebs3D
@@ -756,9 +768,10 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
         end
         object lbInstallingItem: TcxLabel
           Left = 11
-          Top = 270
+          Top = 242
           Caption = 'Installing Item'
           Style.HotTrack = False
+          TabOrder = 1
           Transparent = True
         end
         object lcInProgressPageGroup_Root: TdxLayoutGroup
@@ -813,22 +826,24 @@ object frmWizardControlDemoMain: TfrmWizardControlDemoMain
         Left = 0
         Top = 0
         Width = 578
-        Height = 325
+        Height = 297
         Align = alClient
         ParentBackground = True
         TabOrder = 0
         AutoSize = True
         LayoutLookAndFeel = dxLayoutStandardLookAndFeel
-        ExplicitHeight = 297
+        ExplicitWidth = 574
+        ExplicitHeight = 296
         object lbFinishText: TcxLabel
           Left = 11
-          Top = 160
+          Top = 170
           Caption = 
             'This ExpressWizard Control demo has ended. Click Finish to exit ' +
             'the demo.'
           Style.HotTrack = False
           Properties.Alignment.Horz = taCenter
           Properties.WordWrap = True
+          TabOrder = 0
           Transparent = True
           Width = 556
           AnchorX = 289

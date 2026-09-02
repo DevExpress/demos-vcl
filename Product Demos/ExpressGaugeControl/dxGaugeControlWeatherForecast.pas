@@ -27,7 +27,7 @@ type
     gcsWeatherMoscowHumidity: TdxGaugeCircularScale;
     gcsWeatherMoscowHumidityCaption: TdxGaugeQuantitativeScaleCaption;
     dxGaugeControl3CircularScale4Range1: TdxGaugeCircularScaleRange;
-    gcsWeatherMowcowHumidityRange: TdxGaugeCircularScaleRange;
+    gcsWeatherMoscowHumidityRange: TdxGaugeCircularScaleRange;
     gcsWeatherMoscowTemperature: TdxGaugeCircularScale;
     gcsWeatherMoscowTemperatureCaption: TdxGaugeQuantitativeScaleCaption;
     dxGaugeControl3CircularScale2Caption3: TdxGaugeQuantitativeScaleCaption;
@@ -62,7 +62,7 @@ type
     procedure UpdateHumidity(ACaption: TdxGaugeQuantitativeScaleCaption; AValue: Single);
     procedure UpdateTemperatureIndicators(ACaption: TdxGaugeQuantitativeScaleCaption;
       ARange: TdxGaugeCircularScaleRange; AValue: Single);
-    procedure UpdateSityWeather(ATemperatureScale, AHumidityScale: TdxGaugeCircularScale;
+    procedure UpdateCityWeather(ATemperatureScale, AHumidityScale: TdxGaugeCircularScale;
       ATemperature, AHumidity: Single);
   public
     class function GetID: Integer; override;
@@ -158,7 +158,7 @@ var
 begin
   ATemperature := 10 * Sin(((DayOfTheYear(FDate) * Pi) / 90) / 2 - ((91 * Pi) / 180)) + GetRandomValue(-5, 2, 1) + 13;
   AHumidity := GetRandomValue(65, 100, 1);
-  UpdateSityWeather(gcsWeatherLondonTemperature, gcsWeatherLondonHumidity, ATemperature, AHumidity);
+  UpdateCityWeather(gcsWeatherLondonTemperature, gcsWeatherLondonHumidity, ATemperature, AHumidity);
 end;
 
 procedure TfrmWeatherForecast.UpdateLosAngeles;
@@ -168,7 +168,7 @@ var
 begin
   ATemperature := 7.5 * Sin(((DayOfTheYear(FDate) * Pi) / 90) / 2 - ((91 * Pi) / 180)) + GetRandomValue(-2, 2, 1) + 20.5;
   AHumidity := GetRandomValue(40, 92, 1);
-  UpdateSityWeather(gcsWeatherLosAnglesTemperature, gcsWeatherLosAnglesHumidity, ATemperature, AHumidity);
+  UpdateCityWeather(gcsWeatherLosAnglesTemperature, gcsWeatherLosAnglesHumidity, ATemperature, AHumidity);
 end;
 
 procedure TfrmWeatherForecast.UpdateMoscowWeather;
@@ -178,10 +178,10 @@ var
 begin
   ATemperature := 28 * Sin(((DayOfTheYear(FDate) * Pi) / 90) / 2 - ((91 * Pi) / 180)) + GetRandomValue(0, 2, 1);
   AHumidity := GetRandomValue(60, 100, 1);
-  UpdateSityWeather(gcsWeatherMoscowTemperature, gcsWeatherMoscowHumidity, ATemperature, AHumidity);
+  UpdateCityWeather(gcsWeatherMoscowTemperature, gcsWeatherMoscowHumidity, ATemperature, AHumidity);
 end;
 
-procedure TfrmWeatherForecast.UpdateSityWeather(ATemperatureScale, AHumidityScale: TdxGaugeCircularScale;
+procedure TfrmWeatherForecast.UpdateCityWeather(ATemperatureScale, AHumidityScale: TdxGaugeCircularScale;
   ATemperature, AHumidity: Single);
 begin
   ATemperatureScale.Value := ATemperature;

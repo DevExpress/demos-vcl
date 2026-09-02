@@ -14,7 +14,10 @@ uses
   dxSpreadSheetFormulas, dxSpreadSheetFunctions, dxSpreadSheetGraphics, dxSpreadSheetClasses, dxSpreadSheetTypes, 
   dxBarBuiltInMenu, cxContainer, cxEdit, Vcl.Menus, dxLayoutContainer, dxLayoutcxEditAdapters, dxLayoutControlAdapters, 
   cxClasses, Vcl.StdCtrls, cxButtons, cxMemo, cxTextEdit, cxMaskEdit, cxDropDownEdit, dxSpreadSheet, dxLayoutControl,
-  dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules;
+  dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules, dxSpreadSheetCoreFormulas,
+  dxSpreadSheetCoreStyles, dxSpreadSheetCoreStrs, dxSpreadSheetContainers, dxSpreadSheetHyperlinks, dxSpreadSheetStyles,
+  dxSpreadSheetUtils, dxSpreadSheetFormattedTextUtils, Vcl.ExtActns, System.Actions, Vcl.ActnList, Vcl.StdActns,
+  cxSplitter, dxSpreadSheetFormulaBar, cxTrackBar, dxZoomTrackBar, Vcl.ExtCtrls;
 
 type
 

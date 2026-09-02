@@ -1,12 +1,13 @@
 inherited frmBarsNotepadMain: TfrmBarsNotepadMain
   Caption = 'ExpressBars BarNotepadDemo'
-  PixelsPerInch = 96
+  ClientHeight = 523
+  ClientWidth = 889
   TextHeight = 13
-  inherited dxTabbedMDIManager1: TdxTabbedMDIManager [1]
+  inherited dxTabbedMDIManager1: TdxTabbedMDIManager [0]
     Active = True
     PixelsPerInch = 96
   end
-  inherited alActions: TActionList [2]
+  inherited alActions: TActionList [1]
     inherited acExit: TAction
       ShortCut = 0
     end
@@ -14,15 +15,7 @@ inherited frmBarsNotepadMain: TfrmBarsNotepadMain
       ImageIndex = -1
     end
   end
-  inherited OpenDialog: TdxOpenFileDialog [3]
-  end
-  inherited PrintDialog1: TPrintDialog [4]
-  end
-  inherited FontDialog1: TFontDialog [5]
-  end
-  inherited ReplaceDialog: TReplaceDialog [6]
-  end
-  inherited dxBarManager: TdxBarManager [7]
+  inherited dxBarManager: TdxBarManager
     Categories.Strings = (
       'Default'
       'File'
@@ -42,8 +35,8 @@ inherited frmBarsNotepadMain: TfrmBarsNotepadMain
     DockControlHeights = (
       0
       0
-      77
-      43)
+      81
+      26)
     object dxbMain: TdxBar [0]
       Caption = 'Main Menu'
       CaptionButtons = <>
@@ -189,7 +182,7 @@ inherited frmBarsNotepadMain: TfrmBarsNotepadMain
       CaptionButtons = <>
       DockedDockingStyle = dsTop
       DockedLeft = 0
-      DockedTop = 51
+      DockedTop = 53
       DockingStyle = dsTop
       FloatLeft = 923
       FloatTop = 8
@@ -223,7 +216,7 @@ inherited frmBarsNotepadMain: TfrmBarsNotepadMain
       CaptionButtons = <>
       DockedDockingStyle = dsTop
       DockedLeft = 226
-      DockedTop = 51
+      DockedTop = 53
       DockingStyle = dsTop
       FloatLeft = 923
       FloatTop = 8
@@ -614,15 +607,21 @@ inherited frmBarsNotepadMain: TfrmBarsNotepadMain
       ButtonStyle = bsChecked
     end
   end
-  inherited FindDialog: TFindDialog [8]
+  inherited FindDialog: TFindDialog [3]
   end
-  inherited ColorDialog1: TdxColorDialog [9]
+  inherited ColorDialog1: TdxColorDialog [4]
   end
-  inherited cxLargeImages: TcxImageList [10]
+  inherited cxLargeImages: TcxImageList [6]
     FormatVersion = 1
   end
-  inherited cxSmallImages: TcxImageList [11]
+  inherited cxSmallImages: TcxImageList [7]
     FormatVersion = 1
+  end
+  inherited PrintDialog1: TPrintDialog [8]
+  end
+  inherited FontDialog1: TFontDialog [9]
+  end
+  inherited ReplaceDialog: TReplaceDialog [10]
   end
   object pmEditor: TdxBarPopupMenu
     BarManager = dxBarManager

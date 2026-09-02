@@ -2,22 +2,17 @@ inherited frmGridCellSelection: TfrmGridCellSelection
   inherited PanelGrid: TdxPanel
     Top = 57
     Width = 922
-    Height = 613
+    Height = 610
     ExplicitTop = 57
     ExplicitWidth = 922
-    ExplicitHeight = 613
+    ExplicitHeight = 610
     inherited Grid: TcxGrid
       Width = 922
-      Height = 613
+      Height = 610
       ExplicitWidth = 922
-      ExplicitHeight = 613
+      ExplicitHeight = 610
       object TableView: TcxGridTableView
-        Navigator.Buttons.CustomButtons = <>
-        ScrollbarAnnotations.CustomAnnotations = <>
         OnSelectionChanged = TableViewSelectionChanged
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
         OptionsCustomize.ColumnFiltering = False
         OptionsCustomize.ColumnGrouping = False
         OptionsCustomize.ColumnMoving = False
@@ -53,12 +48,12 @@ inherited frmGridCellSelection: TfrmGridCellSelection
       Height = 56
       Width = 922
       inherited lcFrame: TdxLayoutControl
-        Top = 1
-        Width = 920
-        Height = 54
-        ExplicitTop = 1
-        ExplicitWidth = 920
-        ExplicitHeight = 54
+        Top = 2
+        Width = 918
+        Height = 52
+        ExplicitTop = 2
+        ExplicitWidth = 918
+        ExplicitHeight = 52
         inherited lgSetupTools: TdxLayoutGroup
           Visible = False
           Index = 1

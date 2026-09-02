@@ -1,4 +1,4 @@
-unit maindata;
+unit MainData;
 
 interface
 
@@ -9,7 +9,7 @@ uses
   cxFilter, cxData, cxDataStorage, cxNavigator, cxDBData, cxHyperLinkEdit,
   cxGridCustomTableView, cxGridTableView, cxGridBandedTableView,
   cxGridDBBandedTableView, cxControls, cxGridCustomView, cxGrid,
-  cxDBExtLookupComboBox, cxImageList, cxExtEditRepositoryItems;
+  cxDBExtLookupComboBox, cxImageList, cxExtEditRepositoryItems, System.ImageList;
 
 type
   TdmMain = class(TDataModule)

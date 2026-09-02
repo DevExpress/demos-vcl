@@ -12,7 +12,7 @@ uses
   dxSkinsdxNavBarPainter, dxNavBarCollns, dxNavBarBase, dxNavBar, cxButtons, cxCheckBox, cxMaskEdit, cxDropDownEdit,
   cxScrollBox, dxForms, cxImage, cxImageList, dxGDIPlusClasses, cxStyles, cxInplaceContainer, cxVGrid, cxOI,
   cxDataControllerConditionalFormattingRulesManagerDialog, cxBarEditItem, cxRichEdit, dxLayoutContainer,
-  dxLayoutControl, cxFilter, dxScrollbarAnnotations, dxCore, dxLayoutLookAndFeels;
+  dxLayoutControl, cxFilter, dxScrollbarAnnotations, dxCore, dxLayoutLookAndFeels, System.Actions, System.ImageList;
 
 const
   sdxLayoutSuffix = '.layout';

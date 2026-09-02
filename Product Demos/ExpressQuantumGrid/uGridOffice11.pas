@@ -106,7 +106,7 @@ procedure TfrmGridOffice11.AddRecordIntoTable(ARecordIndex: Integer; AEmailTo: s
   'Adding New Vendors Fails. This module doesn''t work completely!',
   'History. Will we track the sales history in our system?',
   'Main Menu: Add a File menu. File menu is missed!!!',
-  'Currency Mask. The current currency mask in completely inconvinience.',
+  'Currency Mask. The current currency mask in completely inconvenience.',
   'Drag & Drop. In the schedule module drag & drop is not available.',
   'Data Import. What competitors databases will we support?',
   'Reports. The list of incomplete reports.',

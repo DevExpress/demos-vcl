@@ -18,7 +18,9 @@ uses
   cxButtons, cxMemo, cxTextEdit, cxMaskEdit, cxDropDownEdit, dxSpreadSheet,
   dxLayoutControl, dxCore, dxCoreClasses, dxHashUtils, dxSpreadSheetCoreHistory, dxSpreadSheetConditionalFormatting,
   dxSpreadSheetConditionalFormattingRules, dxSpreadSheetContainers, dxSpreadSheetHyperlinks, dxSpreadSheetPrinting,
-  cxClasses, dxSpreadSheetUtils, Vcl.ExtCtrls;
+  cxClasses, dxSpreadSheetUtils, Vcl.ExtCtrls, dxSpreadSheetCoreFormulas, dxSpreadSheetCoreStyles,
+  dxSpreadSheetCoreStrs, dxSpreadSheetStyles, dxSpreadSheetFormattedTextUtils, Vcl.ExtActns, System.Actions,
+  Vcl.ActnList, Vcl.StdActns, cxSplitter, dxSpreadSheetFormulaBar, cxTrackBar, dxZoomTrackBar;
 
 type
   TfrmCustomDraw = class(TdxSpreadSheetDemoUnitForm)

@@ -16,7 +16,8 @@ uses
   cxClasses, Vcl.StdCtrls, cxButtons, cxMemo, cxTextEdit, cxMaskEdit, cxDropDownEdit, dxSpreadSheet, dxLayoutControl,
   dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules, dxSpreadSheetContainers,
   dxSpreadSheetHyperlinks, dxSpreadSheetUtils, Vcl.ExtCtrls, dxSpreadSheetCoreStyles, dxSpreadSheetCoreStrs,
-  dxSpreadSheetStyles, Vcl.ExtActns, System.Actions, Vcl.ActnList, Vcl.StdActns, cxTrackBar, dxZoomTrackBar, cxRichEdit;
+  dxSpreadSheetStyles, Vcl.ExtActns, System.Actions, Vcl.ActnList, Vcl.StdActns, cxTrackBar, dxZoomTrackBar, cxRichEdit,
+  dxSpreadSheetCoreFormulas, dxSpreadSheetFormattedTextUtils, cxSplitter, dxSpreadSheetFormulaBar;
 
 type
 

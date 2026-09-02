@@ -9,7 +9,8 @@ uses
   cxCustomData, cxFilter, cxData, cxDataStorage, cxNavigator, Data.DB, cxDBData, Vcl.ImgList, dxCustomTileControl, cxGridLevel,
   cxGridCustomView, cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxGrid, dxTileControl, HybridAppDM,
   cxImage, cxMemo, cxGridViewLayoutContainer, cxGridLayoutView, cxGridDBLayoutView, cxGridCustomLayoutView,
-  dxLayoutControlAdapters, Vcl.Menus, Vcl.StdCtrls, cxButtons, dxCore, dxGDIPlusClasses, cxGroupBox, cxImageList;
+  dxLayoutControlAdapters, Vcl.Menus, Vcl.StdCtrls, cxButtons, dxCore, dxGDIPlusClasses, cxGroupBox, cxImageList,
+  System.ImageList;
 
 type
   TfrmEmployees = class(TfrmBase)

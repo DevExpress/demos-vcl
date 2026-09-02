@@ -14,7 +14,7 @@ uses
   dxPrnDev, dxPSCompsProvider, dxPSFillPatterns, dxPSEdgePatterns, dxPSPDFExportCore, dxPSPDFExport, cxDrawTextUtils,
   dxPSPrVwStd, dxPSPrVwAdv, dxPSPrVwRibbon, dxPScxPageControlProducer, dxPSdxPDFViewerLnk, dxPScxEditorProducers,
   dxPScxExtEditorProducers, dxPSCore, dxX509Certificate, dxPDFForm, dxPDFFormData, dxPrintUtils, dxCore,
-  dxPSRichEditControlLnk, dxPSdxSpreadSheetLnk;
+  dxPSRichEditControlLnk, dxPSdxSpreadSheetLnk, System.ImageList;
 
 type
   TPDFViewer = class(TDocumentEditor)
@@ -92,7 +92,7 @@ type
     dxPDFViewerZoomActualSize: TdxPDFViewerZoomActualSize;
     dxBarLargeButtonActualSize: TdxBarLargeButton;
     dxPDFViewerZoomToPageLevel: TdxPDFViewerZoomToPageLevel;
-    dxBarLargeButtonZoomtoPageLevel: TdxBarLargeButton;
+    dxBarLargeButtonZoomToPageLevel: TdxBarLargeButton;
     dxPDFViewerZoomFitWidth: TdxPDFViewerZoomFitWidth;
     dxBarLargeButtonFitWidth: TdxBarLargeButton;
   protected

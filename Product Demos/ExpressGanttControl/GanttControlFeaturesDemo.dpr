@@ -7,7 +7,7 @@ program GanttControlFeaturesDemo;
 
 uses
   Vcl.Forms, dxUIAClasses,
-  dxSplashUnit in '..\Common\dxSplashUnit.pas' {TfrmSplash},
+  dxSplashUnit in '..\Common\dxSplashUnit.pas',
   Main in 'Main.pas' {frmMain},
   dxGanttControlFeaturesDemoStrConsts in 'dxGanttControlFeaturesDemoStrConsts.pas',
   dxAboutDemo in '..\Common\dxAboutDemo.pas' {dxAboutDemoForm},

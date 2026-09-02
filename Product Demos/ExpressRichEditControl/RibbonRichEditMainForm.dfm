@@ -2,16 +2,14 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
   Caption = 'Rich Edit Control Demo'
   ClientHeight = 534
   ClientWidth = 746
-  OldCreateOrder = True
   OnDestroy = FormDestroy
   OnShow = FormShow
-  ExplicitWidth = 762
-  ExplicitHeight = 573
-  PixelsPerInch = 96
+  ExplicitWidth = 758
+  ExplicitHeight = 572
   TextHeight = 13
   inherited dxRibbon1: TdxRibbon
     Width = 746
-    Height = 165
+    Height = 173
     ApplicationButton.ScreenTip = stAppMenu
     ApplicationButton.Visible = False
     ColorSchemeAccent = rcsaBlue
@@ -40,8 +38,8 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
       end>
     TabAreaSearchToolbar.Toolbar = bmbTabAreaSearchToolbar
     OnHelpButtonClick = dxRibbon1HelpButtonClick
-    ExplicitWidth = 746
-    ExplicitHeight = 165
+    ExplicitWidth = 742
+    ExplicitHeight = 173
     object rtFile: TdxRibbonTab [0]
       Caption = 'File'
       Groups = <
@@ -95,7 +93,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
           ToolbarName = 'bmbInsertTables'
         end
         item
-          ToolbarName = 'bmbInserIllustrations'
+          ToolbarName = 'bmbInsertIllustrations'
         end
         item
           ToolbarName = 'bmbInsertLinks'
@@ -296,29 +294,44 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
     end
   end
   inherited pnlAllArea: TcxGroupBox
-    Top = 165
-    ExplicitTop = 165
+    Top = 173
+    ExplicitTop = 173
     ExplicitWidth = 746
-    ExplicitHeight = 369
-    Height = 369
+    ExplicitHeight = 361
+    Height = 361
     Width = 746
     inherited SplitterNavBar: TcxSplitter
-      Height = 369
-      ExplicitHeight = 402
+      Height = 361
+      ExplicitHeight = 360
     end
     inherited plClient: TcxGroupBox
-      ExplicitWidth = 533
-      ExplicitHeight = 369
-      Height = 369
-      Width = 533
+      ExplicitWidth = 529
+      ExplicitHeight = 361
+      Height = 361
+      Width = 529
+      inherited dxRibbonBackstageView1: TdxRibbonBackstageView
+        inherited bvtExport: TdxRibbonBackstageViewTabSheet
+          inherited gbExportItems: TcxGroupBox
+            inherited gbExportPane: TcxGroupBox
+              inherited dxBevel1: TdxBevel
+                ExplicitLeft = 304
+                ExplicitWidth = 6
+                ExplicitHeight = 314
+              end
+              inherited bvgcExport: TdxRibbonBackstageViewGalleryControl
+                ExplicitWidth = 304
+              end
+            end
+          end
+        end
+      end
     end
     inherited NavBarSite: TcxGroupBox
-      ExplicitHeight = 402
-      Height = 369
+      ExplicitHeight = 360
+      Height = 361
       inherited NavBar: TdxNavBar
-        Height = 369
-        ActiveGroupIndex = 0
-        ExplicitHeight = 369
+        Height = 361
+        ExplicitHeight = 360
         object nvgHighlightedFeatures: TdxNavBarGroup [0]
           Caption = 'Highlighted Features'
           SelectedLinkIndex = -1
@@ -395,9 +408,9 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
           Links = <>
         end
         inherited nbcSearch: TdxNavBarGroupControl
-          Top = 337
+          Top = 338
           Width = 188
-          ExplicitTop = 337
+          ExplicitTop = 338
           ExplicitWidth = 188
           GroupIndex = 6
           inherited dxLayoutControl1: TdxLayoutControl
@@ -529,7 +542,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
       Glyph.SourceDPI = 96
       Glyph.Data = {
         424D360400000000000036000000280000001000000010000000010020000000
-        000000000000C40E0000C40E0000000000000000000000000000000000000000
+        0000000000002516000025160000000000000000000000000000000000000000
         000000000000000000000000000000000000B97B49FFB77946FFB67744FFB475
         42FFB37340FFB1713EFFB1703DFFAF6D3AFFAE6D39FF000000050000000C0000
         001100000014000000170000001A0000001DBD814EFFFFF4E9FFFEF3E8FFFEF3
@@ -592,7 +605,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
     object bmbHomeEditing: TdxBar [6]
       Caption = 'Editing'
       CaptionButtons = <>
-      DockedLeft = 275
+      DockedLeft = 641
       DockedTop = 0
       FloatLeft = 935
       FloatTop = 8
@@ -661,7 +674,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
           ScreenTip = stParagraphDialog
           OnClick = bmbHomeParagraphClick
         end>
-      DockedLeft = 167
+      DockedLeft = 398
       DockedTop = 0
       FloatLeft = 935
       FloatTop = 8
@@ -762,7 +775,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
           ScreenTip = stFontDialog
           OnClick = bmbHomeFontClick
         end>
-      DockedLeft = 122
+      DockedLeft = 90
       DockedTop = 0
       FloatLeft = 1149
       FloatTop = 8
@@ -771,7 +784,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
       Glyph.SourceDPI = 96
       Glyph.Data = {
         424D360400000000000036000000280000001000000010000000010020000000
-        000000000000C40E0000C40E0000000000000000000000000000000000000000
+        0000000000002516000025160000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
@@ -1162,7 +1175,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
       Visible = True
       WholeRow = False
     end
-    object bmbInserIllustrations: TdxBar [16]
+    object bmbInsertIllustrations: TdxBar [16]
       Caption = 'Illustrations'
       CaptionButtons = <>
       DockedLeft = 109
@@ -1393,7 +1406,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
         end
         item
           Visible = True
-          ItemName = 'bbUpdateTableofFigures'
+          ItemName = 'bbUpdateTableOfFigures'
         end>
       OneOnRow = False
       Row = 0
@@ -2078,7 +2091,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
     object dxBarStyles: TdxBar [48]
       Caption = 'Styles'
       CaptionButtons = <>
-      DockedLeft = 230
+      DockedLeft = 564
       DockedTop = 0
       FloatLeft = 780
       FloatTop = 8
@@ -2651,7 +2664,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
       KeyTip = 'PG'
       ScreenTip = stParagraphDialog
     end
-    object bbRadialMenuAlligns: TdxBarSubItem [119]
+    object bbRadialMenuAligns: TdxBarSubItem [119]
       Caption = 'Align'
       Category = 0
       Visible = ivAlways
@@ -2990,7 +3003,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
       Glyph.SourceDPI = 96
       Glyph.Data = {
         424D360400000000000036000000280000001000000010000000010020000000
-        000000000000C40E0000C40E0000000000000000000000000000000000310000
+        0000000000002516000025160000000000000000000000000000000000310000
         003400000036000000380000003B0000003D0000004000000043000000440000
         00470000004A0000004C00000050000000520000000000000000000000140000
         0016000000190000001B0000001D0000001E0000002100000023000000260000
@@ -3144,7 +3157,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
       Glyph.SourceDPI = 96
       Glyph.Data = {
         424D360400000000000036000000280000001000000010000000010020000000
-        000000000000C40E0000C40E0000000000000000000000000000000000310000
+        0000000000002516000025160000000000000000000000000000000000310000
         003400000036000000380000003B0000003D0000004000000043000000440000
         00470000004A0000004C00000050000000520000000000000000000000140000
         0016000000190000001B0000001D0000001E0000002100000023000000260000
@@ -3889,7 +3902,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
       Action = acInsertTableOfEquations
       Category = 0
     end
-    object bbUpdateTableofFigures: TdxBarLargeButton [275]
+    object bbUpdateTableOfFigures: TdxBarLargeButton [275]
       Action = acUpdateTableOfFigures
       Category = 0
     end
@@ -4265,6 +4278,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
     Top = 343
   end
   inherited dxSkinController1: TdxSkinController
+    SkinPaletteName = ''
     Left = 632
     Top = 280
   end
@@ -4282,7 +4296,6 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
     PixelsPerInch = 96
   end
   inherited dxPSEngineController1: TdxPSEngineController
-    Active = True
     Left = 634
     Top = 339
   end
@@ -5187,7 +5200,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
     StandardFooter.Glyph.SourceDPI = 96
     StandardFooter.Glyph.Data = {
       424D360400000000000036000000280000001000000010000000010020000000
-      000000000000C40E0000C40E0000000000000000000000000000CD8145FFCC7E
+      0000000000002516000025160000000000000000000000000000CD8145FFCC7E
       41FFC97A3CFFC77637FFC47232FFC26E2EFFC06B2AFFBE6927FFBD6624FFBC64
       22FFBB6320FFBA611EFFBA611EFFBA611EFF0000000000000000EEAE76FFFFED
       CAFFFFE9C3FFFFE8C0FFFFE6BDFFFFE6BBFFFFE4B8FFFFE3B5FFFFE2B2FFFFE1
@@ -5281,7 +5294,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
       Description.Glyph.SourceDPI = 96
       Description.Glyph.Data = {
         424D568700000000000036000000280000005E0000005C000000010020000000
-        000000000000C40E0000C40E00000000000000000000FC02FC00FC02FC00FC02
+        00000000000025160000251600000000000000000000FC02FC00FC02FC00FC02
         FC00FC02FC00FC02FC00FC02FC00FC02FC00FC02FC00FC02FC00FC02FC00FC02
         FC00FC02FC00FC02FC00FC02FC00FC02FC00FC02FC00FC02FC00FC02FC00FC02
         FC00FC02FC00FC02FC00FC02FC00FC02FC00FC02FC00FC02FC00FC02FC00FC02
@@ -6374,7 +6387,7 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
       Footer.Glyph.SourceDPI = 96
       Footer.Glyph.Data = {
         424D360400000000000036000000280000001000000010000000010020000000
-        000000000000C40E0000C40E0000000000000000000000000000CD8145FFCC7E
+        0000000000002516000025160000000000000000000000000000CD8145FFCC7E
         41FFC97A3CFFC77637FFC47232FFC26E2EFFC06B2AFFBE6927FFBD6624FFBC64
         22FFBB6320FFBA611EFFBA611EFFBA611EFF0000000000000000EEAE76FFFFED
         CAFFFFE9C3FFFFE8C0FFFFE6BDFFFFE6BBFFFFE4B8FFFFE3B5FFFFE2B2FFFFE1
@@ -6407,7 +6420,6 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
         F4FFFFF8EEFFFFF5E7FFFFF5E5FFDEA573FF0000000000000000FCE1C2FFFBE3
         C9FFFBE1C4FFFBDEBFFFFBDDBCFFFADBB8FFFAD9B5FFFAD7B2FFFAD6B0FFF9D4
         ACFFF9D3AAFFF8D0A6FFF8CEA3FFE4AC79FF00000000}
-      Footer.Text = 'visit to ww.dfetdl'
       UseStandardFooter = True
     end
     object stPrint: TdxScreenTip
@@ -6463,9 +6475,9 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
     object stAlignJustify: TdxScreenTip
       Header.Text = 'Justify'
       Description.Text = 
-        'Distribute your text evenly between the marginns.'#13#10#13#10'Justified t' +
-        'ext gives your document clean, crisp edges so it looks more poli' +
-        'shed.'
+        'Distribute your text evenly between the margins.'#13#10#13#10'Justified te' +
+        'xt gives your document clean, crisp edges so it looks more polis' +
+        'hed.'
     end
     object stFontSuperscript: TdxScreenTip
       Header.Text = 'Superscript'
@@ -6490,8 +6502,8 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
     object stLineSpacing: TdxScreenTip
       Header.Text = 'Line and Paragraph Spacing'
       Description.Text = 
-        #13#10'Choose how much space appeares beteewn lines of text or betwee' +
-        'n paragraphs.'
+        #13#10'Choose how much space appears between lines of text or between' +
+        ' paragraphs.'
     end
     object stMultiLevelList: TdxScreenTip
       Header.Text = 'Multilevel List'
@@ -6577,8 +6589,8 @@ inherited frmRibbonRichEditMain: TfrmRibbonRichEditMain
       Header.Text = 'Symbol'
       Description.Text = 
         'Insert symbols that are not on your keyboard, such as copyright ' +
-        'symbols, trademark sybols, paragraph marks and Unicode character' +
-        's.'
+        'symbols, trademark symbols, paragraph marks and Unicode characte' +
+        'rs.'
     end
     object stHorizontalRuler: TdxScreenTip
       Header.Text = 'Horizontal Ruler'

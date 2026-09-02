@@ -3,8 +3,8 @@ unit DesktopDemoData;
 interface
 
 uses
-  System.SysUtils, System.Classes, cxClasses, dxLayoutLookAndFeels, cxLookAndFeels, dxSkinsForm, Vcl.ImgList, Vcl.Controls,
-  cxImageList, cxGraphics, dxGDIPlusClasses, Vcl.Graphics;
+  System.SysUtils, System.Classes, Vcl.ImgList, Vcl.Controls, Vcl.Graphics, System.ImageList,
+  cxClasses, dxLayoutLookAndFeels, cxLookAndFeels, dxSkinsForm, cxImageList, cxGraphics, dxGDIPlusClasses, dxCore;
 
 type
   TdmData = class(TDataModule)

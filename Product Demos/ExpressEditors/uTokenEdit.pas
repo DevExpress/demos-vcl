@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms,
   Vcl.Dialogs, dxFrameCustomControl, cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit,
   dxLayoutcxEditAdapters, cxCheckBox, cxCheckComboBox, cxLabel, cxSpinEdit, cxTextEdit, cxMaskEdit, cxDropDownEdit,
-  dxLayoutContainer, dxTokenEdit, Vcl.ActnList, cxClasses, dxMessageDialog, dxLayoutControl, Vcl.ImgList, cxImageList, Main;
+  dxLayoutContainer, dxTokenEdit, Vcl.ActnList, cxClasses, dxMessageDialog, dxLayoutControl, Vcl.ImgList, cxImageList, Main,
+  System.ImageList, System.Actions, dxUIAdorners;
 
 type
   TfrmTokenEdit = class(TfrmCustomControl)
@@ -46,7 +47,7 @@ type
     chgbLookup: TdxLayoutGroup;
     liseLookupDropDownRows: TdxLayoutItem;
     licbLookupFilterMode: TdxLayoutItem;
-    lichcbLookupFilterSources: TdxLayoutItem;
+    liLookupFilterSources: TdxLayoutItem;
     licbDisplayMask: TdxLayoutItem;
     licbLookupSorted: TdxLayoutItem;
     procedure dxTokenEditPropertiesEditValueChanged(Sender: TObject);

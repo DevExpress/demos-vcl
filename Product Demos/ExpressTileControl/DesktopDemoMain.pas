@@ -23,12 +23,12 @@ type
     ItemDesktop: TdxTileControlItem;
     ItemFinances: TdxTileControlItem;
     ItemFoods: TdxTileControlItem;
-    ItemFoodsdxTileControlItemFrame1: TdxTileControlItemFrame;
-    ItemFoodsdxTileControlItemFrame2: TdxTileControlItemFrame;
+    ItemFoodFrame1: TdxTileControlItemFrame;
+    ItemFoodsFrame2: TdxTileControlItemFrame;
     ItemGames: TdxTileControlItem;
     ItemHealth: TdxTileControlItem;
-    ItemHealthdxTileControlItemFrame1: TdxTileControlItemFrame;
-    ItemHealthdxTileControlItemFrame2: TdxTileControlItemFrame;
+    ItemHealthFrame1: TdxTileControlItemFrame;
+    ItemHealthFrame2: TdxTileControlItemFrame;
     ItemHelp: TdxTileControlItem;
     ItemIE: TdxTileControlItem;
     ItemMail: TdxTileControlItem;

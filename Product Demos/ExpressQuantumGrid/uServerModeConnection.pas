@@ -10,15 +10,10 @@ uses
 {$IFDEF DELPHI11}
   Data.DBXCommon,
 {$ENDIF}
-{$IFNDEF DELPHI8}
-  DBXpress,
-  Data.Win.ADODB,
-{$ELSE}
 {$IFNDEF NOMSSQL}
   Data.DBXMSSQL,
 {$ENDIF}
   Data.Win.ADODB,
-{$ENDIF}
   Data.DB, Vcl.ComCtrls, Data.FMTBcd, Data.SqlExpr, Vcl.ExtCtrls, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxContainer, cxEdit, cxMemo, cxProgressBar, cxMaskEdit,
   cxSpinEdit, cxButtons, cxGroupBox, cxRadioGroup, cxTextEdit, cxLabel,
@@ -26,7 +21,7 @@ uses
 {$IFDEF DELPHI19}
   FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
-  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Dapt,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.DApt,
   FireDAC.Comp.Client, FireDAC.VCLUI.Wait, FireDAC.Comp.UI {$IFNDEF NOMSSQL},FireDAC.Phys.MSSQL{$ENDIF};
 {$ELSE}
   uADStanIntf, uADStanOption, uADStanError,
@@ -465,17 +460,17 @@ function TdxCustomConnectionHelper.GetRecordInsertSQL: string;
 
 const
   Users: array[0..16] of string = (
-    'Peter Dolan',
+    'Peter Dolan', 
     'Ryan Fischer',
     'Richard Fisher',
-    'Tom Hamlett',
+    'Tom Hamlett', 
     'Mark Hamilton',
     'Steve Lee',
     'Jimmy Lewis',
-    'Jeffrey W McClain',
+    'Jeffrey W McClain', 
     'Andrew Miller',
-    'Dave Murrel',
-    'Bert Parkins',
+    'Dave Murrel', 
+    'Bert Parkins', 
     'Mike Roller',
     'Ray Shipman',
     'Paul Bailey',

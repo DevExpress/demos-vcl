@@ -9,7 +9,7 @@ uses
   dxLayoutControl, dxLayoutControlAdapters, cxStyles, cxCustomData, cxFilter, cxData, cxDataStorage, cxNavigator, Data.DB,
   cxDBData, cxCurrencyEdit, dxDBSparkline, Vcl.Menus, Vcl.StdCtrls, cxButtons, cxGridLevel, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxGridCustomView, cxGrid, dxCustomTileControl, dxTileControl, Vcl.ImgList,
-  HybridAppDM, cxGroupBox, cxImageList, dxDateRanges;
+  HybridAppDM, cxGroupBox, cxImageList, dxDateRanges, System.ImageList;
 
 type
   TfrmProducts = class(TfrmBase)
@@ -32,7 +32,7 @@ type
     gvProduct_RetailPrice: TcxGridDBColumn;
     gvProduct_Inventory: TcxGridDBColumn;
     gvProduct_Backorder: TcxGridDBColumn;
-    gvProductMontlySales2015: TcxGridDBColumn;
+    gvProductMonthlySales2015: TcxGridDBColumn;
     cxGridProductLevel1: TcxGridLevel;
     dxLayoutItem4: TdxLayoutItem;
     cxbEdit1: TcxButton;
@@ -89,7 +89,7 @@ begin
   gvProduct_RetailPrice.Caption := cxGetResourceString(@sRetailPriceColumn);
   gvProduct_Inventory.Caption := cxGetResourceString(@sInventoryColumn);
   gvProduct_Backorder.Caption := cxGetResourceString(@sBackorderColumn);
-  gvProductMontlySales2015.Caption := cxGetResourceString(@sMonthlySalesColumn);
+  gvProductMonthlySales2015.Caption := cxGetResourceString(@sMonthlySalesColumn);
 
   btnNew.Caption := cxGetResourceString(@sNewButton);
   btnEdit.Caption := cxGetResourceString(@sEditButton);

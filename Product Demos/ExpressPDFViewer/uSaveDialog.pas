@@ -51,8 +51,8 @@ type
     lgSignatureSystemStorage: TdxLayoutGroup;
     dxLayoutItem12: TdxLayoutItem;
     btnSignatureViewCertificate: TcxButton;
-    peSytemStorage: TcxPopupEdit;
-    lipeSytemStorage: TdxLayoutItem;
+    peSystemStorage: TcxPopupEdit;
+    lipeSystemStorage: TdxLayoutItem;
     teSignatureCertificateFileName: TcxTextEdit;
     liteSignatureCertificateFileName: TdxLayoutItem;
     lvSystemStorage: TcxListView;
@@ -72,9 +72,9 @@ type
     procedure OnSecuritySettingsChangeHandler(Sender: TObject);
     procedure btnSignatureViewCertificateClick(Sender: TObject);
     procedure lbSystemStorageClick(Sender: TObject);
-    procedure peSytemStoragePropertiesCloseUp(Sender: TObject);
-    procedure peSytemStorageMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
-    procedure peSytemStorageMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+    procedure peSystemStoragePropertiesCloseUp(Sender: TObject);
+    procedure peSystemStorageMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+    procedure peSystemStorageMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
     procedure lcMainClick(Sender: TObject);
 
     procedure OnSignatureFileNameBrowseButtonClockHandler(Sender: TObject; AButtonIndex: Integer);
@@ -183,7 +183,7 @@ begin
   gbSecuritySettings.ButtonOptions.CheckBox.Checked := False;
   lgSignatureSettings.OnCheckBoxStateChanged := OnSecuritySettingsChangeHandler;
   teSignatureCertificateFileName.Text := '';
-  peSytemStorage.Text := '';
+  peSystemStorage.Text := '';
   FIsSystemStoragePopupClosed := True;
 
   FFileCertificate := nil;
@@ -198,7 +198,7 @@ begin
   lvSystemStorage.StyleFocused.BorderStyle := cbsNone;
   lvSystemStorage.MultiSelect := False;
   lvSystemStorage.ViewStyle := vsReport;
-  lvSystemStorage.Width := peSytemStorage.Width - ScaleFactor.Apply(2);
+  lvSystemStorage.Width := peSystemStorage.Width - ScaleFactor.Apply(2);
   lvSystemStorage.RowSelect := True;
 end;
 
@@ -353,7 +353,7 @@ begin
   lgSignatureSettings.ButtonOptions.CheckBox.Checked := FDocument.SignatureOptions.Enabled;
   lrbSignatureUseCertificateFromFile.Checked := teSignatureCertificateFileName.Text <> '';
   lrbSignatureUseCertificateFromSystemStore.Checked := not lrbSignatureUseCertificateFromFile.Checked;
-  TcxPopupEditPropertiesAccess(peSytemStorage.Properties).HideCursor := True;
+  TcxPopupEditPropertiesAccess(peSystemStorage.Properties).HideCursor := True;
   ValidateSignatureInfo;
 end;
 
@@ -659,9 +659,9 @@ begin
   if lvSystemStorage.ItemIndex > -1 then
   begin
     SystemCertificate := TdxX509Certificate(lvSystemStorage.Items[lvSystemStorage.ItemIndex].Data);
-    peSytemStorage.Text := SystemCertificate.IssuedTo;
+    peSystemStorage.Text := SystemCertificate.IssuedTo;
   end;
-  peSytemStorage.DroppedDown := False;
+  peSystemStorage.DroppedDown := False;
 end;
 
 function TfrmSaveDialogForm.GetChangesAllowedIndex: Integer;
@@ -730,7 +730,7 @@ begin
   tbsSignatureCertificate.Caption := 'Certificate (Digital ID)';
   lrbSignatureUseCertificateFromSystemStore.Caption := 'Use Certificate from System Store';
   lrbSignatureUseCertificateFromFile.Caption := 'Use Certificate from File';
-  lipeSytemStorage.Caption := 'Issuer:';
+  lipeSystemStorage.Caption := 'Issuer:';
   liteSignatureCertificateFileName.Caption := 'File Name:';
   tbsSignatureDetails.Caption := 'Details';
   liteSignatureReason.Caption := 'Reason:';
@@ -774,20 +774,20 @@ begin
   lrbSignatureUseCertificateFromFileClick(nil);
 end;
 
-procedure TfrmSaveDialogForm.peSytemStorageMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState;
+procedure TfrmSaveDialogForm.peSystemStorageMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState;
   X, Y: Integer);
 begin
   if FIsSystemStoragePopupClosed then
-    peSytemStorage.DroppedDown := not peSytemStorage.DroppedDown
+    peSystemStorage.DroppedDown := not peSystemStorage.DroppedDown
 end;
 
-procedure TfrmSaveDialogForm.peSytemStorageMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X,
+procedure TfrmSaveDialogForm.peSystemStorageMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X,
   Y: Integer);
 begin
   FIsSystemStoragePopupClosed := True;
 end;
 
-procedure TfrmSaveDialogForm.peSytemStoragePropertiesCloseUp(Sender: TObject);
+procedure TfrmSaveDialogForm.peSystemStoragePropertiesCloseUp(Sender: TObject);
 begin
   FIsSystemStoragePopupClosed := False;
   ValidateSignatureInfo;

@@ -50,7 +50,7 @@ type
     vgCurrencyEditor: TcxEditorRow;
     vgMaskEditor: TcxEditorRow;
     vgRadioGroupEditor: TcxEditorRow;
-    vgSpintEditor: TcxEditorRow;
+    vgSpinEditor: TcxEditorRow;
     vgTextEditor: TcxEditorRow;
     vgTimeEditor: TcxEditorRow;
     VerticalGridCategoryRow2: TcxCategoryRow;
@@ -106,7 +106,7 @@ begin
   fmPopupTree := TfmPopupTree.Create(nil);
   EditRepositoryPopupItem.Properties.PopupControl := fmPopupTree.pnPopupControl;
 
-  vgLookupComboBoxEditor.Properties.Value := dmmain.atDXProducts.FindField('ID').AsInteger;
+  vgLookupComboBoxEditor.Properties.Value := dmMain.atDXProducts.FindField('ID').AsInteger;
   vgImageEditor.Properties.Value :=  dmMain.mdModels.FindField('Photo').Value;
   vgMemoEditor.Properties.Value := dmMain.mdModels.FindField('Description').Value;
   vgTimeEditor.Properties.Value := Now;

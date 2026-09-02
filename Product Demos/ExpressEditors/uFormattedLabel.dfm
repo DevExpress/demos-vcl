@@ -42,7 +42,7 @@ inherited frmFormattedLabel: TfrmFormattedLabel
         Height = 119
         Width = 337
       end
-      object cbHyperlincColor: TcxColorComboBox [2]
+      object cbHyperlinkColor: TcxColorComboBox [2]
         Left = 389
         Top = 25
         ColorValue = clDefault
@@ -50,7 +50,7 @@ inherited frmFormattedLabel: TfrmFormattedLabel
         Properties.ColorDialogType = cxcdtAdvanced
         Properties.CustomColors = <>
         Properties.DropDownListStyle = lsEditList
-        Properties.OnEditValueChanged = cbHyperlincColorPropertiesEditValueChanged
+        Properties.OnEditValueChanged = cbHyperlinkColorPropertiesEditValueChanged
         Style.HotTrack = False
         Style.TransparentBorder = False
         TabOrder = 3
@@ -163,7 +163,7 @@ inherited frmFormattedLabel: TfrmFormattedLabel
         AlignHorz = ahClient
         CaptionOptions.Text = 'Hyperlink Color:'
         CaptionOptions.Layout = clTop
-        Control = cbHyperlincColor
+        Control = cbHyperlinkColor
         ControlOptions.OriginalHeight = 21
         ControlOptions.OriginalWidth = 173
         ControlOptions.ShowBorder = False

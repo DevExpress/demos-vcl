@@ -12,10 +12,8 @@ object frmSaveDialogForm: TfrmSaveDialogForm
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCloseQuery = FormCloseQuery
-  PixelsPerInch = 96
   TextHeight = 13
   object lcMain: TdxLayoutControl
     Left = 0
@@ -31,7 +29,7 @@ object frmSaveDialogForm: TfrmSaveDialogForm
       393)
     object edUserPassword: TcxTextEdit
       Left = 139
-      Top = 82
+      Top = 80
       Anchors = [akTop, akRight]
       Properties.EchoMode = eemPassword
       Properties.PasswordChar = '*'
@@ -43,7 +41,7 @@ object frmSaveDialogForm: TfrmSaveDialogForm
     end
     object edOwnerPassword: TcxTextEdit
       Left = 139
-      Top = 109
+      Top = 107
       Anchors = [akTop, akRight]
       Properties.EchoMode = eemPassword
       Properties.PasswordChar = '*'
@@ -55,7 +53,7 @@ object frmSaveDialogForm: TfrmSaveDialogForm
     end
     object cbxMethod: TcxComboBox
       Left = 139
-      Top = 136
+      Top = 134
       Anchors = [akTop, akRight]
       Properties.DropDownListStyle = lsFixedList
       Properties.Items.Strings = (
@@ -69,7 +67,7 @@ object frmSaveDialogForm: TfrmSaveDialogForm
     end
     object btnOk: TcxButton
       Left = 334
-      Top = 360
+      Top = 356
       Width = 85
       Height = 23
       Caption = 'Ok'
@@ -79,7 +77,7 @@ object frmSaveDialogForm: TfrmSaveDialogForm
     end
     object btnCancel: TcxButton
       Left = 425
-      Top = 360
+      Top = 356
       Width = 85
       Height = 23
       Cancel = True
@@ -130,19 +128,18 @@ object frmSaveDialogForm: TfrmSaveDialogForm
       Visible = False
       OnClick = btnSignatureViewCertificateClick
     end
-    object peSytemStorage: TcxPopupEdit
+    object peSystemStorage: TcxPopupEdit
       Left = 10000
       Top = 10000
       Properties.PopupControl = lvSystemStorage
       Properties.ReadOnly = False
-      Properties.OnCloseUp = peSytemStoragePropertiesCloseUp
+      Properties.OnCloseUp = peSystemStoragePropertiesCloseUp
       Style.HotTrack = False
       Style.TransparentBorder = False
       TabOrder = 5
-      Text = 'peSytemStorage'
-      Visible = False
-      OnMouseDown = peSytemStorageMouseDown
-      OnMouseUp = peSytemStorageMouseUp
+      Text = 'peSystemStorage'
+      OnMouseDown = peSystemStorageMouseDown
+      OnMouseUp = peSystemStorageMouseUp
       Width = 304
     end
     object teSignatureCertificateFileName: TcxTextEdit
@@ -158,7 +155,7 @@ object frmSaveDialogForm: TfrmSaveDialogForm
     end
     object cbPrintingAllowed: TcxComboBox
       Left = 139
-      Top = 193
+      Top = 191
       Properties.DropDownListStyle = lsFixedList
       Style.HotTrack = False
       Style.TransparentBorder = False
@@ -167,7 +164,7 @@ object frmSaveDialogForm: TfrmSaveDialogForm
     end
     object cbChangesAllowed: TcxComboBox
       Left = 139
-      Top = 220
+      Top = 218
       Properties.DropDownListStyle = lsFixedList
       Style.HotTrack = False
       Style.TransparentBorder = False
@@ -178,14 +175,12 @@ object frmSaveDialogForm: TfrmSaveDialogForm
       AlignHorz = ahLeft
       AlignVert = avTop
       SizeOptions.Width = 520
-      ButtonOptions.Buttons = <>
       Hidden = True
       ShowBorder = False
       Index = -1
     end
     object dxLayoutGroup2: TdxLayoutGroup
       Parent = lcMainGroup_Root
-      ButtonOptions.Buttons = <>
       LayoutDirection = ldTabbed
       ShowBorder = False
       TabbedOptions.ShowFrame = True
@@ -194,7 +189,6 @@ object frmSaveDialogForm: TfrmSaveDialogForm
     object tbsSecurity: TdxLayoutGroup
       Parent = dxLayoutGroup2
       CaptionOptions.Text = '&Security'
-      ButtonOptions.Buttons = <>
       Index = 0
     end
     object gbSecuritySettings: TdxLayoutGroup
@@ -202,7 +196,6 @@ object frmSaveDialogForm: TfrmSaveDialogForm
       AlignVert = avClient
       CaptionOptions.Text = ' Security Settings '
       ButtonOptions.Alignment = gbaLeft
-      ButtonOptions.Buttons = <>
       ButtonOptions.CheckBox.Visible = True
       Index = 0
     end
@@ -210,7 +203,6 @@ object frmSaveDialogForm: TfrmSaveDialogForm
       Parent = gbSecuritySettings
       AlignVert = avClient
       CaptionOptions.Text = 'Hidden Group'
-      ButtonOptions.Buttons = <>
       Hidden = True
       ItemIndex = 1
       ShowBorder = False
@@ -220,7 +212,6 @@ object frmSaveDialogForm: TfrmSaveDialogForm
       Parent = dxLayoutGroup8
       AlignVert = avTop
       CaptionOptions.Text = 'Passwords'
-      ButtonOptions.Buttons = <>
       ItemIndex = 1
       Index = 0
     end
@@ -256,7 +247,6 @@ object frmSaveDialogForm: TfrmSaveDialogForm
       AlignHorz = ahRight
       AlignVert = avTop
       CaptionOptions.Text = 'Hidden Group'
-      ButtonOptions.Buttons = <>
       Hidden = True
       ItemIndex = 1
       LayoutDirection = ldHorizontal
@@ -286,7 +276,6 @@ object frmSaveDialogForm: TfrmSaveDialogForm
     object tbsSignature: TdxLayoutGroup
       Parent = dxLayoutGroup2
       CaptionOptions.Text = 'Signature'
-      ButtonOptions.Buttons = <>
       Index = 1
     end
     object lgSignatureSettings: TdxLayoutGroup
@@ -294,7 +283,6 @@ object frmSaveDialogForm: TfrmSaveDialogForm
       AlignVert = avClient
       CaptionOptions.Text = 'Signature Settings'
       ButtonOptions.Alignment = gbaLeft
-      ButtonOptions.Buttons = <>
       ButtonOptions.CheckBox.Visible = True
       OnCheckBoxStateChanged = lgSignatureSettingsCheckBoxStateChanged
       Index = 0
@@ -331,14 +319,12 @@ object frmSaveDialogForm: TfrmSaveDialogForm
       AlignVert = avClient
       CaptionOptions.Text = 'Details'
       ButtonOptions.Alignment = gbaLeft
-      ButtonOptions.Buttons = <>
       ItemIndex = 2
       Index = 1
     end
     object tbsSignatureCertificate: TdxLayoutGroup
       Parent = lgSignatureSettings
       CaptionOptions.Text = 'Certificate (Digital ID)'
-      ButtonOptions.Buttons = <>
       ItemIndex = 3
       Index = 0
     end
@@ -359,7 +345,6 @@ object frmSaveDialogForm: TfrmSaveDialogForm
     object lgSignatureSystemStorage: TdxLayoutGroup
       Parent = tbsSignatureCertificate
       CaptionOptions.Text = 'Hidden Group'
-      ButtonOptions.Buttons = <>
       Hidden = True
       ShowBorder = False
       Index = 1
@@ -374,11 +359,11 @@ object frmSaveDialogForm: TfrmSaveDialogForm
       ControlOptions.ShowBorder = False
       Index = 4
     end
-    object lipeSytemStorage: TdxLayoutItem
+    object lipeSystemStorage: TdxLayoutItem
       Parent = lgSignatureSystemStorage
       AlignVert = avTop
       CaptionOptions.Text = 'Issued To:'
-      Control = peSytemStorage
+      Control = peSystemStorage
       ControlOptions.OriginalHeight = 21
       ControlOptions.OriginalWidth = 200
       ControlOptions.ShowBorder = False
@@ -417,7 +402,6 @@ object frmSaveDialogForm: TfrmSaveDialogForm
       Parent = dxLayoutGroup8
       AlignVert = avClient
       CaptionOptions.Text = 'Permissions'
-      ButtonOptions.Buttons = <>
       ItemIndex = 3
       Index = 1
     end

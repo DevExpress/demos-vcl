@@ -1,15 +1,19 @@
 inherited frmListing: TfrmListing
   Width = 931
   Height = 553
+  ExplicitWidth = 931
+  ExplicitHeight = 553
   inherited tcHomePhotos: TdxTileControl
     Height = 553
     TabOrder = 1
+    ExplicitHeight = 553
   end
   inherited cxSplitter1: TcxSplitter
     Height = 553
+    ExplicitHeight = 553
   end
   object cxGroupBox1: TcxGroupBox
-    Left = 253
+    Left = 192
     Top = 0
     Align = alClient
     PanelStyle.Active = True
@@ -18,7 +22,7 @@ inherited frmListing: TfrmListing
     Style.TransparentBorder = False
     TabOrder = 0
     Height = 553
-    Width = 678
+    Width = 739
     object cxGroupBox2: TcxGroupBox
       Left = 0
       Top = 0
@@ -39,7 +43,6 @@ inherited frmListing: TfrmListing
         Align = alTop
         ImageFitMode = ifmStretch
         Images = icSlider
-        ItemIndex = -1
       end
       object reFeatures: TcxRichEdit
         Left = 0
@@ -83,7 +86,7 @@ inherited frmListing: TfrmListing
       Style.TransparentBorder = False
       TabOrder = 2
       Height = 553
-      Width = 301
+      Width = 362
       object imgHomePlan: TcxImage
         Left = 1
         Top = 1
@@ -91,7 +94,6 @@ inherited frmListing: TfrmListing
         Properties.Center = False
         Properties.FitMode = ifmNormal
         Properties.PopupMenuLayout.MenuItems = []
-        Properties.Proportional = False
         Properties.ReadOnly = True
         ZoomingOptions.ZoomPercent = 30
         ZoomingOptions.ShowZoomTrackBar = True
@@ -102,7 +104,7 @@ inherited frmListing: TfrmListing
         Transparent = True
         OnMouseDown = imgHomePlanMouseDown
         Height = 551
-        Width = 299
+        Width = 360
       end
     end
   end

@@ -955,7 +955,7 @@ inherited frmPictureEditor: TfrmPictureEditor
     object acShowZoomTrackBar: TAction
       Tag = 1
       AutoCheck = True
-      Caption = 'Show Zoom Trackbar'
+      Caption = 'Show Zoom TrackBar'
       Checked = True
       OnExecute = acAllowContextMenuExecute
     end

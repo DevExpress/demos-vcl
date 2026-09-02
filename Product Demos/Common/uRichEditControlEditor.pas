@@ -19,7 +19,7 @@ uses
   dxPSPrVwStd, dxPSPrVwAdv, dxPSPrVwRibbon, dxPScxPageControlProducer, dxPSdxPDFViewerLnk, dxPScxExtComCtrlsLnk,
   dxPSTVLnk, dxPSdxLCLnk, dxPScxEditorLnks, dxPSTextLnk, dxPSRichEditControlLnk, dxPScxEditorProducers,
   dxPScxExtEditorProducers, dxPSCore, dxRibbonMarginsGallery,
-  dxPSdxSpreadSheetLnk;
+  dxPSdxSpreadSheetLnk, System.ImageList;
 
 type
   { TRichEditControlEditor }
@@ -95,7 +95,7 @@ type
     dxRichEditControlToggleSimpleNumberingList: TdxRichEditControlToggleSimpleNumberingList;
     dxBarButtonNumbering: TdxBarButton;
     dxRichEditControlToggleMultiLevelList: TdxRichEditControlToggleMultiLevelList;
-    dxBarButtonMultilevellist: TdxBarButton;
+    dxBarButtonMultiLevelList: TdxBarButton;
     dxRichEditControlDecrementIndent: TdxRichEditControlDecrementIndent;
     dxBarButtonDecreaseIndent: TdxBarButton;
     dxRichEditControlIncrementIndent: TdxRichEditControlIncrementIndent;
@@ -229,15 +229,15 @@ type
     dxRibbonColorGalleryItemPageColor: TdxRibbonColorGalleryItem;
     dxRichEditControlInsertTableOfContents: TdxRichEditControlInsertTableOfContents;
     dxRibbonTabReferences: TdxRibbonTab;
-    dxBarTableofContents: TdxBar;
-    dxBarLargeButtonTableofContents: TdxBarLargeButton;
+    dxBarTableOfContents: TdxBar;
+    dxBarLargeButtonTableOfContents: TdxBarLargeButton;
     dxRichEditControlUpdateTableOfContents: TdxRichEditControlUpdateTableOfContents;
     dxBarLargeButtonUpdateTable: TdxBarLargeButton;
     dxRichEditControlAddParagraphsToTableOfContentsPlaceholder: TdxRichEditControlAddParagraphsToTableOfContentsPlaceholder;
     dxBarLargeButtonAddText: TdxBarLargeButton;
     dxRibbonPopupMenu1: TdxRibbonPopupMenu;
     dxRichEditControlTableOfContentsSetParagraphBodyTextLevel: TdxRichEditControlTableOfContentsSetParagraphBodyTextLevel;
-    dxBarLargeButtonDoNotShowinTableofContents: TdxBarLargeButton;
+    dxBarLargeButtonDoNotShowInTableOfContents: TdxBarLargeButton;
     dxRichEditControlTableOfContentsSetParagraphHeading1Level: TdxRichEditControlTableOfContentsSetParagraphHeading1Level;
     dxBarLargeButtonLevel1: TdxBarLargeButton;
     dxRichEditControlTableOfContentsSetParagraphHeading2Level: TdxRichEditControlTableOfContentsSetParagraphHeading2Level;
@@ -267,14 +267,14 @@ type
     dxRichEditControlInsertEquationCaption: TdxRichEditControlInsertEquationCaption;
     dxBarLargeButtonEquationsCaption: TdxBarLargeButton;
     dxRichEditControlInsertTableOfFiguresPlaceholder: TdxRichEditControlInsertTableOfFiguresPlaceholder;
-    dxBarLargeButtonInsertTableofFigures: TdxBarLargeButton;
+    dxBarLargeButtonInsertTableOfFigures: TdxBarLargeButton;
     dxRibbonPopupMenu3: TdxRibbonPopupMenu;
     dxRichEditControlInsertTableOfFigures: TdxRichEditControlInsertTableOfFigures;
-    dxBarLargeButtonTableofFigures: TdxBarLargeButton;
+    dxBarLargeButtonTableOfFigures: TdxBarLargeButton;
     dxRichEditControlInsertTableOfTables: TdxRichEditControlInsertTableOfTables;
-    dxBarLargeButtonTableofTables: TdxBarLargeButton;
+    dxBarLargeButtonTableOfTables: TdxBarLargeButton;
     dxRichEditControlInsertTableOfEquations: TdxRichEditControlInsertTableOfEquations;
-    dxBarLargeButtonTableofEquations: TdxBarLargeButton;
+    dxBarLargeButtonTableOfEquations: TdxBarLargeButton;
     dxRichEditControlUpdateTableOfFigures: TdxRichEditControlUpdateTableOfFigures;
     dxBarLargeButtonUpdateTable1: TdxBarLargeButton;
     dxRichEditControlShowInsertMergeFieldForm: TdxRichEditControlShowInsertMergeFieldForm;
@@ -299,7 +299,7 @@ type
     dxRichEditControlShowRangeEditingPermissions: TdxRichEditControlShowRangeEditingPermissions;
     dxBarLargeButtonRangeEditingPermissions: TdxBarLargeButton;
     dxRichEditControlEncryptDocument: TdxRichEditControlEncryptDocument;
-    dxBarLargeButtonEncryptwithPassword: TdxBarLargeButton;
+    dxBarLargeButtonEncryptWithPassword: TdxBarLargeButton;
     dxRichEditControlSwitchToSimpleView: TdxRichEditControlSwitchToSimpleView;
     dxRibbonTabView: TdxRibbonTab;
     dxBarDocumentViews: TdxBar;
@@ -329,7 +329,7 @@ type
     dxRichEditControlGoToPreviousPageHeaderFooter: TdxRichEditControlGoToPreviousPageHeaderFooter;
     dxBarLargeButtonShowPrevious: TdxBarLargeButton;
     dxRichEditControlToggleHeaderFooterLinkToPrevious: TdxRichEditControlToggleHeaderFooterLinkToPrevious;
-    dxBarLargeButtonLinktoPrevious: TdxBarLargeButton;
+    dxBarLargeButtonLinkToPrevious: TdxBarLargeButton;
     dxRichEditControlToggleDifferentFirstPage: TdxRichEditControlToggleDifferentFirstPage;
     dxBarOptions: TdxBar;
     dxBarLargeButtonDifferentFirstPage: TdxBarLargeButton;
@@ -337,7 +337,7 @@ type
     dxBarLargeButtonDifferentOddEvenPages: TdxBarLargeButton;
     dxRichEditControlClosePageHeaderFooter: TdxRichEditControlClosePageHeaderFooter;
     dxBarClose: TdxBar;
-    dxBarLargeButtonCloseHeaderandFooter: TdxBarLargeButton;
+    dxBarLargeButtonCloseHeaderAndFooter: TdxBarLargeButton;
     dxRichEditControlToggleShowTableGridLines: TdxRichEditControlToggleShowTableGridLines;
     dxRibbonTabTableLayout: TdxRibbonTab;
     dxBarTable: TdxBar;
@@ -437,11 +437,11 @@ type
     dxRichEditControlSetFloatingObjectThroughTextWrapType: TdxRichEditControlSetFloatingObjectThroughTextWrapType;
     dxBarLargeButtonThrough: TdxBarLargeButton;
     dxRichEditControlSetFloatingObjectTopAndBottomTextWrapType: TdxRichEditControlSetFloatingObjectTopAndBottomTextWrapType;
-    dxBarLargeButtonTopandBottom: TdxBarLargeButton;
+    dxBarLargeButtonTopAndBottom: TdxBarLargeButton;
     dxRichEditControlSetFloatingObjectBehindTextWrapType: TdxRichEditControlSetFloatingObjectBehindTextWrapType;
     dxBarLargeButtonBehindText: TdxBarLargeButton;
     dxRichEditControlSetFloatingObjectInFrontOfTextWrapType: TdxRichEditControlSetFloatingObjectInFrontOfTextWrapType;
-    dxBarLargeButtonInFrontofText: TdxBarLargeButton;
+    dxBarLargeButtonInFrontOfText: TdxBarLargeButton;
     dxBarSubItem11: TdxBarSubItem;
     dxRichEditControlSetFloatingObjectTopLeftAlignment: TdxRichEditControlSetFloatingObjectTopLeftAlignment;
     dxBarLargeButtonTopLeft: TdxBarLargeButton;
@@ -465,14 +465,14 @@ type
     dxRichEditControlFloatingObjectBringForward: TdxRichEditControlFloatingObjectBringForward;
     dxBarLargeButtonBringForward: TdxBarLargeButton;
     dxRichEditControlFloatingObjectBringToFront: TdxRichEditControlFloatingObjectBringToFront;
-    dxBarLargeButtonBringtoFront: TdxBarLargeButton;
+    dxBarLargeButtonBringToFront: TdxBarLargeButton;
     dxRichEditControlFloatingObjectBringInFrontOfText: TdxRichEditControlFloatingObjectBringInFrontOfText;
-    dxBarLargeButtonBringinFrontofText: TdxBarLargeButton;
+    dxBarLargeButtonBringInFrontOfText: TdxBarLargeButton;
     dxBarSubItem13: TdxBarSubItem;
     dxRichEditControlFloatingObjectSendBackward: TdxRichEditControlFloatingObjectSendBackward;
     dxBarLargeButtonSendBackward: TdxBarLargeButton;
     dxRichEditControlFloatingObjectSendToBack: TdxRichEditControlFloatingObjectSendToBack;
-    dxBarLargeButtonSendtoBack: TdxBarLargeButton;
+    dxBarLargeButtonSendToBack: TdxBarLargeButton;
     dxRichEditControlFloatingObjectSendBehindText: TdxRichEditControlFloatingObjectSendBehindText;
     dxBarLargeButtonSendBehindText: TdxBarLargeButton;
     dxRichEditControlShowPrintForm: TdxRichEditControlShowPrintForm;

@@ -1,15 +1,14 @@
 inherited frmMain: TfrmMain
   Caption = 'frmMain'
-  ClientHeight = 635
-  ClientWidth = 1053
+  ClientHeight = 634
+  ClientWidth = 1049
   Font.Height = -10
   OnDestroy = FormDestroy
-  ExplicitWidth = 1069
-  ExplicitHeight = 674
-  PixelsPerInch = 96
+  ExplicitWidth = 1065
+  ExplicitHeight = 673
   TextHeight = 12
   inherited dxRibbon1: TdxRibbon
-    Width = 1053
+    Width = 1049
     Margins.Left = 2
     Margins.Top = 2
     Margins.Right = 2
@@ -18,7 +17,6 @@ inherited frmMain: TfrmMain
     ApplicationButton.Menu = bvBackstageView
     ApplicationButton.Text = 'File'
     ColorSchemeAccent = rcsaGreen
-    ColorSchemeName = 'White'
     Contexts = <
       item
         Caption = 'DRAWING TOOLS'
@@ -26,7 +24,7 @@ inherited frmMain: TfrmMain
         Visible = True
       end>
     TabAreaSearchToolbar.Toolbar = dxBarTabAreaSearchToolbar
-    ExplicitWidth = 1053
+    ExplicitWidth = 1049
     object rtEdit: TdxRibbonTab [0]
       Active = True
       Caption = 'Home'
@@ -213,29 +211,40 @@ inherited frmMain: TfrmMain
     end
   end
   inherited pnlAllArea: TdxPanel
-    Width = 1053
-    Height = 480
+    Width = 1049
+    Height = 471
     Margins.Left = 2
     Margins.Top = 2
     Margins.Right = 2
     Margins.Bottom = 2
     ExplicitWidth = 1053
-    ExplicitHeight = 480
+    ExplicitHeight = 472
     inherited plClient: TdxPanel
-      Width = 844
-      Height = 480
+      Width = 840
+      Height = 471
       Margins.Left = 2
       Margins.Top = 2
       Margins.Right = 2
       Margins.Bottom = 2
       ExplicitWidth = 844
-      ExplicitHeight = 480
+      ExplicitHeight = 472
+      inherited dxRibbonBackstageView1: TdxRibbonBackstageView
+        inherited bvtExport: TdxRibbonBackstageViewTabSheet
+          inherited gbExportItems: TcxGroupBox
+            inherited gbExportPane: TcxGroupBox
+              inherited bvgcExport: TdxRibbonBackstageViewGalleryControl
+                ExplicitWidth = 304
+              end
+            end
+          end
+        end
+      end
       object pnSpreadSheetSite: TPanel
         AlignWithMargins = True
         Left = 8
         Top = 8
-        Width = 828
-        Height = 464
+        Width = 824
+        Height = 455
         Margins.Left = 8
         Margins.Top = 8
         Margins.Right = 8
@@ -243,15 +252,14 @@ inherited frmMain: TfrmMain
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitHeight = 495
       end
     end
     inherited NavBarSite: TPanel
-      Height = 480
-      ExplicitHeight = 480
+      Height = 471
+      ExplicitHeight = 511
       inherited NavBar: TdxNavBar
-        Height = 480
-        ExplicitHeight = 480
+        Height = 473
+        ExplicitHeight = 511
         object nbgHighlightedFeatures: TdxNavBarGroup [0]
           Caption = 'Highlighted Features'
           SelectedLinkIndex = -1
@@ -564,9 +572,9 @@ inherited frmMain: TfrmMain
           CustomStyles.ItemPressed = nbsItemStyle
         end
         inherited nbcSearch: TdxNavBarGroupControl
-          Top = 906
+          Top = 807
           Width = 188
-          ExplicitTop = 906
+          ExplicitTop = 807
           ExplicitWidth = 188
           GroupIndex = 6
           inherited dxLayoutControl1: TdxLayoutControl
@@ -574,9 +582,9 @@ inherited frmMain: TfrmMain
             ExplicitWidth = 188
             inherited edtNavBarFilterText: TcxTextEdit
               Left = 2
-              Top = 15
+              Top = 13
               ExplicitLeft = 2
-              ExplicitTop = 15
+              ExplicitTop = 13
               ExplicitWidth = 162
               Width = 162
             end
@@ -628,10 +636,9 @@ inherited frmMain: TfrmMain
     object bvtsOpen: TdxRibbonBackstageViewTabSheet
       Left = 143
       Top = 0
-      Active = True
       Caption = 'Open'
       KeyTip = 'D'
-      object lbbvtsOpen: TcxLabel
+      object lbBackstageOpen: TcxLabel
         AlignWithMargins = True
         Left = 40
         Top = 0
@@ -649,12 +656,13 @@ inherited frmMain: TfrmMain
         Style.Font.Style = []
         Style.TransparentBorder = False
         Style.IsFontAssigned = True
+        TabOrder = 0
         Transparent = True
       end
       object gbLocationsMain: TcxGroupBox
         AlignWithMargins = True
         Left = 40
-        Top = 62
+        Top = 66
         Margins.Left = 40
         Margins.Top = 0
         Margins.Right = 40
@@ -667,7 +675,9 @@ inherited frmMain: TfrmMain
         StyleDisabled.LookAndFeel.NativeStyle = True
         TabOrder = 1
         Transparent = True
-        Height = 330
+        ExplicitTop = 62
+        ExplicitHeight = 330
+        Height = 326
         Width = 650
         object gbLocationsPane: TcxGroupBox
           Left = 0
@@ -680,31 +690,33 @@ inherited frmMain: TfrmMain
           StyleDisabled.LookAndFeel.NativeStyle = True
           TabOrder = 0
           Transparent = True
-          Height = 330
+          ExplicitHeight = 330
+          Height = 326
           Width = 337
           object bvSpacer5: TBevel
             Left = 305
             Top = 0
             Width = 32
-            Height = 330
+            Height = 326
             Align = alRight
             Shape = bsSpacer
+            ExplicitHeight = 330
           end
           object dxBevel3: TdxBevel
-            Left = 303
+            Left = 304
             Top = 0
-            Width = 2
-            Height = 330
+            Width = 1
+            Height = 326
             Align = alRight
             AutoSize = True
             Shape = dxbsLineLeft
-            ExplicitWidth = 1
+            ExplicitLeft = 299
           end
           object bvgcLocations: TdxRibbonBackstageViewGalleryControl
             Left = 0
             Top = 0
-            Width = 303
-            Height = 330
+            Width = 304
+            Height = 326
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -752,24 +764,26 @@ inherited frmMain: TfrmMain
           Left = 337
           Top = 0
           Width = 313
-          Height = 330
+          Height = 326
           Align = alClient
           BorderStyle = cxcbsNone
           TabOrder = 1
           Transparent = True
           Visible = False
+          ExplicitHeight = 330
           object bvSpacer6: TBevel
             Left = 0
-            Top = 28
+            Top = 32
             Width = 313
             Height = 16
             Align = alTop
             Shape = bsSpacer
+            ExplicitTop = 28
             ExplicitWidth = 324
           end
           object bvgcRecentPaths: TdxRibbonBackstageViewGalleryControl
             Left = 0
-            Top = 151
+            Top = 159
             Width = 313
             Height = 63
             Align = alTop
@@ -793,7 +807,7 @@ inherited frmMain: TfrmMain
           end
           object gbRecentPathsPaneBottom: TcxGroupBox
             Left = 0
-            Top = 214
+            Top = 222
             Align = alTop
             PanelStyle.Active = True
             Style.BorderStyle = ebsNone
@@ -802,6 +816,7 @@ inherited frmMain: TfrmMain
             StyleDisabled.LookAndFeel.NativeStyle = True
             TabOrder = 1
             Transparent = True
+            ExplicitTop = 214
             Height = 95
             Width = 313
             object btnBrowsePath: TcxButton
@@ -819,7 +834,7 @@ inherited frmMain: TfrmMain
           end
           object gbRecentPathsPaneCurrentFolder: TcxGroupBox
             Left = 0
-            Top = 44
+            Top = 48
             Align = alTop
             PanelStyle.Active = True
             Style.BorderStyle = ebsNone
@@ -843,13 +858,14 @@ inherited frmMain: TfrmMain
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.IsFontAssigned = True
+              TabOrder = 0
               Transparent = True
             end
             object bvgcCurrentFolder: TdxRibbonBackstageViewGalleryControl
               Left = 0
-              Top = 22
+              Top = 26
               Width = 313
-              Height = 63
+              Height = 59
               Align = alClient
               BorderStyle = cxcbsNone
               Images = ilBackstageView
@@ -878,11 +894,12 @@ inherited frmMain: TfrmMain
             Style.Font.Style = []
             Style.TransparentBorder = True
             Style.IsFontAssigned = True
+            TabOrder = 3
             Transparent = True
           end
           object lbRecentFolders: TcxLabel
             Left = 0
-            Top = 129
+            Top = 133
             Align = alTop
             Caption = 'Recent Folders'
             ParentFont = False
@@ -892,26 +909,30 @@ inherited frmMain: TfrmMain
             Style.Font.Name = 'Tahoma'
             Style.Font.Style = []
             Style.IsFontAssigned = True
+            TabOrder = 4
             Transparent = True
+            ExplicitTop = 129
           end
         end
         object gbRecentDocumentsPane: TcxScrollBox
           Left = 337
           Top = 0
           Width = 313
-          Height = 330
+          Height = 326
           Align = alClient
           BorderStyle = cxcbsNone
           TabOrder = 2
           Transparent = True
           Visible = False
+          ExplicitHeight = 330
           object bvSpacer8: TBevel
             Left = 0
-            Top = 28
+            Top = 32
             Width = 313
             Height = 16
             Align = alTop
             Shape = bsSpacer
+            ExplicitTop = 28
             ExplicitWidth = 324
           end
           object lbRecentDocuments: TcxLabel
@@ -927,13 +948,14 @@ inherited frmMain: TfrmMain
             Style.Font.Style = []
             Style.TransparentBorder = True
             Style.IsFontAssigned = True
+            TabOrder = 0
             Transparent = True
           end
           object bvgcRecentDocuments: TdxRibbonBackstageViewGalleryControl
             Left = 0
-            Top = 44
+            Top = 48
             Width = 313
-            Height = 286
+            Height = 278
             Align = alClient
             BorderStyle = cxcbsNone
             Images = ilBackstageView
@@ -955,8 +977,9 @@ inherited frmMain: TfrmMain
     object bvtsSaveAs: TdxRibbonBackstageViewTabSheet
       Left = 143
       Top = 0
+      Active = True
       Caption = 'Save As'
-      object lbbvtsSaveAs: TcxLabel
+      object lbBackstageSaveAs: TcxLabel
         AlignWithMargins = True
         Left = 40
         Top = 0
@@ -974,6 +997,7 @@ inherited frmMain: TfrmMain
         Style.Font.Style = []
         Style.TransparentBorder = False
         Style.IsFontAssigned = True
+        TabOrder = 0
         Transparent = True
       end
     end
@@ -1611,15 +1635,15 @@ inherited frmMain: TfrmMain
         end
         item
           Visible = True
-          ItemName = 'dxRibbonGalleryItemDateandTime'
+          ItemName = 'dxRibbonGalleryItemDateAndTime'
         end
         item
           Visible = True
-          ItemName = 'dxRibbonGalleryItemLookupandReference'
+          ItemName = 'dxRibbonGalleryItemLookupAndReference'
         end
         item
           Visible = True
-          ItemName = 'dxRibbonGalleryItemMathandTrig'
+          ItemName = 'dxRibbonGalleryItemMathAndTrig'
         end
         item
           Visible = True
@@ -2336,7 +2360,7 @@ inherited frmMain: TfrmMain
         end
         item
           Visible = True
-          ItemName = 'dxbtnFieldChoser'
+          ItemName = 'dxbtnFieldChooser'
         end
         item
           Position = ipContinuesRow
@@ -2525,7 +2549,7 @@ inherited frmMain: TfrmMain
         item
           ViewLevels = [ivlSmallIconWithText, ivlSmallIcon, ivlControlOnly]
           Visible = True
-          ItemName = 'dxRibbonGalleryItemUseinFormula'
+          ItemName = 'dxRibbonGalleryItemUseInFormula'
         end
         item
           Visible = True
@@ -3730,13 +3754,13 @@ inherited frmMain: TfrmMain
       SyncImageIndex = False
       ImageIndex = 52
     end
-    object dxbtnFieldChoser: TdxBarLargeButton [181]
+    object dxbtnFieldChooser: TdxBarLargeButton [181]
       Caption = 'Field Chooser'
       Category = 0
       Hint = 'Field Chooser'
       Visible = ivAlways
       ButtonStyle = bsChecked
-      OnClick = dxbtnFieldChoserClick
+      OnClick = dxbtnFieldChooserClick
       LargeImageIndex = 0
       SyncImageIndex = False
       ImageIndex = 0
@@ -3959,7 +3983,7 @@ inherited frmMain: TfrmMain
       ImageIndex = 94
       LargeImageIndex = 94
     end
-    object dxRibbonGalleryItemUseinFormula: TdxRibbonGalleryItem [208]
+    object dxRibbonGalleryItemUseInFormula: TdxRibbonGalleryItem [208]
       Action = dxSpreadSheetUseDefinedNameInFormula1
       Category = 1
       GalleryOptions.ColumnCount = 1
@@ -3970,7 +3994,7 @@ inherited frmMain: TfrmMain
       GalleryInRibbonOptions.MinColumnCount = 1
       GalleryInMenuOptions.DropDownGalleryResizing = gsrNone
       ItemLinks = <>
-      object dxRibbonGalleryItemUseinFormulaGroup1: TdxRibbonGalleryGroup
+      object dxRibbonGalleryItemUseInFormulaGroup1: TdxRibbonGalleryGroup
       end
     end
     object rgiFillColor: TdxRibbonGalleryItem [209]
@@ -5487,7 +5511,7 @@ inherited frmMain: TfrmMain
         end
       end
     end
-    object dxRibbonGalleryItemDateandTime: TdxRibbonGalleryItem
+    object dxRibbonGalleryItemDateAndTime: TdxRibbonGalleryItem
       Action = dxSpreadSheetDateAndTimeFormulasGallery
       Category = 14
       ImageIndex = 69
@@ -5498,107 +5522,107 @@ inherited frmMain: TfrmMain
       GalleryInRibbonOptions.MinColumnCount = 1
       GalleryInMenuOptions.DropDownGalleryResizing = gsrNone
       ItemLinks = <>
-      object dxRibbonGalleryItemDateandTimeGroup1: TdxRibbonGalleryGroup
+      object dxRibbonGalleryItemDateAndTimeGroup1: TdxRibbonGalleryGroup
         Options.Images = ilBarSmall
-        object dxRibbonGalleryItemDateandTimeGroup1Item1: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item1: TdxRibbonGalleryGroupItem
           Caption = 'DATE'
           ActionIndex = 'DATE'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item2: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item2: TdxRibbonGalleryGroupItem
           Caption = 'DATEVALUE'
           ActionIndex = 'DATEVALUE'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item3: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item3: TdxRibbonGalleryGroupItem
           Caption = 'DAY'
           ActionIndex = 'DAY'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item4: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item4: TdxRibbonGalleryGroupItem
           Caption = 'DAYS'
           ActionIndex = 'DAYS'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item5: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item5: TdxRibbonGalleryGroupItem
           Caption = 'DAYS360'
           ActionIndex = 'DAYS360'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item6: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item6: TdxRibbonGalleryGroupItem
           Caption = 'EDATE'
           ActionIndex = 'EDATE'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item7: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item7: TdxRibbonGalleryGroupItem
           Caption = 'EOMONTH'
           ActionIndex = 'EOMONTH'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item8: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item8: TdxRibbonGalleryGroupItem
           Caption = 'HOUR'
           ActionIndex = 'HOUR'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item9: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item9: TdxRibbonGalleryGroupItem
           Caption = 'ISOWEEKNUM'
           ActionIndex = 'ISOWEEKNUM'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item10: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item10: TdxRibbonGalleryGroupItem
           Caption = 'MINUTE'
           ActionIndex = 'MINUTE'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item11: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item11: TdxRibbonGalleryGroupItem
           Caption = 'MONTH'
           ActionIndex = 'MONTH'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item12: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item12: TdxRibbonGalleryGroupItem
           Caption = 'NETWORKDAYS'
           ActionIndex = 'NETWORKDAYS'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item13: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item13: TdxRibbonGalleryGroupItem
           Caption = 'NETWORKDAYS.INTL'
           ActionIndex = 'NETWORKDAYS.INTL'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item14: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item14: TdxRibbonGalleryGroupItem
           Caption = 'NOW'
           ActionIndex = 'NOW'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item15: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item15: TdxRibbonGalleryGroupItem
           Caption = 'SECOND'
           ActionIndex = 'SECOND'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item16: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item16: TdxRibbonGalleryGroupItem
           Caption = 'TIME'
           ActionIndex = 'TIME'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item17: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item17: TdxRibbonGalleryGroupItem
           Caption = 'TIMEVALUE'
           ActionIndex = 'TIMEVALUE'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item18: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item18: TdxRibbonGalleryGroupItem
           Caption = 'TODAY'
           ActionIndex = 'TODAY'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item19: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item19: TdxRibbonGalleryGroupItem
           Caption = 'WEEKDAY'
           ActionIndex = 'WEEKDAY'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item20: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item20: TdxRibbonGalleryGroupItem
           Caption = 'WEEKNUM'
           ActionIndex = 'WEEKNUM'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item21: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item21: TdxRibbonGalleryGroupItem
           Caption = 'WORKDAY'
           ActionIndex = 'WORKDAY'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item22: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item22: TdxRibbonGalleryGroupItem
           Caption = 'WORKDAY.INTL'
           ActionIndex = 'WORKDAY.INTL'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item23: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item23: TdxRibbonGalleryGroupItem
           Caption = 'YEAR'
           ActionIndex = 'YEAR'
         end
-        object dxRibbonGalleryItemDateandTimeGroup1Item24: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemDateAndTimeGroup1Item24: TdxRibbonGalleryGroupItem
           Caption = 'YEARFRAC'
           ActionIndex = 'YEARFRAC'
         end
       end
     end
-    object dxRibbonGalleryItemLookupandReference: TdxRibbonGalleryItem
+    object dxRibbonGalleryItemLookupAndReference: TdxRibbonGalleryItem
       Action = dxSpreadSheetLookupAndReferenceFormulasGallery
       Category = 14
       ImageIndex = 70
@@ -5609,75 +5633,75 @@ inherited frmMain: TfrmMain
       GalleryInRibbonOptions.MinColumnCount = 1
       GalleryInMenuOptions.DropDownGalleryResizing = gsrNone
       ItemLinks = <>
-      object dxRibbonGalleryItemLookupandReferenceGroup1: TdxRibbonGalleryGroup
+      object dxRibbonGalleryItemLookupAndReferenceGroup1: TdxRibbonGalleryGroup
         Options.Images = ilBarSmall
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item1: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item1: TdxRibbonGalleryGroupItem
           Caption = 'ADDRESS'
           ActionIndex = 'ADDRESS'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item2: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item2: TdxRibbonGalleryGroupItem
           Caption = 'AREAS'
           ActionIndex = 'AREAS'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item3: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item3: TdxRibbonGalleryGroupItem
           Caption = 'CHOOSE'
           ActionIndex = 'CHOOSE'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item4: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item4: TdxRibbonGalleryGroupItem
           Caption = 'COLUMN'
           ActionIndex = 'COLUMN'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item5: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item5: TdxRibbonGalleryGroupItem
           Caption = 'COLUMNS'
           ActionIndex = 'COLUMNS'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item6: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item6: TdxRibbonGalleryGroupItem
           Caption = 'FORMULATEXT'
           ActionIndex = 'FORMULATEXT'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item7: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item7: TdxRibbonGalleryGroupItem
           Caption = 'HLOOKUP'
           ActionIndex = 'HLOOKUP'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item8: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item8: TdxRibbonGalleryGroupItem
           Caption = 'INDEX'
           ActionIndex = 'INDEX'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item9: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item9: TdxRibbonGalleryGroupItem
           Caption = 'INDIRECT'
           ActionIndex = 'INDIRECT'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item10: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item10: TdxRibbonGalleryGroupItem
           Caption = 'LOOKUP'
           ActionIndex = 'LOOKUP'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item11: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item11: TdxRibbonGalleryGroupItem
           Caption = 'MATCH'
           ActionIndex = 'MATCH'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item12: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item12: TdxRibbonGalleryGroupItem
           Caption = 'OFFSET'
           ActionIndex = 'OFFSET'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item13: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item13: TdxRibbonGalleryGroupItem
           Caption = 'ROW'
           ActionIndex = 'ROW'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item14: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item14: TdxRibbonGalleryGroupItem
           Caption = 'ROWS'
           ActionIndex = 'ROWS'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item15: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item15: TdxRibbonGalleryGroupItem
           Caption = 'TRANSPOSE'
           ActionIndex = 'TRANSPOSE'
         end
-        object dxRibbonGalleryItemLookupandReferenceGroup1Item16: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemLookupAndReferenceGroup1Item16: TdxRibbonGalleryGroupItem
           Caption = 'VLOOKUP'
           ActionIndex = 'VLOOKUP'
         end
       end
     end
-    object dxRibbonGalleryItemMathandTrig: TdxRibbonGalleryItem
+    object dxRibbonGalleryItemMathAndTrig: TdxRibbonGalleryItem
       Action = dxSpreadSheetMathAndTrigFormulasGallery
       Category = 14
       ImageIndex = 71
@@ -5688,281 +5712,281 @@ inherited frmMain: TfrmMain
       GalleryInRibbonOptions.MinColumnCount = 1
       GalleryInMenuOptions.DropDownGalleryResizing = gsrHeight
       ItemLinks = <>
-      object dxRibbonGalleryItemMathandTrigGroup1: TdxRibbonGalleryGroup
+      object dxRibbonGalleryItemMathAndTrigGroup1: TdxRibbonGalleryGroup
         Options.Images = ilBarSmall
-        object dxRibbonGalleryItemMathandTrigGroup1Item1: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item1: TdxRibbonGalleryGroupItem
           Caption = 'ABS'
           ActionIndex = 'ABS'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item2: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item2: TdxRibbonGalleryGroupItem
           Caption = 'ACOS'
           ActionIndex = 'ACOS'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item3: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item3: TdxRibbonGalleryGroupItem
           Caption = 'ACOSH'
           ActionIndex = 'ACOSH'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item4: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item4: TdxRibbonGalleryGroupItem
           Caption = 'ACOT'
           ActionIndex = 'ACOT'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item5: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item5: TdxRibbonGalleryGroupItem
           Caption = 'ACOTH'
           ActionIndex = 'ACOTH'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item6: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item6: TdxRibbonGalleryGroupItem
           Caption = 'ASIN'
           ActionIndex = 'ASIN'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item7: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item7: TdxRibbonGalleryGroupItem
           Caption = 'ASINH'
           ActionIndex = 'ASINH'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item8: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item8: TdxRibbonGalleryGroupItem
           Caption = 'ATAN'
           ActionIndex = 'ATAN'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item9: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item9: TdxRibbonGalleryGroupItem
           Caption = 'ATAN2'
           ActionIndex = 'ATAN2'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item10: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item10: TdxRibbonGalleryGroupItem
           Caption = 'ATANH'
           ActionIndex = 'ATANH'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item11: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item11: TdxRibbonGalleryGroupItem
           Caption = 'BASE'
           ActionIndex = 'BASE'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item12: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item12: TdxRibbonGalleryGroupItem
           Caption = 'CEILING'
           ActionIndex = 'CEILING'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item13: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item13: TdxRibbonGalleryGroupItem
           Caption = 'CEILING.MATH'
           ActionIndex = 'CEILING.MATH'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item14: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item14: TdxRibbonGalleryGroupItem
           Caption = 'CEILING.PRECISE'
           ActionIndex = 'CEILING.PRECISE'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item15: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item15: TdxRibbonGalleryGroupItem
           Caption = 'COMBIN'
           ActionIndex = 'COMBIN'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item16: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item16: TdxRibbonGalleryGroupItem
           Caption = 'COMBINA'
           ActionIndex = 'COMBINA'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item17: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item17: TdxRibbonGalleryGroupItem
           Caption = 'COS'
           ActionIndex = 'COS'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item18: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item18: TdxRibbonGalleryGroupItem
           Caption = 'COSH'
           ActionIndex = 'COSH'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item19: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item19: TdxRibbonGalleryGroupItem
           Caption = 'COT'
           ActionIndex = 'COT'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item20: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item20: TdxRibbonGalleryGroupItem
           Caption = 'COTH'
           ActionIndex = 'COTH'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item21: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item21: TdxRibbonGalleryGroupItem
           Caption = 'CSC'
           ActionIndex = 'CSC'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item22: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item22: TdxRibbonGalleryGroupItem
           Caption = 'CSCH'
           ActionIndex = 'CSCH'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item23: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item23: TdxRibbonGalleryGroupItem
           Caption = 'DECIMAL'
           ActionIndex = 'DECIMAL'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item24: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item24: TdxRibbonGalleryGroupItem
           Caption = 'DEGREES'
           ActionIndex = 'DEGREES'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item25: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item25: TdxRibbonGalleryGroupItem
           Caption = 'EVEN'
           ActionIndex = 'EVEN'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item26: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item26: TdxRibbonGalleryGroupItem
           Caption = 'EXP'
           ActionIndex = 'EXP'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item27: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item27: TdxRibbonGalleryGroupItem
           Caption = 'FACT'
           ActionIndex = 'FACT'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item28: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item28: TdxRibbonGalleryGroupItem
           Caption = 'FACTDOUBLE'
           ActionIndex = 'FACTDOUBLE'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item29: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item29: TdxRibbonGalleryGroupItem
           Caption = 'FLOOR'
           ActionIndex = 'FLOOR'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item30: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item30: TdxRibbonGalleryGroupItem
           Caption = 'FLOOR.MATH'
           ActionIndex = 'FLOOR.MATH'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item31: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item31: TdxRibbonGalleryGroupItem
           Caption = 'FLOOR.PRECISE'
           ActionIndex = 'FLOOR.PRECISE'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item32: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item32: TdxRibbonGalleryGroupItem
           Caption = 'INT'
           ActionIndex = 'INT'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item33: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item33: TdxRibbonGalleryGroupItem
           Caption = 'ISO.CEILING'
           ActionIndex = 'ISO.CEILING'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item34: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item34: TdxRibbonGalleryGroupItem
           Caption = 'LN'
           ActionIndex = 'LN'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item35: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item35: TdxRibbonGalleryGroupItem
           Caption = 'LOG'
           ActionIndex = 'LOG'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item36: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item36: TdxRibbonGalleryGroupItem
           Caption = 'LOG10'
           ActionIndex = 'LOG10'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item37: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item37: TdxRibbonGalleryGroupItem
           Caption = 'MMULT'
           ActionIndex = 'MMULT'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item38: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item38: TdxRibbonGalleryGroupItem
           Caption = 'MOD'
           ActionIndex = 'MOD'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item39: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item39: TdxRibbonGalleryGroupItem
           Caption = 'MROUND'
           ActionIndex = 'MROUND'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item40: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item40: TdxRibbonGalleryGroupItem
           Caption = 'ODD'
           ActionIndex = 'ODD'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item41: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item41: TdxRibbonGalleryGroupItem
           Caption = 'PI'
           ActionIndex = 'PI'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item42: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item42: TdxRibbonGalleryGroupItem
           Caption = 'POWER'
           ActionIndex = 'POWER'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item43: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item43: TdxRibbonGalleryGroupItem
           Caption = 'PRODUCT'
           ActionIndex = 'PRODUCT'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item44: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item44: TdxRibbonGalleryGroupItem
           Caption = 'QUOTIENT'
           ActionIndex = 'QUOTIENT'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item45: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item45: TdxRibbonGalleryGroupItem
           Caption = 'RADIANS'
           ActionIndex = 'RADIANS'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item46: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item46: TdxRibbonGalleryGroupItem
           Caption = 'RAND'
           ActionIndex = 'RAND'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item47: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item47: TdxRibbonGalleryGroupItem
           Caption = 'RANDBETWEEN'
           ActionIndex = 'RANDBETWEEN'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item48: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item48: TdxRibbonGalleryGroupItem
           Caption = 'ROUND'
           ActionIndex = 'ROUND'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item49: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item49: TdxRibbonGalleryGroupItem
           Caption = 'ROUNDDOWN'
           ActionIndex = 'ROUNDDOWN'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item50: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item50: TdxRibbonGalleryGroupItem
           Caption = 'ROUNDUP'
           ActionIndex = 'ROUNDUP'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item51: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item51: TdxRibbonGalleryGroupItem
           Caption = 'SEC'
           ActionIndex = 'SEC'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item52: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item52: TdxRibbonGalleryGroupItem
           Caption = 'SECH'
           ActionIndex = 'SECH'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item53: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item53: TdxRibbonGalleryGroupItem
           Caption = 'SIGN'
           ActionIndex = 'SIGN'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item54: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item54: TdxRibbonGalleryGroupItem
           Caption = 'SIN'
           ActionIndex = 'SIN'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item55: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item55: TdxRibbonGalleryGroupItem
           Caption = 'SINH'
           ActionIndex = 'SINH'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item56: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item56: TdxRibbonGalleryGroupItem
           Caption = 'SQRT'
           ActionIndex = 'SQRT'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item57: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item57: TdxRibbonGalleryGroupItem
           Caption = 'SQRTPI'
           ActionIndex = 'SQRTPI'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item58: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item58: TdxRibbonGalleryGroupItem
           Caption = 'SUBTOTAL'
           ActionIndex = 'SUBTOTAL'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item59: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item59: TdxRibbonGalleryGroupItem
           Caption = 'SUM'
           ActionIndex = 'SUM'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item60: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item60: TdxRibbonGalleryGroupItem
           Caption = 'SUMIF'
           ActionIndex = 'SUMIF'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item61: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item61: TdxRibbonGalleryGroupItem
           Caption = 'SUMIFS'
           ActionIndex = 'SUMIFS'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item62: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item62: TdxRibbonGalleryGroupItem
           Caption = 'SUMPRODUCT'
           ActionIndex = 'SUMPRODUCT'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item63: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item63: TdxRibbonGalleryGroupItem
           Caption = 'SUMSQ'
           ActionIndex = 'SUMSQ'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item64: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item64: TdxRibbonGalleryGroupItem
           Caption = 'SUMX2MY2'
           ActionIndex = 'SUMX2MY2'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item65: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item65: TdxRibbonGalleryGroupItem
           Caption = 'SUMX2PY2'
           ActionIndex = 'SUMX2PY2'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item66: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item66: TdxRibbonGalleryGroupItem
           Caption = 'SUMXMY2'
           ActionIndex = 'SUMXMY2'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item67: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item67: TdxRibbonGalleryGroupItem
           Caption = 'TAN'
           ActionIndex = 'TAN'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item68: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item68: TdxRibbonGalleryGroupItem
           Caption = 'TANH'
           ActionIndex = 'TANH'
         end
-        object dxRibbonGalleryItemMathandTrigGroup1Item69: TdxRibbonGalleryGroupItem
+        object dxRibbonGalleryItemMathAndTrigGroup1Item69: TdxRibbonGalleryGroupItem
           Caption = 'TRUNC'
           ActionIndex = 'TRUNC'
         end
@@ -52404,7 +52428,7 @@ inherited frmMain: TfrmMain
     object dxSpreadSheetUseDefinedNameInFormula1: TdxSpreadSheetUseDefinedNameInFormula
       Category = 'DevExpress ExpressSpreadSheet.Formulas.Defined Names'
       ImageIndex = 191
-      GalleryGroup = dxRibbonGalleryItemUseinFormulaGroup1
+      GalleryGroup = dxRibbonGalleryItemUseInFormulaGroup1
     end
   end
   inherited SaveDialog: TdxSaveFileDialog
@@ -57991,7 +58015,6 @@ inherited frmMain: TfrmMain
         F4FFFFF8EEFFFFF5E7FFFFF5E5FFDEA573FF0000000000000000FCE1C2FFFBE3
         C9FFFBE1C4FFFBDEBFFFFBDDBCFFFADBB8FFFAD9B5FFFAD7B2FFFAD6B0FFF9D4
         ACFFF9D3AAFFF8D0A6FFF8CEA3FFE4AC79FF00000000}
-      Footer.Text = 'visit to ww.dfetdl'
       UseStandardFooter = True
     end
     object stPrint: TdxBarScreenTip

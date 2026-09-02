@@ -89,7 +89,7 @@ inherited frmValidation: TfrmValidation
         ShowHint = True
         Style.HotTrack = False
         TabOrder = 2
-        Text = 'supportdevexpress.com'
+        Text = 'support.devexpress.com'
         Width = 175
       end
       object cbAddress: TcxComboBox [8]

@@ -14366,7 +14366,7 @@ object Form1: TForm1
     end
     object actSupport: TAction
       Category = 'Help'
-      Caption = 'Develooer Express Support &Center'
+      Caption = 'Developer Express Support &Center'
       Hint = 'Launches the web-page with the Developer Express Support Center'
     end
     object actDXOnTheWeb: TAction

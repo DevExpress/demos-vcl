@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Classes, Vcl.Forms, Data.DB, dxmdaset, System.DateUtils, System.Generics.Collections,
   cxEdit, cxEditRepositoryItems, cxClasses, Vcl.ImgList,
-  Vcl.Controls, cxImageList, cxGraphics, cxExtEditRepositoryItems, cxStyles, dxCore;
+  Vcl.Controls, cxImageList, cxGraphics, cxExtEditRepositoryItems, cxStyles, dxCore, System.ImageList;
 
 type
   TdxTask = class

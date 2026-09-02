@@ -26,7 +26,7 @@ uses
   dxLayoutControlAdapters, dxPrinting, cxImageList, cxImage, cxButtons, dxNavBarStyles,
   dxOfficeSearchBox, dxGallery, dxGalleryControl, dxRibbonBackstageViewGalleryControl,
   dxBevel, cxLabel, cxGroupBox, dxRibbonBackstageView, dxRichEdit.DocumentModel.Styles.Core, dxShellDialogs,
-  System.Actions, dxSkinsCore;
+  System.Actions, dxSkinsCore, System.ImageList;
 
 type
   { TfrmRibbonRichEditMain }
@@ -43,7 +43,7 @@ type
     bmbFileCommon: TdxBar;
     bmbInsertPages: TdxBar;
     bmbInsertTables: TdxBar;
-    bmbInserIllustrations: TdxBar;
+    bmbInsertIllustrations: TdxBar;
     bmbInsertLinks: TdxBar;
     bmbInsertHeaderAndFooter: TdxBar;
     bmbInsertText: TdxBar;
@@ -125,7 +125,7 @@ type
     bbDecrementIndent: TdxBarLargeButton;
     bbIncrementIndent: TdxBarLargeButton;
     bbParagraph: TdxBarButton;
-    bbRadialMenuAlligns: TdxBarSubItem;
+    bbRadialMenuAligns: TdxBarSubItem;
     bbSaveAs: TdxBarLargeButton;
     bbTableProperties: TdxBarLargeButton;
     bbSymbol: TdxBarLargeButton;
@@ -583,7 +583,7 @@ type
     bbTableOfFigures: TdxBarLargeButton;
     bbTableOfTables: TdxBarLargeButton;
     bbTableOfEquations: TdxBarLargeButton;
-    bbUpdateTableofFigures: TdxBarLargeButton;
+    bbUpdateTableOfFigures: TdxBarLargeButton;
     bmbProtect: TdxBar;
     bmbComment: TdxBar;
     bbProtectDocument: TdxBarLargeButton;
@@ -1157,7 +1157,7 @@ begin
   bmbInsertLinks.Visible := not (ActiveFrameID in [RichEditCharacterFormattingID,
     RichEditParagraphFormattingID, RichEditHeadersAndFootersID,
     RichEditMultiColumnContentID]);
-  bmbInserIllustrations.Visible := not (ActiveFrameID in [RichEditHyperlinksAndBookmarksID,
+  bmbInsertIllustrations.Visible := not (ActiveFrameID in [RichEditHyperlinksAndBookmarksID,
     RichEditHeadersAndFootersID, RichEditMultiColumnContentID]);
   bmbInsertHeaderAndFooter.Visible := not (ActiveFrameID in [RichEditCharacterFormattingID,
     RichEditParagraphFormattingID, RichEditHyperlinksAndBookmarksID]);

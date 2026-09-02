@@ -6,7 +6,7 @@ inherited frmDragDropGrid: TfrmDragDropGrid
   inherited PanelDescription: TdxPanel
     Top = 390
     Width = 899
-    ExplicitTop = 393
+    ExplicitTop = 390
     ExplicitWidth = 899
     inherited lcBottomFrame: TdxLayoutControl
       Width = 899
@@ -17,16 +17,16 @@ inherited frmDragDropGrid: TfrmDragDropGrid
     Width = 856
     Height = 390
     ExplicitWidth = 856
-    ExplicitHeight = 393
+    ExplicitHeight = 390
     inherited Grid: TcxGrid
       Left = 609
       Width = 247
-      Height = 393
+      Height = 390
       DragMode = dmAutomatic
       OnEnter = GridEnter
       ExplicitLeft = 609
       ExplicitWidth = 247
-      ExplicitHeight = 393
+      ExplicitHeight = 390
       inherited GridDBTableView: TcxGridDBTableView
         DragMode = dmAutomatic
         OnDragOver = GridDBTableViewDragOver
@@ -37,8 +37,8 @@ inherited frmDragDropGrid: TfrmDragDropGrid
         OptionsSelection.MultiSelect = True
         object GridDBTableViewName: TcxGridDBColumn [0]
           Caption = 'Customer'
-          DataBinding.Expression = #1'CONCATENATE([First Name]," ",[Last Name])'
           DataBinding.ValueType = 'String'
+          DataBinding.Expression = #1'CONCATENATE([First Name]," ",[Last Name])'
           Width = 100
         end
         inherited GridDBTableViewFIRSTNAME: TcxGridDBColumn
@@ -73,7 +73,7 @@ inherited frmDragDropGrid: TfrmDragDropGrid
       Left = 0
       Top = 0
       Width = 609
-      Height = 393
+      Height = 390
       Align = alLeft
       Frame.Borders = [bRight]
       Frame.Drag.Enabled = True
@@ -82,7 +82,7 @@ inherited frmDragDropGrid: TfrmDragDropGrid
         Left = 0
         Top = 0
         Width = 608
-        Height = 393
+        Height = 390
         Align = alClient
         BorderStyle = cxcbsNone
         DragMode = dmAutomatic
@@ -93,9 +93,7 @@ inherited frmDragDropGrid: TfrmDragDropGrid
           OnDragOver = GridDBTableViewDragOver
           OnEndDrag = GridDBTableViewEndDrag
           OnStartDrag = GridDBTableView1StartDrag
-          Navigator.Buttons.CustomButtons = <>
           FilterBox.Visible = fvNever
-          ScrollbarAnnotations.CustomAnnotations = <>
           DataController.DataSource = dmMain.dsDXCustomers
           DataController.KeyFieldNames = 'ID'
           DataController.Summary.DefaultGroupSummaryItems = <
@@ -141,7 +139,6 @@ inherited frmDragDropGrid: TfrmDragDropGrid
               Kind = skCount
               Column = cxGridDBColumn1
             end>
-          DataController.Summary.SummaryGroups = <>
           OptionsCustomize.ColumnFiltering = False
           OptionsSelection.MultiSelect = True
           OptionsView.ColumnAutoWidth = True
@@ -149,8 +146,8 @@ inherited frmDragDropGrid: TfrmDragDropGrid
           OptionsView.GroupFooters = gfVisibleWhenExpanded
           object cxGridDBColumn10: TcxGridDBColumn
             Caption = 'Customer'
-            DataBinding.Expression = #1'CONCATENATE([First Name]," ",[Last Name])'
             DataBinding.ValueType = 'String'
+            DataBinding.Expression = #1'CONCATENATE([First Name]," ",[Last Name])'
             Width = 100
           end
           object cxGridDBColumn1: TcxGridDBColumn
@@ -234,10 +231,10 @@ inherited frmDragDropGrid: TfrmDragDropGrid
       Height = 390
       Width = 42
       inherited lcFrame: TdxLayoutControl
-        Width = 40
+        Width = 38
         Height = 370
-        ExplicitWidth = 40
-        ExplicitHeight = 373
+        ExplicitWidth = 38
+        ExplicitHeight = 370
       end
     end
   end

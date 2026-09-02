@@ -22,7 +22,7 @@ uses
   dxLayoutContainer, Vcl.StdCtrls, cxButtons, cxTextEdit, dxLayoutControl,
   dxNavBarBase, dxNavBarStyles, dxNavBar, Vcl.ExtCtrls, cxSplitter, dxNavBarCollns, dxCustomDemoFrameUnit, dxGalleryControl,
   dxRibbonBackstageViewGalleryControl, dxBevel, cxLabel, cxGroupBox, dxRibbonBackstageView, System.Actions, dxCore,
-  cxGeometry, dxFramedControl, dxShellDialogs, dxPanel;
+  cxGeometry, dxFramedControl, dxShellDialogs, dxPanel, System.ImageList;
 
 type
   TfrmMain = class(TfrmMainBase)

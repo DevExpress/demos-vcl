@@ -64,5 +64,5 @@ begin
     Application.Run;
   end
   else
-    ShowMessage(ThereisNoMDACMessage);
+    ShowMessage(ThereIsNoMDACMessage);
 end.

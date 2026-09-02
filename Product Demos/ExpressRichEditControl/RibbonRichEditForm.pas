@@ -40,7 +40,7 @@ type
     bmbFileCommon: TdxBar;
     bmbInsertPages: TdxBar;
     bmbInsertTables: TdxBar;
-    bmbInserIllustrations: TdxBar;
+    bmbInsertIllustrations: TdxBar;
     bmbInsertLinks: TdxBar;
     bmbInsertHeaderAndFooter: TdxBar;
     bmbInsertText: TdxBar;
@@ -127,7 +127,7 @@ type
     bbDecrementIndent: TdxBarLargeButton;
     bbIncrementIndent: TdxBarLargeButton;
     bbParagraph: TdxBarButton;
-    bbRadialMenuAlligns: TdxBarSubItem;
+    bbRadialMenuAligns: TdxBarSubItem;
     bbSaveAs: TdxBarLargeButton;
     bbTableProperties: TdxBarLargeButton;
     bbSymbol: TdxBarLargeButton;

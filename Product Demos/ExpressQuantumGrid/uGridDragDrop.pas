@@ -8,7 +8,7 @@ uses
   cxFilter, cxData, cxEdit, Data.DB, cxDBData, cxGridLevel,
   cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxClasses,
   cxControls, cxGridCustomView, cxGrid, Vcl.StdCtrls, Vcl.ExtCtrls, cxDataStorage,
-  cxSpinEdit, dxmDaset, cxLookAndFeels, cxLookAndFeelPainters, cxContainer,
+  cxSpinEdit, dxmdaset, cxLookAndFeels, cxLookAndFeelPainters, cxContainer,
   cxLabel, Vcl.Menus, cxNavigator, dxLayoutControlAdapters, dxLayoutContainer, cxButtons, dxLayoutControl, Vcl.ActnList,
   dxDateRanges, dxScrollbarAnnotations, dxLayoutLookAndFeels, System.Actions,
   cxGroupBox, dxPanel, cxGeometry, dxFramedControl;
@@ -62,7 +62,7 @@ implementation
 {$R *.dfm}
 
 uses
-  System.Types, FrameIDs, dxFrames, dxGridFrame, maindata, uStrsConst;
+  System.Types, FrameIDs, dxFrames, dxGridFrame, MainData, uStrsConst;
 
 { TfrmDragDropGrid }
 

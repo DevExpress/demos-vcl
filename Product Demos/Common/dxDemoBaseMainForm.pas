@@ -23,7 +23,7 @@ uses
   dxRibbonCustomizationForm, dxSkinsCore,  dxScreenTip, dxCustomHint, cxHint, cxImageList, cxImage, dxLayoutControlAdapters, 
   cxButtons, dxSpellCheckerUtils,  dxRibbonBackstageView, dxDemoPrintFrame, cxScrollBox, dxGallery, dxGalleryControl,
   dxRibbonBackstageViewGalleryControl, dxBevel, cxGroupBox, dxPSdxSpreadSheetLnk, dxPScxPivotGridLnk, dxPScxSchedulerLnk, dxShellDialogs, dxCore,
-  dxPanel, cxGeometry, dxFramedControl;
+  dxPanel, cxGeometry, dxFramedControl, dxPSdxPDFViewerLnk, dxPSRichEditControlLnk;
 
 const
   dxFirstNavBarGroupIndex = 1;

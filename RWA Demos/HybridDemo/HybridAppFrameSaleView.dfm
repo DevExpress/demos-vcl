@@ -9,16 +9,17 @@ inherited frmSaleView: TfrmSaleView
     ExplicitWidth = 1008
     ExplicitHeight = 549
     object lbInvoice: TcxLabel [0]
-      Left = 200
+      Left = 198
       Top = 17
       ParentFont = False
       Style.HotTrack = False
       Style.StyleController = DM.cxEditStyleController1
+      TabOrder = 0
       Transparent = True
     end
     object edOrderDate: TcxDBDateEdit [1]
-      Left = 200
-      Top = 52
+      Left = 198
+      Top = 56
       DataBinding.DataField = 'OrderDate'
       DataBinding.DataSource = DM.dsOrders
       ParentFont = False
@@ -36,8 +37,8 @@ inherited frmSaleView: TfrmSaleView
       Width = 404
     end
     object edCompany: TcxTextEdit [2]
-      Left = 200
-      Top = 91
+      Left = 198
+      Top = 99
       ParentFont = False
       Properties.ReadOnly = True
       Style.Font.Charset = DEFAULT_CHARSET
@@ -51,8 +52,8 @@ inherited frmSaleView: TfrmSaleView
       Width = 404
     end
     object edStore: TcxTextEdit [3]
-      Left = 200
-      Top = 130
+      Left = 198
+      Top = 142
       ParentFont = False
       Properties.ReadOnly = True
       Style.Font.Charset = DEFAULT_CHARSET
@@ -66,8 +67,8 @@ inherited frmSaleView: TfrmSaleView
       Width = 404
     end
     object edPONumber: TcxDBTextEdit [4]
-      Left = 200
-      Top = 208
+      Left = 198
+      Top = 228
       DataBinding.DataField = 'PONumber'
       DataBinding.DataSource = DM.dsOrders
       ParentFont = False
@@ -83,8 +84,8 @@ inherited frmSaleView: TfrmSaleView
       Width = 404
     end
     object edAddress: TcxTextEdit [5]
-      Left = 200
-      Top = 169
+      Left = 198
+      Top = 185
       ParentFont = False
       Properties.ReadOnly = True
       Style.Font.Charset = DEFAULT_CHARSET
@@ -98,24 +99,20 @@ inherited frmSaleView: TfrmSaleView
       Width = 404
     end
     object cxGrid1: TcxGrid [6]
-      Left = 59
-      Top = 267
+      Left = 57
+      Top = 291
       Width = 545
       Height = 253
       TabOrder = 6
       object cxGrid1DBTableView1: TcxGridDBTableView
-        Navigator.Buttons.CustomButtons = <>
         DataController.DataSource = DM.dsOrderItems
-        DataController.Summary.DefaultGroupSummaryItems = <>
         DataController.Summary.FooterSummaryItems = <
           item
             Format = '$,0.00;-$,0.00'
             Kind = skSum
             FieldName = 'Total'
             Column = cxGrid1DBTableView1Discount
-            DisplayText = 'awewqer'
           end>
-        DataController.Summary.SummaryGroups = <>
         OptionsCustomize.ColumnGrouping = False
         OptionsData.CancelOnExit = False
         OptionsData.Deleting = False
@@ -173,8 +170,8 @@ inherited frmSaleView: TfrmSaleView
       end
     end
     object edShipping: TcxDBCurrencyEdit [7]
-      Left = 489
-      Top = 530
+      Left = 487
+      Top = 554
       DataBinding.DataField = 'ShippingAmount'
       DataBinding.DataSource = DM.dsOrders
       ParentFont = False
@@ -191,8 +188,8 @@ inherited frmSaleView: TfrmSaleView
       Width = 115
     end
     object edGrandTotal: TcxDBCurrencyEdit [8]
-      Left = 488
-      Top = 569
+      Left = 486
+      Top = 597
       DataBinding.DataField = 'TotalAmount'
       DataBinding.DataSource = DM.dsOrders
       ParentFont = False
@@ -209,10 +206,10 @@ inherited frmSaleView: TfrmSaleView
       Width = 116
     end
     object dxMapControl1: TdxMapControl [9]
-      Left = 614
+      Left = 612
       Top = 17
-      Width = 343
-      Height = 581
+      Width = 345
+      Height = 613
       NavigationPanel.Style.CoordinateFont.Charset = DEFAULT_CHARSET
       NavigationPanel.Style.CoordinateFont.Color = clWindowText
       NavigationPanel.Style.CoordinateFont.Height = -21
@@ -259,7 +256,6 @@ inherited frmSaleView: TfrmSaleView
       SizeOptions.AssignedValues = [sovSizableHorz]
       SizeOptions.SizableHorz = True
       SizeOptions.Width = 545
-      ButtonOptions.Buttons = <>
       ShowBorder = False
       Index = 0
     end
@@ -267,7 +263,7 @@ inherited frmSaleView: TfrmSaleView
       Parent = lgOrder
       CaptionOptions.Text = 'SALE'
       Control = lbInvoice
-      ControlOptions.OriginalHeight = 25
+      ControlOptions.OriginalHeight = 29
       ControlOptions.OriginalWidth = 121
       ControlOptions.ShowBorder = False
       Index = 0
@@ -276,7 +272,7 @@ inherited frmSaleView: TfrmSaleView
       Parent = lgOrder
       CaptionOptions.Text = 'ORDER DATE'
       Control = edOrderDate
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 162
       ControlOptions.ShowBorder = False
       Index = 1
@@ -285,7 +281,7 @@ inherited frmSaleView: TfrmSaleView
       Parent = lgOrder
       CaptionOptions.Text = 'COMPANY'
       Control = edCompany
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 138
       ControlOptions.ShowBorder = False
       Index = 2
@@ -294,7 +290,7 @@ inherited frmSaleView: TfrmSaleView
       Parent = lgOrder
       CaptionOptions.Text = 'STORE'
       Control = edStore
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 138
       ControlOptions.ShowBorder = False
       Index = 3
@@ -303,7 +299,7 @@ inherited frmSaleView: TfrmSaleView
       Parent = lgOrder
       CaptionOptions.Text = 'PURCHASE ORDER'
       Control = edPONumber
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 162
       ControlOptions.ShowBorder = False
       Index = 5
@@ -312,7 +308,7 @@ inherited frmSaleView: TfrmSaleView
       Parent = lgOrder
       CaptionOptions.Text = 'ADDRESS'
       Control = edAddress
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 382
       ControlOptions.ShowBorder = False
       Index = 4
@@ -333,21 +329,21 @@ inherited frmSaleView: TfrmSaleView
       Parent = lgOrder
       AlignHorz = ahClient
       AlignVert = avClient
-      CaptionOptions.Text = 'Empty Space Item'
       SizeOptions.Height = 10
       SizeOptions.Width = 10
+      CaptionOptions.Text = 'Empty Space Item'
       Index = 6
     end
     object liShipping: TdxLayoutItem
       Parent = lgOrder
       AlignHorz = ahRight
       AlignVert = avBottom
-      CaptionOptions.Text = 'SHIPPING'
       SizeOptions.AssignedValues = [sovSizableHorz]
       SizeOptions.SizableHorz = True
       SizeOptions.Width = 192
+      CaptionOptions.Text = 'SHIPPING'
       Control = edShipping
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 115
       ControlOptions.ShowBorder = False
       Index = 8
@@ -356,12 +352,12 @@ inherited frmSaleView: TfrmSaleView
       Parent = lgOrder
       AlignHorz = ahRight
       AlignVert = avBottom
-      CaptionOptions.Text = 'GRAND TOTAL'
       SizeOptions.AssignedValues = [sovSizableHorz]
       SizeOptions.SizableHorz = True
       SizeOptions.Width = 228
+      CaptionOptions.Text = 'GRAND TOTAL'
       Control = edGrandTotal
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 116
       ControlOptions.ShowBorder = False
       Index = 9
@@ -383,13 +379,16 @@ inherited frmSaleView: TfrmSaleView
     ExplicitWidth = 1008
     Width = 1008
     inherited dxLayoutControl2: TdxLayoutControl
-      Width = 1004
-      ExplicitWidth = 1004
+      Width = 1002
+      ExplicitLeft = 3
+      ExplicitTop = 3
+      ExplicitWidth = 1002
+      ExplicitHeight = 114
       object btnClose: TcxButton [0]
-        Left = 459
+        Left = 458
         Top = 17
         Width = 85
-        Height = 82
+        Height = 80
         Caption = 'Close'
         OptionsImage.ImageIndex = 21
         OptionsImage.Images = DM.ilButtons

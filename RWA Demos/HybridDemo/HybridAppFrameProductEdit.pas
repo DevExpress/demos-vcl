@@ -9,7 +9,8 @@ uses
   dxLayoutControl, dxLayoutControlAdapters, Vcl.Menus, cxDBEdit, cxScrollBox, cxMemo, cxRichEdit, cxDBRichEdit,
   cxCurrencyEdit, cxSpinEdit, cxDropDownEdit, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxCheckBox, cxCalendar,
   Vcl.StdCtrls, cxButtons, Data.DB, dxCustomTileControl, HybridAppDM, cxGroupBox, dxCustomPreview, dxPDFViewer, dxPDFDocument,
-  dxBarBuiltInMenu, dxPDFText, dxPDFRecognizedObject, dxPDFDocumentViewer;
+  dxBarBuiltInMenu, dxPDFText, dxPDFRecognizedObject, dxPDFDocumentViewer, dxX509Certificate, dxPDFCore, dxPDFBase,
+  dxPDFForm, dxPDFFormData, dxPrintUtils;
 
 type
   TfrmProductEdit = class(TfrmBase)

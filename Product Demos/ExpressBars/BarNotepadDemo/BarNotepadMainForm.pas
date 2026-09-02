@@ -5,9 +5,10 @@ unit BarNotepadMainForm;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ActnList, cxPC, dxTabbedMDI,
-  dxBar, cxLookAndFeels, Vcl.ImgList, cxGraphics, cxClasses, dxBarExtItems, cxFontNameComboBox, cxBarEditItem,
-  cxDropDownEdit, dxColorEdit, dxRibbonGallery, dxSkinChooserGallery, NotepadChildForm, System.IniFiles,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls,
+  Vcl.Forms, Vcl.Dialogs, Vcl.ActnList, Vcl.ImgList, System.IniFiles, System.Actions, System.ImageList,
+  cxPC, dxTabbedMDI,  dxBar, cxLookAndFeels, cxGraphics, cxClasses, dxBarExtItems, cxFontNameComboBox, cxBarEditItem,
+  cxDropDownEdit, dxColorEdit, dxRibbonGallery, dxSkinChooserGallery, NotepadChildForm,
   NotepadMainForm, dxDemoUtils, dxBarBuiltInMenu, dxColorDialog, dxSkinsDefaultPainters, cxImageList, dxSkinsForm,
   dxCore, dxShellDialogs;
 

@@ -1,14 +1,15 @@
 unit dxDemoUtils;
 
 {$I cxVer.inc}
+{$I dxDemoSkins.inc}
 
 interface
 
 uses
-{$IFDEF DELPHI16}
-  System.UITypes,
+{$IFNDEF USESKINRESFILE}
+  dxSkinWXI,
 {$ENDIF}
-  System.Classes, System.SysUtils, System.Variants, System.Math, System.Types, System.Generics.Collections,
+  System.UITypes, System.Classes, System.SysUtils, System.Variants, System.Math, System.Types, System.Generics.Collections,
   Data.DB,
   Winapi.Windows, Winapi.ShellAPI, Winapi.Messages,
   Vcl.Graphics, Vcl.Forms, Vcl.Dialogs,

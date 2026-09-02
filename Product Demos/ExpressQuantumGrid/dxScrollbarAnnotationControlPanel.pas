@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls,
-  cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, dxSkinCoffee, cxContainer, cxEdit, cxCheckBox, Vcl.Menus,
+  cxLookAndFeels, cxLookAndFeelPainters, dxSkinsCore, cxContainer, cxEdit, cxCheckBox, Vcl.Menus,
   dxLayoutcxEditAdapters, dxLayoutContainer, dxLayoutControlAdapters, cxClasses,
   Vcl.StdCtrls, cxButtons, cxCustomListBox, cxCheckListBox, Vcl.ExtCtrls,
   cxDropDownEdit, cxTextEdit, cxMaskEdit, cxSpinEdit, dxLayoutControl, dxScrollbarAnnotations,

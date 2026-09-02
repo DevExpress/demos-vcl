@@ -105,15 +105,18 @@ object dxCustomDemoFrame: TdxCustomDemoFrame
       Height = 667
       Width = 288
       object lcFrame: TdxLayoutControl
-        Left = 1
-        Top = 13
-        Width = 286
+        Left = 2
+        Top = 18
+        Width = 284
         Height = 647
         Align = alClient
         BevelEdges = []
         BevelInner = bvNone
         BevelOuter = bvNone
         TabOrder = 0
+        ExplicitLeft = 1
+        ExplicitTop = 13
+        ExplicitWidth = 286
         object lcFrameGroup_Root: TdxLayoutGroup
           AlignHorz = ahClient
           AlignVert = avClient

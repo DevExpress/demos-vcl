@@ -10,15 +10,10 @@ uses
 {$IFDEF DELPHI11}
   Data.DBXCommon,
 {$ENDIF}
-{$IFNDEF DELPHI8}
-  DBXpress,
-  Data.Win.ADODB,
-{$ELSE}
 {$IFNDEF NOMSSQL}
   Data.DBXMSSQL,
 {$ENDIF}
   Data.Win.ADODB,
-{$ENDIF}
   Data.DB, Vcl.ComCtrls, Data.FMTBcd, Data.SqlExpr, Vcl.ExtCtrls, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxContainer, cxEdit, cxMemo, cxProgressBar, cxMaskEdit,
   cxSpinEdit, cxButtons, cxGroupBox, cxRadioGroup, cxTextEdit, cxLabel,
@@ -26,7 +21,7 @@ uses
 {$IFDEF DELPHI19}
   FireDAC.Stan.Intf, FireDAC.Stan.Option,
   FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
-  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Dapt,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.DApt,
   FireDAC.Comp.Client, FireDAC.VCLUI.Wait, FireDAC.Comp.UI {$IFNDEF NOMSSQL},FireDAC.Phys.MSSQL{$ENDIF};
 {$ELSE}
   uADStanIntf, uADStanOption, uADStanError,
@@ -591,13 +586,13 @@ const
   AFirstName: array[0..18] of string = ('Jane', 'Sam', 'Karen', 'Bobbie', 'Ricardo', 'Frank', 'Christa',
     'Jimmie', 'Alfred', 'James', 'Robert', 'June', 'Mildred', 'Henry', 'Michael', 'Scott', 'Mickey',
     'Roger', 'Leticia');
-  ALastName: array[0..18] of string = ('Doe', 'Hill', 'Holmes', 'Valentine', 'Menendez', 'Frankson',
-    'Christie', 'Jones', 'Newman', 'Johnson', 'James', 'Alessandro', 'Johansson', 'McAllister', 'Jeffers',
-    'Mathewson', 'Alcorn', 'Michelson', 'Ford');
-  ACompany: array[0..18] of string = ('Doe Enterprises', 'Hill Corporation', 'Holmes World',
-    'Valentine Hearts', 'Menedez Development', 'Frankson Media', 'Christies House of Design', 'Jones & Assoc',
-    'Newman Systems', 'Development House', 'James Systems', 'Alessandro & Associates', 'Mildreds World',
-    'McAllister Systems', 'Jeffers Clinic', 'Mathewson Design', 'Mickeys World of Fun','Michelson Systems',
+  ALastName: array[0..18] of string = ('Doe', 'Hill', 'Holmes', 'Valentine', 'Menendez', 'Frankson', 
+    'Christie', 'Jones', 'Newman', 'Johnson', 'James', 'Alessandro', 'Johansson', 'McAllister', 'Jeffers', 
+    'Mathewson', 'Alcorn', 'Michelson', 'Ford'); 
+  ACompany: array[0..18] of string = ('Doe Enterprises', 'Hill Corporation', 'Holmes World', 
+    'Valentine Hearts', 'Menedez Development', 'Frankson Media', 'Christies House of Design', 'Jones & Assoc', 
+    'Newman Systems', 'Development House', 'James Systems', 'Alessandro & Associates', 'Mildreds World', 
+    'McAllister Systems', 'Jeffers Clinic', 'Mathewson Design', 'Mickeys World of Fun','Michelson Systems', 
     'Ford Consulting');
   APrefix: array[0..18] of string = ('Ms.', 'Mr.', 'Ms.', 'Mr.', 'Mr.', 'Mr.', 'Ms.', 'Mrs.', 'Mr.', 'Mr.',
     'Mr.', 'Mrs.', 'Ms.', 'Mr.', 'Mr.', 'Mr.', 'Mr.', 'Mr.', 'Mrs.');
@@ -607,9 +602,9 @@ const
   AAddress: array[0..18] of string = ('123 Home Lane', '45 Hill St.', '9333 Holmes Dr.', '933 Heart St. Suite 1',
     '939 Center Street', '121 Media Center Drive', '349 Graphic Design Lane', '990 King Lane', '900 Newman Center',
     '93900 Carter Lane', '390-1 Fourth St.', '90283 Los Angeles Ave.', '390290 Mildred Lane', '029-938 Excelsior Way',
-    '233 First St.', '111 McHenry St.', '436 1st Ave.', '3920 Michelson Dr.', '2900 Ford Drive');
-  ACity: array[0..18] of string = ('Atlanta', 'Hillsville', 'Johnsonville', 'Chicago', 'Atlanta', 'New York', 'New York',
-    'Kingsville', 'Newman', 'Cartersville', 'New York', 'Los Angeles', 'Cleveland', 'San Francisco', 'Los Angeles',
+    '233 First St.', '111 McHenry St.', '436 1st Ave.', '3920 Michelson Dr.', '2900 Ford Drive'); 
+  ACity: array[0..18] of string = ('Atlanta', 'Hillsville', 'Johnsonville', 'Chicago', 'Atlanta', 'New York', 'New York', 
+    'Kingsville', 'Newman', 'Cartersville', 'New York', 'Los Angeles', 'Cleveland', 'San Francisco', 'Los Angeles', 
     'New York', 'Cleveland', 'Bridgeford', 'Lansing');
   AState: array[0..18] of string = ('CA', 'VA', 'NY', 'IL', 'GA', 'NY', 'CA', 'CA', 'OK', 'GA', 'NY', 'CA', 'OH', 'CA',
     'CA', 'NY', 'OH', 'CT', 'MI');
@@ -626,28 +621,28 @@ const
     '(090)909-00-90', '(940)104-80-93', '(190)890-02-83', '(084)029-80-28', '(080)098-90-08', '(098)900-98-90',
     '(098)902-98-34', '(098)900-83-04', '(098)908-00-80');
   ADescription: array[0..18] of string = ('This is a description for Jane Doe.'#$D#$A'Notice the Auto Preview Feature.',
-    'This is a description for Sam Hill.'#$D#$A'Notice the Auto Preview Feature.',
-    'This is a description for Karen Holmes.'#$D#$A'Notice the Auto Preview Feature.', '',
-    'This is a description for Ricardo Menendez.'#$D#$A'Notice the Auto Preview Feature.',
-    'This is a description for Frank Frankson.'#$D#$A'Notice the Auto Preview Feature.',
-    'This is a description for Christa Christie.'#$D#$A'Notice the Auto Preview Feature.',
-    'This is a description for Jimmie Jones.'#$D#$A'Notice the Auto Preview Feature.',
-    'This is a description for Alfred Newman.'#$D#$A'Notice the Auto Preview Feature.',
-    'This is a description for James Johnson.'#$D#$A'Notice the Auto Preview Feature.',
-    'This is a description for Robert James.'#$D#$A'Notice the Auto Preview Feature.', '',
-    'This is a description for Mildred Johansson.'#$D#$A'Notice the Auto Preview Feature.', '',
-    'This is a description for Michael Jeffers.'#$D#$A'Notice the Auto Preview Feature.',
-    'This is a description for Scott Mathewson.'#$D#$A'Notice the Auto Preview Feature.',
-    'This is a description for Mickey Alcorn.'#$D#$A'Notice the Auto Preview Feature.',
-    'This is a description for Mickey Alcorn.'#$D#$A'Notice the Auto Preview Feature.',
+    'This is a description for Sam Hill.'#$D#$A'Notice the Auto Preview Feature.', 
+    'This is a description for Karen Holmes.'#$D#$A'Notice the Auto Preview Feature.', '', 
+    'This is a description for Ricardo Menendez.'#$D#$A'Notice the Auto Preview Feature.', 
+    'This is a description for Frank Frankson.'#$D#$A'Notice the Auto Preview Feature.', 
+    'This is a description for Christa Christie.'#$D#$A'Notice the Auto Preview Feature.', 
+    'This is a description for Jimmie Jones.'#$D#$A'Notice the Auto Preview Feature.', 
+    'This is a description for Alfred Newman.'#$D#$A'Notice the Auto Preview Feature.', 
+    'This is a description for James Johnson.'#$D#$A'Notice the Auto Preview Feature.', 
+    'This is a description for Robert James.'#$D#$A'Notice the Auto Preview Feature.', '', 
+    'This is a description for Mildred Johansson.'#$D#$A'Notice the Auto Preview Feature.', '', 
+    'This is a description for Michael Jeffers.'#$D#$A'Notice the Auto Preview Feature.', 
+    'This is a description for Scott Mathewson.'#$D#$A'Notice the Auto Preview Feature.', 
+    'This is a description for Mickey Alcorn.'#$D#$A'Notice the Auto Preview Feature.', 
+    'This is a description for Mickey Alcorn.'#$D#$A'Notice the Auto Preview Feature.', 
     '');
-  AEmail: array[0..18] of string = ('doej@doeent.com', 'hills@hillcorp.com', 'holmesk@holmesw.com',
-    'valentineb@valetntineh.com', 'menendezr@menedezdev.com', 'franksonf@frankfmedia.com',
-    'christiec@christiesdesign.com', 'jonesj@jonesjim.com', 'newmanalf@newmansyst.com',
-    'johnsonj@jdevhouse.com', 'jamesr@jrsengin.com', 'alessandroj@alessandroassoc',
-    'johanssonm@mildrworld.com', 'mcallisterh@mcallistersyst.com', 'jeffersm@jeffersclinic.com',
-    'mathewsons@mathewstondsgn.com', 'alcornm@mikeysworld.com', 'michelsonr@michelsonsyst.com',
-    'fordl@fordconsult.com');
+  AEmail: array[0..18] of string = ('doej@doeent.com', 'hills@hillcorp.com', 'holmesk@holmesw.com', 
+    'valentineb@valetntineh.com', 'menendezr@menedezdev.com', 'franksonf@frankfmedia.com', 
+    'christiec@christiesdesign.com', 'jonesj@jonesjim.com', 'newmanalf@newmansyst.com', 
+    'johnsonj@jdevhouse.com', 'jamesr@jrsengin.com', 'alessandroj@alessandroassoc', 
+    'johanssonm@mildrworld.com', 'mcallisterh@mcallistersyst.com', 'jeffersm@jeffersclinic.com', 
+    'mathewsons@mathewstondsgn.com', 'alcornm@mikeysworld.com', 'michelsonr@michelsonsyst.com', 
+    'fordl@fordconsult.com'); 
 
   function GetCustomer: string;
   begin
@@ -686,14 +681,14 @@ function TdxCustomConnectionHelper.GetOrderInsertSQL: string;
   end;
 
 const
-  Trademark: array[0..23] of string = ('Mercedes-Benz', 'Mercedes-Benz', 'Mercedes-Benz', 'BMW',
-    'Rolls-Royce', 'Jaguar', 'Cadillac', 'Cadillac', 'Lexus', 'Lexus', 'Ford', 'Dodge', 'GMC',
-    'Nissan','Toyota', 'Infiniti', 'Infiniti', 'Jaguar', 'Audi', 'Audi', 'BMW', 'BMW', 'Acura',
-    'Acura');
-  Model: array[0..23] of string = ('SL500 Roadster', 'CLK55 AMG Cabriolet', 'C230 Kompressor Sport Coupe',
-    '530i', 'Corniche', 'S-Type 3.0', 'Seville', 'DeVille', 'LS430', 'GS 430', 'Ranger FX-4', 'Ram 1500',
-    'Siera Quadrasteer', 'Crew Cab SE', 'Tacoma S-Runner', 'Q45', 'G35 Sport Coupe Leather 6MT', 'XK8 Coupe',
-    'A6 3.0', 'TT Roadster', '760i Sedan', 'Z4 3.0 Roadster', 'TSX', 'NSX 3.2');
+  Trademark: array[0..23] of string = ('Mercedes-Benz', 'Mercedes-Benz', 'Mercedes-Benz', 'BMW', 
+    'Rolls-Royce', 'Jaguar', 'Cadillac', 'Cadillac', 'Lexus', 'Lexus', 'Ford', 'Dodge', 'GMC', 
+    'Nissan','Toyota', 'Infiniti', 'Infiniti', 'Jaguar', 'Audi', 'Audi', 'BMW', 'BMW', 'Acura', 
+    'Acura'); 
+  Model: array[0..23] of string = ('SL500 Roadster', 'CLK55 AMG Cabriolet', 'C230 Kompressor Sport Coupe', 
+    '530i', 'Corniche', 'S-Type 3.0', 'Seville', 'DeVille', 'LS430', 'GS 430', 'Ranger FX-4', 'Ram 1500', 
+    'Siera Quadrasteer', 'Crew Cab SE', 'Tacoma S-Runner', 'Q45', 'G35 Sport Coupe Leather 6MT', 'XK8 Coupe', 
+    'A6 3.0', 'TT Roadster', '760i Sedan', 'Z4 3.0 Roadster', 'TSX', 'NSX 3.2'); 
   HP: array[0..23] of string = ('302', '342', '189', '225', '325', '235', '275', '275', '290', '300',
     '135', '215', '200', '143', '190', '340', '280', '294', '220', '180', '438', '225', '200', '290');
   Cyl: array[0..23] of string = ('8', '8', '4', '6', '8', '6', '8', '8', '8', '8', '4', '6', '6', '4',

@@ -225,9 +225,9 @@ inherited frmRichEditDocumentRestrictions: TfrmRichEditDocumentRestrictions
     end
   end
   inherited pnlSeparator: TPanel
-    Top = 173
+    Top = 177
     Width = 1049
-    ExplicitTop = 173
+    ExplicitTop = 177
     ExplicitWidth = 1049
   end
   inherited lcDescription: TdxLayoutControl
@@ -237,12 +237,12 @@ inherited frmRichEditDocumentRestrictions: TfrmRichEditDocumentRestrictions
     ExplicitWidth = 1049
   end
   inherited RichEditControl: TdxRichEditControl
-    Top = 173
+    Top = 177
     Width = 1049
-    Height = 321
-    ExplicitTop = 173
+    Height = 317
+    ExplicitTop = 177
     ExplicitWidth = 1049
-    ExplicitHeight = 321
+    ExplicitHeight = 317
   end
   inherited dxFrameLayoutLookAndFeelList: TdxLayoutLookAndFeelList
     Left = 256
@@ -654,7 +654,6 @@ inherited frmRichEditDocumentRestrictions: TfrmRichEditDocumentRestrictions
     MenuAnimations = maFade
     NotDocking = [dsBottom]
     PopupMenuLinks = <>
-    Style = bmsUseLookAndFeel
     UseSystemFont = True
     Left = 24
     Top = 320
@@ -662,7 +661,7 @@ inherited frmRichEditDocumentRestrictions: TfrmRichEditDocumentRestrictions
     DockControlHeights = (
       0
       0
-      52
+      56
       0)
     object bmbParagraph: TdxBar
       Caption = 'Paragraph'
@@ -681,7 +680,7 @@ inherited frmRichEditDocumentRestrictions: TfrmRichEditDocumentRestrictions
       Glyph.SourceDPI = 96
       Glyph.Data = {
         424D360400000000000036000000280000001000000010000000010020000000
-        000000000000C40E0000C40E0000000000000000000000000000000000000000
+        0000000000002516000025160000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
@@ -803,7 +802,7 @@ inherited frmRichEditDocumentRestrictions: TfrmRichEditDocumentRestrictions
       Glyph.SourceDPI = 96
       Glyph.Data = {
         424D360400000000000036000000280000001000000010000000010020000000
-        000000000000C40E0000C40E0000000000000000000000000000000000000000
+        0000000000002516000025160000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
@@ -941,7 +940,7 @@ inherited frmRichEditDocumentRestrictions: TfrmRichEditDocumentRestrictions
       CaptionButtons = <>
       DockedDockingStyle = dsTop
       DockedLeft = 533
-      DockedTop = 26
+      DockedTop = 30
       DockingStyle = dsTop
       FloatLeft = 1773
       FloatTop = 597
@@ -964,7 +963,7 @@ inherited frmRichEditDocumentRestrictions: TfrmRichEditDocumentRestrictions
       CaptionButtons = <>
       DockedDockingStyle = dsTop
       DockedLeft = 571
-      DockedTop = 26
+      DockedTop = 30
       DockingStyle = dsTop
       FloatLeft = 1306
       FloatTop = 726
@@ -989,7 +988,7 @@ inherited frmRichEditDocumentRestrictions: TfrmRichEditDocumentRestrictions
         end>
       DockedDockingStyle = dsTop
       DockedLeft = 370
-      DockedTop = 26
+      DockedTop = 30
       DockingStyle = dsTop
       FloatLeft = 1659
       FloatTop = 679
@@ -1026,7 +1025,7 @@ inherited frmRichEditDocumentRestrictions: TfrmRichEditDocumentRestrictions
         end>
       DockedDockingStyle = dsTop
       DockedLeft = 0
-      DockedTop = 26
+      DockedTop = 30
       DockingStyle = dsTop
       FloatLeft = 470
       FloatTop = 480
@@ -1612,7 +1611,7 @@ inherited frmRichEditDocumentRestrictions: TfrmRichEditDocumentRestrictions
       Glyph.SourceDPI = 96
       Glyph.Data = {
         424D360400000000000036000000280000001000000010000000010020000000
-        000000000000C40E0000C40E0000000000000000000000000000000000310000
+        0000000000002516000025160000000000000000000000000000000000310000
         003400000036000000380000003B0000003D0000004000000043000000440000
         00470000004A0000004C00000050000000520000000000000000000000140000
         0016000000190000001B0000001D0000001E0000002100000023000000260000
@@ -1742,7 +1741,7 @@ inherited frmRichEditDocumentRestrictions: TfrmRichEditDocumentRestrictions
       Glyph.SourceDPI = 96
       Glyph.Data = {
         424D360400000000000036000000280000001000000010000000010020000000
-        000000000000C40E0000C40E0000000000000000000000000000000000310000
+        0000000000002516000025160000000000000000000000000000000000310000
         003400000036000000380000003B0000003D0000004000000043000000440000
         00470000004A0000004C00000050000000520000000000000000000000140000
         0016000000190000001B0000001D0000001E0000002100000023000000260000

@@ -2,26 +2,22 @@ object frmPreview: TfrmPreview
   Left = 0
   Top = 0
   Caption = 'Report Preview'
-  ClientHeight = 758
-  ClientWidth = 1214
+  ClientHeight = 757
+  ClientWidth = 1210
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object Report: TdxSpreadSheet
     Left = 0
-    Top = 124
-    Width = 1214
-    Height = 634
+    Top = 138
+    Width = 1210
+    Height = 619
     Align = alClient
-    ExplicitTop = 126
-    ExplicitHeight = 632
     Data = {
       8002000044585353763242461000000042465320000000000000000001000101
       010100000100000001004246532000000000424653200100000001000000200B
@@ -48,8 +44,8 @@ object frmPreview: TfrmPreview
   object dxRibbon1: TdxRibbon
     Left = 0
     Top = 0
-    Width = 1214
-    Height = 124
+    Width = 1210
+    Height = 138
     BarManager = dxBarManager1
     Style = rs2019
     ColorSchemeAccent = rcsaBlue
@@ -57,6 +53,7 @@ object frmPreview: TfrmPreview
     Contexts = <>
     TabOrder = 1
     TabStop = False
+    ExplicitWidth = 1214
     object dxRibbonTabFile: TdxRibbonTab
       Active = True
       Caption = 'File'
@@ -314,8 +311,8 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarLargeButtonSaveAs'
         end>
-      OneOnRow = True
-      Row = 1
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -366,7 +363,7 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarLargeButtonPageSetup'
         end>
-      OneOnRow = True
+      OneOnRow = False
       Row = 0
       UseOwnFont = False
       Visible = True
@@ -426,8 +423,8 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarButtonCopy'
         end>
-      OneOnRow = True
-      Row = 5
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -546,8 +543,8 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxRibbonColorGalleryItemFontColor'
         end>
-      OneOnRow = True
-      Row = 4
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -647,8 +644,8 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarSubItem2'
         end>
-      OneOnRow = True
-      Row = 3
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -712,8 +709,8 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarSubItem5'
         end>
-      OneOnRow = True
-      Row = 2
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -773,8 +770,8 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarLargeButtonFindReplace'
         end>
-      OneOnRow = True
-      Row = 1
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -824,8 +821,8 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarLargeButtonPicture'
         end>
-      OneOnRow = True
-      Row = 1
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -881,7 +878,7 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarLargeButtonHyperlink'
         end>
-      OneOnRow = True
+      OneOnRow = False
       Row = 0
       UseOwnFont = False
       Visible = True
@@ -1050,8 +1047,8 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarSubItem10'
         end>
-      OneOnRow = True
-      Row = 1
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -1105,14 +1102,14 @@ object frmPreview: TfrmPreview
         item
           ViewLevels = [ivlSmallIconWithText, ivlSmallIcon, ivlControlOnly]
           Visible = True
-          ItemName = 'dxRibbonGalleryItemUseinFormula'
+          ItemName = 'dxRibbonGalleryItemUseInFormula'
         end
         item
           ViewLevels = [ivlSmallIconWithText, ivlSmallIcon, ivlControlOnly]
           Visible = True
-          ItemName = 'dxBarButtonCreatefromSelection'
+          ItemName = 'dxBarButtonCreateFromSelection'
         end>
-      OneOnRow = True
+      OneOnRow = False
       Row = 0
       UseOwnFont = False
       Visible = True
@@ -1167,8 +1164,8 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarLargeButtonSortZtoA'
         end>
-      OneOnRow = True
-      Row = 1
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -1219,7 +1216,7 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarSubItem12'
         end>
-      OneOnRow = True
+      OneOnRow = False
       Row = 0
       UseOwnFont = False
       Visible = True
@@ -1289,8 +1286,8 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarLargeButtonShowHideComments'
         end>
-      OneOnRow = True
-      Row = 1
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -1352,7 +1349,7 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarLargeButtonProtectWorkbook'
         end>
-      OneOnRow = True
+      OneOnRow = False
       Row = 0
       UseOwnFont = False
       Visible = True
@@ -1408,8 +1405,8 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarLargeButton100'
         end>
-      OneOnRow = True
-      Row = 1
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -1457,7 +1454,7 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarSubItem13'
         end>
-      OneOnRow = True
+      OneOnRow = False
       Row = 0
       UseOwnFont = False
       Visible = True
@@ -1506,7 +1503,7 @@ object frmPreview: TfrmPreview
           Visible = True
           ItemName = 'dxBarSubItem14'
         end>
-      OneOnRow = True
+      OneOnRow = False
       Row = 0
       UseOwnFont = False
       Visible = True
@@ -1679,15 +1676,15 @@ object frmPreview: TfrmPreview
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonTopandBottomBorder'
+          ItemName = 'dxBarLargeButtonTopAndBottomBorder'
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonTopandThickBottomBorder'
+          ItemName = 'dxBarLargeButtonTopAndThickBottomBorder'
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonTopandDoubleBottomBorder'
+          ItemName = 'dxBarLargeButtonTopAndDoubleBottomBorder'
         end
         item
           BeginGroup = True
@@ -1755,19 +1752,19 @@ object frmPreview: TfrmPreview
       SyncImageIndex = False
       ImageIndex = 25
     end
-    object dxBarLargeButtonTopandBottomBorder: TdxBarLargeButton
+    object dxBarLargeButtonTopAndBottomBorder: TdxBarLargeButton
       Action = dxSpreadSheetBordersTopAndBottom
       Category = 4
       SyncImageIndex = False
       ImageIndex = 26
     end
-    object dxBarLargeButtonTopandThickBottomBorder: TdxBarLargeButton
+    object dxBarLargeButtonTopAndThickBottomBorder: TdxBarLargeButton
       Action = dxSpreadSheetBordersTopAndBottomThick
       Category = 4
       SyncImageIndex = False
       ImageIndex = 27
     end
-    object dxBarLargeButtonTopandDoubleBottomBorder: TdxBarLargeButton
+    object dxBarLargeButtonTopAndDoubleBottomBorder: TdxBarLargeButton
       Action = dxSpreadSheetBordersTopAndBottomDouble
       Category = 4
       SyncImageIndex = False
@@ -1850,7 +1847,7 @@ object frmPreview: TfrmPreview
       ItemLinks = <
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonMergeandCenter'
+          ItemName = 'dxBarLargeButtonMergeAndCenter'
         end
         item
           Visible = True
@@ -1865,7 +1862,7 @@ object frmPreview: TfrmPreview
           ItemName = 'dxBarLargeButtonUnmergeCells'
         end>
     end
-    object dxBarLargeButtonMergeandCenter: TdxBarLargeButton
+    object dxBarLargeButtonMergeAndCenter: TdxBarLargeButton
       Action = dxSpreadSheetMergeCellsAndCenter
       Category = 5
       SyncImageIndex = False
@@ -4270,7 +4267,7 @@ object frmPreview: TfrmPreview
       Category = 12
       LargeImageIndex = 96
     end
-    object dxRibbonGalleryItemUseinFormula: TdxRibbonGalleryItem
+    object dxRibbonGalleryItemUseInFormula: TdxRibbonGalleryItem
       Action = dxSpreadSheetUseDefinedNameInFormula
       Category = 12
       LargeImageIndex = 97
@@ -4281,10 +4278,10 @@ object frmPreview: TfrmPreview
       GalleryInRibbonOptions.MinColumnCount = 1
       GalleryInMenuOptions.DropDownGalleryResizing = gsrNone
       ItemLinks = <>
-      object dxRibbonGalleryItemUseinFormulaGroup1: TdxRibbonGalleryGroup
+      object dxRibbonGalleryItemUseInFormulaGroup1: TdxRibbonGalleryGroup
       end
     end
-    object dxBarButtonCreatefromSelection: TdxBarButton
+    object dxBarButtonCreateFromSelection: TdxBarButton
       Action = dxSpreadSheetCreateDefinedNamesFromSelection
       Category = 12
       LargeImageIndex = 98
@@ -9098,7 +9095,7 @@ object frmPreview: TfrmPreview
     object dxSpreadSheetUseDefinedNameInFormula: TdxSpreadSheetUseDefinedNameInFormula
       Category = 'DevExpress ExpressSpreadSheet.Formulas.Defined Names'
       ImageIndex = 87
-      GalleryGroup = dxRibbonGalleryItemUseinFormulaGroup1
+      GalleryGroup = dxRibbonGalleryItemUseInFormulaGroup1
     end
     object dxSpreadSheetCreateDefinedNamesFromSelection: TdxSpreadSheetCreateDefinedNamesFromSelection
       Category = 'DevExpress ExpressSpreadSheet.Formulas.Defined Names'
@@ -9235,7 +9232,7 @@ object frmPreview: TfrmPreview
     Left = 150
     Top = 150
     Bitmap = {
-      494C01017F008800040010001000FFFFFFFF2100FFFFFFFFFFFFFFFF424D3600
+      494C01017F008800040010001000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000000002000001002000000000000000
       0200000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -13463,7 +13460,8 @@ object frmPreview: TfrmPreview
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000}
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000}
     DesignInfo = 9830550
     ImageInfo = <
       item
@@ -17325,7 +17323,7 @@ object frmPreview: TfrmPreview
     Left = 150
     Top = 150
     Bitmap = {
-      494C01019B00A800040020002000FFFFFFFF2100FFFFFFFFFFFFFFFF424D3600
+      494C01019B00A800040020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000080000000E0040000010020000000000000C0
       0900000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -37921,7 +37919,8 @@ object frmPreview: TfrmPreview
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000}
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000}
     DesignInfo = 9830550
     ImageInfo = <
       item

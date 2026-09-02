@@ -7,12 +7,12 @@ program RibbonNotepadDemo;
 
 uses
   Vcl.Forms, dxUIAClasses,
-  dxSplashUnit in '..\..\Common\dxSplashUnit.pas' {TfrmSplash},
+  dxSplashUnit in '..\..\Common\dxSplashUnit.pas',
   RibbonNotepadMainForm in 'RibbonNotepadMainForm.pas' {frmRibbonNotepadMain},
-  dxAboutDemo in '..\..\Common\dxAboutDemo.pas',
+  dxAboutDemo in '..\..\Common\dxAboutDemo.pas' {dxAboutDemoForm},
   NotepadChildForm in '..\NotepadChildForm.pas' {frmNotepadChild},
   NotepadMainForm in '..\NotepadMainForm.pas' {frmNotepadMain},
-  RibbonNotepadDemoGallerySetup in 'RibbonNotepadDemoGallerySetup.pas',
+  RibbonNotepadDemoGallerySetup in 'RibbonNotepadDemoGallerySetup.pas' {ColorDialogSetupForm},
   RibbonNotepadDemoOptions in 'RibbonNotepadDemoOptions.pas' {RibbonDemoOptionsForm},
   RibbonNotepadChildForm in 'RibbonNotepadChildForm.pas' {frmRibbonNotepadChild},
   dxDemoUtils in '..\..\Common\dxDemoUtils.pas';

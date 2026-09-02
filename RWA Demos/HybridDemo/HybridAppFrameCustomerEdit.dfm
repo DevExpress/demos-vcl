@@ -9,7 +9,7 @@ inherited frmCustomerEdit: TfrmCustomerEdit
     ExplicitWidth = 946
     ExplicitHeight = 530
     object edName: TcxDBTextEdit [0]
-      Left = 195
+      Left = 193
       Top = 17
       DataBinding.DataField = 'Name'
       DataBinding.DataSource = DM.dsCustomers
@@ -25,8 +25,8 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       Width = 271
     end
     object edHomeAddress: TcxDBTextEdit [1]
-      Left = 195
-      Top = 56
+      Left = 193
+      Top = 60
       DataBinding.DataField = 'HomeOffice_Line'
       DataBinding.DataSource = DM.dsCustomers
       ParentFont = False
@@ -41,8 +41,8 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       Width = 271
     end
     object edHomeCity: TcxDBTextEdit [2]
-      Left = 195
-      Top = 95
+      Left = 193
+      Top = 103
       DataBinding.DataField = 'HomeOffice_City'
       DataBinding.DataSource = DM.dsCustomers
       ParentFont = False
@@ -57,8 +57,8 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       Width = 147
     end
     object edHomeState: TcxDBLookupComboBox [3]
-      Left = 403
-      Top = 95
+      Left = 401
+      Top = 103
       DataBinding.DataField = 'HomeOffice_State'
       DataBinding.DataSource = DM.dsCustomers
       ParentFont = False
@@ -83,8 +83,8 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       Width = 63
     end
     object edFax: TcxDBTextEdit [4]
-      Left = 195
-      Top = 232
+      Left = 193
+      Top = 252
       DataBinding.DataField = 'Fax'
       DataBinding.DataSource = DM.dsCustomers
       ParentFont = False
@@ -99,8 +99,8 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       Width = 271
     end
     object edBillingAddress: TcxDBTextEdit [5]
-      Left = 195
-      Top = 291
+      Left = 193
+      Top = 315
       DataBinding.DataField = 'BillingAddress_Line'
       DataBinding.DataSource = DM.dsCustomers
       ParentFont = False
@@ -115,8 +115,8 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       Width = 271
     end
     object edBillingCity: TcxDBTextEdit [6]
-      Left = 195
-      Top = 330
+      Left = 193
+      Top = 358
       DataBinding.DataField = 'BillingAddress_City'
       DataBinding.DataSource = DM.dsCustomers
       ParentFont = False
@@ -131,8 +131,8 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       Width = 147
     end
     object edBillingZipCode: TcxDBTextEdit [7]
-      Left = 195
-      Top = 369
+      Left = 193
+      Top = 401
       DataBinding.DataField = 'BillingAddress_ZipCode'
       DataBinding.DataSource = DM.dsCustomers
       ParentFont = False
@@ -147,8 +147,9 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       Width = 271
     end
     object edBillingState: TcxDBLookupComboBox [8]
-      Left = 403
-      Top = 330
+      Left = 401
+      Top = 358
+      AutoSize = False
       DataBinding.DataField = 'BillingAddress_State'
       DataBinding.DataSource = DM.dsCustomers
       ParentFont = False
@@ -169,11 +170,12 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       Style.HotTrack = False
       Style.IsFontAssigned = True
       TabOrder = 9
+      Height = 33
       Width = 63
     end
     object edProfile: TcxDBRichEdit [9]
-      Left = 59
-      Top = 437
+      Left = 57
+      Top = 473
       DataBinding.DataField = 'PersonalProfile'
       DataBinding.DataSource = DM.dsEmployees
       ParentFont = False
@@ -186,12 +188,12 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       Style.HotTrack = False
       Style.IsFontAssigned = True
       TabOrder = 11
-      Height = 76
+      Height = 70
       Width = 407
     end
     object edHomeZipCode: TcxDBTextEdit [10]
-      Left = 195
-      Top = 134
+      Left = 193
+      Top = 146
       DataBinding.DataField = 'HomeOffice_ZipCode'
       DataBinding.DataSource = DM.dsCustomers
       ParentFont = False
@@ -207,8 +209,8 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       Width = 271
     end
     object edPhone: TcxDBTextEdit [11]
-      Left = 195
-      Top = 193
+      Left = 193
+      Top = 209
       DataBinding.DataField = 'Phone'
       DataBinding.DataSource = DM.dsCustomers
       ParentFont = False
@@ -223,9 +225,9 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       Width = 271
     end
     object dxMapControl1: TdxMapControl [12]
-      Left = 487
+      Left = 485
       Top = 17
-      Width = 442
+      Width = 410
       Height = 496
       NavigationPanel.Style.CoordinateFont.Charset = DEFAULT_CHARSET
       NavigationPanel.Style.CoordinateFont.Color = clWindowText
@@ -274,7 +276,6 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       SizeOptions.AssignedValues = [sovSizableHorz]
       SizeOptions.SizableHorz = True
       SizeOptions.Width = 407
-      ButtonOptions.Buttons = <>
       ShowBorder = False
       Index = 0
     end
@@ -283,7 +284,7 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       AlignHorz = ahClient
       CaptionOptions.Text = 'NAME'
       Control = edName
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 301
       ControlOptions.ShowBorder = False
       Index = 0
@@ -293,7 +294,7 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       AlignHorz = ahClient
       CaptionOptions.Text = 'ADDRESS'
       Control = edHomeAddress
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 301
       ControlOptions.ShowBorder = False
       Index = 1
@@ -303,7 +304,7 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       AlignHorz = ahClient
       CaptionOptions.Text = 'CITY'
       Control = edHomeCity
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 177
       ControlOptions.ShowBorder = False
       Index = 0
@@ -314,7 +315,7 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       AlignVert = avBottom
       CaptionOptions.Text = 'STATE'
       Control = edHomeState
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 63
       ControlOptions.ShowBorder = False
       Index = 1
@@ -323,30 +324,29 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       Parent = dxLayoutGroup3
       LayoutDirection = ldHorizontal
       Index = 2
-      AutoCreated = True
     end
     object liFax: TdxLayoutItem
       Parent = dxLayoutGroup3
       AlignHorz = ahClient
       CaptionOptions.Text = 'FAX'
       Control = edFax
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 301
       ControlOptions.ShowBorder = False
       Index = 6
     end
     object dxLayoutEmptySpaceItem1: TdxLayoutEmptySpaceItem
       Parent = dxLayoutGroup3
-      CaptionOptions.Text = 'Empty Space Item'
       SizeOptions.Height = 10
       SizeOptions.Width = 10
+      CaptionOptions.Text = 'Empty Space Item'
       Index = 4
     end
     object dxLayoutEmptySpaceItem2: TdxLayoutEmptySpaceItem
       Parent = dxLayoutGroup3
-      CaptionOptions.Text = 'Empty Space Item'
       SizeOptions.Height = 10
       SizeOptions.Width = 10
+      CaptionOptions.Text = 'Empty Space Item'
       Index = 7
     end
     object liBillingAddress: TdxLayoutItem
@@ -354,7 +354,7 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       AlignHorz = ahClient
       CaptionOptions.Text = 'BILLING ADDRESS'
       Control = edBillingAddress
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 301
       ControlOptions.ShowBorder = False
       Index = 8
@@ -364,7 +364,7 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       AlignHorz = ahClient
       CaptionOptions.Text = 'CITY'
       Control = edBillingCity
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 177
       ControlOptions.ShowBorder = False
       Index = 0
@@ -374,7 +374,7 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       AlignHorz = ahClient
       CaptionOptions.Text = 'ZIP CODE'
       Control = edBillingZipCode
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 301
       ControlOptions.ShowBorder = False
       Index = 10
@@ -394,7 +394,6 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       Parent = dxLayoutGroup3
       LayoutDirection = ldHorizontal
       Index = 9
-      AutoCreated = True
     end
     object liProfile: TdxLayoutItem
       Parent = dxLayoutGroup3
@@ -414,7 +413,7 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       AlignHorz = ahClient
       CaptionOptions.Text = 'ZIP CODE'
       Control = edHomeZipCode
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 301
       ControlOptions.ShowBorder = False
       Index = 3
@@ -424,17 +423,17 @@ inherited frmCustomerEdit: TfrmCustomerEdit
       AlignHorz = ahClient
       CaptionOptions.Text = 'PHONE'
       Control = edPhone
-      ControlOptions.OriginalHeight = 29
+      ControlOptions.OriginalHeight = 33
       ControlOptions.OriginalWidth = 301
       ControlOptions.ShowBorder = False
       Index = 5
     end
     object dxLayoutSplitterItem1: TdxLayoutSplitterItem
       Parent = dxLayoutGroup2
-      CaptionOptions.Text = 'Splitter'
       SizeOptions.AssignedValues = [sovSizableHorz, sovSizableVert]
       SizeOptions.SizableHorz = False
       SizeOptions.SizableVert = False
+      CaptionOptions.Text = 'Splitter'
       Index = 1
     end
     object dxLayoutItem16: TdxLayoutItem
@@ -454,13 +453,16 @@ inherited frmCustomerEdit: TfrmCustomerEdit
     ExplicitWidth = 946
     Width = 946
     inherited dxLayoutControl2: TdxLayoutControl
-      Width = 942
-      ExplicitWidth = 942
+      Width = 940
+      ExplicitLeft = 3
+      ExplicitTop = 3
+      ExplicitWidth = 940
+      ExplicitHeight = 114
       object btnSave: TcxButton [0]
-        Left = 381
+        Left = 380
         Top = 17
         Width = 85
-        Height = 82
+        Height = 80
         Caption = 'Save'
         OptionsImage.ImageIndex = 25
         OptionsImage.Images = DM.ilButtons
@@ -475,10 +477,10 @@ inherited frmCustomerEdit: TfrmCustomerEdit
         OnClick = btnSaveClick
       end
       object btnCancel: TcxButton [1]
-        Left = 476
+        Left = 475
         Top = 17
         Width = 85
-        Height = 82
+        Height = 80
         Caption = 'Cancel'
         OptionsImage.ImageIndex = 21
         OptionsImage.Images = DM.ilButtons
@@ -517,7 +519,7 @@ inherited frmCustomerEdit: TfrmCustomerEdit
   object stRepository: TdxScreenTipRepository
     Left = 296
     Top = 336
-    PixelsPerInch = 96
+    PixelsPerInch = 144
     object stRepositoryScreenTip1: TdxScreenTip
       Header.PlainText = False
       Header.Text = 'stRepositoryScreenTip1'

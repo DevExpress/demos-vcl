@@ -1,6 +1,8 @@
 inherited frmSystemInformation: TfrmSystemInformation
   Width = 803
   Height = 509
+  ExplicitWidth = 803
+  ExplicitHeight = 509
   object cxGrid1: TcxGrid
     Left = 0
     Top = 145
@@ -9,7 +11,6 @@ inherited frmSystemInformation: TfrmSystemInformation
     Align = alClient
     TabOrder = 0
     object cxGrid1TableView1: TcxGridTableView
-      Navigator.Buttons.CustomButtons = <>
       DataController.Summary.DefaultGroupSummaryItems = <
         item
           Format = '0 000 K'
@@ -28,7 +29,6 @@ inherited frmSystemInformation: TfrmSystemInformation
             item
               Column = cxGrid1TableView1Column3
             end>
-          SummaryItems = <>
         end>
       OptionsData.CancelOnExit = False
       OptionsData.Deleting = False
@@ -81,10 +81,8 @@ inherited frmSystemInformation: TfrmSystemInformation
     Height = 145
     Width = 803
     object Image1: TcxImage
-      Left = 0
-      Top = 0
-      Width = 150
-      Height = 145
+      Left = 2
+      Top = 2
       Align = alLeft
       Picture.Data = {
         0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000096
@@ -668,7 +666,10 @@ inherited frmSystemInformation: TfrmSystemInformation
       Style.BorderStyle = ebsNone
       Style.HotTrack = False
       Style.TransparentBorder = False
+      TabOrder = 0
       Transparent = True
+      Height = 141
+      Width = 150
     end
     object lbComputerName: TcxLabel
       Left = 156
@@ -682,6 +683,7 @@ inherited frmSystemInformation: TfrmSystemInformation
       Style.Font.Style = []
       Style.TransparentBorder = False
       Style.IsFontAssigned = True
+      TabOrder = 1
       Transparent = True
     end
     object lbMemory: TcxLabel
@@ -696,6 +698,7 @@ inherited frmSystemInformation: TfrmSystemInformation
       Style.Font.Style = []
       Style.TransparentBorder = False
       Style.IsFontAssigned = True
+      TabOrder = 3
       Transparent = True
     end
     object pbMemoryUsage: TcxProgressBar
@@ -718,6 +721,7 @@ inherited frmSystemInformation: TfrmSystemInformation
       Style.Font.Style = []
       Style.TransparentBorder = False
       Style.IsFontAssigned = True
+      TabOrder = 4
       Transparent = True
     end
     object lbProcessorInfo: TcxLabel
@@ -731,12 +735,13 @@ inherited frmSystemInformation: TfrmSystemInformation
       Style.Font.Style = []
       Style.TransparentBorder = False
       Style.IsFontAssigned = True
+      TabOrder = 5
       Transparent = True
     end
   end
-  object tmRefesh: TTimer
+  object tmRefresh: TTimer
     Interval = 5000
-    OnTimer = tmRefeshTimer
+    OnTimer = tmRefreshTimer
     Left = 720
     Top = 80
   end

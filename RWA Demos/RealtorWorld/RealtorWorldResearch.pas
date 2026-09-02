@@ -11,7 +11,7 @@ uses
   cxGridTableView, cxGridDBTableView, cxGridChartView, cxGridCustomView,
   dxmdaset, cxPivotGridCustomDataSet, cxPivotGridSummaryDataSet,
   cxGridLevel, cxGrid, dxGDIPlusClasses, cxImage, RealtorWorldBaseFrame,
-  cxGridDBChartView;
+  cxGridDBChartView, dxBarBuiltInMenu;
 
 type
   TfrmResearch = class(TfrmBase)
@@ -52,7 +52,7 @@ begin
   cxgChart.BeginUpdate;
   try
     cvChart.DataGroups[0].ActiveValue := 'For Sale';
-    cvChart.DataGroups[1].ActiveValue := 'Not Seasonally Adjus';
+    cvChart.DataGroups[1].ActiveValue := 'Not Seasonally Adjust';
     cvChart.ActiveDataLevel := 2;
   finally
     cxgChart.EndUpdate;

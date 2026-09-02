@@ -23,7 +23,7 @@ uses
   dxPDFRecognizedObject, dxPDFDocumentViewer, dxPDFBase, dxPDFCore, System.Actions, Vcl.ComCtrls,
   cxListView, dxScreenTip, dxCustomHint, cxHint, Vcl.Dialogs, dxX509Certificate, dxPrintUtils, dxShellDialogs, dxPDFForm,
   dxPDFFormData, dxPDFTypes, dxPSRichEditControlLnk,
-  dxPSdxSpreadSheetLnk;
+  dxPSdxSpreadSheetLnk, System.ImageList;
 
 type
   TPDFViewerExportFunc = function(AScale: Double; AExportDialog: TfrmExportToFileDialog): string of object;
@@ -79,7 +79,7 @@ type
     dxPDFViewerZoomActualSizeAction: TdxPDFViewerZoomActualSize;
     dxBarLargeButtonActualSize: TdxBarLargeButton;
     dxPDFViewerZoomToPageLevelAction: TdxPDFViewerZoomToPageLevel;
-    dxBarLargeButtonZoomtoPageLevel: TdxBarLargeButton;
+    dxBarLargeButtonZoomToPageLevel: TdxBarLargeButton;
     dxPDFViewerZoomFitWidthAction: TdxPDFViewerZoomFitWidth;
     dxBarLargeButtonFitWidth: TdxBarLargeButton;
     dxBarAppearance: TdxBar;

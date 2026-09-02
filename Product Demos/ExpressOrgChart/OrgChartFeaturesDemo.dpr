@@ -7,7 +7,7 @@ program OrgChartFeaturesDemo;
 
 uses
   Vcl.Forms, dxUIAClasses,
-  dxSplashUnit in '..\Common\dxSplashUnit.pas' {TfrmSplash},
+  dxSplashUnit in '..\Common\dxSplashUnit.pas',
   main in 'main.pas' {MainForm},
   Options in 'Options.pas' {OptionsForm},
   dxDemoUtils in '..\Common\dxDemoUtils.pas',

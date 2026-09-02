@@ -4,21 +4,15 @@ inherited frmGridFilterExpression: TfrmGridFilterExpression
   end
   inherited PanelGrid: TdxPanel
     Width = 732
-    ExplicitWidth = 760
-    ExplicitHeight = 667
+    ExplicitWidth = 732
     inherited Grid: TcxGrid
       Width = 732
       Height = 667
-      ExplicitWidth = 760
+      ExplicitWidth = 732
       ExplicitHeight = 667
       object BandedTableView: TcxGridDBBandedTableView
-        Navigator.Buttons.CustomButtons = <>
         Navigator.Visible = True
-        ScrollbarAnnotations.CustomAnnotations = <>
         DataController.DataSource = dmMain.dsCarOrdersAndTransfer
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
         OptionsView.ColumnAutoWidth = True
         OptionsView.GroupByBox = False
         OptionsView.Indicator = True
@@ -147,7 +141,7 @@ inherited frmGridFilterExpression: TfrmGridFilterExpression
           Position.ColIndex = 1
           Position.RowIndex = 0
         end
-        object BandedTableViewDeliveriFrom: TcxGridDBBandedColumn
+        object BandedTableViewDeliveryFrom: TcxGridDBBandedColumn
           Caption = 'From'
           DataBinding.FieldName = 'DeliveryFrom'
           Width = 40
@@ -190,15 +184,14 @@ inherited frmGridFilterExpression: TfrmGridFilterExpression
     Width = 190
     ExplicitLeft = 732
     ExplicitWidth = 190
-    ExplicitHeight = 667
     inherited gbSetupTools: TcxGroupBox
-      ExplicitWidth = 161
-      ExplicitHeight = 667
+      ExplicitWidth = 189
       Width = 189
       inherited lcFrame: TdxLayoutControl
-        Width = 187
-        ExplicitWidth = 159
-        ExplicitHeight = 647
+        Width = 185
+        ExplicitLeft = 2
+        ExplicitTop = 18
+        ExplicitWidth = 185
         inherited lgSetupTools: TdxLayoutGroup
           SizeOptions.SizableHorz = False
         end

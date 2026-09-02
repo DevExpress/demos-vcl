@@ -12,9 +12,7 @@ object frmSelectDataset: TfrmSelectDataset
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poMainFormCenter
-  PixelsPerInch = 96
   TextHeight = 13
   object dxLayoutControl1: TdxLayoutControl
     Left = 0
@@ -33,7 +31,7 @@ object frmSelectDataset: TfrmSelectDataset
       Width = 397
       Height = 479
       Anchors = [akLeft, akTop, akRight]
-      ItemHeight = 13
+      ItemHeight = 17
       TabOrder = 0
     end
     object btnApply: TcxButton
@@ -58,7 +56,6 @@ object frmSelectDataset: TfrmSelectDataset
       AlignHorz = ahClient
       AlignVert = avClient
       LayoutLookAndFeel = frmMain.dxLayoutSkinLookAndFeel1
-      ButtonOptions.Buttons = <>
       Hidden = True
       ShowBorder = False
       Index = -1
@@ -103,7 +100,6 @@ object frmSelectDataset: TfrmSelectDataset
       AlignVert = avTop
       LayoutDirection = ldHorizontal
       Index = 1
-      AutoCreated = True
     end
   end
 end

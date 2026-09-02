@@ -1,4 +1,4 @@
-unit OpenWeatherMapService;
+ï»¿unit OpenWeatherMapService;
 
 interface
 
@@ -10,8 +10,8 @@ uses
 
 const
   WeatherApiUri = 'http://api.openweathermap.org/data/2.5/weather?APPID=%s';
-  WeatherByCityNameUri = WeatherApiUri + '&q=%s&mode=xml&units=metric';
-  WeatherByGeoPointUri = WeatherApiUri + '&lat=%s&lon=%s&mode=xml&units=metric';
+  WeatherByCityNameUri = WeatherApiUri + '&q=%s&mode=xml&units=metric';           
+  WeatherByGeoPointUri = WeatherApiUri + '&lat=%s&lon=%s&mode=xml&units=metric';  
   WeatherBaseImageUri = 'http://openweathermap.org/img/w/';
   AdditionalLayerUri = 'http://tile.openweathermap.org/map/%s/[z]/[x]/[y].png?appid=%s';
   AdditionalLayerSubUri: array [0..5] of string = ('clouds_new', 'precipitation_new', 'pressure_new', 'wind_new', 'temp_new', 'snow_new');
@@ -168,7 +168,7 @@ end;
 
 procedure TWeatherInfo.UpdateItemText(AIsCelsius: Boolean);
 const
-  FMeasure: array [Boolean] of string = ('°F', '°C');
+  FMeasure: array [Boolean] of string = ('Â°F', 'Â°C');
 var
   ATemperature: Integer;
 begin

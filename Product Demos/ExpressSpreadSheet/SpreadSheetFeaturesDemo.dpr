@@ -9,7 +9,7 @@ uses
   Vcl.Forms, dxUIAClasses,
   System.SysUtils,
   dxDemoUtils in '..\Common\dxDemoUtils.pas',
-  dxSplashUnit in '..\Common\dxSplashUnit.pas' {TfrmSplash},
+  dxSplashUnit in '..\Common\dxSplashUnit.pas',
   dxDemoPrintFrame in '..\Common\dxDemoPrintFrame.pas' {frmPrinting: TFrame},
   dxAboutDemo in '..\Common\dxAboutDemo.pas' {dxAboutDemoForm},
   dxDemoBaseMainForm in '..\Common\dxDemoBaseMainForm.pas' {frmMainBase},
@@ -22,7 +22,7 @@ uses
   LoanAmortizationScheduleFormUnit in 'LoanAmortizationScheduleFormUnit.pas' {frmLoanAmortizationSchedule: TFrame},
   InvoiceFormUnit in 'InvoiceFormUnit.pas' {frmInvoice: TFrame},
   RenameSheetFormUnit in 'RenameSheetFormUnit.pas' {frmRenameSheet},
-  CommentsUnit in 'CommentsUnit.pas',
+  CommentsUnit in 'CommentsUnit.pas' {frmComments},
   Main in 'Main.pas' {frmMain},
   ExpenseReportFormUnit in 'ExpenseReportFormUnit.pas' {frmExpenseReport: TFrame},
   EmployeeInformationFormUnit in 'EmployeeInformationFormUnit.pas' {frmEmployeeInformation: TFrame},
@@ -41,7 +41,7 @@ uses
   ReportPreviewFormUnit in 'ReportPreviewFormUnit.pas' {frmPreview},
   dxSpreadSheetReportFilterForm in 'dxSpreadSheetReportFilterForm.pas' {frmFilter},
   SortedFieldsEditor in 'SortedFieldsEditor.pas' {frmSortedFieldsEditor},
-  SelectDatasetForm in 'SelectDatasetForm.pas' {frmSeelctDataset},
+  SelectDatasetForm in 'SelectDatasetForm.pas' {frmSelectDataset},
   PrintOptionsUnit in 'PrintOptionsUnit.pas' {frmPrintOptions},
   RightToLeftLayoutFormUnit in 'RightToLeftLayoutFormUnit.pas' {frmRightToLeftLayout};
 

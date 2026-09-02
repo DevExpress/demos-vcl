@@ -1,472 +1,432 @@
 inherited frmTokenEdit: TfrmTokenEdit
   inherited lcFrame: TdxLayoutControl
-    object dxTokenEdit: TdxTokenEdit [0]
-      AlignWithMargins = True
-      Left = 34
-      Top = 232
-      Margins.Left = 14
-      Margins.Right = 14
-      ParentShowHint = False
-      Properties.Images = ilSmall
-      Properties.ImmediatePost = True
-      Properties.Tokens = <
-        item
-          DisplayText = 'January'
-          ImageIndex = 0
-          Text = 'Jan'
-        end
-        item
-          DisplayText = 'February'
-          ImageIndex = 0
-          Text = 'Feb'
-        end
-        item
-          DisplayText = 'March'
-          ImageIndex = 1
-          Text = 'Mar'
-        end
-        item
-          DisplayText = 'April'
-          ImageIndex = 1
-          Text = 'Apr'
-        end
-        item
-          DisplayText = 'May'
-          ImageIndex = 1
-          Text = 'May'
-        end
-        item
-          DisplayText = 'June'
-          ImageIndex = 2
-          Text = 'Jun'
-        end
-        item
-          DisplayText = 'July'
-          ImageIndex = 2
-          Text = 'Jul'
-        end
-        item
-          DisplayText = 'August'
-          ImageIndex = 2
-          Text = 'Aug'
-        end
-        item
-          DisplayText = 'September'
-          ImageIndex = 3
-          Text = 'Sep'
-        end
-        item
-          DisplayText = 'October'
-          ImageIndex = 3
-          Text = 'Oct'
-        end
-        item
-          DisplayText = 'November'
-          ImageIndex = 3
-          Text = 'Nov'
-        end
-        item
-          DisplayText = 'December'
-          ImageIndex = 0
-          Text = 'Dec'
-        end>
-      Properties.ValidateOnEnter = True
-      Properties.ValidationOptions = [evoShowErrorIcon, evoAllowLoseFocus]
-      Properties.OnEditValueChanged = dxTokenEditPropertiesEditValueChanged
-      Properties.OnTokenClick = dxTokenEditPropertiesTokenClick
-      Properties.OnTokenDelete = dxTokenEditPropertiesTokenDelete
-      Properties.OnTokenGlyphClick = dxTokenEditPropertiesTokenGlyphClick
-      Properties.OnValidate = dxTokenEditPropertiesValidate
-      ShowHint = True
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      TabOrder = 0
-      Text = 'Jan; May'
-      Width = 232
-    end
-    object cbCloseGlyphPosition: TcxComboBox [1]
-      Left = 413
-      Top = 62
-      Properties.DropDownListStyle = lsFixedList
-      Properties.Items.Strings = (
-        'None'
-        'Left'
-        'Right')
-      Properties.OnEditValueChanged = cbCloseGlyphPositionPropertiesEditValueChanged
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      Style.ButtonStyle = bts3D
-      Style.PopupBorderStyle = epbsFrame3D
-      TabOrder = 1
-      Text = 'Right'
-      Width = 168
-    end
-    object cbGlyphPosition: TcxComboBox [2]
-      Left = 413
-      Top = 89
-      Properties.DropDownListStyle = lsFixedList
-      Properties.Items.Strings = (
-        'None'
-        'Left'
-        'Right')
-      Properties.OnEditValueChanged = cbGlyphPositionPropertiesEditValueChanged
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      Style.ButtonStyle = bts3D
-      Style.PopupBorderStyle = epbsFrame3D
-      TabOrder = 2
-      Text = 'Left'
-      Width = 168
-    end
-    object teEditValueDelimiter: TcxTextEdit [3]
-      Left = 413
-      Top = 116
-      Properties.MaxLength = 1
-      Properties.OnEditValueChanged = teEditValueDelimiterPropertiesEditValueChanged
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      TabOrder = 3
-      Text = ';'
-      Width = 168
-    end
-    object teInputDelimiters: TcxTextEdit [4]
-      Left = 413
-      Top = 143
-      Properties.OnEditValueChanged = teInputDelimitersPropertiesEditValueChanged
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      TabOrder = 4
-      Text = ',;'
-      Width = 168
-    end
-    object seMaxLineCount: TcxSpinEdit [5]
-      Left = 413
-      Top = 170
-      Properties.AssignedValues.MinValue = True
-      Properties.ImmediatePost = True
-      Properties.OnEditValueChanged = seMaxLineCountPropertiesChange
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      Style.ButtonStyle = bts3D
-      TabOrder = 5
-      Width = 168
-    end
-    object cbReadOnly: TcxCheckBox [6]
-      Left = 312
-      Top = 197
-      Action = acReadOnly
-      Properties.NullStyle = nssUnchecked
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      TabOrder = 6
-      Transparent = True
-    end
-    object cbAllowCustomTokens: TcxCheckBox [7]
-      Left = 312
-      Top = 224
-      Action = acAllowCustomTokens
-      Properties.NullStyle = nssUnchecked
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      TabOrder = 7
-      Transparent = True
-    end
-    object cbConfirmTokenDeletion: TcxCheckBox [8]
-      Left = 312
-      Top = 251
-      Action = acConfirmTokenDeletion
-      Properties.NullStyle = nssUnchecked
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      TabOrder = 8
-      Transparent = True
-    end
-    object cbLookupSorted: TcxCheckBox [9]
-      Left = 324
-      Top = 433
-      Caption = 'Sorted'
-      Properties.NullStyle = nssUnchecked
-      Properties.OnChange = cbLookupSortedPropertiesChange
-      State = cbsChecked
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      Style.TransparentBorder = False
-      TabOrder = 14
-      Transparent = True
-    end
-    object seLookupDropDownRows: TcxSpinEdit [10]
-      Left = 438
-      Top = 325
-      Properties.AssignedValues.MinValue = True
-      Properties.ImmediatePost = True
-      Properties.MaxValue = 15.000000000000000000
-      Properties.OnEditValueChanged = seLookupDropDownRowsPropertiesChange
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      Style.TransparentBorder = False
-      Style.ButtonStyle = bts3D
-      TabOrder = 10
-      Value = 10
-      Width = 131
-    end
-    object cbLookupFilterMode: TcxComboBox [11]
-      Left = 438
-      Top = 352
-      Properties.DropDownListStyle = lsFixedList
-      Properties.Items.Strings = (
-        'Starts With'
-        'Contains')
-      Properties.OnEditValueChanged = cbLookupFilterModePropertiesEditValueChanged
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      Style.TransparentBorder = False
-      Style.ButtonStyle = bts3D
-      Style.PopupBorderStyle = epbsFrame3D
-      TabOrder = 11
-      Text = 'Contains'
-      Width = 131
-    end
-    object chcbLookupFilterSources: TcxCheckComboBox [12]
-      Left = 438
-      Top = 379
-      Properties.Items = <
-        item
-          Description = 'Text'
-        end
-        item
-          Description = 'Display Text'
-        end>
-      Properties.OnEditValueChanged = chcbLookupFilterSourcesPropertiesEditValueChanged
-      EditValue = 3
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      Style.TransparentBorder = False
-      Style.ButtonStyle = bts3D
-      Style.PopupBorderStyle = epbsFrame3D
-      TabOrder = 12
-      Width = 131
-    end
-    object cbDisplayMask: TcxComboBox [13]
-      Left = 438
-      Top = 406
-      Properties.Items.Strings = (
-        '')
-      Properties.OnEditValueChanged = cbDisplayMaskPropertiesEditValueChanged
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      Style.TransparentBorder = False
-      Style.ButtonStyle = bts3D
-      Style.PopupBorderStyle = epbsFrame3D
-      TabOrder = 13
-      Width = 131
-    end
-    object cbPostOnFocusLeave: TcxCheckBox [14]
-      Left = 312
-      Top = 278
-      Action = acPostOnFocusLeave
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
-      Style.HotTrack = False
-      TabOrder = 9
-      Transparent = True
-    end
-    inherited dxLayoutGroup1: TdxLayoutGroup
-      ItemIndex = 2
-    end
-    inherited dxLayoutGroup2: TdxLayoutGroup
-      SizeOptions.AssignedValues = [sovSizableHorz]
-      SizeOptions.Width = 256
-      ItemIndex = 1
-    end
-    inherited dxLayoutGroup3: TdxLayoutGroup
-      SizeOptions.AssignedValues = [sovSizableHorz]
-      SizeOptions.Width = 293
-      ItemIndex = 11
-    end
-    object dxLayoutItem1: TdxLayoutItem
-      Parent = dxLayoutGroup2
-      Control = dxTokenEdit
-      ControlOptions.OriginalHeight = 25
-      ControlOptions.OriginalWidth = 121
-      ControlOptions.ShowBorder = False
-      Index = 1
-    end
-    object lliTokenValue: TdxLayoutLabeledItem
-      Parent = dxLayoutGroup2
-      LayoutLookAndFeel = frmMain.dxLayoutSkinLookAndFeelBoldItemCaption
-      SizeOptions.Height = 180
-      CaptionOptions.AlignVert = tavTop
-      CaptionOptions.Text = 'Edit Value:'
-      CaptionOptions.WordWrap = True
-      Index = 0
-    end
-    object dxLayoutItem2: TdxLayoutItem
-      Parent = dxLayoutGroup3
-      CaptionOptions.Text = 'Close Glyph Position'
-      Control = cbCloseGlyphPosition
-      ControlOptions.OriginalHeight = 21
-      ControlOptions.OriginalWidth = 121
-      ControlOptions.ShowBorder = False
-      Index = 1
-    end
-    object dxLayoutEmptySpaceItem5: TdxLayoutEmptySpaceItem
-      Parent = dxLayoutGroup3
-      SizeOptions.Height = 10
-      SizeOptions.Width = 10
-      CaptionOptions.Text = 'Empty Space Item'
-      Index = 0
-    end
-    object dxLayoutItem3: TdxLayoutItem
-      Parent = dxLayoutGroup3
-      CaptionOptions.Text = 'Glyph Position'
-      Control = cbGlyphPosition
-      ControlOptions.OriginalHeight = 21
-      ControlOptions.OriginalWidth = 121
-      ControlOptions.ShowBorder = False
-      Index = 2
-    end
-    object dxLayoutItem4: TdxLayoutItem
-      Parent = dxLayoutGroup3
-      CaptionOptions.Text = 'Edit Value Delimiter'
-      Control = teEditValueDelimiter
-      ControlOptions.OriginalHeight = 21
-      ControlOptions.OriginalWidth = 121
-      ControlOptions.ShowBorder = False
-      Index = 3
-    end
-    object dxLayoutItem5: TdxLayoutItem
-      Parent = dxLayoutGroup3
-      CaptionOptions.Text = 'Input Delimiters'
-      Control = teInputDelimiters
-      ControlOptions.OriginalHeight = 21
-      ControlOptions.OriginalWidth = 121
-      ControlOptions.ShowBorder = False
-      Index = 4
-    end
-    object dxLayoutItem6: TdxLayoutItem
-      Parent = dxLayoutGroup3
-      CaptionOptions.Text = 'Max Line Count'
-      Control = seMaxLineCount
-      ControlOptions.OriginalHeight = 21
-      ControlOptions.OriginalWidth = 121
-      ControlOptions.ShowBorder = False
-      Index = 5
-    end
-    object dxLayoutItem7: TdxLayoutItem
-      Parent = dxLayoutGroup3
-      AlignHorz = ahClient
-      AlignVert = avTop
-      CaptionOptions.Visible = False
-      Control = cbReadOnly
-      ControlOptions.OriginalHeight = 21
-      ControlOptions.OriginalWidth = 74
-      ControlOptions.ShowBorder = False
-      Index = 6
-    end
-    object dxLayoutItem8: TdxLayoutItem
-      Parent = dxLayoutGroup3
-      AlignHorz = ahClient
-      AlignVert = avTop
-      CaptionOptions.Visible = False
-      Control = cbAllowCustomTokens
-      ControlOptions.OriginalHeight = 21
-      ControlOptions.OriginalWidth = 125
-      ControlOptions.ShowBorder = False
-      Index = 7
-    end
-    object dxLayoutItem9: TdxLayoutItem
-      Parent = dxLayoutGroup3
-      CaptionOptions.Visible = False
-      Control = cbConfirmTokenDeletion
-      ControlOptions.OriginalHeight = 21
-      ControlOptions.OriginalWidth = 135
-      ControlOptions.ShowBorder = False
-      Index = 8
-    end
-    object dxLayoutEmptySpaceItem6: TdxLayoutEmptySpaceItem
-      Parent = dxLayoutGroup3
-      SizeOptions.Height = 10
-      SizeOptions.Width = 10
-      CaptionOptions.Text = 'Empty Space Item'
-      Index = 11
-    end
-    object dxLayoutItem11: TdxLayoutItem
-      Parent = dxLayoutGroup3
-      CaptionOptions.Text = 'cxCheckBox1'
-      CaptionOptions.Visible = False
-      Control = cbPostOnFocusLeave
-      ControlOptions.OriginalHeight = 21
-      ControlOptions.OriginalWidth = 85
-      ControlOptions.ShowBorder = False
-      Index = 9
-    end
-    object chgbLookup: TdxLayoutGroup
-      Parent = dxLayoutGroup3
-      CaptionOptions.Text = 'Lookup'
-      ButtonOptions.Alignment = gbaLeft
-      ButtonOptions.CheckBox.Visible = True
-      ItemIndex = 4
-      OnCheckBoxStateChanged = chgbLookupPropertiesEditValueChanged
-      Index = 10
-    end
-    object liseLookupDropDownRows: TdxLayoutItem
-      Parent = chgbLookup
-      CaptionOptions.Text = 'Drop Down Row Count'
-      Control = seLookupDropDownRows
-      ControlOptions.OriginalHeight = 21
-      ControlOptions.OriginalWidth = 121
-      ControlOptions.ShowBorder = False
-      Index = 0
-    end
-    object licbLookupFilterMode: TdxLayoutItem
-      Parent = chgbLookup
-      CaptionOptions.Text = 'Filter Mode'
-      Control = cbLookupFilterMode
-      ControlOptions.OriginalHeight = 21
-      ControlOptions.OriginalWidth = 121
-      ControlOptions.ShowBorder = False
-      Index = 1
-    end
-    object lichcbLookupFilterSources: TdxLayoutItem
-      Parent = chgbLookup
-      CaptionOptions.Text = 'Filter Sources'
-      Control = chcbLookupFilterSources
-      ControlOptions.OriginalHeight = 21
-      ControlOptions.OriginalWidth = 121
-      ControlOptions.ShowBorder = False
-      Index = 2
-    end
-    object licbDisplayMask: TdxLayoutItem
-      Parent = chgbLookup
-      CaptionOptions.Text = 'Display Mask'
-      Control = cbDisplayMask
-      ControlOptions.OriginalHeight = 21
-      ControlOptions.OriginalWidth = 121
-      ControlOptions.ShowBorder = False
-      Index = 3
-    end
-    object licbLookupSorted: TdxLayoutItem
-      Parent = chgbLookup
-      CaptionOptions.Visible = False
-      Control = cbLookupSorted
-      ControlOptions.OriginalHeight = 17
-      ControlOptions.OriginalWidth = 50
-      ControlOptions.ShowBorder = False
-      Index = 4
+    inherited lcControlContent: TdxLayoutControl
+      object dxTokenEdit: TdxTokenEdit [0]
+        AlignWithMargins = True
+        Left = 22
+        Top = 214
+        Margins.Left = 14
+        Margins.Right = 14
+        ParentShowHint = False
+        Properties.Images = ilSmall
+        Properties.ImmediatePost = True
+        Properties.Tokens = <
+          item
+            DisplayText = 'January'
+            ImageIndex = 0
+            Text = 'Jan'
+          end
+          item
+            DisplayText = 'February'
+            ImageIndex = 0
+            Text = 'Feb'
+          end
+          item
+            DisplayText = 'March'
+            ImageIndex = 1
+            Text = 'Mar'
+          end
+          item
+            DisplayText = 'April'
+            ImageIndex = 1
+            Text = 'Apr'
+          end
+          item
+            DisplayText = 'May'
+            ImageIndex = 1
+            Text = 'May'
+          end
+          item
+            DisplayText = 'June'
+            ImageIndex = 2
+            Text = 'Jun'
+          end
+          item
+            DisplayText = 'July'
+            ImageIndex = 2
+            Text = 'Jul'
+          end
+          item
+            DisplayText = 'August'
+            ImageIndex = 2
+            Text = 'Aug'
+          end
+          item
+            DisplayText = 'September'
+            ImageIndex = 3
+            Text = 'Sep'
+          end
+          item
+            DisplayText = 'October'
+            ImageIndex = 3
+            Text = 'Oct'
+          end
+          item
+            DisplayText = 'November'
+            ImageIndex = 3
+            Text = 'Nov'
+          end
+          item
+            DisplayText = 'December'
+            ImageIndex = 0
+            Text = 'Dec'
+          end>
+        Properties.ValidateOnEnter = True
+        Properties.ValidationOptions = [evoShowErrorIcon, evoAllowLoseFocus]
+        Properties.OnEditValueChanged = dxTokenEditPropertiesEditValueChanged
+        Properties.OnTokenClick = dxTokenEditPropertiesTokenClick
+        Properties.OnTokenDelete = dxTokenEditPropertiesTokenDelete
+        Properties.OnTokenGlyphClick = dxTokenEditPropertiesTokenGlyphClick
+        Properties.OnValidate = dxTokenEditPropertiesValidate
+        ShowHint = True
+        Style.HotTrack = False
+        TabOrder = 0
+        Text = 'Jan; May'
+        Width = 232
+      end
+      object cbCloseGlyphPosition: TcxComboBox [1]
+        Left = 401
+        Top = 44
+        Properties.DropDownListStyle = lsFixedList
+        Properties.Items.Strings = (
+          'None'
+          'Left'
+          'Right')
+        Properties.OnEditValueChanged = cbCloseGlyphPositionPropertiesEditValueChanged
+        Style.HotTrack = False
+        TabOrder = 1
+        Text = 'Right'
+        Width = 168
+      end
+      object cbGlyphPosition: TcxComboBox [2]
+        Left = 401
+        Top = 75
+        Properties.DropDownListStyle = lsFixedList
+        Properties.Items.Strings = (
+          'None'
+          'Left'
+          'Right')
+        Properties.OnEditValueChanged = cbGlyphPositionPropertiesEditValueChanged
+        Style.HotTrack = False
+        TabOrder = 2
+        Text = 'Left'
+        Width = 168
+      end
+      object teEditValueDelimiter: TcxTextEdit [3]
+        Left = 401
+        Top = 106
+        Properties.MaxLength = 1
+        Properties.OnEditValueChanged = teEditValueDelimiterPropertiesEditValueChanged
+        Style.HotTrack = False
+        TabOrder = 3
+        Text = ';'
+        Width = 168
+      end
+      object teInputDelimiters: TcxTextEdit [4]
+        Left = 401
+        Top = 137
+        Properties.OnEditValueChanged = teInputDelimitersPropertiesEditValueChanged
+        Style.HotTrack = False
+        TabOrder = 4
+        Text = ',;'
+        Width = 168
+      end
+      object seMaxLineCount: TcxSpinEdit [5]
+        Left = 401
+        Top = 168
+        Properties.AssignedValues.MinValue = True
+        Properties.ImmediatePost = True
+        Properties.OnEditValueChanged = seMaxLineCountPropertiesChange
+        Style.HotTrack = False
+        TabOrder = 5
+        Width = 168
+      end
+      object cbReadOnly: TcxCheckBox [6]
+        Left = 300
+        Top = 199
+        Action = acReadOnly
+        Properties.NullStyle = nssUnchecked
+        Style.HotTrack = False
+        TabOrder = 6
+        Transparent = True
+      end
+      object cbAllowCustomTokens: TcxCheckBox [7]
+        Left = 300
+        Top = 230
+        Action = acAllowCustomTokens
+        Properties.NullStyle = nssUnchecked
+        Style.HotTrack = False
+        TabOrder = 7
+        Transparent = True
+      end
+      object cbConfirmTokenDeletion: TcxCheckBox [8]
+        Left = 300
+        Top = 261
+        Action = acConfirmTokenDeletion
+        Properties.NullStyle = nssUnchecked
+        Style.HotTrack = False
+        TabOrder = 8
+        Transparent = True
+      end
+      object cbLookupSorted: TcxCheckBox [9]
+        Left = 312
+        Top = 457
+        Caption = 'Sorted'
+        Properties.NullStyle = nssUnchecked
+        Properties.OnChange = cbLookupSortedPropertiesChange
+        State = cbsChecked
+        Style.HotTrack = False
+        Style.TransparentBorder = False
+        TabOrder = 14
+        Transparent = True
+      end
+      object seLookupDropDownRows: TcxSpinEdit [10]
+        Left = 426
+        Top = 341
+        Properties.AssignedValues.MinValue = True
+        Properties.ImmediatePost = True
+        Properties.MaxValue = 15.000000000000000000
+        Properties.OnEditValueChanged = seLookupDropDownRowsPropertiesChange
+        Style.HotTrack = False
+        Style.TransparentBorder = False
+        TabOrder = 10
+        Value = 10
+        Width = 131
+      end
+      object cbLookupFilterMode: TcxComboBox [11]
+        Left = 426
+        Top = 370
+        Properties.DropDownListStyle = lsFixedList
+        Properties.Items.Strings = (
+          'Starts With'
+          'Contains')
+        Properties.OnEditValueChanged = cbLookupFilterModePropertiesEditValueChanged
+        Style.HotTrack = False
+        Style.TransparentBorder = False
+        TabOrder = 11
+        Text = 'Contains'
+        Width = 131
+      end
+      object chcbLookupFilterSources: TcxCheckComboBox [12]
+        Left = 426
+        Top = 399
+        Properties.Items = <
+          item
+            Description = 'Text'
+          end
+          item
+            Description = 'Display Text'
+          end>
+        Properties.OnEditValueChanged = chcbLookupFilterSourcesPropertiesEditValueChanged
+        EditValue = 3
+        Style.HotTrack = False
+        Style.TransparentBorder = False
+        TabOrder = 12
+        Width = 131
+      end
+      object cbDisplayMask: TcxComboBox [13]
+        Left = 426
+        Top = 428
+        Properties.Items.Strings = (
+          '')
+        Properties.OnEditValueChanged = cbDisplayMaskPropertiesEditValueChanged
+        Style.HotTrack = False
+        Style.TransparentBorder = False
+        TabOrder = 13
+        Width = 131
+      end
+      object cbPostOnFocusLeave: TcxCheckBox [14]
+        Left = 300
+        Top = 292
+        Action = acPostOnFocusLeave
+        Style.HotTrack = False
+        TabOrder = 9
+        Transparent = True
+      end
+      inherited dxLayoutGroup1: TdxLayoutGroup
+        ItemIndex = 2
+      end
+      inherited dxLayoutGroup2: TdxLayoutGroup
+        SizeOptions.AssignedValues = [sovSizableHorz]
+        SizeOptions.Width = 256
+        ItemIndex = 1
+      end
+      inherited dxLayoutGroup3: TdxLayoutGroup
+        SizeOptions.AssignedValues = [sovSizableHorz]
+        SizeOptions.Width = 293
+        ItemIndex = 11
+      end
+      object dxLayoutItem1: TdxLayoutItem
+        Parent = dxLayoutGroup2
+        Control = dxTokenEdit
+        ControlOptions.OriginalHeight = 29
+        ControlOptions.OriginalWidth = 121
+        ControlOptions.ShowBorder = False
+        Index = 1
+      end
+      object lliTokenValue: TdxLayoutLabeledItem
+        Parent = dxLayoutGroup2
+        LayoutLookAndFeel = frmMain.dxLayoutSkinLookAndFeelBoldItemCaption
+        SizeOptions.Height = 180
+        CaptionOptions.AlignVert = tavTop
+        CaptionOptions.Text = 'Edit Value:'
+        CaptionOptions.WordWrap = True
+        Index = 0
+      end
+      object dxLayoutItem2: TdxLayoutItem
+        Parent = dxLayoutGroup3
+        CaptionOptions.Text = 'Close Glyph Position'
+        Control = cbCloseGlyphPosition
+        ControlOptions.OriginalHeight = 25
+        ControlOptions.OriginalWidth = 121
+        ControlOptions.ShowBorder = False
+        Index = 1
+      end
+      object dxLayoutEmptySpaceItem5: TdxLayoutEmptySpaceItem
+        Parent = dxLayoutGroup3
+        SizeOptions.Height = 10
+        SizeOptions.Width = 10
+        CaptionOptions.Text = 'Empty Space Item'
+        Index = 0
+      end
+      object dxLayoutItem3: TdxLayoutItem
+        Parent = dxLayoutGroup3
+        CaptionOptions.Text = 'Glyph Position'
+        Control = cbGlyphPosition
+        ControlOptions.OriginalHeight = 25
+        ControlOptions.OriginalWidth = 121
+        ControlOptions.ShowBorder = False
+        Index = 2
+      end
+      object dxLayoutItem4: TdxLayoutItem
+        Parent = dxLayoutGroup3
+        CaptionOptions.Text = 'Edit Value Delimiter'
+        Control = teEditValueDelimiter
+        ControlOptions.OriginalHeight = 25
+        ControlOptions.OriginalWidth = 121
+        ControlOptions.ShowBorder = False
+        Index = 3
+      end
+      object dxLayoutItem5: TdxLayoutItem
+        Parent = dxLayoutGroup3
+        CaptionOptions.Text = 'Input Delimiters'
+        Control = teInputDelimiters
+        ControlOptions.OriginalHeight = 25
+        ControlOptions.OriginalWidth = 121
+        ControlOptions.ShowBorder = False
+        Index = 4
+      end
+      object dxLayoutItem6: TdxLayoutItem
+        Parent = dxLayoutGroup3
+        CaptionOptions.Text = 'Max Line Count'
+        Control = seMaxLineCount
+        ControlOptions.OriginalHeight = 25
+        ControlOptions.OriginalWidth = 121
+        ControlOptions.ShowBorder = False
+        Index = 5
+      end
+      object dxLayoutItem7: TdxLayoutItem
+        Parent = dxLayoutGroup3
+        AlignHorz = ahClient
+        AlignVert = avTop
+        CaptionOptions.Visible = False
+        Control = cbReadOnly
+        ControlOptions.OriginalHeight = 25
+        ControlOptions.OriginalWidth = 74
+        ControlOptions.ShowBorder = False
+        Index = 6
+      end
+      object dxLayoutItem8: TdxLayoutItem
+        Parent = dxLayoutGroup3
+        AlignHorz = ahClient
+        AlignVert = avTop
+        CaptionOptions.Visible = False
+        Control = cbAllowCustomTokens
+        ControlOptions.OriginalHeight = 25
+        ControlOptions.OriginalWidth = 125
+        ControlOptions.ShowBorder = False
+        Index = 7
+      end
+      object dxLayoutItem9: TdxLayoutItem
+        Parent = dxLayoutGroup3
+        CaptionOptions.Visible = False
+        Control = cbConfirmTokenDeletion
+        ControlOptions.OriginalHeight = 25
+        ControlOptions.OriginalWidth = 135
+        ControlOptions.ShowBorder = False
+        Index = 8
+      end
+      object dxLayoutEmptySpaceItem6: TdxLayoutEmptySpaceItem
+        Parent = dxLayoutGroup3
+        SizeOptions.Height = 10
+        SizeOptions.Width = 10
+        CaptionOptions.Text = 'Empty Space Item'
+        Index = 11
+      end
+      object dxLayoutItem11: TdxLayoutItem
+        Parent = dxLayoutGroup3
+        CaptionOptions.Text = 'cxCheckBox1'
+        CaptionOptions.Visible = False
+        Control = cbPostOnFocusLeave
+        ControlOptions.OriginalHeight = 25
+        ControlOptions.OriginalWidth = 85
+        ControlOptions.ShowBorder = False
+        Index = 9
+      end
+      object chgbLookup: TdxLayoutGroup
+        Parent = dxLayoutGroup3
+        CaptionOptions.Text = 'Lookup'
+        ButtonOptions.Alignment = gbaLeft
+        ButtonOptions.CheckBox.Visible = True
+        ItemIndex = 4
+        OnCheckBoxStateChanged = chgbLookupPropertiesEditValueChanged
+        Index = 10
+      end
+      object liseLookupDropDownRows: TdxLayoutItem
+        Parent = chgbLookup
+        CaptionOptions.Text = 'Drop Down Row Count'
+        Control = seLookupDropDownRows
+        ControlOptions.OriginalHeight = 23
+        ControlOptions.OriginalWidth = 121
+        ControlOptions.ShowBorder = False
+        Index = 0
+      end
+      object licbLookupFilterMode: TdxLayoutItem
+        Parent = chgbLookup
+        CaptionOptions.Text = 'Filter Mode'
+        Control = cbLookupFilterMode
+        ControlOptions.OriginalHeight = 23
+        ControlOptions.OriginalWidth = 121
+        ControlOptions.ShowBorder = False
+        Index = 1
+      end
+      object liLookupFilterSources: TdxLayoutItem
+        Parent = chgbLookup
+        CaptionOptions.Text = 'Filter Sources'
+        Control = chcbLookupFilterSources
+        ControlOptions.OriginalHeight = 23
+        ControlOptions.OriginalWidth = 121
+        ControlOptions.ShowBorder = False
+        Index = 2
+      end
+      object licbDisplayMask: TdxLayoutItem
+        Parent = chgbLookup
+        CaptionOptions.Text = 'Display Mask'
+        Control = cbDisplayMask
+        ControlOptions.OriginalHeight = 23
+        ControlOptions.OriginalWidth = 121
+        ControlOptions.ShowBorder = False
+        Index = 3
+      end
+      object licbLookupSorted: TdxLayoutItem
+        Parent = chgbLookup
+        CaptionOptions.Visible = False
+        Control = cbLookupSorted
+        ControlOptions.OriginalHeight = 21
+        ControlOptions.OriginalWidth = 50
+        ControlOptions.ShowBorder = False
+        Index = 4
+      end
     end
   end
   inherited ActionList1: TActionList
@@ -502,7 +462,7 @@ inherited frmTokenEdit: TfrmTokenEdit
     Left = 208
     Top = 40
     Bitmap = {
-      494C010104000800040010001000FFFFFFFF2100FFFFFFFFFFFFFFFF424D3600
+      494C010104000800040010001000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -770,7 +730,8 @@ inherited frmTokenEdit: TfrmTokenEdit
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000}
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000}
     DesignInfo = 2621648
     ImageInfo = <
       item

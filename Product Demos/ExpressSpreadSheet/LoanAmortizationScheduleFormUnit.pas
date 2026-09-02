@@ -15,7 +15,9 @@ uses
   dxLayoutControlAdapters, Vcl.StdCtrls, cxTextEdit, Vcl.Menus, cxButtons, cxMaskEdit, cxDropDownEdit, cxMemo, dxHashUtils,
   dxCore, dxCoreClasses, dxSpreadSheetCoreHistory, dxSpreadSheetConditionalFormatting,
   dxSpreadSheetConditionalFormattingRules, dxSpreadSheetPrinting, cxClasses, dxSpreadSheetContainers,
-  dxSpreadSheetHyperlinks, dxSpreadSheetUtils, Vcl.ExtCtrls, dxSpreadSheetStyles;
+  dxSpreadSheetHyperlinks, dxSpreadSheetUtils, Vcl.ExtCtrls, dxSpreadSheetStyles, dxSpreadSheetCoreFormulas,
+  dxSpreadSheetCoreStyles, dxSpreadSheetCoreStrs, dxSpreadSheetFormattedTextUtils, Vcl.ExtActns, System.Actions,
+  Vcl.ActnList, Vcl.StdActns, cxSplitter, dxSpreadSheetFormulaBar, cxTrackBar, dxZoomTrackBar;
 
 type
   TfrmLoanAmortizationSchedule = class(TdxSpreadSheetDemoUnitForm)

@@ -13,10 +13,8 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
   Font.Name = 'Tahoma'
   Font.Style = []
   FormStyle = fsStayOnTop
-  OldCreateOrder = False
   Position = poScreenCenter
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object dxLayoutControl1: TdxLayoutControl
     Left = 0
@@ -39,7 +37,6 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
         item
           Caption.Text = 'Band + 1'
         end>
-      Navigator.Buttons.CustomButtons = <>
       OptionsBehavior.ImmediateEditor = False
       OptionsBehavior.DragExpand = False
       OptionsBehavior.MultiSort = False
@@ -63,20 +60,18 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
       ScrollbarAnnotations.CustomAnnotations = <>
       TabOrder = 0
       OnSelectionChanged = tlCustomDrawItemsSelectionChanged
-      object tlCustomDrawItemscxTreeListColumn1: TcxTreeListColumn
+      object clnCustomDrawItemColumn1: TcxTreeListColumn
         Caption.Text = 'Draw Item'
         Options.Sorting = False
         Width = 127
         Position.ColIndex = 0
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
     end
     object rbBackGroundImage: TcxRadioButton
-      Left = 154
-      Top = 41
+      Left = 157
+      Top = 28
       Caption = '&Background Image'
       Checked = True
       Color = 15451300
@@ -89,10 +84,10 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
     end
     object rbGradient: TcxRadioButton
       Tag = 1
-      Left = 154
-      Top = 66
+      Left = 157
+      Top = 51
       Caption = '&Gradient'
-      Color = 16053234
+      Color = clBtnFace
       ParentColor = False
       TabOrder = 2
       OnClick = rbRadioButtonClick
@@ -100,12 +95,12 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
       ParentBackground = False
       Transparent = True
     end
-    object rfaultDrawing: TcxRadioButton
+    object rbDefaultDrawing: TcxRadioButton
       Tag = 2
-      Left = 154
-      Top = 91
+      Left = 157
+      Top = 74
       Caption = '&Default Drawing'
-      Color = 16053234
+      Color = clBtnFace
       ParentColor = False
       TabOrder = 3
       OnClick = rbRadioButtonClick
@@ -113,12 +108,12 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
       ParentBackground = False
       Transparent = True
     end
-    object rpendsOnTheData: TcxRadioButton
+    object rbDependsOnTheData: TcxRadioButton
       Tag = 3
-      Left = 154
-      Top = 116
+      Left = 157
+      Top = 97
       Caption = 'D&epends On the Data'
-      Color = 16053234
+      Color = clBtnFace
       ParentColor = False
       TabOrder = 4
       OnClick = rbRadioButtonClick
@@ -127,8 +122,8 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
       Transparent = True
     end
     object cbGradient: TcxComboBox
-      Left = 341
-      Top = 66
+      Left = 344
+      Top = 55
       Properties.DropDownListStyle = lsFixedList
       Properties.OnChange = cbGradientPropertiesChange
       Style.HotTrack = False
@@ -137,8 +132,8 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
       Width = 120
     end
     object mruBkImage: TcxMRUEdit
-      Left = 341
-      Top = 41
+      Left = 344
+      Top = 28
       Properties.DropDownListStyle = lsFixedList
       Properties.ReadOnly = False
       Properties.OnButtonClick = mruBkImagePropertiesButtonClick
@@ -149,8 +144,8 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
       Width = 120
     end
     object chbOwnerDrawText: TcxCheckBox
-      Left = 154
-      Top = 155
+      Left = 157
+      Top = 135
       Caption = 'Owner &draw text'
       Properties.OnChange = chbOwnerDrawTextPropertiesChange
       Style.HotTrack = False
@@ -159,7 +154,7 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
       Transparent = True
     end
     object btnClose: TcxButton
-      Left = 395
+      Left = 401
       Top = 223
       Width = 75
       Height = 25
@@ -173,7 +168,7 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
     end
     object sbFont: TcxButton
       Left = 329
-      Top = 153
+      Top = 132
       Width = 24
       Height = 23
       OptionsImage.Glyph.SourceDPI = 144
@@ -271,9 +266,9 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
       Parent = dxLayoutGroup4
       CaptionOptions.Text = 'New Item'
       CaptionOptions.Visible = False
-      Control = rfaultDrawing
+      Control = rbDefaultDrawing
       ControlOptions.AutoColor = True
-      ControlOptions.OriginalHeight = 19
+      ControlOptions.OriginalHeight = 17
       ControlOptions.OriginalWidth = 130
       ControlOptions.ShowBorder = False
       Index = 2
@@ -284,7 +279,7 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
       CaptionOptions.Visible = False
       Control = rbGradient
       ControlOptions.AutoColor = True
-      ControlOptions.OriginalHeight = 19
+      ControlOptions.OriginalHeight = 17
       ControlOptions.OriginalWidth = 130
       ControlOptions.ShowBorder = False
       Index = 1
@@ -294,7 +289,7 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
       CaptionOptions.Text = 'New Item'
       CaptionOptions.Visible = False
       Control = rbBackGroundImage
-      ControlOptions.OriginalHeight = 19
+      ControlOptions.OriginalHeight = 17
       ControlOptions.OriginalWidth = 130
       ControlOptions.ShowBorder = False
       Index = 0
@@ -303,9 +298,9 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
       Parent = dxLayoutGroup4
       CaptionOptions.Text = 'New Item'
       CaptionOptions.Visible = False
-      Control = rpendsOnTheData
+      Control = rbDependsOnTheData
       ControlOptions.AutoColor = True
-      ControlOptions.OriginalHeight = 19
+      ControlOptions.OriginalHeight = 17
       ControlOptions.OriginalWidth = 130
       ControlOptions.ShowBorder = False
       Index = 3
@@ -332,7 +327,7 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
       AlignHorz = ahLeft
       CaptionOptions.Text = 'New Item'
       Control = mruBkImage
-      ControlOptions.OriginalHeight = 19
+      ControlOptions.OriginalHeight = 21
       ControlOptions.OriginalWidth = 120
       ControlOptions.ShowBorder = False
       Index = 0
@@ -342,7 +337,7 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
       AlignHorz = ahLeft
       CaptionOptions.Text = 'New Item'
       Control = cbGradient
-      ControlOptions.OriginalHeight = 19
+      ControlOptions.OriginalHeight = 21
       ControlOptions.OriginalWidth = 120
       ControlOptions.ShowBorder = False
       Index = 1
@@ -359,8 +354,8 @@ object CustomDrawDemoEditorForm: TCustomDrawDemoEditorForm
       CaptionOptions.Text = 'New Item'
       CaptionOptions.Visible = False
       Control = chbOwnerDrawText
-      ControlOptions.OriginalHeight = 19
-      ControlOptions.OriginalWidth = 103
+      ControlOptions.OriginalHeight = 17
+      ControlOptions.OriginalWidth = 100
       ControlOptions.ShowBorder = False
       Index = 0
     end

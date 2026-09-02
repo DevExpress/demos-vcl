@@ -74,26 +74,26 @@ type
     FTopLevelNodesCount: Integer;
     FTickCount: Cardinal;
 
-    procedure AdddxTreeViewNodes;
-    procedure AdddxTreeViewChildren(AParent: TdxTreeViewNode);
+    procedure AddDxTreeViewNodes;
+    procedure AddDxTreeViewChildren(AParent: TdxTreeViewNode);
     procedure AddTreeViewNodes;
     procedure AddTreeViewChildren(AParent: TTreeNode);
     procedure BeginTimeCalculation(const AMsg: string);
     procedure ClearTreeViewNodes;
-    procedure CleardxTreeViewNodes;
+    procedure ClearDxTreeViewNodes;
     procedure CollapseTreeViewNodes;
-    procedure CollapsedxTreeViewNodes;
+    procedure CollapseDxTreeViewNodes;
     procedure EndTimeCalculation(const AMsg: string);
     procedure ExpandTreeViewNodes;
-    procedure ExpanddxTreeViewNodes;
+    procedure ExpandDxTreeViewNodes;
     procedure RefreshTreeViewActions;
-    procedure RefreshdxTreeViewActions;
+    procedure RefreshDxTreeViewActions;
     procedure SettingsChanged;
 
     function GetActionDescription(AAction: TdxTreeViewDemoAction): string;
     function GetStartActionDescription(AAction: TdxTreeViewDemoAction): string;
 
-    procedure DodxTreeViewControlOperation(AProc: TProc; AAction: TdxTreeViewDemoAction);
+    procedure DoDxTreeViewControlOperation(AProc: TProc; AAction: TdxTreeViewDemoAction);
     procedure DoTreeViewOperation(AProc: TProc; AAction: TdxTreeViewDemoAction);
     function GetdxTreeViewNodeCountText(AAction: TdxTreeViewDemoAction): string;
     function GetTreeViewNodeCountText(AAction: TdxTreeViewDemoAction): string;
@@ -127,22 +127,22 @@ const
 
 procedure TfrmTreeViewControl.btndxTreeViewAddClick(Sender: TObject);
 begin
-  DodxTreeViewControlOperation(AdddxTreeViewNodes, tdaAdd);
+  DoDxTreeViewControlOperation(AddDxTreeViewNodes, tdaAdd);
 end;
 
 procedure TfrmTreeViewControl.btndxTreeViewClearClick(Sender: TObject);
 begin
-  DodxTreeViewControlOperation(CleardxTreeViewNodes, tdaClear);
+  DoDxTreeViewControlOperation(ClearDxTreeViewNodes, tdaClear);
 end;
 
 procedure TfrmTreeViewControl.btndxTreeViewFullCollapseClick(Sender: TObject);
 begin
-  DodxTreeViewControlOperation(CollapsedxTreeViewNodes, tdaCollapse);
+  DoDxTreeViewControlOperation(CollapseDxTreeViewNodes, tdaCollapse);
 end;
 
 procedure TfrmTreeViewControl.btndxTreeViewFullExpandClick(Sender: TObject);
 begin
-  DodxTreeViewControlOperation(ExpanddxTreeViewNodes, tdaExpand);
+  DoDxTreeViewControlOperation(ExpandDxTreeViewNodes, tdaExpand);
 end;
 
 procedure TfrmTreeViewControl.btnTreeViewAddClick(Sender: TObject);
@@ -170,7 +170,7 @@ begin
   inherited Create(AOwner);
   SettingsChanged;
   RefreshTreeViewActions;
-  RefreshdxTreeViewActions;
+  RefreshDxTreeViewActions;
 end;
 
 function TfrmTreeViewControl.GetDescription: string;
@@ -193,7 +193,7 @@ begin
   mLog.Lines.Clear;
 end;
 
-procedure TfrmTreeViewControl.AdddxTreeViewNodes;
+procedure TfrmTreeViewControl.AddDxTreeViewNodes;
 var
   I: Integer;
   ANode: TdxTreeViewNode;
@@ -201,11 +201,11 @@ begin
   for I := 0 to FTopLevelNodesCount - 1 do
   begin
     ANode := dxNewTreeView.Items.Add(nil, Format('%d', [I]));
-    AdddxTreeViewChildren(ANode);
+    AddDxTreeViewChildren(ANode);
   end;
 end;
 
-procedure TfrmTreeViewControl.AdddxTreeViewChildren(AParent: TdxTreeViewNode);
+procedure TfrmTreeViewControl.AddDxTreeViewChildren(AParent: TdxTreeViewNode);
 var
   I: Integer;
   ANode: TdxTreeViewNode;
@@ -215,7 +215,7 @@ begin
   for I := 0 to seChildrenCount.Value - 1 do
   begin
     ANode := dxNewTreeView.Items.AddChild(AParent, Format('%s%d', [AParent.Caption, I]));
-    AdddxTreeViewChildren(ANode);
+    AddDxTreeViewChildren(ANode);
   end;
 end;
 
@@ -257,7 +257,7 @@ begin
   TreeView.Items.Clear;
 end;
 
-procedure TfrmTreeViewControl.CleardxTreeViewNodes;
+procedure TfrmTreeViewControl.ClearDxTreeViewNodes;
 begin
   dxNewTreeView.Root.Clear;
 end;
@@ -267,12 +267,12 @@ begin
   TreeView.FullCollapse;
 end;
 
-procedure TfrmTreeViewControl.CollapsedxTreeViewNodes;
+procedure TfrmTreeViewControl.CollapseDxTreeViewNodes;
 begin
   dxNewTreeView.FullCollapse;
 end;
 
-procedure TfrmTreeViewControl.DodxTreeViewControlOperation(AProc: TProc; AAction: TdxTreeViewDemoAction);
+procedure TfrmTreeViewControl.DoDxTreeViewControlOperation(AProc: TProc; AAction: TdxTreeViewDemoAction);
 var
   AEndDescription: string;
 begin
@@ -285,7 +285,7 @@ begin
     dxNewTreeView.EndUpdate;
     dxNewTreeView.Update;
     EndTimeCalculation(Format('%s TdxTreeViewControl', [AEndDescription]));
-    RefreshdxTreeViewActions;
+    RefreshDxTreeViewActions;
   end;
 end;
 
@@ -316,7 +316,7 @@ begin
   TreeView.FullExpand;
 end;
 
-procedure TfrmTreeViewControl.ExpanddxTreeViewNodes;
+procedure TfrmTreeViewControl.ExpandDxTreeViewNodes;
 begin
   dxNewTreeView.FullExpand;
 end;
@@ -361,7 +361,7 @@ begin
   liTreeViewNodeCount.CaptionOptions.Text := Format(SNodesCount, [GetTreeViewNodeCountText(tdaClear)]);
 end;
 
-procedure TfrmTreeViewControl.RefreshdxTreeViewActions;
+procedure TfrmTreeViewControl.RefreshDxTreeViewActions;
 begin
   lidxTreeViewClear.Enabled := dxNewTreeView.Root.First <> nil;
   lidxTreeViewExpand.Enabled := lidxTreeViewClear.Enabled;

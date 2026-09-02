@@ -161,7 +161,7 @@ inherited frmWeatherForecast: TfrmWeatherForecast
           RadiusFactor = 1.000000000000000000
           ValueEnd = 100.000000000000000000
         end
-        object gcsWeatherMowcowHumidityRange: TdxGaugeCircularScaleRange
+        object gcsWeatherMoscowHumidityRange: TdxGaugeCircularScaleRange
           Color = -6776680
           RadiusFactor = 1.000000000000000000
           LinkedWithScaleValue = rlsvValueEnd

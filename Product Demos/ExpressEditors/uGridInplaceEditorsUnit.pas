@@ -182,7 +182,7 @@ begin
   FValues[7] := Date;
 //EditRepositoryExtLookupComboBoxItem: TcxEditRepositoryExtLookupComboBoxItem;
   FNames[8] := 'Extended Lookup Editor';
-  FValues[8] := dmmain.cdsDXCustomers.FindField('ID').AsInteger;
+  FValues[8] := dmMain.cdsDXCustomers.FindField('ID').AsInteger;
 //  EditRepositoryFontNameComboBox: TcxEditRepositoryFontNameComboBox;
   FNames[9] := 'Font Editor';
   FValues[9] := 'Arial';
@@ -191,13 +191,13 @@ begin
   FValues[10] := 'http://www.devexpress.com';
 //EditRepositoryImageItem: TcxEditRepositoryImageItem;
   FNames[11] := 'Image Editor';
-  FValues[11] := dmmain.cdsFoodsCategories.FindField('Picture').Value;
+  FValues[11] := dmMain.cdsFoodsCategories.FindField('Picture').Value;
 //EditRepositoryImageComboBoxItem: TcxEditRepositoryImageComboBoxItem;
   FNames[12] := 'Image Combo Box Editor';
   FValues[12] := 2;
 //EditRepositoryLookupComboBoxItem: TcxEditRepositoryLookupComboBoxItem;
   FNames[13] := 'Lookup Editor';
-  FValues[13] := dmmain.cdsDXProducts.FindField('ID').AsInteger;
+  FValues[13] := dmMain.cdsDXProducts.FindField('ID').AsInteger;
 //EditRepositoryMaskItem: TcxEditRepositoryMaskItem;
   FNames[14] := 'Mask Editor';
   FValues[14] := '(234)897-235';

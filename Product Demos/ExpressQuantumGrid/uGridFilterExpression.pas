@@ -27,7 +27,7 @@ type
     BandedTableViewBodyStyleID: TcxGridDBBandedColumn;
     BandedTableViewSalesDate: TcxGridDBBandedColumn;
     BandedTableViewSalesPrice: TcxGridDBBandedColumn;
-    BandedTableViewDeliveriFrom: TcxGridDBBandedColumn;
+    BandedTableViewDeliveryFrom: TcxGridDBBandedColumn;
     BandedTableViewDeliveryTo: TcxGridDBBandedColumn;
     BandedTableViewDeliveryDate: TcxGridDBBandedColumn;
     BandedTableViewDeliveryComplete: TcxGridDBBandedColumn;
@@ -77,9 +77,9 @@ begin
   ADisplayValue := ADisplayValue + ';Boston';
   VarListArrayAddValue(AValue, 'Buffalo');
   ADisplayValue := ADisplayValue + ';Buffalo';
-  BandedTableView.DataController.Filter.Root.AddItem(BandedTableViewDeliveriFrom, foInList, AValue, ADisplayValue);
+  BandedTableView.DataController.Filter.Root.AddItem(BandedTableViewDeliveryFrom, foInList, AValue, ADisplayValue);
   AExpression := '[' + BandedTableViewDeliveryTo.Caption + ']';
-  BandedTableView.DataController.Filter.Root.AddExpressionItem(BandedTableViewDeliveriFrom, foNotEqual, AExpression, AExpression);
+  BandedTableView.DataController.Filter.Root.AddExpressionItem(BandedTableViewDeliveryFrom, foNotEqual, AExpression, AExpression);
   BandedTableView.DataController.Filter.Active := True;
 end;
 

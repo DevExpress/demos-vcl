@@ -14,7 +14,8 @@ uses
   dxPSEdgePatterns, dxPSPDFExportCore, dxPSPDFExport, cxDrawTextUtils,
   dxPSPrVwStd, dxPSPrVwAdv, dxPSPrVwRibbon, dxPScxPageControlProducer,
   dxPSRichEditControlLnk, dxPScxEditorProducers, dxPScxExtEditorProducers,
-  dxPSCore, dxRichEdit.NativeApi, MidasLib;
+  dxPSCore, dxRichEdit.NativeApi, MidasLib, dxRichEdit.Control.SpellChecker, dxRichEdit.Dialogs.EventArgs,
+  dxRichEdit.Control.Core;
 
 type
   TfrmRichEditMasterDetailMailMerge = class(TfrmCustomFrame)
@@ -38,7 +39,7 @@ type
     cdsDetail: TClientDataSet;
     cdsMaster: TClientDataSet;
     cdsTemplate: TClientDataSet;
-    cdsTemplatefake: TIntegerField;
+    cdsTemplateFake: TIntegerField;
     dsDetail: TDataSource;
     dsMaster: TDataSource;
     dsTemplate: TDataSource;

@@ -3,8 +3,8 @@ object ServerModeConnectionForm: TServerModeConnectionForm
   Top = 121
   BorderStyle = bsDialog
   Caption = 'ExpressQuantumGrid Server Mode Demo'
-  ClientHeight = 650
-  ClientWidth = 454
+  ClientHeight = 648
+  ClientWidth = 446
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,69 +17,66 @@ object ServerModeConnectionForm: TServerModeConnectionForm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 454
-    Height = 650
+    Width = 446
+    Height = 648
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 450
-    ExplicitHeight = 536
     DesignSize = (
-      454
-      650)
+      446
+      648)
     object lbSQLServer: TcxLabel
       Left = 8
-      Top = 378
+      Top = 376
       Anchors = [akLeft, akBottom]
       Caption = 'SQL Server:'
+      TabOrder = 0
       Transparent = True
-      ExplicitTop = 311
     end
     object lbDatabase: TcxLabel
       Left = 8
-      Top = 407
+      Top = 405
       Anchors = [akLeft, akBottom]
       Caption = 'Database:'
+      TabOrder = 1
       Transparent = True
-      ExplicitTop = 340
     end
     object lbLoginName: TcxLabel
       Left = 8
-      Top = 564
+      Top = 562
       Anchors = [akLeft, akBottom]
       Caption = 'Login name:'
+      TabOrder = 2
       Transparent = True
-      ExplicitTop = 450
     end
     object lbPassword: TcxLabel
       Left = 8
-      Top = 590
+      Top = 588
       Anchors = [akLeft, akBottom]
       Caption = 'Password:'
+      TabOrder = 3
       Transparent = True
-      ExplicitTop = 476
     end
     object lbRecordCount: TcxLabel
       Left = 279
-      Top = 534
+      Top = 532
       Anchors = [akLeft, akBottom]
       Caption = 'Record count:'
+      TabOrder = 4
       Transparent = True
-      ExplicitTop = 420
     end
     object edSQLServer: TcxTextEdit
       Left = 68
-      Top = 377
+      Top = 375
       Anchors = [akLeft, akBottom]
       Properties.OnChange = edSQLServerPropertiesChange
       TabOrder = 5
       Text = 'localhost'
-      ExplicitTop = 310
       Width = 157
     end
     object rgConnectUsing: TcxRadioGroup
       Left = 8
-      Top = 475
+      Top = 473
       Anchors = [akLeft, akBottom]
       Caption = ' Connect using: '
       Properties.Items = <
@@ -92,35 +89,32 @@ object ServerModeConnectionForm: TServerModeConnectionForm
       Properties.OnChange = rgConnectUsingPropertiesChange
       ItemIndex = 0
       TabOrder = 6
-      ExplicitTop = 408
       Height = 79
       Width = 217
     end
     object edLoginName: TcxTextEdit
       Left = 74
-      Top = 563
+      Top = 561
       Anchors = [akLeft, akBottom]
       Enabled = False
       Properties.OnChange = edLoginNamePropertiesChange
       TabOrder = 7
       Text = 'sa'
-      ExplicitTop = 449
       Width = 152
     end
     object edPassword: TcxTextEdit
       Left = 74
-      Top = 590
+      Top = 588
       Anchors = [akLeft, akBottom]
       Enabled = False
       Properties.EchoMode = eemPassword
       Properties.OnChange = edPasswordPropertiesChange
       TabOrder = 8
-      ExplicitTop = 476
       Width = 152
     end
     object btAddRecordsAndStartDemo: TcxButton
       Left = 279
-      Top = 563
+      Top = 561
       Width = 167
       Height = 21
       Anchors = [akLeft, akBottom]
@@ -128,11 +122,10 @@ object ServerModeConnectionForm: TServerModeConnectionForm
       Enabled = False
       TabOrder = 9
       OnClick = btAddRecordsAndStartDemoClick
-      ExplicitTop = 449
     end
     object btStartDemo: TcxButton
       Left = 279
-      Top = 590
+      Top = 588
       Width = 167
       Height = 21
       Anchors = [akLeft, akBottom]
@@ -140,11 +133,10 @@ object ServerModeConnectionForm: TServerModeConnectionForm
       Enabled = False
       TabOrder = 10
       OnClick = btStartDemoClick
-      ExplicitTop = 476
     end
     object seCount: TcxSpinEdit
       Left = 351
-      Top = 533
+      Top = 531
       Anchors = [akLeft, akBottom]
       Properties.Alignment.Horz = taRightJustify
       Properties.DisplayFormat = '#,###'
@@ -153,22 +145,19 @@ object ServerModeConnectionForm: TServerModeConnectionForm
       Properties.MinValue = 50000.000000000000000000
       TabOrder = 11
       Value = 100000
-      ExplicitTop = 419
       Width = 95
     end
     object ProgressBar: TcxProgressBar
       Left = 7
-      Top = 624
+      Top = 622
       TabStop = False
       Anchors = [akLeft, akRight, akBottom]
       AutoSize = False
       Properties.PeakValue = 50.000000000000000000
       Properties.ShowTextStyle = cxtsText
       TabOrder = 12
-      ExplicitTop = 510
-      ExplicitWidth = 432
       Height = 10
-      Width = 436
+      Width = 420
     end
     object cxMemo1: TcxMemo
       Left = 7
@@ -197,52 +186,48 @@ object ServerModeConnectionForm: TServerModeConnectionForm
       Properties.ReadOnly = True
       Properties.WordWrap = False
       TabOrder = 13
-      ExplicitHeight = 185
-      Height = 252
-      Width = 436
+      Height = 250
+      Width = 420
     end
     object lbTableName: TcxLabel
       Left = 8
-      Top = 435
+      Top = 433
       Anchors = [akLeft, akBottom]
       Caption = 'Table:'
+      TabOrder = 14
       Transparent = True
-      ExplicitTop = 368
     end
     object edDatabase: TcxTextEdit
       Left = 68
-      Top = 406
+      Top = 404
       Anchors = [akLeft, akBottom]
       Enabled = False
       TabOrder = 15
       Text = 'ServerModeGridDemo'
-      ExplicitTop = 339
       Width = 157
     end
     object edTableName: TcxTextEdit
       Left = 68
-      Top = 435
+      Top = 433
       Anchors = [akLeft, akBottom]
       Enabled = False
       TabOrder = 16
       Text = 'ServerModeGridTableDemo'
-      ExplicitTop = 368
       Width = 157
     end
     object btTestConnection: TcxButton
       Left = 279
-      Top = 500
+      Top = 498
       Width = 167
       Height = 23
       Anchors = [akLeft, akBottom]
       Caption = 'Test connection'
       TabOrder = 17
       OnClick = btTestConnectionClick
-      ExplicitTop = 386
     end
     object lbCurrentCount: TcxLabel
       Left = 279
-      Top = 292
+      Top = 290
       Anchors = [akLeft, akBottom]
       AutoSize = False
       ParentFont = False
@@ -254,15 +239,15 @@ object ServerModeConnectionForm: TServerModeConnectionForm
       Style.IsFontAssigned = True
       Properties.Alignment.Vert = taVCenter
       Properties.WordWrap = True
+      TabOrder = 18
       Transparent = True
-      ExplicitTop = 225
       Height = 164
       Width = 167
-      AnchorY = 374
+      AnchorY = 372
     end
     object rgConnectionObject: TcxRadioGroup
       Left = 8
-      Top = 264
+      Top = 262
       Anchors = [akLeft, akBottom]
       Caption = 'Connection object: '
       Properties.Items = <
@@ -278,7 +263,6 @@ object ServerModeConnectionForm: TServerModeConnectionForm
       Properties.OnChange = rgConnectionObjectPropertiesChange
       ItemIndex = 0
       TabOrder = 19
-      ExplicitTop = 197
       Height = 104
       Width = 217
     end

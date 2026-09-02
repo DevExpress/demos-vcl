@@ -5,11 +5,12 @@ unit NotepadMainForm;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ImgList, Vcl.ActnList, cxGraphics,
-  dxRibbonForm, cxLookAndFeels, dxBar, cxControls, cxLookAndFeelPainters, dxStatusBar, dxRibbonStatusBar, dxTabbedMDI,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls,
+  Vcl.Forms, Vcl.Dialogs, Vcl.ImgList, Vcl.ActnList, System.Actions, System.ImageList, Vcl.ComCtrls,
+  cxGraphics,  dxRibbonForm, cxLookAndFeels, dxBar, cxControls, cxLookAndFeelPainters, dxStatusBar, dxRibbonStatusBar,
   cxRichEdit, NotepadChildForm, dxBarExtItems, cxFontNameComboBox, cxBarEditItem, cxDropDownEdit, dxRibbonGallery,
   cxPC, dxSkinChooserGallery, System.IniFiles, cxClasses, dxColorDialog, dxDemoUtils, dxBarBuiltInMenu, cxImageList,
-  dxSkinsForm, dxShellDialogs, dxMessageDialog, dxCore;
+  dxSkinsForm, dxShellDialogs, dxMessageDialog, dxCore, dxTabbedMDI;
 
 type
 
@@ -132,7 +133,7 @@ type
 implementation
 
 uses
-  dxSkinsdxBarPainter, dxSkinscxPCPainter, Winapi.RichEdit, Vcl.ComCtrls, dxCoreGraphics, dxSkinInfo, dxSkinsDefaultPainters;
+  dxSkinsdxBarPainter, dxSkinscxPCPainter, Winapi.RichEdit, dxCoreGraphics, dxSkinInfo, dxSkinsDefaultPainters;
 
 {$R *.dfm}
 
@@ -477,6 +478,7 @@ end;
 
 procedure TfrmNotepadMain.FormCreate(Sender: TObject);
 begin
+  dxBarManager.Style := bmsUseLookAndFeel;
   FRecentDocumentsController := CreateRecentDocumentsController;
   FRecentDocumentsController.LoadFromIniFile(GetRecentDocumentsFileName);
   bliFormCorners.ItemIndex := Ord(SkinController.FormCorners);

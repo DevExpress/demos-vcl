@@ -7,7 +7,7 @@ uses
   Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters,
   cxContainer, cxEdit, Vcl.StdCtrls, Vcl.ExtCtrls, cxGroupBox, dxMapControlTypes,
   dxMapControl, cxClasses, dxBar, dxRibbon, dxBarBuiltInMenu, dxMapControlViewInfo, dxLayoutContainer, dxLayoutControl,
-  dxLayoutLookAndFeels, dxDemoUtils, dxLayoutControlAdapters, dxForms;
+  dxLayoutLookAndFeels, dxDemoUtils, dxLayoutControlAdapters, dxForms, System.Net.URLClient;
 
 type
   TdxMapControlDemoUnitForm = class(TdxForm)

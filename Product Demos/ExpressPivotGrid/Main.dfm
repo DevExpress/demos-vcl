@@ -3,9 +3,8 @@ inherited frmMain: TfrmMain
   ClientHeight = 594
   ClientWidth = 961
   OnShortCut = FormShortCut
-  ExplicitWidth = 977
-  ExplicitHeight = 633
-  PixelsPerInch = 96
+  ExplicitWidth = 973
+  ExplicitHeight = 632
   TextHeight = 13
   inherited dxRibbon1: TdxRibbon
     Width = 961
@@ -21,19 +20,30 @@ inherited frmMain: TfrmMain
     Width = 961
     Height = 439
     ExplicitWidth = 961
-    ExplicitHeight = 439
+    ExplicitHeight = 470
     inherited plClient: TdxPanel
       Width = 752
       Height = 439
       ExplicitWidth = 752
       ExplicitHeight = 439
+      inherited dxRibbonBackstageView1: TdxRibbonBackstageView
+        inherited bvtExport: TdxRibbonBackstageViewTabSheet
+          inherited gbExportItems: TcxGroupBox
+            inherited gbExportPane: TcxGroupBox
+              inherited bvgcExport: TdxRibbonBackstageViewGalleryControl
+                ExplicitWidth = 304
+              end
+            end
+          end
+        end
+      end
     end
     inherited NavBarSite: TPanel
       Height = 439
-      ExplicitHeight = 470
+      ExplicitHeight = 438
       inherited NavBar: TdxNavBar
         Height = 439
-        ExplicitHeight = 470
+        ExplicitHeight = 438
         object nbgHighlighted: TdxNavBarGroup [0]
           Caption = 'New && Highlighted'
           LargeImageIndex = 0
@@ -342,8 +352,8 @@ inherited frmMain: TfrmMain
         object nbiStyles: TdxNavBarItem [21]
           Tag = 14
           Caption = 'Styles'
-          Visible = False
           SmallImageIndex = 16
+          Visible = False
           CustomStyles.Item = nbsItemStyle
           CustomStyles.ItemDisabled = nbsItemStyle
           CustomStyles.ItemHotTracked = nbsItemStyle
@@ -502,9 +512,9 @@ inherited frmMain: TfrmMain
           CustomStyles.ItemPressed = nbsItemStyle
         end
         inherited nbcSearch: TdxNavBarGroupControl
-          Top = 1274
+          Top = 1101
           Width = 188
-          ExplicitTop = 1274
+          ExplicitTop = 1101
           ExplicitWidth = 188
           GroupIndex = 8
           inherited dxLayoutControl1: TdxLayoutControl
@@ -534,6 +544,7 @@ inherited frmMain: TfrmMain
     inherited barInfo: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
+      FloatClientHeight = 24
     end
     inherited barOptions: TdxBar
       DockedDockControl = nil
@@ -543,20 +554,21 @@ inherited frmMain: TfrmMain
     inherited barAppearance: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
+      FloatClientHeight = 24
     end
     inherited barView: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
-      FloatClientWidth = 120
-      FloatClientHeight = 187
+      FloatClientWidth = 121
+      FloatClientHeight = 188
     end
     inherited barNavigation: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
       FloatLeft = 1127
       FloatTop = 238
-      FloatClientWidth = 81
-      FloatClientHeight = 50
+      FloatClientWidth = 82
+      FloatClientHeight = 53
     end
     inherited biExportToHTML: TdxBarLargeButton
       ImageIndex = 103
@@ -1023,6 +1035,9 @@ inherited frmMain: TfrmMain
     inherited biFullWindowMode: TdxBarLargeButton
       ImageIndex = -1
     end
+    inherited BLightStyle: TdxBarLargeButton
+      ImageIndex = 106
+    end
   end
   inherited dxComponentPrinter: TdxComponentPrinter
     CurrentLink = dxComponentPrinterPivotReportLink
@@ -1047,13 +1062,16 @@ inherited frmMain: TfrmMain
   inherited RibbonApplicationMenu: TdxBarApplicationMenu
     PixelsPerInch = 96
   end
+  inherited dxPSEngineController1: TdxPSEngineController
+    Active = True
+  end
   inherited ilBarSmall: TcxImageList
     FormatVersion = 1
   end
   inherited ilBarLarge: TcxImageList
     FormatVersion = 1
     Bitmap = {
-      494C010130003800340020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010130003800040020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000080000000A001000001002000000000000040
       0300000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

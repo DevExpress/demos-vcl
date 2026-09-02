@@ -5,7 +5,7 @@ inherited frmMRUEdit: TfrmMRUEdit
       Top = 140
       Properties.LookupItems.Strings = (
         'San Salvador'
-        'Bagota'
+        'Bogota'
         'Ottawa'
         'Brasilia'
         'Buenos Aires')

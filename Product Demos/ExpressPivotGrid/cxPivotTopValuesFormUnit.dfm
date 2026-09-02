@@ -119,7 +119,7 @@ inherited frmTopValues: TfrmTopValues
     inherited liDescription: TdxLayoutLabeledItem
       CaptionOptions.Text = 
         'This example demonstrates the PivotGrid control'#39's Top X Values f' +
-        'eature. You can specify the number of the higest or lowest value' +
+        'eature. You can specify the number of the highest or lowest value' +
         's you want to use to calculate summaries for any column field or' +
         ' row field. In this example, the PivotGrid control displays the ' +
         'specified number of values for the selected field. Note that the' +

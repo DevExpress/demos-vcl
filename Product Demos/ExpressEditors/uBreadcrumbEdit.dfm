@@ -313,7 +313,7 @@ inherited frmBreadcrumbEdit: TfrmBreadcrumbEdit
     object acRecentsAutoPopulate: TAction
       Tag = 1
       AutoCheck = True
-      Caption = 'Autopopulate Recent Paths'
+      Caption = 'AutoPopulate Recent Paths'
       Checked = True
       OnExecute = cbCancelEffectPropertiesChange
     end

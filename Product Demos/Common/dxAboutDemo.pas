@@ -5,9 +5,6 @@ unit dxAboutDemo;
 interface
 
 uses
-{$IFDEF DELPHI16}
-  System.UITypes,
-{$ENDIF}
   System.Types, Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms,
   Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Winapi.ShellAPI, System.StrUtils,
   dxCore, dxGDIPlusClasses, cxGraphics, cxClasses, dxForms, cxControls, cxLookAndFeels, dxBevel,

@@ -21,7 +21,7 @@ type
     cxGrid1TableView1Column1: TcxGridColumn;
     cxGrid1TableView1Column2: TcxGridColumn;
     cxGrid1TableView1Column3: TcxGridColumn;
-    tmRefesh: TTimer;
+    tmRefresh: TTimer;
     cxGroupBox1: TcxGroupBox;
     Image1: TcxImage;
     lbComputerName: TcxLabel;
@@ -29,7 +29,7 @@ type
     pbMemoryUsage: TcxProgressBar;
     lbWindowsInfo: TcxLabel;
     lbProcessorInfo: TcxLabel;
-    procedure tmRefeshTimer(Sender: TObject);
+    procedure tmRefreshTimer(Sender: TObject);
   private
     function GetMachineName: string;
     function GetProcessMemoryUsage(AProcessID: THandle): Cardinal;
@@ -54,7 +54,7 @@ begin
   lbComputerName.Caption := GetMachineName;
   QuerySystemInfo;
   QueryMemoryUsage;
-  tmRefeshTimer(nil);
+  tmRefreshTimer(nil);
 end;
 
 function TfrmSystemInformation.GetMachineName: string;
@@ -86,7 +86,7 @@ begin
   end;
 end;
 
-procedure TfrmSystemInformation.tmRefeshTimer(Sender: TObject);
+procedure TfrmSystemInformation.tmRefreshTimer(Sender: TObject);
 var
   AProcessInfo: TProcessEntry32;
   ARecordIndex: Integer;
@@ -124,25 +124,15 @@ procedure TfrmSystemInformation.QueryMemoryUsage;
 const
   GigaByte = 1024 * 1024 * 1024;
 var
-{$IFDEF DELPHI12}
   AMemStatus: TMemoryStatusEx;
-{$ELSE}
-  AMemStatus: TMemoryStatus;
-{$ENDIF}
 begin
   ZeroMemory(@AMemStatus, SizeOf(AMemStatus));
   AMemStatus.dwLength := SizeOf(AMemStatus);
-{$IFDEF DELPHI12}
   if GlobalMemoryStatusEx(AMemStatus) then
   begin
     pbMemoryUsage.Position := 100 * (AMemStatus.ullTotalPhys - AMemStatus.ullAvailPhys) / AMemStatus.ullTotalPhys;
     pbMemoryUsage.Properties.Text := Format('%0.2f GB Free', [AMemStatus.ullAvailPhys / GigaByte]);
   end;
-{$ELSE}
-  GlobalMemoryStatus(AMemStatus);
-  pbMemoryUsage.Position := 100 * (AMemStatus.dwTotalPhys - AMemStatus.dwAvailPhys) / AMemStatus.dwTotalPhys;
-  pbMemoryUsage.Properties.Text := Format('%0.2f GB Free', [AMemStatus.dwAvailPhys / GigaByte]);
-{$ENDIF}
 end;
 
 procedure TfrmSystemInformation.QuerySystemInfo;

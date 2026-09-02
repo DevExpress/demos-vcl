@@ -25,7 +25,7 @@ uses
   dxLayoutContainer, dxLayoutControl, dxRibbonCustomizationForm, dxScreenTip, dxCustomHint, cxHint, cxImageList, cxImage,
   Vcl.Menus, dxLayoutControlAdapters, Vcl.StdCtrls, cxButtons, dxNavBarStyles, dxGalleryControl,
   dxRibbonBackstageViewGalleryControl, dxBevel, cxGroupBox, dxRibbonBackstageView, System.Actions,
-  dxCore, cxGeometry, dxFramedControl, dxShellDialogs, dxPanel;
+  dxCore, cxGeometry, dxFramedControl, dxShellDialogs, dxPanel, System.ImageList;
 
 type
   TcxPivotGridDemoUnitInfo = class;

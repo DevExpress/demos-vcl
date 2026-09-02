@@ -7,7 +7,6 @@ inherited cxPivotOrderReports: TcxPivotOrderReports
   ClientWidth = 797
   ExplicitWidth = 797
   ExplicitHeight = 427
-  PixelsPerInch = 96
   TextHeight = 13
   inherited lcMain: TdxLayoutControl
     Width = 797

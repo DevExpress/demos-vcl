@@ -1,13 +1,15 @@
 inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
   Caption = 'ExpressBars RibbonNotepadDemo'
-  ClientHeight = 620
-  ClientWidth = 875
+  ClientHeight = 619
+  ClientWidth = 871
+  ExplicitWidth = 887
+  ExplicitHeight = 658
   TextHeight = 13
   object Ribbon: TdxRibbon [0]
     Left = 0
     Top = 0
-    Width = 875
-    Height = 159
+    Width = 871
+    Height = 169
     ApplicationButton.ScreenTip = stAppMenu
     ApplicationButton.Menu = BackstageView
     BackgroundImage.SourceDPI = 96
@@ -201,9 +203,9 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
   end
   object dxStatusBar: TdxRibbonStatusBar [1]
     Left = 0
-    Top = 595
-    Width = 875
-    Height = 25
+    Top = 592
+    Width = 871
+    Height = 27
     AutoSize = True
     Color = clBtnFace
     Panels = <
@@ -244,6 +246,9 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
+    ParentFont = False
+    ExplicitTop = 593
+    ExplicitWidth = 875
   end
   object tbZoom: TdxZoomTrackBar [2]
     Left = 573
@@ -277,7 +282,7 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
     OnPopup = BackstageViewPopup
     OnTabChanged = BackstageViewTabChanged
     object bvtsOpen: TdxRibbonBackstageViewTabSheet
-      Left = 132
+      Left = 146
       Top = 0
       Active = True
       Caption = 'Open'
@@ -295,7 +300,7 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
         TabOrder = 0
         Transparent = True
         Height = 60
-        Width = 709
+        Width = 700
         object lbbvTabCaption2010: TcxLabel
           AlignWithMargins = True
           Left = 42
@@ -314,9 +319,10 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
           Style.Font.Name = 'Tahoma'
           Style.Font.Style = [fsBold]
           Style.IsFontAssigned = True
+          TabOrder = 0
           Transparent = True
           Height = 60
-          Width = 625
+          Width = 616
         end
         object lbbvTabCaption2013: TcxLabel
           AlignWithMargins = True
@@ -336,6 +342,7 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
           Style.Font.Style = []
           Style.TransparentBorder = False
           Style.IsFontAssigned = True
+          TabOrder = 1
           Transparent = True
         end
       end
@@ -355,8 +362,9 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
         StyleDisabled.LookAndFeel.NativeStyle = True
         TabOrder = 1
         Transparent = True
-        Height = 314
-        Width = 625
+        ExplicitHeight = 314
+        Height = 297
+        Width = 616
         object gbLocationsPane: TcxGroupBox
           Left = 0
           Top = 0
@@ -368,14 +376,14 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
           StyleDisabled.LookAndFeel.NativeStyle = True
           TabOrder = 0
           Transparent = True
-          Height = 314
+          Height = 297
           Width = 337
           object dxBevel1: TdxBevel
             AlignWithMargins = True
             Left = 304
             Top = 0
             Width = 1
-            Height = 314
+            Height = 297
             Margins.Left = 0
             Margins.Top = 0
             Margins.Right = 32
@@ -383,12 +391,13 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
             Align = alRight
             AutoSize = True
             Shape = dxbsLineLeft
+            ExplicitHeight = 314
           end
           object bvgcLocations: TdxRibbonBackstageViewGalleryControl
             Left = 0
             Top = 0
             Width = 304
-            Height = 314
+            Height = 297
             Align = alClient
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
@@ -437,16 +446,17 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
         object gbRecentPathsPane: TcxScrollBox
           Left = 337
           Top = 0
-          Width = 288
-          Height = 314
+          Width = 279
+          Height = 297
           Align = alClient
           BorderStyle = cxcbsNone
           TabOrder = 1
           Transparent = True
+          ExplicitHeight = 314
           object bvgcRecentPaths: TdxRibbonBackstageViewGalleryControl
             Left = 0
-            Top = 151
-            Width = 288
+            Top = 159
+            Width = 262
             Height = 63
             Align = alTop
             AutoSizeMode = asAutoHeight
@@ -469,7 +479,7 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
           end
           object gbRecentPathsPaneBottom: TcxGroupBox
             Left = 0
-            Top = 214
+            Top = 222
             Align = alTop
             PanelStyle.Active = True
             Style.BorderStyle = ebsNone
@@ -479,7 +489,7 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
             TabOrder = 1
             Transparent = True
             Height = 95
-            Width = 288
+            Width = 262
             object btnBrowsePath: TcxButton
               Left = 0
               Top = 9
@@ -495,7 +505,7 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
           end
           object gbRecentPathsPaneCurrentFolder: TcxGroupBox
             Left = 0
-            Top = 44
+            Top = 48
             Align = alTop
             PanelStyle.Active = True
             Style.BorderStyle = ebsNone
@@ -504,8 +514,10 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
             StyleDisabled.LookAndFeel.NativeStyle = True
             TabOrder = 2
             Transparent = True
+            ExplicitTop = 37
+            ExplicitWidth = 279
             Height = 85
-            Width = 288
+            Width = 262
             object lbCurrentFolder: TcxLabel
               Left = 0
               Top = 0
@@ -518,13 +530,15 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
               Style.Font.Name = 'Tahoma'
               Style.Font.Style = []
               Style.IsFontAssigned = True
+              TabOrder = 0
               Transparent = True
+              ExplicitWidth = 279
             end
             object bvgcCurrentFolder: TdxRibbonBackstageViewGalleryControl
               Left = 0
-              Top = 22
-              Width = 288
-              Height = 63
+              Top = 26
+              Width = 262
+              Height = 59
               Align = alClient
               BorderStyle = cxcbsNone
               Images = cxLargeImages
@@ -558,11 +572,13 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
             Style.Font.Style = []
             Style.TransparentBorder = True
             Style.IsFontAssigned = True
+            TabOrder = 3
             Transparent = True
+            ExplicitWidth = 279
           end
           object lbRecentFolders: TcxLabel
             Left = 0
-            Top = 129
+            Top = 133
             Align = alTop
             Caption = 'Recent Folders'
             ParentFont = False
@@ -572,18 +588,22 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
             Style.Font.Name = 'Tahoma'
             Style.Font.Style = []
             Style.IsFontAssigned = True
+            TabOrder = 4
             Transparent = True
+            ExplicitTop = 129
+            ExplicitWidth = 279
           end
         end
         object gbRecentDocumentsPane: TcxScrollBox
           Left = 337
           Top = 0
-          Width = 288
-          Height = 314
+          Width = 279
+          Height = 297
           Align = alClient
           BorderStyle = cxcbsNone
           TabOrder = 2
           Transparent = True
+          ExplicitHeight = 314
           object lbRecentDocuments: TcxLabel
             AlignWithMargins = True
             Left = 0
@@ -602,13 +622,14 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
             Style.Font.Style = []
             Style.TransparentBorder = True
             Style.IsFontAssigned = True
+            TabOrder = 0
             Transparent = True
           end
           object bvgcRecentDocuments: TdxRibbonBackstageViewGalleryControl
             Left = 0
-            Top = 44
-            Width = 288
-            Height = 270
+            Top = 48
+            Width = 279
+            Height = 249
             Align = alClient
             BorderStyle = cxcbsNone
             Images = cxLargeImages
@@ -628,14 +649,14 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
       end
     end
     object bvtsSaveAs: TdxRibbonBackstageViewTabSheet
-      Left = 132
+      Left = 146
       Top = 0
       Caption = 'Save As'
       KeyTip = 'S'
       SizeOptions.MinWidth = 700
     end
     object bvtsOptions: TdxRibbonBackstageViewTabSheet
-      Left = 132
+      Left = 146
       Top = 0
       Caption = 'Options'
       KeyTip = 'P'
@@ -655,8 +676,9 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
         StyleDisabled.LookAndFeel.NativeStyle = True
         TabOrder = 0
         Transparent = True
-        Height = 374
-        Width = 625
+        ExplicitHeight = 374
+        Height = 357
+        Width = 616
         object gbUserInterfaceOptions: TcxGroupBox
           AlignWithMargins = True
           Left = 0
@@ -673,12 +695,13 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
           StyleDisabled.LookAndFeel.NativeStyle = True
           TabOrder = 0
           Transparent = True
-          Height = 374
+          ExplicitHeight = 374
+          Height = 357
           Width = 300
           object gbRibbonStyle: TcxGroupBox
             AlignWithMargins = True
             Left = 0
-            Top = 34
+            Top = 38
             Margins.Left = 0
             Margins.Top = 0
             Margins.Right = 0
@@ -691,6 +714,7 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
             StyleDisabled.LookAndFeel.NativeStyle = True
             TabOrder = 0
             Transparent = True
+            ExplicitTop = 31
             Height = 46
             Width = 300
             object lbRibbonStyle: TcxLabel
@@ -711,12 +735,13 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
               Style.Font.Style = []
               Style.TransparentBorder = False
               Style.IsFontAssigned = True
+              TabOrder = 0
               Transparent = True
             end
             object cbRibbonStyle: TcxComboBox
               AlignWithMargins = True
               Left = 0
-              Top = 25
+              Top = 29
               Margins.Left = 0
               Margins.Top = 0
               Margins.Right = 60
@@ -725,13 +750,14 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
               Properties.DropDownListStyle = lsFixedList
               Properties.OnChange = cbRibbonStylePropertiesChange
               TabOrder = 1
+              ExplicitHeight = 21
               Width = 240
             end
           end
           object gbScreenTipStyle: TcxGroupBox
             AlignWithMargins = True
             Left = 0
-            Top = 90
+            Top = 94
             Margins.Left = 0
             Margins.Top = 0
             Margins.Right = 0
@@ -744,6 +770,7 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
             StyleDisabled.LookAndFeel.NativeStyle = True
             TabOrder = 1
             Transparent = True
+            ExplicitTop = 87
             Height = 46
             Width = 300
             object lbScreenTipStyle: TcxLabel
@@ -764,12 +791,13 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
               Style.Font.Style = []
               Style.TransparentBorder = False
               Style.IsFontAssigned = True
+              TabOrder = 0
               Transparent = True
             end
             object cbScreenTipStyle: TcxComboBox
               AlignWithMargins = True
               Left = 0
-              Top = 25
+              Top = 29
               Margins.Left = 0
               Margins.Top = 0
               Margins.Right = 60
@@ -782,6 +810,7 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
                 'Don'#39't show ScreenTips')
               Properties.OnChange = cbScreenTipStylePropertiesChange
               TabOrder = 1
+              ExplicitHeight = 21
               Width = 240
             end
           end
@@ -803,6 +832,7 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
             Style.Font.Style = []
             Style.TransparentBorder = False
             Style.IsFontAssigned = True
+            TabOrder = 2
             Transparent = True
           end
         end
@@ -817,12 +847,13 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
           StyleDisabled.LookAndFeel.NativeStyle = True
           TabOrder = 1
           Transparent = True
-          Height = 374
-          Width = 300
+          ExplicitHeight = 374
+          Height = 357
+          Width = 291
           object gbColorScheme: TcxGroupBox
             AlignWithMargins = True
             Left = 0
-            Top = 34
+            Top = 38
             Margins.Left = 0
             Margins.Top = 0
             Margins.Right = 0
@@ -835,8 +866,9 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
             StyleDisabled.LookAndFeel.NativeStyle = True
             TabOrder = 0
             Transparent = True
+            ExplicitTop = 31
             Height = 46
-            Width = 300
+            Width = 291
             object lbColorScheme: TcxLabel
               AlignWithMargins = True
               Left = 0
@@ -855,12 +887,13 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
               Style.Font.Style = []
               Style.TransparentBorder = False
               Style.IsFontAssigned = True
+              TabOrder = 0
               Transparent = True
             end
             object cbColorScheme: TcxComboBox
               AlignWithMargins = True
               Left = 0
-              Top = 25
+              Top = 29
               Margins.Left = 0
               Margins.Top = 0
               Margins.Right = 60
@@ -869,13 +902,14 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
               Properties.DropDownListStyle = lsFixedList
               Properties.OnChange = cbColorSchemePropertiesChange
               TabOrder = 1
+              ExplicitHeight = 21
               Width = 240
             end
           end
           object gbColorSchemeAccent: TcxGroupBox
             AlignWithMargins = True
             Left = 0
-            Top = 90
+            Top = 94
             Margins.Left = 0
             Margins.Top = 0
             Margins.Right = 0
@@ -888,8 +922,9 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
             StyleDisabled.LookAndFeel.NativeStyle = True
             TabOrder = 1
             Transparent = True
+            ExplicitTop = 87
             Height = 46
-            Width = 300
+            Width = 291
             object lbColorSchemeAccent: TcxLabel
               AlignWithMargins = True
               Left = 0
@@ -908,12 +943,13 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
               Style.Font.Style = []
               Style.TransparentBorder = False
               Style.IsFontAssigned = True
+              TabOrder = 0
               Transparent = True
             end
             object cbColorSchemeAccent: TcxComboBox
               AlignWithMargins = True
               Left = 0
-              Top = 25
+              Top = 29
               Margins.Left = 0
               Margins.Top = 0
               Margins.Right = 60
@@ -922,13 +958,14 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
               Properties.DropDownListStyle = lsFixedList
               Properties.OnChange = cbColorSchemeAccentPropertiesChange
               TabOrder = 1
+              ExplicitHeight = 21
               Width = 240
             end
           end
           object gbRibbonBackgroundImagePane: TcxGroupBox
             AlignWithMargins = True
             Left = 0
-            Top = 146
+            Top = 150
             Margins.Left = 0
             Margins.Top = 0
             Margins.Right = 0
@@ -941,8 +978,9 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
             StyleDisabled.LookAndFeel.NativeStyle = True
             TabOrder = 2
             Transparent = True
+            ExplicitTop = 143
             Height = 75
-            Width = 300
+            Width = 291
             object btnSpecifyImage: TcxButton
               AlignWithMargins = True
               Left = 0
@@ -1000,7 +1038,7 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
               TabOrder = 1
               Transparent = True
               Height = 75
-              Width = 215
+              Width = 206
               object lbRibbonBackgroundImageCaption: TcxLabel
                 Left = 0
                 Top = 0
@@ -1015,9 +1053,10 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
                 Style.Font.Style = []
                 Style.TransparentBorder = False
                 Style.IsFontAssigned = True
+                TabOrder = 0
                 Transparent = True
                 Height = 25
-                Width = 215
+                Width = 206
               end
               object lbRibbonBackgroundImageDescription: TcxLabel
                 Left = 0
@@ -1035,8 +1074,9 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
                 Style.TransparentBorder = False
                 Style.IsFontAssigned = True
                 Properties.WordWrap = True
+                TabOrder = 1
                 Transparent = True
-                Width = 215
+                Width = 206
               end
             end
           end
@@ -1058,13 +1098,14 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
             Style.Font.Style = []
             Style.TransparentBorder = False
             Style.IsFontAssigned = True
+            TabOrder = 3
             Transparent = True
           end
         end
       end
     end
     object bvtsAbout: TdxRibbonBackstageViewTabSheet
-      Left = 132
+      Left = 146
       Top = 0
       Caption = 'About this Demo'
       KeyTip = 'A'
@@ -1083,8 +1124,8 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
         StyleFocused.BorderStyle = ebsNone
         StyleHot.BorderStyle = ebsNone
         TabOrder = 0
-        Height = 374
-        Width = 625
+        Height = 357
+        Width = 616
       end
     end
   end
@@ -1093,7 +1134,7 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
     Left = 736
     Top = 232
     Bitmap = {
-      494C010133003800040020002000FFFFFFFF2100FFFFFFFFFFFFFFFF424D3600
+      494C010133003800040020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000080000000A001000001002000000000000040
       0300000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -7961,7 +8002,8 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000}
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000}
     DesignInfo = 15205088
     ImageInfo = <
       item
@@ -9536,7 +9578,7 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
     Left = 704
     Top = 216
     Bitmap = {
-      494C010133003800040010001000FFFFFFFF2100FFFFFFFFFFFFFFFF424D3600
+      494C010133003800040010001000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000040000000D0000000010020000000000000D0
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -11256,7 +11298,8 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000}
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000}
     DesignInfo = 14156480
     ImageInfo = <
       item
@@ -12839,8 +12882,8 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
       DockedTop = 0
       FloatLeft = 935
       FloatTop = 8
-      FloatClientWidth = 61
-      FloatClientHeight = 184
+      FloatClientWidth = 62
+      FloatClientHeight = 186
       Glyph.SourceDPI = 96
       Glyph.Data = {
         3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D227574
@@ -12992,8 +13035,8 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
       DockedTop = 0
       FloatLeft = 935
       FloatTop = 8
-      FloatClientWidth = 77
-      FloatClientHeight = 248
+      FloatClientWidth = 78
+      FloatClientHeight = 250
       Glyph.SourceDPI = 96
       Glyph.Data = {
         3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D227574
@@ -13190,13 +13233,12 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
     object dxbStatusBarToolbar1: TdxBar [6]
       Caption = 'Document Status'
       CaptionButtons = <>
-      DockedDockingStyle = dsTop
       DockedLeft = 0
       DockedTop = 0
       FloatLeft = 1149
       FloatTop = 8
-      FloatClientWidth = 74
-      FloatClientHeight = 71
+      FloatClientWidth = 63
+      FloatClientHeight = 106
       ItemLinks = <
         item
           Visible = True
@@ -13344,8 +13386,8 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
       DockedTop = 0
       FloatLeft = 1149
       FloatTop = 8
-      FloatClientWidth = 109
-      FloatClientHeight = 65
+      FloatClientWidth = 141
+      FloatClientHeight = 147
       Glyph.SourceDPI = 96
       Glyph.Data = {
         3C3F786D6C2076657273696F6E3D22312E302220656E636F64696E673D227574
@@ -13429,7 +13471,7 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
       DockedTop = 0
       FloatLeft = 913
       FloatTop = 8
-      FloatClientWidth = 82
+      FloatClientWidth = 83
       FloatClientHeight = 108
       Glyph.SourceDPI = 96
       Glyph.Data = {
@@ -17285,7 +17327,6 @@ inherited frmRibbonNotepadMain: TfrmRibbonNotepadMain
         F4FFFFF8EEFFFFF5E7FFFFF5E5FFDEA573FF0000000000000000FCE1C2FFFBE3
         C9FFFBE1C4FFFBDEBFFFFBDDBCFFFADBB8FFFAD9B5FFFAD7B2FFFAD6B0FFF9D4
         ACFFF9D3AAFFF8D0A6FFF8CEA3FFE4AC79FF00000000}
-      Footer.Text = 'visit to ww.dfetdl'
       UseStandardFooter = True
     end
     object stPrint: TdxBarScreenTip

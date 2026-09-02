@@ -7,11 +7,10 @@ inherited frmVertGridInplaceEditorsValidation: TfrmVertGridInplaceEditorsValidat
     object VerticalGrid: TcxDBVerticalGrid [0]
       Left = 10
       Top = 10
-      Width = 580
+      Width = 581
       Height = 449
       LayoutStyle = lsMultiRecordView
       OptionsView.RowHeaderWidth = 144
-      Navigator.Buttons.CustomButtons = <>
       ScrollbarAnnotations.CustomAnnotations = <>
       TabOrder = 0
       DataController.DataSource = DataSource

@@ -4,10 +4,8 @@ inherited frmMain: TfrmMain
   ClientWidth = 1234
   Constraints.MinHeight = 560
   Constraints.MinWidth = 800
-  OnShow = FormShow
-  ExplicitWidth = 1250
-  ExplicitHeight = 881
-  PixelsPerInch = 96
+  ExplicitWidth = 1246
+  ExplicitHeight = 880
   TextHeight = 13
   inherited dxRibbon1: TdxRibbon
     Width = 1234
@@ -21,24 +19,23 @@ inherited frmMain: TfrmMain
     end
   end
   inherited pnlAllArea: TdxPanel
-    ExplicitTop = 130
-    ExplicitWidth = 1234
-    ExplicitHeight = 712
-    Height = 679
     Width = 1234
+    Height = 687
+    ExplicitWidth = 1234
+    ExplicitHeight = 718
     inherited plClient: TdxPanel
-      ExplicitWidth = 1017
-      ExplicitHeight = 712
-      Height = 679
-      Width = 1017
+      Width = 1025
+      Height = 687
+      ExplicitWidth = 1025
+      ExplicitHeight = 687
     end
     inherited NavBarSite: TPanel
-      ExplicitHeight = 712
-      Height = 679
+      Height = 687
+      ExplicitHeight = 686
       inherited NavBar: TdxNavBar
-        Height = 679
+        Height = 687
         ActiveGroupIndex = 1
-        ExplicitHeight = 712
+        ExplicitHeight = 686
         object nbgHighlightedFeatures: TdxNavBarGroup [0]
           Caption = 'Highlighted Features'
           SelectedLinkIndex = -1
@@ -151,8 +148,8 @@ inherited frmMain: TfrmMain
           Links = <>
         end
         inherited nbcSearch: TdxNavBarGroupControl
-          Top = 505
-          ExplicitTop = 505
+          Top = 506
+          ExplicitTop = 506
           GroupIndex = 9
         end
       end
@@ -169,7 +166,7 @@ inherited frmMain: TfrmMain
     inherited barInfo: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
-      DockedLeft = 796
+      DockedLeft = 812
       FloatClientHeight = 24
     end
     inherited barOptions: TdxBar
@@ -186,7 +183,7 @@ inherited frmMain: TfrmMain
       DockedDockControl = nil
       DockedDockingStyle = dsNone
       FloatClientWidth = 123
-      FloatClientHeight = 188
+      FloatClientHeight = 241
       ItemLinks = <
         item
           Visible = True
@@ -307,6 +304,9 @@ inherited frmMain: TfrmMain
       Hint = 'New Button'
       Visible = ivAlways
     end
+    inherited BLightStyle: TdxBarLargeButton
+      ImageIndex = 106
+    end
   end
   inherited dxComponentPrinter: TdxComponentPrinter
     PixelsPerInch = 96
@@ -325,7 +325,7 @@ inherited frmMain: TfrmMain
     Left = 304
     Top = 216
     Bitmap = {
-      494C010130003800300020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010130003800040020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000080000000A001000001002000000000000040
       0300000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

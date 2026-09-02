@@ -16,7 +16,9 @@ uses
   cxClasses, Vcl.StdCtrls, cxButtons, cxMemo, cxTextEdit, cxMaskEdit, cxDropDownEdit, dxSpreadSheet, dxLayoutControl,
   dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules,
   dxSpreadSheetContainers, dxSpreadSheetHyperlinks, dxSpreadSheetUtils,
-  Vcl.ExtCtrls;
+  Vcl.ExtCtrls, dxSpreadSheetCoreFormulas, dxSpreadSheetCoreStyles, dxSpreadSheetCoreStrs, dxSpreadSheetStyles,
+  dxSpreadSheetFormattedTextUtils, Vcl.ExtActns, System.Actions, Vcl.ActnList, Vcl.StdActns, cxSplitter,
+  dxSpreadSheetFormulaBar, cxTrackBar, dxZoomTrackBar;
 
 type
   TfrmOutline = class(TdxSpreadSheetDemoUnitForm)

@@ -5,19 +5,13 @@ inherited frmMultiEditorsGrid: TfrmMultiEditorsGrid
   inherited PanelGrid: TdxPanel
     Width = 728
     ExplicitWidth = 728
-    ExplicitHeight = 667
     inherited Grid: TcxGrid
       Width = 728
       Height = 667
       ExplicitWidth = 728
       ExplicitHeight = 667
       object TableView: TcxGridTableView
-        Navigator.Buttons.CustomButtons = <>
-        ScrollbarAnnotations.CustomAnnotations = <>
         DataController.Options = [dcoAssignGroupingValues, dcoAssignMasterDetailKeys, dcoSaveExpanding, dcoGroupsAlwaysExpanded]
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
         OptionsView.ShowEditButtons = gsebAlways
         OptionsView.ColumnAutoWidth = True
         object clnName: TcxGridColumn
@@ -54,9 +48,8 @@ inherited frmMultiEditorsGrid: TfrmMultiEditorsGrid
       ExplicitWidth = 193
       Width = 193
       inherited lcFrame: TdxLayoutControl
-        Width = 191
-        ExplicitWidth = 191
-        ExplicitHeight = 647
+        Width = 189
+        ExplicitWidth = 189
         inherited lgSetupTools: TdxLayoutGroup
           AlignHorz = ahClient
         end

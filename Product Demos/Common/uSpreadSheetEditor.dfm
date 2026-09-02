@@ -1101,12 +1101,12 @@ object SpreadSheetEditor: TSpreadSheetEditor
         item
           ViewLevels = [ivlSmallIconWithText, ivlSmallIcon, ivlControlOnly]
           Visible = True
-          ItemName = 'dxRibbonGalleryItemUseinFormula'
+          ItemName = 'dxRibbonGalleryItemUseInFormula'
         end
         item
           ViewLevels = [ivlSmallIconWithText, ivlSmallIcon, ivlControlOnly]
           Visible = True
-          ItemName = 'dxBarButtonCreatefromSelection'
+          ItemName = 'dxBarButtonCreateFromSelection'
         end>
       OneOnRow = True
       Row = 0
@@ -1675,15 +1675,15 @@ object SpreadSheetEditor: TSpreadSheetEditor
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonTopandBottomBorder'
+          ItemName = 'dxBarLargeButtonTopAndBottomBorder'
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonTopandThickBottomBorder'
+          ItemName = 'dxBarLargeButtonTopAndThickBottomBorder'
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonTopandDoubleBottomBorder'
+          ItemName = 'dxBarLargeButtonTopAndDoubleBottomBorder'
         end
         item
           BeginGroup = True
@@ -1751,19 +1751,19 @@ object SpreadSheetEditor: TSpreadSheetEditor
       SyncImageIndex = False
       ImageIndex = 25
     end
-    object dxBarLargeButtonTopandBottomBorder: TdxBarLargeButton
+    object dxBarLargeButtonTopAndBottomBorder: TdxBarLargeButton
       Action = dxSpreadSheetBordersTopAndBottom
       Category = 4
       SyncImageIndex = False
       ImageIndex = 26
     end
-    object dxBarLargeButtonTopandThickBottomBorder: TdxBarLargeButton
+    object dxBarLargeButtonTopAndThickBottomBorder: TdxBarLargeButton
       Action = dxSpreadSheetBordersTopAndBottomThick
       Category = 4
       SyncImageIndex = False
       ImageIndex = 27
     end
-    object dxBarLargeButtonTopandDoubleBottomBorder: TdxBarLargeButton
+    object dxBarLargeButtonTopAndDoubleBottomBorder: TdxBarLargeButton
       Action = dxSpreadSheetBordersTopAndBottomDouble
       Category = 4
       SyncImageIndex = False
@@ -1846,7 +1846,7 @@ object SpreadSheetEditor: TSpreadSheetEditor
       ItemLinks = <
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonMergeandCenter'
+          ItemName = 'dxBarLargeButtonMergeAndCenter'
         end
         item
           Visible = True
@@ -1861,7 +1861,7 @@ object SpreadSheetEditor: TSpreadSheetEditor
           ItemName = 'dxBarLargeButtonUnmergeCells'
         end>
     end
-    object dxBarLargeButtonMergeandCenter: TdxBarLargeButton
+    object dxBarLargeButtonMergeAndCenter: TdxBarLargeButton
       Action = dxSpreadSheetMergeCellsAndCenter
       Category = 5
       SyncImageIndex = False
@@ -4266,7 +4266,7 @@ object SpreadSheetEditor: TSpreadSheetEditor
       Category = 12
       LargeImageIndex = 96
     end
-    object dxRibbonGalleryItemUseinFormula: TdxRibbonGalleryItem
+    object dxRibbonGalleryItemUseInFormula: TdxRibbonGalleryItem
       Action = dxSpreadSheetUseDefinedNameInFormula
       Category = 12
       LargeImageIndex = 97
@@ -4277,10 +4277,10 @@ object SpreadSheetEditor: TSpreadSheetEditor
       GalleryInRibbonOptions.MinColumnCount = 1
       GalleryInMenuOptions.DropDownGalleryResizing = gsrNone
       ItemLinks = <>
-      object dxRibbonGalleryItemUseinFormulaGroup1: TdxRibbonGalleryGroup
+      object dxRibbonGalleryItemUseInFormulaGroup1: TdxRibbonGalleryGroup
       end
     end
-    object dxBarButtonCreatefromSelection: TdxBarButton
+    object dxBarButtonCreateFromSelection: TdxBarButton
       Action = dxSpreadSheetCreateDefinedNamesFromSelection
       Category = 12
       LargeImageIndex = 98
@@ -9094,7 +9094,7 @@ object SpreadSheetEditor: TSpreadSheetEditor
     object dxSpreadSheetUseDefinedNameInFormula: TdxSpreadSheetUseDefinedNameInFormula
       Category = 'DevExpress ExpressSpreadSheet.Formulas.Defined Names'
       ImageIndex = 87
-      GalleryGroup = dxRibbonGalleryItemUseinFormulaGroup1
+      GalleryGroup = dxRibbonGalleryItemUseInFormulaGroup1
     end
     object dxSpreadSheetCreateDefinedNamesFromSelection: TdxSpreadSheetCreateDefinedNamesFromSelection
       Category = 'DevExpress ExpressSpreadSheet.Formulas.Defined Names'

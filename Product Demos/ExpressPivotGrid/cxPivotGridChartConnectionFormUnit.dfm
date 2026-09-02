@@ -4,11 +4,9 @@ inherited fmPivotGridChartConnection: TfmPivotGridChartConnection
   Caption = 'Charts Integration'
   ClientHeight = 529
   ClientWidth = 971
-  OldCreateOrder = True
   OnCreate = FormCreate
   ExplicitWidth = 971
   ExplicitHeight = 529
-  PixelsPerInch = 96
   TextHeight = 13
   inherited lcMain: TdxLayoutControl
     Width = 971
@@ -16,12 +14,12 @@ inherited fmPivotGridChartConnection: TfmPivotGridChartConnection
     ExplicitWidth = 971
     ExplicitHeight = 529
     inherited DBPivotGrid: TcxDBPivotGrid
-      Width = 785
-      Height = 171
+      Width = 787
+      Height = 173
       DataSource = dmPivot.dsSalesReports
       TabOrder = 2
-      ExplicitWidth = 785
-      ExplicitHeight = 171
+      ExplicitWidth = 787
+      ExplicitHeight = 173
       object pgfProductName: TcxDBPivotGridField
         Area = faRow
         AreaIndex = 0
@@ -50,8 +48,8 @@ inherited fmPivotGridChartConnection: TfmPivotGridChartConnection
       end
     end
     object cbSourceData: TcxComboBox [1]
-      Left = 820
-      Top = 59
+      Left = 823
+      Top = 46
       Properties.DropDownListStyle = lsFixedList
       Properties.Items.Strings = (
         'All Cells'
@@ -60,20 +58,20 @@ inherited fmPivotGridChartConnection: TfmPivotGridChartConnection
       Style.HotTrack = False
       TabOrder = 0
       Text = 'All Cells'
-      Width = 132
+      Width = 126
     end
-    object cbSourceForCategorites: TcxComboBox [2]
-      Left = 820
-      Top = 104
+    object cbSourceForCategories: TcxComboBox [2]
+      Left = 823
+      Top = 91
       Properties.DropDownListStyle = lsFixedList
       Properties.Items.Strings = (
         'Column'
         'Row')
-      Properties.OnChange = cbSourceForCategoritesPropertiesChange
+      Properties.OnChange = cbSourceForCategoriesPropertiesChange
       Style.HotTrack = False
       TabOrder = 1
       Text = 'Row'
-      Width = 132
+      Width = 126
     end
     object cxGroupBox2: TcxGroupBox [3]
       Left = 10
@@ -81,15 +79,15 @@ inherited fmPivotGridChartConnection: TfmPivotGridChartConnection
       PanelStyle.Active = True
       ParentBackground = False
       ParentColor = False
-      Style.Color = 16053234
+      Style.Color = clBtnFace
       Style.Edges = []
       Style.TransparentBorder = False
       TabOrder = 3
       Height = 281
-      Width = 785
+      Width = 787
       object lblURL: TLabel
-        Left = 1
-        Top = 269
+        Left = 2
+        Top = 268
         Width = 783
         Height = 11
         Cursor = crHandPoint
@@ -106,26 +104,27 @@ inherited fmPivotGridChartConnection: TfmPivotGridChartConnection
         ExplicitWidth = 246
       end
       object Label1: TcxLabel
-        Left = 1
-        Top = 239
+        Left = 2
+        Top = 238
         Align = alBottom
         Caption = 
           'Note: This chart was created using the ExpressQuantumGrid. It is' +
           ' not included as part of the ExpressPivotGrid Suite, and must be' +
           ' purchased separately. You can learn more at:'
         Properties.WordWrap = True
+        TabOrder = 1
         Transparent = True
-        ExplicitWidth = 785
+        ExplicitWidth = 781
         Width = 783
       end
       object Grid: TcxGrid
-        Left = 1
-        Top = 1
+        Left = 2
+        Top = 2
         Width = 783
-        Height = 238
+        Height = 236
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 785
+        ExplicitWidth = 781
         object ChartView: TcxGridChartView
           DiagramColumn.Active = True
           ToolBox.CustomizeButton = True
@@ -168,7 +167,7 @@ inherited fmPivotGridChartConnection: TfmPivotGridChartConnection
       Parent = lgTools
       CaptionOptions.Text = 'Source for Categories:'
       CaptionOptions.Layout = clTop
-      Control = cbSourceForCategorites
+      Control = cbSourceForCategories
       ControlOptions.OriginalHeight = 21
       ControlOptions.OriginalWidth = 121
       ControlOptions.ShowBorder = False

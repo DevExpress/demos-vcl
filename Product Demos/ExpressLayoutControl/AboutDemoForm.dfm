@@ -1,4 +1,4 @@
-object formAboutDemo: TformAboutDemo
+object FormAboutDemo: TFormAboutDemo
   Left = 266
   Top = 113
   BorderStyle = bsSizeToolWin
@@ -7,10 +7,13 @@ object formAboutDemo: TformAboutDemo
   ClientHeight = 476
   ClientWidth = 419
   Color = clWindow
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
   FormStyle = fsStayOnTop
-  OldCreateOrder = False
-  PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 15
   object dxLayoutControl1: TdxLayoutControl
     Left = 0
     Top = 0
@@ -19,10 +22,8 @@ object formAboutDemo: TformAboutDemo
     Align = alClient
     TabOrder = 0
     LayoutLookAndFeel = dxLayoutStandardLookAndFeel1
-    ExplicitLeft = 72
-    ExplicitTop = 152
-    ExplicitWidth = 300
-    ExplicitHeight = 250
+    ExplicitWidth = 411
+    ExplicitHeight = 464
     object redDescription: TcxRichEdit
       Left = 0
       Top = 0
@@ -30,6 +31,8 @@ object formAboutDemo: TformAboutDemo
       Properties.PlainText = True
       Properties.ReadOnly = True
       Properties.ScrollBars = ssVertical
+      Style.BorderColor = clWindowFrame
+      Style.BorderStyle = ebs3D
       Style.HotTrack = False
       Style.TransparentBorder = True
       TabOrder = 0

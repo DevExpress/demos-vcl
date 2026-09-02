@@ -63,11 +63,11 @@ type
   private
     FChangeLock: Boolean;
     function ApplyBrightness(AImage: TdxSmartImage; ABrightnessValue: Byte): TdxSmartImage;
-    function ApplyColorMatrics(AImage: TdxSmartImage; AColorMatrix: TdxGpColorMatrix): TdxSmartImage;
+    function ApplyColorMatrix(AImage: TdxSmartImage; AColorMatrix: TdxGpColorMatrix): TdxSmartImage;
     function ApplyContrast(AImage: TdxSmartImage; AContrastValue: Byte): TdxSmartImage;
     function ApplyFilter(AImage: TdxSmartImage; AFilterType: TImageFilterType): TdxSmartImage;
     function ApplyRGB(AImage: TdxSmartImage; R, G, B: Byte): TdxSmartImage;
-    procedure PopulateGalery(APath: string);
+    procedure PopulateGallery(APath: string);
     procedure UpdateFilterGroup(AGlyph: TdxSmartGlyph);
   protected
     function GetDescription: string; override;
@@ -131,7 +131,7 @@ procedure TdxNavBarControlDemoUnitForm1.FormCreate(Sender: TObject);
 begin
   dxGalleryControl2.BeginUpdate;
   dxGalleryControl2Group1.Items.Clear;
-  PopulateGalery(ExtractFilePath(Application.ExeName) + '\Data\*.jpg');
+  PopulateGallery(ExtractFilePath(Application.ExeName) + '\Data\*.jpg');
   dxGalleryControl2.ColumnCount := dxGalleryControl2Group1.ItemCount;
   dxGalleryControl2.EndUpdate;
   if dxGalleryControl2Group1.ItemCount = 0 then
@@ -165,7 +165,7 @@ begin
   Result := dxNavBar1;
 end;
 
-procedure TdxNavBarControlDemoUnitForm1.PopulateGalery(APath: string);
+procedure TdxNavBarControlDemoUnitForm1.PopulateGallery(APath: string);
 
   function IsFile(AFindData: TWIN32FindData): Boolean;
   var
@@ -226,7 +226,7 @@ begin
   Result := ApplyRGB(AImage, ABrightnessValue, ABrightnessValue, ABrightnessValue);
 end;
 
-function TdxNavBarControlDemoUnitForm1.ApplyColorMatrics(AImage: TdxSmartImage;
+function TdxNavBarControlDemoUnitForm1.ApplyColorMatrix(AImage: TdxSmartImage;
   AColorMatrix: TdxGpColorMatrix): TdxSmartImage;
 var
   AAttributes: TdxGPImageAttributes;
@@ -272,14 +272,14 @@ begin
   AColorMatrix[0, 4] := ATranslate;
   AColorMatrix[1, 4] := ATranslate;
   AColorMatrix[2, 4] := ATranslate;
-  Result := ApplyColorMatrics(AImage, AColorMatrix);
+  Result := ApplyColorMatrix(AImage, AColorMatrix);
 end;
 
 function TdxNavBarControlDemoUnitForm1.ApplyFilter(
   AImage: TdxSmartImage; AFilterType: TImageFilterType): TdxSmartImage;
 
 const
-  ColorMatrics: array [TImageFilterType] of TdxGpColorMatrix =
+  ColorMatrix: array [TImageFilterType] of TdxGpColorMatrix =
     (
     //  PolaroidFilter: TdxGpColorMatrix =
         ((1.438, -0.062, -0.062, 0, 0),
@@ -319,7 +319,7 @@ const
          (0, 0, 0, 0, 1)));
 
 begin
-  Result := ApplyColorMatrics(AImage, ColorMatrics[AFilterType]);
+  Result := ApplyColorMatrix(AImage, ColorMatrix[AFilterType]);
 end;
 
 function TdxNavBarControlDemoUnitForm1.ApplyRGB(AImage: TdxSmartImage; R, G,
@@ -344,23 +344,23 @@ begin
   if (R = 0) and (G = 0) and (B = 0) then
     for I := 0 to 3 do
       AColorMatrix[4, I] := 0;
-  Result := ApplyColorMatrics(AImage, AColorMatrix);
+  Result := ApplyColorMatrix(AImage, AColorMatrix);
 end;
 
 procedure TdxNavBarControlDemoUnitForm1.UpdateFilterGroup(AGlyph: TdxSmartGlyph);
 var
-  AGaleryItem: TdxGalleryControlItem;
+  AGalleryItem: TdxGalleryControlItem;
   AFilterType: TImageFilterType;
   AImage: TdxSmartImage;
 begin
   dxGalleryControl1Group1.Items.Clear;
   for AFilterType := Low(TImageFilterType) to High(TImageFilterType) do
   begin
-    AGaleryItem := dxGalleryControl1Group1.Items.Add;
-    AGaleryItem.Caption := SImageFilterName[AFilterType];
+    AGalleryItem := dxGalleryControl1Group1.Items.Add;
+    AGalleryItem.Caption := SImageFilterName[AFilterType];
     AImage := ApplyFilter(AGlyph, AFilterType);
     try
-      AGaleryItem.Glyph.Assign(AImage);
+      AGalleryItem.Glyph.Assign(AImage);
     finally
       AImage.Free;
     end;

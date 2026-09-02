@@ -60,7 +60,7 @@ type
     cbStartMonths: TcxComboBox;
     btnCalculate: TcxButton;
     cxLabel5: TcxLabel;
-    lblMontlyPayment: TcxLabel;
+    lblMonthlyPayment: TcxLabel;
     cxGroupBox6: TcxGroupBox;
     procedure btnCalculateClick(Sender: TObject);
     procedure cxSplitter1BeforeClose(Sender: TObject;
@@ -68,10 +68,10 @@ type
   private
     FMinInterest: Real;
     FStepInterest: Real;
-    FStartMonts: array of TDate;
+    FStartMonths: array of TDate;
 
     procedure CalculateYearlyPayments;
-    procedure CalculateMonthlyPayments(ALoan, AInterest, AMontlyPayment: Real; AStartMonth: TDate; const AMonthsCount: Word);
+    procedure CalculateMonthlyPayments(ALoan, AInterest, AMonthlyPayment: Real; AStartMonth: TDate; const AMonthsCount: Word);
     procedure InitializeInterests;
     procedure InitializeTerms;
     procedure InitializeStartMonths;
@@ -94,7 +94,7 @@ begin
   btnCalculateClick(nil);
 end;
 
-function GetAnuitentMontlyPayment(ALoan, AInterest: Real; AMonthsCount: Word): Real;
+function GetAnnuitantMonthlyPayment(ALoan, AInterest: Real; AMonthsCount: Word): Real;
 var
   ASpecifiedInterest: Real;
 begin
@@ -102,7 +102,7 @@ begin
   Result := ALoan * ASpecifiedInterest / (1 - Power(1 + ASpecifiedInterest, -AMonthsCount));
 end;
 
-function GetMontlyInterestPayment(ALoanRest, AInterest: Real): Real;
+function GetMonthlyInterestPayment(ALoanRest, AInterest: Real): Real;
 begin
   Result := ALoanRest * AInterest/100 * 1/12;
 end;
@@ -150,7 +150,7 @@ begin
   Screen.Cursor := crDefault;
 end;
 
-procedure TfrmLoanCalculator.CalculateMonthlyPayments(ALoan, AInterest, AMontlyPayment: Real; AStartMonth: TDate; const AMonthsCount: Word);
+procedure TfrmLoanCalculator.CalculateMonthlyPayments(ALoan, AInterest, AMonthlyPayment: Real; AStartMonth: TDate; const AMonthsCount: Word);
 var
   ANum: Word;
   AInterestPayment: Real;
@@ -161,16 +161,16 @@ begin
   mdMonthlyPayments.Open;
   for ANum := 1 to AMonthsCount do
   begin
-    AInterestPayment := GetMontlyInterestPayment(ALoan, AInterest);
+    AInterestPayment := GetMonthlyInterestPayment(ALoan, AInterest);
     if ANum = AMonthsCount then
-      AMontlyPayment := ALoan + AInterestPayment;
-    ALoan := ALoan + AInterestPayment - AMontlyPayment;
+      AMonthlyPayment := ALoan + AInterestPayment;
+    ALoan := ALoan + AInterestPayment - AMonthlyPayment;
     mdMonthlyPayments.Append;
     mdMonthlyPayments.FieldByName('Date').AsDateTime := AStartMonth;
     mdMonthlyPayments.FieldByName('Month').AsString := IntToStr(ANum) + ' (' + GetMonthName(AStartMonth) + ')';
     mdMonthlyPayments.FieldByName('Balance').AsFloat := ALoan;
     mdMonthlyPayments.FieldByName('Interest').AsFloat := AInterestPayment;
-    mdMonthlyPayments.FieldByName('Principal').AsFloat := AMontlyPayment - AInterestPayment;
+    mdMonthlyPayments.FieldByName('Principal').AsFloat := AMonthlyPayment - AInterestPayment;
     mdMonthlyPayments.Post;
     AStartMonth := IncMonth(AStartMonth);
   end;
@@ -228,20 +228,20 @@ procedure TfrmLoanCalculator.InitializeStartMonths;
 var
   AStartMonth: TDate;
   AYear, AMonth, ADay: Word;
-  I, ACountMonts: Integer;
+  I, ACountMonths: Integer;
 begin
   DecodeDate(Date, AYear, AMonth, ADay);
   AStartMonth := IncMonth(RecodeDate(Date, AYear, AMonth, 1));
   AMonth := MonthOf(AStartMonth);
-  ACountMonts := 13 - AMonth;
-  FStartMonts := nil;
-  SetLength(FStartMonts, ACountMonts);
+  ACountMonths := 13 - AMonth;
+  FStartMonths := nil;
+  SetLength(FStartMonths, ACountMonths);
   cbStartMonths.Properties.Items.Clear;
   cbStartMonths.ItemIndex := -1;
   for I := AMonth to 12 do
   begin
-    FStartMonts[I - AMonth] := AStartMonth;
-    cbStartMonths.Properties.Items.Add(GetMonthName(FStartMonts[I - AMonth]));
+    FStartMonths[I - AMonth] := AStartMonth;
+    cbStartMonths.Properties.Items.Add(GetMonthName(FStartMonths[I - AMonth]));
     AStartMonth := IncMonth(AStartMonth);
   end;
   cbStartMonths.ItemIndex := 0;
@@ -262,20 +262,20 @@ end;
 
 function TfrmLoanCalculator.GetSelectedStartMonth: TDate;
 begin
-  Result := FStartMonts[cbStartMonths.ItemIndex];
+  Result := FStartMonths[cbStartMonths.ItemIndex];
 end;
 
 procedure TfrmLoanCalculator.btnCalculateClick(Sender: TObject);
 var
-  ALoan, AInterest, AMontlyPayment: Real;
+  ALoan, AInterest, AMonthlyPayment: Real;
   AMonthsCount: Word;
 begin
   ALoan := seLoan.Value;
   AInterest := GetSelectedInterest;
   AMonthsCount := GetSelectedTerm * 12;
-  AMontlyPayment := GetAnuitentMontlyPayment(ALoan, AInterest, AMonthsCount);
-  lblMontlyPayment.Caption := CurrToStrF(AMontlyPayment, ffCurrency, 0);
-  CalculateMonthlyPayments(ALoan, AInterest, AMontlyPayment, GetSelectedStartMonth, AMonthsCount);
+  AMonthlyPayment := GetAnnuitantMonthlyPayment(ALoan, AInterest, AMonthsCount);
+  lblMonthlyPayment.Caption := CurrToStrF(AMonthlyPayment, ffCurrency, 0);
+  CalculateMonthlyPayments(ALoan, AInterest, AMonthlyPayment, GetSelectedStartMonth, AMonthsCount);
   CalculateYearlyPayments;
 end;
 

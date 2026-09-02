@@ -13,12 +13,12 @@ uses
 type
   TColumnsMultiEditorsDemoPopupForm = class(TdxForm)
     pnlPopup: TPanel;
-    ilPoupuImages: TImageList;
+    ilPopupImages: TImageList;
     tlPopup: TcxTreeList;
     clText: TcxTreeListColumn;
     cxStyleRepository1: TcxStyleRepository;
     stlHotRoot: TcxStyle;
-    stlContenet: TcxStyle;
+    stlContent: TcxStyle;
     stlHotItem: TcxStyle;
     procedure tlPopupClick(Sender: TObject);
     procedure tlPopupKeyDown(Sender: TObject; var Key: Word;

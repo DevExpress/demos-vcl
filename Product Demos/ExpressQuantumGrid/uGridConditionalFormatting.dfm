@@ -1,16 +1,15 @@
 inherited frmGridConditionalFormatting: TfrmGridConditionalFormatting
   inherited PanelGrid: TdxPanel
     Width = 760
+    ExplicitWidth = 760
     inherited Grid: TcxGrid
       Width = 760
+      Height = 667
+      ExplicitWidth = 760
+      ExplicitHeight = 667
       object tvConditionalFormatting: TcxGridDBTableView
         PopupMenu = ConditionalFormattingPopupMenu
-        Navigator.Buttons.CustomButtons = <>
-        ScrollbarAnnotations.CustomAnnotations = <>
         DataController.DataSource = dmMain.dsConditionalFormatting
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
         OptionsView.CellAutoHeight = True
         OptionsView.ColumnAutoWidth = True
         OptionsView.DataRowHeight = 30
@@ -161,13 +160,17 @@ inherited frmGridConditionalFormatting: TfrmGridConditionalFormatting
     ExplicitLeft = 760
     ExplicitWidth = 162
     inherited gbSetupTools: TcxGroupBox
+      ExplicitWidth = 161
       Width = 161
       inherited lcFrame: TdxLayoutControl
-        Width = 159
+        Width = 157
+        ExplicitLeft = 2
+        ExplicitTop = 18
+        ExplicitWidth = 157
         object btnManageRules: TcxButton [0]
           Left = 10
           Top = 10
-          Width = 139
+          Width = 137
           Height = 25
           Caption = 'Manage Rules...'
           TabOrder = 0
@@ -2085,7 +2088,7 @@ inherited frmGridConditionalFormatting: TfrmGridConditionalFormatting
     Left = 128
     Top = 184
     Bitmap = {
-      494C01010D001800040010001000FFFFFFFF2100FFFFFFFFFFFFFFFF424D3600
+      494C01010D001800040010001000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000004000000001002000000000000040
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000009050036A65B0DE0130A
@@ -2617,7 +2620,8 @@ inherited frmGridConditionalFormatting: TfrmGridConditionalFormatting
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000}
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000}
     DesignInfo = 12058752
     ImageInfo = <
       item

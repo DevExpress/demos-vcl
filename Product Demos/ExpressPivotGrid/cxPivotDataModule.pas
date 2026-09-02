@@ -4,7 +4,7 @@ interface
 
 uses
   System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB, Vcl.ImgList, Vcl.Controls, cxStyles, cxClasses, dxmdaset, Datasnap.DBClient, Datasnap.Provider, cxImageList,
-  cxGraphics;
+  cxGraphics, System.ImageList;
 
 type
   TdmPivot = class(TDataModule)

@@ -8,7 +8,7 @@ uses
   cxEdit, cxControls, cxInplaceContainer, cxVGrid,
   cxExtEditRepositoryItems, cxShellEditRepositoryItems,
   cxEditRepositoryItems, cxDBEditRepository, PropertiesPopup,
-  cxLookAndFeels, cxLookAndFeelPainters, cxClasses, cxTextEdit, cxDropDownEdit, dxSkinsCore, dxSkinDevExpressStyle,
+  cxLookAndFeels, cxLookAndFeelPainters, cxClasses, cxTextEdit, cxDropDownEdit, dxSkinsCore,
   dxScreenTip, dxCustomHint, cxHint, cxDBVGrid, Data.DB, dxmdaset, cxContainer, cxLabel, cxCheckBox, cxGroupBox,
   dxLayoutContainer, dxLayoutControl, dxLayoutcxEditAdapters, Vcl.ActnList, dxScrollbarAnnotations, System.Actions,
   dxLayoutLookAndFeels, cxFilter, dxGDIPlusClasses;
@@ -81,7 +81,7 @@ type
 implementation
 
 uses
-  maindata, dxFrames, FrameIDs, uStrsConst, cxRegExpr;
+  MainData, dxFrames, FrameIDs, uStrsConst, cxRegExpr;
 
 {$R *.dfm}
 

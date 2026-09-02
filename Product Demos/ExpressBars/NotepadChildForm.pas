@@ -5,9 +5,11 @@ unit NotepadChildForm;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls,
-  cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, cxTextEdit, cxMemo, cxRichEdit, Winapi.RichEdit, dxRibbonForm,
-  Vcl.ExtCtrls, dxMessageDialog, dxShellDialogs;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls,
+  Vcl.Forms, Vcl.Dialogs,
+  dxCore, cxGraphics, cxControls, Vcl.ExtCtrls, Winapi.RichEdit,
+  cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit, cxTextEdit, cxMemo, cxRichEdit, dxRibbonForm,
+  dxMessageDialog, dxShellDialogs;
 
 const
   sDefaultDocName = 'New Document.rtf';
@@ -104,9 +106,6 @@ type
   end;
 
 implementation
-
-uses
-  dxCore;
 
 {$R *.dfm}
 

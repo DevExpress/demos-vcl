@@ -12,10 +12,10 @@ object dxMapControlDemoUnitForm: TdxMapControlDemoUnitForm
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnHide = FormHide
   OnShow = FormShow
-  PixelsPerInch = 96
+  ExplicitWidth = 640
+  ExplicitHeight = 480
   TextHeight = 13
   object lcMain: TdxLayoutControl
     Left = 0

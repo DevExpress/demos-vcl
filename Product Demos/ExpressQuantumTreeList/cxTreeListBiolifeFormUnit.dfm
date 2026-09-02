@@ -1,5 +1,7 @@
 inherited frmBiolife: TfrmBiolife
   Caption = 'frmBiolife'
+  ExplicitWidth = 493
+  ExplicitHeight = 320
   TextHeight = 13
   inherited lcMain: TdxLayoutControl
     inherited tlDB: TcxDBTreeList
@@ -18,17 +20,13 @@ inherited frmBiolife: TfrmBiolife
         Position.ColIndex = 0
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
-      object tlDBcxDBTreeListColumn2: TcxDBTreeListColumn
+      object clnCommonName: TcxDBTreeListColumn
         DataBinding.FieldName = 'Common Name'
         Width = 65
         Position.ColIndex = 1
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clnLength: TcxDBTreeListColumn
         DataBinding.FieldName = 'Length(cm)'
@@ -36,8 +34,6 @@ inherited frmBiolife: TfrmBiolife
         Position.ColIndex = 2
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clnMark: TcxDBTreeListColumn
         DataBinding.FieldName = 'Mark'
@@ -45,8 +41,6 @@ inherited frmBiolife: TfrmBiolife
         Position.ColIndex = 3
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clnSpeciesName: TcxDBTreeListColumn
         DataBinding.FieldName = 'Species Name'
@@ -54,8 +48,6 @@ inherited frmBiolife: TfrmBiolife
         Position.ColIndex = 4
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clnSpeciesNo: TcxDBTreeListColumn
         DataBinding.FieldName = 'Species No'
@@ -63,8 +55,6 @@ inherited frmBiolife: TfrmBiolife
         Position.ColIndex = 5
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
     end
     inherited lgTools: TdxLayoutGroup

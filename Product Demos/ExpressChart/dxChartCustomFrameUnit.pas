@@ -572,7 +572,7 @@ procedure TdxChartCustomFrame.UpdateOptions;
       liAxisYGridlines.Checked := TdxChartXYDiagram(ActiveDiagram).Axes.AxisY.Gridlines.Visible;
       liAxisYMinorGridlines.Checked := TdxChartXYDiagram(ActiveDiagram).Axes.AxisY.Gridlines.MinorVisible;
       liAxisXReverse.Checked := TdxChartXYDiagram(ActiveDiagram).Axes.AxisX.Reverse;
-      liAxisYReverse.Checked := TdxChartXYDiagram(ActiveDiagram).Axes.Axisy.Reverse;
+      liAxisYReverse.Checked := TdxChartXYDiagram(ActiveDiagram).Axes.AxisY.Reverse;
     end;
     if lgMarkers.Visible then
     begin

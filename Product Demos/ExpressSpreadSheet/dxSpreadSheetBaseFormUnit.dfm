@@ -1,14 +1,15 @@
 inherited dxSpreadSheetDemoUnitForm: TdxSpreadSheetDemoUnitForm
   inherited lcCustom: TdxLayoutControl
     inherited pnlSite: TPanel
-      Height = 199
-      ExplicitHeight = 199
+      Height = 175
+      ExplicitHeight = 175
       object SpreadSheet: TdxSpreadSheet
         Left = 0
         Top = 0
-        Width = 445
-        Height = 199
+        Width = 431
+        Height = 175
         Align = alClient
+        ExplicitWidth = 445
         ExplicitHeight = 206
         Data = {
           8002000044585353763242461000000042465320000000000000000001000101
@@ -35,8 +36,8 @@ inherited dxSpreadSheetDemoUnitForm: TdxSpreadSheetDemoUnitForm
       end
     end
     object ztbBook: TdxZoomTrackBar [1]
-      Left = 155
-      Top = 205
+      Left = 148
+      Top = 191
       Properties.OnChange = ztbBookPropertiesChange
       Style.HotTrack = False
       TabOrder = 1

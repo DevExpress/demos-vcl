@@ -73,7 +73,7 @@ end;
 procedure TfrmColorEdit.ColorEditPropertiesGetCustomColorSet(Sender: TObject; var ASet: TColors);
 const
   AOfficeColorPaletteSize = 10;
-  AOfficeCustomStandartColors: array[0..AOfficeColorPaletteSize - 1] of TColor =
+  AOfficeCustomStandardColors: array[0..AOfficeColorPaletteSize - 1] of TColor =
     (clMenu, clMenuBar, clMenuHighlight, clMenuText, clScrollBar, cl3DDkShadow, cl3DLight, clWindow, clWindowFrame, clWindowText);
 var
   AIsOfficePalette: Boolean;
@@ -94,7 +94,7 @@ begin
     else
       ASet[I] := ADXColors[Odd(I)];
     if AIsOfficePalette then
-      ASet[I + AOfficeColorPaletteSize] := AOfficeCustomStandartColors[I]; // Set standart colors in office's palette
+      ASet[I + AOfficeColorPaletteSize] := AOfficeCustomStandardColors[I]; // Set standard colors in office's palette
   end;
 end;
 

@@ -5,11 +5,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
-  Vcl.ExtCtrls, Vcl.ImgList, cxDropDownEdit, cxStyles,
-{$IFDEF DELPHI16}
-  System.UITypes,
-{$ENDIF}
-  cxTL, cxTextEdit, cxInplaceContainer, cxControls, cxGraphics,
+  Vcl.ExtCtrls, Vcl.ImgList, System.UITypes, System.ImageList,
+  cxTL, cxTextEdit, cxInplaceContainer, cxControls, cxGraphics, cxDropDownEdit, cxStyles,
   cxCustomData, cxLookAndFeels, cxLookAndFeelPainters, cxTLdxBarBuiltInMenu, cxClasses, dxForms,
   cxFilter, dxScrollbarAnnotations, dxSkinsCore;
 
@@ -23,14 +20,11 @@ type
     styleSelection: TcxStyle;
     styleHotTrack: TcxStyle;
     procedure FormCreate(Sender: TObject);
-    procedure cxTreeListGetNodeImageIndex(Sender: TcxCustomTreeList;
-      ANode: TcxTreeListNode; AIndexType: TcxTreeListImageIndexType;
-      var AIndex: TcxImageIndex);
+    procedure cxTreeListGetNodeImageIndex(Sender: TcxCustomTreeList; ANode: TcxTreeListNode;
+      AIndexType: TcxTreeListImageIndexType; var AIndex: TImageIndex);
     procedure cxTreeListClick(Sender: TObject);
-    procedure cxTreeListKeyDown(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
-    procedure cxTreeListMouseMove(Sender: TObject; Shift: TShiftState; X,
-      Y: Integer);
+    procedure cxTreeListKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure cxTreeListMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure cxTreeListHotTrackNode(Sender: TcxCustomTreeList; ANode: TcxTreeListNode; AShift: TShiftState;
       var ACursor: TCursor);
   private
@@ -67,9 +61,8 @@ begin
 end;
 
 
-procedure TfmPopupTree.cxTreeListGetNodeImageIndex(Sender: TcxCustomTreeList; 
-  ANode: TcxTreeListNode; AIndexType: TcxTreeListImageIndexType;
-  var AIndex: TcxImageIndex);
+procedure TfmPopupTree.cxTreeListGetNodeImageIndex(Sender: TcxCustomTreeList; ANode: TcxTreeListNode;
+  AIndexType: TcxTreeListImageIndexType; var AIndex: TImageIndex);
 const
   RootImageIndex = 0;
   ChildImageIndex = 4;
@@ -104,8 +97,7 @@ begin
     cxTreeListClick(nil);
 end;
 
-procedure TfmPopupTree.cxTreeListMouseMove(Sender: TObject;
-  Shift: TShiftState; X, Y: Integer);
+procedure TfmPopupTree.cxTreeListMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
 
   function GetNodeRect(ANode: TcxTreeListNode): TRect;
   begin

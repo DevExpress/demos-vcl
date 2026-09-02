@@ -1,11 +1,11 @@
 inherited frmMain: TfrmMain
   Caption = 'frmMain'
   ClientWidth = 957
-  ExplicitWidth = 973
+  ExplicitWidth = 969
   TextHeight = 13
   inherited dxRibbon1: TdxRibbon
     Width = 957
-    ExplicitWidth = 957
+    ExplicitWidth = 953
     inherited dxRibbon1Tab1: TdxRibbonTab
       Index = 0
     end
@@ -15,27 +15,12 @@ inherited frmMain: TfrmMain
   end
   inherited pnlAllArea: TdxPanel
     Width = 957
-    ExplicitTop = 124
     ExplicitWidth = 957
-    ExplicitHeight = 469
     inherited plClient: TdxPanel
       Left = 241
       Width = 716
       ExplicitLeft = 241
       ExplicitWidth = 716
-      ExplicitHeight = 469
-      inherited dxRibbonBackstageView1: TdxRibbonBackstageView
-        inherited bvtExport: TdxRibbonBackstageViewTabSheet
-          inherited gbExportItems: TcxGroupBox
-            inherited gbExportPane: TcxGroupBox
-              inherited dxBevel1: TdxBevel
-                ExplicitLeft = 303
-                ExplicitWidth = 2
-              end
-            end
-          end
-        end
-      end
       object pnTreeListSite: TcxGroupBox
         Left = 0
         Top = 0
@@ -44,7 +29,9 @@ inherited frmMain: TfrmMain
         Style.BorderStyle = ebsNone
         Style.Edges = []
         TabOrder = 0
-        Height = 438
+        ExplicitWidth = 712
+        ExplicitHeight = 435
+        Height = 436
         Width = 716
       end
     end
@@ -557,9 +544,9 @@ inherited frmMain: TfrmMain
           CustomStyles.ItemPressed = nbsItemStyle
         end
         inherited nbcSearch: TdxNavBarGroupControl
-          Top = 1056
+          Top = 933
           Width = 220
-          ExplicitTop = 1056
+          ExplicitTop = 933
           ExplicitWidth = 220
           GroupIndex = 5
           inherited dxLayoutControl1: TdxLayoutControl
@@ -589,6 +576,7 @@ inherited frmMain: TfrmMain
     inherited barInfo: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
+      FloatClientHeight = 24
     end
     inherited barOptions: TdxBar
       DockedDockControl = nil
@@ -598,18 +586,19 @@ inherited frmMain: TfrmMain
     inherited barAppearance: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
+      FloatClientHeight = 24
     end
     inherited barView: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
-      FloatClientWidth = 120
-      FloatClientHeight = 187
+      FloatClientWidth = 121
+      FloatClientHeight = 188
     end
     inherited barNavigation: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
-      FloatClientWidth = 81
-      FloatClientHeight = 50
+      FloatClientWidth = 82
+      FloatClientHeight = 53
     end
     inherited biExportToHTML: TdxBarLargeButton
       ImageIndex = 103

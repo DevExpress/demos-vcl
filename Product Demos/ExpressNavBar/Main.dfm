@@ -2,12 +2,12 @@ inherited frmMain: TfrmMain
   Caption = 'frmMain'
   ClientHeight = 862
   ClientWidth = 1111
-  ExplicitWidth = 1127
-  ExplicitHeight = 901
-  PixelsPerInch = 96
+  ExplicitWidth = 1123
+  ExplicitHeight = 900
   TextHeight = 13
   inherited dxRibbon1: TdxRibbon
     Width = 1111
+    Height = 124
     ApplicationButton.Visible = False
     ExplicitWidth = 1111
     inherited dxRibbon1Tab1: TdxRibbonTab
@@ -18,15 +18,27 @@ inherited frmMain: TfrmMain
     end
   end
   inherited pnlAllArea: TdxPanel
+    Top = 124
     Width = 1111
-    Height = 707
+    Height = 738
     ExplicitWidth = 1111
     ExplicitHeight = 707
     inherited plClient: TdxPanel
       Width = 902
-      Height = 707
+      Height = 738
       ExplicitWidth = 902
       ExplicitHeight = 707
+      inherited dxRibbonBackstageView1: TdxRibbonBackstageView
+        inherited bvtExport: TdxRibbonBackstageViewTabSheet
+          inherited gbExportItems: TcxGroupBox
+            inherited gbExportPane: TcxGroupBox
+              inherited bvgcExport: TdxRibbonBackstageViewGalleryControl
+                ExplicitWidth = 299
+              end
+            end
+          end
+        end
+      end
       object pnNavBarControlSite: TcxGroupBox
         Left = 0
         Top = 0
@@ -35,17 +47,18 @@ inherited frmMain: TfrmMain
         Style.BorderStyle = ebsNone
         Style.Edges = []
         TabOrder = 0
-        ExplicitHeight = 738
-        Height = 707
+        ExplicitWidth = 898
+        ExplicitHeight = 706
+        Height = 738
         Width = 902
       end
     end
     inherited NavBarSite: TPanel
-      Height = 707
-      ExplicitHeight = 738
+      Height = 738
+      ExplicitHeight = 706
       inherited NavBar: TdxNavBar
-        Height = 707
-        ExplicitHeight = 738
+        Height = 738
+        ExplicitHeight = 706
         object NavBarGroup1: TdxNavBarGroup [0]
           Caption = 'Highlighted Features'
           SelectedLinkIndex = -1
@@ -140,8 +153,8 @@ inherited frmMain: TfrmMain
           CustomStyles.ItemPressed = nbsItemStyle
         end
         inherited nbcSearch: TdxNavBarGroupControl
-          Top = 263
-          ExplicitTop = 263
+          Top = 240
+          ExplicitTop = 240
           GroupIndex = 2
         end
       end
@@ -152,33 +165,48 @@ inherited frmMain: TfrmMain
     inherited barPrintAndExport: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
+      DockedLeft = 0
       FloatClientWidth = 88
       FloatClientHeight = 179
+      Visible = False
+    end
+    inherited barQuickAccess: TdxBar
+      Visible = False
     end
     inherited barInfo: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
+      DockedLeft = 214
+      FloatClientHeight = 24
+      Visible = False
     end
     inherited barOptions: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
+      DockedLeft = 0
       FloatClientWidth = 110
+      Visible = False
     end
     inherited barAppearance: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
+      FloatClientHeight = 24
+      Visible = False
     end
     inherited barView: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
-      FloatClientWidth = 120
-      FloatClientHeight = 187
+      DockedLeft = 304
+      FloatClientWidth = 121
+      FloatClientHeight = 188
+      Visible = False
     end
     inherited barNavigation: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
-      FloatClientWidth = 81
-      FloatClientHeight = 50
+      FloatClientWidth = 82
+      FloatClientHeight = 53
+      Visible = False
     end
     inherited biExportToHTML: TdxBarLargeButton
       ImageIndex = 103
@@ -226,7 +254,7 @@ inherited frmMain: TfrmMain
   inherited ilBarLarge: TcxImageList
     FormatVersion = 1
     Bitmap = {
-      494C0101300038002C0020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010130003800040020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000080000000A001000001002000000000000040
       0300000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

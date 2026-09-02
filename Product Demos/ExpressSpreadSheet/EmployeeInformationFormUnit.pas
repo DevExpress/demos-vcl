@@ -18,7 +18,9 @@ uses
   dxLayoutControl, dxCore, dxCoreClasses, dxHashUtils, dxSpreadSheetCoreHistory,
   dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules,
   dxSpreadSheetContainers, dxSpreadSheetHyperlinks, dxSpreadSheetPrinting,
-  dxSpreadSheetUtils, cxClasses, Vcl.ExtCtrls, dxSpreadSheetStyles;
+  dxSpreadSheetUtils, cxClasses, Vcl.ExtCtrls, dxSpreadSheetStyles, dxSpreadSheetCoreFormulas, dxSpreadSheetCoreStyles,
+  dxSpreadSheetCoreStrs, dxSpreadSheetFormattedTextUtils, Vcl.ExtActns, System.Actions, Vcl.ActnList, Vcl.StdActns,
+  cxSplitter, dxSpreadSheetFormulaBar, cxTrackBar, dxZoomTrackBar;
 
 type
   { TfrmEmployeeInformation }
@@ -249,7 +251,7 @@ end;
 
 function TfrmEmployeeInformation.GetDescription: string;
 begin
-  Result := 'In this demo, the Spreadsheet’s API is used to create an employee paystubs template in code at runtime.' +
+  Result := 'In this demo, the Spreadsheet''s API is used to create an employee paystubs template in code at runtime.' +
   ' You can use the Employee Information or Payroll Calculator sheet to modify values and view the results of your' +
   ' changes in the Individual Paystubs sheet.'
 end;

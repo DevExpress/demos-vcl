@@ -4,15 +4,11 @@ inherited frmGridLayoutViewGroupScrolling: TfrmGridLayoutViewGroupScrolling
     ExplicitWidth = 752
     inherited Grid: TcxGrid
       Width = 752
+      Height = 667
       ExplicitWidth = 752
       object LayoutView: TcxGridDBLayoutView
-        Navigator.Buttons.CustomButtons = <>
         FilterBox.Visible = fvNever
-        ScrollbarAnnotations.CustomAnnotations = <>
         DataController.DataSource = dmMain.dsModels
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
         Images = dmMain.ilMain
         OptionsCustomize.RecordExpanding = True
         OptionsView.MinValueWidth = 40
@@ -395,21 +391,20 @@ inherited frmGridLayoutViewGroupScrolling: TfrmGridLayoutViewGroupScrolling
       ExplicitWidth = 169
       Width = 169
       inherited lcFrame: TdxLayoutControl
-        Width = 167
-        ExplicitWidth = 167
+        Width = 165
+        ExplicitLeft = 2
+        ExplicitTop = 18
+        ExplicitWidth = 165
         object seRecordWidth: TcxSpinEdit [0]
           Left = 87
           Top = 10
           Properties.AssignedValues.MinValue = True
           Properties.Increment = 100.000000000000000000
           Properties.OnChange = seRecordWidthPropertiesChange
-          Style.BorderColor = clWindowFrame
-          Style.BorderStyle = ebs3D
           Style.HotTrack = False
-          Style.ButtonStyle = bts3D
           TabOrder = 0
           Value = 500
-          Width = 70
+          Width = 68
         end
         object seRecordHeight: TcxSpinEdit [1]
           Left = 87
@@ -417,13 +412,10 @@ inherited frmGridLayoutViewGroupScrolling: TfrmGridLayoutViewGroupScrolling
           Properties.AssignedValues.MinValue = True
           Properties.Increment = 50.000000000000000000
           Properties.OnChange = seRecordHeightPropertiesChange
-          Style.BorderColor = clWindowFrame
-          Style.BorderStyle = ebs3D
           Style.HotTrack = False
-          Style.ButtonStyle = bts3D
           TabOrder = 1
           Value = 300
-          Width = 70
+          Width = 68
         end
         object dxLayoutItem1: TdxLayoutItem
           Parent = lgSetupTools

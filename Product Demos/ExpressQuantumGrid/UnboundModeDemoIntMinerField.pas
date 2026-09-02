@@ -341,7 +341,7 @@ var
       end
       else
       begin
-        // striked out bomb on an empty background
+        // strike out bomb on an empty background
         with ACanvas do
         begin
           Brush.Color := FOpenCellBkColor;
@@ -391,14 +391,14 @@ var
        FImages.Draw(ACanvas, ARect.Left, ARect.Top, imBomb) // bomb on an empty background
      end else
      begin
-       Frame3D(ACanvas, ARect, FFrameColor, FOpenCellBkColor, 1); // unpressesd
+       Frame3D(ACanvas, ARect, FFrameColor, FOpenCellBkColor, 1); // not pressed
        FImages.Draw(ACanvas, ARect.Left, ARect.Top, imQuestionMark);      // question mark
      end
      end else
      if (FGameStatus = gsNew) or (FGameStatus = gsRun) then
      begin
        if not IsExistsInArray(FPressedCells, ACol, ARow) then
-         Frame3D(ACanvas, ARect, FFrameColor, FOpenCellBkColor, 1) // unpresses
+         Frame3D(ACanvas, ARect, FFrameColor, FOpenCellBkColor, 1) // not pressed
        else
          Frame3D(ACanvas, ARect, FOpenCellBkColor, FFrameColor, 1); // pressed
        FImages.Draw(ACanvas, ARect.Left, ARect.Top, imQuestionMark);      // question mark
@@ -552,7 +552,7 @@ begin
     or (Shift = [ssMiddle]) or (Shift = [ssLeft, ssMiddle])
     or (Shift = [ssRight, ssMiddle]) then
   begin
-    FireImageChanged(imAstonisment);
+    FireImageChanged(imAstonishment);
     FSurprised := True;
     for i:=-1 to 1 do
       for j:=-1 to 1 do
@@ -568,7 +568,7 @@ begin
 
   if Button = mbLeft then
   begin
-    FireImageChanged(imAstonisment);
+    FireImageChanged(imAstonishment);
     FSurprised := True;
     if (CellState[ACol, ARow].CellState = csClosed)
         or (CellState[ACol, ARow].CellState = csQuestionMarked) then

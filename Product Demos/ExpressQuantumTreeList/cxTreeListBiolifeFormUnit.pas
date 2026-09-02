@@ -15,7 +15,7 @@ uses
 type
   TfrmBiolife = class(TcxDBTreeListDemoUnitForm)
     clnCategory: TcxDBTreeListColumn;
-    tlDBcxDBTreeListColumn2: TcxDBTreeListColumn;
+    clnCommonName: TcxDBTreeListColumn;
     clnLength: TcxDBTreeListColumn;
     clnMark: TcxDBTreeListColumn;
     clnSpeciesName: TcxDBTreeListColumn;

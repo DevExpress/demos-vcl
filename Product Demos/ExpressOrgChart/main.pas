@@ -5,11 +5,8 @@ unit Main;
 interface
 
 uses
-{$IFDEF DELPHIXE8}
-  System.UITypes,
-  System.ImageList,
-{$ENDIF}
-  System.Types, Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  System.UITypes, System.ImageList, System.Types, Winapi.Windows, Winapi.Messages, System.SysUtils, System.Classes,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
   Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, dxdborgc, dxorgchr, Vcl.ComCtrls,
   Vcl.Menus, Vcl.StdCtrls, cxGraphics, cxControls, cxLookAndFeels, cxClasses,
   cxLookAndFeelPainters, Vcl.ImgList, cxPC, cxButtons, dxSkinsCore, dxBar, cxStyles,

@@ -103,7 +103,7 @@ begin
   begin
      //Save Section information
      ACurrSection := ATreeList.Root[I].Values[0];
-     //Skip sectioms with blank names
+     //Skip sections with blank names
      if ACurrSection = '' then continue;
      for J := 0 to ATreeList.Root[I].Count - 1 do
      begin
@@ -137,7 +137,7 @@ end;
 procedure TfrmIniEditor.SetFileName(const Value: string);
 begin
   if (FFileName = Value) or not FileExists(Value) then exit;
-  LoadFromINIFIle(UnboundTreeList, Value);
+  LoadFromINIFile(UnboundTreeList, Value);
   FFileName := Value;
   liFileName.Caption := FileName;
   btnSave.Enabled := FileName <> '';

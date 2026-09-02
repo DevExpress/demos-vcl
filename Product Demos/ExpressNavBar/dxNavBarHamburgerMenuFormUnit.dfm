@@ -6,7 +6,6 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
   OnResize = FormResize
   ExplicitWidth = 1097
   ExplicitHeight = 697
-  PixelsPerInch = 96
   TextHeight = 13
   inherited lcMain: TdxLayoutControl
     Width = 1097
@@ -14,20 +13,15 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
     ExplicitWidth = 1097
     ExplicitHeight = 697
     object cxGrid1: TcxGrid [0]
-      Left = 264
-      Top = 116
-      Width = 575
-      Height = 532
+      Left = 267
+      Top = 98
+      Width = 590
+      Height = 547
       BorderStyle = cxcbsNone
       TabOrder = 1
       object cxGrid1DBTableView1: TcxGridDBTableView
-        Navigator.Buttons.CustomButtons = <>
         FilterBox.Visible = fvNever
-        ScrollbarAnnotations.CustomAnnotations = <>
         DataController.DataSource = DataModule2.dsEmployees
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
         OptionsData.Editing = False
         OptionsSelection.CellSelect = False
         OptionsView.CellEndEllipsis = True
@@ -62,7 +56,6 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
           Width = 120
         end
         object cxGrid1DBTableView1Phones: TcxGridDBColumn
-          DataBinding.IsNullValueType = True
           PropertiesClassName = 'TcxLabelProperties'
           Properties.Alignment.Horz = taCenter
           Properties.Alignment.Vert = taVCenter
@@ -88,8 +81,8 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
       end
     end
     object cxDBImage1: TcxDBImage [1]
-      Left = 854
-      Top = 147
+      Left = 875
+      Top = 116
       DataBinding.DataField = 'Picture'
       DataBinding.DataSource = DataModule2.dsEmployees
       Properties.GraphicClassName = 'TdxSmartImage'
@@ -99,8 +92,8 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
       Width = 196
     end
     object dblEmployeeName: TcxDBLabel [2]
-      Left = 904
-      Top = 263
+      Left = 925
+      Top = 232
       AutoSize = True
       DataBinding.DataField = 'FullName'
       DataBinding.DataSource = DataModule2.dsEmployees
@@ -114,86 +107,92 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
       Style.HotTrack = False
       Style.TextStyle = [fsBold]
       Style.IsFontAssigned = True
+      TabOrder = 3
       Transparent = True
-      AnchorX = 952
+      AnchorX = 973
     end
     object dblEmployeePosition: TcxDBLabel [3]
-      Left = 914
-      Top = 289
+      Left = 935
+      Top = 258
       AutoSize = True
       DataBinding.DataField = 'Title'
       DataBinding.DataSource = DataModule2.dsEmployees
       Properties.Alignment.Horz = taCenter
       Style.HotTrack = False
+      TabOrder = 4
       Transparent = True
-      AnchorX = 952
+      AnchorX = 973
     end
     object dblEmployeeHireDate: TcxDBLabel [4]
-      Left = 907
-      Top = 355
+      Left = 928
+      Top = 311
       DataBinding.DataField = 'HireDate'
       DataBinding.DataSource = DataModule2.dsEmployees
       Properties.Alignment.Vert = taVCenter
       Style.HotTrack = False
+      TabOrder = 5
       Transparent = True
       Height = 21
       Width = 143
-      AnchorY = 366
+      AnchorY = 322
     end
     object dblEmployeeBirthday: TcxDBLabel [5]
-      Left = 907
-      Top = 382
+      Left = 928
+      Top = 338
       DataBinding.DataField = 'BirthDate'
       DataBinding.DataSource = DataModule2.dsEmployees
       Properties.Alignment.Vert = taVCenter
       Style.HotTrack = False
+      TabOrder = 6
       Transparent = True
       Height = 21
       Width = 143
-      AnchorY = 393
+      AnchorY = 349
     end
     object dblEmployeeCity: TcxDBLabel [6]
-      Left = 907
-      Top = 593
+      Left = 928
+      Top = 523
       DataBinding.DataField = 'Address_City'
       DataBinding.DataSource = DataModule2.dsEmployees
       Properties.Alignment.Vert = taVCenter
       Style.HotTrack = False
+      TabOrder = 11
       Transparent = True
       Height = 21
       Width = 143
-      AnchorY = 604
+      AnchorY = 534
     end
     object dblEmployeeHome: TcxDBLabel [7]
-      Left = 907
-      Top = 452
+      Left = 928
+      Top = 395
       DataBinding.DataField = 'HomePhone'
       DataBinding.DataSource = DataModule2.dsEmployees
       Properties.Alignment.Vert = taVCenter
       Style.HotTrack = False
+      TabOrder = 7
       Transparent = True
       Height = 21
       Width = 121
-      AnchorY = 463
+      AnchorY = 406
     end
     object dblEmployeeMobile: TcxDBLabel [8]
-      Left = 907
-      Top = 479
+      Left = 928
+      Top = 422
       DataBinding.DataField = 'MobilePhone'
       DataBinding.DataSource = DataModule2.dsEmployees
       Properties.Alignment.Vert = taVCenter
       Style.HotTrack = False
+      TabOrder = 8
       Transparent = True
       Height = 21
       Width = 121
-      AnchorY = 490
+      AnchorY = 433
     end
     object dxNavBar1: TdxNavBar [9]
       Left = 0
-      Top = 105
+      Top = 84
       Width = 247
-      Height = 554
-      Color = 16053234
+      Height = 575
       ActiveGroupIndex = 0
       TabOrder = 0
       TabStop = True
@@ -224,13 +223,13 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
         ParentGroupIndex = -1
         Position = 0
       end
-      object nbgSheduler: TdxNavBarGroup
-        Caption = 'Sheduler'
+      object nbgScheduler: TdxNavBarGroup
+        Caption = 'Scheduler'
         SelectedLinkIndex = -1
         SmallImageIndex = 2
         TopVisibleLinkIndex = 0
-        OnClick = nbgShedulerClick
-        OnSelectedLinkChanged = nbgShedulerSelectedLinkChanged
+        OnClick = nbgSchedulerClick
+        OnSelectedLinkChanged = nbgSchedulerSelectedLinkChanged
         Links = <
           item
             Item = nbiSchedulerNewEvent
@@ -332,7 +331,7 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
             Position = 1
           end
           item
-            Item = nbiSchedulerBithDate
+            Item = nbiSchedulerBirthDate
             Position = 0
           end>
         ParentGroupIndex = 1
@@ -382,23 +381,23 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
         OptionsExpansion.ShowExpandButton = False
         Links = <
           item
-            Item = nbiFileterMailAll
+            Item = nbiFilterMailAll
             Position = 0
           end
           item
-            Item = nbiFileterMailRead
+            Item = nbiFilterMailRead
             Position = 1
           end
           item
-            Item = nbiFileterMailToday
+            Item = nbiFilterMailToday
             Position = 2
           end
           item
-            Item = nbiFileterMailYesterday
+            Item = nbiFilterMailYesterday
             Position = 3
           end
           item
-            Item = nbiFileterMailImportance
+            Item = nbiFilterMailImportance
             Position = 4
           end>
         ParentGroupIndex = 2
@@ -433,8 +432,8 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
       object nbInplaceReadingPane: TdxNavBarItem
         Caption = 'Reading pane'
       end
-      object nbInplaceSingature: TdxNavBarItem
-        Caption = 'Singature'
+      object nbInplaceSignature: TdxNavBarItem
+        Caption = 'Signature'
       end
       object nbInplaceNotifications: TdxNavBarItem
         Caption = 'Notifications'
@@ -486,7 +485,7 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
       object nbiSchedulerCalendar: TdxNavBarItem
         Caption = 'Calendar'
       end
-      object nbiSchedulerBithDate: TdxNavBarItem
+      object nbiSchedulerBirthDate: TdxNavBarItem
         Caption = 'Birth Date'
       end
       object nbiSchedulerMSCalendar: TdxNavBarItem
@@ -505,25 +504,25 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
       object nbiMailAccount3: TdxNavBarItem
         Caption = 'support@devav.com'
       end
-      object nbiFileterMailAll: TdxNavBarItem
+      object nbiFilterMailAll: TdxNavBarItem
         Caption = 'All'
-        OnClick = nbiFileterMailAllClick
+        OnClick = nbiFilterMailAllClick
       end
-      object nbiFileterMailRead: TdxNavBarItem
+      object nbiFilterMailRead: TdxNavBarItem
         Caption = 'Read'
-        OnClick = nbiFileterMailReadClick
+        OnClick = nbiFilterMailReadClick
       end
-      object nbiFileterMailToday: TdxNavBarItem
+      object nbiFilterMailToday: TdxNavBarItem
         Caption = 'Today'
-        OnClick = nbiFileterMailTodayClick
+        OnClick = nbiFilterMailTodayClick
       end
-      object nbiFileterMailYesterday: TdxNavBarItem
+      object nbiFilterMailYesterday: TdxNavBarItem
         Caption = 'Yesterday'
-        OnClick = nbiFileterMailYesterdayClick
+        OnClick = nbiFilterMailYesterdayClick
       end
-      object nbiFileterMailImportance: TdxNavBarItem
+      object nbiFilterMailImportance: TdxNavBarItem
         Caption = 'Importance'
-        OnClick = nbiFileterMailImportanceClick
+        OnClick = nbiFilterMailImportanceClick
       end
       object dxNavBar1Item1: TdxNavBarItem
         Caption = 'Skype'
@@ -541,14 +540,14 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
       end
       object dxNavBar1Group1Control: TdxNavBarGroupControl
         Left = 1
-        Top = 107
+        Top = 132
         Width = 245
         Height = 119
         TabOrder = 0
         UseStyle = True
         GroupIndex = 10
         OriginalHeight = 119
-        object lcContacs: TdxLayoutControl
+        object lcContacts: TdxLayoutControl
           Left = 0
           Top = 0
           Width = 245
@@ -558,7 +557,7 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
           TabOrder = 0
           Transparent = True
           LayoutLookAndFeel = dxLayoutCxLookAndFeel1
-          object lcContacsGroup_Root: TdxLayoutGroup
+          object lcContactsGroup_Root: TdxLayoutGroup
             AlignHorz = ahClient
             AlignVert = avClient
             LayoutLookAndFeel = dxLayoutCxLookAndFeel2
@@ -592,14 +591,14 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
             Index = 2
           end
           object dxLayoutEmptySpaceItem1: TdxLayoutEmptySpaceItem
-            Parent = lcContacsGroup_Root
+            Parent = lcContactsGroup_Root
             SizeOptions.Height = 10
             SizeOptions.Width = 30
             CaptionOptions.Text = 'Empty Space Item'
             Index = 0
           end
           object dxLayoutAutoCreatedGroup2: TdxLayoutAutoCreatedGroup
-            Parent = lcContacsGroup_Root
+            Parent = lcContactsGroup_Root
             AlignHorz = ahClient
             Index = 1
           end
@@ -620,14 +619,11 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
       TabOrder = 14
       Visible = False
       object tvMain: TcxGridDBTableView
-        Navigator.Buttons.CustomButtons = <>
         FilterBox.Visible = fvNever
-        ScrollbarAnnotations.CustomAnnotations = <>
         OnFocusedRecordChanged = tvMainFocusedRecordChanged
         DataController.DataSource = DataModule2.dsMails
         DataController.Filter.Options = [fcoCaseInsensitive]
         DataController.KeyFieldNames = 'ID'
-        DataController.Summary.DefaultGroupSummaryItems = <>
         DataController.Summary.FooterSummaryItems = <
           item
             Kind = skCount
@@ -771,7 +767,6 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
         end
         object dbcContentFileName: TcxGridDBColumn
           DataBinding.FieldName = 'FileName'
-          DataBinding.IsNullValueType = True
           Visible = False
         end
         object dbcAttachmentID: TcxGridDBColumn
@@ -839,9 +834,10 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
       Style.TransparentBorder = True
       Style.IsFontAssigned = True
       Properties.WordWrap = True
+      TabOrder = 15
       Transparent = True
       Visible = False
-      Width = 400
+      Width = 70
     end
     object Scheduler: TcxScheduler [13]
       Left = 10000
@@ -869,33 +865,34 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
       StoredClientBounds = {01000000010000003503000013020000}
     end
     object flEMail: TdxFormattedLabel [14]
-      Left = 907
-      Top = 506
+      Left = 928
+      Top = 449
       Caption = 'flEMail'
       Style.HotTrack = False
       Style.TransparentBorder = False
       Transparent = True
     end
     object flSkype: TdxFormattedLabel [15]
-      Left = 907
-      Top = 528
+      Left = 928
+      Top = 471
       Caption = 'Skype'
       Style.HotTrack = False
       Style.TransparentBorder = False
       Transparent = True
     end
     object cxDBLabel1: TcxDBLabel [16]
-      Left = 907
-      Top = 620
+      Left = 928
+      Top = 550
       DataBinding.DataField = 'Address_ZipCode'
       DataBinding.DataSource = DataModule2.dsEmployees
       Properties.Alignment.Vert = taVCenter
       Style.HotTrack = False
       Style.TransparentBorder = False
+      TabOrder = 12
       Transparent = True
       Height = 21
       Width = 143
-      AnchorY = 631
+      AnchorY = 561
     end
     inherited lcMainGroup_Root: TdxLayoutGroup
       ItemIndex = 3
@@ -1393,7 +1390,7 @@ inherited frmHamburgerMenu: TfrmHamburgerMenu
         Caption = 'Reading pane'
       end
       object dxNavBarSettingsItem7: TdxNavBarItem
-        Caption = 'Singature'
+        Caption = 'Signature'
       end
       object dxNavBarSettingsItem8: TdxNavBarItem
         Caption = 'Notifications'

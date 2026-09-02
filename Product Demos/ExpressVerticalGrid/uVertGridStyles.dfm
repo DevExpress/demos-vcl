@@ -1,14 +1,18 @@
 inherited frmVertGridStyles: TfrmVertGridStyles
   Width = 807
   Height = 524
+  ExplicitWidth = 807
+  ExplicitHeight = 524
   inherited lcFrame: TdxLayoutControl
     Width = 807
     Height = 524
+    ExplicitWidth = 807
+    ExplicitHeight = 524
     inherited cxDBVerticalGrid: TcxDBVerticalGrid
-      Width = 569
-      Height = 445
-      ExplicitWidth = 569
-      ExplicitHeight = 445
+      Width = 571
+      Height = 464
+      ExplicitWidth = 571
+      ExplicitHeight = 464
       Version = 1
       inherited cxDBVerticalGridID: TcxDBMultiEditorRow
         ID = 0
@@ -125,11 +129,7 @@ inherited frmVertGridStyles: TfrmVertGridStyles
       AutoSize = False
       Properties.DropDownListStyle = lsFixedList
       Properties.OnEditValueChanged = cbStyleSheetListPropertiesEditValueChanged
-      Style.BorderColor = clWindowFrame
-      Style.BorderStyle = ebs3D
       Style.HotTrack = False
-      Style.ButtonStyle = bts3D
-      Style.PopupBorderStyle = epbsFrame3D
       TabOrder = 1
       Height = 25
       Width = 97

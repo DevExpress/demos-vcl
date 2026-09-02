@@ -1,11 +1,12 @@
 inherited cxSchedulerEventCustomEditor: TcxSchedulerEventCustomEditor
-  ClientWidth = 784
-  PixelsPerInch = 96
-  ExplicitWidth = 796
+  ClientHeight = 577
+  ClientWidth = 776
+  ExplicitWidth = 792
+  ExplicitHeight = 616
   TextHeight = 13
   inherited Ribbon: TdxRibbon
-    Width = 784
-    ExplicitWidth = 780
+    Width = 776
+    ExplicitWidth = 776
     inherited tabAppointment: TdxRibbonTab
       Index = 0
     end
@@ -57,43 +58,54 @@ inherited cxSchedulerEventCustomEditor: TcxSchedulerEventCustomEditor
     end
   end
   inherited lcMain: TdxLayoutControl
-    Width = 784
-    ExplicitWidth = 780
+    Width = 776
+    Height = 410
+    ExplicitWidth = 776
+    ExplicitHeight = 410
+    DesignSize = (
+      776
+      410)
     inherited cxGroupBox1: TcxGroupBox
-      ExplicitWidth = 638
-      Width = 638
+      ExplicitWidth = 634
+      Width = 634
       inherited lbInformation: TcxLabel
-        ExplicitWidth = 628
+        ExplicitWidth = 626
         AnchorY = 12
       end
     end
     inherited btnFindTime: TcxButton
-      Left = 654
-      ExplicitLeft = 654
+      Left = 650
+      ExplicitLeft = 650
     end
     inherited teLocation: TcxTextEdit
-      ExplicitWidth = 687
-      Width = 687
+      ExplicitWidth = 683
+      Width = 683
     end
     inherited teSubject: TcxTextEdit
-      ExplicitWidth = 687
-      Width = 687
+      ExplicitWidth = 683
+      Width = 683
     end
     inherited lbRecurrencePattern: TcxLabel
-      ExplicitWidth = 687
-      Width = 687
+      ExplicitWidth = 683
+      Width = 683
     end
     inherited cbResources: TcxCheckComboBox
-      ExplicitWidth = 687
-      Width = 687
+      ExplicitWidth = 683
+      Width = 683
     end
-    object recMessage: TdxRichEditControl [15]
+    inherited meMessage: TcxMemo
+      Top = 406
+      TabOrder = 16
+      ExplicitTop = 406
+      ExplicitWidth = 760
+      Width = 760
+    end
+    object recMessage: TdxRichEditControl [16]
       Left = 10
-      Top = 306
-      Width = 764
-      Height = 70
+      Top = 338
+      Width = 760
+      Height = 62
       ActiveViewType = Simple
-      Color = 16053234
       Options.Behavior.Open = Disabled
       Options.Behavior.Printing = Disabled
       Options.Behavior.Save = Disabled
@@ -101,21 +113,22 @@ inherited cxSchedulerEventCustomEditor: TcxSchedulerEventCustomEditor
       TabOrder = 15
       OnModifiedChanged = recMessageModifiedChanged
     end
-    inherited meMessage: TcxMemo
-      Left = 202
-      Top = 212
-      TabOrder = 19
-      ExplicitLeft = 202
-      ExplicitTop = 212
-    end
     inherited lcMainGroup_Root: TdxLayoutGroup
-      ItemIndex = 8
+      ItemIndex = 9
     end
     inherited pnlMessage: TdxLayoutItem
       Control = recMessage
       ControlOptions.AutoColor = True
       ControlOptions.OriginalHeight = 200
       ControlOptions.OriginalWidth = 300
+    end
+    object liOldMessage: TdxLayoutItem
+      Parent = lcMainGroup_Root
+      Control = meMessage
+      ControlOptions.OriginalHeight = 30
+      ControlOptions.OriginalWidth = 519
+      ControlOptions.ShowBorder = False
+      Index = 9
     end
   end
   inherited ilSmallImages: TcxImageList
@@ -11084,7 +11097,7 @@ inherited cxSchedulerEventCustomEditor: TcxSchedulerEventCustomEditor
       DockedDockControl = nil
       DockedDockingStyle = dsNone
       FloatClientWidth = 161
-      FloatClientHeight = 98
+      FloatClientHeight = 106
     end
     object dxBarClipboard: TdxBar [3]
       Caption = 'Clipboard'
@@ -11147,8 +11160,8 @@ inherited cxSchedulerEventCustomEditor: TcxSchedulerEventCustomEditor
           Visible = True
           ItemName = 'dxBarButtonSelectAll'
         end>
-      OneOnRow = True
-      Row = 3
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -11293,8 +11306,8 @@ inherited cxSchedulerEventCustomEditor: TcxSchedulerEventCustomEditor
           Visible = True
           ItemName = 'dxRibbonColorGalleryItemFontColor'
         end>
-      OneOnRow = True
-      Row = 2
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -11344,7 +11357,7 @@ inherited cxSchedulerEventCustomEditor: TcxSchedulerEventCustomEditor
           Position = ipContinuesRow
           ViewLevels = [ivlSmallIcon, ivlControlOnly]
           Visible = True
-          ItemName = 'dxBarButtonMultilevellist'
+          ItemName = 'dxBarButtonMultilevelList'
         end
         item
           ButtonGroup = bgpStart
@@ -11401,8 +11414,8 @@ inherited cxSchedulerEventCustomEditor: TcxSchedulerEventCustomEditor
           Visible = True
           ItemName = 'dxBarSubItem2'
         end>
-      OneOnRow = True
-      Row = 1
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -11464,7 +11477,7 @@ inherited cxSchedulerEventCustomEditor: TcxSchedulerEventCustomEditor
           Visible = True
           ItemName = 'dxBarLargeButtonRedo'
         end>
-      OneOnRow = True
+      OneOnRow = False
       Row = 0
       UseOwnFont = False
       Visible = True
@@ -11506,8 +11519,8 @@ inherited cxSchedulerEventCustomEditor: TcxSchedulerEventCustomEditor
           Visible = True
           ItemName = 'dxBarLargeButtonTable'
         end>
-      OneOnRow = True
-      Row = 4
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -11561,8 +11574,8 @@ inherited cxSchedulerEventCustomEditor: TcxSchedulerEventCustomEditor
           Visible = True
           ItemName = 'dxBarLargeButtonPicture'
         end>
-      OneOnRow = True
-      Row = 3
+      OneOnRow = False
+      Row = 0
       UseOwnFont = False
       Visible = True
       WholeRow = False
@@ -11879,7 +11892,7 @@ inherited cxSchedulerEventCustomEditor: TcxSchedulerEventCustomEditor
       ButtonStyle = bsChecked
       LargeImageIndex = 25
     end
-    object dxBarButtonMultilevellist: TdxBarButton
+    object dxBarButtonMultilevelList: TdxBarButton
       Action = dxRichEditControlToggleMultiLevelList
       Category = 6
       ButtonStyle = bsChecked

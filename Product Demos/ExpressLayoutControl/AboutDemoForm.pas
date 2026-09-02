@@ -8,7 +8,7 @@ uses
   dxSkinsCore, dxLayoutcxEditAdapters, dxLayoutContainer, cxClasses, dxLayoutControl, dxLayoutLookAndFeels;
 
 type
-  TformAboutDemo = class(TForm)
+  TFormAboutDemo = class(TForm)
     redDescription: TcxRichEdit;
     dxLayoutControl1Group_Root: TdxLayoutGroup;
     dxLayoutControl1: TdxLayoutControl;
@@ -29,7 +29,7 @@ uses
   System.Types;
 
 var
-  FForm: TformAboutDemo;
+  FForm: TFormAboutDemo;
 
 procedure ShowAboutDemoForm;
 var
@@ -40,7 +40,7 @@ begin
     ADescription := TStringList.Create;
     try
       ADescription.LoadFromFile(ExtractFilePath(Application.ExeName) + 'About.txt');
-      FForm := TformAboutDemo.Create(ADescription.Text);
+      FForm := TFormAboutDemo.Create(ADescription.Text);
     finally
       ADescription.Free;
     end;
@@ -48,7 +48,9 @@ begin
   FForm.Show;
 end;
 
-constructor TformAboutDemo.Create(const ADescription: string);
+{ TFormAboutDemo }
+
+constructor TFormAboutDemo.Create(const ADescription: string);
 
   procedure AssignBounds;
   var

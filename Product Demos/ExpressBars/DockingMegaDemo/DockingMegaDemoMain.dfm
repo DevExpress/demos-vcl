@@ -20,20 +20,18 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
   TextHeight = 13
   object dsHost: TdxDockSite
     Left = 0
-    Top = 51
+    Top = 55
     Width = 1200
-    Height = 704
+    Height = 700
     Align = alClient
     DockingType = 5
     OriginalWidth = 1200
-    OriginalHeight = 704
+    OriginalHeight = 700
     object dxLayoutDockSite2: TdxLayoutDockSite
       Left = 0
       Top = 0
       Width = 900
-      Height = 680
-      ExplicitWidth = 896
-      ExplicitHeight = 679
+      Height = 676
       DockingType = 0
       OriginalWidth = 300
       OriginalHeight = 200
@@ -41,7 +39,7 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
         Left = 300
         Top = 0
         Width = 600
-        Height = 680
+        Height = 676
         DockingType = 0
         OriginalWidth = 300
         OriginalHeight = 200
@@ -49,9 +47,7 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
           Left = 0
           Top = 0
           Width = 600
-          Height = 680
-          ExplicitWidth = 596
-          ExplicitHeight = 679
+          Height = 676
           DockingType = 0
           OriginalWidth = 300
           OriginalHeight = 200
@@ -59,7 +55,7 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
             Left = 0
             Top = 0
             Width = 600
-            Height = 680
+            Height = 676
             DockingType = 0
             OriginalWidth = 300
             OriginalHeight = 200
@@ -68,7 +64,7 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
             Left = 0
             Top = 0
             Width = 600
-            Height = 680
+            Height = 676
             ActiveChildIndex = 0
             AllowFloating = True
             AutoHide = False
@@ -85,15 +81,13 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
               Left = 0
               Top = 0
               Width = 596
-              Height = 651
+              Height = 647
               AllowFloating = True
               AutoHide = False
               Caption = 'Welcome Page'
               CustomCaptionButtons.Buttons = <>
               ImageIndex = 8
               TabsProperties.CustomButtons.Buttons = <>
-              ExplicitWidth = 592
-              ExplicitHeight = 650
               DockingType = 0
               OriginalWidth = 470
               OriginalHeight = 285
@@ -114,9 +108,7 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
                 Style.Edges = []
                 Style.TransparentBorder = False
                 TabOrder = 0
-                ExplicitWidth = 582
-                ExplicitHeight = 640
-                Height = 641
+                Height = 637
                 Width = 586
               end
             end
@@ -124,15 +116,13 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
               Left = 0
               Top = 0
               Width = 596
-              Height = 651
+              Height = 647
               AllowFloating = True
               AutoHide = False
               Caption = 'Unit1.pas'
               CustomCaptionButtons.Buttons = <>
               ImageIndex = 9
               TabsProperties.CustomButtons.Buttons = <>
-              ExplicitWidth = 592
-              ExplicitHeight = 650
               DockingType = 0
               OriginalWidth = 185
               OriginalHeight = 140
@@ -153,10 +143,9 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
                 StyleDisabled.LookAndFeel.SkinName = ''
                 StyleFocused.LookAndFeel.SkinName = ''
                 StyleHot.LookAndFeel.SkinName = ''
+                StyleReadOnly.LookAndFeel.SkinName = ''
                 TabOrder = 0
-                ExplicitWidth = 582
-                ExplicitHeight = 640
-                Height = 641
+                Height = 637
                 Width = 586
               end
             end
@@ -281,7 +270,7 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
         Left = 0
         Top = 0
         Width = 300
-        Height = 680
+        Height = 676
         ActiveChildIndex = -1
         AllowFloating = True
         AutoHide = False
@@ -293,7 +282,7 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
           Left = 0
           Top = 0
           Width = 300
-          Height = 308
+          Height = 306
           AllowFloating = True
           AutoHide = False
           Caption = 'Structure'
@@ -307,19 +296,18 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
             Left = 0
             Top = 0
             Width = 296
-            Height = 284
+            Height = 282
             Align = alClient
             Images = ilStructure
             TabOrder = 0
             OnSelectionChanged = tvStructureSelectionChanged
-            ExplicitHeight = 283
           end
         end
         object dpProperties: TdxDockPanel
           Left = 0
-          Top = 308
+          Top = 306
           Width = 300
-          Height = 372
+          Height = 370
           AllowFloating = True
           AutoHide = False
           Caption = 'Object Inspector'
@@ -331,9 +319,9 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
           OriginalHeight = 398
           object cxRTTIInspector1: TcxRTTIInspector
             Left = 0
-            Top = 27
+            Top = 31
             Width = 296
-            Height = 321
+            Height = 315
             BorderStyle = cxcbsNone
             Align = alClient
             InspectedObject = DockingManager
@@ -360,13 +348,11 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
       Left = 900
       Top = 0
       Width = 300
-      Height = 680
+      Height = 676
       ActiveChildIndex = -1
       AllowFloating = True
       AutoHide = False
       CustomCaptionButtons.Buttons = <>
-      ExplicitLeft = 896
-      ExplicitHeight = 679
       DockingType = 3
       OriginalWidth = 300
       OriginalHeight = 264
@@ -374,7 +360,7 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
         Left = 0
         Top = 0
         Width = 300
-        Height = 328
+        Height = 326
         AllowFloating = True
         AutoHide = False
         Caption = 'Project Manager'
@@ -388,7 +374,7 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
           Left = 0
           Top = 0
           Width = 296
-          Height = 304
+          Height = 302
           Align = alClient
           Images = ilProjectManager
           TabOrder = 0
@@ -420,9 +406,9 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
       end
       object dpToolbox: TdxDockPanel
         Left = 0
-        Top = 328
+        Top = 326
         Width = 300
-        Height = 352
+        Height = 350
         ManagerFont = False
         ParentFont = True
         AllowFloating = True
@@ -438,7 +424,7 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
           Left = 0
           Top = 0
           Width = 296
-          Height = 328
+          Height = 326
           Align = alClient
           ActiveGroupIndex = 0
           TabOrder = 0
@@ -448,7 +434,6 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
           OptionsBehavior.NavigationPane.Collapsible = True
           OptionsImage.SmallImages = iComponentsIcons
           OptionsView.NavigationPane.MaxVisibleGroups = 0
-          ExplicitHeight = 327
           object bgStandard: TdxNavBarGroup
             Caption = 'Standard'
             SelectedLinkIndex = -1
@@ -619,8 +604,6 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
     TabOrder = 1
     AutoSize = True
     LayoutLookAndFeel = dxLayoutCxLookAndFeel1
-    ExplicitTop = 754
-    ExplicitWidth = 1196
     object dxLayoutControl1Group_Root: TdxLayoutGroup
       AlignHorz = ahClient
       AlignVert = avClient
@@ -716,14 +699,13 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
     ImageOptions.LargeImages = imBarIcons
     ImageOptions.StretchGlyphs = False
     PopupMenuLinks = <>
-    Style = bmsUseLookAndFeel
     UseSystemFont = True
     Left = 598
     PixelsPerInch = 96
     DockControlHeights = (
       0
       0
-      51
+      55
       0)
     object BarManagerBar1: TdxBar
       Caption = 'Main Menu'
@@ -1491,6 +1473,7 @@ object DockingMegaDemoMainForm: TDockingMegaDemoMainForm
     PixelsPerInch = 96
   end
   object SkinController: TdxSkinController
+    NativeStyle = False
     ScrollbarMode = sbmHybrid
     Left = 536
   end

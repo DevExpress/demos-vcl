@@ -51,8 +51,8 @@ object fmAddDictionary: TfmAddDictionary
           Default = True
           Kind = bkEllipsis
         end>
-      Properties.OnButtonClick = beAffFilePropertiesButtonClick
-      Properties.OnChange = beAffFilePropertiesChange
+      Properties.OnButtonClick = beAffixFilePropertiesButtonClick
+      Properties.OnChange = CanAddDictionary
       Style.HotTrack = False
       Style.TransparentBorder = False
       TabOrder = 0
@@ -67,8 +67,8 @@ object fmAddDictionary: TfmAddDictionary
           Default = True
           Kind = bkEllipsis
         end>
-      Properties.OnButtonClick = beDicFilePropertiesButtonClick
-      Properties.OnChange = beAffFilePropertiesChange
+      Properties.OnButtonClick = beDictionaryFilePropertiesButtonClick
+      Properties.OnChange = CanAddDictionary
       Style.HotTrack = False
       Style.TransparentBorder = False
       TabOrder = 1
@@ -109,19 +109,19 @@ object fmAddDictionary: TfmAddDictionary
       LayoutDirection = ldHorizontal
       Index = 0
     end
-    object lgDictionatyTypeHunspell: TdxLayoutRadioButtonItem
+    object lgDictionaryTypeHunspell: TdxLayoutRadioButtonItem
       Parent = lgDictionaryType
       CaptionOptions.Text = 'Hunspell (recommended)'
       Checked = True
       TabStop = True
       Index = 0
     end
-    object lgDictionatyTypeOpenOffice: TdxLayoutRadioButtonItem
+    object lgDictionaryTypeOpenOffice: TdxLayoutRadioButtonItem
       Parent = lgDictionaryType
       CaptionOptions.Text = 'Open Office'
       Index = 1
     end
-    object lgDictionatyTypeISpell: TdxLayoutRadioButtonItem
+    object lgDictionaryTypeISpell: TdxLayoutRadioButtonItem
       Parent = lgDictionaryType
       CaptionOptions.Text = 'ISpell'
       Index = 2
@@ -137,7 +137,7 @@ object fmAddDictionary: TfmAddDictionary
       CaptionOptions.AlignHorz = taCenter
       CaptionOptions.Text = 
         'You can [URL=http://wiki.services.openoffice.org/wiki/Dictionari' +
-        'es]download free Hunspell dictionaries[/URL]'
+        'es] download free Hunspell dictionaries[/URL]'
       Index = 0
     end
     object lgOptions: TdxLayoutGroup

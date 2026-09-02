@@ -105,8 +105,8 @@ end;
 
 function TdxFlowChartBaseDiagramDesignerForm.GetDescription: string;
 begin
-  Result := 'This example shows a diagram created using the ExpressFlowChart control. All the basic and advanced operati' +
-    'ons on the diagram are supported. You can move, resize, connect, and delete shapes, change their text and images,' +
+  Result := 'This example shows a diagram created using the ExpressFlowChart control. All the basic and advanced operations ' +
+    'on the diagram are supported. You can move, resize, connect, and delete shapes, change their text and images,' +
     ' perform clipboard and undo/redo operations, and zoom the content with the Ctrl+Mouse Wheel gesture.';
 end;
 

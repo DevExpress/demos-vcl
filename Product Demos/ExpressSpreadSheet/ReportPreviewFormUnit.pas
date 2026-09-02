@@ -21,7 +21,8 @@ uses
   dxPSEdgePatterns, dxPSPDFExportCore, dxPSPDFExport, cxDrawTextUtils, dxPSPrVwStd, dxPSPrVwAdv, dxPSPrVwRibbon,
   dxPScxPageControlProducer, dxPSdxSpreadSheetLnk, dxPScxEditorProducers, dxPScxExtEditorProducers, dxPSCore,
   dxPSBaseGridLnk, dxForms, dxSpreadSheetCoreStyles, dxSpreadSheetStyles, cxImageList, dxSpreadSheetCoreFormulas,
-  dxSpreadSheetCoreStrs, dxPSdxSpreadSheetLnkCore, dxRibbonForm, dxGallery, dxRibbonGallery, dxRibbonMarginsGallery, System.Actions;
+  dxSpreadSheetCoreStrs, dxPSdxSpreadSheetLnkCore, dxRibbonForm, dxGallery, dxRibbonGallery, dxRibbonMarginsGallery, System.Actions,
+  System.ImageList;
 
 type
   TfrmPreview = class(TdxRibbonForm)
@@ -86,11 +87,11 @@ type
     dxSpreadSheetBordersBottomThick: TdxSpreadSheetBordersBottomThick;
     dxBarLargeButtonThickBottomBorder: TdxBarLargeButton;
     dxSpreadSheetBordersTopAndBottom: TdxSpreadSheetBordersTopAndBottom;
-    dxBarLargeButtonTopandBottomBorder: TdxBarLargeButton;
+    dxBarLargeButtonTopAndBottomBorder: TdxBarLargeButton;
     dxSpreadSheetBordersTopAndBottomThick: TdxSpreadSheetBordersTopAndBottomThick;
-    dxBarLargeButtonTopandThickBottomBorder: TdxBarLargeButton;
+    dxBarLargeButtonTopAndThickBottomBorder: TdxBarLargeButton;
     dxSpreadSheetBordersTopAndBottomDouble: TdxSpreadSheetBordersTopAndBottomDouble;
-    dxBarLargeButtonTopandDoubleBottomBorder: TdxBarLargeButton;
+    dxBarLargeButtonTopAndDoubleBottomBorder: TdxBarLargeButton;
     dxSpreadSheetBordersMore: TdxSpreadSheetBordersMore;
     dxBarLargeButtonMore: TdxBarLargeButton;
     dxSpreadSheetChangeFillColor: TdxSpreadSheetChangeFillColor;
@@ -118,7 +119,7 @@ type
     dxBarButtonWrapText: TdxBarButton;
     dxBarSubItem2: TdxBarSubItem;
     dxSpreadSheetMergeCellsAndCenter: TdxSpreadSheetMergeCellsAndCenter;
-    dxBarLargeButtonMergeandCenter: TdxBarLargeButton;
+    dxBarLargeButtonMergeAndCenter: TdxBarLargeButton;
     dxSpreadSheetMergeCellsAcross: TdxSpreadSheetMergeCellsAcross;
     dxBarLargeButtonMergeAcross: TdxBarLargeButton;
     dxSpreadSheetMergeCells: TdxSpreadSheetMergeCells;
@@ -528,10 +529,10 @@ type
     dxSpreadSheetCreateDefinedName: TdxSpreadSheetCreateDefinedName;
     dxBarButtonDefineName: TdxBarButton;
     dxSpreadSheetUseDefinedNameInFormula: TdxSpreadSheetUseDefinedNameInFormula;
-    dxRibbonGalleryItemUseinFormula: TdxRibbonGalleryItem;
-    dxRibbonGalleryItemUseinFormulaGroup1: TdxRibbonGalleryGroup;
+    dxRibbonGalleryItemUseInFormula: TdxRibbonGalleryItem;
+    dxRibbonGalleryItemUseInFormulaGroup1: TdxRibbonGalleryGroup;
     dxSpreadSheetCreateDefinedNamesFromSelection: TdxSpreadSheetCreateDefinedNamesFromSelection;
-    dxBarButtonCreatefromSelection: TdxBarButton;
+    dxBarButtonCreateFromSelection: TdxBarButton;
     dxSpreadSheetSortAscending: TdxSpreadSheetSortAscending;
     dxRibbonTabData: TdxRibbonTab;
     dxBarSortFilter: TdxBar;

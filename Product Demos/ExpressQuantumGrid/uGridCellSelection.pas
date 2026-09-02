@@ -155,12 +155,13 @@ end;
 
 function TfrmGridCellSelection.GetColumnCaption(Index: Integer): string;
 const
-  Dif: Integer = Integer('Z') - Integer('A') + 1;
+  ACharRange: Integer = Integer('Z') - Integer('A') + 1;
 begin
-  if Index div Dif > 0 then
-     Result := GetColumnCaption(Index div Dif - 1)
-  else Result := '';
-  Result := Result + char(Integer('A') + Index mod Dif);
+  if Index div ACharRange > 0 then
+     Result := GetColumnCaption(Index div ACharRange - 1)
+  else
+    Result := '';
+  Result := Result + Char(Integer('A') + Index mod ACharRange);
 end;
 
 procedure TfrmGridCellSelection.TableViewColumnHeaderClick(
@@ -248,7 +249,7 @@ begin
 end;
 
 initialization
-  dxFrameManager.RegisterFrame(GridCellSelectionFrameID, TfrmGridCellSelection, GridCellSelectonFrameName,
+  dxFrameManager.RegisterFrame(GridCellSelectionFrameID, TfrmGridCellSelection, GridCellSelectionFrameName,
     GridCellSelectionImageIndex, TableBandedTableGroupIndex, -1, -1);
 
 

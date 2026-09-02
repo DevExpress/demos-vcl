@@ -68,7 +68,7 @@ resourcestring
     'lists, etc. The Rich Edit Control can generate the Ribbon UI automatically.';
   sdxFrameDocumentViewsAndLayouts = 'The Rich Edit Control ships with 3 View options: Simple, Draft and Print Layout. You can use the corresponding commands on the View Ribbon tab to switch between these views. The Simple View is used for typing and spell ' +
     'checking, the Draft View for text formatting, and the Print Layout for preparing the document for printing.';
-  sdxFrameMultiColumnContent = 'This demo illustrates how to devide a document into sections and specify different page settings for each section. You can use the Page Layout Ribbon tab commands to set the number of columns, page orientation and margins for each section.';
+  sdxFrameMultiColumnContent = 'This demo illustrates how to divide a document into sections and specify different page settings for each section. You can use the Page Layout Ribbon tab commands to set the number of columns, page orientation and margins for each section.';
   sdxFrameZooming = 'In this demo, you can press the CTRL key while scrolling your mouse wheel to change the zoom level.';
   sdxFrameFindAndReplace = 'This demo allows you to find and replace characters or text strings within a document. You can specify the search direction and other search/replace options.';
   sdxFrameLineNumbering = 'This demo illustrates line numbering in the Rich Edit Control. You can use the options on the PAGE LAYOUT Ribbon tab to insert line numbers. These numbers can run continuously throughout the document or are restarted on each page/section.';

@@ -11,7 +11,7 @@ uses
   cxSplitter, Winapi.ShlObj, cxShellCommon, cxShellListView, cxTreeView, cxButtons,
   cxShellTreeView, dxSkinsdxNavBarPainter, dxStatusBar, dxBar, dxRibbonSkins,
   dxRibbonCustomizationForm, dxRibbon, dxLayoutcxEditAdapters, dxBarBuiltInMenu, dxLayoutContainer, cxImageList,
-  dxLayoutControl, dxLayoutLookAndFeels, System.Actions, System.UITypes;
+  dxLayoutControl, dxLayoutLookAndFeels, System.Actions, System.UITypes, Vcl.Menus, System.ImageList;
 
 type
   PShellItem = ^TShellItem;
@@ -116,7 +116,7 @@ type
     dxNavBarItem37: TdxNavBarItem;
     dxNavBarItem38: TdxNavBarItem;
     dxLayoutAutoCreatedGroup2Temp: TdxLayoutAutoCreatedGroup;
-    cbShowOfficeNavvigationBar: TdxLayoutCheckBoxItem;
+    cbShowOfficeNavigationBar: TdxLayoutCheckBoxItem;
     procedure FormCreate(Sender: TObject);
     procedure lvMainData(Sender: TObject; Item: TListItem);
     procedure btnLargeIconsClick(Sender: TObject);
@@ -160,7 +160,7 @@ type
       ANavigationItem: IdxNavigationItem; var AControl: TWinControl);
     procedure cxTextEdit1PropertiesChange(Sender: TObject);
     procedure edSearchPropertiesChange(Sender: TObject);
-    procedure cbShowOfficeNavvigationBarClick(Sender: TObject);
+    procedure cbShowOfficeNavigationBarClick(Sender: TObject);
   private
     FIDList: TList;
     FSearchShellID: PItemIDList;
@@ -181,7 +181,7 @@ type
     function GetDescription: string; override;
     function GetNavBarControl: TdxNavBar; override;
     function GetIDByPath(APath: string): PItemIDList;
-    function GetIDBySpetialFolder(ASpetialFolder: Integer): PItemIDList;
+    function GetIDBySpecialFolder(ASpecialFolder: Integer): PItemIDList;
     function GetShellFolderByID(AID: PItemIDList): IShellFolder;
     function GetEnumIDListByFolder(AFolder: IShellFolder): IEnumIDList;
 
@@ -381,7 +381,7 @@ begin
   OLECheck(SHGetSpecialFolderLocation(Application.Handle, CSIDL_DRIVES, NewPIDL));
   FShellID := NewPIDL;
   SetPath(NewPIDL);
-  PopulateMyFavoritesList(GetIDBySpetialFolder(CSIDL_FAVORITES));
+  PopulateMyFavoritesList(GetIDBySpecialFolder(CSIDL_FAVORITES));
   PopulateMyComputerTree(NewPIDL);
 end;
 
@@ -633,9 +633,9 @@ begin
     NumChars, Result, Flags));
 end;
 
-function TfrmNavigationPane.GetIDBySpetialFolder(ASpetialFolder: Integer): PItemIDList;
+function TfrmNavigationPane.GetIDBySpecialFolder(ASpecialFolder: Integer): PItemIDList;
 begin
-  OLECheck(SHGetSpecialFolderLocation(Application.Handle, ASpetialFolder, Result));
+  OLECheck(SHGetSpecialFolderLocation(Application.Handle, ASpecialFolder, Result));
 end;
 
 function TfrmNavigationPane.GetShellFolderByID(AID: PItemIDList): IShellFolder;
@@ -667,7 +667,7 @@ end;
 function TfrmNavigationPane.CompareNames(Path, Pattern: string): Boolean;
 var
   APos: Integer;
-  S, Name, Extention, PatName, PatExt: string;
+  S, Name, Extension, PatName, PatExt: string;
 begin
   S := Path;
   repeat
@@ -678,12 +678,12 @@ begin
   if APos > 0 then
   begin
     Name := UpperCase(Copy(S, 1, APos - 1));
-    Extention := UpperCase(Copy(S, APos + 1, Length(S) - APos + 1));
+    Extension := UpperCase(Copy(S, APos + 1, Length(S) - APos + 1));
   end
   else
   begin
     Name := UpperCase(S);
-    Extention := '';
+    Extension := '';
   end;
   Pattern := UpperCase(Pattern);
   APos := Pos('.', Pattern);
@@ -698,7 +698,7 @@ begin
     PatExt := '';
   end;
   Result := (((Name = PatName) or (PatName = '*')) and
-    ((Extention = PatExt) or (PatExt = '*') or (PatExt = ''))) or
+    ((Extension = PatExt) or (PatExt = '*') or (PatExt = ''))) or
     ((PatExt = '') and (PatName <> '') and (Pos(PatName, Name) > 0));
 end;
 
@@ -711,9 +711,9 @@ begin
   FLockSearchTextChange := False;
 end;
 
-procedure TfrmNavigationPane.cbShowOfficeNavvigationBarClick(Sender: TObject);
+procedure TfrmNavigationPane.cbShowOfficeNavigationBarClick(Sender: TObject);
 begin
-  dxNavBarOfficeNavigationBar1.Visible := cbShowOfficeNavvigationBar.Checked;
+  dxNavBarOfficeNavigationBar1.Visible := cbShowOfficeNavigationBar.Checked;
   if dxNavBarOfficeNavigationBar1.Visible then
     dxNavBarOfficeNavigationBar1.ItemProvider := nbMain
   else
@@ -958,19 +958,19 @@ end;
 
 procedure TfrmNavigationPane.nbMainDesktopClick(Sender: TObject);
 begin
-  SetPath(GetIDBySpetialFolder(CSIDL_DESKTOPDIRECTORY));
+  SetPath(GetIDBySpecialFolder(CSIDL_DESKTOPDIRECTORY));
   CloseNavBarPopup;
 end;
 
 procedure TfrmNavigationPane.nbMainMyDocumentsClick(Sender: TObject);
 begin
-  SetPath(GetIDBySpetialFolder(CSIDL_PERSONAL));
+  SetPath(GetIDBySpecialFolder(CSIDL_PERSONAL));
   CloseNavBarPopup;
 end;
 
 procedure TfrmNavigationPane.nbMainNetworkClick(Sender: TObject);
 begin
-  SetPath(GetIDBySpetialFolder(CSIDL_NETWORK));
+  SetPath(GetIDBySpecialFolder(CSIDL_NETWORK));
   CloseNavBarPopup;
 end;
 

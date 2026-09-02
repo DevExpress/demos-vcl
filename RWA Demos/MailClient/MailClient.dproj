@@ -1,6 +1,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup>
-		<ProjectGuid>{44556C79-C16C-4C39-9A5F-71CB001175BF}</ProjectGuid>
+		<ProjectGuid>{DE000000-0000-0000-0000-00005FA7E869}</ProjectGuid>
 		<MainSource>MailClient.dpr</MainSource>
 		<Base>True</Base>
 		<Config Condition="'$(Config)'==''">Debug</Config>

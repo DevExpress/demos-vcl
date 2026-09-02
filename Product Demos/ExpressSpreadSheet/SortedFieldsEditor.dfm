@@ -11,10 +11,8 @@ object frmSortedFieldsEditor: TfrmSortedFieldsEditor
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poMainFormCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object dxLayoutControl1: TdxLayoutControl
     Left = 0
@@ -30,7 +28,7 @@ object frmSortedFieldsEditor: TfrmSortedFieldsEditor
       Width = 296
       Height = 378
       ExtendedSelect = False
-      ItemHeight = 13
+      ItemHeight = 17
       TabOrder = 0
       OnEnter = lbDataSetFieldsEnter
       OnExit = lbDataSetFieldsExit
@@ -58,7 +56,7 @@ object frmSortedFieldsEditor: TfrmSortedFieldsEditor
       Top = 28
       Width = 296
       Height = 378
-      ItemHeight = 13
+      ItemHeight = 17
       TabOrder = 3
       OnClick = lbSortedFieldsClick
       OnEnter = lbSortedFieldsEnter
@@ -89,7 +87,6 @@ object frmSortedFieldsEditor: TfrmSortedFieldsEditor
       AlignVert = avClient
       CaptionOptions.Visible = False
       LayoutLookAndFeel = dxLayoutSkinLookAndFeel1
-      ButtonOptions.Buttons = <>
       Hidden = True
       ShowBorder = False
       Index = -1
@@ -112,7 +109,6 @@ object frmSortedFieldsEditor: TfrmSortedFieldsEditor
       AlignVert = avTop
       LayoutDirection = ldHorizontal
       Index = 1
-      AutoCreated = True
     end
     object dxLayoutItem1: TdxLayoutItem
       Parent = dxLayoutAutoCreatedGroup2
@@ -156,14 +152,12 @@ object frmSortedFieldsEditor: TfrmSortedFieldsEditor
       AlignVert = avClient
       LayoutDirection = ldHorizontal
       Index = 0
-      AutoCreated = True
     end
     object dxLayoutGroup1: TdxLayoutGroup
       Parent = dxLayoutAutoCreatedGroup5
       AlignHorz = ahLeft
       AlignVert = avCenter
       CaptionOptions.Text = 'New Group'
-      ButtonOptions.Buttons = <>
       ItemIndex = 1
       ShowBorder = False
       Index = 1

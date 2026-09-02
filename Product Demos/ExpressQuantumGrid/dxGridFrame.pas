@@ -77,7 +77,7 @@ implementation
 uses
   cxGridCustomTableView, cxGridTableView, cxGridCardView, cxGridUITableHelper, uStrsConst, cxGridExportLink, Main;
 
-{ TdxmdGridFrame }
+{ TdxGridFrame }
 
 constructor TdxGridFrame.Create(AOwner: TComponent);
 var

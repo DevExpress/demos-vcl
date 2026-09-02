@@ -21,7 +21,10 @@ uses
   dxSpreadSheetFormulas, dxSpreadSheetBaseFormUnit, cxDropDownEdit, Vcl.Menus,
   dxLayoutControlAdapters, Vcl.StdCtrls, cxButtons, cxMemo, dxHashUtils, dxCore, dxCoreClasses, dxSpreadSheetCoreHistory,
   dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules, dxSpreadSheetPrinting,
-  dxSpreadSheetStyles;
+  dxSpreadSheetStyles, dxSpreadSheetCoreFormulas, dxSpreadSheetCoreStyles, dxSpreadSheetCoreStrs,
+  dxSpreadSheetContainers, dxSpreadSheetHyperlinks, dxSpreadSheetUtils, dxSpreadSheetFormattedTextUtils, Vcl.ExtActns,
+  System.Actions, Vcl.ActnList, Vcl.StdActns, cxSplitter, dxSpreadSheetFormulaBar, cxTrackBar, dxZoomTrackBar,
+  Vcl.ExtCtrls;
 
 type
 
@@ -103,7 +106,7 @@ type
     procedure CreateContactInfoRange(const ARect: TRect);
     procedure CreateTableColumn(AColumn, ARow, ARowCount: Integer; ACaption, ANumberFormat: string; AHorAlignment: TdxSpreadSheetDataAlignHorz; AIndent: Integer = 0);
     procedure CreateThankfulRange(ARect: TRect);
-    procedure CreateVariativePart(AGoodsCount: Integer);
+    procedure CreateVariationalPart(AGoodsCount: Integer);
     procedure FillInvoiceCore;
     procedure FillInvoiceSheet;
     function  PopulateInvoiceGoodsList: Integer;
@@ -238,7 +241,7 @@ begin
   FSheet.Cells[ARect.Top, ARect.Left].SetText('THANK YOU FOR YOUR BUSINESS!');
 end;
 
-procedure TfrmInvoice.CreateVariativePart(AGoodsCount: Integer);
+procedure TfrmInvoice.CreateVariationalPart(AGoodsCount: Integer);
 var
   AFormula: string;
   ARow: Integer;
@@ -286,7 +289,7 @@ begin
   ApplySimpleCellValue(teCity1.Text + ', ' + teState1.Text + ' ' + meZIP1.Text, 1, 11);
   ApplySimpleCellValue('Phone: ' + mePhone1.Text, 1, 12);
   AGoodsRowCount := PopulateInvoiceGoodsList;
-  CreateVariativePart(AGoodsRowCount);
+  CreateVariationalPart(AGoodsRowCount);
   AFooterRowIndex := 16 + AGoodsRowCount + 3;
   ApplySimpleCellValue('Make all checks payable to ' + teCompany.Text, 1, AFooterRowIndex);
   ApplySimpleCellValue('If you have any questions concerning this invoice, contact ' + teContactPerson.Text + ', ' + mePhone.Text +', ' + teEMail.Text, 1, AFooterRowIndex + 1);
@@ -350,7 +353,7 @@ end;
 
 function TfrmInvoice.GetDescription: string;
 begin
-  Result := 'This demo illustrates the Spreadsheet’s API. The sample invoice template is generated in code at runtime.' +
+  Result := 'This demo illustrates the Spreadsheet''s API. The sample invoice template is generated in code at runtime.' +
   ' Switch to the Data tab to modify the contents of an order, then return to the Invoice tab to view the results. You' +
   ' can change the product quantity, price and discount values - all the values are re-calculated automatically.'
 end;

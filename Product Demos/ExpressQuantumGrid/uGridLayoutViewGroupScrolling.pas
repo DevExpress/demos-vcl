@@ -169,7 +169,7 @@ end;
 
 initialization
 //  temporary disable
-//  dxFrameManager.RegisterFrame(GridLayotViewGroupScrollingFrameID, TfrmGridLayoutViewGroupScrolling,
+//  dxFrameManager.RegisterFrame(GridLayoutViewGroupScrollingFrameID, TfrmGridLayoutViewGroupScrolling,
 //    GridLayoutViewGroupScrollingFrameName, GridLayoutViewImageIndex, -1, GridViewGroupIndex, -1);
 
 end.

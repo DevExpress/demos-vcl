@@ -7,7 +7,7 @@ program BarNotepadDemo;
 
 uses
   Vcl.Forms, dxUIAClasses,
-  dxSplashUnit in '..\..\Common\dxSplashUnit.pas' {TfrmSplash},
+  dxSplashUnit in '..\..\Common\dxSplashUnit.pas',
   NotepadMainForm in '..\NotepadMainForm.pas' {frmNotepadMain},
   NotepadChildForm in '..\NotepadChildForm.pas' {frmNotepadChild},
   BarNotepadMainForm in 'BarNotepadMainForm.pas' {frmBarsNotepadMain},

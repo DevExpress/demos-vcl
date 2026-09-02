@@ -26,8 +26,8 @@ type
     lgDialogButtons: TdxLayoutGroup;
     liBtnCancel: TdxLayoutItem;
     liBtnOk: TdxLayoutItem;
-    liCbbColumns: TdxLayoutItem;
-    liCbbRows: TdxLayoutItem;
+    liColumns: TdxLayoutItem;
+    liRows: TdxLayoutItem;
     LayoutLookAndFeelList: TdxLayoutLookAndFeelList;
     lcMain: TdxLayoutControl;
     lcMainGroup_Root: TdxLayoutGroup;

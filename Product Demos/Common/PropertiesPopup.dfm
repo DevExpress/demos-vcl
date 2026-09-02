@@ -30,7 +30,6 @@ object fmPopupTree: TfmPopupTree
           Caption.Text = 'Band + 1'
         end>
       Images = Image16
-      Navigator.Buttons.CustomButtons = <>
       OptionsBehavior.CopyCaptionsToClipboard = False
       OptionsBehavior.HotTrack = True
       OptionsData.Editing = False
@@ -81,8 +80,6 @@ object fmPopupTree: TfmPopupTree
         Position.ColIndex = 0
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
     end
   end

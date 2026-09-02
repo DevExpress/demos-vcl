@@ -25,10 +25,10 @@ type
     OpenDialog: TdxOpenFileDialog;
     rbBackGroundImage: TcxRadioButton;
     rbGradient: TcxRadioButton;
-    rfaultDrawing: TcxRadioButton;
-    rpendsOnTheData: TcxRadioButton;
+    rbDefaultDrawing: TcxRadioButton;
+    rbDependsOnTheData: TcxRadioButton;
     tlCustomDrawItems: TcxTreeList;
-    tlCustomDrawItemscxTreeListColumn1: TcxTreeListColumn;
+    clnCustomDrawItemColumn1: TcxTreeListColumn;
     dxLayoutControl1Group_Root: TdxLayoutGroup;
     dxLayoutControl1: TdxLayoutControl;
     dxLayoutGroup1: TdxLayoutGroup;
@@ -136,10 +136,10 @@ procedure TCustomDrawDemoEditorForm.tlCustomDrawItemsSelectionChanged(
     AItem := TcxItemCustomDrawInfo(ASelectedNode.Data);
     rbBackGroundImage.Checked := AItem.DrawingStyle = cdsBkImage;
     rbGradient.Checked := AItem.DrawingStyle = cdsGradient;
-    rpendsOnTheData.Checked := AItem.DrawingStyle = cdsDependsOnData;
-    rfaultDrawing.Checked := AItem.DrawingStyle = cdsDefaultDrawing;
+    rbDependsOnTheData.Checked := AItem.DrawingStyle = cdsDependsOnData;
+    rbDefaultDrawing.Checked := AItem.DrawingStyle = cdsDefaultDrawing;
     chbOwnerDrawText.Checked := AItem.OwnerTextDraw;
-    rpendsOnTheData.Visible := AItem.ItemType = itCell;
+    rbDependsOnTheData.Visible := AItem.ItemType = itCell;
     mruBkImage.Text := BkImageResNames[AItem.BkImageType];
     cbGradient.ItemIndex := Integer(AItem.ColorScheme);
     AdjustControlsEnable;
@@ -154,7 +154,7 @@ begin
   mruBkImage.Enabled := rbBackGroundImage.Checked;
   cbGradient.Enabled := rbGradient.Checked;
   chbOwnerDrawText.Enabled := (GetSelectedDrawItem.ItemType in [itText, itCell]) and
-    not (rfaultDrawing.Checked or rpendsOnTheData.Checked);
+    not (rbDefaultDrawing.Checked or rbDependsOnTheData.Checked);
   liFont.Enabled := chbOwnerDrawText.Checked and chbOwnerDrawText.Enabled;
 end;
 

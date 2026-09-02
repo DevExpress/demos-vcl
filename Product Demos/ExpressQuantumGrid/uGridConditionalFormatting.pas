@@ -17,7 +17,7 @@ uses
   dxSpreadSheetConditionalFormatting,
   cxDataControllerConditionalFormatting, dxDateRanges, dxScrollbarAnnotations,
   cxDataControllerConditionalFormattingRulesManagerDialog, dxLayoutLookAndFeels, System.Actions,
-  dxPanel, cxGeometry, dxFramedControl;
+  dxPanel, cxGeometry, dxFramedControl, System.ImageList;
 
 type
   TfrmGridConditionalFormatting = class(TdxGridFrame)
@@ -106,7 +106,7 @@ type
     class procedure AddTwoColorScaleRule(AConditionalFormatting: TcxDataControllerConditionalFormatting; AColor1, AColor2: TColor); static;
     class procedure AddTopBottomRule(AConditionalFormatting: TcxDataControllerConditionalFormatting; ADirection: TdxSpreadSheetConditionalFormattingRuleTopBottomValuesDirection;
       AValueType: TdxSpreadSheetConditionalFormattingRuleTopBottomValuesValueType); static;
-    class procedure AddAboveOrBelowAverageRule(AConditionalFormatting: TcxDataControllerConditionalFormatting; AComparasionOperator: TdxSpreadSheetConditionalFormattingRuleAboveOrBelowAverageComparisonOperator); static;
+    class procedure AddAboveOrBelowAverageRule(AConditionalFormatting: TcxDataControllerConditionalFormatting; AComparisonOperator: TdxSpreadSheetConditionalFormattingRuleAboveOrBelowAverageComparisonOperator); static;
     class procedure AddIconSetRule(AConditionalFormatting: TcxDataControllerConditionalFormatting; APresetIndex: Integer); static;
     class procedure ClearRulesFromSelectedArea(AConditionalFormatting: TcxDataControllerConditionalFormatting); static;
     class procedure RemoveRulesFromSelectedArea(AConditionalFormatting: TcxDataControllerConditionalFormatting; ARuleClass: TdxSpreadSheetConditionalFormattingCustomRuleClass); static;
@@ -387,7 +387,7 @@ begin
   end;
 end;
 
-class procedure TcxDataControllerConditionalFormattingMenuHelper.AddAboveOrBelowAverageRule(AConditionalFormatting: TcxDataControllerConditionalFormatting; AComparasionOperator: TdxSpreadSheetConditionalFormattingRuleAboveOrBelowAverageComparisonOperator);
+class procedure TcxDataControllerConditionalFormattingMenuHelper.AddAboveOrBelowAverageRule(AConditionalFormatting: TcxDataControllerConditionalFormatting; AComparisonOperator: TdxSpreadSheetConditionalFormattingRuleAboveOrBelowAverageComparisonOperator);
 var
   ARule: TdxSpreadSheetConditionalFormattingRuleAboveOrBelowAverage;
 begin
@@ -398,7 +398,7 @@ begin
     AConditionalFormatting.Add(AConditionalFormatting.Owner.GetSelectionArea.Left, TdxSpreadSheetConditionalFormattingRuleAboveOrBelowAverage, ARule);
     ARule.BeginUpdate;
     try
-      ARule.ComparisonOperator := AComparasionOperator;
+      ARule.ComparisonOperator := AComparisonOperator;
       ARule.Style.Brush.BackgroundColor := $9CFFFF;
     finally
       ARule.EndUpdate;

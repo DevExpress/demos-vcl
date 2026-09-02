@@ -72,8 +72,8 @@ uses
 const
   NameCount = 5;
   SkillCount = 6;
-  Names: Array[0..NameCount - 1] of string = ('Jerry Campbell', 'Ryan Fischer',
-                'Tom Hamlett', 'Steve Lee', 'Jeffrey McClain');
+  Names: Array[0..NameCount - 1] of string = ('Jerry Campbell', 'Ryan Fischer',  
+                'Tom Hamlett', 'Steve Lee', 'Jeffrey McClain'); 
   Skills: Array[0..SkillCount - 1] of string = (sdxMultipleEditorsFrame_Programming,
                 sdxMultipleEditorsFrame_PrimaryLanguage,
                 sdxMultipleEditorsFrame_SecondaryLanguage,

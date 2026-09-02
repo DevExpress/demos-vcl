@@ -2,8 +2,8 @@ object frmMainBase: TfrmMainBase
   Left = 0
   Top = 0
   Caption = 'frmMainBase'
-  ClientHeight = 593
-  ClientWidth = 900
+  ClientHeight = 588
+  ClientWidth = 880
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,7 +19,7 @@ object frmMainBase: TfrmMainBase
   object dxRibbon1: TdxRibbon
     Left = 0
     Top = 0
-    Width = 900
+    Width = 880
     Height = 155
     ApplicationButton.Glyph.SourceDPI = 96
     ApplicationButton.Glyph.Data = {
@@ -128,7 +128,6 @@ object frmMainBase: TfrmMainBase
     TabOrder = 0
     TabStop = False
     OnApplicationMenuClick = dxRibbon1ApplicationMenuClick
-    ExplicitWidth = 892
     object dxRibbon1Tab1: TdxRibbonTab
       Active = True
       Caption = 'Demo'
@@ -167,8 +166,8 @@ object frmMainBase: TfrmMainBase
   object pnlAllArea: TdxPanel
     Left = 0
     Top = 155
-    Width = 900
-    Height = 438
+    Width = 880
+    Height = 433
     Align = alClient
     Frame.Drag.AutoDetectBorders = False
     Frame.Drag.Borders = [bLeft]
@@ -177,14 +176,18 @@ object frmMainBase: TfrmMainBase
     Frame.Visible = False
     TabOrder = 1
     OnDragBorder = pnlAllAreaDragBorder
+    ExplicitWidth = 884
+    ExplicitHeight = 434
     object plClient: TdxPanel
       Left = 209
       Top = 0
-      Width = 691
-      Height = 438
+      Width = 671
+      Height = 433
       Align = alClient
       Frame.Visible = False
       TabOrder = 0
+      ExplicitWidth = 675
+      ExplicitHeight = 434
       object dxRibbonBackstageView1: TdxRibbonBackstageView
         Left = 144
         Top = 28
@@ -266,9 +269,9 @@ object frmMainBase: TfrmMainBase
               Width = 337
               object dxBevel1: TdxBevel
                 AlignWithMargins = True
-                Left = 303
+                Left = 299
                 Top = 0
-                Width = 2
+                Width = 6
                 Height = 214
                 Margins.Left = 0
                 Margins.Top = 0
@@ -278,13 +281,11 @@ object frmMainBase: TfrmMainBase
                 AutoSize = True
                 Shape = dxbsLineLeft
                 ExplicitLeft = 304
-                ExplicitWidth = 1
-                ExplicitHeight = 314
               end
               object bvgcExport: TdxRibbonBackstageViewGalleryControl
                 Left = 0
                 Top = 0
-                Width = 303
+                Width = 299
                 Height = 214
                 Align = alClient
                 Font.Charset = DEFAULT_CHARSET
@@ -310,6 +311,7 @@ object frmMainBase: TfrmMainBase
                 Ribbon = dxRibbon1
                 TabOrder = 0
                 OnItemClick = bvgcExportItemClick
+                ExplicitWidth = 303
               end
             end
           end
@@ -331,18 +333,18 @@ object frmMainBase: TfrmMainBase
       Left = 0
       Top = 0
       Width = 209
-      Height = 438
+      Height = 433
       Align = alLeft
       BevelEdges = []
       BevelOuter = bvNone
       TabOrder = 1
       Visible = False
-      ExplicitHeight = 413
+      ExplicitHeight = 465
       object NavBar: TdxNavBar
         Left = 0
         Top = 0
         Width = 209
-        Height = 438
+        Height = 435
         Align = alClient
         ActiveGroupIndex = 0
         TabOrder = 0
@@ -359,7 +361,7 @@ object frmMainBase: TfrmMainBase
         OptionsBehavior.Common.DragDropFlags = []
         OptionsView.ExplorerBar.SpaceBetweenGroups = 10
         OnLinkClick = NavBarLinkClick
-        ExplicitHeight = 413
+        ExplicitHeight = 465
         object nbgSearch: TdxNavBarGroup
           Caption = 'nbgSearch'
           SelectedLinkIndex = -1
@@ -469,7 +471,7 @@ object frmMainBase: TfrmMainBase
               CaptionOptions.Glyph.SourceDPI = 96
               CaptionOptions.Glyph.Data = {
                 424D360400000000000036000000280000001000000010000000010020000000
-                000000000000D6190000D6190000000000000000000000000000000000000000
+                000000000000C40E0000C40E0000000000000000000000000000000000000000
                 0000000000000000000000000000000000000000000000000000000000000000
                 0000000000000000000000000000000000000000000000000000000000000000
                 0000000000000000000000000000000000000000000000000000000000000000
@@ -504,7 +506,7 @@ object frmMainBase: TfrmMainBase
                 00000000000000000000000000000000000000000000}
               CaptionOptions.Visible = False
               Control = edtNavBarFilterText
-              ControlOptions.OriginalHeight = 19
+              ControlOptions.OriginalHeight = 21
               ControlOptions.OriginalWidth = 147
               ControlOptions.ShowBorder = False
               Index = 0
@@ -1572,10 +1574,6 @@ object frmMainBase: TfrmMainBase
     Top = 65535
   end
   object dxSkinController1: TdxSkinController
-    Kind = lfOffice11
-    ScrollbarMode = sbmClassic
-    SkinName = 'UserSkin'
-    RenderMode = rmGDIPlus
     Left = 504
   end
   object RibbonApplicationMenu: TdxBarApplicationMenu

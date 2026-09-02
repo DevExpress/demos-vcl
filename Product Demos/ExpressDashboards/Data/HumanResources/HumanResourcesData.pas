@@ -20,8 +20,8 @@ type
     property HiredValid: Boolean read FHiredValid write FHiredValid;
     property RetiredValid: Boolean read FRetiredValid write FRetiredValid;
 
-    function IsEmployed(const ADt: TDateTime): Boolean;
-    function IsRetired(const ADt: TDateTime): Boolean;
+    function IsEmployed(const ADate: TDateTime): Boolean;
+    function IsRetired(const ADate: TDateTime): Boolean;
   end;
 
   TDepartmentData = class
@@ -86,16 +86,16 @@ uses
 
 { THistoryItem }
 
-function THistoryItem.IsEmployed(const ADt: TDateTime): Boolean;
+function THistoryItem.IsEmployed(const ADate: TDateTime): Boolean;
 begin
   Result :=
-    ((not FHiredValid) or (FHiredDate <= ADt)) and
-    ((not FRetiredValid) or (FRetiredDate >= ADt));
+    ((not FHiredValid) or (FHiredDate <= ADate)) and
+    ((not FRetiredValid) or (FRetiredDate >= ADate));
 end;
 
-function THistoryItem.IsRetired(const ADt: TDateTime): Boolean;
+function THistoryItem.IsRetired(const ADate: TDateTime): Boolean;
 begin
-  Result := FRetiredValid and SameDate(ADt, FRetiredDate);
+  Result := FRetiredValid and SameDate(ADate, FRetiredDate);
 end;
 
 { THumanResourcesData }
@@ -140,7 +140,7 @@ begin
         ADept := GetDepartmentByID(ADeptID);
         ADeptName := GetDepartmentName(ADept);
 
-        ADeptKey := FormatDateTime('yyyymm', ADate) + '|' + ADeptName;
+        ADeptKey := FormatDateTime('yyyymm', ADate) + '|' + ADeptName;     
         if not FDeptData.TryGetValue(ADeptKey, ADeptData) then
         begin
           ADeptData := TDepartmentData.Create;
@@ -154,9 +154,9 @@ begin
           Inc(ADeptData.FRetiredCount);
 
         ABaseSalary := GetDepartmentBaseSalary(ADept);
-        ASalary := ABaseSalary + RandomRange(0, Round(ABaseSalary / (1 + Random(5))));//TODO
+        ASalary := ABaseSalary + RandomRange(0, Round(ABaseSalary / (1 + Random(5))));
         ABonus := RandomRange(0, Round(ASalary));
-        AOvertime := RandomRange(0, Round(ASalary / (1 + Random(5)))); //TODO
+        AOvertime := RandomRange(0, Round(ASalary / (1 + Random(5)))); 
 
         if Random < 0.5 then
           AVacationDays := Random(10)

@@ -326,21 +326,21 @@ procedure TfmDayAndNight.UpdateDateAndNightInfo;
 var
   ASunPosition: TCoords;
   AGeoPoint: TdxMapControlGeoPointItem;
-  ALongitude, ALatitude, T, CT, AcenterLat, AcenterLon: Double;
+  ALongitude, ALatitude, T, CT, ACenterLat, ACenterLon: Double;
 begin
   ASunPosition := CalculateSunPosition(beDateEdit.EditValue);
   miSun.Location.GeoPoint := dxMapControlGeoPoint(ASunPosition.Y, ASunPosition.X);
   miMoon.Location.GeoPoint := GetMoonLocation(miSun.Location.GeoPoint);
-  AcenterLon := miSun.Location.Longitude;
-  AcenterLat := miSun.Location.Latitude;
+  ACenterLon := miSun.Location.Longitude;
+  ACenterLat := miSun.Location.Latitude;
   miDayAndNightPolygon.GeoPoints.BeginUpdate;
   try
     miDayAndNightPolygon.GeoPoints.Clear;
     ALongitude := -180;
-    CT := -1 / Tan(DegToRad(AcenterLat));
+    CT := -1 / Tan(DegToRad(ACenterLat));
     while ALongitude <= 180 do
     begin
-      T := CT * Cos(DegToRad(ALongitude) - DegToRad(AcenterLon));
+      T := CT * Cos(DegToRad(ALongitude) - DegToRad(ACenterLon));
       ALatitude := RadToDeg(ArcTan(T));
       AGeoPoint := miDayAndNightPolygon.GeoPoints.Add;
       AGeoPoint.Longitude := ALongitude;

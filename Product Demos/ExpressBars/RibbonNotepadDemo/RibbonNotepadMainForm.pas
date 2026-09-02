@@ -8,14 +8,16 @@ interface
 uses
   dxSkinsdxRibbonPainter,
   dxRibbonCustomizationForm,
-  System.TypInfo, System.Types, Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, System.IniFiles, dxSkinNames,
-  Vcl.Dialogs, NotepadMainForm, cxFontNameComboBox, cxDropDownEdit, cxPC, Vcl.ActnList, dxTabbedMDI, dxBar, dxRibbonGallery,
-  dxSkinChooserGallery, cxBarEditItem, cxLookAndFeels, Vcl.ImgList, cxGraphics, cxControls, cxLookAndFeelPainters,
+  System.TypInfo, System.Types, Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
+  Vcl.Graphics, Vcl.Controls, Vcl.Forms, System.IniFiles, Vcl.Dialogs, Vcl.ActnList, System.Actions, System.ImageList,
+  Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ImgList, Vcl.ExtDlgs, Vcl.Menus,
+  dxSkinNames, NotepadMainForm, cxFontNameComboBox, cxDropDownEdit, cxPC, dxTabbedMDI, dxBar, dxRibbonGallery,
+  dxSkinChooserGallery, cxBarEditItem, cxLookAndFeels, cxGraphics, cxControls, cxLookAndFeelPainters,
   dxRibbonSkins, cxClasses, dxRibbon, dxStatusBar, dxRibbonStatusBar, dxScreenTip, dxBarApplicationMenu, dxBarExtItems,
-  cxContainer, cxEdit, cxTrackBar, dxZoomTrackBar, cxLabel, NotepadChildForm, Vcl.Menus, dxGDIPlusClasses, Vcl.ExtCtrls,
-  cxTextEdit, cxMemo, Vcl.StdCtrls, cxButtons, cxScrollBox, dxGallery, dxGalleryControl, dxBevel, cxGroupBox,
+  cxContainer, cxEdit, cxTrackBar, dxZoomTrackBar, cxLabel, NotepadChildForm, dxGDIPlusClasses,
+  cxTextEdit, cxMemo, cxButtons, cxScrollBox, dxGallery, dxGalleryControl, dxBevel, cxGroupBox,
   dxRibbonBackstageViewGalleryControl, dxRibbonBackstageView, RibbonNotepadDemoOptions, RibbonNotepadChildForm,
-  dxRibbonMiniToolbar, dxRibbonRadialMenu, dxColorDialog, dxDemoUtils, Vcl.ExtDlgs, dxSkinsDefaultPainters,
+  dxRibbonMiniToolbar, dxRibbonRadialMenu, dxColorDialog, dxDemoUtils, dxSkinsDefaultPainters,
   dxBarBuiltInMenu, cxMaskEdit, dxRibbonColorGallery, cxImageList, dxSkinsForm, dxOfficeSearchBox, dxSkinsCore,
   dxCore, dxShellDialogs, dxCoreGraphics, cxStyles, dxUIAClasses;
 

@@ -6,7 +6,6 @@ inherited frmWorldWeather: TfrmWorldWeather
   OnDestroy = FormDestroy
   ExplicitWidth = 894
   ExplicitHeight = 396
-  PixelsPerInch = 96
   TextHeight = 13
   object dxRibbon1: TdxRibbon [0]
     Left = 0
@@ -37,16 +36,19 @@ inherited frmWorldWeather: TfrmWorldWeather
     ExplicitWidth = 894
     ExplicitHeight = 270
     inherited pnlMap: TPanel
+      Top = 29
       Width = 874
-      Height = 191
+      Height = 193
+      Color = clBtnFace
+      ExplicitTop = 29
       ExplicitWidth = 874
-      ExplicitHeight = 191
+      ExplicitHeight = 193
       inherited dxMapControl1: TdxMapControl
         Width = 874
-        Height = 191
+        Height = 193
         ZoomLevel = 3.000000000000000000
         ExplicitWidth = 874
-        ExplicitHeight = 184
+        ExplicitHeight = 193
         object dxMapControl1ImageTileLayer1: TdxMapImageTileLayer
           ProviderClassName = 'TdxMapControlOpenStreetMapImageryDataProvider'
           Provider.MaxParallelConnectionCount = 5
@@ -162,8 +164,8 @@ inherited frmWorldWeather: TfrmWorldWeather
       DockedTop = 0
       FloatLeft = 413
       FloatTop = 8
-      FloatClientWidth = 133
-      FloatClientHeight = 94
+      FloatClientWidth = 196
+      FloatClientHeight = 144
       ItemLinks = <
         item
           Visible = True
@@ -446,12 +448,12 @@ inherited frmWorldWeather: TfrmWorldWeather
       Visible = ivAlways
       OnClick = dxBarButton11Click
     end
-    object ShowWeatherforGeoPoint: TdxBarButton
+    object ShowWeatherForGeoPoint: TdxBarButton
       Caption = 'Add geopoint'
       Category = 0
       Hint = 'Add geopoint'
       Visible = ivAlways
-      OnClick = ShowWeatherforGeoPointClick
+      OnClick = ShowWeatherForGeoPointClick
     end
     object Hidecity1: TdxBarButton
       Caption = 'Hide City'
@@ -494,7 +496,7 @@ inherited frmWorldWeather: TfrmWorldWeather
     ItemLinks = <
       item
         Visible = True
-        ItemName = 'ShowWeatherforGeoPoint'
+        ItemName = 'ShowWeatherForGeoPoint'
       end
       item
         Visible = True
@@ -513,7 +515,7 @@ inherited frmWorldWeather: TfrmWorldWeather
     Left = 280
     Top = 216
     Bitmap = {
-      494C0101020008000C0010001000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010102000800040010001000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -744,7 +746,7 @@ inherited frmWorldWeather: TfrmWorldWeather
     Left = 376
     Top = 216
     Bitmap = {
-      494C0101020008000C0020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010102000800040020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000002000000001002000000000000040
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

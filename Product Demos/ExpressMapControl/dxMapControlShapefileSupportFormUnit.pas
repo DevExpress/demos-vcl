@@ -11,7 +11,7 @@ uses
   dxMapLayer, dxCustomMapItemLayer, dxMapItemFileLayer, Vcl.Menus, Vcl.ActnList,
   dxRibbonSkins, dxRibbonCustomizationForm, dxRibbon, cxLabel, cxRadioGroup,
   cxBarEditItem, dxLayoutContainer, dxLayoutControl, dxLayoutLookAndFeels, dxLayoutControlAdapters, System.Actions,
-  dxCore;
+  dxCore, System.Net.URLClient;
 
 type
   TCountryMapKind = (kmkPolitical, kmkGDP, kmkPopulation);

@@ -123,7 +123,7 @@ object RichEditControlEditor: TRichEditControlEditor
       Groups = <
         item
           Caption = 'Table of Contents'
-          ToolbarName = 'dxBarTableofContents'
+          ToolbarName = 'dxBarTableOfContents'
         end
         item
           Caption = 'Captions'
@@ -693,7 +693,7 @@ object RichEditControlEditor: TRichEditControlEditor
           Position = ipContinuesRow
           ViewLevels = [ivlSmallIcon, ivlControlOnly]
           Visible = True
-          ItemName = 'dxBarButtonMultilevellist'
+          ItemName = 'dxBarButtonMultiLevelList'
         end
         item
           ButtonGroup = bgpStart
@@ -1352,7 +1352,7 @@ object RichEditControlEditor: TRichEditControlEditor
       Visible = True
       WholeRow = False
     end
-    object dxBarTableofContents: TdxBar
+    object dxBarTableOfContents: TdxBar
       Caption = 'Table of Contents'
       CaptionButtons = <>
       DockedLeft = 0
@@ -1364,7 +1364,7 @@ object RichEditControlEditor: TRichEditControlEditor
       ItemLinks = <
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonTableofContents'
+          ItemName = 'dxBarLargeButtonTableOfContents'
         end
         item
           Visible = True
@@ -1396,7 +1396,7 @@ object RichEditControlEditor: TRichEditControlEditor
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonInsertTableofFigures'
+          ItemName = 'dxBarLargeButtonInsertTableOfFigures'
         end
         item
           Visible = True
@@ -1608,7 +1608,7 @@ object RichEditControlEditor: TRichEditControlEditor
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonEncryptwithPassword'
+          ItemName = 'dxBarLargeButtonEncryptWithPassword'
         end>
       OneOnRow = False
       Row = 0
@@ -1827,7 +1827,7 @@ object RichEditControlEditor: TRichEditControlEditor
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonLinktoPrevious'
+          ItemName = 'dxBarLargeButtonLinkToPrevious'
         end>
       OneOnRow = False
       Row = 0
@@ -1940,7 +1940,7 @@ object RichEditControlEditor: TRichEditControlEditor
       ItemLinks = <
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonCloseHeaderandFooter'
+          ItemName = 'dxBarLargeButtonCloseHeaderAndFooter'
         end>
       OneOnRow = False
       Row = 0
@@ -2696,7 +2696,7 @@ object RichEditControlEditor: TRichEditControlEditor
       ButtonStyle = bsChecked
       LargeImageIndex = 24
     end
-    object dxBarButtonMultilevellist: TdxBarButton
+    object dxBarButtonMultiLevelList: TdxBarButton
       Action = dxRichEditControlToggleMultiLevelList
       Category = 4
       ButtonStyle = bsChecked
@@ -3250,7 +3250,7 @@ object RichEditControlEditor: TRichEditControlEditor
       Category = 15
       LargeImageIndex = 84
     end
-    object dxBarLargeButtonTableofContents: TdxBarLargeButton
+    object dxBarLargeButtonTableOfContents: TdxBarLargeButton
       Action = dxRichEditControlInsertTableOfContents
       Category = 16
       LargeImageIndex = 85
@@ -3273,7 +3273,7 @@ object RichEditControlEditor: TRichEditControlEditor
       SyncImageIndex = False
       ImageIndex = 73
     end
-    object dxBarLargeButtonDoNotShowinTableofContents: TdxBarLargeButton
+    object dxBarLargeButtonDoNotShowInTableOfContents: TdxBarLargeButton
       Action = dxRichEditControlTableOfContentsSetParagraphBodyTextLevel
       Category = 16
       SyncImageIndex = False
@@ -3363,7 +3363,7 @@ object RichEditControlEditor: TRichEditControlEditor
       SyncImageIndex = False
       ImageIndex = 77
     end
-    object dxBarLargeButtonInsertTableofFigures: TdxBarLargeButton
+    object dxBarLargeButtonInsertTableOfFigures: TdxBarLargeButton
       Action = dxRichEditControlInsertTableOfFiguresPlaceholder
       Category = 17
       ButtonStyle = bsDropDown
@@ -3372,21 +3372,21 @@ object RichEditControlEditor: TRichEditControlEditor
       SyncImageIndex = False
       ImageIndex = 78
     end
-    object dxBarLargeButtonTableofFigures: TdxBarLargeButton
+    object dxBarLargeButtonTableOfFigures: TdxBarLargeButton
       Action = dxRichEditControlInsertTableOfFigures
       Category = 17
       LargeImageIndex = 93
       SyncImageIndex = False
       ImageIndex = 79
     end
-    object dxBarLargeButtonTableofTables: TdxBarLargeButton
+    object dxBarLargeButtonTableOfTables: TdxBarLargeButton
       Action = dxRichEditControlInsertTableOfTables
       Category = 17
       LargeImageIndex = 94
       SyncImageIndex = False
       ImageIndex = 80
     end
-    object dxBarLargeButtonTableofEquations: TdxBarLargeButton
+    object dxBarLargeButtonTableOfEquations: TdxBarLargeButton
       Action = dxRichEditControlInsertTableOfEquations
       Category = 17
       LargeImageIndex = 95
@@ -3456,7 +3456,7 @@ object RichEditControlEditor: TRichEditControlEditor
       SyncImageIndex = False
       ImageIndex = 90
     end
-    object dxBarLargeButtonEncryptwithPassword: TdxBarLargeButton
+    object dxBarLargeButtonEncryptWithPassword: TdxBarLargeButton
       Action = dxRichEditControlEncryptDocument
       Category = 20
       LargeImageIndex = 105
@@ -3545,7 +3545,7 @@ object RichEditControlEditor: TRichEditControlEditor
       SyncImageIndex = False
       ImageIndex = 102
     end
-    object dxBarLargeButtonLinktoPrevious: TdxBarLargeButton
+    object dxBarLargeButtonLinkToPrevious: TdxBarLargeButton
       Action = dxRichEditControlToggleHeaderFooterLinkToPrevious
       Category = 24
       LargeImageIndex = 117
@@ -3566,7 +3566,7 @@ object RichEditControlEditor: TRichEditControlEditor
       SyncImageIndex = False
       ImageIndex = 105
     end
-    object dxBarLargeButtonCloseHeaderandFooter: TdxBarLargeButton
+    object dxBarLargeButtonCloseHeaderAndFooter: TdxBarLargeButton
       Action = dxRichEditControlClosePageHeaderFooter
       Category = 26
       LargeImageIndex = 120
@@ -3937,7 +3937,7 @@ object RichEditControlEditor: TRichEditControlEditor
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonTopandBottom'
+          ItemName = 'dxBarLargeButtonTopAndBottom'
         end
         item
           Visible = True
@@ -3945,7 +3945,7 @@ object RichEditControlEditor: TRichEditControlEditor
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonInFrontofText'
+          ItemName = 'dxBarLargeButtonInFrontOfText'
         end>
     end
     object dxBarLargeButtonSquare: TdxBarLargeButton
@@ -3969,7 +3969,7 @@ object RichEditControlEditor: TRichEditControlEditor
       SyncImageIndex = False
       ImageIndex = 151
     end
-    object dxBarLargeButtonTopandBottom: TdxBarLargeButton
+    object dxBarLargeButtonTopAndBottom: TdxBarLargeButton
       Action = dxRichEditControlSetFloatingObjectTopAndBottomTextWrapType
       Category = 34
       LargeImageIndex = 166
@@ -3983,7 +3983,7 @@ object RichEditControlEditor: TRichEditControlEditor
       SyncImageIndex = False
       ImageIndex = 153
     end
-    object dxBarLargeButtonInFrontofText: TdxBarLargeButton
+    object dxBarLargeButtonInFrontOfText: TdxBarLargeButton
       Action = dxRichEditControlSetFloatingObjectInFrontOfTextWrapType
       Category = 34
       LargeImageIndex = 168
@@ -4110,11 +4110,11 @@ object RichEditControlEditor: TRichEditControlEditor
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonBringtoFront'
+          ItemName = 'dxBarLargeButtonBringToFront'
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonBringinFrontofText'
+          ItemName = 'dxBarLargeButtonBringInFrontOfText'
         end>
     end
     object dxBarLargeButtonBringForward: TdxBarLargeButton
@@ -4124,14 +4124,14 @@ object RichEditControlEditor: TRichEditControlEditor
       SyncImageIndex = False
       ImageIndex = 166
     end
-    object dxBarLargeButtonBringtoFront: TdxBarLargeButton
+    object dxBarLargeButtonBringToFront: TdxBarLargeButton
       Action = dxRichEditControlFloatingObjectBringToFront
       Category = 34
       LargeImageIndex = 181
       SyncImageIndex = False
       ImageIndex = 167
     end
-    object dxBarLargeButtonBringinFrontofText: TdxBarLargeButton
+    object dxBarLargeButtonBringInFrontOfText: TdxBarLargeButton
       Action = dxRichEditControlFloatingObjectBringInFrontOfText
       Category = 34
       LargeImageIndex = 182
@@ -4151,7 +4151,7 @@ object RichEditControlEditor: TRichEditControlEditor
         end
         item
           Visible = True
-          ItemName = 'dxBarLargeButtonSendtoBack'
+          ItemName = 'dxBarLargeButtonSendToBack'
         end
         item
           Visible = True
@@ -4165,7 +4165,7 @@ object RichEditControlEditor: TRichEditControlEditor
       SyncImageIndex = False
       ImageIndex = 170
     end
-    object dxBarLargeButtonSendtoBack: TdxBarLargeButton
+    object dxBarLargeButtonSendToBack: TdxBarLargeButton
       Action = dxRichEditControlFloatingObjectSendToBack
       Category = 34
       LargeImageIndex = 185
@@ -47743,7 +47743,7 @@ object RichEditControlEditor: TRichEditControlEditor
     ItemLinks = <
       item
         Visible = True
-        ItemName = 'dxBarLargeButtonDoNotShowinTableofContents'
+        ItemName = 'dxBarLargeButtonDoNotShowInTableOfContents'
       end
       item
         Visible = True
@@ -47813,15 +47813,15 @@ object RichEditControlEditor: TRichEditControlEditor
     ItemLinks = <
       item
         Visible = True
-        ItemName = 'dxBarLargeButtonTableofFigures'
+        ItemName = 'dxBarLargeButtonTableOfFigures'
       end
       item
         Visible = True
-        ItemName = 'dxBarLargeButtonTableofTables'
+        ItemName = 'dxBarLargeButtonTableOfTables'
       end
       item
         Visible = True
-        ItemName = 'dxBarLargeButtonTableofEquations'
+        ItemName = 'dxBarLargeButtonTableOfEquations'
       end>
     Ribbon = dxRibbon1
     UseOwnFont = False

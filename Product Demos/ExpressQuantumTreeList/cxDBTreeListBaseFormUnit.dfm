@@ -5,10 +5,9 @@ inherited cxDBTreeListDemoUnitForm: TcxDBTreeListDemoUnitForm
     object tlDB: TcxDBTreeList [0]
       Left = 10
       Top = 10
-      Width = 257
+      Width = 259
       Height = 262
       Bands = <>
-      Navigator.Buttons.CustomButtons = <>
       OptionsBehavior.ChangeDelay = 1000
       RootValue = -1
       ScrollbarAnnotations.CustomAnnotations = <>

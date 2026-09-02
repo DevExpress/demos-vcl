@@ -1,5 +1,4 @@
 object DMRealtorWorld: TDMRealtorWorld
-  OldCreateOrder = False
   OnCreate = DataModuleCreate
   Left = 712
   Top = 449
@@ -124,12 +123,10 @@ object DMRealtorWorld: TDMRealtorWorld
     object clHomesAndHomesAgentID: TIntegerField
       FieldKind = fkInternalCalc
       FieldName = 'AgentID'
-      Calculated = True
     end
     object clHomesAndHomesYearID: TIntegerField
       FieldKind = fkInternalCalc
       FieldName = 'YearID'
-      Calculated = True
     end
   end
   object clHomesAndAgents: TClientDataSet
@@ -281,7 +278,7 @@ object DMRealtorWorld: TDMRealtorWorld
       ReadOnly = True
     end
   end
-  object dsHouseSalsesChart: TDataSource
+  object dsHouseSalesChart: TDataSource
     DataSet = clHouseSalesChart
     Left = 24
     Top = 176

@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Classes, Vcl.ImgList, Vcl.Controls, cxGraphics, Data.DB, Datasnap.DBClient, Datasnap.Provider, cxStyles, cxClasses, dxmdaset, MidasLib,
   dxLayoutLookAndFeels, cxContainer, cxEdit, dxSkinMetropolisDark, HybridAppDataPath,
   cxImageList, cxLocalization, dxCore, cxImageComboBox,
-  System.Generics.Defaults, System.Generics.Collections;
+  System.Generics.Defaults, System.Generics.Collections, System.ImageList;
 
 type
   TdxEmployeeStatus = (esSalaried, esCommission, esContract, esTerminated, esOnLeave);

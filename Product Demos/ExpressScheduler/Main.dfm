@@ -1,16 +1,15 @@
 inherited frmMain: TfrmMain
   Caption = 'frmMain'
-  ClientHeight = 681
-  ClientWidth = 1095
+  ClientHeight = 680
+  ClientWidth = 1091
   ShowHint = True
-  StyleElements = [seFont, seClient, seBorder]
   OnDestroy = FormDestroy
-  ExplicitWidth = 1111
-  ExplicitHeight = 720
+  ExplicitWidth = 1107
+  ExplicitHeight = 719
   TextHeight = 13
   inherited dxRibbon1: TdxRibbon
-    Width = 1095
-    ExplicitWidth = 1095
+    Width = 1091
+    ExplicitWidth = 1091
     object dxRibbon1Tab3: TdxRibbonTab [0]
       Active = True
       Caption = 'Home'
@@ -51,39 +50,35 @@ inherited frmMain: TfrmMain
     end
   end
   inherited pnlAllArea: TdxPanel
-    Width = 1095
-    Height = 526
-    ExplicitWidth = 1095
-    ExplicitHeight = 526
+    Width = 1091
+    Height = 525
+    ExplicitWidth = 1091
+    ExplicitHeight = 517
     inherited plClient: TdxPanel
-      Width = 886
-      Height = 526
-      ExplicitWidth = 886
-      ExplicitHeight = 526
+      Width = 882
+      Height = 525
+      ExplicitWidth = 882
+      ExplicitHeight = 517
       object lcClient: TdxLayoutControl [0]
         Left = 0
         Top = 0
-        Width = 886
-        Height = 526
+        Width = 882
+        Height = 525
         Align = alClient
         TabOrder = 0
         LayoutLookAndFeel = dxLayoutSkinLookAndFeel1
-        ExplicitHeight = 557
+        ExplicitWidth = 878
+        ExplicitHeight = 516
         object grdEventsTable: TcxGrid
           Left = 10
-          Top = 507
-          Width = 849
+          Top = 508
+          Width = 845
           Height = 131
           TabOrder = 7
           object grdEventsTableTableView: TcxGridDBTableView
-            Navigator.Buttons.CustomButtons = <>
-            ScrollbarAnnotations.CustomAnnotations = <>
             DataController.DataModeController.GridMode = True
             DataController.DataSource = EventsDataSource
             DataController.KeyFieldNames = 'ID'
-            DataController.Summary.DefaultGroupSummaryItems = <>
-            DataController.Summary.FooterSummaryItems = <>
-            DataController.Summary.SummaryGroups = <>
             OptionsBehavior.CellHints = True
             OptionsBehavior.ImmediateEditor = False
             OptionsData.Deleting = False
@@ -92,80 +87,59 @@ inherited frmMain: TfrmMain
             OptionsView.GroupByBox = False
             object grdEventsTableTableViewID: TcxGridDBColumn
               DataBinding.FieldName = 'ID'
-              DataBinding.IsNullValueType = True
               Visible = False
             end
             object grdEventsTableTableViewParentID: TcxGridDBColumn
               DataBinding.FieldName = 'ParentID'
-              DataBinding.IsNullValueType = True
               Visible = False
             end
             object grdEventsTableTableViewType: TcxGridDBColumn
               DataBinding.FieldName = 'Type'
-              DataBinding.IsNullValueType = True
             end
             object grdEventsTableTableViewStart: TcxGridDBColumn
               DataBinding.FieldName = 'Start'
-              DataBinding.IsNullValueType = True
             end
             object grdEventsTableTableViewFinish: TcxGridDBColumn
               DataBinding.FieldName = 'Finish'
-              DataBinding.IsNullValueType = True
             end
             object grdEventsTableTableViewOptions: TcxGridDBColumn
               DataBinding.FieldName = 'Options'
-              DataBinding.IsNullValueType = True
             end
             object grdEventsTableTableViewCaption: TcxGridDBColumn
               DataBinding.FieldName = 'Caption'
-              DataBinding.IsNullValueType = True
             end
             object grdEventsTableTableViewRecurrenceIndex: TcxGridDBColumn
               DataBinding.FieldName = 'RecurrenceIndex'
-              DataBinding.IsNullValueType = True
               Visible = False
             end
             object grdEventsTableTableViewLocation: TcxGridDBColumn
               DataBinding.FieldName = 'Location'
-              DataBinding.IsNullValueType = True
             end
             object grdEventsTableTableViewMessage: TcxGridDBColumn
               DataBinding.FieldName = 'Message'
-              DataBinding.IsNullValueType = True
             end
             object grdEventsTableTableViewReminderDate: TcxGridDBColumn
               DataBinding.FieldName = 'ReminderDate'
-              DataBinding.IsNullValueType = True
             end
             object grdEventsTableTableViewReminderMinutes: TcxGridDBColumn
               DataBinding.FieldName = 'ReminderMinutes'
-              DataBinding.IsNullValueType = True
             end
             object grdEventsTableTableViewState: TcxGridDBColumn
               DataBinding.FieldName = 'State'
-              DataBinding.IsNullValueType = True
             end
             object grdEventsTableTableViewLabelColor: TcxGridDBColumn
               DataBinding.FieldName = 'LabelColor'
-              DataBinding.IsNullValueType = True
             end
             object grdEventsTableTableViewActualStart: TcxGridDBColumn
               DataBinding.FieldName = 'ActualStart'
-              DataBinding.IsNullValueType = True
               Visible = False
             end
             object grdEventsTableTableViewActualFinish: TcxGridDBColumn
               DataBinding.FieldName = 'ActualFinish'
-              DataBinding.IsNullValueType = True
               Visible = False
             end
           end
           object grdEventsTableTableViewConnection: TcxGridTableView
-            Navigator.Buttons.CustomButtons = <>
-            ScrollbarAnnotations.CustomAnnotations = <>
-            DataController.Summary.DefaultGroupSummaryItems = <>
-            DataController.Summary.FooterSummaryItems = <>
-            DataController.Summary.SummaryGroups = <>
             OptionsBehavior.CellHints = True
             OptionsBehavior.ImmediateEditor = False
             OptionsView.GroupByBox = False
@@ -178,9 +152,9 @@ inherited frmMain: TfrmMain
           end
         end
         object Scheduler: TcxScheduler
-          Left = 205
+          Left = 206
           Top = 176
-          Width = 654
+          Width = 649
           Height = 318
           DateNavigator.RowCount = 2
           DateNavigator.ShowDatesContainingHolidaysInColor = True
@@ -235,8 +209,8 @@ inherited frmMain: TfrmMain
           OnLayoutChanged = SchedulerLayoutChanged
           OnShowDateHint = SchedulerShowDateHint
           Splitters = {
-            95000000000100006903000005010000C101000001000000C60100003D010000}
-          StoredClientBounds = {01000000010000008D0200003D010000}
+            95000000000100006903000005010000BC01000001000000C10100003D010000}
+          StoredClientBounds = {0100000001000000880200003D010000}
           object lcControlBox: TdxLayoutControl
             Left = 0
             Top = 0
@@ -266,7 +240,7 @@ inherited frmMain: TfrmMain
             end
             object btnGenerateMoreEvents: TcxButton
               Left = 20
-              Top = 87
+              Top = 91
               Width = 159
               Height = 36
               Caption = 'Generate 10000 events'
@@ -292,7 +266,7 @@ inherited frmMain: TfrmMain
             end
             object btnDeleteAllEvents: TcxButton
               Left = 20
-              Top = 129
+              Top = 133
               Width = 159
               Height = 23
               Caption = 'Delete all events'
@@ -507,7 +481,7 @@ inherited frmMain: TfrmMain
               CaptionOptions.WordWrap = True
               CaptionOptions.Layout = clTop
               Control = cbxBoundDataBase
-              ControlOptions.OriginalHeight = 19
+              ControlOptions.OriginalHeight = 21
               ControlOptions.OriginalWidth = 50
               ControlOptions.ShowBorder = False
               Index = 0
@@ -583,7 +557,7 @@ inherited frmMain: TfrmMain
               CaptionOptions.WordWrap = True
               CaptionOptions.Layout = clTop
               Control = ccbHolidaysColor
-              ControlOptions.OriginalHeight = 19
+              ControlOptions.OriginalHeight = 21
               ControlOptions.OriginalWidth = 50
               ControlOptions.ShowBorder = False
               Index = 3
@@ -623,7 +597,7 @@ inherited frmMain: TfrmMain
               CaptionOptions.WordWrap = True
               CaptionOptions.Layout = clTop
               Control = cbxEventsStyle
-              ControlOptions.OriginalHeight = 19
+              ControlOptions.OriginalHeight = 21
               ControlOptions.OriginalWidth = 50
               ControlOptions.ShowBorder = False
               Index = 2
@@ -675,7 +649,7 @@ inherited frmMain: TfrmMain
               CaptionOptions.WordWrap = True
               CaptionOptions.Layout = clTop
               Control = cbxCurrentZone
-              ControlOptions.OriginalHeight = 19
+              ControlOptions.OriginalHeight = 21
               ControlOptions.OriginalWidth = 50
               ControlOptions.ShowBorder = False
               Index = 0
@@ -695,7 +669,7 @@ inherited frmMain: TfrmMain
               CaptionOptions.WordWrap = True
               CaptionOptions.Layout = clTop
               Control = cbxAdditionalTimeZone
-              ControlOptions.OriginalHeight = 19
+              ControlOptions.OriginalHeight = 21
               ControlOptions.OriginalWidth = 50
               ControlOptions.ShowBorder = False
               Index = 2
@@ -752,7 +726,7 @@ inherited frmMain: TfrmMain
               CaptionOptions.WordWrap = True
               CaptionOptions.Layout = clTop
               Control = cbxYearViewScale
-              ControlOptions.OriginalHeight = 19
+              ControlOptions.OriginalHeight = 21
               ControlOptions.OriginalWidth = 50
               ControlOptions.ShowBorder = False
               Index = 0
@@ -858,7 +832,7 @@ inherited frmMain: TfrmMain
               CaptionOptions.WordWrap = True
               CaptionOptions.Layout = clTop
               Control = cbxRangeDisplayEventsAs
-              ControlOptions.OriginalHeight = 19
+              ControlOptions.OriginalHeight = 21
               ControlOptions.OriginalWidth = 50
               ControlOptions.ShowBorder = False
               Index = 3
@@ -869,7 +843,7 @@ inherited frmMain: TfrmMain
               CaptionOptions.WordWrap = True
               CaptionOptions.Layout = clTop
               Control = seRangeThumbnailHeight
-              ControlOptions.OriginalHeight = 19
+              ControlOptions.OriginalHeight = 21
               ControlOptions.OriginalWidth = 50
               ControlOptions.ShowBorder = False
               Index = 4
@@ -880,7 +854,7 @@ inherited frmMain: TfrmMain
               CaptionOptions.WordWrap = True
               CaptionOptions.Layout = clTop
               Control = seRangeScaleIntervalMinimalWidth
-              ControlOptions.OriginalHeight = 19
+              ControlOptions.OriginalHeight = 21
               ControlOptions.OriginalWidth = 50
               ControlOptions.ShowBorder = False
               Index = 5
@@ -890,7 +864,7 @@ inherited frmMain: TfrmMain
         object dxRangeControl: TdxRangeControl
           Left = 10
           Top = 10
-          Width = 849
+          Width = 845
           Height = 150
           TabOrder = 0
           VisibleRangeMaxScaleFactor = 10.000000000000000000
@@ -919,7 +893,6 @@ inherited frmMain: TfrmMain
           Bands = <
             item
             end>
-          Navigator.Buttons.CustomButtons = <>
           OptionsBehavior.ChangeDelay = 1000
           OptionsBehavior.ConfirmDelete = False
           OptionsBehavior.CopyCaptionsToClipboard = False
@@ -939,8 +912,6 @@ inherited frmMain: TfrmMain
             Position.ColIndex = 0
             Position.RowIndex = 0
             Position.BandIndex = 0
-            Summary.FooterSummaryItems = <>
-            Summary.GroupFooterSummaryItems = <>
           end
           object tcId: TcxTreeListColumn
             Visible = False
@@ -948,8 +919,6 @@ inherited frmMain: TfrmMain
             Position.ColIndex = 1
             Position.RowIndex = 0
             Position.BandIndex = 0
-            Summary.FooterSummaryItems = <>
-            Summary.GroupFooterSummaryItems = <>
           end
         end
         object btnWebServiceAddAccount: TcxButton
@@ -1152,18 +1121,29 @@ inherited frmMain: TfrmMain
       end
       inherited dxRibbonBackstageView1: TdxRibbonBackstageView
         inherited bvtExport: TdxRibbonBackstageViewTabSheet
+          Left = 136
           Active = False
+          ExplicitLeft = 136
+          ExplicitWidth = 314
+          inherited gbBackstageViewTabCaption: TcxGroupBox
+            ExplicitWidth = 314
+            Width = 314
+            inherited lbbvTabExportCaption: TcxLabel
+              ExplicitWidth = 230
+            end
+          end
           inherited gbExportItems: TcxGroupBox
+            ExplicitWidth = 230
+            Width = 230
             inherited gbExportPane: TcxGroupBox
-              inherited dxBevel1: TdxBevel
-                ExplicitLeft = 303
-                ExplicitHeight = 197
+              inherited bvgcExport: TdxRibbonBackstageViewGalleryControl
+                ExplicitWidth = 304
               end
             end
           end
         end
         object bvtSynchronize: TdxRibbonBackstageViewTabSheet [1]
-          Left = 132
+          Left = 136
           Top = 0
           Active = True
           Caption = 'Synchronize'
@@ -1179,7 +1159,7 @@ inherited frmMain: TfrmMain
             TabOrder = 0
             Transparent = True
             Height = 60
-            Width = 318
+            Width = 314
             object lbbvTabSynchronizeCaption: TcxLabel
               Left = 42
               Top = 0
@@ -1208,7 +1188,7 @@ inherited frmMain: TfrmMain
             TabOrder = 1
             Transparent = True
             Height = 240
-            Width = 318
+            Width = 314
             object gbSynchronizePane: TcxGroupBox
               Left = 0
               Top = 0
@@ -1223,20 +1203,19 @@ inherited frmMain: TfrmMain
               Height = 240
               Width = 337
               object dxBevel2: TdxBevel
-                Left = 335
+                Left = 331
                 Top = 0
-                Width = 2
+                Width = 6
                 Height = 240
                 Align = alRight
                 AutoSize = True
                 Shape = dxbsLineLeft
-                ExplicitLeft = 303
-                ExplicitHeight = 214
+                ExplicitWidth = 1
               end
               object bvgcSynchronize: TdxRibbonBackstageViewGalleryControl
                 Left = 0
                 Top = 0
-                Width = 335
+                Width = 331
                 Height = 240
                 Align = alClient
                 Font.Charset = DEFAULT_CHARSET
@@ -1262,6 +1241,7 @@ inherited frmMain: TfrmMain
                 Ribbon = dxRibbon1
                 TabOrder = 0
                 OnItemClick = bvgcSynchronizeItemClick
+                ExplicitWidth = 336
                 object bvgcSynchronizeGroup1: TdxRibbonBackstageViewGalleryGroup
                   Caption = 'Group0'
                   ShowCaption = False
@@ -1279,15 +1259,24 @@ inherited frmMain: TfrmMain
             end
           end
         end
+        inherited bvtPrint: TdxRibbonBackstageViewTabSheet
+          Left = 136
+          ExplicitLeft = 136
+          ExplicitWidth = 314
+        end
+        inherited bvtExit: TdxRibbonBackstageViewTabSheet
+          Left = 136
+          ExplicitLeft = 136
+          ExplicitWidth = 314
+        end
       end
     end
     inherited NavBarSite: TPanel
-      Height = 526
-      StyleElements = [seFont, seClient, seBorder]
-      ExplicitHeight = 557
+      Height = 525
+      ExplicitHeight = 556
       inherited NavBar: TdxNavBar
-        Height = 526
-        ExplicitHeight = 557
+        Height = 525
+        ExplicitHeight = 556
         object nbgNew: TdxNavBarGroup [0]
           Caption = 'Highlighted Features'
           SelectedLinkIndex = 2
@@ -1642,6 +1631,7 @@ inherited frmMain: TfrmMain
     inherited barAppearance: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
+      FloatClientHeight = 24
     end
     inherited barView: TdxBar
       DockedLeft = 317
@@ -1715,7 +1705,7 @@ inherited frmMain: TfrmMain
     object dxBarArrange: TdxBar [8]
       Caption = 'Arrange'
       CaptionButtons = <>
-      DockedLeft = 443
+      DockedLeft = 444
       DockedTop = 0
       FloatLeft = 1125
       FloatTop = 8
@@ -3953,17 +3943,17 @@ inherited frmMain: TfrmMain
       Component = Scheduler
       PageNumberFormat = pnfNumeral
       PrinterPage.DMPaper = 1
-      PrinterPage.Footer = 200
+      PrinterPage.Footer = 5080
       PrinterPage.GrayShading = True
-      PrinterPage.Header = 200
-      PrinterPage.Margins.Bottom = 500
-      PrinterPage.Margins.Left = 500
-      PrinterPage.Margins.Right = 500
-      PrinterPage.Margins.Top = 500
-      PrinterPage.PageSize.X = 8500
-      PrinterPage.PageSize.Y = 11000
+      PrinterPage.Header = 5080
+      PrinterPage.Margins.Bottom = 12700
+      PrinterPage.Margins.Left = 12700
+      PrinterPage.Margins.Right = 12700
+      PrinterPage.Margins.Top = 12700
+      PrinterPage.PageSize.X = 215900
+      PrinterPage.PageSize.Y = 279400
       PrinterPage._dxMeasurementUnits_ = 0
-      PrinterPage._dxLastMU_ = 1
+      PrinterPage._dxLastMU_ = 2
       PixelsPerInch = 96
       BuiltInReportLink = True
     end
@@ -23874,28 +23864,6 @@ inherited frmMain: TfrmMain
     Top = 329
     PixelsPerInch = 96
     object ComboBoxItem: TcxEditRepositoryComboBoxItem
-      Properties.Items.Strings = (
-        'John Hillsborough'
-        'Jane Carmichael'
-        'Sam Frankfurt'
-        'Karen Holmes'
-        'Bobbie Valentine'
-        'Jennie Smithers'
-        'Ricardo Menendez'
-        'Frank Frankson'
-        'Christa Christie'
-        'Jimmie Jones'
-        'Alfred Newman'
-        'James Johnson'
-        'Robert James'
-        'June Alessandro'
-        'Mildred Johansson'
-        'Henry McAllister'
-        'Michae Jeffers'
-        'Scott Mathewson'
-        'Mickey Alcorn'
-        'Roger Michelson'
-        'Leticia Ford')
     end
     object RichItem: TcxEditRepositoryRichItem
     end
@@ -23908,7 +23876,7 @@ inherited frmMain: TfrmMain
     Top = 273
     PixelsPerInch = 96
   end
-  object pmGenerageHolidaysEvents: TPopupMenu
+  object pmGenerateHolidaysEvents: TPopupMenu
     Left = 425
     Top = 273
     object miGenerateHolidaysEventsForAllResources: TMenuItem

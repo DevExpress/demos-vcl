@@ -487,7 +487,7 @@ inherited frmMain: TfrmMain
     object aExportToSVG: TAction
       Category = 'File'
       Caption = '&Export to SVG'
-      Hint = 'Expot to SVG'
+      Hint = 'Export to SVG'
       ImageIndex = 101
       OnExecute = aExportToSVGExecute
     end

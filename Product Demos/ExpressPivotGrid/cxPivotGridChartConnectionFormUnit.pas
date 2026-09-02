@@ -27,13 +27,13 @@ type
     dxLayoutItem2: TdxLayoutItem;
     cbSourceData: TcxComboBox;
     dxLayoutItem3: TdxLayoutItem;
-    cbSourceForCategorites: TcxComboBox;
+    cbSourceForCategories: TcxComboBox;
     dxLayoutItem4: TdxLayoutItem;
     dxLayoutSplitterItem2: TdxLayoutSplitterItem;
     procedure cbSourceDataPropertiesChange(Sender: TObject);
     procedure lblURLClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure cbSourceForCategoritesPropertiesChange(Sender: TObject);
+    procedure cbSourceForCategoriesPropertiesChange(Sender: TObject);
   strict private
     procedure SetupChart;
   protected
@@ -87,10 +87,10 @@ begin
   ChartConnection.Refresh;
 end;
 
-procedure TfmPivotGridChartConnection.cbSourceForCategoritesPropertiesChange(
+procedure TfmPivotGridChartConnection.cbSourceForCategoriesPropertiesChange(
   Sender: TObject);
 begin
-  case cbSourceForCategorites.ItemIndex of
+  case cbSourceForCategories.ItemIndex of
     1:
       ChartConnection.SourceForCategories := sfcRows;
     0:

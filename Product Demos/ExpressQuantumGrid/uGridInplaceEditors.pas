@@ -157,17 +157,17 @@ begin
 //EditRepositoryDateItem: TcxEditRepositoryDateItem;
   FValues[7] := Date;
 //EditRepositoryExtLookupComboBoxItem: TcxEditRepositoryExtLookupComboBoxItem;
-  FValues[8] := dmmain.cdsDXCustomers.FindField('ID').AsInteger;
+  FValues[8] := dmMain.cdsDXCustomers.FindField('ID').AsInteger;
 //  EditRepositoryFontNameComboBox: TcxEditRepositoryFontNameComboBox;
   FValues[9] := 'Arial';
 //EditRepositoryHyperLinkItem: TcxEditRepositoryHyperLinkItem;
   FValues[10] := 'http://www.devexpress.com';
 //EditRepositoryImageItem: TcxEditRepositoryImageItem;
-  FValues[11] := dmmain.cdsFoodsCategories.FindField('Picture').Value;
+  FValues[11] := dmMain.cdsFoodsCategories.FindField('Picture').Value;
 //EditRepositoryImageComboBoxItem: TcxEditRepositoryImageComboBoxItem;
   FValues[12] := 2;
 //EditRepositoryLookupComboBoxItem: TcxEditRepositoryLookupComboBoxItem;
-  FValues[13] := dmmain.cdsDXProducts.FindField('ID').AsInteger;
+  FValues[13] := dmMain.cdsDXProducts.FindField('ID').AsInteger;
 //EditRepositoryMaskItem: TcxEditRepositoryMaskItem;
   FValues[14] := '(234)897-235';
 //EditRepositoryMemoItem: TcxEditRepositoryMemoItem;
@@ -202,7 +202,7 @@ var
 begin
   AStrings := TStringList.Create;
   try
-    AStrings.LoadFromFile(ExtractFilePath(Application.ExeName) + 'lipsum.rtf');
+    AStrings.LoadFromFile(ExtractFilePath(Application.ExeName) + 'lipsum.rtf'); 
     Result := AStrings.Text;
   finally
     AStrings.Free;

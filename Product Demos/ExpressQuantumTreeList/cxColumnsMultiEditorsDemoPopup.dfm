@@ -37,9 +37,8 @@ object ColumnsMultiEditorsDemoPopupForm: TColumnsMultiEditorsDemoPopupForm
       Font.Height = -11
       Font.Name = 'MS Sans Serif'
       Font.Style = []
-      Images = ilPoupuImages
+      Images = ilPopupImages
       LookAndFeel.Kind = lfFlat
-      Navigator.Buttons.CustomButtons = <>
       OptionsBehavior.GoToNextCellOnTab = True
       OptionsBehavior.ImmediateEditor = False
       OptionsBehavior.ChangeDelay = 1000
@@ -67,8 +66,8 @@ object ColumnsMultiEditorsDemoPopupForm: TColumnsMultiEditorsDemoPopupForm
       ParentFont = False
       Preview.MaxLineCount = 2
       ScrollbarAnnotations.CustomAnnotations = <>
-      Styles.Background = stlContenet
-      Styles.Content = stlContenet
+      Styles.Background = stlContent
+      Styles.Content = stlContent
       Styles.HotTrack = stlHotRoot
       Styles.OnGetHotTrackStyle = tlPopupStylesGetHotTrackStyle
       TabOrder = 0
@@ -123,12 +122,10 @@ object ColumnsMultiEditorsDemoPopupForm: TColumnsMultiEditorsDemoPopupForm
         Position.ColIndex = 0
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
     end
   end
-  object ilPoupuImages: TImageList
+  object ilPopupImages: TImageList
     DrawingStyle = dsTransparent
     Left = 40
     Top = 14
@@ -418,7 +415,7 @@ object ColumnsMultiEditorsDemoPopupForm: TColumnsMultiEditorsDemoPopupForm
       Font.Style = [fsUnderline]
       TextColor = clNavy
     end
-    object stlContenet: TcxStyle
+    object stlContent: TcxStyle
       AssignedValues = [svColor]
       Color = 16578029
     end

@@ -76,9 +76,9 @@ procedure TfrmDateEdit.SetDateEditProperties;
 var
   AButtons: set of TDateButton;
 
-  procedure CheckButtonPresent(AChekBox: TAction; AButton: TDateButton);
+  procedure CheckButtonPresent(ACheckBox: TAction; AButton: TDateButton);
   begin
-    if AChekBox.Checked then
+    if ACheckBox.Checked then
       Include(AButtons, AButton);
   end;
 

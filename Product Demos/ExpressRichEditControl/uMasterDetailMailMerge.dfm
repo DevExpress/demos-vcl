@@ -1,5 +1,5 @@
 inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
-  object LayoutControl: TdxLayoutControl
+  object LayoutControl: TdxLayoutControl [3]
     Left = 0
     Top = 57
     Width = 451
@@ -8,15 +8,14 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
     TabOrder = 3
     LayoutLookAndFeel = LayoutCxLookAndFeel
     object recTemplate: TdxRichEditControl
-      Left = 10000
-      Top = 10000
-      Width = 901
-      Height = 608
-      Color = 16053234
+      Left = 24
+      Top = 44
+      Width = 403
+      Height = 107
+      Color = clBtnFace
       Options.Fields.HighlightMode = Always
       Options.MailMerge.DataSource = dsTemplate
       TabOrder = 0
-      Visible = False
       OnModifiedChanged = ModifiedChanged
       OnMailMergeStarted = TemplateMailMergeStarted
     end
@@ -25,7 +24,7 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
       Top = 10000
       Width = 300
       Height = 200
-      Color = 16053234
+      Color = clBtnFace
       Options.Fields.HighlightMode = Always
       Options.MailMerge.DataSource = dsMaster
       TabOrder = 1
@@ -37,7 +36,7 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
       Top = 10000
       Width = 300
       Height = 200
-      Color = 16053234
+      Color = clBtnFace
       Options.Fields.HighlightMode = Always
       Options.MailMerge.DataSource = dsDetail
       TabOrder = 2
@@ -45,20 +44,20 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
       OnModifiedChanged = ModifiedChanged
     end
     object recResultingDocument: TdxRichEditControl
-      Left = 23
-      Top = 46
+      Left = 10000
+      Top = 10000
       Width = 402
       Height = 103
-      Color = 16053234
+      Color = clBtnFace
       Options.Fields.HighlightMode = Never
       TabOrder = 3
+      Visible = False
       OnCalculateDocumentVariable = ResultingDocumentCalculateDocumentVariable
     end
     object LayoutControlGroup_Root: TdxLayoutGroup
       AlignHorz = ahClient
       AlignVert = avClient
       LayoutLookAndFeel = LayoutCxLookAndFeel
-      ButtonOptions.Buttons = <>
       Hidden = True
       LayoutDirection = ldTabbed
       ShowBorder = False
@@ -83,7 +82,6 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
       AlignHorz = ahClient
       AlignVert = avClient
       CaptionOptions.Text = 'Template'
-      ButtonOptions.Buttons = <>
       Index = 0
     end
     object lgResultingDocument: TdxLayoutGroup
@@ -91,7 +89,6 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
       AlignHorz = ahClient
       AlignVert = avClient
       CaptionOptions.Text = 'Resulting document'
-      ButtonOptions.Buttons = <>
       Index = 3
     end
     object lgDetail: TdxLayoutGroup
@@ -99,7 +96,6 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
       AlignHorz = ahClient
       AlignVert = avClient
       CaptionOptions.Text = 'Detail'
-      ButtonOptions.Buttons = <>
       Index = 2
     end
     object lgMaster: TdxLayoutGroup
@@ -107,7 +103,6 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
       AlignHorz = ahClient
       AlignVert = avClient
       CaptionOptions.Text = 'Master'
-      ButtonOptions.Buttons = <>
       Index = 1
     end
     object liMaster: TdxLayoutItem
@@ -150,6 +145,11 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
       Index = 0
     end
   end
+  inherited dxFrameLayoutLookAndFeelList: TdxLayoutLookAndFeelList
+    inherited dxLayoutSkinLookAndFeelDescription: TdxLayoutSkinLookAndFeel
+      PixelsPerInch = 96
+    end
+  end
   object LayoutLookAndFeels: TdxLayoutLookAndFeelList
     Left = 72
     Top = 144
@@ -176,15 +176,15 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
     Top = 200
   end
   object cdsTemplate: TClientDataSet
+    PersistDataPacket.Data = {
+      270000009619E0BD01000000180000000100000000000300000027000466616B
+      6504000100000000000000}
     Active = True
     Aggregates = <>
     Params = <>
     Left = 160
     Top = 200
-    Data = {
-      270000009619E0BD01000000180000000100000000000300000027000466616B
-      6504000100000000000000}
-    object cdsTemplatefake: TIntegerField
+    object cdsTemplateFake: TIntegerField
       FieldName = 'fake'
     end
   end
@@ -208,6 +208,7 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
     Version = 0
     Left = 368
     Top = 144
+    PixelsPerInch = 96
     object cplMasterLink: TdxRichEditControlReportLink
       Component = recMaster
       PrinterPage.DMPaper = 9
@@ -221,6 +222,7 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
+      PixelsPerInch = 96
       BuiltInReportLink = True
     end
     object cplDetailLink: TdxRichEditControlReportLink
@@ -236,6 +238,7 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
+      PixelsPerInch = 96
       BuiltInReportLink = True
     end
     object cplResultLink: TdxRichEditControlReportLink
@@ -251,6 +254,7 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
+      PixelsPerInch = 96
       BuiltInReportLink = True
     end
     object cplTemplateLink: TdxRichEditControlReportLink
@@ -266,6 +270,7 @@ inherited frmRichEditMasterDetailMailMerge: TfrmRichEditMasterDetailMailMerge
       PrinterPage.PageSize.Y = 297000
       PrinterPage._dxMeasurementUnits_ = 0
       PrinterPage._dxLastMU_ = 2
+      PixelsPerInch = 96
       BuiltInReportLink = True
     end
   end

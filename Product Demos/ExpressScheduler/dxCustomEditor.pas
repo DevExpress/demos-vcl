@@ -18,7 +18,7 @@ uses
   dxRichEdit.Control, dxRichEdit.Control.SpellChecker,
   dxRichEdit.Dialogs.EventArgs, dxHttpIndyRequest, dxBarBuiltInMenu,
   dxRichEdit.Platform.Win.Control, dxRichEdit.Control.Core, cxFontNameComboBox,
-  dxRichEdit.Actions, dxRibbonColorGallery, dxActions;
+  dxRichEdit.Actions, dxRibbonColorGallery, dxActions, System.Actions, System.ImageList;
 
 type
   TcxSchedulerEventCustomEditor = class(TcxSchedulerEventRibbonStyleEditorForm)
@@ -75,7 +75,7 @@ type
     dxRichEditControlToggleSimpleNumberingList: TdxRichEditControlToggleSimpleNumberingList;
     dxBarButtonNumbering: TdxBarButton;
     dxRichEditControlToggleMultiLevelList: TdxRichEditControlToggleMultiLevelList;
-    dxBarButtonMultilevellist: TdxBarButton;
+    dxBarButtonMultilevelList: TdxBarButton;
     dxRichEditControlDecrementIndent: TdxRichEditControlDecrementIndent;
     dxBarButtonDecreaseIndent: TdxBarButton;
     dxRichEditControlIncrementIndent: TdxRichEditControlIncrementIndent;
@@ -128,6 +128,7 @@ type
     dxRichEditControlShowSymbolForm: TdxRichEditControlShowSymbolForm;
     dxBarSymbols: TdxBar;
     dxBarLargeButtonSymbol: TdxBarLargeButton;
+    liOldMessage: TdxLayoutItem;
     procedure recMessageModifiedChanged(Sender: TObject);
   protected
     procedure SetActiveControl; override;
@@ -136,9 +137,9 @@ type
     procedure LoadEventValuesIntoControls; override;
   end;
 
-  { TcxShedulerDemoEventEditorFormStyleInfo }
+  { TcxSchedulerDemoEventEditorFormStyleInfo }
 
-  TcxShedulerDemoEventEditorFormStyleInfo = class(TcxShedulerRibbon2016StyleEventEditorFormStyleInfo)
+  TcxSchedulerDemoEventEditorFormStyleInfo = class(TcxShedulerRibbon2016StyleEventEditorFormStyleInfo)
   public
     class function CreateEditor(AEvent: TcxSchedulerControlEvent): IcxSchedulerEventEditorForm; override;
     class function GetName: string; override;
@@ -186,28 +187,25 @@ begin
     inherited SetActiveControl;
 end;
 
-{ TcxShedulerDemoEventEditorFormStyleInfo }
+{ TcxSchedulerDemoEventEditorFormStyleInfo }
 
-class function TcxShedulerDemoEventEditorFormStyleInfo.CreateEditor(
+class function TcxSchedulerDemoEventEditorFormStyleInfo.CreateEditor(
   AEvent: TcxSchedulerControlEvent): IcxSchedulerEventEditorForm;
 begin
   Result := TcxSchedulerEventCustomEditor.CreateEx(AEvent);
   InitialRibbonStyle(Result);
 end;
 
-class function TcxShedulerDemoEventEditorFormStyleInfo.GetName: string;
+class function TcxSchedulerDemoEventEditorFormStyleInfo.GetName: string;
 begin
   Result := 'Custom Editor';
 end;
 
 initialization
-  cxSchedulerEditorManager.RegisterShedulerEditorForm(TcxShedulerDemoEventEditorFormStyleInfo);
+  cxSchedulerEditorManager.RegisterShedulerEditorForm(TcxSchedulerDemoEventEditorFormStyleInfo);
 
 finalization
-  cxSchedulerEditorManager.UnregisterShedulerEditorForm(TcxShedulerDemoEventEditorFormStyleInfo);
+  cxSchedulerEditorManager.UnregisterShedulerEditorForm(TcxSchedulerDemoEventEditorFormStyleInfo); 
 
 
 end.
-
-
-

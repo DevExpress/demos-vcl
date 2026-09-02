@@ -162,7 +162,7 @@ var
 begin
   for I := 0 to Count - 1 do
     if Items[I].ID = ANewItem.ID then
-      raise Exception.CreateFmt('Frame "%s" registered with dpuplicate ID %d', [ANewItem.ID, ANewItem.ClassName]);
+      raise Exception.CreateFmt('Frame "%s" registered with duplicate ID %d', [ANewItem.ID, ANewItem.ClassName]);
 
   for I := 0 to Count - 1 do
     if Items[I].ID > ANewItem.ID then

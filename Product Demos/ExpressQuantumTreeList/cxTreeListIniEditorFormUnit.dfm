@@ -21,8 +21,6 @@ inherited frmIniEditor: TfrmIniEditor
         Position.ColIndex = 0
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clnValue: TcxTreeListColumn
         Caption.Text = 'Option Value'
@@ -30,8 +28,6 @@ inherited frmIniEditor: TfrmIniEditor
         Position.ColIndex = 1
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
     end
     object btnLoad: TcxButton [1]

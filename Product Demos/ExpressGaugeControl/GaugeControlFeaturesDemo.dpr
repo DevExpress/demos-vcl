@@ -7,7 +7,7 @@ program GaugeControlFeaturesDemo;
 
 uses
   Vcl.Forms, dxUIAClasses,
-  dxSplashUnit in '..\Common\dxSplashUnit.pas' {TfrmSplash},
+  dxSplashUnit in '..\Common\dxSplashUnit.pas',
   Main in 'Main.pas' {frmMain},
   dxGaugeControlBaseFormUnit in 'dxGaugeControlBaseFormUnit.pas' {dxGaugeControlDemoUnitForm},
   dxGaugeControlStyles in 'dxGaugeControlStyles.pas' {frmGaugeStyles},

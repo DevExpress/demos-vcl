@@ -114,8 +114,6 @@ inherited frmDepartments: TfrmDepartments
         Position.ColIndex = 0
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clnBudget: TcxTreeListColumn
         PropertiesClassName = 'TcxCurrencyEditProperties'
@@ -185,8 +183,6 @@ inherited frmDepartments: TfrmDepartments
         Position.ColIndex = 1
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clnLocation: TcxTreeListColumn
         PropertiesClassName = 'TcxComboBoxProperties'
@@ -377,8 +373,6 @@ inherited frmDepartments: TfrmDepartments
         Position.ColIndex = 2
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clnPhone1: TcxTreeListColumn
         PropertiesClassName = 'TcxMaskEditProperties'
@@ -409,8 +403,6 @@ inherited frmDepartments: TfrmDepartments
         Position.ColIndex = 0
         Position.RowIndex = 0
         Position.BandIndex = 1
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clnPhone2: TcxTreeListColumn
         PropertiesClassName = 'TcxMaskEditProperties'
@@ -459,8 +451,6 @@ inherited frmDepartments: TfrmDepartments
         Position.ColIndex = 1
         Position.RowIndex = 0
         Position.BandIndex = 1
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
     end
   end
@@ -482,7 +472,7 @@ inherited frmDepartments: TfrmDepartments
     Left = 72
     Top = 136
     Bitmap = {
-      494C010114001800040010001000FFFFFFFF2100FFFFFFFFFFFFFFFF424D3600
+      494C010114001800040010001000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000006000000001002000000000000060
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -1278,7 +1268,8 @@ inherited frmDepartments: TfrmDepartments
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000}
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000}
     DesignInfo = 8912968
     ImageInfo = <
       item

@@ -124,9 +124,9 @@ procedure TfrmPictureEditor.CheckBuiltMenuItems(Sender: TObject);
 var
   AItems: TcxPopupMenuItems;
 
-  procedure CheckMenuItem(AChekBox: TAction; AItem: TcxPopupMenuItem);
+  procedure CheckMenuItem(ACheckBox: TAction; AItem: TcxPopupMenuItem);
   begin
-    if AChekBox.Checked then
+    if ACheckBox.Checked then
       Include(AItems, AItem);
   end;
 

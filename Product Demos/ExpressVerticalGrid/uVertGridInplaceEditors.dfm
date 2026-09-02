@@ -1,10 +1,18 @@
 inherited frmVertGridInplaceEditors: TfrmVertGridInplaceEditors
+  Width = 639
+  Height = 395
+  ExplicitWidth = 639
+  ExplicitHeight = 395
   inherited lcFrame: TdxLayoutControl
+    Width = 639
+    Height = 395
+    ExplicitWidth = 639
+    ExplicitHeight = 395
     object VerticalGrid: TcxVerticalGrid [0]
       Left = 10
       Top = 10
-      Width = 217
-      Height = 230
+      Width = 405
+      Height = 337
       OptionsView.AutoScaleBands = False
       OptionsView.RowHeaderWidth = 156
       OptionsView.ValueWidth = 240
@@ -64,7 +72,7 @@ inherited frmVertGridInplaceEditors: TfrmVertGridInplaceEditors
         Index = 4
         Version = 1
       end
-      object vgSpintEditor: TcxEditorRow
+      object vgSpinEditor: TcxEditorRow
         Properties.Caption = 'Spin Editor'
         Properties.RepositoryItem = EditRepositorySpinItem
         Properties.DataBinding.ValueType = 'Integer'

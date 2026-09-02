@@ -110,7 +110,7 @@ begin
     cbButtons.Checked := ocButtons in Options;
     cbEdit.Checked := ocEdit in Options;
     cbCanDrag.Checked := ocCanDrag in Options;
-    cbShowDrag.Checked := ocshowDrag in Options;
+    cbShowDrag.Checked := ocShowDrag in Options;
     cbInsDel.Checked := ocInsDel in Options;
 
     seX.Value := IndentX;

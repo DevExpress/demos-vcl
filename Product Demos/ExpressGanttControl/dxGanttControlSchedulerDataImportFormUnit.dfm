@@ -157,7 +157,7 @@ inherited frmSchedulerDataImport: TfrmSchedulerDataImport
       Index = 0
     end
     inherited dxLayoutItem5: TdxLayoutItem
-      Parent = lgGantControl
+      Parent = lgGanttControl
     end
     inherited lgActiveView: TdxLayoutGroup
       CaptionOptions.Text = 'GanttControl Active View Options'
@@ -262,7 +262,7 @@ inherited frmSchedulerDataImport: TfrmSchedulerDataImport
       ControlOptions.ShowBorder = False
       Index = 0
     end
-    object lgGantControl: TdxLayoutGroup
+    object lgGanttControl: TdxLayoutGroup
       Parent = lgMainGroup
       CaptionOptions.Text = 'Gantt Control'
       ButtonOptions.Buttons = <>

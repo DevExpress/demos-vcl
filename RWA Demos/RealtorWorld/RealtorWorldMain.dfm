@@ -2,23 +2,21 @@ object frmRealtorWorld: TfrmRealtorWorld
   Left = 229
   Top = 13
   ClientHeight = 756
-  ClientWidth = 1105
+  ClientWidth = 1432
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   WindowState = wsMaximized
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object dxTile: TdxTileControl
     Left = 0
     Top = 0
-    Width = 1105
+    Width = 1432
     Height = 756
     Constraints.MinWidth = 116
     LookAndFeel.Kind = lfFlat
@@ -32,6 +30,7 @@ object frmRealtorWorld: TfrmRealtorWorld
     TabOrder = 0
     Title.Text = 'Realtor World'
     OnItemCheck = dxTileItemCheck
+    ExplicitWidth = 1105
     object tcaExit: TdxTileControlActionBarItem
       Align = abiaRight
       Caption = 'Exit'
@@ -278,15 +277,15 @@ object frmRealtorWorld: TfrmRealtorWorld
       GlyphFrameCount = 3
       OnClick = tcaMakeTileItemLargerClick
     end
-    object dxTiledxTileControlGroup1: TdxTileControlGroup
+    object dxTileControlGroup1: TdxTileControlGroup
       Caption.Text = 'Houses and Agents'
       Index = 0
     end
-    object dxTiledxTileControlGroup2: TdxTileControlGroup
+    object dxTileControlGroup2: TdxTileControlGroup
       Caption.Text = 'Tools'
       Index = 1
     end
-    object dxTiledxTileControlGroup3: TdxTileControlGroup
+    object TileControlGroup3: TdxTileControlGroup
       Caption.Text = 'Miscellaneous'
       Index = 2
     end
@@ -745,6 +744,7 @@ object frmRealtorWorld: TfrmRealtorWorld
     end
   end
   object dxSkinController1: TdxSkinController
+    NativeStyle = False
     SkinName = 'UserSkin'
     Left = 8
     Top = 8

@@ -10,7 +10,7 @@ uses
   dxMapControlOpenStreetMapImageryDataProvider, dxMapItem, dxCustomMapItemLayer, dxMapItemLayer, dxMapLayer,
   dxMapImageTileLayer, dxMapControl, cxMemo, cxRichEdit, cxDBRichEdit, cxDropDownEdit, cxLookupEdit, cxDBLookupEdit,
   cxDBLookupComboBox, cxDBEdit, dxCustomHint, cxHint, Vcl.StdCtrls, cxButtons, Data.DB, dxCustomTileControl, HybridAppDM,
-  cxGroupBox;
+  cxGroupBox, System.Net.URLClient;
 
 type
   TfrmCustomerEdit = class(TfrmBase)

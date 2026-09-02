@@ -10,7 +10,7 @@ uses
   uStrsConst in 'uStrsConst.pas',
   dxFrames in 'dxFrames.pas',
   FrameIDs in 'FrameIDs.pas',
-  dxSplashUnit in '..\Common\dxSplashUnit.pas' {TfrmSplash},
+  dxSplashUnit in '..\Common\dxSplashUnit.pas',
   MainData in 'MainData.pas' {dmMain: TDataModule},
   dxDemoBaseMainForm in 'dxDemoBaseMainForm.pas' {frmMainBase},
   dxExportProgressDialog in '..\Common\dxExportProgressDialog.pas',

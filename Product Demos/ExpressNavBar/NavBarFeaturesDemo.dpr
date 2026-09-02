@@ -7,7 +7,7 @@ program NavBarFeaturesDemo;
 
 uses
   Vcl.Forms, dxUIAClasses,
-  dxSplashUnit in '..\Common\dxSplashUnit.pas' {TfrmSplash},
+  dxSplashUnit in '..\Common\dxSplashUnit.pas',
   dxDemoBaseMainForm in '..\Common\dxDemoBaseMainForm.pas' {frmMainBase},
   dxDemoObjectInspector in '..\Common\dxDemoObjectInspector.pas' {frmInspector},
   dxDemoPrintFrame in '..\Common\dxDemoPrintFrame.pas' {frmPrinting: TFrame},

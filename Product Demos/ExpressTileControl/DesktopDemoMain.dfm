@@ -10,10 +10,8 @@ object DesktopDemoMainForm: TDesktopDemoMainForm
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   WindowState = wsMaximized
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object tcDesktop: TdxTileControl
     Left = 0
@@ -13464,7 +13462,7 @@ object DesktopDemoMainForm: TDesktopDemoMainForm
       Text3.AssignedValues = []
       Text4.AssignedValues = []
       OnActiveFrameChanged = ItemFoodsActiveFrameChanged
-      object ItemFoodsdxTileControlItemFrame2: TdxTileControlItemFrame
+      object ItemFoodsFrame2: TdxTileControlItemFrame
         Glyph.ImageIndex = 1
         Text1.AssignedValues = []
         Text2.AssignedValues = []
@@ -13472,7 +13470,7 @@ object DesktopDemoMainForm: TDesktopDemoMainForm
         Text3.Value = 'Foods & Drink'
         Text4.AssignedValues = []
       end
-      object ItemFoodsdxTileControlItemFrame1: TdxTileControlItemFrame
+      object ItemFoodFrame1: TdxTileControlItemFrame
         ParentStyle = False
         Style.BorderColor = 3355185
         Style.Texture.Data = {
@@ -15674,7 +15672,7 @@ object DesktopDemoMainForm: TDesktopDemoMainForm
       Text3.WordWrap = True
       Text4.AssignedValues = []
       OnActiveFrameChanged = ItemFoodsActiveFrameChanged
-      object ItemHealthdxTileControlItemFrame2: TdxTileControlItemFrame
+      object ItemHealthFrame2: TdxTileControlItemFrame
         Glyph.ImageIndex = 2
         Text1.AssignedValues = []
         Text2.AssignedValues = []
@@ -15682,7 +15680,7 @@ object DesktopDemoMainForm: TDesktopDemoMainForm
         Text3.Value = 'Health & Fitness'
         Text4.AssignedValues = []
       end
-      object ItemHealthdxTileControlItemFrame1: TdxTileControlItemFrame
+      object ItemHealthFrame1: TdxTileControlItemFrame
         ParentStyle = False
         Style.BorderColor = 14328446
         Style.Texture.Data = {
@@ -16946,7 +16944,6 @@ object DesktopDemoMainForm: TDesktopDemoMainForm
     Categories.Visibles = (
       True)
     PopupMenuLinks = <>
-    Style = bmsUseLookAndFeel
     UseSystemFont = True
     Left = 352
     Top = 120

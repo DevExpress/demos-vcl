@@ -24,7 +24,7 @@ type
     function Get_Height: Integer;
     procedure Set_Height(const Value: Integer);
 
-    function Get_Widht: Integer;
+    function Get_Width: Integer;
     procedure Set_Width(const Value: Integer);
 
     function Get_MineCount: Integer;
@@ -50,7 +50,7 @@ type
     property GameDifficulty: TGameDifficulty read Get_GameDifficulty write Set_GameDifficulty;
     property CellState[XIndex, YIndex: Integer]: TCellStateRec read Get_CellState write Set_CellState;
     property Height: Integer read Get_Height write Set_Height;
-    property Width: Integer read Get_Widht write Set_Width;
+    property Width: Integer read Get_Width write Set_Width;
     property MineCount: Integer read Get_MineCount write Set_MineCount;
     property GameStatus: TGameStatus read Get_GameStatus write Set_GameStatus;
     procedure FillBombCells(var AChangedCells: TCells);
@@ -110,7 +110,7 @@ begin
     FHeight := 24;
 end;
 
-function TMinerField.Get_Widht: Integer;
+function TMinerField.Get_Width: Integer;
 begin
   Result := FWidth;
 end;

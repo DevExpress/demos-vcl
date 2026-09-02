@@ -16,7 +16,7 @@ uses
   dxSpreadSheet, dxLayoutControl, dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules,
   dxSpreadSheetContainers, dxSpreadSheetHyperlinks, dxSpreadSheetUtils, Vcl.ExtCtrls, dxSpreadSheetCoreFormulas,
   dxSpreadSheetCoreStyles, dxSpreadSheetCoreStrs, dxSpreadSheetStyles, Vcl.ExtActns, Vcl.ActnList, cxSplitter,
-  dxSpreadSheetFormulaBar, cxTrackBar, dxZoomTrackBar;
+  dxSpreadSheetFormulaBar, cxTrackBar, dxZoomTrackBar, dxSpreadSheetFormattedTextUtils, dxBarBuiltInMenu, System.Actions;
 
 type
   { TfrmRightToLeftLayout }
@@ -47,8 +47,8 @@ end;
 
 function TfrmRightToLeftLayout.GetDescription: string;
 begin
-  Result := 'In this demo, you can switch between two worksheets that use Right-to-Left and Left-to-Right layout dir' +
-  'ections. Click tabs to switch between the worksheets and modify their content to see how the Spreadsheet Control ' +
+  Result := 'In this demo, you can switch between two worksheets that use Right-to-Left and Left-to-Right layout directions. ' +
+  'Click tabs to switch between the worksheets and modify their content to see how the Spreadsheet Control ' +
   'adapts its UI and content management capabilities in response.';
 end;
 

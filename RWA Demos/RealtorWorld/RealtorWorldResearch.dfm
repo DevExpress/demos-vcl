@@ -1,8 +1,8 @@
 inherited frmResearch: TfrmResearch
   Width = 1076
   Height = 537
-  Font.Name = 'Segoe UI'
-  ParentFont = False
+  ExplicitWidth = 1076
+  ExplicitHeight = 537
   object pgResearch: TcxDBPivotGrid
     Left = 0
     Top = 0
@@ -22,6 +22,7 @@ inherited frmResearch: TfrmResearch
     OptionsView.TotalsForSingleValues = True
     ParentFont = False
     PopupMenus.FieldHeaderMenu.UseBuiltInMenu = False
+    PopupMenus.FieldHeaderMenu.Items = [fpmiHide, fpmiOrder, fpmiFieldList, fpmiSummaryType]
     PopupMenus.GroupValueMenu.UseBuiltInMenu = False
     PopupMenus.HeaderAreaMenu.UseBuiltInMenu = False
     TabOrder = 0

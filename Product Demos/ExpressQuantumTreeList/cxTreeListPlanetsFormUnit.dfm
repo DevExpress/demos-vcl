@@ -11,13 +11,13 @@ inherited frmPlanets: TfrmPlanets
     ExplicitWidth = 797
     ExplicitHeight = 494
     inherited tlUnbound: TcxTreeList
-      Width = 561
+      Width = 563
       Height = 436
       Bands = <
         item
         end>
       OptionsView.ColumnAutoWidth = True
-      ExplicitWidth = 561
+      ExplicitWidth = 563
       ExplicitHeight = 436
       object clName: TcxTreeListColumn
         Caption.Text = 'Name'
@@ -25,8 +25,6 @@ inherited frmPlanets: TfrmPlanets
         Position.ColIndex = 1
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clOrbitNumb: TcxTreeListColumn
         Caption.Text = '#'
@@ -34,8 +32,6 @@ inherited frmPlanets: TfrmPlanets
         Position.ColIndex = 0
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clOrbits: TcxTreeListColumn
         Visible = False
@@ -46,8 +42,6 @@ inherited frmPlanets: TfrmPlanets
         Position.ColIndex = 2
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clDistance: TcxTreeListColumn
         Caption.Text = 'Distance(000km)'
@@ -55,8 +49,6 @@ inherited frmPlanets: TfrmPlanets
         Position.ColIndex = 3
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clPeriod: TcxTreeListColumn
         Caption.Text = 'Period(days)'
@@ -64,8 +56,6 @@ inherited frmPlanets: TfrmPlanets
         Position.ColIndex = 4
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clDiscoverer: TcxTreeListColumn
         Caption.Text = 'Discoverer'
@@ -73,8 +63,6 @@ inherited frmPlanets: TfrmPlanets
         Position.ColIndex = 5
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clDate: TcxTreeListColumn
         Caption.Text = 'Date'
@@ -82,8 +70,6 @@ inherited frmPlanets: TfrmPlanets
         Position.ColIndex = 6
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clRadius: TcxTreeListColumn
         Caption.Text = 'Radius(km)'
@@ -91,8 +77,6 @@ inherited frmPlanets: TfrmPlanets
         Position.ColIndex = 7
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
       object clImageIndex: TcxTreeListColumn
         Visible = False
@@ -103,8 +87,6 @@ inherited frmPlanets: TfrmPlanets
         Position.ColIndex = 8
         Position.RowIndex = 0
         Position.BandIndex = 0
-        Summary.FooterSummaryItems = <>
-        Summary.GroupFooterSummaryItems = <>
       end
     end
   end

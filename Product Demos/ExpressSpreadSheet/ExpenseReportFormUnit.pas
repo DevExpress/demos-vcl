@@ -15,7 +15,12 @@ uses
   dxSpreadSheetTypes, dxBarBuiltInMenu, cxContainer, cxEdit, Vcl.Menus,
   dxLayoutContainer, dxLayoutcxEditAdapters, dxLayoutControlAdapters, Vcl.StdCtrls,
   cxButtons, cxMaskEdit, cxDropDownEdit, cxTextEdit, dxSpreadSheet,
-  dxLayoutControl, cxClasses, cxStyles, cxMemo, dxSpreadSheetStyles;
+  dxLayoutControl, cxClasses, cxStyles, cxMemo, dxSpreadSheetStyles, dxCore, dxCoreClasses, dxHashUtils,
+  dxSpreadSheetCoreFormulas, dxSpreadSheetCoreHistory, dxSpreadSheetCoreStyles, dxSpreadSheetCoreStrs,
+  dxSpreadSheetConditionalFormatting, dxSpreadSheetConditionalFormattingRules, dxSpreadSheetContainers,
+  dxSpreadSheetHyperlinks, dxSpreadSheetPrinting, dxSpreadSheetUtils, dxSpreadSheetFormattedTextUtils, Vcl.ExtActns,
+  System.Actions, Vcl.ActnList, Vcl.StdActns, cxSplitter, dxSpreadSheetFormulaBar, cxTrackBar, dxZoomTrackBar,
+  Vcl.ExtCtrls;
 
 type
 
@@ -66,9 +71,6 @@ type
 implementation
 
 {$R *.dfm}
-
-uses
-  dxCore;
 
 { TfrmExpenseReport }
 
@@ -528,7 +530,7 @@ end;
 
 function TfrmExpenseReport.GetDescription: string;
 begin
-  Result := 'In this demo, we illustrate how to use the Spreadsheet’s API to generate an expense report in code at runtime.';
+  Result := 'In this demo, we illustrate how to use the Spreadsheet''s API to generate an expense report in code at runtime.';
 end;
 
 class function TfrmExpenseReport.GetID: Integer;

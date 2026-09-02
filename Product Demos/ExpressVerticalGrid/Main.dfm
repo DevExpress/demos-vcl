@@ -2,14 +2,12 @@ inherited frmMain: TfrmMain
   Caption = 'frmMain'
   ClientHeight = 594
   ClientWidth = 961
-  OnShow = FormShow
-  ExplicitWidth = 977
-  ExplicitHeight = 633
-  PixelsPerInch = 96
+  ExplicitWidth = 973
+  ExplicitHeight = 632
   TextHeight = 13
   inherited dxRibbon1: TdxRibbon
     Width = 961
-    ExplicitWidth = 961
+    ExplicitWidth = 957
     inherited dxRibbon1Tab1: TdxRibbonTab
       Index = 0
     end
@@ -18,24 +16,34 @@ inherited frmMain: TfrmMain
     end
   end
   inherited pnlAllArea: TdxPanel
-    ExplicitTop = 130
-    ExplicitWidth = 961
-    ExplicitHeight = 464
-    Height = 431
     Width = 961
+    Height = 431
+    ExplicitWidth = 961
+    ExplicitHeight = 431
     inherited plClient: TdxPanel
-      ExplicitWidth = 744
-      ExplicitHeight = 464
+      Width = 752
       Height = 431
-      Width = 744
+      ExplicitWidth = 752
+      ExplicitHeight = 431
+      inherited dxRibbonBackstageView1: TdxRibbonBackstageView
+        inherited bvtExport: TdxRibbonBackstageViewTabSheet
+          inherited gbExportItems: TcxGroupBox
+            inherited gbExportPane: TcxGroupBox
+              inherited bvgcExport: TdxRibbonBackstageViewGalleryControl
+                ExplicitWidth = 304
+              end
+            end
+          end
+        end
+      end
     end
     inherited NavBarSite: TPanel
-      ExplicitHeight = 464
       Height = 431
+      ExplicitHeight = 430
       inherited NavBar: TdxNavBar
         Height = 431
         ActiveGroupIndex = 1
-        ExplicitHeight = 464
+        ExplicitHeight = 430
         object nvgNewAndHighlighted: TdxNavBarGroup [0]
           Caption = 'New && Highlighted'
           SelectedLinkIndex = -1
@@ -63,8 +71,8 @@ inherited frmMain: TfrmMain
         object NavBarGroup2: TdxNavBarGroup [2]
           Caption = 'Outdated'
           SelectedLinkIndex = -1
-          Visible = False
           TopVisibleLinkIndex = 0
+          Visible = False
           CustomStyles.Header = nbsGroupStyle
           CustomStyles.HeaderActive = nbsGroupStyle
           CustomStyles.HeaderActiveHotTracked = nbsGroupStyle
@@ -77,8 +85,8 @@ inherited frmMain: TfrmMain
           Links = <>
         end
         inherited nbcSearch: TdxNavBarGroupControl
-          Top = 169
-          ExplicitTop = 169
+          Top = 114
+          ExplicitTop = 114
           GroupIndex = 3
         end
       end
@@ -95,7 +103,6 @@ inherited frmMain: TfrmMain
     inherited barInfo: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
-      FloatClientHeight = 24
     end
     inherited barOptions: TdxBar
       DockedDockControl = nil
@@ -105,19 +112,18 @@ inherited frmMain: TfrmMain
     inherited barAppearance: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
-      FloatClientHeight = 24
     end
     inherited barView: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
-      FloatClientWidth = 116
-      FloatClientHeight = 106
+      FloatClientWidth = 120
+      FloatClientHeight = 186
     end
     inherited barNavigation: TdxBar
       DockedDockControl = nil
       DockedDockingStyle = dsNone
-      FloatClientWidth = 82
-      FloatClientHeight = 53
+      FloatClientWidth = 81
+      FloatClientHeight = 49
     end
     inherited biExportToHTML: TdxBarLargeButton
       ImageIndex = 103
@@ -146,9 +152,15 @@ inherited frmMain: TfrmMain
     inherited biFullWindowMode: TdxBarLargeButton
       ImageIndex = -1
     end
+    inherited BLightStyle: TdxBarLargeButton
+      ImageIndex = 106
+    end
   end
   inherited dxComponentPrinter: TdxComponentPrinter
     PixelsPerInch = 96
+  end
+  inherited dxSkinController1: TdxSkinController
+    SkinPaletteName = ''
   end
   inherited RibbonApplicationMenu: TdxBarApplicationMenu
     PixelsPerInch = 96
@@ -162,7 +174,7 @@ inherited frmMain: TfrmMain
   inherited ilBarLarge: TcxImageList
     FormatVersion = 1
     Bitmap = {
-      494C0101300038002C0020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010130003800040020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000080000000A001000001002000000000000040
       0300000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

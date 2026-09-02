@@ -13,7 +13,6 @@ object frmGroupingOptions: TfrmGroupingOptions
   Font.Name = 'Tahoma'
   Font.Style = []
   Position = poMainFormCenter
-  PixelsPerInch = 96
   TextHeight = 13
   object lcMain: TdxLayoutControl
     Left = 0
@@ -25,7 +24,7 @@ object frmGroupingOptions: TfrmGroupingOptions
     LayoutLookAndFeel = dxLayoutCxLookAndFeel1
     object btnOk: TcxButton
       Left = 134
-      Top = 74
+      Top = 82
       Width = 75
       Height = 25
       Caption = '&OK'
@@ -35,7 +34,7 @@ object frmGroupingOptions: TfrmGroupingOptions
     end
     object btnCancel: TcxButton
       Left = 215
-      Top = 74
+      Top = 82
       Width = 75
       Height = 25
       Cancel = True
@@ -56,7 +55,7 @@ object frmGroupingOptions: TfrmGroupingOptions
     end
     object cbbRows: TcxComboBox
       Left = 59
-      Top = 37
+      Top = 41
       Properties.DropDownListStyle = lsFixedList
       Properties.Items.Strings = (
         'Group Start'
@@ -107,20 +106,20 @@ object frmGroupingOptions: TfrmGroupingOptions
       ShowBorder = False
       Index = 2
     end
-    object liCbbColumns: TdxLayoutItem
+    object liColumns: TdxLayoutItem
       Parent = lcMainGroup_Root
       CaptionOptions.Text = 'Columns:'
       Control = cbbColumns
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 121
       ControlOptions.ShowBorder = False
       Index = 0
     end
-    object liCbbRows: TdxLayoutItem
+    object liRows: TdxLayoutItem
       Parent = lcMainGroup_Root
       CaptionOptions.Text = 'Rows:'
       Control = cbbRows
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 121
       ControlOptions.ShowBorder = False
       Index = 1

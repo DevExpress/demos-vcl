@@ -23,9 +23,9 @@ type
     lgRoot: TdxLayoutGroup;
     lcAddDictionary: TdxLayoutControl;
     lgDictionaryType: TdxLayoutGroup;
-    lgDictionatyTypeHunspell: TdxLayoutRadioButtonItem;
-    lgDictionatyTypeOpenOffice: TdxLayoutRadioButtonItem;
-    lgDictionatyTypeISpell: TdxLayoutRadioButtonItem;
+    lgDictionaryTypeHunspell: TdxLayoutRadioButtonItem;
+    lgDictionaryTypeOpenOffice: TdxLayoutRadioButtonItem;
+    lgDictionaryTypeISpell: TdxLayoutRadioButtonItem;
     lgLink: TdxLayoutGroup;
     liLink: TdxLayoutLabeledItem;
     lgOptions: TdxLayoutGroup;
@@ -40,11 +40,11 @@ type
     dxLayoutLookAndFeelList: TdxLayoutLookAndFeelList;
     dxLayoutSkinLookAndFeel: TdxLayoutSkinLookAndFeel;
 
-    procedure beAffFilePropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
-    procedure beAffFilePropertiesChange(Sender: TObject);
-    procedure beDicFilePropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
+    procedure beAffixFilePropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
+    procedure CanAddDictionary(Sender: TObject);
+    procedure beDictionaryFilePropertiesButtonClick(Sender: TObject; AButtonIndex: Integer);
     procedure FormCreate(Sender: TObject);
-    procedure rgDictionatyTypePropertiesChange(Sender: TObject);
+    procedure rgDictionaryTypePropertiesChange(Sender: TObject);
   public
     procedure Add(ASpellChecker: TdxCustomSpellChecker);
   end;
@@ -132,13 +132,13 @@ var
 
 begin
   ADictionaryItem := ASpellChecker.DictionaryItems.Add;
-  if lgDictionatyTypeHunspell.Checked then
+  if lgDictionaryTypeHunspell.Checked then
     InitializeHunspell
   else
-    if lgDictionatyTypeOpenOffice.Checked then
+    if lgDictionaryTypeOpenOffice.Checked then
       InitializeOffice
     else
-      if lgDictionatyTypeISpell.Checked then
+      if lgDictionaryTypeISpell.Checked then
         InitializeISpell
       else
         Assert(False);
@@ -150,13 +150,13 @@ begin
   end;
 end;
 
-procedure TfmAddDictionary.rgDictionatyTypePropertiesChange(Sender: TObject);
+procedure TfmAddDictionary.rgDictionaryTypePropertiesChange(Sender: TObject);
 begin
-  lcAddDictionary.Visible := lgDictionatyTypeOpenOffice.Checked;
+  lcAddDictionary.Visible := lgDictionaryTypeOpenOffice.Checked;
   lgLink.Visible := not lcAddDictionary.Visible;
 end;
 
-procedure TfmAddDictionary.beAffFilePropertiesButtonClick(Sender: TObject;
+procedure TfmAddDictionary.beAffixFilePropertiesButtonClick(Sender: TObject;
   AButtonIndex: Integer);
 begin
   OpenDialog.FileName := '';
@@ -165,7 +165,7 @@ begin
     beAffixFile.Text := OpenDialog.FileName;
 end;
 
-procedure TfmAddDictionary.beDicFilePropertiesButtonClick(Sender: TObject;
+procedure TfmAddDictionary.beDictionaryFilePropertiesButtonClick(Sender: TObject;
   AButtonIndex: Integer);
 begin
   OpenDialog.FileName := '';
@@ -174,7 +174,7 @@ begin
     beDictionaryFile.Text := OpenDialog.FileName;
 end;
 
-procedure TfmAddDictionary.beAffFilePropertiesChange(Sender: TObject);
+procedure TfmAddDictionary.CanAddDictionary(Sender: TObject);
 begin
   btnAdd.Enabled := FileExists(beAffixFile.Text) and FileExists(beDictionaryFile.Text);
 end;

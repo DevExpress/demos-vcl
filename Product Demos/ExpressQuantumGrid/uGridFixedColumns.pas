@@ -14,7 +14,7 @@ uses
   dxLayoutContainer, Vcl.StdCtrls, cxButtons, dxLayoutControl, dxLayoutcxEditAdapters, dxCustomDemoFrameUnit, dxToggleSwitch,
   dxDateRanges, dxLayoutLookAndFeels, dxScrollbarAnnotations, System.Actions,
   dxBar, cxImageList, dxColorDialog, dxPanel, cxGeometry,
-  dxFramedControl;
+  dxFramedControl, System.ImageList;
 
 type
   TfrmGridFixedColumns = class(TdxGridFrame)
@@ -46,7 +46,7 @@ type
     pbFixedColumnOverlayColor: TPaintBox;
     liFixedColumnHighlightColor: TdxLayoutItem;
     cdFixedColumnOverlayColor: TdxColorDialog;
-    btnResetFixedColumnHightlightColor: TcxButton;
+    btnResetFixedColumnHighlightColor: TcxButton;
     liResetFixedColumnHighlightColor: TdxLayoutItem;
     lgFixedColumnHighlightColor: TdxLayoutGroup;
     lliFixedColumnHighlightColor: TdxLayoutLabeledItem;
@@ -58,7 +58,7 @@ type
     procedure seFixedSeparatorWidthPropertiesEditValueChanged(Sender: TObject);
     procedure pbFixedColumnOverlayColorPaint(Sender: TObject);
     procedure pbFixedColumnOverlayColorClick(Sender: TObject);
-    procedure btnResetFixedColumnHightlightColorClick(Sender: TObject);
+    procedure btnResetFixedColumnHighlightColorClick(Sender: TObject);
     procedure lcbHighlightFixedColumnsClick(Sender: TObject);
   strict private
     FPopupColumn: TcxCustomGridColumn;
@@ -240,7 +240,7 @@ begin
   ChangeFixedKind(PopupColumn, TcxGridColumnFixedKind(AButton.Tag));
 end;
 
-procedure TfrmGridFixedColumns.btnResetFixedColumnHightlightColorClick(Sender: TObject);
+procedure TfrmGridFixedColumns.btnResetFixedColumnHighlightColorClick(Sender: TObject);
 var
   AButton: TcxButton absolute Sender;
 begin

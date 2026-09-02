@@ -10,12 +10,10 @@ object frmNotepadChild: TfrmNotepadChild
   Font.Name = 'Tahoma'
   Font.Style = []
   FormStyle = fsMDIChild
-  OldCreateOrder = False
   Visible = True
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
-  PixelsPerInch = 96
   TextHeight = 13
   object bvSpacer4: TBevel
     Left = 629
@@ -60,6 +58,8 @@ object frmNotepadChild: TfrmNotepadChild
     Style.Color = clWindow
     Style.TextColor = clWindowText
     TabOrder = 0
+    ExplicitWidth = 619
+    ExplicitHeight = 287
     Height = 288
     Width = 623
   end

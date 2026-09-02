@@ -171,7 +171,7 @@ inherited frmColorComboBox: TfrmColorComboBox
     end
     object dxLayoutItem4: TdxLayoutItem
       Parent = dxLayoutGroup3
-      CaptionOptions.Text = 'Colorbox Align'
+      CaptionOptions.Text = 'ColorBox Align'
       Control = cmbColorBoxAlign
       ControlOptions.OriginalHeight = 21
       ControlOptions.OriginalWidth = 121
@@ -180,7 +180,7 @@ inherited frmColorComboBox: TfrmColorComboBox
     end
     object dxLayoutItem5: TdxLayoutItem
       Parent = dxLayoutGroup3
-      CaptionOptions.Text = 'Colorbox Width'
+      CaptionOptions.Text = 'ColorBox Width'
       Control = edColorBoxWidth
       ControlOptions.OriginalHeight = 21
       ControlOptions.OriginalWidth = 121

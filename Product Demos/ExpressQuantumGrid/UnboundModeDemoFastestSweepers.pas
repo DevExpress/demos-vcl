@@ -23,7 +23,7 @@ type
     procedure btnResetScoresClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   public
-    FastestTimesResetted: Boolean;
+    FastestTimesReset: Boolean;
     function ShowModal: Integer; override;
   end;
 
@@ -44,8 +44,8 @@ end;
 
 procedure TUnboundModeDemoFastestSweepersForm.btnResetScoresClick(Sender: TObject);
 begin
-  if FastestTimesResetted then Exit;
-  FastestTimesResetted := True;
+  if FastestTimesReset then Exit;
+  FastestTimesReset := True;
   lbBeginnerTime.Caption := IntToStr(999);
   lbIntermediateTime.Caption := IntToStr(999);
   lbExpertTime.Caption := IntToStr(999);
@@ -56,7 +56,7 @@ end;
 
 procedure TUnboundModeDemoFastestSweepersForm.FormCreate(Sender: TObject);
 begin
-  FastestTimesResetted := False;
+  FastestTimesReset := False;
 end;
 
 end.

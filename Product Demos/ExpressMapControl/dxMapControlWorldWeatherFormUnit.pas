@@ -13,7 +13,7 @@ uses
   dxMapControlHttpRequest,
   dxMapControlBaseFormUnit, dxScreenTip, dxCustomHint, cxHint, Vcl.ImgList,
   OpenWeatherMapService, dxRibbonCustomizationForm, dxLayoutContainer, dxLayoutControl, cxImageList,
-  dxLayoutLookAndFeels, dxLayoutControlAdapters, dxInputDialogs, dxMessageDialog;
+  dxLayoutLookAndFeels, dxLayoutControlAdapters, dxInputDialogs, dxMessageDialog, System.Net.URLClient, System.ImageList;
 
 type
   TfrmWorldWeather = class(TdxMapControlDemoUnitForm)
@@ -41,7 +41,7 @@ type
     dxBarButton10: TdxBarButton;
     dxBarButton11: TdxBarButton;
     dxRibbonPopupMenu1: TdxRibbonPopupMenu;
-    ShowWeatherforGeoPoint: TdxBarButton;
+    ShowWeatherForGeoPoint: TdxBarButton;
     Hidecity1: TdxBarButton;
     ilSmallBarIcons: TcxImageList;
     ilLargeBarIcons: TcxImageList;
@@ -50,7 +50,7 @@ type
     procedure dxBarButton11Click(Sender: TObject);
     procedure dxBarButton8Click(Sender: TObject);
     procedure dxBarButton1Click(Sender: TObject);
-    procedure ShowWeatherforGeoPointClick(Sender: TObject);
+    procedure ShowWeatherForGeoPointClick(Sender: TObject);
     procedure Hidecity1Click(Sender: TObject);
     procedure dxRibbonPopupMenu1Popup(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -75,7 +75,7 @@ uses
 
 {$R *.dfm}
 
-procedure TfrmWorldWeather.ShowWeatherforGeoPointClick(Sender: TObject);
+procedure TfrmWorldWeather.ShowWeatherForGeoPointClick(Sender: TObject);
 var
   AWeatherInfo, AExistingWeatherInfo: TWeatherInfo;
 begin
@@ -199,13 +199,13 @@ begin
 
   if not dxMapControl1.HitTest.HitAtNavigationPanel then
   begin
-    ShowWeatherforGeoPoint.Visible := ivAlways;
+    ShowWeatherForGeoPoint.Visible := ivAlways;
     FNewGeoPoint := dxMapControl1ImageTileLayer1.ScreenPointToGeoPoint(dxPointDouble(dxMapControl1.HitTest.HitPoint));
-    ShowWeatherforGeoPoint.Caption := Format('Show weather info for (%.6f, %.6f)',
+    ShowWeatherForGeoPoint.Caption := Format('Show weather info for (%.6f, %.6f)',
       [FNewGeoPoint.Latitude, FNewGeoPoint.Longitude]);
   end
   else
-    ShowWeatherforGeoPoint.Visible := ivNever;
+    ShowWeatherForGeoPoint.Visible := ivNever;
   AMapItem := GetHottrackedMapItem;
   if AMapItem <> nil then
     Hidecity1.Visible := ivAlways
@@ -243,7 +243,8 @@ end;
 function TfrmWorldWeather.GetDescription: string;
 begin
   Result := 'The map control allows you to visualize different georeferenced data.' +
-    ' For example, you can display weather data from various weather services. In this demo, you can see the current weather in the world''s largest cities. This demo''s weather data is from the OpenWeatherMap service (http://www.openweathermap.org).';
+    ' For example, you can display weather data from various weather services. In this demo, you can see the current weather in the world''s largest cities. ' +
+    'This demo''s weather data is from the OpenWeatherMap service (http://www.openweathermap.org).';
 end;
 
 class function TfrmWorldWeather.GetID: Integer;

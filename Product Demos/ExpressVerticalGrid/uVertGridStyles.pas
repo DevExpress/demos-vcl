@@ -64,11 +64,11 @@ var
   AFileName: string;
   AValid: Boolean;
 begin
-  AFileName := ExtractFilePath(Application.EXEName) + 'verticalgridstyles.ini';
+  AFileName := ExtractFilePath(Application.EXEName) + 'VerticalGridStyles.ini';
   AValid := FileExists(AFileName);
   if AValid then
   begin
-    LoadStyleSheetsFromIniFile(ExtractFilePath(Application.EXEName) + 'verticalgridstyles.ini',
+    LoadStyleSheetsFromIniFile(ExtractFilePath(Application.EXEName) + 'VerticalGridStyles.ini',
       StyleRepository, TcxVerticalGridStyleSheet);
     for I := 0 to StyleRepository.StyleSheetCount - 1 do
       cbStyleSheetList.Properties.Items.AddObject(StyleRepository.StyleSheets[I].Caption,

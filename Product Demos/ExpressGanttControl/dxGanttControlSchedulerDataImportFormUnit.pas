@@ -30,7 +30,7 @@ type
     dxLayoutGroup6: TdxLayoutGroup;
     btnImport: TcxButton;
     dxLayoutItem6: TdxLayoutItem;
-    lgGantControl: TdxLayoutGroup;
+    lgGanttControl: TdxLayoutGroup;
     lcbChangeLayout: TdxLayoutCheckBoxItem;
     procedure btnImportClick(Sender: TObject);
     procedure lcbChangeLayoutClick(Sender: TObject);
@@ -110,7 +110,7 @@ procedure TfrmSchedulerDataImport.btnImportClick(Sender: TObject);
 begin
   dxGanttControlImportFromSchedulerStorage(SchedulerGanttStorage, dxGanttControl.DataModel);
   dxGanttControl.ViewChart.FirstVisibleDateTime := dxGanttControl.DataModel.Tasks[0].Start - 7;
-  lgMainGroup.ItemIndex := lgGantControl.Index;
+  lgMainGroup.ItemIndex := lgGanttControl.Index;
   lgActiveView.Enabled := True;
   cmbChartTimescale.Enabled := True;
   cmbTimelineScale.Enabled := True;

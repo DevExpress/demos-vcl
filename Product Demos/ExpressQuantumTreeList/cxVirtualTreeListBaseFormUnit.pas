@@ -38,7 +38,7 @@ type
     procedure cxVirtualTreeListExpanding(Sender: TcxCustomTreeList;
       ANode: TcxTreeListNode; var Allow: Boolean);
     procedure WMSmartLoadChanged(var AMessage: TMessage); message WM_SMARTLOADCHANGED;
-    procedure WMTreeListExpanded(var AMessage: TMEssage); message WM_TREELISTEXPANDED;
+    procedure WMTreeListExpanded(var AMessage: TMessage); message WM_TREELISTEXPANDED;
     procedure btFullExpandClick(Sender: TObject);
     procedure acSmartLoadModeExecute(Sender: TObject);
   private
@@ -202,7 +202,7 @@ begin
   end;
 end;
 
-procedure TcxVirtualTreeListDemoUnitForm.WMSmartLoadChanged(var AMessage: TMEssage);
+procedure TcxVirtualTreeListDemoUnitForm.WMSmartLoadChanged(var AMessage: TMessage);
 begin
   DoSmartLoadChanged(Boolean(AMessage.WParam));
 end;

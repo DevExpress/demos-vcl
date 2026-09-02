@@ -11,7 +11,8 @@ uses
   System.Types, Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters, Vcl.Menus, dxLayoutControlAdapters,
   dxLayoutContainer, cxClasses, Vcl.StdCtrls, cxButtons, dxLayoutControl, dxSpreadSheetReportDesigner, Vcl.ImgList,
-  cxContainer, cxEdit, cxListBox, System.Math, dxCore, cxGeometry, dxLayoutLookAndFeels, cxImageList, dxForms;
+  cxContainer, cxEdit, cxListBox, System.Math, dxCore, cxGeometry, dxLayoutLookAndFeels, cxImageList, dxForms,
+  dxLayoutcxEditAdapters, System.ImageList, cxCustomListBox;
 
 const
   WM_HIDESELECTION = WM_USER + 110;

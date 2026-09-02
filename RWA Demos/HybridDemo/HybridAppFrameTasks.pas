@@ -11,7 +11,7 @@ uses
   cxButtonEdit, dxLayoutControl, dxCustomTileControl, dxTileControl, cxGridLevel, cxGridCustomView, cxGridCustomTableView,
   cxGridTableView, cxGridDBTableView, cxGrid, cxStyles, cxCustomData, cxFilter, cxData, cxDataStorage, cxNavigator, Data.DB,
   cxDBData, cxDBLookupComboBox, cxImageComboBox, cxProgressBar, dxLayoutControlAdapters, Vcl.Menus, Vcl.StdCtrls, cxButtons,
-  HybridAppDM, fmTaskEditUnit, cxGroupBox, cxImageList, dxCore, dxDateRanges, dxMessageDialog;
+  HybridAppDM, fmTaskEditUnit, cxGroupBox, cxImageList, dxCore, dxDateRanges, dxMessageDialog, System.ImageList;
 
 type
   TfrmTasks = class(TfrmBase)
@@ -73,9 +73,6 @@ implementation
 {$R *.dfm}
 
 uses
-{$IFDEF DELPHI16}
-  System.UITypes,
-{$ENDIF}
   MainUnit, LocalizationStrs, dxBarStrs;
 
 procedure TfrmTasks.DoAfterActivate;

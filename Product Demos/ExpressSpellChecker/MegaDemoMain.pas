@@ -131,7 +131,7 @@ type
     deBirthDate: TcxDateEdit;
     edtObjective: TcxTextEdit;
     reAbout: TcxRichEdit;
-    edtAdress: TcxTextEdit;
+    edtAddress: TcxTextEdit;
     cxButton2: TcxButton;
     cxButton3: TcxButton;
     cxButton4: TcxButton;
@@ -282,7 +282,7 @@ end;
 
 procedure TfmMain.cxButton3Click(Sender: TObject);
 begin
-  dxSpellChecker1.Check(edtAdress);
+  dxSpellChecker1.Check(edtAddress);
 end;
 
 procedure TfmMain.cxButton4Click(Sender: TObject);

@@ -4,20 +4,17 @@ inherited frmInvoice: TfrmInvoice
       TabOrder = 18
       inherited SpreadSheet: TdxSpreadSheet
         Data = {
-          E403000044585353763242460C00000042465320000000000000000001000101
-          010100000000000001004246532000000000424653200200000001000000200B
+          C003000044585353763242461000000042465320000000000000000001000101
+          010100000100000001004246532000000000424653200100000001000000200B
           00000007000000430061006C0069006200720069000000000000002000000020
-          00000000200000000020000000002000000000200007000000470045004E0045
-          00520041004C0000000000000200000000000000000101000000200B00000007
-          000000430061006C006900620072006900000000000000200000002000000000
-          200000000020000000002000000000200007000000470045004E004500520041
-          004C000000000000020000000000000000014246532001000000424653201700
-          0000540064007800530070007200650061006400530068006500650074005400
-          610062006C006500560069006500770006000000530068006500650074003100
-          01FFFFFFFFFFFFFFFF6400000001000000000000000100000055000000140000
-          0002000000020000000002000000000000010000000000010100004246532055
-          0000000000000042465320000000004246532014000000000000004246532000
-          0000000000000000000000150000000000000000000000000000000000000000
+          0000000020000000000020000000000020000000000020000007000000470045
+          004E004500520041004C00000000000002000000000000000001424653200100
+          0000424653201700000054006400780053007000720065006100640053006800
+          6500650074005400610062006C00650056006900650077000600000053006800
+          650065007400310001FFFFFFFFFFFFFFFF640000000100000000000000010000
+          0055000000140000000200000002000000000200000002000000000000010000
+          0000000101000042465320550000000000000042465320000000004246532014
+          0000000000000042465320000000000000000000000000150000000000000000
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000000000000000
@@ -27,15 +24,17 @@ inherited frmInvoice: TfrmInvoice
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000042
-          4653200000000002020000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000424653200000000002020000000000000000000000
           0000000000000000000000000000000000000000000000000000000000000000
           0000000000000000000000000000000000000000000000000000000000000000
-          0000000064000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000020002020002000000
-          0000000000000000000000000000020000000000000000000000000000000000
-          0000000000000000000000000000000000000202000000000000000042465320
-          0000000000000000}
+          0000000000000000000000000000000064000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000200020200020000000000000000000000000000000000020000000000
+          0000000000000000000000000000000000000000000000000000000000000202
+          0000000000000000424653200000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          00000000}
       end
     end
     inherited ztbBook: TdxZoomTrackBar
@@ -49,13 +48,9 @@ inherited frmInvoice: TfrmInvoice
       TabOrder = 17
       Visible = False
       object grInvoiceDBTableView1: TcxGridDBTableView
-        Navigator.Buttons.CustomButtons = <>
         DataController.DataModeController.SmartRefresh = True
         DataController.DataSource = dsInvoice
         DataController.KeyFieldNames = 'ProductID'
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
         OptionsView.GroupByBox = False
         object grInvoiceDBTableView1Check: TcxGridDBColumn
           DataBinding.ValueType = 'Boolean'
@@ -260,7 +255,6 @@ inherited frmInvoice: TfrmInvoice
       CaptionOptions.Text = 'New Group'
       CaptionOptions.Visible = False
       LayoutLookAndFeel = frmMain.dxLayoutSkinLookAndFeel1
-      ButtonOptions.Buttons = <>
       ItemIndex = 1
       LayoutDirection = ldTabbed
       ShowBorder = False
@@ -272,7 +266,6 @@ inherited frmInvoice: TfrmInvoice
       Parent = lgInvoiceTabbed
       CaptionOptions.Text = 'Data'
       CaptionOptions.Visible = False
-      ButtonOptions.Buttons = <>
       ShowBorder = False
       Index = 0
     end
@@ -280,9 +273,9 @@ inherited frmInvoice: TfrmInvoice
       Parent = lgData
       AlignHorz = ahClient
       AlignVert = avClient
+      LayoutLookAndFeel = frmMain.dxLayoutSkinLookAndFeel1
       CaptionOptions.Text = 'grInvoice'
       CaptionOptions.Visible = False
-      LayoutLookAndFeel = frmMain.dxLayoutSkinLookAndFeel1
       Control = grInvoice
       ControlOptions.OriginalHeight = 372
       ControlOptions.OriginalWidth = 918
@@ -294,20 +287,18 @@ inherited frmInvoice: TfrmInvoice
       AlignHorz = ahClient
       AlignVert = avClient
       CaptionOptions.Text = 'Bill to'
-      ButtonOptions.Buttons = <>
       Index = 1
     end
     object lcInvoiceGroup5: TdxLayoutAutoCreatedGroup
       Parent = lgBillTo
       LayoutDirection = ldHorizontal
       Index = 0
-      AutoCreated = True
     end
     object liName: TdxLayoutItem
       Parent = lcInvoiceGroup5
       CaptionOptions.Text = 'Name'
       Control = teName
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 121
       ControlOptions.ShowBorder = False
       Index = 0
@@ -316,7 +307,7 @@ inherited frmInvoice: TfrmInvoice
       Parent = lcInvoiceGroup5
       CaptionOptions.Text = 'Company'
       Control = teCompany1
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 128
       ControlOptions.ShowBorder = False
       Index = 1
@@ -325,14 +316,13 @@ inherited frmInvoice: TfrmInvoice
       Parent = lgBillTo
       LayoutDirection = ldHorizontal
       Index = 1
-      AutoCreated = True
     end
     object liStreetAddress1: TdxLayoutItem
       Parent = lcInvoiceGroup6
       AlignHorz = ahLeft
       CaptionOptions.Text = 'Street Address'
       Control = teStreetAddress1
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 121
       ControlOptions.ShowBorder = False
       Index = 0
@@ -342,7 +332,7 @@ inherited frmInvoice: TfrmInvoice
       AlignHorz = ahLeft
       CaptionOptions.Text = 'City'
       Control = teCity1
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 128
       ControlOptions.ShowBorder = False
       Index = 1
@@ -351,7 +341,7 @@ inherited frmInvoice: TfrmInvoice
       Parent = lcInvoiceGroup6
       CaptionOptions.Text = 'State'
       Control = teState1
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 95
       ControlOptions.ShowBorder = False
       Index = 2
@@ -360,7 +350,7 @@ inherited frmInvoice: TfrmInvoice
       Parent = lcInvoiceGroup6
       CaptionOptions.Text = 'ZIP'
       Control = meZIP1
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 93
       ControlOptions.ShowBorder = False
       Index = 3
@@ -370,7 +360,7 @@ inherited frmInvoice: TfrmInvoice
       AlignHorz = ahLeft
       CaptionOptions.Text = 'Phone'
       Control = mePhone1
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 121
       ControlOptions.ShowBorder = False
       Index = 2
@@ -380,7 +370,6 @@ inherited frmInvoice: TfrmInvoice
       AlignHorz = ahClient
       AlignVert = avClient
       CaptionOptions.Text = 'From'
-      ButtonOptions.Buttons = <>
       ItemIndex = 3
       Index = 0
     end
@@ -388,14 +377,13 @@ inherited frmInvoice: TfrmInvoice
       Parent = igFrom
       LayoutDirection = ldHorizontal
       Index = 0
-      AutoCreated = True
     end
     object liCompany: TdxLayoutItem
       Parent = dxLayoutAutoCreatedGroup1
       AlignHorz = ahLeft
       CaptionOptions.Text = 'Company'
       Control = teCompany
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 121
       ControlOptions.ShowBorder = False
       Index = 0
@@ -406,7 +394,7 @@ inherited frmInvoice: TfrmInvoice
       AlignVert = avTop
       CaptionOptions.Text = 'Slogan'
       Control = teSlogan
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 380
       ControlOptions.ShowBorder = False
       Index = 1
@@ -415,14 +403,13 @@ inherited frmInvoice: TfrmInvoice
       Parent = igFrom
       LayoutDirection = ldHorizontal
       Index = 1
-      AutoCreated = True
     end
     object liStreetAddress: TdxLayoutItem
       Parent = lcInvoiceGroup2
       AlignHorz = ahLeft
       CaptionOptions.Text = 'Street Address'
       Control = teStreetAddress
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 121
       ControlOptions.ShowBorder = False
       Index = 0
@@ -432,7 +419,7 @@ inherited frmInvoice: TfrmInvoice
       AlignHorz = ahLeft
       CaptionOptions.Text = 'City'
       Control = teCity
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 128
       ControlOptions.ShowBorder = False
       Index = 1
@@ -442,7 +429,7 @@ inherited frmInvoice: TfrmInvoice
       AlignHorz = ahLeft
       CaptionOptions.Text = 'State'
       Control = teState
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 95
       ControlOptions.ShowBorder = False
       Index = 2
@@ -452,7 +439,7 @@ inherited frmInvoice: TfrmInvoice
       AlignHorz = ahLeft
       CaptionOptions.Text = 'ZIP'
       Control = meZIP
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 93
       ControlOptions.ShowBorder = False
       Index = 3
@@ -461,14 +448,13 @@ inherited frmInvoice: TfrmInvoice
       Parent = igFrom
       LayoutDirection = ldHorizontal
       Index = 2
-      AutoCreated = True
     end
     object liPhone: TdxLayoutItem
       Parent = lcInvoiceGroup3
       AlignHorz = ahLeft
       CaptionOptions.Text = 'Phone'
       Control = mePhone
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 121
       ControlOptions.ShowBorder = False
       Index = 0
@@ -477,7 +463,7 @@ inherited frmInvoice: TfrmInvoice
       Parent = lcInvoiceGroup3
       CaptionOptions.Text = 'Fax'
       Control = meFax
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 128
       ControlOptions.ShowBorder = False
       Index = 1
@@ -486,14 +472,13 @@ inherited frmInvoice: TfrmInvoice
       Parent = igFrom
       LayoutDirection = ldHorizontal
       Index = 3
-      AutoCreated = True
     end
     object liContactPerson: TdxLayoutItem
       Parent = lcInvoiceGroup4
       AlignHorz = ahLeft
       CaptionOptions.Text = 'Contact Person'
       Control = teContactPerson
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 121
       ControlOptions.ShowBorder = False
       Index = 0
@@ -502,11 +487,14 @@ inherited frmInvoice: TfrmInvoice
       Parent = lcInvoiceGroup4
       CaptionOptions.Text = 'EMail'
       Control = teEMail
-      ControlOptions.OriginalHeight = 21
+      ControlOptions.OriginalHeight = 25
       ControlOptions.OriginalWidth = 128
       ControlOptions.ShowBorder = False
       Index = 1
     end
+  end
+  inherited ssFormulaBar: TdxSpreadSheetFormulaBar
+    SpreadSheet = SpreadSheet
   end
   object dsInvoice: TDataSource
     DataSet = dxMemData1

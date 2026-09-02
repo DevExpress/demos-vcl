@@ -9,7 +9,7 @@ uses
   cxFilter, cxData, cxDataStorage, cxNavigator, cxDBData, cxHyperLinkEdit,
   cxGridCustomTableView, cxGridTableView, cxGridBandedTableView, System.DateUtils,
   cxGridDBBandedTableView, cxControls, cxGridCustomView, cxGrid, dxRichEdit.DocumentServer,
-  cxDBExtLookupComboBox, cxImageList, cxExtEditRepositoryItems, dxDateRanges, dxScrollbarAnnotations;
+  cxDBExtLookupComboBox, cxImageList, cxExtEditRepositoryItems, dxDateRanges, dxScrollbarAnnotations, System.ImageList;
 
 type
   TdmMain = class(TDataModule)

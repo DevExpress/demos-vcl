@@ -15,9 +15,9 @@ type
   TfrmRealtorWorld = class(TdxForm)
     dxSkinController1: TdxSkinController;
     dxTile: TdxTileControl;
-    dxTiledxTileControlGroup1: TdxTileControlGroup;
-    dxTiledxTileControlGroup2: TdxTileControlGroup;
-    dxTiledxTileControlGroup3: TdxTileControlGroup;
+    dxTileControlGroup1: TdxTileControlGroup;
+    dxTileControlGroup2: TdxTileControlGroup;
+    TileControlGroup3: TdxTileControlGroup;
     tcaBlackTheme: TdxTileControlActionBarItem;
     tcaClearSelection: TdxTileControlActionBarItem;
     tcaExit: TdxTileControlActionBarItem;

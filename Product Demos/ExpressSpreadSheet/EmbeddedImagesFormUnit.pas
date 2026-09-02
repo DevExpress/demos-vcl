@@ -12,7 +12,12 @@ uses
   Vcl.Dialogs, ReportDesignerBaseUnit, cxGraphics, cxControls, cxLookAndFeels, cxLookAndFeelPainters, cxContainer, cxEdit,
   Vcl.Menus, dxLayoutControlAdapters, dxLayoutcxEditAdapters, dxLayoutContainer, cxClasses, Vcl.StdCtrls, cxButtons, cxMemo,
   cxTextEdit, cxMaskEdit, cxDropDownEdit, dxSpreadSheetCore, dxSpreadSheetReportDesigner, Vcl.ExtCtrls, dxLayoutControl, Data.DB,
-  dxmdaset;
+  dxmdaset, dxCore, dxCoreClasses, dxHashUtils, dxSpreadSheetCoreFormulas, dxSpreadSheetCoreHistory,
+  dxSpreadSheetCoreStyles, dxSpreadSheetCoreStrs, dxSpreadSheetConditionalFormatting,
+  dxSpreadSheetConditionalFormattingRules, dxSpreadSheetClasses, dxSpreadSheetContainers, dxSpreadSheetFormulas,
+  dxSpreadSheetHyperlinks, dxSpreadSheetFunctions, dxSpreadSheetStyles, dxSpreadSheetGraphics, dxSpreadSheetPrinting,
+  dxSpreadSheetTypes, dxSpreadSheetUtils, dxSpreadSheetFormattedTextUtils, dxBarBuiltInMenu, cxSplitter,
+  dxSpreadSheetFormulaBar;
 
 type
   TfrmEmbeddedImages = class(TdxSpreadSheetReportBaseForm)

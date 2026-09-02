@@ -16,7 +16,9 @@ uses
   cxMaskEdit, cxDropDownEdit, dxSpreadSheet, dxLayoutControl,
   dxSpreadSheetCoreHistory, dxSpreadSheetConditionalFormatting,
   dxSpreadSheetConditionalFormattingRules, dxSpreadSheetContainers,
-  dxSpreadSheetHyperlinks, dxSpreadSheetUtils, cxClasses, Vcl.ExtCtrls;
+  dxSpreadSheetHyperlinks, dxSpreadSheetUtils, cxClasses, Vcl.ExtCtrls, dxSpreadSheetCoreFormulas,
+  dxSpreadSheetCoreStyles, dxSpreadSheetCoreStrs, dxSpreadSheetStyles, dxSpreadSheetFormattedTextUtils, Vcl.ExtActns,
+  System.Actions, Vcl.ActnList, Vcl.StdActns, cxSplitter, dxSpreadSheetFormulaBar, cxTrackBar, dxZoomTrackBar;
 
 type
   TfrmShiftSchedule = class(TdxSpreadSheetDemoUnitForm)

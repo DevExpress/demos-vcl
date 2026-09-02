@@ -17,7 +17,6 @@ object frmBase: TfrmBase
       AlignHorz = ahClient
       AlignVert = avClient
       CaptionOptions.Visible = False
-      ButtonOptions.Buttons = <>
       Hidden = True
       LayoutDirection = ldHorizontal
       ShowBorder = False
@@ -29,14 +28,12 @@ object frmBase: TfrmBase
       AlignVert = avClient
       CaptionOptions.Text = 'New Group'
       CaptionOptions.Visible = False
-      ButtonOptions.Buttons = <>
       ShowBorder = False
       Index = 1
     end
     object lgBackButton: TdxLayoutGroup
       Parent = dxLayoutControl1Group_Root
       CaptionOptions.Text = 'New Group'
-      ButtonOptions.Buttons = <>
       ShowBorder = False
       Index = 0
     end
@@ -78,17 +75,20 @@ object frmBase: TfrmBase
     Height = 120
     Width = 885
     object dxLayoutControl2: TdxLayoutControl
-      Left = 2
-      Top = 2
-      Width = 881
-      Height = 116
+      Left = 3
+      Top = 3
+      Width = 879
+      Height = 114
       Align = alClient
       TabOrder = 0
       LayoutLookAndFeel = DM.dxLayoutCxLookAndFeelMetropolisDark
+      ExplicitLeft = 2
+      ExplicitTop = 2
+      ExplicitWidth = 881
+      ExplicitHeight = 116
       object dxLayoutControl2Group_Root: TdxLayoutGroup
         AlignHorz = ahClient
         AlignVert = avClient
-        ButtonOptions.Buttons = <>
         Hidden = True
         ShowBorder = False
         Index = -1
@@ -98,7 +98,6 @@ object frmBase: TfrmBase
         AlignHorz = ahCenter
         AlignVert = avClient
         CaptionOptions.Text = 'New Group'
-        ButtonOptions.Buttons = <>
         LayoutDirection = ldHorizontal
         ShowBorder = False
         Index = 0

@@ -43,7 +43,7 @@ type
     clHomesDetailPhoto: TBlobField;
     clHomesDetailAgentID: TIntegerField;
     clHomesDetailYearID: TIntegerField;
-    dsHouseSalsesChart: TDataSource;
+    dsHouseSalesChart: TDataSource;
     clHouseSalesChart: TClientDataSet;
     clHouseSalesChartDate: TDateField;
     clHouseSalesChartState: TStringField;
