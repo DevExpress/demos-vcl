@@ -1,4 +1,4 @@
-<Dashboard CurrencyCulture="en-US">
+﻿<Dashboard CurrencyCulture="en-US">
   <Title Text="Sales Performance" Alignment="Left" />
   <DataSources>
 
