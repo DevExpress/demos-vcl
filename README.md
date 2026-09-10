@@ -53,6 +53,7 @@ You can use these projects as the foundation of your next great app or a practic
 You can find the up-to-date list of supported Embarcadero RAD Studio® IDE versions on the following page: [Prerequisites: Supported IDEs, Frameworks, and SDKs](https://www.devexpress.com/support/versions.xml#prerequisites)
 
 > **NOTE**
+>
 > AI services used for this demo have been rate limited. As such, you may experience performance-related delays when exploring the capabilities of DevExpress AI-powered Extensions. When connected to your own AI model/service without rate limits, DevExpress AI-powered Extensions will perform seamlessly, without artificial delays.
 
 ## Run Demos Locally
