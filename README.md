@@ -2,13 +2,15 @@
 
 [DevExpress VCL Components for Delphi and C++Builder](https://www.devexpress.com/products/vcl/) allow you to build elegant, high-performance Windows desktop applications with absolute ease.
 
+The [DevExpress VCL Components for Delphi and C++Builder](https://www.devexpress.com/products/vcl/) allow you to create applications that emulate the touch-first or Fluent UI experience that lies at the heart of Windows 11, without abandoning your existing VCL investments.
+
 Please visit our website to learn more about our award-winning VCL product line. To evaluate DevExpress UI controls and libraries in your projects, download our fully-functional version today: [Free 30-day Trial Version](https://go.devexpress.com/DevExpressDownload_VCLTrial.aspx).
 
 ## What's Inside
 
 ### Component Demos
 
-Whether building Office-Inspired touch-enabled applications or replicating the dock based UI of Visual Studio or Adobe Photoshop, you are always in full control with the DevExpress VCL Product Line. Each interactive DevExpress VCL demo includes source code to help you leverage built-in capabilities and understand common code paterns.
+Whether you need to create a modern Fluent UI application for Windows 11, or need to quickly convert an existing project to a Microsoft Surface touch-first application or implement AI-based user interfaces and workflows, the DevExpress VCL Subscription will help you take your business solutions forward so you can deliver new, immersive experiences to delight your users.
 
 The following table lists demo project location for each category:
 
