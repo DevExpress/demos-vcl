@@ -1,0 +1,2 @@
+inherited frmRichEditZooming: TfrmRichEditZooming
+end

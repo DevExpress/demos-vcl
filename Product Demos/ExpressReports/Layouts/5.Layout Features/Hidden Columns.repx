@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="24.2.5.0" Ref="1" ControlType="XtraReportsDemos.IListDataSource.Report, DevExpress.DemoReports.v24.2, Version=24.2.5.0, Culture=neutral, PublicKeyToken=4c3bc44151be4b47" Name="report1" DisplayName="Hidden Columns" PageWidth="850" PageHeight="1100" Version="24.2" RequestParameters="false" DataMember="Model" DataSource="#Ref-0">
+  <Parameters>
+    <Item1 Ref="3" Description="Hide Specifications" ValueInfo="False" Name="hidePerformance" Type="#Ref-2" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="4" ControlType="TopMarginBand" Name="topMarginBand1" />
+    <Item2 Ref="5" ControlType="DetailBand" Name="detailBand1" HeightF="98.61111" KeepTogether="true">
+      <SubBands>
+        <Item1 Ref="6" ControlType="SubBand" Name="SubBand1" HeightF="153.8">
+          <Controls>
+            <Item1 Ref="7" ControlType="XRLine" Name="line1" SizeF="650,2" LocationFloat="0,150" ForeColor="255,229,229,229">
+              <StylePriority Ref="8" UseForeColor="false" />
+            </Item1>
+            <Item2 Ref="9" ControlType="XRLabel" Name="label1" CanShrink="true" Text="The Ford Mustang is an automobile manufactured by the Ford Motor Company. It was initially based on the platform of the second generation North American Ford Falcon, a compact car. Introduced early on April 17, 1964, and thus dubbed as a &quot;1964½&quot; model by Mustang fans, the 1965 Mustang was the automaker's most successful launch since the Model A. The Mustang has undergone several transformations to its current fifth generation.&#xD;&#xA;The Mustang created the &quot;pony car&quot; class of American automobiles—sports car-like coupes with long hoods and short rear decks—and gave rise to competitors such as the Chevrolet Camaro, and Pontiac Firebird, AMC Javelin, as well as Chrysler's revamped Plymouth Barracuda and the first generation Dodge Challenger. The Mustang is also credited for inspiring the designs of coupés such as the Toyota Celica and Ford Capri, which were imported to the United States." SizeF="650,150" LocationFloat="0,0" StyleName="DescriptionStyle" Padding="5,0,10,10,100">
+              <ExpressionBindings>
+                <Item1 Ref="10" EventName="BeforePrint" PropertyName="Text" Expression="[Description]" />
+              </ExpressionBindings>
+              <StylePriority Ref="11" UsePadding="false" />
+            </Item2>
+          </Controls>
+        </Item1>
+      </SubBands>
+      <Controls>
+        <Item1 Ref="12" ControlType="XRTable" Name="table2" ProcessHiddenCellMode="ResizeCellsProportionally" SizeF="650,98.61111" LocationFloat="0,0">
+          <Rows>
+            <Item1 Ref="13" ControlType="XRTableRow" Name="tableRow1" Weight="0.6311111328125">
+              <Cells>
+                <Item1 Ref="14" ControlType="XRTableCell" Name="tableCell1" Weight="0.6108838360126202" Text="tableCell1" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="15" ControlType="XRTable" Name="table4" AnchorHorizontal="Both" SizeF="132.3582,98.61111" LocationFloat="0,0" StyleName="DetailTableStyle">
+                      <Rows>
+                        <Item1 Ref="16" ControlType="XRTableRow" Name="tableRow6" Weight="1.2499986267090315">
+                          <Cells>
+                            <Item1 Ref="17" ControlType="XRTableCell" Name="tableCell17" Weight="1.6989348239966124" Text="Trademark" Borders="Top, Right, Bottom">
+                              <ExpressionBindings>
+                                <Item1 Ref="18" EventName="BeforePrint" PropertyName="Text" Expression="[TrademarkName]" />
+                              </ExpressionBindings>
+                              <StylePriority Ref="19" UsePadding="false" UseBorders="false" />
+                            </Item1>
+                          </Cells>
+                        </Item1>
+                        <Item2 Ref="20" ControlType="XRTableRow" Name="tableRow8" Weight="1.2429588664152294">
+                          <Cells>
+                            <Item1 Ref="21" ControlType="XRTableCell" Name="tableCell4" Weight="1.6989348239966124" Text="tableCell4" StyleName="DetailTableStyle" Padding="2,2,0,0,100">
+                              <ExpressionBindings>
+                                <Item1 Ref="22" EventName="BeforePrint" PropertyName="Text" Expression="[Name]" />
+                              </ExpressionBindings>
+                            </Item1>
+                          </Cells>
+                        </Item2>
+                        <Item3 Ref="23" ControlType="XRTableRow" Name="tableRow7" Weight="2.507042700297017">
+                          <Cells>
+                            <Item1 Ref="24" ControlType="XRTableCell" Name="tableCell25" Weight="1.6989348239966127" CanGrow="false" Text="Description" TextAlignment="BottomLeft" Padding="10,0,0,2,100">
+                              <ExpressionBindings>
+                                <Item1 Ref="25" EventName="BeforePrint" PropertyName="Text" Expression="[Modification]" />
+                              </ExpressionBindings>
+                              <StylePriority Ref="26" UsePadding="false" UseTextAlignment="false" />
+                            </Item1>
+                          </Cells>
+                        </Item3>
+                      </Rows>
+                    </Item1>
+                  </Controls>
+                </Item1>
+                <Item2 Ref="27" ControlType="XRTableCell" Name="tableCell2" Weight="1.2217676250751202" Text="tableCell2" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="28" ControlType="XRTable" Name="table5" SizeF="264.7163,98.61111" LocationFloat="0,0" StyleName="DetailTableStyle">
+                      <Rows>
+                        <Item1 Ref="29" ControlType="XRTableRow" Name="tableRow14" Weight="1">
+                          <Cells>
+                            <Item1 Ref="30" ControlType="XRTableCell" Name="tableCell26" Weight="1.1088662716824693" Text="Horsepower" Borders="Top, Right, Bottom">
+                              <ExpressionBindings>
+                                <Item1 Ref="31" EventName="BeforePrint" PropertyName="Text" Expression="[Horsepower]" />
+                              </ExpressionBindings>
+                              <StylePriority Ref="32" UsePadding="false" UseBorders="false" />
+                            </Item1>
+                            <Item2 Ref="33" ControlType="XRTableCell" Name="tableCell28" Weight="1.108865563162565" Text="Torque" Borders="Top, Right, Bottom">
+                              <ExpressionBindings>
+                                <Item1 Ref="34" EventName="BeforePrint" PropertyName="Text" Expression="[Torque]" />
+                              </ExpressionBindings>
+                              <StylePriority Ref="35" UsePadding="false" UseBorders="false" />
+                            </Item2>
+                          </Cells>
+                        </Item1>
+                        <Item2 Ref="36" ControlType="XRTableRow" Name="tableRow15" Weight="1">
+                          <Cells>
+                            <Item1 Ref="37" ControlType="XRTableCell" Name="tableCell40" Weight="1.1088662716824698" Text="MPG @ City">
+                              <ExpressionBindings>
+                                <Item1 Ref="38" EventName="BeforePrint" PropertyName="Text" Expression="[MPGCity]" />
+                              </ExpressionBindings>
+                              <StylePriority Ref="39" UsePadding="false" />
+                            </Item1>
+                            <Item2 Ref="40" ControlType="XRTableCell" Name="tableCell45" Weight="1.1088655631625648" Text="MGP @ Highway">
+                              <ExpressionBindings>
+                                <Item1 Ref="41" EventName="BeforePrint" PropertyName="Text" Expression="[MPGHighway]" />
+                              </ExpressionBindings>
+                              <StylePriority Ref="42" UsePadding="false" />
+                            </Item2>
+                          </Cells>
+                        </Item2>
+                        <Item3 Ref="43" ControlType="XRTableRow" Name="tableRow16" Weight="1">
+                          <Cells>
+                            <Item1 Ref="44" ControlType="XRTableCell" Name="tableCell47" Weight="1.1088662716824698" Text="Doors">
+                              <ExpressionBindings>
+                                <Item1 Ref="45" EventName="BeforePrint" PropertyName="Text" Expression="[Doors]" />
+                              </ExpressionBindings>
+                              <StylePriority Ref="46" UsePadding="false" />
+                            </Item1>
+                            <Item2 Ref="47" ControlType="XRTableCell" Name="tableCell48" Weight="1.1088655631625648" Text="Cylinders">
+                              <ExpressionBindings>
+                                <Item1 Ref="48" EventName="BeforePrint" PropertyName="Text" Expression="[Cylinders]" />
+                              </ExpressionBindings>
+                              <StylePriority Ref="49" UsePadding="false" />
+                            </Item2>
+                          </Cells>
+                        </Item3>
+                        <Item4 Ref="50" ControlType="XRTableRow" Name="tableRow17" Weight="1">
+                          <Cells>
+                            <Item1 Ref="51" ControlType="XRTableCell" Name="tableCell50" Weight="1.1088662716824698" Text="Transmission Type">
+                              <ExpressionBindings>
+                                <Item1 Ref="52" EventName="BeforePrint" PropertyName="Text" Expression="[TransmissionType]" />
+                              </ExpressionBindings>
+                              <StylePriority Ref="53" UsePadding="false" />
+                            </Item1>
+                            <Item2 Ref="54" ControlType="XRTableCell" Name="tableCell51" Weight="1.1088655631625648" Text="Transmission Speeds">
+                              <ExpressionBindings>
+                                <Item1 Ref="55" EventName="BeforePrint" PropertyName="Text" Expression="[TransmissionSpeeds]" />
+                              </ExpressionBindings>
+                              <StylePriority Ref="56" UsePadding="false" />
+                            </Item2>
+                          </Cells>
+                        </Item4>
+                      </Rows>
+                    </Item1>
+                  </Controls>
+                  <ExpressionBindings>
+                    <Item1 Ref="57" EventName="BeforePrint" PropertyName="Visible" Expression="Not ?hidePerformance" />
+                  </ExpressionBindings>
+                </Item2>
+                <Item3 Ref="58" ControlType="XRTableCell" Name="tableCell3" Weight="1.1673485389122595" Text="tableCell3" Padding="2,2,0,0,100">
+                  <Controls>
+                    <Item1 Ref="59" ControlType="XRPictureBox" Name="pictureBox2" Sizing="Squeeze" ImageAlignment="MiddleCenter" AnchorVertical="Both" AnchorHorizontal="Both" SizeF="252.9255,98.61111" LocationFloat="0,0" StyleName="DetailTableStyle" Borders="Top, Bottom">
+                      <ExpressionBindings>
+                        <Item1 Ref="60" EventName="BeforePrint" PropertyName="ImageSource" Expression="[Photo]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="61" UseBorders="false" />
+                    </Item1>
+                  </Controls>
+                </Item3>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item2>
+    <Item3 Ref="62" ControlType="BottomMarginBand" Name="bottomMarginBand1">
+      <Controls>
+        <Item1 Ref="63" ControlType="XRPictureBox" Name="xrPictureBox4" Padding="0,0,0,0,100" ImageSource="svg,77u/PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgd2lkdGg9IjE1MHB4IiBoZWlnaHQ9IjMwcHgiIHZpZXdCb3g9IjAgMCAxNTAgMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0ibm9uZSI+DQogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxNTAiIGhlaWdodD0iMzAiIGZpbGw9IiNFNUU1RTUiIC8+DQogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxNTAiIGhlaWdodD0iMzAiIGZpbGw9IndoaXRlIiAvPg0KICA8cGF0aCBkPSJNMi45NjI5NSAyNS4wNzMxSDI2LjE2MTVWNS4xNjY0OEgyLjk2Mjk1VjI1LjA3MzFaIiBmaWxsPSJ3aGl0ZSIgLz4NCiAgPHBhdGggZD0iTTM3LjYzNTIgMjAuMzY3MkMzNy4yMTIyIDIwLjM2NzIgMzYuNzQ2NyAyMC4zNjcyIDM2LjQyOTggMjAuMzAyVjguNjE0MjlDMzYuNzY4IDguNTUwNzkgMzcuMjU0MiA4LjQ4NTMzIDM3LjkwOTUgOC40ODUzM0M0MC44MDY5IDguNDg1MzMgNDIuNjA0NCAxMC4zNDk4IDQyLjYwNDQgMTQuMTIzMkM0Mi42MDQ0IDE4LjUwMzEgNDAuNjE2NSAyMC4zODkgMzcuNjM1MiAyMC4zNjcyVjIwLjM2NzJaTTM3LjUyOTUgNS45NjkzMkMzNS45NDM1IDUuOTY5MzIgMzQuNDYzNCA2LjEwMDA2IDMzLjMyMDggNi4zMTcwMlYyMi43MDhDMzQuMTQ1NiAyMi44MTc4IDM1LjM1MTEgMjIuOTI2NiAzNi44NTI5IDIyLjkyNjZDMzkuNjg1OCAyMi45MjY2IDQxLjk0OTMgMjIuMjUzMSA0My40Mjk2IDIwLjg4ODRDNDQuNjc2OSAxOS43Mzc3IDQ1Ljg4MjMgMTcuNjU3NiA0NS44ODIzIDE0LjA3ODFDNDUuODgyMyAxMS4wNjQzIDQ0Ljk3MzIgOS4wMDQ1MSA0My40Mjk2IDcuNzA0ODdDNDIuMDc2NCA2LjU1NTk2IDQwLjIzNTcgNS45NjkzMiAzNy41Mjk1IDUuOTY5MzIiIGZpbGw9IiMzOTM1MzYiIC8+DQogIDxwYXRoIGQ9Ik01MC40Mzc3IDE1LjQ2NjFDNTAuNTIyMiAxNC4yNzM5IDUxLjE1NyAxMi42Njk1IDUyLjY1ODMgMTIuNjY5NUM1NC4yMDIgMTIuNjY5NSA1NC42ODg5IDE0LjIwODYgNTQuNjY3NiAxNS40NjYxSDUwLjQzNzdaTTUyLjg0ODQgMTAuNDM2N0M0OS40MDIyIDEwLjQzNjcgNDcuNDU2IDEzLjQyOTYgNDcuNDU2IDE2Ljg5ODFDNDcuNDU2IDIwLjY0ODEgNDkuNTI4NSAyMi45OTA5IDUzLjE2NjQgMjIuOTkwOUM1NC42MjU3IDIyLjk5MDkgNTUuOTk5NSAyMi43MjkyIDU2Ljk3MjggMjIuMjk4Mkw1Ni41Mjg0IDIwLjA4NUM1NS43MjQ5IDIwLjM2NzIgNTQuODE1OCAyMC41ODQyIDUzLjY1MjggMjAuNTg0MkM1MS45NjA4IDIwLjU4NDIgNTAuNTIyMiAxOS43NjA3IDUwLjQzNzcgMTcuNzAwMUg1Ny40Nzk1QzU3LjU0MzcgMTcuMzU0IDU3LjU2NDkgMTYuODk4MSA1Ny41NjQ5IDE2LjQyMThDNTcuNTY0OSAxMi41MTc4IDU1LjcwMzcgMTAuNDM2NyA1Mi44NDg0IDEwLjQzNjciIGZpbGw9IiMzOTM1MzYiIC8+DQogIDxwYXRoIGQ9Ik02Ni4zMDQ3IDEwLjY5NjRMNjQuODI1MiAxNi41NTA0QzY0LjU3MDQgMTcuNjE0MSA2NC4zNTkgMTguNTg5OCA2NC4xNjg0IDE5LjYyODlINjQuMTA2MkM2My45MTYgMTguNTg5OCA2My43MDM3IDE3LjU5MjMgNjMuNDQ5OSAxNi41NTA0TDYxLjkwNjIgMTAuNjk2NEg1OC41NDM3TDYyLjQ5ODggMjIuNzc0M0g2NS41MjI1TDY5LjU0MDcgMTAuNjk2NEg2Ni4zMDQ3IiBmaWxsPSIjMzkzNTM2IiAvPg0KICA8cGF0aCBkPSJNNC41NjMwNyAyMS42NjczQzMuOTY5NTEgMjIuNDIzNiAzLjUyODE1IDIzLjA5MzcgMy4xOTE5MyAyMy43MjE3QzMuMTA4NzkgMjMuODc0IDIuOTYyOTUgMjQuMzI3OSAyLjk2Mjk1IDI0LjYzMDlWMjUuMDczMUMyLjk2Mjk1IDI1LjgyNjEgMy41NjQyMyAyNi40NDQyIDQuMzAwNzIgMjYuNDQ0MkgyNC44MjQ4QzI1LjU2MDYgMjYuNDQ0MiAyNi4xNjE1IDI1LjgyNjEgMjYuMTYxNSAyNS4wNzMxVjguODgxNjhDMTQuOTE0MiAxMC45MTQ5IDguMDk3NzcgMTcuMTU5NiA0LjU2MzA3IDIxLjY2NzNaIiBmaWxsPSIjMzkzNTM2IiAvPg0KICA8cGF0aCBkPSJNNzQuNDczMSAxNS40NDQ0SDc5Ljc4MzdWMTIuODIxOEg3NC40NzMxVjguNzg4OTJIODAuMTAwOFY2LjEwMDA1SDcxLjM0NDJWMjIuNzc0M0g4MC40Mzg1VjIwLjA4NUg3NC40NzMxVjE1LjQ0NDQiIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik05Mi4yNjU3IDEwLjY5NjRIODguOTQ0N0w4Ny44ODY0IDEyLjg2NDNDODcuNTkwMSAxMy40OTM2IDg3LjMxNyAxNC4xNDQ2IDg3LjAyMTIgMTQuNzkzN0g4Ni45Nzc4Qzg2LjY4MSAxNC4xODg1IDg2LjQwODQgMTMuNTU3NSA4Ni4wNjkxIDEyLjg4Nkw4NC45NDkxIDEwLjY5NjRIODEuNDgxNUw4NC45Njk5IDE2LjY2MDJMODEuMzk1MSAyMi43NzQzSDg0LjczNThMODUuODM2NSAyMC40MzI1Qzg2LjEzMTggMTkuODAyNiA4Ni40Mjg2IDE5LjE3MyA4Ni43MDM3IDE4LjUyNDVIODYuNzQ3MUM4Ny4wNDM0IDE5LjE3MyA4Ny4zMTcgMTkuODAyNiA4Ny42MzM2IDIwLjQzMjVMODguNzk2IDIyLjc3NDNIOTIuMzA4MUw4OC43NTUxIDE2LjUyODlMOTIuMjY1NyAxMC42OTY0WiIgZmlsbD0iI0Y0NzIxNiIgLz4NCiAgPHBhdGggZD0iTTk5LjEwMjcgMjAuNDk1OEM5OC4wNDQ5IDIwLjQ5NTggOTcuMDA4NCAxOS42NTIzIDk3LjAwODQgMTcuODk1NVYxNS42Mzk2Qzk3LjAwODQgMTQuMTg4NSA5Ny45NjA1IDEzLjAxNjIgOTkuMTY2NCAxMy4wMTYyQzEwMC43MDkgMTMuMDE2MiAxMDEuNTEzIDE0LjU3ODEgMTAxLjUxMyAxNi43MjU0QzEwMS41MTMgMTguODkyOCAxMDAuNjg4IDIwLjQ5NTggOTkuMTAyNyAyMC40OTU4Wk0xMDAuMjAyIDEwLjQzNjdDOTguNjc4NSAxMC40MzY3IDk3LjQ3MzYgMTEuMTA5MyA5Ni43MTI2IDEyLjM0NDFIOTYuNjY5MUw5Ni41MjE1IDEwLjY5NjRIOTMuNzkzMUM5My44MzYxIDExLjgwMjQgOTMuODc5IDEzLjA4MDkgOTMuODc5IDE0LjY0MzhWMjcuNjEwMUg5Ny4wMDg0VjIxLjYwMzRIOTcuMDUxNEM5Ny41NTggMjIuNDA0MSA5OC41NTMxIDIzLjAxMjYgOTkuODQxIDIzLjAxMjZDMTAyLjIzMSAyMy4wMTI2IDEwNC42ODQgMjEuMDYxNSAxMDQuNjg0IDE2LjYxNTNDMTA0LjY4NCAxMi45MDg0IDEwMi43ODIgMTAuNDM2NyAxMDAuMjAyIDEwLjQzNjciIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xMDkuNzA1IDEyLjgwMDZIMTA5LjYxOEwxMDkuNDkzIDEwLjY5NjRIMTA2LjgwNkMxMDYuODQ5IDExLjc3OTQgMTA2Ljg5MSAxMi45NzM3IDEwNi44OTEgMTQuNDY5M1YyMi43NzQzSDExMC4wMjJWMTYuNTI4OUMxMTAuMDIyIDE0LjQ2OTMgMTExLjA5OCAxMy40OTM2IDExMi41MTYgMTMuNDkzNkMxMTIuODM1IDEzLjQ5MzYgMTEzLjA4OCAxMy41MTUgMTEzLjMyMSAxMy41NTc1VjEwLjUwMUMxMTMuMTA5IDEwLjQ1NzQgMTEyLjkxNyAxMC40MzY3IDExMi42MjIgMTAuNDM2N0MxMTEuNTIyIDEwLjQzNjcgMTEwLjI1NSAxMS4yMzc3IDEwOS43MDUgMTIuODAwNloiIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xMTcuNDA1IDE1LjQ2NjFDMTE3LjQ5MSAxNC4yNzM5IDExOC4xMjUgMTIuNjY5NSAxMTkuNjI2IDEyLjY2OTVDMTIxLjE3IDEyLjY2OTUgMTIxLjY1NyAxNC4yMDg2IDEyMS42MzYgMTUuNDY2MUgxMTcuNDA1Wk0xMTkuODE2IDEwLjQzNjdDMTE2LjM2OSAxMC40MzY3IDExNC40MjQgMTMuNDI5NiAxMTQuNDI0IDE2Ljg5ODFDMTE0LjQyNCAyMC42NDgxIDExNi40OTUgMjIuOTkwOSAxMjAuMTM0IDIyLjk5MDlDMTIxLjU5MyAyMi45OTA5IDEyMi45NjcgMjIuNzI5MiAxMjMuOTQxIDIyLjI5ODJMMTIzLjQ5NyAyMC4wODVDMTIyLjY5MyAyMC4zNjcyIDEyMS43ODQgMjAuNTg0MiAxMjAuNjIxIDIwLjU4NDJDMTE4LjkyOSAyMC41ODQyIDExNy40OTEgMTkuNzYwNyAxMTcuNDA1IDE3LjcwMDFIMTI0LjQ0OEMxMjQuNTExIDE3LjM1NCAxMjQuNTMzIDE2Ljg5ODEgMTI0LjUzMyAxNi40MjE4QzEyNC41MzMgMTIuNTE3OCAxMjIuNjcgMTAuNDM2NyAxMTkuODE2IDEwLjQzNjciIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xMzEuMDMxIDE1LjQ4OTNDMTI5LjY3OCAxNC45MDI4IDEyOS4yMzQgMTQuNTU1MyAxMjkuMjM0IDEzLjg4NDlDMTI5LjIzNCAxMy4yMzI4IDEyOS43NDEgMTIuNzM1MyAxMzAuNjkxIDEyLjczNTNDMTMxLjU4IDEyLjczNTMgMTMyLjQwNiAxMy4wODA5IDEzMi45MTMgMTMuMzYzMUwxMzMuNTA2IDExLjEwOTNDMTMyLjgyOSAxMC43NDAxIDEzMS43OTQgMTAuNDM2NyAxMzAuNTg4IDEwLjQzNjdDMTI3Ljk2NCAxMC40MzY3IDEyNi4yNzQgMTIuMDgzNiAxMjYuMjc0IDE0LjI1MTdDMTI2LjI3NCAxNS41NzU5IDEyNy4wNzUgMTYuODU0IDEyOS4yNzYgMTcuNzY0NEMxMzAuNTY2IDE4LjMyODEgMTMwLjk2NyAxOC43MTgzIDEzMC45NjcgMTkuNDU1NEMxMzAuOTY3IDIwLjE5NDggMTMwLjQ0MSAyMC42NzEyIDEyOS4zMzggMjAuNjcxMkMxMjguMzY3IDIwLjY3MTIgMTI3LjIwMiAyMC4yMzY3IDEyNi41OSAxOS44NjcyTDEyNS45OTggMjIuMTg3OEMxMjYuNzc5IDIyLjY2NjkgMTI4LjAzIDIyLjk5MDkgMTI5LjMxOCAyMi45OTA5QzEzMi4yNTkgMjIuOTkwOSAxMzMuOTQ5IDIxLjQ3MTkgMTMzLjk0OSAxOS4xNzNDMTMzLjk0OSAxNy41MDU3IDEzMy4wMTkgMTYuMzMyOCAxMzEuMDMxIDE1LjQ4OTNaIiBmaWxsPSIjRjQ3MjE2IiAvPg0KICA8cGF0aCBkPSJNMTQwLjQwNSAxNS40ODkzQzEzOS4wNTEgMTQuOTAyOCAxMzguNjA5IDE0LjU1NTMgMTM4LjYwOSAxMy44ODQ5QzEzOC42MDkgMTMuMjMyOCAxMzkuMTE2IDEyLjczNTMgMTQwLjA2NyAxMi43MzUzQzE0MC45NTQgMTIuNzM1MyAxNDEuNzgxIDEzLjA4MDkgMTQyLjI4NyAxMy4zNjMxTDE0Mi44OCAxMS4xMDkzQzE0Mi4yMDMgMTAuNzQwMSAxNDEuMTY3IDEwLjQzNjcgMTM5Ljk2MyAxMC40MzY3QzEzNy4zMzggMTAuNDM2NyAxMzUuNjQ3IDEyLjA4MzYgMTM1LjY0NyAxNC4yNTE3QzEzNS42NDcgMTUuNTc1OSAxMzYuNDQ5IDE2Ljg1NCAxMzguNjUgMTcuNzY0NEMxMzkuOTM5IDE4LjMyODEgMTQwLjM0MSAxOC43MTgzIDE0MC4zNDEgMTkuNDU1NEMxNDAuMzQxIDIwLjE5NDggMTM5LjgxNCAyMC42NzEyIDEzOC43MTMgMjAuNjcxMkMxMzcuNzQxIDIwLjY3MTIgMTM2LjU3NiAyMC4yMzY3IDEzNS45NjQgMTkuODY3MkwxMzUuMzcyIDIyLjE4NzhDMTM2LjE1MyAyMi42NjY5IDEzNy40MDQgMjIuOTkwOSAxMzguNjkyIDIyLjk5MDlDMTQxLjYzMiAyMi45OTA5IDE0My4zMjMgMjEuNDcxOSAxNDMuMzIzIDE5LjE3M0MxNDMuMzIzIDE3LjUwNTcgMTQyLjM5NCAxNi4zMzI4IDE0MC40MDUgMTUuNDg5MyIgZmlsbD0iI0Y0NzIxNiIgLz4NCiAgPHBhdGggZD0iTTI0LjgyNDggMi42NTg1OEg0LjMwMDcyQzMuNTY0MjMgMi42NTg1OCAyLjk2Mjk1IDMuMjc1NDkgMi45NjI5NSA0LjAzMlYxNi42NDY1QzcuMDI1MDYgMTIuMjY2NiAxNC4yNTU0IDcuNDgxNTcgMjUuMjc5NyA2LjE3NzE2QzI1LjU3MjEgNi4xNDM1NCAyNi4xNjE1IDYuMDA0MSAyNi4xNjE1IDUuMTY2NDhWNC4wMzJDMjYuMTYxNSAzLjI3NTQ5IDI1LjU2MDYgMi42NTg1OCAyNC44MjQ4IDIuNjU4NTgiIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xNDYuMDM3IDkuNzY1NzdIMTQ1LjczOVY5LjEyNjk0SDE0NS45ODZDMTQ2LjI2MyA5LjEyNjk0IDE0Ni40MDEgOS4yMzE3NSAxNDYuNDAxIDkuNDQxNjJDMTQ2LjQwMSA5LjUzOTM0IDE0Ni4zNjggOS42MTc2MiAxNDYuMzAzIDkuNjc2OTZDMTQ2LjIzOCA5LjczNjEgMTQ2LjE0OSA5Ljc2NTc3IDE0Ni4wMzcgOS43NjU3N1pNMTQ2LjMzNCA5Ljk4ODFWOS45Nzg1OEMxNDYuNjggOS44ODk5OCAxNDYuODUzIDkuNjk0NzkgMTQ2Ljg1MyA5LjM5MTk1QzE0Ni44NTMgOS4xOTc3MiAxNDYuNzgzIDkuMDQ2MDMgMTQ2LjY0MSA4LjkzNjY2QzE0Ni40OTkgOC44MjY4OSAxNDYuMjkzIDguNzcyMSAxNDYuMDIzIDguNzcyMUgxNDUuMzE5VjEwLjk4MTRIMTQ1LjczOVYxMC4wOTQ1SDE0NS45MjNDMTQ2LjA1NiAxMC4wOTQ1IDE0Ni4xNiAxMC4yMDQxIDE0Ni4yMzUgMTAuNDIzMkwxNDYuNDI5IDEwLjk4MTRIMTQ2LjkyOUwxNDYuNjcxIDEwLjM1MjRDMTQ2LjU4NyAxMC4xNDU3IDE0Ni40NzQgMTAuMDI0MyAxNDYuMzM0IDkuOTg4MSIgZmlsbD0iI0Y0NzIxNiIgLz4NCiAgPHBhdGggZD0iTTE0Ny4wOTQgMTAuOTcyOUMxNDYuODA4IDExLjI2MjQgMTQ2LjQ2IDExLjQwNzQgMTQ2LjA1IDExLjQwNzRDMTQ1LjYzNyAxMS40MDc0IDE0NS4yODcgMTEuMjY0MiAxNDUuMDAxIDEwLjk3OEMxNDQuNzE1IDEwLjY5MTYgMTQ0LjU3MiAxMC4zMzI1IDE0NC41NzIgOS45MDA0NkMxNDQuNTcyIDkuNDc2MjEgMTQ0LjcxMiA5LjExOTA1IDE0NC45OTMgOC44Mjg2N0MxNDUuMjc0IDguNTM4NzQgMTQ1LjYyNiA4LjM5MzU4IDE0Ni4wNSA4LjM5MzU4QzE0Ni40NjggOC4zOTM1OCAxNDYuODE3IDguNTM3NTMgMTQ3LjEgOC44MjU1M0MxNDcuMzgzIDkuMTEzMTIgMTQ3LjUyNCA5LjQ3MTUgMTQ3LjUyNCA5LjkwMDQ2QzE0Ny41MjQgMTAuMzI2MyAxNDcuMzgyIDEwLjY4MzcgMTQ3LjA5NCAxMC45NzI5VjEwLjk3MjlaTTE0Ny4zMDIgOC42Mzk2QzE0Ni45NjcgOC4zMDgzMSAxNDYuNTU0IDguMTQyOTUgMTQ2LjA2IDguMTQyOTVDMTQ1LjU2IDguMTQyOTUgMTQ1LjE0IDguMzEzNjggMTQ0LjgwMSA4LjY1NTI1QzE0NC40NjIgOC45OTY0MSAxNDQuMjkyIDkuNDEzMTIgMTQ0LjI5MiA5LjkwNTIyQzE0NC4yOTIgMTAuNDExNiAxNDQuNDYgMTAuODI4OSAxNDQuNzk1IDExLjE1NzZDMTQ1LjEyOSAxMS40ODY1IDE0NS41NDYgMTEuNjUwOSAxNDYuMDQ1IDExLjY1MDlDMTQ2LjUzNiAxMS42NTA5IDE0Ni45NTIgMTEuNDgxMiAxNDcuMjkzIDExLjE0MjRDMTQ3LjYzNCAxMC44MDMzIDE0Ny44MDQgMTAuMzg2MiAxNDcuODA0IDkuODkwNzlDMTQ3LjgwNCA5LjM4ODAxIDE0Ny42MzcgOC45NzA2OSAxNDcuMzAyIDguNjM5NiIgZmlsbD0iI0Y0NzIxNiIgLz4NCjwvc3ZnPg==" Sizing="AutoSize" UseImageResolution="false" NavigateUrl="http://www.devexpress.com/Products/NET/Reporting/" SizeF="156.25,31.25" LocationFloat="275,13" />
+      </Controls>
+    </Item3>
+    <Item4 Ref="64" ControlType="PageHeaderBand" Name="PageHeader">
+      <Controls>
+        <Item1 Ref="65" ControlType="XRTable" Name="table1" ProcessHiddenCellMode="ResizeCellsProportionally" SizeF="650,100" LocationFloat="0,0">
+          <Rows>
+            <Item1 Ref="66" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+              <Cells>
+                <Item1 Ref="67" ControlType="XRTableCell" Name="tableCell16" Weight="0.79754283441045715" Multiline="true" Text="TRADEMARK&#xD;&#xA;" StyleName="SimpleHeaderCellStyle">
+                  <StylePriority Ref="68" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="69" ControlType="XRTableCell" Name="tableCell18" Weight="0.79754283441045715" Text="HORSEPOWER" StyleName="SimpleHeaderCellStyle">
+                  <ExpressionBindings>
+                    <Item1 Ref="70" EventName="BeforePrint" PropertyName="Visible" Expression="Not ?hidePerformance" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="71" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="72" ControlType="XRTableCell" Name="tableCell5" Weight="0.79754283441045715" Text="TORQUE" StyleName="SimpleHeaderCellStyle">
+                  <ExpressionBindings>
+                    <Item1 Ref="73" EventName="BeforePrint" PropertyName="Visible" Expression="Not ?hidePerformance" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="74" UsePadding="false" />
+                </Item3>
+                <Item4 Ref="75" ControlType="XRTableCell" Name="tableCell6" Weight="1.5240381556102753" RowSpan="4" Text="PHOTO" StyleName="LargeHeaderCellStyle" Padding="2,2,0,0,100" BorderColor="White" Borders="Bottom" BorderWidth="0.8">
+                  <StylePriority Ref="76" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" />
+                </Item4>
+              </Cells>
+            </Item1>
+            <Item2 Ref="77" ControlType="XRTableRow" Name="tableRow3" Weight="1">
+              <Cells>
+                <Item1 Ref="78" ControlType="XRTableCell" Name="tableCell7" Weight="0.79754283441045726" Text="MODEL NAME" StyleName="SimpleHeaderCellStyle">
+                  <StylePriority Ref="79" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="80" ControlType="XRTableCell" Name="tableCell19" Weight="0.79754283441045726" Multiline="true" Text="MPG @ CITY&#xD;&#xA;" StyleName="SimpleHeaderCellStyle">
+                  <ExpressionBindings>
+                    <Item1 Ref="81" EventName="BeforePrint" PropertyName="Visible" Expression="Not ?hidePerformance" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="82" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="83" ControlType="XRTableCell" Name="tableCell8" Weight="0.79754283441045726" Text="MPG @ HIGHWAY" StyleName="SimpleHeaderCellStyle">
+                  <ExpressionBindings>
+                    <Item1 Ref="84" EventName="BeforePrint" PropertyName="Visible" Expression="Not ?hidePerformance" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="85" UsePadding="false" />
+                </Item3>
+                <Item4 Ref="86" ControlType="XRTableCell" Name="tableCell9" Weight="1.5240381556102753" Text="tableCell9" Padding="2,2,0,0,100">
+                  <StylePriority Ref="87" UsePadding="false" />
+                </Item4>
+              </Cells>
+            </Item2>
+            <Item3 Ref="88" ControlType="XRTableRow" Name="tableRow4" Weight="1">
+              <Cells>
+                <Item1 Ref="89" ControlType="XRTableCell" Name="tableCell10" Weight="0.79754283441045726" StyleName="SimpleHeaderCellStyle" Padding="2,2,0,0,100" Borders="Right">
+                  <StylePriority Ref="90" UsePadding="false" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="91" ControlType="XRTableCell" Name="tableCell20" Weight="0.79754283441045726" Text="DOORS" StyleName="SimpleHeaderCellStyle">
+                  <ExpressionBindings>
+                    <Item1 Ref="92" EventName="BeforePrint" PropertyName="Visible" Expression="Not ?hidePerformance" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="93" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="94" ControlType="XRTableCell" Name="tableCell11" Weight="0.79754283441045726" Text="CYLINDERS" StyleName="SimpleHeaderCellStyle">
+                  <ExpressionBindings>
+                    <Item1 Ref="95" EventName="BeforePrint" PropertyName="Visible" Expression="Not ?hidePerformance" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="96" UsePadding="false" />
+                </Item3>
+                <Item4 Ref="97" ControlType="XRTableCell" Name="tableCell12" Weight="1.5240381556102753" Text="tableCell12" Padding="2,2,0,0,100">
+                  <StylePriority Ref="98" UsePadding="false" />
+                </Item4>
+              </Cells>
+            </Item3>
+            <Item4 Ref="99" ControlType="XRTableRow" Name="tableRow5" Weight="1">
+              <Cells>
+                <Item1 Ref="100" ControlType="XRTableCell" Name="tableCell13" Weight="0.79754283441045726" Text="MODIFICATION" StyleName="SimpleHeaderCellStyle" Borders="Right, Bottom">
+                  <StylePriority Ref="101" UsePadding="false" UseBorders="false" />
+                </Item1>
+                <Item2 Ref="102" ControlType="XRTableCell" Name="tableCell21" Weight="0.79754283441045726" Multiline="true" Text="TRANSMISSION TYPE&#xD;&#xA;" StyleName="SimpleHeaderCellStyle">
+                  <ExpressionBindings>
+                    <Item1 Ref="103" EventName="BeforePrint" PropertyName="Visible" Expression="Not ?hidePerformance" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="104" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="105" ControlType="XRTableCell" Name="tableCell14" Weight="0.79754283441045726" Text="TRANSMISSION SPEEDS" StyleName="SimpleHeaderCellStyle">
+                  <ExpressionBindings>
+                    <Item1 Ref="106" EventName="BeforePrint" PropertyName="Visible" Expression="Not ?hidePerformance" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="107" UsePadding="false" />
+                </Item3>
+                <Item4 Ref="108" ControlType="XRTableCell" Name="tableCell15" Weight="1.5240381556102753" Text="tableCell15" Padding="2,2,0,0,100">
+                  <StylePriority Ref="109" UsePadding="false" />
+                </Item4>
+              </Cells>
+            </Item4>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item4>
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="110" Name="LargeHeaderCellStyle" BorderStyle="Inset" Padding="10,0,0,0,100" Font="Segoe UI, 7pt, style=Bold" ForeColor="White" BackColor="255,127,127,127" StringFormat="Center;Center;0;None;Character;GenericDefault" TextAlignment="MiddleCenter" />
+    <Item2 Ref="111" Name="SimpleHeaderCellStyle" BorderStyle="Inset" Padding="10,0,0,0,100" Font="Segoe UI, 7pt, style=Bold" ForeColor="White" BackColor="255,127,127,127" BorderColor="White" Sides="Right, Bottom" StringFormat="Near;Center;0;None;Character;GenericDefault" TextAlignment="MiddleLeft" BorderWidthSerializable="0.8" />
+    <Item3 Ref="112" Name="DetailTableStyle" BorderStyle="Inset" Padding="10,0,0,0,100" Font="Segoe UI, 9pt" ForeColor="Black" BorderColor="255,229,229,229" Sides="Right, Bottom" StringFormat="Near;Center;0;None;Character;GenericDefault" TextAlignment="MiddleLeft" BorderWidthSerializable="0.8" />
+    <Item4 Ref="113" Name="DescriptionStyle" BorderStyle="Inset" Padding="5,0,0,0,100" Font="Segoe UI, 8pt" ForeColor="255,127,127,127" StringFormat="Near;Near;0;None;Character;GenericDefault" TextAlignment="TopLeft" />
+  </StyleSheet>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v24.2" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlZlaGljbGVzREJDb25uZWN0aW9uU3RyaW5nIiBGcm9tQXBwQ29uZmlnPSJ0cnVlIiAvPjxRdWVyeSBUeXBlPSJTZWxlY3RRdWVyeSIgTmFtZT0iTW9kZWwiPjxUYWJsZXM+PFRhYmxlIE5hbWU9Ik1vZGVsIiBYPSIzMCIgWT0iMzAiIFdpZHRoPSIxMjUiIEhlaWdodD0iNDYzIiAvPjxUYWJsZSBOYW1lPSJUcmFkZW1hcmsiIFg9IjE4NSIgWT0iMzAiIFdpZHRoPSIxMjUiIEhlaWdodD0iMTYzIiAvPjxSZWxhdGlvbiBUeXBlPSJJbm5lciIgUGFyZW50PSJNb2RlbCIgTmVzdGVkPSJUcmFkZW1hcmsiPjxLZXlDb2x1bW4gUGFyZW50PSJUcmFkZW1hcmtJRCIgTmVzdGVkPSJJRCIgLz48L1JlbGF0aW9uPjwvVGFibGVzPjxDb2x1bW5zPjxDb2x1bW4gVGFibGU9Ik1vZGVsIiBOYW1lPSJJRCIgLz48Q29sdW1uIFRhYmxlPSJNb2RlbCIgTmFtZT0iTmFtZSIgLz48Q29sdW1uIFRhYmxlPSJNb2RlbCIgTmFtZT0iVHJhZGVtYXJrSUQiIEFsaWFzPSJUcmFkZW1hcmsiIC8+PENvbHVtbiBUYWJsZT0iTW9kZWwiIE5hbWU9Ik1vZGlmaWNhdGlvbiIgLz48Q29sdW1uIFRhYmxlPSJNb2RlbCIgTmFtZT0iTVBHIENpdHkiIEFsaWFzPSJNUEdDaXR5IiAvPjxDb2x1bW4gVGFibGU9Ik1vZGVsIiBOYW1lPSJNUEcgSGlnaHdheSIgQWxpYXM9Ik1QR0hpZ2h3YXkiIC8+PENvbHVtbiBUYWJsZT0iTW9kZWwiIE5hbWU9IkRvb3JzIiAvPjxDb2x1bW4gVGFibGU9Ik1vZGVsIiBOYW1lPSJDeWxpbmRlcnMiIC8+PENvbHVtbiBUYWJsZT0iTW9kZWwiIE5hbWU9IkhvcnNlcG93ZXIiIC8+PENvbHVtbiBUYWJsZT0iTW9kZWwiIE5hbWU9IlRvcnF1ZSIgLz48Q29sdW1uIFRhYmxlPSJNb2RlbCIgTmFtZT0iVHJhbnNtaXNzaW9uIFNwZWVkcyIgQWxpYXM9IlRyYW5zbWlzc2lvblNwZWVkcyIgLz48Q29sdW1uIFRhYmxlPSJNb2RlbCIgTmFtZT0iVHJhbnNtaXNzaW9uIFR5cGUiIEFsaWFzPSJUcmFuc21pc3Npb25UeXBlIiAvPjxDb2x1bW4gVGFibGU9Ik1vZGVsIiBOYW1lPSJEZXNjcmlwdGlvbiIgLz48Q29sdW1uIFRhYmxlPSJNb2RlbCIgTmFtZT0iUGhvdG8iIC8+PEV4cHJlc3Npb24gQWxpYXM9IlRyYWRlbWFya05hbWUiPltUcmFkZW1hcmsuTmFtZV08L0V4cHJlc3Npb24+PC9Db2x1bW5zPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlMSI+PFZpZXcgTmFtZT0iTW9kZWwiPjxGaWVsZCBOYW1lPSJJRCIgVHlwZT0iSW50NjQiIC8+PEZpZWxkIE5hbWU9Ik5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVHJhZGVtYXJrIiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0iTW9kaWZpY2F0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik1QR0NpdHkiIFR5cGU9IkludDY0IiAvPjxGaWVsZCBOYW1lPSJNUEdIaWdod2F5IiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0iRG9vcnMiIFR5cGU9IkludDY0IiAvPjxGaWVsZCBOYW1lPSJDeWxpbmRlcnMiIFR5cGU9IkludDY0IiAvPjxGaWVsZCBOYW1lPSJIb3JzZXBvd2VyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRvcnF1ZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJUcmFuc21pc3Npb25TcGVlZHMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVHJhbnNtaXNzaW9uVHlwZSIgVHlwZT0iSW50NjQiIC8+PEZpZWxkIE5hbWU9IkRlc2NyaXB0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlBob3RvIiBUeXBlPSJCeXRlQXJyYXkiIC8+PEZpZWxkIE5hbWU9IlRyYWRlbWFya05hbWUiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0PjwvUmVzdWx0U2NoZW1hPjxDb25uZWN0aW9uT3B0aW9ucyBDbG9zZUNvbm5lY3Rpb249InRydWUiIC8+PC9TcWxEYXRhU291cmNlPg==" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="2" Content="System.Boolean" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

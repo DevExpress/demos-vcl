@@ -1,0 +1,2 @@
+inherited frmRichEditFloatingObjects: TfrmRichEditFloatingObjects
+end

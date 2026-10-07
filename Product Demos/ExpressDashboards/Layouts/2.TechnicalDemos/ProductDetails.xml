@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Bound Image &amp; Text - Technical Demo" Alignment="Left" />
+  <DataSources>
+    <ExtractFileDataSource ComponentName="dashboardExtractDataSource1" Name="ProductDetailsData">
+      <CalculatedFields>
+        <CalculatedField Name="ProductSalesByYear" Expression="Aggr(Sum([SalesAmount]), GetYear([OrderDate]))" DataType="Auto" DataMember="Customers" />
+        <CalculatedField Name="MaxProductSalesYear" Expression="Aggr(Max([ProductSalesByYear]))" DataType="Auto" DataMember="Customers" />
+        <CalculatedField Name="BestSalesYear" Expression="Iif([MaxProductSalesYear] = [ProductSalesByYear], GetYear([OrderDate]), null)" DataType="Auto" DataMember="Customers" />
+        <CalculatedField Name="ProductSalesByCustomer" Expression="Aggr(Sum([SalesAmount]), [Name])" DataType="Auto" DataMember="Customers" />
+        <CalculatedField Name="MaxProductSalesCustomer" Expression="Aggr(Max([ProductSalesByCustomer]))" DataType="Auto" DataMember="Customers" />
+        <CalculatedField Name="TopSeller" Expression="Iif([MaxProductSalesCustomer] = [ProductSalesByCustomer], [Name], null)" DataType="Auto" DataMember="Customers" />
+      </CalculatedFields>
+      <FileName>|DataDirectory|ProductDetails.dat</FileName>
+      <Parameters />
+      <SavedSchema>
+        <Column>
+          <Name>Name</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Street</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>City</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Latitude</Name>
+          <Type>System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Longitude</Name>
+          <Type>System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Phone</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>States_Name</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>OrderDate</Name>
+          <Type>System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>SalesAmount</Name>
+          <Type>System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Products_Name</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Description</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>ProductionStart</Name>
+          <Type>System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>RetailPrice</Name>
+          <Type>System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>ConsumerRating</Name>
+          <Type>System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+      </SavedSchema>
+    </ExtractFileDataSource>
+  </DataSources>
+  <Items>
+    <ComboBox ComponentName="comboBoxProduct" Name="Product" ShowCaption="false" ParentContainer="groupProductDetails" DataSource="dashboardExtractDataSource1" ShowAllValue="false" EnableSearch="true">
+      <DataItems>
+        <Dimension DataMember="Products_Name" Name="Product Name" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <TextBox ComponentName="textBoxProductDescription" Name="Product Description" ShowCaption="false" ParentContainer="groupProductDetails" DataSource="dashboardExtractDataSource1">
+      <DataItems>
+        <Measure DataMember="Products_Name" Name="Product Name" SummaryType="Min" DefaultId="DataItem0" />
+        <Measure DataMember="Description" Name="Description" SummaryType="Min" DefaultId="DataItem2" />
+        <Measure DataMember="ProductionStart" Name="Production Start" SummaryType="Min" DefaultId="DataItem3" />
+        <Measure DataMember="ConsumerRating" Name="Consumer Rating" SummaryType="Min" DefaultId="DataItem4" />
+        <Measure DataMember="RetailPrice" Name="Retail Price" SummaryType="Min" DefaultId="DataItem6" />
+        <Measure DataMember="BestSalesYear" Name="Best Sales Year" SummaryType="Min" DefaultId="DataItem5">
+          <NumericFormat FormatType="General" />
+        </Measure>
+        <Measure DataMember="TopSeller" Name="Best Sales Company" SummaryType="Min" DefaultId="DataItem7" />
+      </DataItems>
+      <Text>{\rtf1\deff0{\fonttbl{\f0 Calibri;}{\f1 Segoe UI;}{\f2 Times New Roman;}{\f3 Arial;}}{\colortbl ;\red0\green0\blue255 ;\red255\green255\blue255 ;}{\*\defchp \f1\fs20}{\stylesheet {\ql Normal;}{\*\cs1\f1\fs20 Default Paragraph Font;}{\*\cs2\ul\f2\cf1 Hyperlink;}{\*\cs3\sbasedon1\f2 Line Number;}{\*\ts4\tsrowd\fs22\ql\tsvertalt\tscellcbpat2\tscellpct0\cltxlrtb Normal Table;}{\*\ts5\tsrowd\f3\fs22\ql\trbrdrt\brdrs\brdrw10\trbrdrl\brdrs\brdrw10\trbrdrb\brdrs\brdrw10\trbrdrr\brdrs\brdrw10\trbrdrh\brdrs\brdrw10\trbrdrv\brdrs\brdrw10\trpaddfl3\trpaddl108\trpaddfr3\trpaddr108\tsvertalt\tscellcbpat2\tscellpct0\cltxlrtb Table Simple 1;}}{\*\listoverridetable}{\info}\nouicompat\splytwnine\htmautsp\expshrtn\spltpgpar\deftab720\sectd\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\headery720\footery720\pgwsxn11906\pghsxn16838\cols1\colsx720\pard\plain\ql{\field\dxfldcodeview{\*\fldinst{\b\cf0\cs1 DOCVARIABLE DataItem0}}{\fldrslt{\b\cf0\cs1 Product Name}}}\b\cf0\par\pard\plain\ql\i\fs22\cf0\par\trowd\irow0\irowband-1\trleft0\trftsWidth1\trautofit1\tbllkhdrcols\tbllkhdrrows\tbllknocolband\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx10\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx20\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx30\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx40\pard\plain\ql\intbl{\i\fs22\cf0\cs1 Production Start:}\i\fs22\cf0\cell\pard\plain\ql\intbl{\field\dxfldcodeview{\*\fldinst{\b\fs22\cf0\cs1 DOCVARIABLE DataItem3}}{\fldrslt{\b\fs22\cf0\cs1 Production Start}}}\i\fs22\cf0\cell\pard\plain\ql\intbl{\i\fs22\cf0\cs1 Best Sales Year:}{\i\fs22\cf0\cs1 \tab }\i\fs22\cf0\cell\pard\plain\ql\intbl{\field\dxfldcodeview{\*\fldinst{\b\fs22\cf0\cs1 DOCVARIABLE DataItem5}}{\fldrslt{\b\fs22\cf0\cs1 Best Sales Year}}}\i\fs22\cf0\cell\trowd\irow0\irowband-1\trleft0\trftsWidth1\trautofit1\tbllkhdrcols\tbllkhdrrows\tbllknocolband\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx10\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx20\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx30\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx40\row\trowd\irow1\irowband0\lastrow\trleft0\trftsWidth1\trautofit1\tbllkhdrcols\tbllkhdrrows\tbllknocolband\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx10\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx20\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx30\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx40\pard\plain\ql\intbl{\i\fs22\cf0\cs1 Retail Price:}\i\fs22\cf0\cell\pard\plain\ql\intbl{\field\dxfldcodeview{\*\fldinst{\b\fs22\cf0\cs1 DOCVARIABLE DataItem6}}{\fldrslt{\b\fs22\cf0\cs1 Retail Price}}}\i\fs22\cf0\cell\pard\plain\ql\intbl{\i\fs22\cf0\cs1 Best Sales Company:}\i\fs22\cf0\cell\pard\plain\ql\intbl{\field\dxfldcodeview{\*\fldinst{\b\fs22\cf0\cs1 DOCVARIABLE DataItem7}}{\fldrslt{\b\fs22\cf0\cs1 Best Sales Company}}}\i\fs22\cf0\cell\trowd\irow1\irowband0\lastrow\trleft0\trftsWidth1\trautofit1\tbllkhdrcols\tbllkhdrrows\tbllknocolband\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx10\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx20\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx30\clvertalt\clbrdrt\brdrnone\clbrdrl\brdrnone\clbrdrb\brdrnone\clbrdrr\brdrnone\cltxlrtb\clftsWidth3\clwWidth4410\cellx40\row\pard\plain\ql\fs22\cf0\par\pard\plain\ql{\field\dxfldcodeview{\*\fldinst{\fs22\cf0\cs1 DOCVARIABLE DataItem2}}{\fldrslt{\fs22\cf0\cs1 Description}}}\fs22\cf0\par}</Text>
+      <Values>
+        <Value DefaultId="DataItem0" />
+        <Value DefaultId="DataItem2" />
+        <Value DefaultId="DataItem3" />
+        <Value DefaultId="DataItem4" />
+        <Value DefaultId="DataItem6" />
+        <Value DefaultId="DataItem5" />
+        <Value DefaultId="DataItem7" />
+      </Values>
+    </TextBox>
+    <BoundImage ComponentName="primaryImage" Name="Product Image" ShowCaption="false" ParentContainer="groupProductDetails" DataSource="dashboardExtractDataSource1" SizeMode="Squeeze" DataBindingMode="Uri" UriPattern="Data\ProductDetailsImages\{0}.jpg">
+      <DataItems>
+        <Dimension DataMember="Products_Name" Name="Product Name" DefaultId="DataItem0" />
+      </DataItems>
+      <ImageItem DefaultId="DataItem0" />
+    </BoundImage>
+    <Chart ComponentName="chartRunningTotalByYear" Name="Running Total by Year" ShowCaption="false" ParentContainer="groupSalesByCompany" DataSource="dashboardExtractDataSource1">
+      <ColoringOptions MeasuresColoringMode="None" />
+      <DataItems>
+        <Dimension DataMember="OrderDate" Name="Order Year" ColoringMode="Hue" DefaultId="DataItem0" />
+        <Measure DataMember="SalesAmount" Name="Sales Amount" DefaultId="DataItem2" />
+        <Measure DataMember="SalesAmount" Name="Running total of Sales Amount" DefaultId="DataItem3">
+          <Calculation>
+            <RunningTotal />
+          </Calculation>
+          <WindowDefinition>
+            <ChartWindowDefinition />
+          </WindowDefinition>
+        </Measure>
+        <Dimension DataMember="OrderDate" Name="Order Quarter" DateTimeGroupInterval="Quarter" DefaultId="DataItem5" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+        <Argument DefaultId="DataItem5" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="Sales by Company">
+            <NumericFormat FormatType="Currency" />
+          </AxisY>
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem2" />
+            </Simple>
+            <Simple SeriesType="Line">
+              <Value DefaultId="DataItem3" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend IsInsidePosition="true" InsidePosition="TopLeftHorizontal" />
+    </Chart>
+    <ComboBox ComponentName="comboBoxCustomer" Name="Customer" ShowCaption="false" ParentContainer="groupSalesByCompany" DataSource="dashboardExtractDataSource1" ShowAllValue="false" EnableSearch="true">
+      <DataItems>
+        <Dimension DataMember="Name" Name="Company Name" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <BoundImage ComponentName="secondaryImage" Name="Product Image" ShowCaption="false" ParentContainer="groupProductDetails" DataSource="dashboardExtractDataSource1" SizeMode="Squeeze" DataBindingMode="Uri" UriPattern="Data\ProductDetailsImages\{0} Secondary.jpg">
+      <DataItems>
+        <Dimension DataMember="Products_Name" Name="Product Name" DefaultId="DataItem0" />
+      </DataItems>
+      <ImageItem DefaultId="DataItem0" />
+    </BoundImage>
+  </Items>
+  <Groups>
+    <Group ComponentName="groupProductDetails" Name="Product Details" ShowCaption="false">
+      <InteractivityOptions IgnoreMasterFilters="false" IsMasterFilter="true" />
+    </Group>
+    <Group ComponentName="groupSalesByCompany" Name="Sales by Company" ShowCaption="false">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+    </Group>
+  </Groups>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical" DashboardItem="groupProductDetails" Weight="49.041372351160447">
+        <LayoutItem DashboardItem="comboBoxProduct" Weight="6.1052631578947372" />
+        <LayoutItem DashboardItem="textBoxProductDescription" Weight="48.226700251889156" />
+        <LayoutGroup Weight="45.668036590216104">
+          <LayoutItem DashboardItem="primaryImage" Weight="65.843621399176953" />
+          <LayoutItem DashboardItem="secondaryImage" Weight="34.156378600823047" />
+        </LayoutGroup>
+      </LayoutGroup>
+      <LayoutGroup Orientation="Vertical" DashboardItem="groupSalesByCompany" Weight="50.958627648839553">
+        <LayoutItem DashboardItem="comboBoxCustomer" Weight="7.4245939675174011" />
+        <LayoutItem DashboardItem="chartRunningTotalByYear" Weight="92.5754060324826" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+    <Description>["This dashboard demonstrates items that display images and text:","- The Bound Image dashboard item displays images from the bound data source.","- The Text Box dashboard item displays rich text containing data-bound fields."]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/117525/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/images/image-types-overview","text":"Bound Image"},{"href":"https://docs.devexpress.com/Dashboard/117170/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/text-box","text":"Text Box"},{"href":"https://docs.devexpress.com/Dashboard/117172/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/dashboard-item-group","text":"Dashboard Group"},{"href":"https://docs.devexpress.com/Dashboard/116917/common-features/advanced-analytics/window-calculations","text":"Window Calculations - Running Total"}]</Links>
+  </CustomProperties>
+</Dashboard>

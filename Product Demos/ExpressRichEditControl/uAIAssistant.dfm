@@ -1,0 +1,2 @@
+inherited frmRichEditAIAssistant: TfrmRichEditAIAssistant
+end

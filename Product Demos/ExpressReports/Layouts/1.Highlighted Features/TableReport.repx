@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="24.2.5.0" Ref="1" ControlType="XtraReportsDemos.TableReport.Report, DevExpress.DemoReports.v24.2, Version=24.2.5.0, Culture=neutral, PublicKeyToken=4c3bc44151be4b47" Name="TableReport" DisplayName="Table Report" SnapGridSize="12" ReportUnit="Pixels" Margins="72, 72, 72, 72" PageWidth="816" PageHeight="1056" Version="25.1" RequestParameters="false" DataMember="OrderDetails" DataSource="#Ref-0" Dpi="96">
+  <Extensions>
+    <Item1 Ref="2" Key="DataSerializationExtension" Value="Table Report" />
+    <Item2 Ref="3" Key="DataEditorExtension" Value="Table Report" />
+    <Item3 Ref="4" Key="ParameterEditorExtension" Value="Table Report" />
+  </Extensions>
+  <Parameters>
+    <Item1 Ref="6" Description="Order Id" ValueInfo="11077" Name="OrderIdParameter" Type="#Ref-5" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="7" ControlType="DetailBand" Name="Detail" HeightF="90" KeepTogether="true" TextAlignment="TopLeft" Dpi="96" Padding="0,0,0,0,96">
+      <Controls>
+        <Item1 Ref="8" ControlType="XRTable" Name="table3" SizeF="672,90" LocationFloat="0,0" Dpi="96" EvenStyleName="EvenStyle" OddStyleName="OddStyle" Font="Segoe UI, 9pt" Padding="20,5,0,0,96">
+          <Rows>
+            <Item1 Ref="9" ControlType="XRTableRow" Name="tableRow3" Weight="8.9444444444444446" Dpi="96">
+              <Cells>
+                <Item1 Ref="10" ControlType="XRTableCell" Name="tableCell5" Weight="1.6108408606389968" Text="tableCell5" TextAlignment="BottomLeft" Dpi="96" Font="Segoe UI, 10pt, style=Bold" Padding="15,5,0,2,96">
+                  <ExpressionBindings>
+                    <Item1 Ref="11" EventName="BeforePrint" PropertyName="Text" Expression="[ProductName]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="12" UseFont="false" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="13" ControlType="XRTableCell" Name="tableCell6" Weight="0.40897809652856248" RowSpan="2" TextFormatString="{0:$#,##.00}" Text="tableCell6" TextAlignment="TopRight" Dpi="96" Font="Segoe UI, 10pt" Padding="2,15,15,0,96">
+                  <ExpressionBindings>
+                    <Item1 Ref="14" EventName="BeforePrint" PropertyName="Text" Expression="[UnitPrice]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="15" UseFont="false" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="16" ControlType="XRTableCell" Name="tableCell7" Weight="0.40897809652856248" RowSpan="2" Text="tableCell7" TextAlignment="TopRight" Dpi="96" Font="Segoe UI, 10pt" Padding="2,15,15,0,96">
+                  <ExpressionBindings>
+                    <Item1 Ref="17" EventName="BeforePrint" PropertyName="Text" Expression="[Quantity]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="18" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="19" ControlType="XRTableCell" Name="tableCell8" Weight="0.40897809652856248" RowSpan="2" TextFormatString="{0:0%}" Text="tableCell8" TextAlignment="TopRight" Dpi="96" Font="Segoe UI, 10pt" Padding="2,15,15,0,96">
+                  <ExpressionBindings>
+                    <Item1 Ref="20" EventName="BeforePrint" PropertyName="Text" Expression="[Discount]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="21" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="22" ControlType="XRTableCell" Name="tableCell9" Weight="0.40897809652856248" RowSpan="2" TextFormatString="{0:$#,##.00}" Text="tableCell9" TextAlignment="TopRight" Dpi="96" Font="Segoe UI, 10pt" Padding="2,15,15,0,96">
+                  <ExpressionBindings>
+                    <Item1 Ref="23" EventName="BeforePrint" PropertyName="Text" Expression="[SubTotal]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="24" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                </Item5>
+              </Cells>
+            </Item1>
+            <Item2 Ref="25" ControlType="XRTableRow" Name="tableRow4" Weight="14.055555555555555" Dpi="96">
+              <Cells>
+                <Item1 Ref="26" ControlType="XRTableCell" Name="tableCell10" Weight="1.610841087893689" CanGrow="false" TextFitMode="ShrinkOnly" Text="tableCell10" Dpi="96" Font="Segoe UI, 10pt" ForeColor="255,127,127,127" Padding="15,5,0,10,96">
+                  <ExpressionBindings>
+                    <Item1 Ref="27" EventName="BeforePrint" PropertyName="Text" Expression="[Supplier]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="28" UseFont="false" UseForeColor="false" UsePadding="false" />
+                </Item1>
+                <Item2 Ref="29" ControlType="XRTableCell" Name="tableCell11" Weight="0.40897769883285096" Text="tableCell11" Dpi="96" Padding="2,2,0,0,96">
+                  <StylePriority Ref="30" UsePadding="false" />
+                </Item2>
+                <Item3 Ref="31" ControlType="XRTableCell" Name="tableCell12" Weight="0.40897815334223553" Text="tableCell12" Dpi="96" Padding="2,2,0,0,96">
+                  <StylePriority Ref="32" UsePadding="false" />
+                </Item3>
+                <Item4 Ref="33" ControlType="XRTableCell" Name="tableCell13" Weight="0.40897843741060114" Text="tableCell13" Dpi="96" Padding="2,2,0,0,96">
+                  <StylePriority Ref="34" UsePadding="false" />
+                </Item4>
+                <Item5 Ref="35" ControlType="XRTableCell" Name="tableCell14" Weight="0.40897786927387009" Text="tableCell14" Dpi="96" Padding="2,2,0,0,96">
+                  <StylePriority Ref="36" UsePadding="false" />
+                </Item5>
+              </Cells>
+            </Item2>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item1>
+    <Item2 Ref="37" ControlType="ReportFooterBand" Name="ReportFooter" PrintAtBottom="true" HeightF="77.95918" TextAlignment="TopLeft" Dpi="96" Padding="0,0,0,0,96">
+      <Controls>
+        <Item1 Ref="38" ControlType="XRTable" Name="table2" SizeF="384,77.95918" LocationFloat="288,0" Dpi="96" Padding="20,0,0,0,96">
+          <Rows>
+            <Item1 Ref="39" ControlType="XRTableRow" Name="tableRow5" Weight="1" Dpi="96">
+              <Cells>
+                <Item1 Ref="40" ControlType="XRTableCell" Name="tableCell15" Weight="2" Text="TOTAL ORDER COST" TextAlignment="MiddleRight" Dpi="96" Font="Segoe UI, 10pt, style=Bold" ForeColor="190,127,127,127" Padding="2,0,0,0,96">
+                  <StylePriority Ref="41" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item1>
+            <Item2 Ref="42" ControlType="XRTableRow" Name="tableRow2" Weight="1.5986393230031764" Dpi="96" Font="Times New Roman, 18pt">
+              <Cells>
+                <Item1 Ref="43" ControlType="XRTableCell" Name="tableCell4" Weight="2" Text="tableCell2" TextAlignment="TopRight" Dpi="96" Font="Segoe UI, 16pt" Padding="2,0,0,0,96" Borders="None">
+                  <Summary Ref="44" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="45" EventName="BeforePrint" PropertyName="Text" Expression="FormatString('{0:$0.00 }', sumSum([SubTotal]))" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="46" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+              <StylePriority Ref="47" UseFont="false" />
+            </Item2>
+          </Rows>
+          <StylePriority Ref="48" UsePadding="false" />
+        </Item1>
+        <Item2 Ref="49" ControlType="XRPictureBox" Name="pictureBox1" Padding="0,0,0,0,96" ImageSource="svg,77u/PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgd2lkdGg9IjE1MHB4IiBoZWlnaHQ9IjMwcHgiIHZpZXdCb3g9IjAgMCAxNTAgMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0ibm9uZSI+DQogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxNTAiIGhlaWdodD0iMzAiIGZpbGw9IiNFNUU1RTUiIC8+DQogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxNTAiIGhlaWdodD0iMzAiIGZpbGw9IndoaXRlIiAvPg0KICA8cGF0aCBkPSJNMi45NjI5NSAyNS4wNzMxSDI2LjE2MTVWNS4xNjY0OEgyLjk2Mjk1VjI1LjA3MzFaIiBmaWxsPSJ3aGl0ZSIgLz4NCiAgPHBhdGggZD0iTTM3LjYzNTIgMjAuMzY3MkMzNy4yMTIyIDIwLjM2NzIgMzYuNzQ2NyAyMC4zNjcyIDM2LjQyOTggMjAuMzAyVjguNjE0MjlDMzYuNzY4IDguNTUwNzkgMzcuMjU0MiA4LjQ4NTMzIDM3LjkwOTUgOC40ODUzM0M0MC44MDY5IDguNDg1MzMgNDIuNjA0NCAxMC4zNDk4IDQyLjYwNDQgMTQuMTIzMkM0Mi42MDQ0IDE4LjUwMzEgNDAuNjE2NSAyMC4zODkgMzcuNjM1MiAyMC4zNjcyVjIwLjM2NzJaTTM3LjUyOTUgNS45NjkzMkMzNS45NDM1IDUuOTY5MzIgMzQuNDYzNCA2LjEwMDA2IDMzLjMyMDggNi4zMTcwMlYyMi43MDhDMzQuMTQ1NiAyMi44MTc4IDM1LjM1MTEgMjIuOTI2NiAzNi44NTI5IDIyLjkyNjZDMzkuNjg1OCAyMi45MjY2IDQxLjk0OTMgMjIuMjUzMSA0My40Mjk2IDIwLjg4ODRDNDQuNjc2OSAxOS43Mzc3IDQ1Ljg4MjMgMTcuNjU3NiA0NS44ODIzIDE0LjA3ODFDNDUuODgyMyAxMS4wNjQzIDQ0Ljk3MzIgOS4wMDQ1MSA0My40Mjk2IDcuNzA0ODdDNDIuMDc2NCA2LjU1NTk2IDQwLjIzNTcgNS45NjkzMiAzNy41Mjk1IDUuOTY5MzIiIGZpbGw9IiMzOTM1MzYiIC8+DQogIDxwYXRoIGQ9Ik01MC40Mzc3IDE1LjQ2NjFDNTAuNTIyMiAxNC4yNzM5IDUxLjE1NyAxMi42Njk1IDUyLjY1ODMgMTIuNjY5NUM1NC4yMDIgMTIuNjY5NSA1NC42ODg5IDE0LjIwODYgNTQuNjY3NiAxNS40NjYxSDUwLjQzNzdaTTUyLjg0ODQgMTAuNDM2N0M0OS40MDIyIDEwLjQzNjcgNDcuNDU2IDEzLjQyOTYgNDcuNDU2IDE2Ljg5ODFDNDcuNDU2IDIwLjY0ODEgNDkuNTI4NSAyMi45OTA5IDUzLjE2NjQgMjIuOTkwOUM1NC42MjU3IDIyLjk5MDkgNTUuOTk5NSAyMi43MjkyIDU2Ljk3MjggMjIuMjk4Mkw1Ni41Mjg0IDIwLjA4NUM1NS43MjQ5IDIwLjM2NzIgNTQuODE1OCAyMC41ODQyIDUzLjY1MjggMjAuNTg0MkM1MS45NjA4IDIwLjU4NDIgNTAuNTIyMiAxOS43NjA3IDUwLjQzNzcgMTcuNzAwMUg1Ny40Nzk1QzU3LjU0MzcgMTcuMzU0IDU3LjU2NDkgMTYuODk4MSA1Ny41NjQ5IDE2LjQyMThDNTcuNTY0OSAxMi41MTc4IDU1LjcwMzcgMTAuNDM2NyA1Mi44NDg0IDEwLjQzNjciIGZpbGw9IiMzOTM1MzYiIC8+DQogIDxwYXRoIGQ9Ik02Ni4zMDQ3IDEwLjY5NjRMNjQuODI1MiAxNi41NTA0QzY0LjU3MDQgMTcuNjE0MSA2NC4zNTkgMTguNTg5OCA2NC4xNjg0IDE5LjYyODlINjQuMTA2MkM2My45MTYgMTguNTg5OCA2My43MDM3IDE3LjU5MjMgNjMuNDQ5OSAxNi41NTA0TDYxLjkwNjIgMTAuNjk2NEg1OC41NDM3TDYyLjQ5ODggMjIuNzc0M0g2NS41MjI1TDY5LjU0MDcgMTAuNjk2NEg2Ni4zMDQ3IiBmaWxsPSIjMzkzNTM2IiAvPg0KICA8cGF0aCBkPSJNNC41NjMwNyAyMS42NjczQzMuOTY5NTEgMjIuNDIzNiAzLjUyODE1IDIzLjA5MzcgMy4xOTE5MyAyMy43MjE3QzMuMTA4NzkgMjMuODc0IDIuOTYyOTUgMjQuMzI3OSAyLjk2Mjk1IDI0LjYzMDlWMjUuMDczMUMyLjk2Mjk1IDI1LjgyNjEgMy41NjQyMyAyNi40NDQyIDQuMzAwNzIgMjYuNDQ0MkgyNC44MjQ4QzI1LjU2MDYgMjYuNDQ0MiAyNi4xNjE1IDI1LjgyNjEgMjYuMTYxNSAyNS4wNzMxVjguODgxNjhDMTQuOTE0MiAxMC45MTQ5IDguMDk3NzcgMTcuMTU5NiA0LjU2MzA3IDIxLjY2NzNaIiBmaWxsPSIjMzkzNTM2IiAvPg0KICA8cGF0aCBkPSJNNzQuNDczMSAxNS40NDQ0SDc5Ljc4MzdWMTIuODIxOEg3NC40NzMxVjguNzg4OTJIODAuMTAwOFY2LjEwMDA1SDcxLjM0NDJWMjIuNzc0M0g4MC40Mzg1VjIwLjA4NUg3NC40NzMxVjE1LjQ0NDQiIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik05Mi4yNjU3IDEwLjY5NjRIODguOTQ0N0w4Ny44ODY0IDEyLjg2NDNDODcuNTkwMSAxMy40OTM2IDg3LjMxNyAxNC4xNDQ2IDg3LjAyMTIgMTQuNzkzN0g4Ni45Nzc4Qzg2LjY4MSAxNC4xODg1IDg2LjQwODQgMTMuNTU3NSA4Ni4wNjkxIDEyLjg4Nkw4NC45NDkxIDEwLjY5NjRIODEuNDgxNUw4NC45Njk5IDE2LjY2MDJMODEuMzk1MSAyMi43NzQzSDg0LjczNThMODUuODM2NSAyMC40MzI1Qzg2LjEzMTggMTkuODAyNiA4Ni40Mjg2IDE5LjE3MyA4Ni43MDM3IDE4LjUyNDVIODYuNzQ3MUM4Ny4wNDM0IDE5LjE3MyA4Ny4zMTcgMTkuODAyNiA4Ny42MzM2IDIwLjQzMjVMODguNzk2IDIyLjc3NDNIOTIuMzA4MUw4OC43NTUxIDE2LjUyODlMOTIuMjY1NyAxMC42OTY0WiIgZmlsbD0iI0Y0NzIxNiIgLz4NCiAgPHBhdGggZD0iTTk5LjEwMjcgMjAuNDk1OEM5OC4wNDQ5IDIwLjQ5NTggOTcuMDA4NCAxOS42NTIzIDk3LjAwODQgMTcuODk1NVYxNS42Mzk2Qzk3LjAwODQgMTQuMTg4NSA5Ny45NjA1IDEzLjAxNjIgOTkuMTY2NCAxMy4wMTYyQzEwMC43MDkgMTMuMDE2MiAxMDEuNTEzIDE0LjU3ODEgMTAxLjUxMyAxNi43MjU0QzEwMS41MTMgMTguODkyOCAxMDAuNjg4IDIwLjQ5NTggOTkuMTAyNyAyMC40OTU4Wk0xMDAuMjAyIDEwLjQzNjdDOTguNjc4NSAxMC40MzY3IDk3LjQ3MzYgMTEuMTA5MyA5Ni43MTI2IDEyLjM0NDFIOTYuNjY5MUw5Ni41MjE1IDEwLjY5NjRIOTMuNzkzMUM5My44MzYxIDExLjgwMjQgOTMuODc5IDEzLjA4MDkgOTMuODc5IDE0LjY0MzhWMjcuNjEwMUg5Ny4wMDg0VjIxLjYwMzRIOTcuMDUxNEM5Ny41NTggMjIuNDA0MSA5OC41NTMxIDIzLjAxMjYgOTkuODQxIDIzLjAxMjZDMTAyLjIzMSAyMy4wMTI2IDEwNC42ODQgMjEuMDYxNSAxMDQuNjg0IDE2LjYxNTNDMTA0LjY4NCAxMi45MDg0IDEwMi43ODIgMTAuNDM2NyAxMDAuMjAyIDEwLjQzNjciIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xMDkuNzA1IDEyLjgwMDZIMTA5LjYxOEwxMDkuNDkzIDEwLjY5NjRIMTA2LjgwNkMxMDYuODQ5IDExLjc3OTQgMTA2Ljg5MSAxMi45NzM3IDEwNi44OTEgMTQuNDY5M1YyMi43NzQzSDExMC4wMjJWMTYuNTI4OUMxMTAuMDIyIDE0LjQ2OTMgMTExLjA5OCAxMy40OTM2IDExMi41MTYgMTMuNDkzNkMxMTIuODM1IDEzLjQ5MzYgMTEzLjA4OCAxMy41MTUgMTEzLjMyMSAxMy41NTc1VjEwLjUwMUMxMTMuMTA5IDEwLjQ1NzQgMTEyLjkxNyAxMC40MzY3IDExMi42MjIgMTAuNDM2N0MxMTEuNTIyIDEwLjQzNjcgMTEwLjI1NSAxMS4yMzc3IDEwOS43MDUgMTIuODAwNloiIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xMTcuNDA1IDE1LjQ2NjFDMTE3LjQ5MSAxNC4yNzM5IDExOC4xMjUgMTIuNjY5NSAxMTkuNjI2IDEyLjY2OTVDMTIxLjE3IDEyLjY2OTUgMTIxLjY1NyAxNC4yMDg2IDEyMS42MzYgMTUuNDY2MUgxMTcuNDA1Wk0xMTkuODE2IDEwLjQzNjdDMTE2LjM2OSAxMC40MzY3IDExNC40MjQgMTMuNDI5NiAxMTQuNDI0IDE2Ljg5ODFDMTE0LjQyNCAyMC42NDgxIDExNi40OTUgMjIuOTkwOSAxMjAuMTM0IDIyLjk5MDlDMTIxLjU5MyAyMi45OTA5IDEyMi45NjcgMjIuNzI5MiAxMjMuOTQxIDIyLjI5ODJMMTIzLjQ5NyAyMC4wODVDMTIyLjY5MyAyMC4zNjcyIDEyMS43ODQgMjAuNTg0MiAxMjAuNjIxIDIwLjU4NDJDMTE4LjkyOSAyMC41ODQyIDExNy40OTEgMTkuNzYwNyAxMTcuNDA1IDE3LjcwMDFIMTI0LjQ0OEMxMjQuNTExIDE3LjM1NCAxMjQuNTMzIDE2Ljg5ODEgMTI0LjUzMyAxNi40MjE4QzEyNC41MzMgMTIuNTE3OCAxMjIuNjcgMTAuNDM2NyAxMTkuODE2IDEwLjQzNjciIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xMzEuMDMxIDE1LjQ4OTNDMTI5LjY3OCAxNC45MDI4IDEyOS4yMzQgMTQuNTU1MyAxMjkuMjM0IDEzLjg4NDlDMTI5LjIzNCAxMy4yMzI4IDEyOS43NDEgMTIuNzM1MyAxMzAuNjkxIDEyLjczNTNDMTMxLjU4IDEyLjczNTMgMTMyLjQwNiAxMy4wODA5IDEzMi45MTMgMTMuMzYzMUwxMzMuNTA2IDExLjEwOTNDMTMyLjgyOSAxMC43NDAxIDEzMS43OTQgMTAuNDM2NyAxMzAuNTg4IDEwLjQzNjdDMTI3Ljk2NCAxMC40MzY3IDEyNi4yNzQgMTIuMDgzNiAxMjYuMjc0IDE0LjI1MTdDMTI2LjI3NCAxNS41NzU5IDEyNy4wNzUgMTYuODU0IDEyOS4yNzYgMTcuNzY0NEMxMzAuNTY2IDE4LjMyODEgMTMwLjk2NyAxOC43MTgzIDEzMC45NjcgMTkuNDU1NEMxMzAuOTY3IDIwLjE5NDggMTMwLjQ0MSAyMC42NzEyIDEyOS4zMzggMjAuNjcxMkMxMjguMzY3IDIwLjY3MTIgMTI3LjIwMiAyMC4yMzY3IDEyNi41OSAxOS44NjcyTDEyNS45OTggMjIuMTg3OEMxMjYuNzc5IDIyLjY2NjkgMTI4LjAzIDIyLjk5MDkgMTI5LjMxOCAyMi45OTA5QzEzMi4yNTkgMjIuOTkwOSAxMzMuOTQ5IDIxLjQ3MTkgMTMzLjk0OSAxOS4xNzNDMTMzLjk0OSAxNy41MDU3IDEzMy4wMTkgMTYuMzMyOCAxMzEuMDMxIDE1LjQ4OTNaIiBmaWxsPSIjRjQ3MjE2IiAvPg0KICA8cGF0aCBkPSJNMTQwLjQwNSAxNS40ODkzQzEzOS4wNTEgMTQuOTAyOCAxMzguNjA5IDE0LjU1NTMgMTM4LjYwOSAxMy44ODQ5QzEzOC42MDkgMTMuMjMyOCAxMzkuMTE2IDEyLjczNTMgMTQwLjA2NyAxMi43MzUzQzE0MC45NTQgMTIuNzM1MyAxNDEuNzgxIDEzLjA4MDkgMTQyLjI4NyAxMy4zNjMxTDE0Mi44OCAxMS4xMDkzQzE0Mi4yMDMgMTAuNzQwMSAxNDEuMTY3IDEwLjQzNjcgMTM5Ljk2MyAxMC40MzY3QzEzNy4zMzggMTAuNDM2NyAxMzUuNjQ3IDEyLjA4MzYgMTM1LjY0NyAxNC4yNTE3QzEzNS42NDcgMTUuNTc1OSAxMzYuNDQ5IDE2Ljg1NCAxMzguNjUgMTcuNzY0NEMxMzkuOTM5IDE4LjMyODEgMTQwLjM0MSAxOC43MTgzIDE0MC4zNDEgMTkuNDU1NEMxNDAuMzQxIDIwLjE5NDggMTM5LjgxNCAyMC42NzEyIDEzOC43MTMgMjAuNjcxMkMxMzcuNzQxIDIwLjY3MTIgMTM2LjU3NiAyMC4yMzY3IDEzNS45NjQgMTkuODY3MkwxMzUuMzcyIDIyLjE4NzhDMTM2LjE1MyAyMi42NjY5IDEzNy40MDQgMjIuOTkwOSAxMzguNjkyIDIyLjk5MDlDMTQxLjYzMiAyMi45OTA5IDE0My4zMjMgMjEuNDcxOSAxNDMuMzIzIDE5LjE3M0MxNDMuMzIzIDE3LjUwNTcgMTQyLjM5NCAxNi4zMzI4IDE0MC40MDUgMTUuNDg5MyIgZmlsbD0iI0Y0NzIxNiIgLz4NCiAgPHBhdGggZD0iTTI0LjgyNDggMi42NTg1OEg0LjMwMDcyQzMuNTY0MjMgMi42NTg1OCAyLjk2Mjk1IDMuMjc1NDkgMi45NjI5NSA0LjAzMlYxNi42NDY1QzcuMDI1MDYgMTIuMjY2NiAxNC4yNTU0IDcuNDgxNTcgMjUuMjc5NyA2LjE3NzE2QzI1LjU3MjEgNi4xNDM1NCAyNi4xNjE1IDYuMDA0MSAyNi4xNjE1IDUuMTY2NDhWNC4wMzJDMjYuMTYxNSAzLjI3NTQ5IDI1LjU2MDYgMi42NTg1OCAyNC44MjQ4IDIuNjU4NTgiIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xNDYuMDM3IDkuNzY1NzdIMTQ1LjczOVY5LjEyNjk0SDE0NS45ODZDMTQ2LjI2MyA5LjEyNjk0IDE0Ni40MDEgOS4yMzE3NSAxNDYuNDAxIDkuNDQxNjJDMTQ2LjQwMSA5LjUzOTM0IDE0Ni4zNjggOS42MTc2MiAxNDYuMzAzIDkuNjc2OTZDMTQ2LjIzOCA5LjczNjEgMTQ2LjE0OSA5Ljc2NTc3IDE0Ni4wMzcgOS43NjU3N1pNMTQ2LjMzNCA5Ljk4ODFWOS45Nzg1OEMxNDYuNjggOS44ODk5OCAxNDYuODUzIDkuNjk0NzkgMTQ2Ljg1MyA5LjM5MTk1QzE0Ni44NTMgOS4xOTc3MiAxNDYuNzgzIDkuMDQ2MDMgMTQ2LjY0MSA4LjkzNjY2QzE0Ni40OTkgOC44MjY4OSAxNDYuMjkzIDguNzcyMSAxNDYuMDIzIDguNzcyMUgxNDUuMzE5VjEwLjk4MTRIMTQ1LjczOVYxMC4wOTQ1SDE0NS45MjNDMTQ2LjA1NiAxMC4wOTQ1IDE0Ni4xNiAxMC4yMDQxIDE0Ni4yMzUgMTAuNDIzMkwxNDYuNDI5IDEwLjk4MTRIMTQ2LjkyOUwxNDYuNjcxIDEwLjM1MjRDMTQ2LjU4NyAxMC4xNDU3IDE0Ni40NzQgMTAuMDI0MyAxNDYuMzM0IDkuOTg4MSIgZmlsbD0iI0Y0NzIxNiIgLz4NCiAgPHBhdGggZD0iTTE0Ny4wOTQgMTAuOTcyOUMxNDYuODA4IDExLjI2MjQgMTQ2LjQ2IDExLjQwNzQgMTQ2LjA1IDExLjQwNzRDMTQ1LjYzNyAxMS40MDc0IDE0NS4yODcgMTEuMjY0MiAxNDUuMDAxIDEwLjk3OEMxNDQuNzE1IDEwLjY5MTYgMTQ0LjU3MiAxMC4zMzI1IDE0NC41NzIgOS45MDA0NkMxNDQuNTcyIDkuNDc2MjEgMTQ0LjcxMiA5LjExOTA1IDE0NC45OTMgOC44Mjg2N0MxNDUuMjc0IDguNTM4NzQgMTQ1LjYyNiA4LjM5MzU4IDE0Ni4wNSA4LjM5MzU4QzE0Ni40NjggOC4zOTM1OCAxNDYuODE3IDguNTM3NTMgMTQ3LjEgOC44MjU1M0MxNDcuMzgzIDkuMTEzMTIgMTQ3LjUyNCA5LjQ3MTUgMTQ3LjUyNCA5LjkwMDQ2QzE0Ny41MjQgMTAuMzI2MyAxNDcuMzgyIDEwLjY4MzcgMTQ3LjA5NCAxMC45NzI5VjEwLjk3MjlaTTE0Ny4zMDIgOC42Mzk2QzE0Ni45NjcgOC4zMDgzMSAxNDYuNTU0IDguMTQyOTUgMTQ2LjA2IDguMTQyOTVDMTQ1LjU2IDguMTQyOTUgMTQ1LjE0IDguMzEzNjggMTQ0LjgwMSA4LjY1NTI1QzE0NC40NjIgOC45OTY0MSAxNDQuMjkyIDkuNDEzMTIgMTQ0LjI5MiA5LjkwNTIyQzE0NC4yOTIgMTAuNDExNiAxNDQuNDYgMTAuODI4OSAxNDQuNzk1IDExLjE1NzZDMTQ1LjEyOSAxMS40ODY1IDE0NS41NDYgMTEuNjUwOSAxNDYuMDQ1IDExLjY1MDlDMTQ2LjUzNiAxMS42NTA5IDE0Ni45NTIgMTEuNDgxMiAxNDcuMjkzIDExLjE0MjRDMTQ3LjYzNCAxMC44MDMzIDE0Ny44MDQgMTAuMzg2MiAxNDcuODA0IDkuODkwNzlDMTQ3LjgwNCA5LjM4ODAxIDE0Ny42MzcgOC45NzA2OSAxNDcuMzAyIDguNjM5NiIgZmlsbD0iI0Y0NzIxNiIgLz4NCjwvc3ZnPg==" Sizing="ZoomImage" NavigateUrl="http://www.devexpress.com/Products/NET/Reporting/" SizeF="149.9592,37.66764" LocationFloat="0,30" Dpi="96" />
+      </Controls>
+    </Item2>
+    <Item3 Ref="50" ControlType="PageHeaderBand" Name="PageHeader" HeightF="115.4961" TextAlignment="TopLeft" Dpi="96" Font="Tahoma, 9.75pt, style=Bold" Padding="0,0,0,0,96">
+      <Controls>
+        <Item1 Ref="51" ControlType="XRPageInfo" Name="pageInfo1" TextFormatString="Page {0} of {1} pages" SizeF="95.99999,15.35999" LocationFloat="576,62.26726" Dpi="96" Font="Segoe UI, 8.25pt, style=Bold" ForeColor="190,127,127,127" Padding="2,2,0,0,96">
+          <StylePriority Ref="52" UseFont="false" UseForeColor="false" />
+        </Item1>
+        <Item2 Ref="53" ControlType="XRLabel" Name="lbOrderID" TextFormatString="Details for Customer Order # {0}" AutoWidth="true" CanGrow="false" TextAlignment="MiddleLeft" SizeF="474.5528,31.68" LocationFloat="0,0" Dpi="96" Font="Segoe UI, 18pt" BackColor="Transparent" Padding="0,0,0,0,96" BorderWidth="0">
+          <ExpressionBindings>
+            <Item1 Ref="54" EventName="BeforePrint" PropertyName="Text" Expression="[OrderID]" />
+          </ExpressionBindings>
+          <StylePriority Ref="55" UseFont="false" UseBackColor="false" UsePadding="false" UseBorderWidth="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="56" ControlType="XRPageInfo" Name="xrPageInfo1" PageInfo="DateTime" TextAlignment="MiddleLeft" SizeF="239.04,15.36" LocationFloat="0,31.68001" Dpi="96" Font="Segoe UI, 8.25pt, style=Bold" ForeColor="190,127,127,127" Padding="0,15,0,0,96">
+          <StylePriority Ref="57" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="58" ControlType="XRTable" Name="xrTable1" TextAlignment="TopLeft" SizeF="672,30" LocationFloat="0,85.49609" Dpi="96" StyleName="HeaderStyle" Font="Segoe UI, 7pt, style=Bold" BackColor="255,224,214,211" Padding="20,0,0,0,96" BorderColor="255,189,177,183" Borders="All" BorderWidth="2">
+          <Rows>
+            <Item1 Ref="59" ControlType="XRTableRow" Name="xrTableRow1" Weight="1" TextAlignment="TopLeft" Dpi="96" Font="Tahoma, 8.25pt, style=Bold" Padding="0,0,0,0,96">
+              <Cells>
+                <Item1 Ref="60" ControlType="XRTableCell" Name="xrTableCell1" Weight="0.3396643824140988" Text="PRODUCT/SUPPLIER" TextAlignment="MiddleLeft" Dpi="96" StyleName="HeaderStyle" Padding="15,5,0,0,96" BorderWidth="1">
+                  <StylePriority Ref="61" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+                <Item2 Ref="62" ControlType="XRTableCell" Name="xrTableCell7" Weight="0.086237750550321443" Text="UNIT PRICE" TextAlignment="MiddleRight" Dpi="96" StyleName="HeaderStyle" Padding="0,15,0,0,96" BorderWidth="1">
+                  <StylePriority Ref="63" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="64" ControlType="XRTableCell" Name="xrTableCell2" Weight="0.086237750550321443" Text="QUANTITY" TextAlignment="MiddleRight" Dpi="96" StyleName="HeaderStyle" Padding="0,15,0,0,96" BorderWidth="1">
+                  <StylePriority Ref="65" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                </Item3>
+                <Item4 Ref="66" ControlType="XRTableCell" Name="xrTableCell13" Weight="0.086237750550321443" Text="DISCOUNT" TextAlignment="MiddleRight" Dpi="96" StyleName="HeaderStyle" Padding="0,15,0,0,96" BorderWidth="1">
+                  <StylePriority Ref="67" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                </Item4>
+                <Item5 Ref="68" ControlType="XRTableCell" Name="xrTableCell3" Weight="0.086237750550321443" Text="SUBTOTAL" TextAlignment="MiddleRight" Dpi="96" StyleName="HeaderStyle" Padding="0,15,0,0,96" BorderWidth="1">
+                  <StylePriority Ref="69" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                </Item5>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="70" UseFont="false" UsePadding="false" />
+        </Item4>
+      </Controls>
+    </Item3>
+    <Item4 Ref="71" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="72" TextAlignment="TopLeft" Dpi="96" Padding="0,0,0,0,96" />
+    <Item5 Ref="72" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="72" Dpi="96" />
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="73" Name="EvenStyle" BorderStyle="Inset" Padding="5,5,0,0,96" Font="Segoe UI, 12pt" ForeColor="Black" BackColor="White" BorderColor="Transparent" Sides="None" StringFormat="Near;Near;0;None;Character;GenericDefault" BorderWidthSerializable="1" />
+    <Item2 Ref="74" Name="OddStyle" BorderStyle="Inset" Padding="5,5,0,0,96" Font="Segoe UI, 12pt" ForeColor="Black" BackColor="255,234,245,255" BorderColor="Transparent" Sides="None" StringFormat="Near;Near;0;None;Character;GenericDefault" BorderWidthSerializable="1" />
+    <Item3 Ref="75" Name="HeaderStyle" BorderStyle="Inset" Padding="0,5,0,0,96" Font="Segoe UI, 8pt, style=Bold" ForeColor="White" BackColor="255,127,127,127" BorderColor="Gray" Sides="None" StringFormat="Near;Near;0;None;Character;GenericDefault" BorderWidthSerializable="1" />
+  </StyleSheet>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v24.2" Name="dsOrderDetails1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0iZHNPcmRlckRldGFpbHMxIj48Q29ubmVjdGlvbiBOYW1lPSJOV2luZENvbm5lY3Rpb25TdHJpbmciIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IlNlbGVjdFF1ZXJ5IiBOYW1lPSJPcmRlckRldGFpbHMiPjxQYXJhbWV0ZXIgTmFtZT0iT3JkZXJJZFBhcmFtZXRlciIgVHlwZT0iRGV2RXhwcmVzcy5EYXRhQWNjZXNzLkV4cHJlc3Npb24iPihTeXN0ZW0uSW50MzIpKFtQYXJhbWV0ZXJzLk9yZGVySWRQYXJhbWV0ZXJdKTwvUGFyYW1ldGVyPjxUYWJsZXM+PFRhYmxlIE5hbWU9Ik9yZGVyRGV0YWlsc0V4dGVuZGVkIiAvPjwvVGFibGVzPjxDb2x1bW5zPjxDb2x1bW4gVGFibGU9Ik9yZGVyRGV0YWlsc0V4dGVuZGVkIiBOYW1lPSJPcmRlcklEIiAvPjxDb2x1bW4gVGFibGU9Ik9yZGVyRGV0YWlsc0V4dGVuZGVkIiBOYW1lPSJQcm9kdWN0SUQiIC8+PENvbHVtbiBUYWJsZT0iT3JkZXJEZXRhaWxzRXh0ZW5kZWQiIE5hbWU9IlByb2R1Y3ROYW1lIiAvPjxDb2x1bW4gVGFibGU9Ik9yZGVyRGV0YWlsc0V4dGVuZGVkIiBOYW1lPSJVbml0UHJpY2UiIC8+PENvbHVtbiBUYWJsZT0iT3JkZXJEZXRhaWxzRXh0ZW5kZWQiIE5hbWU9IlF1YW50aXR5IiAvPjxDb2x1bW4gVGFibGU9Ik9yZGVyRGV0YWlsc0V4dGVuZGVkIiBOYW1lPSJEaXNjb3VudCIgLz48Q29sdW1uIFRhYmxlPSJPcmRlckRldGFpbHNFeHRlbmRlZCIgTmFtZT0iU3VwcGxpZXIiIC8+PEV4cHJlc3Npb24gQWxpYXM9IlN1YlRvdGFsIj5Ub0RvdWJsZShbT3JkZXJEZXRhaWxzRXh0ZW5kZWRdLltRdWFudGl0eV0gKiBbT3JkZXJEZXRhaWxzRXh0ZW5kZWRdLltVbml0UHJpY2VdKTwvRXhwcmVzc2lvbj48L0NvbHVtbnM+PFNvcnRpbmc+PENvbHVtbiBUYWJsZT0iT3JkZXJEZXRhaWxzRXh0ZW5kZWQiIE5hbWU9IkV4dGVuZGVkUHJpY2UiIERlc2NlbmRpbmc9InRydWUiIC8+PC9Tb3J0aW5nPjxGaWx0ZXI+W09yZGVyRGV0YWlsc0V4dGVuZGVkLk9yZGVySURdID0gP09yZGVySWRQYXJhbWV0ZXI8L0ZpbHRlcj48L1F1ZXJ5PjxSZXN1bHRTY2hlbWE+PERhdGFTZXQgTmFtZT0iZHNPcmRlckRldGFpbHMxIj48VmlldyBOYW1lPSJPcmRlckRldGFpbHMiPjxGaWVsZCBOYW1lPSJPcmRlcklEIiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0iUHJvZHVjdElEIiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0iUHJvZHVjdE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVW5pdFByaWNlIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJRdWFudGl0eSIgVHlwZT0iSW50MTYiIC8+PEZpZWxkIE5hbWU9IkRpc2NvdW50IiBUeXBlPSJEb3VibGUiIC8+PEZpZWxkIE5hbWU9IlN1cHBsaWVyIiBUeXBlPSJVbmtub3duIiAvPjxGaWVsZCBOYW1lPSJTdWJUb3RhbCIgVHlwZT0iVW5rbm93biIgLz48L1ZpZXc+PC9EYXRhU2V0PjwvUmVzdWx0U2NoZW1hPjxDb25uZWN0aW9uT3B0aW9ucyBDbG9zZUNvbm5lY3Rpb249InRydWUiIC8+PC9TcWxEYXRhU291cmNlPg==" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="5" Content="System.Int32" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

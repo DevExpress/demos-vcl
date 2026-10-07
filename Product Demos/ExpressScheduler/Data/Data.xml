@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<SportEvents>
+		<Event>Basketball Qualifying - Men</Event>
+		<Event>Basketball Qualifying - Women</Event>
+		<Event>Basketball First Group Phase - Men</Event>
+		<Event>Basketball First Group Phase - Women</Event>
+		<Event>Basketball Quarterfinals - Men</Event>
+		<Event>Basketball Quarterfinals - Women</Event>
+		<Event>Basketball Semifinals - Men</Event>
+		<Event>Basketball Semifinals - Women</Event>
+		<Event>Basketball Places 3/4 - Men</Event>
+		<Event>Basketball Places 3/4 - Women</Event>
+		<Event>Basketball Finals - Men</Event>
+		<Event>Basketball Finals - Women</Event>
+		<Event>Boxing - Lamon Brewster (32-2) vs. Luan Krasniqi (28-1-1) (WBO heavyweight belt)</Event>
+		<Event>Boxing - (PPV) Antonio Tarver (23-3) vs. Roy Jones (49-3) (IBO light heavyweight belt)</Event>
+		<Event>Boxing - ((Showtime) James Toney (68-4-2) vs. Dominick Guinn (25-2-1)</Event>
+		<Event>Boxing - (Nicolay Valuev (41-0) vs. TBA</Event>
+		<Event>Boxing - (Danilo Haussler (25-3) vs. TBA</Event>
+		<Event>Boxing - (Cengiz Koc (22-1) vs. TBA</Event>
+		<Event>Boxing - ((PPV) Diego Corrales (40-2) vs. Jose Luis Castillo (52-7-1)</Event>
+		<Event>Boxing - ((WBC and WBO lightweight belts) (PPV) Carlos Hernandez vs. Bobby Pacquiao</Event>
+		<Event>Boxing - ((PPV) Jorge Arce vs. Hussein Hussein</Event>
+		<Event>Boxing - (Vince Philips (47-9-1) vs. Reynaldo Pelonia (35-21-3)</Event>
+		<Event>Boxing - (Kili Madrid (6-0-1) vs. Donny Fosmire (10-7)</Event>
+		<Event>Boxing - (Nelson Zepeda (1-0-1) vs. Kaleo Padilla (0-0)</Event>
+		<Event>Boxing - (Justin Mercado (1-1) vs. Waldo Rojas (0-0)</Event>
+		<Event>Boxing - (Illima Vicente (0-0) vs. Jenny Houts (0-0)</Event>
+		<Event>Boxing - (Tomasz Adamek (29-0) vs. Thomas Ulrich (28-1) (WBC light heavyweight belt)</Event>
+		<Event>Boxing - ((Showtime) Jeff Lacy (20-0) vs. Joe Calzaghe (39-0) (IBF, IBO and WBO super middleweight belts)</Event>
+		<Event>Boxing - (Jermain Taylor vs. Bernard Hopkins</Event>
+		<Event>Boxing - (Ronald &quot;Winky&quot; Wright vs. TBA</Event>
+		<Event>Tennis - Australian Open</Event>
+		<Event>Tennis - Pacific Life Open</Event>
+		<Event>Tennis - NASDAQ-100 Open</Event>
+		<Event>Tennis - Tennis Masters Monte Carlo</Event>
+		<Event>Tennis - Telecom Italia Masters Roma</Event>
+		<Event>Tennis - Tennis Masters Hamburg</Event>
+		<Event>Tennis - Roland Garros</Event>
+		<Event>Tennis - Wimbledon</Event>
+		<Event>Tennis - Tennis Masters Montreal</Event>
+		<Event>Tennis - Western and Southern Financial Group Masters</Event>
+		<Event>Tennis - US Open</Event>
+		<Event>Tennis - Tennis Masters Madrid</Event>
+		<Event>Tennis - BNP Paribas Masters</Event>
+		<Event>Tennis - Tennis Masters Cup</Event>
+		<Event>Weightlifting 48 Kg - Women  - Final</Event>
+		<Event>Weightlifting 56 Kg - Men  - Final</Event>
+		<Event>Weightlifting 53 Kg - Women  - Final</Event>
+		<Event>Weightlifting 62 Kg - Men  - Final</Event>
+		<Event>Weightlifting 63 Kg - Women  - Final</Event>
+		<Event>Weightlifting 69 Kg - Men  - Final</Event>
+		<Event>Weightlifting 69 Kg - Women  - Final</Event>
+		<Event>Weightlifting 77 Kg - Men  - Final</Event>
+		<Event>Weightlifting 75 Kg - Women  - Final</Event>
+		<Event>Weightlifting 75kg - Women  - Final</Event>
+		<Event>Weightlifting 85 Kg - Men  - Final</Event>
+		<Event>Weightlifting 94 Kg - Men  - Final</Event>
+		<Event>Weightlifting 105 Kg - Men  - Final</Event>
+		<Event>Weightlifting 105kg - Men  - Final</Event>
+		<Event>Fencing - Sabre - Men - 1st Round</Event>
+		<Event>Fencing - Sabre - Men - Round 2</Event>
+		<Event>Fencing - Sabre - Men - 3rd Round</Event>
+		<Event>Fencing - Sabre - Men - Quarter final</Event>
+		<Event>Fencing - Sabre - Men - Semi-finals</Event>
+		<Event>Fencing - Sabre - Men - Final</Event>
+		<Event>Fencing - Épée - Women - 1st Round</Event>
+		<Event>Fencing - Épée - Women - Round 2</Event>
+		<Event>Fencing - Épée - Women - 3rd Round</Event>
+		<Event>Fencing - Épée - Women - Quarter final</Event>
+		<Event>Fencing - Épée - Women - Semi-finals</Event>
+		<Event>Fencing - Épée - Women - Final</Event>
+		<Event>Fencing - Épée - Women/Team - 1st Round</Event>
+		<Event>Fencing - Épée - Women/Team - Quarter final</Event>
+		<Event>Fencing - Épée - Women/Team - Semi-finals</Event>
+		<Event>Fencing - Épée - Women/Team - Final</Event>
+		<Event>Fencing - Foil - Men - 1st Round</Event>
+		<Event>Fencing - Foil - Men - Round 2</Event>
+		<Event>Fencing - Foil - Men - 3rd Round</Event>
+		<Event>Fencing - Foil - Men - Quarter final</Event>
+		<Event>Fencing - Foil - Men - Semi-finals</Event>
+		<Event>Fencing - Foil - Men - Final</Event>
+		<Event>Soccer 1st Round - *Men&apos;s Preliminaries - Men</Event>
+		<Event>Soccer 1st Round - *Women&apos;s Preliminaries - Women</Event>
+		<Event>Soccer Quarter final - *Men&apos;s Quarterfinal - Men</Event>
+		<Event>Soccer Quarter final - *Women&apos;s Quarterfinal - Women</Event>
+		<Event>Soccer Semi-finals - *Women&apos;s Semifinal - Men</Event>
+		<Event>Soccer Semi-finals - *Women&apos;s Semifinal - Women</Event>
+		<Event>Soccer places 3/4 - *Men&apos;s Bronze Medal Match - Men</Event>
+		<Event>Soccer places 3/4 - *Women&apos;s Bronze Medal Match - Women</Event>
+		<Event>Soccer Final - *Men&apos;s Gold Medal Match - Men</Event>
+		<Event>Soccer Final - *Women&apos;s Gold Medal Match - Women</Event>
+		<Event>Artistic Gymnastics - Men - Qualifying</Event>
+		<Event>Artistic Gymnastics - Women - Qualifying</Event>
+		<Event>Artistic Gymnastics - Men/Team - Final</Event>
+		<Event>Artistic Gymnastics - Women/Team - Final</Event>
+		<Event>Artistic Gymnastics - Individual All-Around - Men - Final</Event>
+		<Event>Artistic Gymnastics - Individual All-Around - Women - Final</Event>
+		<Event>Artistic Gymnastics - Floor Exercise - Men - Final</Event>
+		<Event>Artistic Gymnastics - Vault - Women - Final</Event>
+		<Event>Artistic Gymnastics - Uneven Bars - Women - Final</Event>
+		<Event>Artistic Gymnastics - Pommel Horse - Men - Final</Event>
+		<Event>Artistic Gymnastics - Rings - Men - Final</Event>
+		<Event>Artistic Gymnastics - Vault - Men - Final</Event>
+		<Event>Artistic Gymnastics - Beam - Women - Final</Event>
+		<Event>Artistic Gymnastics - Parallel Bars - Men - Final</Event>
+		<Event>Artistic Gymnastics - Floor Exercise - Women - Final</Event>
+		<Event>Artistic Gymnastics - Horizontal Bar - Men - Final</Event>
+		<Event>Canoe - Slalom C1 - Men - Heats</Event>
+		<Event>Canoe - Slalom C1 - Men - Heats</Event>
+		<Event>Canoe - Slalom C1 - Men - Semi-finals</Event>
+		<Event>Canoe - Slalom C1 - Men - Final</Event>
+		<Event>Canoe - Slalom C2 - Men - Heats</Event>
+		<Event>Canoe - Slalom C2 - Men - Heats</Event>
+		<Event>Canoe - Slalom C2 - Men - Semi-finals</Event>
+		<Event>Canoe - Slalom C2 - Men - Final</Event>
+		<Event>Canoe - Flatwater C1 - 1000m - Men - Heats</Event>
+		<Event>Canoe - Flatwater C2 - 1000m - Men - Heats</Event>
+		<Event>Canoe - Flatwater C1 - 500m - Men - Heats</Event>
+		<Event>Canoe - Flatwater C2 - 500m - Men - Heats</Event>
+		<Event>Canoe - Flatwater C1 - 1000m - Men - Semi-finals</Event>
+		<Event>Canoe - Flatwater C2 - 1000m - Men - Semi-finals</Event>
+		<Event>Canoe - Flatwater C1 - 500m - Men - Semi-finals</Event>
+		<Event>Canoe - Flatwater C2 - 500m - Men - Semi-finals</Event>
+		<Event>Canoe - Flatwater C1 - 1000m - Men - Final</Event>
+		<Event>Canoe - Flatwater C2 - 1000m - Men - Final</Event>
+		<Event>Canoe - Flatwater C1 - 500m - Men - Final</Event>
+		<Event>Canoe - Flatwater C2 - 500m - Men - Final</Event>
+		<Event>Kayak - Slalom K1 - Women - Heats</Event>
+		<Event>Kayak - Slalom K1 - Women - Heats</Event>
+		<Event>Kayak - Slalom K1 - Women - Semi-finals</Event>
+		<Event>Kayak - Slalom K1 - Women - Final</Event>
+		<Event>Kayak - Slalom K2 - Men - Heats</Event>
+		<Event>Kayak - Slalom K2 - Men - Heats</Event>
+		<Event>Kayak - Slalom K2 - Men - Semi-finals</Event>
+		<Event>Kayak - Slalom K1 - Men - Final</Event>
+		<Event>Kayak - Flatwater K1 - 1000m - Men - Heats</Event>
+		<Event>Kayak - Flatwater K4 - 500m - Women - Heats</Event>
+		<Event>Kayak - Flatwater K2 - 1000m - Men - Heats</Event>
+		<Event>Kayak - Flatwater K4 - 1000m - Men - Heats</Event>
+		<Event>Kayak - Flatwater K1 - 500m - Men - Heats</Event>
+		<Event>Kayak - Flatwater K2 - 500m - Men - Heats</Event>
+		<Event>Kayak - Flatwater K2 - 500m - Women - Heats</Event>
+		<Event>Kayak - Flatwater K1 - 1000m - Men - Semi-finals</Event>
+		<Event>Kayak - Flatwater K4 - 500m - Women - Semi-finals</Event>
+		<Event>Kayak - Flatwater K2 - 1000m - Men - Semi-finals</Event>
+		<Event>Kayak - Flatwater K4 - 1000m - Men - Semi-finals</Event>
+		<Event>Kayak - Flatwater K1 - 500m - Men - Semi-finals</Event>
+		<Event>Kayak - Flatwater K1 - 500m - Women - Semi-finals</Event>
+		<Event>Kayak - Flatwater K2 - 500m - Men - Semi-finals</Event>
+		<Event>Kayak - Flatwater K2 - 500m - Women - Semi-finals</Event>
+		<Event>Kayak - Flatwater K1 - 1000m - Men - Final</Event>
+		<Event>Kayak - Flatwater K4 - 500m - Women - Final</Event>
+		<Event>Kayak - Flatwater K2 - 1000m - Men - Final</Event>
+		<Event>Kayak - Flatwater K4 - 1000m - Men - Final</Event>
+		<Event>Kayak - Flatwater K1 - 500m - Men - Final</Event>
+		<Event>Kayak - Flatwater K1 - 500m - Women - Final</Event>
+		<Event>Kayak - Flatwater K2 - 500m - Men - Final</Event>
+		<Event>Kayak - Flatwater K2 - 500m - Women - Final</Event>
+		<Event>Wrestling - Greco-Roman 55kg - Men - Qualifying</Event>
+		<Event>Wrestling - Greco-Roman 66kg - Men - Qualifying</Event>
+		<Event>Wrestling - Greco-Roman 84kg - Men - Qualifying</Event>
+		<Event>Wrestling - Greco-Roman 120kg - Men - Qualifying</Event>
+		<Event>Wrestling - Greco-Roman 55kg - Men - Semi-finals</Event>
+		<Event>Wrestling - Greco-Roman 66kg - Men - Semi-finals</Event>
+		<Event>Wrestling - Greco-Roman 84kg - Men - Semi-finals</Event>
+		<Event>Wrestling - Greco-Roman 120kg - Men - Semi-finals</Event>
+		<Event>Wrestling - Greco-Roman 96kg - Men - Qualifying</Event>
+		<Event>Wrestling - Greco-Roman 55kg - Men - Final</Event>
+		<Event>Wrestling - Greco-Roman 66kg - Men - Final</Event>
+		<Event>Wrestling - Greco-Roman 84kg - Men - Final</Event>
+		<Event>Wrestling - Greco-Roman 120kg - Men - Final</Event>
+		<Event>Wrestling - Greco-Roman 55kg - Men - Play Off</Event>
+		<Event>Wrestling - Greco-Roman 66kg - Men - Play Off</Event>
+		<Event>Wrestling - Greco-Roman 84kg - Men - Play Off</Event>
+		<Event>Wrestling - Greco-Roman 120kg - Men - Play Off</Event>
+		<Event>Equestrianism - Individual Eventing Dressage - 1st Day</Event>
+		<Event>Equestrianism - Team Eventing Dressage - 1st Day</Event>
+		<Event>Equestrianism - Individual Eventing Dressage - 2nd Day</Event>
+		<Event>Equestrianism - Team Eventing Dressage - 2nd Day</Event>
+		<Event>Equestrianism - Individual Eventing Cross Country - Final</Event>
+		<Event>Equestrianism - Team Eventing Cross Country - Final</Event>
+		<Event>Equestrianism - Team Eventing Jumping - Final</Event>
+		<Event>Equestrianism - Individual Eventing Jumping - Qualifying</Event>
+		<Event>Equestrianism - Individual Eventing Jumping - Final</Event>
+		<Event>Equestrianism - Individual Dressage Grand Prix - 1st Day</Event>
+		<Event>Equestrianism - Team Dressage Grand Prix - 1st Day</Event>
+		<Event>Equestrianism - Individual Dressage Grand Prix - 2nd Day</Event>
+		<Event>Equestrianism - Team Dressage Grand Prix - 2nd Day</Event>
+		<Event>Equestrianism - Individual Jumping - Qualifying</Event>
+		<Event>Equestrianism - Individual Dressage Grand Prix Special - Final</Event>
+		<Event>Equestrianism - Team Jumping - Final</Event>
+		<Event>Equestrianism - Individual Jumping - Qualifying</Event>
+		<Event>Equestrianism - Individual Jumping - Qualifying</Event>
+		<Event>Equestrianism - Team Jumping - Final</Event>
+		<Event>Equestrianism - Individual Dressage Grand Prix Freestyle - Final</Event>
+		<Event>Equestrianism - Individual Jumping - Final</Event>
+		<Event>Equestrianism - Individual Jumping - Final</Event>
+		<Event>Sailing - Men&apos;s 470 - Race 01</Event>
+		<Event>Sailing - Women&apos;s 470 - Race 01</Event>
+		<Event>Sailing - Men&apos;s 470 - Race 02</Event>
+		<Event>Sailing - Women&apos;s 470 - Race 02</Event>
+		<Event>Sailing - Finn - Race 1</Event>
+		<Event>Sailing - Yngling - Race 1</Event>
+		<Event>Sailing - Finn - Race 2</Event>
+		<Event>Sailing - Yngling - Race 2</Event>
+		<Event>Sailing - Laser - Race 1</Event>
+		<Event>Sailing - Women&apos;s Mistral - Race 01</Event>
+		<Event>Sailing - Men&apos;s Mistral - Race 02</Event>
+		<Event>Sailing - 49er - Race 1</Event>
+		<Event>Swimming - Men&apos;s 400m Individual Medley - Heat 1</Event>
+		<Event>Swimming - Men&apos;s 400m Individual Medley - Heat 2</Event>
+		<Event>Swimming - Women&apos;s 100m Butterfly - Heat 1</Event>
+		<Event>Swimming - Men&apos;s 400m Freestyle - Heat 1</Event>
+		<Event>Swimming - Women&apos;s 400m Individual Medley - Heat 1</Event>
+		<Event>Swimming - Women&apos;s 400m Individual Medley - Heat 2</Event>
+		<Event>Swimming - Men&apos;s 100m Breaststroke - Heat 1</Event>
+		<Event>Swimming - Men&apos;s 100m Breaststroke - Heat 2</Event>
+		<Event>Swimming - Women&apos;s 4 x 100m Freestyle Relay - Heat 1</Event>
+		<Event>Swimming - Women&apos;s 4 x 100m Freestyle Relay - Heat 2</Event>
+		<Event>Swimming - Women&apos;s 100m Butterfly Semifinal 1</Event>
+		<Event>Swimming - Women&apos;s 4 x 100m Freestyle Relay Final</Event>
+		<Event>Diving - Women&apos;s Synchronised 3m Springboard Final</Event>
+		<Event>Diving - Men&apos;s Synchronised 3m Springboard Final</Event>
+		<Event>Diving - Women&apos;s Synchronised 10m Platform Final</Event>
+		<Event>Diving - Men&apos;s Synchronised 10m Platform Final</Event>
+		<Event>Diving - Women&apos;s 10m Platform Preliminary</Event>
+		<Event>Diving - Men&apos;s 10m Platform Semifinal</Event>
+		<Event>Handball - Men&apos;s Preliminaries - Pool A Match 1 - Spain - Korea</Event>
+		<Event>Handball - Women&apos;s Preliminaries - Pool A Match 1 - China - Hungary</Event>
+		<Event>Handball - Men&apos;s Classification 11-12 Match 31 - Slovenia - Egypt</Event>
+		<Event>Handball - Women&apos;s Classification 9-10 Match 21 - Greece - Angola</Event>
+		<Event>Handball - Men&apos;s Classification 9-10 Match 32 - Brazil - Iceland</Event>
+		<Event>Handball - Women&apos;s Quarterfinal Match 22 - Ukraine - Spain</Event>
+		<Event>Handball - Men&apos;s Semifinal Match 40 - Germany - Russia</Event>
+		<Event>Handball - Women&apos;s Semifinal Match 27 - France - Korea</Event>
+		<Event>Gymnastics - Men - Qualifying</Event>
+		<Event>Gymnastics - Women - Qualifying</Event>
+		<Event>Gymnastics - Men/Team - Final</Event>
+		<Event>Gymnastics - Women/Team - Final</Event>
+		<Event>Athletics - Women&apos;s 100m Round 1 - Heat 1</Event>
+		<Event>Athletics - Men&apos;s 100m Round 1 - Heat 1</Event>
+		<Event>Athletics - Men&apos;s 100m Semifinal 1</Event>
+		<Event>Athletics - Women&apos;s 100m Final</Event>
+		<Event>Shooting - Men&apos;s 10m Air Pistol Qualification</Event>
+		<Event>Shooting - Men&apos;s 10m Air Pistol Final</Event>
+		<Event>Shooting - Women&apos;s 10m Air Pistol Pre-event Training</Event>
+		<Event>Shooting - Men&apos;s 10m Air Pistol Medal Ceremony</Event>
+		<Event>Shooting - Women&apos;s 10m Air Pistol Qualification</Event>
+		<Event>Shooting - Men&apos;s 50m Pistol Qualification</Event>
+		<Event>Shooting - Women&apos;s 25m Pistol Final</Event>
+		<Event>Archery - Women&apos;s Individual 1/32 Eliminations</Event>
+		<Event>Archery - Men&apos;s Individual 1/32 Eliminations</Event>
+		<Event>Archery - Women&apos;s Individual 1/16 Eliminations</Event>
+		<Event>Archery - Men&apos;s Individual 1/16 Eliminations</Event>
+		<Event>Archery - Women&apos;s Individual 1/8 Eliminations</Event>
+		<Event>Archery - Men&apos;s Individual 1/8 Eliminations</Event>
+		<Event>Archery - Women&apos;s Individual Quarterfinal 1</Event>
+		<Event>Archery - Men&apos;s Individual Quarterfinal 1</Event>
+		<Event>Archery - Men&apos;s Individual Semifinal 1</Event>
+		<Event>Archery - Men&apos;s Individual Bronze Medal Match</Event>
+		<Event>Archery - Women&apos;s Team Gold Medal Match</Event>
+		<Event>Cycling - Men&apos;s Road Race</Event>
+		<Event>Cycling - Women&apos;s Road Race</Event>
+		<Event>Cycling - Women&apos;s Individual Time Trial</Event>
+		<Event>Cycling - Men&apos;s Individual Time Trial</Event>
+		<Event>Cycling - Women&apos;s Sprint 1/8 Finals</Event>
+		<Event>Cycling - Women&apos;s Individual Pursuit Final</Event>
+		<Event>Cycling - Men&apos;s Sprint 1/8 Finals</Event>
+		<Event>Water Polo - Men&apos;s Preliminaries - Group B - EGY - AUS</Event>
+		<Event>Water Polo - Women&apos;s Classification 7th-8th - KAZ - CAN</Event>
+		<Event>Water Polo - Women&apos;s Quarterfinal 02 - ITA - HUN</Event>
+		<Event>Water Polo - Women Bronze Medal Game</Event>
+		<Event>Water Polo - Men&apos;s Semifinal 02</Event>
+		<Event>Volleyball - Women&apos;s Preliminaries - Pool B Match 1 - CUB - GER</Event>
+		<Event>Volleyball - Men&apos;s Preliminaries - Pool A Match 1 - SCG - POL</Event>
+		<Event>Volleyball - Women&apos;s Quarterfinal 04 - JPN - CHN</Event>
+		<Event>Volleyball - Men&apos;s Quarterfinal 03 - GRE - USA</Event>
+		<Event>Volleyball - Women&apos;s Semifinal 02 - CUB - CHN</Event>
+		<Event>Volleyball - Men&apos;s Semifinal 02 - USA - BRA</Event>
+		<Event>Volleyball - Women&apos;s Gold Medal Match - RUS - CHN</Event>
+		<Event>Volleyball - Men&apos;s Bronze Medal Match - RUS - USA</Event>
+	</SportEvents>
+	<People>
+		<Event>John Hillsborough</Event>
+		<Event>Jane Carmichael</Event>
+		<Event>Sam Frankfurt</Event>
+		<Event>Karen Holmes</Event>
+		<Event>Bobbie Valentine</Event>
+		<Event>Jennie Smithers</Event>
+		<Event>Ricardo Menendez</Event>
+		<Event>Frank Frankson</Event>
+		<Event>Christa Christie</Event>
+		<Event>Jimmie Jones</Event>
+		<Event>Alfred Newman</Event>
+		<Event>James Johnson</Event>
+		<Event>Robert James</Event>
+		<Event>June Alessandro</Event>
+		<Event>Mildred Johansson</Event>
+		<Event>Henry McAllister</Event>
+		<Event>Michae Jeffers</Event>
+		<Event>Scott Mathewson</Event>
+		<Event>Mickey Alcorn</Event>
+		<Event>Roger Michelson</Event>
+		<Event>Leticia Ford</Event>
+	</People>
+</Root>

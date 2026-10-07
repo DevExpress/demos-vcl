@@ -1,0 +1,59 @@
+Caption	Label	Color	ResourceID
+Wash a car	1	3	4
+Bowling with Michelle	3	3	4
+Wedding day	0	9	4
+Retrospective Meeting	2	2	1
+Demo  Meeting	2	5	1
+Planning Meeting	2	1	1
+Planning Meeting	2	1	1
+Gym	1	3	4
+Summit	2	6	1
+Shopping	1	7	4
+Air Hockey game	1	3	4
+ASP.NET MVC conference	3	6	1
+HTML5 Presentation	2	2	1
+Silverlight Presentation	2	2	1
+WPF Presentation	2	2	1
+MIX conference	3	6	1
+Webinar - Building a Scrolling Tile Engine with XNA on Windows Phone	0	2	2
+Webinar - CodeRush Feature Workshop: IDisposable	0	2	2
+Webinar - Introducing the ASP.NET Docking Suite	0	2	2
+Webinar - Julian on JavaScript: Using jQuery with DevExpress ASP.NET Controls (Part 1)	0	2	2
+Webinar - Ask DevExpress - XAF	0	2	2
+Webinar - Deeper Dive Into Silverlight on Windows Phone	0	2	2
+Webinar - Introducing the DXGauge Suite for WPF and Silverlight	0	2	2
+Webinar - Advanced CodeRush Plug-ins – Creating Refactoring Providers and Code Providers	0	2	2
+Webinar - CodeRush Feature Workshop: Easier Identifiers	0	2	2
+Webinar - Deeper Dive Into XNA on Windows Phone	0	2	2
+Webinar - Ask the ASP.NET Team	0	2	2
+Webinar - Advanced CodeRush Plug-ins – Working with Source Code	0	2	2
+Webinar - 11.1 Reporting Preview – New ASP.NET Features	0	2	2
+Webinar - Introduction to WP7 Development with Silverlight and XNA	0	2	2
+Webinar - CodeRush Feature Workshop: Favorite Views (Part 1)	0	2	2
+Webinar - TDD in CodeRush	0	2	2
+Webinar - Julian on JavaScript: basic use of jQuery	0	2	2
+Webinar - CodeRush Feature Workshop: Quick Pair	0	2	2
+Webinar - Deploying XAF on Azure	0	2	2
+Webinar - Ask the ASP.NET Team	0	2	2
+Webinar - Preview of what's Coming up for WPF and Silverlight in 11.1	0	2	2
+Webinar - Ask the DevExpress Reporting Team	0	2	2
+Webinar - Advanced CodeRush Plug-ins – Custom Painting	0	2	2
+Webinar - Julian on JavaScript - Learning from reading: jQuery – Part 2	0	2	2
+Webinar - Ask the DevExpress Charting Team	0	2	2
+Webinar - Reporting with Silverlight (and MVVM)	0	2	2
+Webinar - Improving Web Site Performance and Scalability While Saving Money	0	2	2
+Webinar - Exploring ASP.NET Charting Client Side Development	0	2	2
+Webinar - Julian on JavaScript - Learning from reading: jQuery – Part 1	0	2	2
+Webinar - Implementing the MVVM Pattern	0	2	2
+Webinar - Ask the DevExpress Reporting Team	0	2	2
+Webinar - Introduction to Pivot Grid for WPF	0	2	2
+Webinar - DevExpress Day of Design	0	2	2
+Webinar - Reporting with WPF (and MVVM)	0	2	2
+Webinar - Ask the DevExpress Charting Team	0	2	2
+Webinar - Ask the ASP.NET Team	0	2	2
+Webinar - Rich data visualization with Pivot Grid and Charts	0	2	2
+"Webinar - Preview of v2011.1 ASP.NET features announced, so far…"	0	2	2
+Webinar - ASP.NET MVC Charting Preview	0	2	2
+Webinar - Advanced CodeRush Plug-ins – Working with the TextDocument and TextView	0	2	2
+Webinar - Julian on JavaScript - Learning from reading: underscore.js	0	2	2
+Webinar - Functional testing deep dive	2	2	2

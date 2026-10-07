@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Revenue Analysis" Alignment="Left" />
+  <DataSources>
+    <JsonDataSource Name="Sales" ConnectionName="RevenueAnalysisConnection" RootElement="Data" ComponentName="dsRevenueAnalysis">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="Data" Selected="true" NodeType="Array">
+            <Node Name="Category" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="Product" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="Revenue" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="UnitsSold" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="Year" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+    </JsonDataSource>
+  </DataSources>
+  <Items>
+    <Pivot ComponentName="pivotSalesByState" Name="Sales by State" DataSource="dsRevenueAnalysis">
+      <DataItems>
+        <Measure DataMember="UnitsSold" Name="Units Sold" DefaultId="DataItem1" />
+        <Dimension DataMember="Product" TopNShowOthers="true" DefaultId="DataItem0" />
+        <Dimension DataMember="State" DefaultId="DataItem4" />
+        <Dimension DataMember="Category" DefaultId="DataItem3" />
+        <Measure DataMember="Revenue" Name="Revenue" DefaultId="DataItem2">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+      </DataItems>
+      <FormatRules>
+        <PivotItemFormatRule Name="FormatRule 1" DataItem="DataItem2" DataItemApplyTo="DataItem4" IntersectionLevelMode="SpecificLevel">
+          <FormatConditionTopBottom RankType="Percent" Rank="20">
+            <IconSettings IconType="RatingFullGrayStar" />
+          </FormatConditionTopBottom>
+          <PivotItemFormatRuleLevel Row="DataItem4" />
+        </PivotItemFormatRule>
+        <PivotItemFormatRule Name="FormatRule 2" DataItem="DataItem2" DataItemApplyTo="DataItem4" IntersectionLevelMode="SpecificLevel">
+          <FormatConditionTopBottom RankType="Percent" Rank="20">
+            <AppearanceSettings AppearanceType="FontBold" />
+          </FormatConditionTopBottom>
+          <PivotItemFormatRuleLevel Row="DataItem4" />
+        </PivotItemFormatRule>
+        <PivotItemFormatRule Name="FormatRule 3" DataItem="DataItem2" DataItemApplyTo="DataItem3" IntersectionLevelMode="SpecificLevel">
+          <FormatConditionTopBottom Rank="1">
+            <IconSettings IconType="RatingFullGrayStar" />
+          </FormatConditionTopBottom>
+          <PivotItemFormatRuleLevel Column="DataItem3" />
+        </PivotItemFormatRule>
+        <PivotItemFormatRule Name="FormatRule 4" DataItem="DataItem2" DataItemApplyTo="DataItem3" IntersectionLevelMode="SpecificLevel">
+          <FormatConditionTopBottom Rank="1">
+            <AppearanceSettings AppearanceType="FontBold" />
+          </FormatConditionTopBottom>
+          <PivotItemFormatRuleLevel Column="DataItem3" />
+        </PivotItemFormatRule>
+        <PivotItemFormatRule Name="FormatRule 5" DataItem="DataItem2" IntersectionLevelMode="FirstLevel">
+          <FormatConditionRangeGradient ValueType="Number">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="0" />
+                  <AppearanceSettings AppearanceType="GradientTransparent" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="100000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="120000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="150000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="200000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="1000000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="3000000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="5000000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="6000000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="9000000" />
+                  <AppearanceSettings AppearanceType="GradientBlue" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+          <PivotItemFormatRuleLevel Row="DataItem4" Column="DataItem3" />
+        </PivotItemFormatRule>
+        <PivotItemFormatRule Name="FormatRule 6" DataItem="DataItem2" IntersectionLevelMode="LastLevel">
+          <FormatConditionRangeGradient ValueType="Number">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="0" />
+                  <AppearanceSettings AppearanceType="GradientTransparent" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="1000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="2000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="3000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="5000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="10000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="30000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="50000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="100000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="200000" />
+                  <AppearanceSettings AppearanceType="GradientGreen" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+          <PivotItemFormatRuleLevel Row="DataItem4" Column="DataItem0" />
+        </PivotItemFormatRule>
+        <PivotItemFormatRule Name="FormatRule 7" DataItem="DataItem2" IntersectionLevelMode="SpecificLevel">
+          <FormatConditionRangeGradient ValueType="Number">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="0" />
+                  <AppearanceSettings AppearanceType="GradientTransparent" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="9000000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="9400000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="9500000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="9600000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="9700000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="9800000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="9900000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="10000000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Int32" Value="15000000" />
+                  <AppearanceSettings AppearanceType="GradientOrange" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+          <PivotItemFormatRuleLevel Row="DataItem4" />
+        </PivotItemFormatRule>
+      </FormatRules>
+      <Columns>
+        <Column DefaultId="DataItem3" />
+        <Column DefaultId="DataItem0" />
+      </Columns>
+      <Rows>
+        <Row DefaultId="DataItem4" />
+      </Rows>
+      <Values>
+        <Value DefaultId="DataItem2" />
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </Pivot>
+    <Pie ComponentName="pieSalesbyCategory" Name="Sales by Category" ShowCaption="false" DataSource="dsRevenueAnalysis" LabelContentType="Argument">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Measure DataMember="Revenue" Name="Revenue" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+        <Dimension DataMember="Category" DefaultId="DataItem1" />
+        <Measure DataMember="UnitsSold" Name="Units Sold" DefaultId="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem0" />
+        <Value DefaultId="DataItem2" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartSalesbyYear" Name="Sales by Year" ShowCaption="false" DataSource="dsRevenueAnalysis" Rotated="true">
+      <ColoringOptions MeasuresColoringMode="Hue" />
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Measure DataMember="Revenue" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+        <Dimension DataMember="Year" SortOrder="Descending" IsDiscreteScale="true" ColoringMode="None" DefaultId="DataItem1">
+          <NumericFormat FormatType="General" />
+        </Dimension>
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Visible="false" Title="Revenue " ShowGridLines="false" />
+          <Series>
+            <Simple Name="Revenue (Sum)">
+              <Value DefaultId="DataItem0" />
+              <PointLabelOptions Position="Inside" ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+    </Chart>
+  </Items>
+  <ColorScheme>
+    <Entry DataSource="dsRevenueAnalysis" Color="-5853357">
+      <MeasureKey>
+        <Definition DataMember="Revenue" />
+      </MeasureKey>
+    </Entry>
+  </ColorScheme>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="23.957409050576754">
+        <LayoutItem DashboardItem="chartSalesbyYear" Weight="26.351508533719471" />
+        <LayoutItem DashboardItem="pieSalesbyCategory" Weight="73.648491466280532" />
+      </LayoutGroup>
+      <LayoutItem DashboardItem="pivotSalesByState" Weight="76.042590949423243" />
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+    <Description>["The dashboard shows revenue data.","The bar chart shows the revenue by year, while the pies show the revenue and number of units sold by the product category. The pivot table displays the revenue and number of units sold by product and state. Revenue data cells are highlighted using conditional formatting top N and gradient rules."]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/117060/web-dashboard/create-dashboards-on-the-web/interactivity/master-filtering","text":"Master Filtering"},{"href":"https://docs.devexpress.com/Dashboard/402205/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/pivot/conditional-formatting","text":"Conditional Formatting"},{"href":"https://docs.devexpress.com/Dashboard/117165/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/pivot","text":"Pivot"}]</Links>
+  </CustomProperties>
+</Dashboard>

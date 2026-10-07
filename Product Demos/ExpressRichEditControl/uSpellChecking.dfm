@@ -1,0 +1,2 @@
+inherited frmRichEditSpellChecking: TfrmRichEditSpellChecking
+end

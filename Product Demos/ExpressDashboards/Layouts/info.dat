@@ -1,0 +1,91 @@
+﻿[SalesOverview]
+Group=Highlighted Features
+Caption=Sales Overview
+Hide=0
+Description=This dashboard shows statistics on sales of bicycles, related equipment and accessories.\nThe Grid dashboard item shows sales breakdown by state. The Card dashboard item illustrate sales by the product category compared to target values. The Chart dashboard item visualizes sales through time by the product category. The Range Filter at the bottom allows you to filter data by date. \nClick the Select Region button in the dashboard title to choose the US census region. It applies the dashboard state that includes multiple grid row selection and shows the related data in the chart and gauges. To reset the selection, click Clear Master Filter in the grid caption.
+Order=000
+
+[CustomerSupport]
+Group=Highlighted Features
+Caption=Customer Support
+Hide=0
+Description=This dashboard shows data from customer support service statistics.\nCharts show the number of opened issues through time, the number of processed issues by platform, the average response time by month and by platform.\nIn both bar charts, you can drill down from platforms to support engineers. To do this, click any bar, and the chart will show data for this platform by employee. To drill up, click the Drill Up button in the chart dashboard item caption.\nYou can also select a time interval in the Date Filter.
+Order=001
+
+[SalesPerformance]
+Group=Highlighted Features
+Caption=Sales Performance
+Hide=0
+Description=This sample dashboard displays YTD sales performance data.\nThe Dashboard`s map visualizes sales by state (multiple layers). Dashboard Cards compare key sales metrics against a target. Charts illustrate monthly sales for top five products and sale values for different product categories.\nThe dashboard has a fixed width and height. The Dashboard`s Grid (positioned at the bottom of the dashboard itself), displays sales by product, flags top 10/bottom 10 products with a circle, and highlights revenue values (whether they are greater or less than average).
+Order=002
+
+[SalesDetails]
+Group=Highlighted Features
+Caption=Sales Details
+Hide=0
+Description=This dashboard provides an in-depth view of sales data.\nUse list boxes to view data for individual categories and states.\nSales by Product and Top 5 Products pages are located in different tabs in a tab container. \nThe Sales by Product page shows cards displaying sales by product. Click the desired card to see product sale details along with underlying data. Use the Values button in the tab page's caption to switch between the Revenue, Units Sold, and Returns value displayed within a card.\nThe Top 5 Products page contains charts showing a trend of revenue and returns for five products with the best figures.
+Order=003
+
+[EnergyStatistics]
+Group=Highlighted Features
+Caption=Energy Statistics
+Hide=0
+Description=This dashboard shows energy statistics by country.\nThe pie map shows the energy production and import for european countries and indicates the contribution of each energy type to the total values. Use the Values button in the map caption to switch between production and import.\nYou can click pies on the map while holding Ctrl to select several countries. Cards show energy production compared to import for the selected countries for each energy type. Select a card to see the domestic share and the variation of the energy production over time for each country shown in the grid.\nTo reset the selection, click the Clear Master Filter button. Use the Parameters button in the dashboard title to display energy statistics for a certain year.
+Order=005
+
+[HumanResources]
+Group=Highlighted Features
+Caption=Human Resources
+Hide=0
+Description=This dashboard displays human resources department statistics.\nThe grid and cards show staff turnover through time and staff turnover breakdown by department respectively. If the turnover rate exceeds 1%, the value gets marked with a warning - an orange circle. Bar charts and pies show payroll structure and work absence reason statistics for top 10 employees and for the entire company.\nIn the grid, you can select years to filter data in pies, bar charts and cards. You can also double-click rows to drill-down to months and select the required month in the same manner. To drill up, click the Drill Up button in the grid dashboard item's caption.\nYou can also select cards to filter data in bar charts and pies by department.
+Order=006
+
+[RevenueAnalysis]
+Group=Highlighted Features
+Caption=Revenue Analysis
+Hide=0
+Description=This dashboard shows revenue data.\nThe bar chart shows the revenue by year, while the pies show the revenue and number of units sold by the product category. \nThe pivot table shows the revenue and number of units sold by product and state. Revenue data cells are highlighted using conditional formatting top N and gradient rules.\nYou can click on chart bars and pie segments to filter data in the pivot table by year and category respectively. To clear the filter, select Clear Master Filter in the context menu of the chart and pie dashboard items.
+Order=008
+
+[RevenueByIndustry]
+Group=Highlighted Features
+Caption=Revenue By Industry
+Hide=0
+Description=This dashboard shows revenue data.\nThe bar chart shows the revenue by year, while the pies show the revenue and number of units sold by the product category. \nThe pivot table shows the revenue and number of units sold by product and state. Revenue data cells are highlighted using conditional formatting top N and gradient rules.\nYou can click on chart bars and pie segments to filter data in the pivot table by year and category respectively. To clear the filter, select Clear Master Filter in the context menu of the chart and pie dashboard items.
+Order=009
+
+[EnergyConsumption]
+Group=Highlighted Features
+Caption=Energy Consumption
+Hide=0
+Description=This dashboard shows energy consumption by country.\nThe map displays the energy production for each country which is proportional to bubble size, while the energy shortage is indicated by a bubble color.\nYou can select a country on the map to see detailed information in the pie and step line charts. The pie chart shows energy consumption by sector.\nThe step line chart displays energy consumption by sector over time. Use the Parameters button in the dashboard title to display energy statistics for different years.
+Order=010
+
+[WebsiteStatistics]
+Group=Highlighted Features
+Caption=Website Statistics
+Hide=0
+Description=This dashboard displays website statistics including traffic information and browser usage.\nThe dashboard contains two groups. The top group visualizes variations related to visitor count and allows you to filter data by traffic sources using the tree view on the left.\nThe bottom group displays browser usage for different browsers.
+Order=011
+
+[YTDPerformance]
+Group=Highlighted Features
+Caption=YTD Performance
+Hide=0
+Description=This dashboard helps illustrate use of [b]Parallel Periods[/b] - An indispensable feature designed to help you compare values between different time periods.\n\nOption 1: With the [b]Measure Filter[/b], you can compare data between predefined DateTime periods. Right-click a measure in the Designer and add filters to display values for the specified date period. Check the YTD Sales Comparison Chart. Thanks to conditional formatting support within Dashboard Charts, users can easily distinguish leading sales from lagging sales.\nOption 2: If using calculated fields, you can use the [i]joinRule[/i] function (in aggregation) to shift the Measure value by the DateTime axis. This feature allows you to compare values between dynamic date periods. We leveraged this capability in our Multi-Year Sales Comparison chart. We also applied a Visible Data Filter to limit displayed data and chose to hide first year of sales information.
+Order=013
+
+[DateFilter]
+Group=Technical Demos
+Caption=Date Filter
+Hide=0
+Description=This dashboard demonstrates a Date Filter dashboard item that provides an alternative way to filter dates.\nYou can select an interval between two dates or before/after the specified date. The Date Filter's UI integrates a configurable date picker and quick filter buttons which allow end-users to select a date range with a single click.
+Order=014
+
+[CustomItemExtensions]
+Group=Technical Demos
+Caption=Custom Items
+Hide=1
+HideReason=ExtractFileDataSource
+Description=Placeholder
+Order=014

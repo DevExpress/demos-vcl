@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="Date Filter - Technical Demo" Alignment="Left" />
+  <DataSources>
+    <JsonDataSource Name="Sales" ConnectionName="SalesConnection" RootElement="Sales" ComponentName="dsSales">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="Sales" Selected="true" NodeType="Array">
+            <Node Name="Category" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="CurrentDate" Type="System.Nullable`1[System.DateTime]" Selected="true" NodeType="Property" />
+            <Node Name="RecId" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="Sales" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="SalesTarget" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="true" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+    </JsonDataSource>
+  </DataSources>
+  <Items>
+    <DateFilter ComponentName="dateFilterDashboardItem1" Name="Quick Date Filters" ShowCaption="false" ParentContainer="groupDashboardItem5" DataSource="dsSales" ArrangementMode="Vertical" DatePickerLocation="Hidden">
+      <DataItems>
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem0" />
+      </DataItems>
+      <Dimension DefaultId="DataItem0" />
+      <DateTimePeriods>
+        <DateTimePeriod Name="This Year">
+          <StartLimit>
+            <FlowDateTimePeriodLimit />
+          </StartLimit>
+          <EndLimit>
+            <FlowDateTimePeriodLimit Offset="1" />
+          </EndLimit>
+        </DateTimePeriod>
+        <DateTimePeriod Name="Campaign 1">
+          <StartLimit>
+            <FlowDateTimePeriodLimit Interval="Month" Offset="-8" />
+          </StartLimit>
+        </DateTimePeriod>
+        <DateTimePeriod Name="Campaign 2">
+          <StartLimit>
+            <FlowDateTimePeriodLimit Interval="Month" Offset="-4" />
+          </StartLimit>
+        </DateTimePeriod>
+        <DateTimePeriod Name="Last Year">
+          <StartLimit>
+            <FlowDateTimePeriodLimit Offset="-1" />
+          </StartLimit>
+          <EndLimit>
+            <FlowDateTimePeriodLimit />
+          </EndLimit>
+        </DateTimePeriod>
+        <DateTimePeriod Name="Last 2 Years">
+          <StartLimit>
+            <FlowDateTimePeriodLimit Offset="-2" />
+          </StartLimit>
+          <EndLimit>
+            <FlowDateTimePeriodLimit />
+          </EndLimit>
+        </DateTimePeriod>
+        <DateTimePeriod Name="Last Quarter">
+          <StartLimit>
+            <FlowDateTimePeriodLimit Interval="Quarter" Offset="-1" />
+          </StartLimit>
+          <EndLimit>
+            <FlowDateTimePeriodLimit Interval="Quarter" />
+          </EndLimit>
+        </DateTimePeriod>
+      </DateTimePeriods>
+    </DateFilter>
+    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" ShowCaption="false" ParentContainer="groupDashboardItem4" DataSource="dsSales">
+      <DataItems>
+        <Measure DataMember="Sales" DefaultId="DataItem0" />
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="Category" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple SeriesType="Line">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem2" Name="Chart 1" ShowCaption="false" ParentContainer="groupDashboardItem5" DataSource="dsSales">
+      <DataItems>
+        <Measure DataMember="Sales" DefaultId="DataItem0" />
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="Category" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple SeriesType="Line">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <DateFilter ComponentName="dateFilterDashboardItem2" Name="Date Filter" ShowCaption="false" ParentContainer="groupDashboardItem4" DataSource="dsSales" FilterType="After">
+      <DataItems>
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="MonthYear" DefaultId="DataItem0" />
+      </DataItems>
+      <Dimension DefaultId="DataItem0" />
+    </DateFilter>
+    <Chart ComponentName="chartDashboardItem3" Name="Chart 1" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="dsSales">
+      <DataItems>
+        <Measure DataMember="Sales" DefaultId="DataItem0" />
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="Category" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple SeriesType="Line">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Chart ComponentName="chartDashboardItem4" Name="Chart 1" ShowCaption="false" ParentContainer="groupDashboardItem3" DataSource="dsSales">
+      <DataItems>
+        <Measure DataMember="Sales" DefaultId="DataItem0" />
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="Category" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple SeriesType="Line">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <DateFilter ComponentName="dateFilterDashboardItem4" Name="Date Filter" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="dsSales">
+      <DataItems>
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem0" />
+      </DataItems>
+      <Dimension DefaultId="DataItem0" />
+    </DateFilter>
+    <DateFilter ComponentName="dateFilterDashboardItem5" Name="Date Ranges" ShowCaption="false" ParentContainer="groupDashboardItem3" DataSource="dsSales">
+      <DataItems>
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem0" />
+      </DataItems>
+      <Dimension DefaultId="DataItem0" />
+      <DateTimePeriods>
+        <DateTimePeriod Name="This Year">
+          <StartLimit>
+            <FlowDateTimePeriodLimit />
+          </StartLimit>
+          <EndLimit>
+            <FlowDateTimePeriodLimit Offset="1" />
+          </EndLimit>
+        </DateTimePeriod>
+        <DateTimePeriod Name="Campaign 1">
+          <StartLimit>
+            <FlowDateTimePeriodLimit Interval="Month" Offset="-8" />
+          </StartLimit>
+        </DateTimePeriod>
+        <DateTimePeriod Name="Campaign 2">
+          <StartLimit>
+            <FlowDateTimePeriodLimit Interval="Month" Offset="-4" />
+          </StartLimit>
+        </DateTimePeriod>
+        <DateTimePeriod Name="Last Quarter">
+          <StartLimit>
+            <FlowDateTimePeriodLimit Interval="Quarter" Offset="-1" />
+          </StartLimit>
+          <EndLimit>
+            <FlowDateTimePeriodLimit Interval="Quarter" />
+          </EndLimit>
+        </DateTimePeriod>
+      </DateTimePeriods>
+    </DateFilter>
+    <ComboBox ComponentName="comboBoxDashboardItem1" Name="States" ShowCaption="false" ParentContainer="groupDashboardItem4" DataSource="dsSales">
+      <DataItems>
+        <Dimension DataMember="State" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <ComboBox ComponentName="comboBoxDashboardItem2" Name="States" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="dsSales">
+      <DataItems>
+        <Dimension DataMember="State" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+  </Items>
+  <Groups>
+    <Group ComponentName="groupDashboardItem1" Name="Date Picker" />
+    <Group ComponentName="groupDashboardItem3" Name="Date Ranges" />
+    <Group ComponentName="groupDashboardItem4" Name="Interval After the Selected Month" />
+    <Group ComponentName="groupDashboardItem5" Name="Quick Filters" />
+  </Groups>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical">
+        <LayoutGroup>
+          <LayoutGroup DashboardItem="groupDashboardItem1">
+            <LayoutGroup Orientation="Vertical">
+              <LayoutGroup>
+                <LayoutItem DashboardItem="dateFilterDashboardItem4" Weight="0.70322580645161292" />
+                <LayoutItem DashboardItem="comboBoxDashboardItem2" Weight="1.2967741935483872" />
+              </LayoutGroup>
+              <LayoutItem DashboardItem="chartDashboardItem3" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup DashboardItem="groupDashboardItem3">
+            <LayoutGroup Orientation="Vertical">
+              <LayoutItem DashboardItem="dateFilterDashboardItem5" />
+              <LayoutItem DashboardItem="chartDashboardItem4" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+        <LayoutGroup>
+          <LayoutGroup DashboardItem="groupDashboardItem5">
+            <LayoutItem DashboardItem="dateFilterDashboardItem1" Weight="0.39534613147178582" />
+            <LayoutItem DashboardItem="chartDashboardItem2" Weight="1.6046538685282141" />
+          </LayoutGroup>
+          <LayoutGroup DashboardItem="groupDashboardItem4">
+            <LayoutGroup Orientation="Vertical">
+              <LayoutGroup>
+                <LayoutItem DashboardItem="dateFilterDashboardItem2" />
+                <LayoutItem DashboardItem="comboBoxDashboardItem1" />
+              </LayoutGroup>
+              <LayoutItem DashboardItem="chartDashboardItem1" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+    <Description>["This dashboard demonstrates a Date Filter dashboard item that provides an alternative way to filter dates.","You can select an interval between two dates or before/after the specified date. The Date Filter's UI integrates a configurable date picker and quick filter buttons which allow end-users to select a date range with a single click."]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/400693/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/date-filter","text":"Date Filter"}]</Links>
+  </CustomProperties>
+</Dashboard>

@@ -1,0 +1,2 @@
+inherited frmParagraphFormatting: TfrmParagraphFormatting
+end

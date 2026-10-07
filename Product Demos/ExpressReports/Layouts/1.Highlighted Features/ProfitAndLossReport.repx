@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="24.2.5.0" Ref="1" ControlType="XtraReportsDemos.ProfitAndLossReport.Report, DevExpress.DemoReports.v24.2, Version=24.2.5.0, Culture=neutral, PublicKeyToken=4c3bc44151be4b47" Name="ProfitAndLossReport" DisplayName="Profit and Loss Report" Landscape="true" Margins="100, 100, 92, 99" PageWidth="1100" PageHeight="850" Version="24.2" RequestParameters="false" FilterString="[Month] Between([StartDate], [EndDate])" DataSource="#Ref-0">
+  <Parameters>
+    <Item1 Ref="4" Description="Date Range" ValueSourceSettings="#Ref-2" ValueInfo="5" Name="Range" Type="#Ref-3" />
+    <Item2 Ref="6" Visible="false" Description="startDate" ValueInfo="2018-01-01" Name="StartDateRange" Type="#Ref-5" />
+  </Parameters>
+  <CalculatedFields>
+    <Item1 Ref="7" Name="TotalIncome" FieldType="Decimal" Expression="[ConstructionIncome] + [SalesIncome]" />
+    <Item2 Ref="8" Name="TotalCostOfGoodsSold" FieldType="Decimal" Expression="[CostOfGoodsSold] + [JobExpenses]" />
+    <Item3 Ref="9" Name="GrossProfit" FieldType="Decimal" Expression="[TotalIncome] - [TotalCostOfGoodsSold]" />
+    <Item4 Ref="10" Name="TotalExpense" FieldType="Decimal" Expression="[Automobile] + [BankServiceCharges] + [Insurance] + [PayrollExpenses] + [Repairs] + [ToolsAndMachinery]" />
+    <Item5 Ref="11" Name="NetOrdinaryIncome" FieldType="Decimal" Expression="[GrossProfit] - [TotalExpense]" />
+    <Item6 Ref="12" Name="StartDate" FieldType="DateTime" Expression="Iif(?Range == 1, ?StartDateRange, &#xA;?Range == 2, AddMonths(?StartDateRange, 3),&#xA;?Range == 3, AddMonths(?StartDateRange, 6),&#xA;?Range=4, AddMonths(?StartDateRange, 9),&#xA;?Range == 6, AddMonths(?StartDateRange, 6),&#xA;?StartDateRange)" />
+    <Item7 Ref="13" Name="EndDate" FieldType="DateTime" Expression="AddDays(&#xA;Iif(?Range == 1, AddMonths(?StartDateRange, 3),&#xA;?Range==2, AddMonths(?StartDateRange, 6),&#xA;?Range == 3, AddMonths(?StartDateRange, 9),&#xA;?Range=4, AddMonths(?StartDateRange, 12),&#xA;?Range ==6, AddMonths(?StartDateRange, 12),&#xA;AddMonths(?StartDateRange, 6)), &#xA;-1)" />
+  </CalculatedFields>
+  <Bands>
+    <Item1 Ref="14" ControlType="TopMarginBand" Name="TopMargin" HeightF="92" />
+    <Item2 Ref="15" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="99" />
+    <Item3 Ref="16" ControlType="VerticalDetailBand" Name="VerticalDetail" WidthF="93.75" HeightF="575">
+      <Controls>
+        <Item1 Ref="17" ControlType="XRTable" Name="xrTable2" SizeF="93.75,575" LocationFloat="0,0" StyleName="RowHeader">
+          <Rows>
+            <Item1 Ref="18" ControlType="XRTableRow" Name="xrTableRow27" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="19" ControlType="XRTableCell" Name="xrTableCell27" Weight="1" Multiline="true" TextAlignment="MiddleRight" StyleName="ColumnHeader" Padding="0,5,0,1,100" BorderColor="255,104,109,122" Borders="Bottom" BorderWidth="3">
+                  <ExpressionBindings>
+                    <Item1 Ref="20" EventName="BeforePrint" PropertyName="Text" Expression="Upper(FormatString('{0:MMM}', [Month]))" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="21" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item1>
+            <Item2 Ref="22" ControlType="XRTableRow" Name="xrTableRow28" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="23" ControlType="XRTableCell" Name="xrTableCell28" Weight="1" Multiline="true" TextAlignment="MiddleLeft" StyleName="IncomeHeaderStyle" Padding="0,5,0,0,100">
+                  <StylePriority Ref="24" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item2>
+            <Item3 Ref="25" ControlType="XRTableRow" Name="xrTableRow29" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="26" ControlType="XRTableCell" Name="xrTableCell29" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Construction Income" StyleName="CellValueStyle">
+                  <ExpressionBindings>
+                    <Item1 Ref="27" EventName="BeforePrint" PropertyName="Text" Expression="[ConstructionIncome]" />
+                  </ExpressionBindings>
+                </Item1>
+              </Cells>
+            </Item3>
+            <Item4 Ref="28" ControlType="XRTableRow" Name="xrTableRow30" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="29" ControlType="XRTableCell" Name="xrTableCell30" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Sales" TextAlignment="MiddleRight" StyleName="CellValueStyle" Font="Arial, 8pt" Padding="0,5,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="30" EventName="BeforePrint" PropertyName="Text" Expression="[SalesIncome]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="31" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item4>
+            <Item5 Ref="32" ControlType="XRTableRow" Name="xrTableRow31" Weight="7.666666666666667" StyleName="IncomeTotalStyle">
+              <Cells>
+                <Item1 Ref="33" ControlType="XRTableCell" Name="xrTableCell31" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="TOTAL INCOME" TextAlignment="MiddleRight" StyleName="IncomeTotalStyle" Padding="0,5,2,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="34" EventName="BeforePrint" PropertyName="Text" Expression="[TotalIncome]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="35" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item5>
+            <Item6 Ref="36" ControlType="XRTableRow" Name="xrTableRow32" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="37" ControlType="XRTableCell" Name="xrTableCell32" Weight="1" Multiline="true" TextAlignment="MiddleLeft" Padding="0,5,0,0,100">
+                  <StylePriority Ref="38" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item6>
+            <Item7 Ref="39" ControlType="XRTableRow" Name="xrTableRow33" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="40" ControlType="XRTableCell" Name="xrTableCell33" Weight="1" Multiline="true" TextAlignment="MiddleLeft" StyleName="IncomeHeaderStyle" Padding="0,5,0,0,100">
+                  <StylePriority Ref="41" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item7>
+            <Item8 Ref="42" ControlType="XRTableRow" Name="xrTableRow34" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="43" ControlType="XRTableCell" Name="xrTableCell34" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Cost of Goods Sold" TextAlignment="MiddleRight" StyleName="CellValueStyle" Font="Arial, 8pt" Padding="0,5,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="44" EventName="BeforePrint" PropertyName="Text" Expression="[CostOfGoodsSold]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="45" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item8>
+            <Item9 Ref="46" ControlType="XRTableRow" Name="xrTableRow35" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="47" ControlType="XRTableCell" Name="xrTableCell35" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Job Expenses" TextAlignment="MiddleRight" StyleName="CellValueStyle" Font="Arial, 8pt" Padding="0,5,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="48" EventName="BeforePrint" PropertyName="Text" Expression="[JobExpenses]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="49" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item9>
+            <Item10 Ref="50" ControlType="XRTableRow" Name="xrTableRow36" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="51" ControlType="XRTableCell" Name="xrTableCell36" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="TOTAL COST OF GOODS SOLD" TextAlignment="MiddleRight" StyleName="IncomeTotalStyle" Padding="0,5,2,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="52" EventName="BeforePrint" PropertyName="Text" Expression="[TotalCostOfGoodsSold]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="53" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item10>
+            <Item11 Ref="54" ControlType="XRTableRow" Name="xrTableRow37" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="55" ControlType="XRTableCell" Name="xrTableCell37" Weight="1" Multiline="true" TextAlignment="MiddleLeft" Padding="0,5,0,0,100">
+                  <StylePriority Ref="56" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item11>
+            <Item12 Ref="57" ControlType="XRTableRow" Name="xrTableRow38" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="58" ControlType="XRTableCell" Name="xrTableCell38" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="GROSS PROFIT" TextAlignment="MiddleRight" StyleName="GrossProfitStyle" Padding="0,5,2,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="59" EventName="BeforePrint" PropertyName="Text" Expression="[GrossProfit]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="60" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item12>
+            <Item13 Ref="61" ControlType="XRTableRow" Name="xrTableRow39" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="62" ControlType="XRTableCell" Name="xrTableCell39" Weight="1" Multiline="true" TextAlignment="MiddleLeft" Padding="0,5,0,0,100">
+                  <StylePriority Ref="63" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item13>
+            <Item14 Ref="64" ControlType="XRTableRow" Name="xrTableRow40" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="65" ControlType="XRTableCell" Name="xrTableCell40" Weight="1" Multiline="true" TextAlignment="MiddleRight" StyleName="IncomeHeaderStyle" Padding="0,5,0,0,100">
+                  <StylePriority Ref="66" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item14>
+            <Item15 Ref="67" ControlType="XRTableRow" Name="xrTableRow41" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="68" ControlType="XRTableCell" Name="xrTableCell41" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Automobile" TextAlignment="MiddleRight" StyleName="CellValueStyle" Font="Arial, 8pt" Padding="0,5,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="69" EventName="BeforePrint" PropertyName="Text" Expression="[Automobile]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="70" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item15>
+            <Item16 Ref="71" ControlType="XRTableRow" Name="xrTableRow42" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="72" ControlType="XRTableCell" Name="xrTableCell42" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Bank Service Charges" TextAlignment="MiddleRight" StyleName="CellValueStyle" Font="Arial, 8pt" Padding="0,5,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="73" EventName="BeforePrint" PropertyName="Text" Expression="[BankServiceCharges]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="74" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item16>
+            <Item17 Ref="75" ControlType="XRTableRow" Name="xrTableRow43" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="76" ControlType="XRTableCell" Name="xrTableCell43" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Insurance" TextAlignment="MiddleRight" StyleName="CellValueStyle" Font="Arial, 8pt" Padding="0,5,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="77" EventName="BeforePrint" PropertyName="Text" Expression="[Insurance]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="78" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item17>
+            <Item18 Ref="79" ControlType="XRTableRow" Name="xrTableRow44" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="80" ControlType="XRTableCell" Name="xrTableCell44" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Payroll Expenses" TextAlignment="MiddleRight" StyleName="CellValueStyle" Font="Arial, 8pt" Padding="0,5,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="81" EventName="BeforePrint" PropertyName="Text" Expression="[PayrollExpenses]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="82" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item18>
+            <Item19 Ref="83" ControlType="XRTableRow" Name="xrTableRow47" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="84" ControlType="XRTableCell" Name="xrTableCell47" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Repairs" TextAlignment="MiddleRight" StyleName="CellValueStyle" Font="Arial, 8pt" Padding="0,5,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="85" EventName="BeforePrint" PropertyName="Text" Expression="[Repairs]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="86" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item19>
+            <Item20 Ref="87" ControlType="XRTableRow" Name="xrTableRow48" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="88" ControlType="XRTableCell" Name="xrTableCell48" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Tools and Machinery" TextAlignment="MiddleRight" StyleName="CellValueStyle" Font="Arial, 8pt" Padding="0,5,0,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="89" EventName="BeforePrint" PropertyName="Text" Expression="[ToolsAndMachinery]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="90" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item20>
+            <Item21 Ref="91" ControlType="XRTableRow" Name="xrTableRow50" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="92" ControlType="XRTableCell" Name="xrTableCell50" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="TOTAL EXPENSE" TextAlignment="MiddleRight" StyleName="ExpenseTotalStyle" Padding="0,5,2,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="93" EventName="BeforePrint" PropertyName="Text" Expression="[TotalExpense]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="94" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item21>
+            <Item22 Ref="95" ControlType="XRTableRow" Name="xrTableRow51" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="96" ControlType="XRTableCell" Name="xrTableCell51" Weight="1" Multiline="true" TextAlignment="MiddleLeft" Padding="0,5,0,0,100">
+                  <StylePriority Ref="97" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item22>
+            <Item23 Ref="98" ControlType="XRTableRow" Name="xrTableRow52" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="99" ControlType="XRTableCell" Name="xrTableCell52" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="NET INCOME" TextAlignment="MiddleRight" StyleName="NetOrdinaryStyle" Padding="0,5,2,0,100">
+                  <ExpressionBindings>
+                    <Item1 Ref="100" EventName="BeforePrint" PropertyName="Text" Expression="[NetOrdinaryIncome]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="101" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item23>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item3>
+    <Item4 Ref="102" ControlType="VerticalHeaderBand" Name="VerticalHeader" WidthF="243" HeightF="575">
+      <Controls>
+        <Item1 Ref="103" ControlType="XRTable" Name="xrTable1" SizeF="243,575" LocationFloat="0,0" StyleName="RowHeader">
+          <Rows>
+            <Item1 Ref="104" ControlType="XRTableRow" Name="xrTableRow1" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="105" ControlType="XRTableCell" Name="xrTableCell1" Weight="1" Multiline="true" TextAlignment="MiddleLeft" Padding="2,2,0,0,100" BorderColor="255,104,109,122" Borders="Bottom" BorderWidth="3">
+                  <StylePriority Ref="106" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item1>
+            <Item2 Ref="107" ControlType="XRTableRow" Name="xrTableRow2" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="108" ControlType="XRTableCell" Name="xrTableCell2" Weight="1" Multiline="true" Text="INCOME" TextAlignment="MiddleLeft" StyleName="IncomeHeaderStyle">
+                  <StylePriority Ref="109" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item2>
+            <Item3 Ref="110" ControlType="XRTableRow" Name="xrTableRow3" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="111" ControlType="XRTableCell" Name="xrTableCell3" Weight="1" Multiline="true" Text="Construction Income" TextAlignment="MiddleLeft" Padding="42,2,0,0,100" />
+              </Cells>
+            </Item3>
+            <Item4 Ref="112" ControlType="XRTableRow" Name="xrTableRow4" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="113" ControlType="XRTableCell" Name="xrTableCell4" Weight="1" Multiline="true" Text="Sales Income" TextAlignment="MiddleLeft" Padding="42,2,0,0,100" />
+              </Cells>
+            </Item4>
+            <Item5 Ref="114" ControlType="XRTableRow" Name="xrTableRow5" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="115" ControlType="XRTableCell" Name="xrTableCell5" Weight="1" Multiline="true" Text="TOTAL INCOME" TextAlignment="MiddleLeft" StyleName="IncomeTotalStyle">
+                  <StylePriority Ref="116" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item5>
+            <Item6 Ref="117" ControlType="XRTableRow" Name="xrTableRow6" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="118" ControlType="XRTableCell" Name="xrTableCell6" Weight="1" Multiline="true" TextAlignment="MiddleLeft" Padding="2,2,0,0,100">
+                  <StylePriority Ref="119" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item6>
+            <Item7 Ref="120" ControlType="XRTableRow" Name="xrTableRow7" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="121" ControlType="XRTableCell" Name="xrTableCell7" Weight="1" Multiline="true" Text="COST OF GOODS SOLD" TextAlignment="MiddleLeft" StyleName="IncomeHeaderStyle">
+                  <StylePriority Ref="122" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item7>
+            <Item8 Ref="123" ControlType="XRTableRow" Name="xrTableRow8" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="124" ControlType="XRTableCell" Name="xrTableCell8" Weight="1" Multiline="true" Text="Cost of Goods Sold" TextAlignment="MiddleLeft" Padding="42,2,0,0,100" />
+              </Cells>
+            </Item8>
+            <Item9 Ref="125" ControlType="XRTableRow" Name="xrTableRow9" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="126" ControlType="XRTableCell" Name="xrTableCell9" Weight="1" Multiline="true" Text="Job Expenses" TextAlignment="MiddleLeft" Padding="42,2,0,0,100" />
+              </Cells>
+            </Item9>
+            <Item10 Ref="127" ControlType="XRTableRow" Name="xrTableRow10" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="128" ControlType="XRTableCell" Name="xrTableCell10" Weight="1" Multiline="true" Text="TOTAL COST OF GOODS SOLD" TextAlignment="MiddleLeft" StyleName="IncomeTotalStyle">
+                  <StylePriority Ref="129" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item10>
+            <Item11 Ref="130" ControlType="XRTableRow" Name="xrTableRow11" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="131" ControlType="XRTableCell" Name="xrTableCell11" Weight="1" Multiline="true" TextAlignment="MiddleLeft" Padding="2,2,0,0,100">
+                  <StylePriority Ref="132" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item11>
+            <Item12 Ref="133" ControlType="XRTableRow" Name="xrTableRow12" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="134" ControlType="XRTableCell" Name="xrTableCell12" Weight="1" Multiline="true" Text="GROSS PROFIT" TextAlignment="MiddleLeft" StyleName="GrossProfitStyle" Padding="9,2,2,0,100">
+                  <StylePriority Ref="135" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item12>
+            <Item13 Ref="136" ControlType="XRTableRow" Name="xrTableRow13" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="137" ControlType="XRTableCell" Name="xrTableCell13" Weight="1" Multiline="true" TextAlignment="MiddleLeft" Padding="2,2,0,0,100">
+                  <StylePriority Ref="138" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item13>
+            <Item14 Ref="139" ControlType="XRTableRow" Name="xrTableRow14" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="140" ControlType="XRTableCell" Name="xrTableCell14" Weight="1" Multiline="true" Text="EXPENSE" TextAlignment="MiddleLeft" StyleName="IncomeHeaderStyle">
+                  <StylePriority Ref="141" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item14>
+            <Item15 Ref="142" ControlType="XRTableRow" Name="xrTableRow15" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="143" ControlType="XRTableCell" Name="xrTableCell15" Weight="1" Multiline="true" Text="Automobile" TextAlignment="MiddleLeft" Padding="42,2,0,0,100" />
+              </Cells>
+            </Item15>
+            <Item16 Ref="144" ControlType="XRTableRow" Name="xrTableRow16" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="145" ControlType="XRTableCell" Name="xrTableCell16" Weight="1" Multiline="true" Text="Bank Service Charges" TextAlignment="MiddleLeft" Padding="42,2,0,0,100" />
+              </Cells>
+            </Item16>
+            <Item17 Ref="146" ControlType="XRTableRow" Name="xrTableRow17" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="147" ControlType="XRTableCell" Name="xrTableCell17" Weight="1" Multiline="true" Text="Insurance" TextAlignment="MiddleLeft" Padding="42,2,0,0,100" />
+              </Cells>
+            </Item17>
+            <Item18 Ref="148" ControlType="XRTableRow" Name="xrTableRow18" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="149" ControlType="XRTableCell" Name="xrTableCell18" Weight="1" Multiline="true" Text="Payroll Expenses" TextAlignment="MiddleLeft" Padding="42,2,0,0,100" />
+              </Cells>
+            </Item18>
+            <Item19 Ref="150" ControlType="XRTableRow" Name="xrTableRow21" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="151" ControlType="XRTableCell" Name="xrTableCell21" Weight="1" Multiline="true" Text="Repairs" TextAlignment="MiddleLeft" Padding="42,2,0,0,100" />
+              </Cells>
+            </Item19>
+            <Item20 Ref="152" ControlType="XRTableRow" Name="xrTableRow22" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="153" ControlType="XRTableCell" Name="xrTableCell22" Weight="1" Multiline="true" Text="Tools and Machinery" TextAlignment="MiddleLeft" Padding="42,2,0,0,100" />
+              </Cells>
+            </Item20>
+            <Item21 Ref="154" ControlType="XRTableRow" Name="xrTableRow24" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="155" ControlType="XRTableCell" Name="xrTableCell24" Weight="1" Multiline="true" Text="TOTAL EXPENSE" TextAlignment="MiddleLeft" StyleName="ExpenseTotalStyle" Padding="9,0,2,0,100">
+                  <StylePriority Ref="156" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item21>
+            <Item22 Ref="157" ControlType="XRTableRow" Name="xrTableRow25" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="158" ControlType="XRTableCell" Name="xrTableCell25" Weight="1" Multiline="true" TextAlignment="MiddleLeft" Padding="2,2,0,0,100">
+                  <StylePriority Ref="159" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item22>
+            <Item23 Ref="160" ControlType="XRTableRow" Name="xrTableRow26" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="161" ControlType="XRTableCell" Name="xrTableCell26" Weight="1" Multiline="true" Text="NET INCOME" TextAlignment="MiddleLeft" StyleName="NetOrdinaryStyle" Padding="9,2,2,0,100">
+                  <StylePriority Ref="162" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item23>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item4>
+    <Item5 Ref="163" ControlType="VerticalTotalBand" Name="VerticalTotal" WidthF="93.75" HeightF="575">
+      <Controls>
+        <Item1 Ref="164" ControlType="XRTable" Name="xrTable3" SizeF="93.75,575" LocationFloat="0,0" StyleName="RowHeader">
+          <Rows>
+            <Item1 Ref="165" ControlType="XRTableRow" Name="xrTableRow53" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="166" ControlType="XRTableCell" Name="xrTableCell53" Weight="1" Multiline="true" Text="TOTAL" TextAlignment="MiddleRight" StyleName="ColumnHeader" Padding="2,9,0,1,100" BorderColor="255,104,109,122" Borders="Bottom" BorderWidth="3">
+                  <StylePriority Ref="167" UsePadding="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item1>
+            <Item2 Ref="168" ControlType="XRTableRow" Name="xrTableRow54" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="169" ControlType="XRTableCell" Name="xrTableCell54" Weight="1" Multiline="true" TextAlignment="MiddleLeft" StyleName="IncomeHeaderStyle" Padding="7,2,0,0,100">
+                  <StylePriority Ref="170" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item2>
+            <Item3 Ref="171" ControlType="XRTableRow" Name="xrTableRow55" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="172" ControlType="XRTableCell" Name="xrTableCell55" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Construction Income" StyleName="CellValueTotal">
+                  <Summary Ref="173" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="174" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([ConstructionIncome])" />
+                  </ExpressionBindings>
+                </Item1>
+              </Cells>
+            </Item3>
+            <Item4 Ref="175" ControlType="XRTableRow" Name="xrTableRow56" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="176" ControlType="XRTableCell" Name="xrTableCell56" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Sales Income" TextAlignment="MiddleRight" StyleName="CellValueTotal" Padding="0,9,0,0,100">
+                  <Summary Ref="177" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="178" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([SalesIncome])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="179" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item4>
+            <Item5 Ref="180" ControlType="XRTableRow" Name="xrTableRow57" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="181" ControlType="XRTableCell" Name="xrTableCell57" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="TOTAL INCOME" TextAlignment="MiddleRight" StyleName="IncomeTotalStyle" Padding="0,9,2,0,100">
+                  <Summary Ref="182" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="183" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([TotalIncome])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="184" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item5>
+            <Item6 Ref="185" ControlType="XRTableRow" Name="xrTableRow58" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="186" ControlType="XRTableCell" Name="xrTableCell58" Weight="1" Multiline="true" TextAlignment="MiddleLeft" Padding="2,2,0,0,100">
+                  <StylePriority Ref="187" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item6>
+            <Item7 Ref="188" ControlType="XRTableRow" Name="xrTableRow59" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="189" ControlType="XRTableCell" Name="xrTableCell59" Weight="1" Multiline="true" TextAlignment="MiddleLeft" StyleName="IncomeHeaderStyle" Padding="7,2,0,0,100">
+                  <StylePriority Ref="190" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item7>
+            <Item8 Ref="191" ControlType="XRTableRow" Name="xrTableRow60" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="192" ControlType="XRTableCell" Name="xrTableCell60" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Cost of Goods Sold" TextAlignment="MiddleRight" StyleName="CellValueTotal" Padding="0,9,0,0,100">
+                  <Summary Ref="193" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="194" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([CostOfGoodsSold])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="195" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item8>
+            <Item9 Ref="196" ControlType="XRTableRow" Name="xrTableRow61" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="197" ControlType="XRTableCell" Name="xrTableCell61" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Job Expenses" TextAlignment="MiddleRight" StyleName="CellValueTotal" Padding="0,9,0,0,100">
+                  <Summary Ref="198" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="199" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([JobExpenses])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="200" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item9>
+            <Item10 Ref="201" ControlType="XRTableRow" Name="xrTableRow62" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="202" ControlType="XRTableCell" Name="xrTableCell62" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="TOTAL COST OF GOODS SOLD" TextAlignment="MiddleRight" StyleName="IncomeTotalStyle" Padding="0,9,2,0,100">
+                  <Summary Ref="203" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="204" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([TotalCostOfGoodsSold])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="205" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item10>
+            <Item11 Ref="206" ControlType="XRTableRow" Name="xrTableRow63" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="207" ControlType="XRTableCell" Name="xrTableCell63" Weight="1" Multiline="true" TextAlignment="MiddleLeft" Padding="2,2,0,0,100">
+                  <StylePriority Ref="208" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item11>
+            <Item12 Ref="209" ControlType="XRTableRow" Name="xrTableRow64" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="210" ControlType="XRTableCell" Name="xrTableCell64" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="GROSS PROFIT" TextAlignment="MiddleRight" StyleName="GrossProfitStyle" Padding="0,9,2,0,100">
+                  <Summary Ref="211" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="212" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([GrossProfit])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="213" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item12>
+            <Item13 Ref="214" ControlType="XRTableRow" Name="xrTableRow65" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="215" ControlType="XRTableCell" Name="xrTableCell65" Weight="1" Multiline="true" TextAlignment="MiddleLeft" Padding="2,2,0,0,100">
+                  <StylePriority Ref="216" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item13>
+            <Item14 Ref="217" ControlType="XRTableRow" Name="xrTableRow66" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="218" ControlType="XRTableCell" Name="xrTableCell66" Weight="1" Multiline="true" TextAlignment="MiddleRight" StyleName="IncomeHeaderStyle" Padding="0,0,0,0,100">
+                  <StylePriority Ref="219" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item14>
+            <Item15 Ref="220" ControlType="XRTableRow" Name="xrTableRow67" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="221" ControlType="XRTableCell" Name="xrTableCell67" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Automobile" TextAlignment="MiddleRight" StyleName="CellValueTotal" Padding="0,9,0,0,100">
+                  <Summary Ref="222" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="223" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Automobile])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="224" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item15>
+            <Item16 Ref="225" ControlType="XRTableRow" Name="xrTableRow68" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="226" ControlType="XRTableCell" Name="xrTableCell68" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Bank Service Charges" TextAlignment="MiddleRight" StyleName="CellValueTotal" Padding="0,9,0,0,100">
+                  <Summary Ref="227" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="228" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([BankServiceCharges])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="229" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item16>
+            <Item17 Ref="230" ControlType="XRTableRow" Name="xrTableRow69" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="231" ControlType="XRTableCell" Name="xrTableCell69" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Insurance" TextAlignment="MiddleRight" StyleName="CellValueTotal" Padding="0,9,0,0,100">
+                  <Summary Ref="232" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="233" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Insurance])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="234" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item17>
+            <Item18 Ref="235" ControlType="XRTableRow" Name="xrTableRow70" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="236" ControlType="XRTableCell" Name="xrTableCell70" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Payroll Expenses" TextAlignment="MiddleRight" StyleName="CellValueTotal" Padding="0,9,0,0,100">
+                  <Summary Ref="237" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="238" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([PayrollExpenses])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="239" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item18>
+            <Item19 Ref="240" ControlType="XRTableRow" Name="xrTableRow73" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="241" ControlType="XRTableCell" Name="xrTableCell73" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Repairs" TextAlignment="MiddleRight" StyleName="CellValueTotal" Padding="0,9,0,0,100">
+                  <Summary Ref="242" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="243" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([Repairs])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="244" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item19>
+            <Item20 Ref="245" ControlType="XRTableRow" Name="xrTableRow74" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="246" ControlType="XRTableCell" Name="xrTableCell74" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="Tools and Machinery" TextAlignment="MiddleRight" StyleName="CellValueTotal" Padding="0,9,0,0,100">
+                  <Summary Ref="247" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="248" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([ToolsAndMachinery])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="249" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item20>
+            <Item21 Ref="250" ControlType="XRTableRow" Name="xrTableRow76" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="251" ControlType="XRTableCell" Name="xrTableCell76" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="TOTAL EXPENSE" TextAlignment="MiddleRight" StyleName="ExpenseTotalStyle" Padding="0,9,2,0,100">
+                  <Summary Ref="252" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="253" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([TotalExpense])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="254" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item21>
+            <Item22 Ref="255" ControlType="XRTableRow" Name="xrTableRow77" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="256" ControlType="XRTableCell" Name="xrTableCell77" Weight="1" Multiline="true" TextAlignment="MiddleLeft" Padding="2,2,0,0,100">
+                  <StylePriority Ref="257" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item22>
+            <Item23 Ref="258" ControlType="XRTableRow" Name="xrTableRow78" Weight="7.666666666666667">
+              <Cells>
+                <Item1 Ref="259" ControlType="XRTableCell" Name="xrTableCell78" Weight="1" TextFormatString="{0:$#,##.00}" Multiline="true" Text="NET INCOME" TextAlignment="MiddleRight" StyleName="NetOrdinaryStyle" Padding="0,9,2,0,100">
+                  <Summary Ref="260" Running="Report" />
+                  <ExpressionBindings>
+                    <Item1 Ref="261" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([NetOrdinaryIncome])" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="262" UsePadding="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item23>
+          </Rows>
+        </Item1>
+      </Controls>
+    </Item5>
+    <Item6 Ref="263" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="67.70834">
+      <Controls>
+        <Item1 Ref="264" ControlType="XRLabel" Name="xrLabel1" Multiline="true" Text="[StartDate!MMMM] - [EndDate!MMMM] 2018" TextAlignment="MiddleLeft" SizeF="425,23" LocationFloat="0,26.04167" Font="Arial, 8.5pt, style=Bold" ForeColor="255,179,181,183" Padding="2,2,0,0,100">
+          <StylePriority Ref="265" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="266" ControlType="XRLabel" Name="xrLabel12" Multiline="true" Text="Profit and Loss" TextAlignment="MiddleLeft" SizeF="425,26.04167" LocationFloat="0,0" StyleName="Caption" Font="Arial, 22pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="267" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+      </Controls>
+    </Item6>
+  </Bands>
+  <ExportOptions Ref="268">
+    <Image Ref="269" ExportMode="SingleFilePageByPage" PageRange="1" />
+  </ExportOptions>
+  <StyleSheet>
+    <Item1 Ref="270" Name="Caption" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Arial, 22pt" ForeColor="255,73,80,87" StringFormat="Near;Center;0;None;Character;GenericDefault" TextAlignment="MiddleLeft" />
+    <Item2 Ref="271" Name="RowHeader" BorderStyle="Inset" Padding="42,0,0,0,100" Font="Arial, 7pt, style=Bold" ForeColor="255,73,80,87" StringFormat="Near;Center;0;None;Character;GenericDefault" TextAlignment="MiddleLeft" />
+    <Item3 Ref="272" Name="ColumnHeader" BorderStyle="Inset" Font="Arial, 7pt, style=Bold" ForeColor="255,73,80,87" Sides="Bottom" StringFormat="Far;Near;0;None;Character;GenericDefault" TextAlignment="TopRight" BorderWidthSerializable="2" />
+    <Item4 Ref="273" Name="CellValueTotal" BorderStyle="Inset" Padding="0,9,0,0,100" Font="Arial, 7pt, style=Bold" ForeColor="255,73,80,87" StringFormat="Far;Center;0;None;Character;GenericDefault" TextAlignment="MiddleRight" />
+    <Item5 Ref="274" Name="IncomeHeaderStyle" BorderStyle="Inset" Padding="9,0,1,0,100" Font="Arial, 7pt, style=Bold" ForeColor="255,73,80,87" BackColor="255,249,250,252" StringFormat="Near;Near;0;None;Character;GenericDefault" />
+    <Item6 Ref="275" Name="IncomeTotalStyle" BorderStyle="Inset" Padding="9,0,1,0,100" Font="Arial, 7pt, style=Bold" ForeColor="255,73,80,87" BackColor="255,241,251,249" StringFormat="Near;Near;0;None;Character;GenericDefault" />
+    <Item7 Ref="276" Name="GrossProfitStyle" BorderStyle="Inset" Padding="9,2,1,0,100" Font="Arial, 7pt, style=Bold" ForeColor="White" BackColor="255,89,186,165" StringFormat="Near;Center;0;None;Character;GenericDefault" TextAlignment="MiddleLeft" />
+    <Item8 Ref="277" Name="ExpenseTotalStyle" BorderStyle="Inset" Padding="9,0,1,0,100" Font="Arial, 7pt, style=Bold" ForeColor="White" BackColor="255,203,107,146" StringFormat="Near;Center;0;None;Character;GenericDefault" TextAlignment="MiddleLeft" />
+    <Item9 Ref="278" Name="NetOrdinaryStyle" BorderStyle="Inset" Padding="9,2,1,0,100" Font="Arial, 7pt, style=Bold" ForeColor="White" BackColor="255,119,127,145" StringFormat="Near;Center;0;None;Character;GenericDefault" TextAlignment="MiddleLeft" />
+    <Item10 Ref="279" Name="CellValueStyle" BorderStyle="Inset" Padding="0,5,0,0,100" Font="Arial, 7pt" ForeColor="255,73,80,87" StringFormat="Far;Center;0;None;Character;GenericDefault" TextAlignment="MiddleRight" />
+  </StyleSheet>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v24.2" Name="objectDataSource1" Base64="PE9iamVjdERhdGFTb3VyY2UgTmFtZT0ib2JqZWN0RGF0YVNvdXJjZTEiPjxEYXRhU291cmNlIFR5cGU9Ilh0cmFSZXBvcnRzRGVtb3MuUHJvZml0QW5kTG9zc1JlcG9ydC5EYXRhLCBEZXZFeHByZXNzLkRlbW9SZXBvcnRzLnYyNC4yLCBWZXJzaW9uPTI0LjIuNS4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTRjM2JjNDQxNTFiZTRiNDciIC8+PERhdGFNZW1iZXI+R2V0RGF0YTwvRGF0YU1lbWJlcj48Q29uc3RydWN0b3IgLz48L09iamVjdERhdGFTb3VyY2U+" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 Ref="2" ObjectType="DevExpress.XtraReports.Parameters.StaticListLookUpSettings, DevExpress.Printing.v24.2.Core">
+      <LookUpValues>
+        <Item1 Ref="281" Value="#Ref-280" Description="First Quarter" />
+        <Item2 Ref="283" Value="#Ref-282" Description="Second Quarter" />
+        <Item3 Ref="285" Value="#Ref-284" Description="Third Quarter" />
+        <Item4 Ref="287" Value="#Ref-286" Description="Fourth Quarter" />
+        <Item5 Ref="289" Value="#Ref-288" Description="First Half-Year" />
+        <Item6 Ref="291" Value="#Ref-290" Description="Second Half-Year" />
+      </LookUpValues>
+    </Item1>
+    <Item2 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="3" Content="System.Int32" Type="System.Type" />
+    <Item3 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="5" Content="System.DateTime" Type="System.Type" />
+    <Item4 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="280" Content="1" Type="System.Int32" />
+    <Item5 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="282" Content="2" Type="System.Int32" />
+    <Item6 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="284" Content="3" Type="System.Int32" />
+    <Item7 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="286" Content="4" Type="System.Int32" />
+    <Item8 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="288" Content="5" Type="System.Int32" />
+    <Item9 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="290" Content="6" Type="System.Int32" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

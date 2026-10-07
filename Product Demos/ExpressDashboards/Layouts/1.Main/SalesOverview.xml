@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Sales Overview" Alignment="Left" />
+  <DataSources>
+    <JsonDataSource Name="Sales" ConnectionName="SalesConnection" RootElement="Sales" ComponentName="dsSales">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="Sales" Selected="true" NodeType="Array">
+            <Node Name="Category" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="CurrentDate" Type="System.Nullable`1[System.DateTime]" Selected="true" NodeType="Property" />
+            <Node Name="Sales" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="SalesTarget" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="true" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+    </JsonDataSource>
+  </DataSources>
+  <Items>
+    <RangeFilter ComponentName="range" Name="Filter by Date" DataSource="dsSales">
+      <DataItems>
+        <Dimension DataMember="CurrentDate" Name="Date" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="Category" DefaultId="DataItem2" />
+        <Measure DataMember="Sales" DefaultId="DataItem0" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Argument DefaultId="DataItem1" />
+      <Series>
+        <Simple SeriesType="StackedLine">
+          <Value DefaultId="DataItem0" />
+        </Simple>
+      </Series>
+      <DateTimePeriods>
+        <DateTimePeriod Name="6 Months">
+          <StartLimit>
+            <FlowDateTimePeriodLimit Interval="Month" Offset="-5" />
+          </StartLimit>
+        </DateTimePeriod>
+        <DateTimePeriod Name="12 Months">
+          <StartLimit>
+            <FlowDateTimePeriodLimit Interval="Month" Offset="-11" />
+          </StartLimit>
+        </DateTimePeriod>
+        <DateTimePeriod Name="Quarter to date">
+          <StartLimit>
+            <FlowDateTimePeriodLimit Interval="Quarter" />
+          </StartLimit>
+          <EndLimit>
+            <FlowDateTimePeriodLimit Interval="Day" />
+          </EndLimit>
+        </DateTimePeriod>
+        <DateTimePeriod Name="Year to date">
+          <StartLimit>
+            <FlowDateTimePeriodLimit />
+          </StartLimit>
+          <EndLimit>
+            <FlowDateTimePeriodLimit Interval="Day" />
+          </EndLimit>
+        </DateTimePeriod>
+      </DateTimePeriods>
+    </RangeFilter>
+    <Grid ComponentName="gridSalesByState" Name="Sales by State" DataSource="dsSales">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Measure DataMember="SalesTarget" DefaultId="DataItem5" />
+        <Measure DataMember="Sales" DefaultId="DataItem4" />
+        <Measure DataMember="Sales" DefaultId="DataItem3" />
+        <Dimension DataMember="State" SortOrder="Descending" SortByMeasure="DataItem4" DefaultId="DataItem1" />
+        <Measure DataMember="Sales" DefaultId="DataItem0" />
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="MonthYear" DefaultId="DataItem6" />
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" DataItem="DataItem3">
+          <FormatConditionBar>
+            <NegativeStyleSettings PredefinedColor="PaleRed" />
+            <StyleSettings PredefinedColor="PaleGreen" />
+            <BarOptions />
+          </FormatConditionBar>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Name="State" Weight="85.6135653213202" FixedWidth="14.16">
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+        <GridDeltaColumn Name="Sales vs Target" Weight="68.93559805093314" FixedWidth="15.15">
+          <ActualValue DefaultId="DataItem4" />
+          <TargetValue DefaultId="DataItem5" />
+          <DeltaOptions ResultIndicationThreshold="0.3" ValueType="PercentVariation" />
+        </GridDeltaColumn>
+        <GridMeasureColumn Name="Sales" Weight="77.8305139284729" FixedWidth="20.98">
+          <Measure DefaultId="DataItem3" />
+          <Totals>
+            <Total Type="Sum" />
+          </Totals>
+        </GridMeasureColumn>
+        <GridSparklineColumn Name="Trend" Weight="98.95593913762983" FixedWidth="14.32">
+          <SparklineValue DefaultId="DataItem0" />
+          <SparklineOptions HighlightStartEndPoints="false" />
+        </GridSparklineColumn>
+      </GridColumns>
+      <SparklineArgument DefaultId="DataItem6" />
+      <GridOptions ShowVerticalLines="false" ColumnWidthMode="Manual" />
+      <ColumnFilterOptions />
+    </Grid>
+    <Chart ComponentName="chartSalesByCategory" Name="Sales by Product Category" DataSource="dsSales">
+      <DataItems>
+        <Measure DataMember="Sales" DefaultId="DataItem1" />
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem2">
+          <DateTimeFormat DateFormat="Long" />
+        </Dimension>
+        <Dimension DataMember="Category" DefaultId="DataItem3" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem3" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" Title="Sales" AlwaysShowZeroLevel="false" Logarithmic="true" />
+          <Series>
+            <Simple SeriesType="Line">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend InsidePosition="TopLeftVertical" />
+      <AxisX>
+        <DateTimeFormat DateFormat="Short" />
+      </AxisX>
+    </Chart>
+    <Card ComponentName="cardDashboardItem1" Name="Sales vs Target by Product Category" ShowCaption="false" DataSource="dsSales" ContentLineCount="4">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="Category" DefaultId="DataItem0" />
+        <Measure DataMember="Sales" DefaultId="DataItem1">
+          <NumericFormat FormatType="Currency" Precision="1" Unit="Millions" IncludeGroupSeparator="true" />
+        </Measure>
+        <Measure DataMember="SalesTarget" DefaultId="DataItem2" />
+      </DataItems>
+      <FormatRules>
+        <CardItemDeltaFormatRule Name="Format Rule 1" DeltaValueType="PercentVariation" CardId="DataItem1">
+          <FormatConditionValue Condition="LessOrEqual">
+            <IconSettings IconType="IndicatorRedFlag" />
+            <Value1 Type="System.Decimal" Value="-0.02" />
+          </FormatConditionValue>
+          <CardFormatRuleLayoutElement LayoutItemApplyTo="Indicator" />
+        </CardItemDeltaFormatRule>
+        <CardItemDeltaFormatRule Name="Format Rule 2" DeltaValueType="PercentVariation" CardId="DataItem1">
+          <FormatConditionValue Condition="GreaterOrEqual">
+            <IconSettings IconType="IndicatorGreenFlag" />
+            <Value1 Type="System.Decimal" Value="0.02" />
+          </FormatConditionValue>
+          <CardFormatRuleLayoutElement LayoutItemApplyTo="Indicator" />
+        </CardItemDeltaFormatRule>
+      </FormatRules>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem0" />
+      </SeriesDimensions>
+      <Card>
+        <ActualValue DefaultId="DataItem1" />
+        <TargetValue DefaultId="DataItem2" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="270" MaxWidth="270" Type="Centered">
+          <MainValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <BottomSubValue1 Visible="true" ValueType="AbsoluteVariation" DimensionIndex="0" />
+          <BottomSubValue2 Visible="true" ValueType="PercentVariation" DimensionIndex="0" />
+          <DeltaIndicator Visible="true" />
+          <Sparkline Visible="true" />
+        </LayoutTemplate>
+      </Card>
+    </Card>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical" Weight="100">
+      <LayoutGroup Weight="56.52877279147051">
+        <LayoutItem DashboardItem="chartSalesByCategory" Weight="48.13552714311377" />
+        <LayoutItem DashboardItem="gridSalesByState" Weight="29.996954899982796" />
+      </LayoutGroup>
+      <LayoutItem DashboardItem="cardDashboardItem1" Weight="30.85453243326474" />
+      <LayoutItem DashboardItem="range" Weight="34.484212732168174" />
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+    <Description>["This sample dashboard displays statistical information on bicycle sales and related equipment/accessories.","The rightmost grid includes a sales breakdown by state. Cards display sales by the product category and compared to target values. The chart visualizes sales over time by product category."]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/116912/common-features/interactivity/master-filtering","text":"Dashboard Master Filtering"},{"href":"https://docs.devexpress.com/Dashboard/117168/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/range-filter","text":"Range Filter"},{"href":"https://docs.devexpress.com/Dashboard/117379/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/range-filter/predefined-ranges","text":"Predefined Ranges"}]</Links>
+  </CustomProperties>
+</Dashboard>

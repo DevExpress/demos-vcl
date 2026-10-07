@@ -1,0 +1,818 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="24.2.5.0" Ref="1" ControlType="XtraReportsDemos.SwissQRCode.SwissQRBill, DevExpress.DemoReports.v24.2, Version=24.2.5.0, Culture=neutral, PublicKeyToken=4c3bc44151be4b47" Name="SwissQRBillReport" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" PageWidth="2100" PageHeight="2970" Version="24.2" RequestParameters="false" EventsInfo="SwissQRBillReport,BeforePrint,SwissQRBill_BeforePrint" DataSource="#Ref-0" Dpi="254">
+  <Parameters>
+    <Item1 Ref="4" ValueSourceSettings="#Ref-2" ValueInfo="en" Name="Language" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="5" ControlType="TopMarginBand" Name="TopMargin" Dpi="254" />
+    <Item2 Ref="6" ControlType="DetailBand" Name="Detail" Dpi="254">
+      <Controls>
+        <Item1 Ref="7" ControlType="XRPanel" Name="panel3" Dpi="254">
+          <Controls>
+            <Item1 Ref="8" ControlType="XRTable" Name="xrTable2" Dpi="254">
+              <Rows>
+                <Item1 Ref="9" ControlType="XRTableRow" Name="xrTableRow5" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="10" ControlType="XRTableCell" Name="xrTableCell9" Multiline="true" Dpi="254" StyleName="Bill_Caption_text" Padding="5,5,0,0,254">
+                      <StylePriority Ref="11" UsePadding="false" />
+                    </Item1>
+                    <Item2 Ref="12" ControlType="XRTableCell" Name="xrTableCell10" Multiline="true" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254">
+                      <ExpressionBindings>
+                        <Item1 Ref="13" EventName="BeforePrint" PropertyName="Text" Expression="[Creditor].[Phone]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="14" UsePadding="false" />
+                    </Item2>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="15" ControlType="XRTableRow" Name="xrTableRow3" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="16" ControlType="XRTableCell" Name="xrTableCell5" Multiline="true" Dpi="254" StyleName="Bill_Caption_text" Padding="5,5,0,0,254">
+                      <StylePriority Ref="17" UsePadding="false" />
+                    </Item1>
+                    <Item2 Ref="18" ControlType="XRTableCell" Name="xrTableCell6" Multiline="true" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254">
+                      <ExpressionBindings>
+                        <Item1 Ref="19" EventName="BeforePrint" PropertyName="Text" Expression="[Creditor].[Email]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="20" UsePadding="false" />
+                    </Item2>
+                  </Cells>
+                </Item2>
+                <Item3 Ref="21" ControlType="XRTableRow" Name="xrTableRow6" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="22" ControlType="XRTableCell" Name="xrTableCell11" Multiline="true" Dpi="254" StyleName="Bill_Caption_text" Padding="5,5,0,0,254">
+                      <StylePriority Ref="23" UsePadding="false" />
+                    </Item1>
+                    <Item2 Ref="24" ControlType="XRTableCell" Name="xrTableCell12" Multiline="true" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254">
+                      <ExpressionBindings>
+                        <Item1 Ref="25" EventName="BeforePrint" PropertyName="Text" Expression="[Creditor].[Website]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="26" UsePadding="false" />
+                    </Item2>
+                  </Cells>
+                </Item3>
+                <Item4 Ref="27" ControlType="XRTableRow" Name="xrTableRow7" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="28" ControlType="XRTableCell" Name="xrTableCell13" Multiline="true" Dpi="254" StyleName="Bill_Caption_text" Padding="5,5,0,0,254">
+                      <StylePriority Ref="29" UsePadding="false" />
+                    </Item1>
+                    <Item2 Ref="30" ControlType="XRTableCell" Name="xrTableCell14" Multiline="true" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254">
+                      <ExpressionBindings>
+                        <Item1 Ref="31" EventName="BeforePrint" PropertyName="Text" Expression="[BillDate]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="32" UsePadding="false" />
+                    </Item2>
+                  </Cells>
+                </Item4>
+              </Rows>
+            </Item1>
+            <Item2 Ref="33" ControlType="XRTable" Name="xrTable9" Dpi="254">
+              <Rows>
+                <Item1 Ref="34" ControlType="XRTableRow" Name="xrTableRow30" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="35" ControlType="XRTableCell" Name="xrTableCell42" Multiline="true" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254">
+                      <ExpressionBindings>
+                        <Item1 Ref="36" EventName="BeforePrint" PropertyName="Text" Expression="[Creditor].[FullName]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="37" UsePadding="false" />
+                    </Item1>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="38" ControlType="XRTableRow" Name="xrTableRow31" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="39" ControlType="XRTableCell" Name="xrTableCell43" Multiline="true" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254">
+                      <ExpressionBindings>
+                        <Item1 Ref="40" EventName="BeforePrint" PropertyName="Text" Expression="[Creditor].[Address]" />
+                      </ExpressionBindings>
+                    </Item1>
+                  </Cells>
+                </Item2>
+              </Rows>
+            </Item2>
+            <Item3 Ref="41" ControlType="XRPictureBox" Name="xrPictureBox1" ImageSource="img,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAB1SURBVFhH7c7BCYAwFATRVGID9l9K6tGTlywfHFBIwnzmFAL7Wj+PCWv5NEOySLJIskibsq7i8idKFkkWSRZJFkkWaUHWOPX15aKs+nJRVn25KKu+XFyZ9aZx6rn8iZJFkkWSRZJFkkXalPVTskiySLJIskg3ZaYwCxP0HSEAAAAASUVORK5CYII=" Dpi="254" BorderColor="Black" Borders="None">
+              <StylePriority Ref="42" UseBorderColor="false" UseBorders="false" />
+            </Item3>
+            <Item4 Ref="43" ControlType="XRTable" Name="xrTable4" Dpi="254">
+              <Rows>
+                <Item1 Ref="44" ControlType="XRTableRow" Name="xrTableRow12" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="45" ControlType="XRTableCell" Name="xrTableCell4" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254">
+                      <StylePriority Ref="46" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="47" ControlType="XRTableCell" Name="xrTableCell8" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254">
+                      <ExpressionBindings>
+                        <Item1 Ref="48" EventName="BeforePrint" PropertyName="Text" Expression="[BillNumber]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="49" UseFont="false" UseTextAlignment="false" />
+                    </Item2>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="50" UseFont="false" />
+            </Item4>
+            <Item5 Ref="51" ControlType="XRTable" Name="xrTable3" Dpi="254">
+              <Rows>
+                <Item1 Ref="52" ControlType="XRTableRow" Name="xrTableRow11" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="53" ControlType="XRTableCell" Name="xrTableCell20" Multiline="true" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254">
+                      <ExpressionBindings>
+                        <Item1 Ref="54" EventName="BeforePrint" PropertyName="Text" Expression="[Debtor].[FullName]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="55" UsePadding="false" />
+                    </Item1>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="56" ControlType="XRTableRow" Name="xrTableRow10" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="57" ControlType="XRTableCell" Name="xrTableCell19" Multiline="true" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254">
+                      <ExpressionBindings>
+                        <Item1 Ref="58" EventName="BeforePrint" PropertyName="Text" Expression="[Debtor].[Address]" />
+                      </ExpressionBindings>
+                    </Item1>
+                  </Cells>
+                </Item2>
+              </Rows>
+            </Item5>
+            <Item6 Ref="59" ControlType="XRLabel" Name="xrLabel2" Multiline="true" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254" />
+            <Item7 Ref="60" ControlType="XRTable" Name="table2" Dpi="254" BorderColor="255,52,52,52" Borders="Bottom" BorderWidth="2">
+              <Rows>
+                <Item1 Ref="61" ControlType="XRTableRow" Name="tableRow2" Dpi="254" BorderColor="255,122,126,135">
+                  <Cells>
+                    <Item1 Ref="62" ControlType="XRTableCell" Name="xrTableCell3" Multiline="true" Dpi="254" StyleName="Bill_Caption_text" Padding="5,5,0,0,254">
+                      <StylePriority Ref="63" UsePadding="false" />
+                    </Item1>
+                    <Item2 Ref="64" ControlType="XRTableCell" Name="tableCell6" Multiline="true" Dpi="254" StyleName="Bill_Caption_text" Padding="5,5,0,0,254">
+                      <StylePriority Ref="65" UsePadding="false" />
+                    </Item2>
+                    <Item3 Ref="66" ControlType="XRTableCell" Name="tableCell7" Multiline="true" Dpi="254" StyleName="Bill_Caption_text" Padding="5,5,0,0,254" />
+                    <Item4 Ref="67" ControlType="XRTableCell" Name="tableCell8" Multiline="true" TextAlignment="TopRight" Dpi="254" StyleName="Bill_Caption_text" Padding="5,5,0,0,254">
+                      <StylePriority Ref="68" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="69" ControlType="XRTableCell" Name="tableCell9" Multiline="true" TextAlignment="TopRight" Dpi="254" StyleName="Bill_Caption_text" Padding="5,5,0,0,254" />
+                    <Item6 Ref="70" ControlType="XRTableCell" Name="tableCell10" Multiline="true" TextAlignment="TopRight" Dpi="254" StyleName="Bill_Caption_text" Padding="5,5,0,0,254" />
+                    <Item7 Ref="71" ControlType="XRTableCell" Name="xrTableCell7" Multiline="true" TextAlignment="TopRight" Dpi="254" StyleName="Bill_Caption_text" Padding="5,5,0,0,254">
+                      <StylePriority Ref="72" UsePadding="false" UseTextAlignment="false" />
+                    </Item7>
+                  </Cells>
+                  <StylePriority Ref="73" UseBorderColor="false" />
+                </Item1>
+              </Rows>
+              <StylePriority Ref="74" UseFont="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" />
+            </Item7>
+          </Controls>
+        </Item1>
+      </Controls>
+    </Item2>
+    <Item3 Ref="75" ControlType="BottomMarginBand" Name="BottomMargin" Dpi="254" />
+    <Item4 Ref="76" ControlType="ReportFooterBand" Name="ReportFooter1" PrintAtBottom="true" Dpi="254">
+      <Controls>
+        <Item1 Ref="77" ControlType="XRPanel" Name="QRReceipt" CanGrow="false" Dpi="254" Padding="0,0,0,0,254" Borders="Top">
+          <Controls>
+            <Item1 Ref="78" ControlType="XRLabel" Name="xrLabel5" Multiline="true" TextAlignment="BottomRight" Dpi="254" StyleName="QRReceipt_Caption" Padding="5,5,0,0,254" Borders="None">
+              <StylePriority Ref="79" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="80" ControlType="XRPanel" Name="xrPanel2" CanGrow="false" Dpi="254" Borders="None">
+              <Controls>
+                <Item1 Ref="81" ControlType="XRTable" Name="xrTable7" Dpi="254" Borders="None">
+                  <Rows>
+                    <Item1 Ref="82" ControlType="XRTableRow" Name="xrTableRow8" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="83" ControlType="XRTableCell" Name="xrTableCell17" Multiline="true" Dpi="254" StyleName="QRReceipt_Caption" Padding="5,5,0,0,254">
+                          <StylePriority Ref="84" UseFont="false" UsePadding="false" />
+                        </Item1>
+                      </Cells>
+                    </Item1>
+                    <Item2 Ref="85" ControlType="XRTableRow" Name="xrTableRow9" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="86" ControlType="XRTableCell" Name="xrTableCell21" Multiline="true" Dpi="254" StyleName="QRReceipt_Text" Padding="5,5,0,0,254">
+                          <ExpressionBindings>
+                            <Item1 Ref="87" EventName="BeforePrint" PropertyName="Text" Expression="[QRBillData].[Account]" />
+                          </ExpressionBindings>
+                        </Item1>
+                      </Cells>
+                    </Item2>
+                    <Item3 Ref="88" ControlType="XRTableRow" Name="xrTableRow14" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="89" ControlType="XRTableCell" Name="xrTableCell29" Multiline="true" Dpi="254" StyleName="QRReceipt_Text" Padding="5,5,0,0,254">
+                          <ExpressionBindings>
+                            <Item1 Ref="90" EventName="BeforePrint" PropertyName="Text" Expression="[QRBillData].[Creditor]" />
+                          </ExpressionBindings>
+                          <StylePriority Ref="91" UsePadding="false" />
+                        </Item1>
+                      </Cells>
+                    </Item3>
+                    <Item4 Ref="92" ControlType="XRTableRow" Name="xrTableRow15" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="93" ControlType="XRTableCell" Name="xrTableCell35" Multiline="true" Dpi="254" StyleName="QRReceipt_Caption" Padding="5,5,0,0,254">
+                          <StylePriority Ref="94" UseFont="false" UsePadding="false" />
+                        </Item1>
+                      </Cells>
+                    </Item4>
+                    <Item5 Ref="95" ControlType="XRTableRow" Name="xrTableRow23" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="96" ControlType="XRTableCell" Name="xrTableCell37" Multiline="true" Dpi="254" StyleName="QRReceipt_Text" Padding="5,5,0,0,254">
+                          <ExpressionBindings>
+                            <Item1 Ref="97" EventName="BeforePrint" PropertyName="Text" Expression="[QRBillData].[ReferenceNumber]" />
+                          </ExpressionBindings>
+                          <StylePriority Ref="98" UsePadding="false" />
+                        </Item1>
+                      </Cells>
+                    </Item5>
+                    <Item6 Ref="99" ControlType="XRTableRow" Name="xrTableRow32" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="100" ControlType="XRTableCell" Name="xrTableCell51" Multiline="true" Dpi="254" StyleName="QRReceipt_Caption" Padding="5,5,0,0,254">
+                          <StylePriority Ref="101" UseFont="false" UsePadding="false" />
+                        </Item1>
+                      </Cells>
+                    </Item6>
+                    <Item7 Ref="102" ControlType="XRTableRow" Name="xrTableRow33" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="103" ControlType="XRTableCell" Name="xrTableCell52" Multiline="true" Dpi="254" StyleName="QRReceipt_Text" Padding="5,5,0,0,254">
+                          <ExpressionBindings>
+                            <Item1 Ref="104" EventName="BeforePrint" PropertyName="Text" Expression="[QRBillData].[Debtor]" />
+                          </ExpressionBindings>
+                          <StylePriority Ref="105" UsePadding="false" />
+                        </Item1>
+                      </Cells>
+                    </Item7>
+                  </Rows>
+                  <StylePriority Ref="106" UseBorders="false" />
+                </Item1>
+              </Controls>
+              <StylePriority Ref="107" UseBorders="false" />
+            </Item2>
+            <Item3 Ref="108" ControlType="XRTable" Name="xrTable10" Dpi="254">
+              <Rows>
+                <Item1 Ref="109" ControlType="XRTableRow" Name="xrTableRow2" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="110" ControlType="XRTableCell" Name="xrTableCell45" Multiline="true" Dpi="254" StyleName="QRReceipt_Caption" Padding="0,0,0,0,254" Borders="None">
+                      <StylePriority Ref="111" UsePadding="false" UseBorders="false" />
+                    </Item1>
+                    <Item2 Ref="112" ControlType="XRTableCell" Name="xrTableCell46" Multiline="true" Dpi="254" StyleName="QRReceipt_Caption" Padding="0,0,0,0,254" Borders="None">
+                      <StylePriority Ref="113" UsePadding="false" UseBorders="false" />
+                    </Item2>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="114" ControlType="XRTableRow" Name="xrTableRow4" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="115" ControlType="XRTableCell" Name="xrTableCell47" Multiline="true" Dpi="254" StyleName="QRReceipt_Text" Padding="0,0,0,0,254" Borders="None">
+                      <ExpressionBindings>
+                        <Item1 Ref="116" EventName="BeforePrint" PropertyName="Text" Expression="[QRBillData].[Currency]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="117" UsePadding="false" UseBorders="false" />
+                    </Item1>
+                    <Item2 Ref="118" ControlType="XRTableCell" Name="xrTableCell48" Multiline="true" Dpi="254" StyleName="QRReceipt_Text" Padding="0,0,0,0,254" Borders="None">
+                      <ExpressionBindings>
+                        <Item1 Ref="119" EventName="BeforePrint" PropertyName="Text" Expression="[QRBillData].[Amount]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="120" UsePadding="false" UseBorders="false" />
+                    </Item2>
+                  </Cells>
+                </Item2>
+              </Rows>
+            </Item3>
+            <Item4 Ref="121" ControlType="XRLabel" Name="xrLabel4" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+              <StylePriority Ref="122" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item4>
+          </Controls>
+          <StylePriority Ref="123" UsePadding="false" UseBorders="false" />
+        </Item1>
+        <Item2 Ref="124" ControlType="XRPanel" Name="QRbill" CanGrow="false" Dpi="254" Borders="Left, Top">
+          <Controls>
+            <Item1 Ref="125" ControlType="XRPanel" Name="panel2" Dpi="254" Borders="None">
+              <Controls>
+                <Item1 Ref="126" ControlType="XRTable" Name="xrTable5" Dpi="254" Borders="None">
+                  <Rows>
+                    <Item1 Ref="127" ControlType="XRTableRow" Name="xrTableRow19" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="128" ControlType="XRTableCell" Name="xrTableCell25" Multiline="true" Dpi="254" StyleName="QRBill_Caption" Padding="5,5,0,0,254">
+                          <StylePriority Ref="129" UseFont="false" UsePadding="false" />
+                        </Item1>
+                      </Cells>
+                    </Item1>
+                    <Item2 Ref="130" ControlType="XRTableRow" Name="xrTableRow13" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="131" ControlType="XRTableCell" Name="xrTableCell16" Multiline="true" Dpi="254" StyleName="QRBill_Text" Padding="5,5,0,0,254">
+                          <ExpressionBindings>
+                            <Item1 Ref="132" EventName="BeforePrint" PropertyName="Text" Expression="[QRBillData].[Account]" />
+                          </ExpressionBindings>
+                        </Item1>
+                      </Cells>
+                    </Item2>
+                    <Item3 Ref="133" ControlType="XRTableRow" Name="xrTableRow20" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="134" ControlType="XRTableCell" Name="xrTableCell26" Multiline="true" Dpi="254" StyleName="QRBill_Text" Padding="5,5,0,0,254">
+                          <ExpressionBindings>
+                            <Item1 Ref="135" EventName="BeforePrint" PropertyName="Text" Expression="[QRBillData].[Creditor]" />
+                          </ExpressionBindings>
+                          <StylePriority Ref="136" UsePadding="false" />
+                        </Item1>
+                      </Cells>
+                    </Item3>
+                    <Item4 Ref="137" ControlType="XRTableRow" Name="xrTableRow24" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="138" ControlType="XRTableCell" Name="xrTableCell30" Multiline="true" Dpi="254" StyleName="QRBill_Caption" Padding="5,5,0,0,254">
+                          <StylePriority Ref="139" UseFont="false" UsePadding="false" />
+                        </Item1>
+                      </Cells>
+                    </Item4>
+                    <Item5 Ref="140" ControlType="XRTableRow" Name="xrTableRow21" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="141" ControlType="XRTableCell" Name="xrTableCell27" Multiline="true" Dpi="254" StyleName="QRBill_Text" Padding="5,5,0,0,254">
+                          <ExpressionBindings>
+                            <Item1 Ref="142" EventName="BeforePrint" PropertyName="Text" Expression="[QRBillData].[ReferenceNumber]" />
+                          </ExpressionBindings>
+                          <StylePriority Ref="143" UsePadding="false" />
+                        </Item1>
+                      </Cells>
+                    </Item5>
+                    <Item6 Ref="144" ControlType="XRTableRow" Name="xrTableRow22" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="145" ControlType="XRTableCell" Name="xrTableCell28" Multiline="true" Dpi="254" StyleName="QRBill_Caption" Padding="5,5,0,0,254">
+                          <StylePriority Ref="146" UseFont="false" UsePadding="false" />
+                        </Item1>
+                      </Cells>
+                    </Item6>
+                    <Item7 Ref="147" ControlType="XRTableRow" Name="xrTableRow18" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="148" ControlType="XRTableCell" Name="xrTableCell24" Multiline="true" Dpi="254" StyleName="QRBill_Text" Padding="5,5,0,0,254">
+                          <ExpressionBindings>
+                            <Item1 Ref="149" EventName="BeforePrint" PropertyName="Text" Expression="[QRBillData].[AdditionalInformation]" />
+                          </ExpressionBindings>
+                          <StylePriority Ref="150" UsePadding="false" />
+                        </Item1>
+                      </Cells>
+                    </Item7>
+                    <Item8 Ref="151" ControlType="XRTableRow" Name="xrTableRow16" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="152" ControlType="XRTableCell" Name="xrTableCell22" Multiline="true" Dpi="254" StyleName="QRBill_Caption" Padding="5,5,0,0,254">
+                          <StylePriority Ref="153" UseFont="false" UsePadding="false" />
+                        </Item1>
+                      </Cells>
+                    </Item8>
+                    <Item9 Ref="154" ControlType="XRTableRow" Name="xrTableRow17" Dpi="254">
+                      <Cells>
+                        <Item1 Ref="155" ControlType="XRTableCell" Name="xrTableCell23" Multiline="true" Dpi="254" StyleName="QRBill_Text" Padding="5,5,0,0,254">
+                          <ExpressionBindings>
+                            <Item1 Ref="156" EventName="BeforePrint" PropertyName="Text" Expression="[QRBillData].[Debtor]" />
+                          </ExpressionBindings>
+                          <StylePriority Ref="157" UsePadding="false" />
+                        </Item1>
+                      </Cells>
+                    </Item9>
+                  </Rows>
+                  <StylePriority Ref="158" UseBorders="false" />
+                </Item1>
+              </Controls>
+              <StylePriority Ref="159" UseBorders="false" />
+            </Item1>
+            <Item2 Ref="160" ControlType="XRTable" Name="xrTable6" Dpi="254">
+              <Rows>
+                <Item1 Ref="161" ControlType="XRTableRow" Name="xrTableRow26" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="162" ControlType="XRTableCell" Name="xrTableCell33" Multiline="true" Dpi="254" StyleName="QRBill_Caption" Padding="5,5,0,0,254" Borders="None">
+                      <StylePriority Ref="163" UsePadding="false" UseBorders="false" />
+                    </Item1>
+                    <Item2 Ref="164" ControlType="XRTableCell" Name="xrTableCell34" Multiline="true" Dpi="254" StyleName="QRBill_Caption" Padding="5,5,0,0,254" Borders="None">
+                      <StylePriority Ref="165" UsePadding="false" UseBorders="false" />
+                    </Item2>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="166" ControlType="XRTableRow" Name="xrTableRow25" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="167" ControlType="XRTableCell" Name="xrTableCell31" Multiline="true" Dpi="254" StyleName="QRBill_Text" Padding="5,5,0,0,254" Borders="None">
+                      <ExpressionBindings>
+                        <Item1 Ref="168" EventName="BeforePrint" PropertyName="Text" Expression="[QRBillData].[Currency]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="169" UseBorders="false" />
+                    </Item1>
+                    <Item2 Ref="170" ControlType="XRTableCell" Name="xrTableCell32" Multiline="true" Dpi="254" StyleName="QRBill_Text" Padding="5,5,0,0,254" Borders="None">
+                      <ExpressionBindings>
+                        <Item1 Ref="171" EventName="BeforePrint" PropertyName="Text" Expression="[QRBillData].[Amount]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="172" UseBorders="false" />
+                    </Item2>
+                  </Cells>
+                </Item2>
+              </Rows>
+            </Item2>
+            <Item3 Ref="173" ControlType="XRLabel" Name="label45" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Padding="5,5,0,0,254" Borders="None">
+              <StylePriority Ref="174" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="175" ControlType="XRBarCode" Name="barCode2" Module="3.8" ShowText="false" Dpi="254" Borders="None">
+              <Symbology Ref="176" Name="QRCode" CompactionMode="Byte" ErrorCorrectionLevel="M" Version="Version25" Logo="svg,77u/PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHN0eWxlPSJzdHJva2U6cmdiKDI1NSwgMjU1LCAyNTUpIiAvPg0KICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgyLCAwLCAwLCAxLjk5NTgsIDAsIDAuMDMyNSkiPg0KICAgIDxwYXRoIGQ9Ik0gMTMgNi40ODYgTCAxMyA5LjUxNSBMIDkuNSA5LjUxNSBMIDkuNSAxMy4wMTEgTCA2LjUgMTIuOTkgTCA2LjUgOS41MTUgTCAzIDkuNTE1IEwgMyA2LjQ4NiBMIDYuNSA2LjQ4NiBMIDYuNSAyLjk5IEwgOS41IDMuMDExIEwgOS41IDYuNDg2IEwgMTMgNi40ODYgWiIgc3R5bGU9ImZpbGw6cmdiKDI1NSwgMjU1LCAyNTUpO3N0cm9rZTpyZ2IoMjU1LCAyNTUsIDI1NSkiIC8+DQogIDwvZz4NCjwvc3ZnPg==" />
+              <ExpressionBindings>
+                <Item1 Ref="177" EventName="BeforePrint" PropertyName="Text" />
+                <Item2 Ref="178" EventName="BeforePrint" PropertyName="Text" Expression="[QRBillData].[QRCodeData]" />
+              </ExpressionBindings>
+              <StylePriority Ref="179" UsePadding="false" UseBorders="false" />
+            </Item4>
+          </Controls>
+          <StylePriority Ref="180" UseBorders="false" />
+        </Item2>
+      </Controls>
+    </Item4>
+    <Item5 Ref="181" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataMember="BillItems" DataSource="#Ref-0" Dpi="254">
+      <Bands>
+        <Item1 Ref="182" ControlType="DetailBand" Name="Detail1" Dpi="254">
+          <Controls>
+            <Item1 Ref="183" ControlType="XRTable" Name="xrTable8" Dpi="254" OddStyleName="Bill_Table_Odd_Row">
+              <Rows>
+                <Item1 Ref="184" ControlType="XRTableRow" Name="xrTableRow29" Dpi="254">
+                  <Cells>
+                    <Item1 Ref="185" ControlType="XRTableCell" Name="xrTableCell15" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="186" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="187" ControlType="XRTableCell" Name="xrTableCell41" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254">
+                      <Summary Ref="188" Running="Report" />
+                      <ExpressionBindings>
+                        <Item1 Ref="189" EventName="BeforePrint" PropertyName="Text" Expression="sumRecordNumber([Description])" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="190" UsePadding="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="191" ControlType="XRTableCell" Name="xrTableCell36" Multiline="true" TextAlignment="MiddleLeft" Dpi="254" StyleName="Bill_Common_text" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="192" EventName="BeforePrint" PropertyName="Text" Expression="[Description]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="193" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="194" ControlType="XRTableCell" Name="xrTableCell38" Multiline="true" TextAlignment="MiddleRight" Dpi="254" StyleName="Bill_Common_text" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="195" EventName="BeforePrint" PropertyName="Text" Expression="[Amount]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="196" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="197" ControlType="XRTableCell" Name="xrTableCell39" Multiline="true" TextAlignment="MiddleRight" Dpi="254" StyleName="Bill_Common_text" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="198" EventName="BeforePrint" PropertyName="Text" Expression="[PricePerUnit]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="199" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="200" ControlType="XRTableCell" Name="xrTableCell40" Multiline="true" TextAlignment="MiddleRight" Dpi="254" StyleName="Bill_Common_text" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="201" EventName="BeforePrint" PropertyName="Text" Expression="[TotalPrice]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="202" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="203" ControlType="XRTableCell" Name="xrTableCell18" Multiline="true" TextAlignment="MiddleRight" Dpi="254" Padding="5,5,0,0,254">
+                      <StylePriority Ref="204" UsePadding="false" UseTextAlignment="false" />
+                    </Item7>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="205" ControlType="ReportFooterBand" Name="ReportFooter" Dpi="254">
+          <Controls>
+            <Item1 Ref="206" ControlType="XRPanel" Name="xrPanel1" Dpi="254">
+              <Controls>
+                <Item1 Ref="207" ControlType="XRLabel" Name="xrLabel6" Multiline="true" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254" />
+                <Item2 Ref="208" ControlType="XRTable" Name="xrTable11" Dpi="254">
+                  <Rows>
+                    <Item1 Ref="209" ControlType="XRTableRow" Name="xrTableRow27" Dpi="254" BorderColor="255,122,126,135" Borders="Top" BorderWidth="2">
+                      <Cells>
+                        <Item1 Ref="210" ControlType="XRTableCell" Name="xrTableCell49" Multiline="true" TextAlignment="MiddleRight" Dpi="254" StyleName="Bill_Caption_text" Padding="5,5,0,0,254">
+                          <StylePriority Ref="211" UseFont="false" UseTextAlignment="false" />
+                        </Item1>
+                        <Item2 Ref="212" ControlType="XRTableCell" Name="xrTableCell50" Multiline="true" TextAlignment="MiddleRight" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254">
+                          <ExpressionBindings>
+                            <Item1 Ref="213" EventName="BeforePrint" PropertyName="Text" Expression="Sum([TotalPrice])" />
+                          </ExpressionBindings>
+                          <StylePriority Ref="214" UseFont="false" UseTextAlignment="false" />
+                        </Item2>
+                        <Item3 Ref="215" ControlType="XRTableCell" Name="xrTableCell53" Multiline="true" TextAlignment="MiddleRight" Dpi="254" Padding="5,5,0,0,254">
+                          <StylePriority Ref="216" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                        </Item3>
+                      </Cells>
+                      <StylePriority Ref="217" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" />
+                    </Item1>
+                  </Rows>
+                </Item2>
+                <Item3 Ref="218" ControlType="XRLabel" Name="xrLabel7" Multiline="true" Dpi="254" StyleName="Bill_Common_text" Padding="5,5,0,0,254" />
+              </Controls>
+            </Item1>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item5>
+    <Item6 Ref="219" ControlType="PageHeaderBand" Name="PageHeader" Dpi="254">
+      <Controls>
+        <Item1 Ref="220" ControlType="XRLabel" Name="xrLabel1" Multiline="true" TextAlignment="MiddleCenter" Dpi="254" ForeColor="255,0,102,204" Padding="5,5,0,0,254" Borders="None">
+          <StylePriority Ref="221" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+    </Item6>
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="222" Name="QRBill_Caption" BorderStyle="Inset" Font="Arial, 8pt, style=Bold" StringFormat="Near;Far;0;None;Character;GenericDefault" TextAlignment="BottomLeft" />
+    <Item2 Ref="223" Name="QRBill_Text" BorderStyle="Inset" Font="Arial, 10pt" StringFormat="Near;Center;0;None;Character;GenericDefault" TextAlignment="MiddleLeft" />
+    <Item3 Ref="224" Name="Bill_Caption_text" BorderStyle="Inset" Font="Arial, 9.75pt, style=Bold" ForeColor="255,157,161,168" StringFormat="Near;Near;0;None;Character;GenericDefault" />
+    <Item4 Ref="225" Name="Bill_Table_Odd_Row" BorderStyle="Inset" BackColor="255,247,248,250" StringFormat="Near;Near;0;None;Character;GenericDefault" />
+    <Item5 Ref="226" Name="Bill_Common_text" BorderStyle="Inset" ForeColor="255,52,52,52" StringFormat="Near;Near;0;None;Character;GenericDefault" />
+    <Item6 Ref="227" Name="QRReceipt_Caption" BorderStyle="Inset" Font="Arial, 6pt, style=Bold" StringFormat="Near;Far;0;None;Character;GenericDefault" TextAlignment="BottomLeft" />
+    <Item7 Ref="228" Name="QRReceipt_Text" BorderStyle="Inset" Font="Arial, 8pt" StringFormat="Near;Center;0;None;Character;GenericDefault" TextAlignment="MiddleLeft" />
+  </StyleSheet>
+  <LocalizationItems>
+    <Item1 Ref="229" Component="#Ref-175" Culture="Default" Path="LocationFloat" Data="50,187.4666" />
+    <Item2 Ref="230" Component="#Ref-175" Culture="Default" Path="SizeF" Data="460,460" />
+    <Item3 Ref="231" Component="#Ref-75" Culture="Default" Path="HeightF" Data="1" />
+    <Item4 Ref="232" Component="#Ref-6" Culture="Default" Path="HeightF" Data="843" />
+    <Item5 Ref="233" Component="#Ref-182" Culture="Default" Path="HeightF" Data="69" />
+    <Item6 Ref="234" Component="#Ref-173" Culture="Default" Path="Font" Data="Arial, 11pt, style=Bold" />
+    <Item7 Ref="235" Component="#Ref-173" Culture="Default" Path="LocationFloat" Data="49.99994,52.3542" />
+    <Item8 Ref="236" Component="#Ref-173" Culture="de" Path="LocationFloat" Data="50,52.35419" />
+    <Item9 Ref="237" Component="#Ref-173" Culture="fr" Path="LocationFloat" Data="50,52.35419" />
+    <Item10 Ref="238" Component="#Ref-173" Culture="it" Path="LocationFloat" Data="50,52.35419" />
+    <Item11 Ref="239" Component="#Ref-173" Culture="Default" Path="SizeF" Data="460.0001,62.46655" />
+    <Item12 Ref="240" Component="#Ref-173" Culture="de" Path="SizeF" Data="460,62.46656" />
+    <Item13 Ref="241" Component="#Ref-173" Culture="fr" Path="SizeF" Data="460,62.46656" />
+    <Item14 Ref="242" Component="#Ref-173" Culture="it" Path="SizeF" Data="460,62.46656" />
+    <Item15 Ref="243" Component="#Ref-173" Culture="Default" Path="Text" Data="Payment part" />
+    <Item16 Ref="244" Component="#Ref-173" Culture="de" Path="Text" Data="Zahlteil" />
+    <Item17 Ref="245" Component="#Ref-173" Culture="fr" Path="Text" Data="Section paiement" />
+    <Item18 Ref="246" Component="#Ref-173" Culture="it" Path="Text" Data="Sezione pagamento" />
+    <Item19 Ref="247" Component="#Ref-4" Culture="Default" Path="Description" Data="Language" />
+    <Item20 Ref="248" Component="#Ref-219" Culture="Default" Path="HeightF" Data="250" />
+    <Item21 Ref="249" Component="#Ref-125" Culture="Default" Path="LocationFloat" Data="560,50" />
+    <Item22 Ref="250" Component="#Ref-125" Culture="Default" Path="SizeF" Data="762,658.4818" />
+    <Item23 Ref="251" Component="#Ref-7" Culture="Default" Path="LocationFloat" Data="247,0" />
+    <Item24 Ref="252" Component="#Ref-7" Culture="Default" Path="SizeF" Data="1620.111,843" />
+    <Item25 Ref="253" Component="#Ref-124" Culture="Default" Path="LocationFloat" Data="620,0" />
+    <Item26 Ref="254" Component="#Ref-124" Culture="Default" Path="SizeF" Data="1480,1050" />
+    <Item27 Ref="255" Component="#Ref-77" Culture="Default" Path="LocationFloat" Data="0,0" />
+    <Item28 Ref="256" Component="#Ref-77" Culture="Default" Path="SizeF" Data="619.9999,1050" />
+    <Item29 Ref="257" Component="#Ref-205" Culture="Default" Path="HeightF" Data="361.8483" />
+    <Item30 Ref="258" Component="#Ref-76" Culture="Default" Path="HeightF" Data="1050" />
+    <Item31 Ref="259" Component="#Ref-1" Culture="Default" Path="DisplayName" Data="Swiss QR Bill" />
+    <Item32 Ref="260" Component="#Ref-1" Culture="Default" Path="Font" Data="Arial, 9.75pt" />
+    <Item33 Ref="261" Component="#Ref-1" Culture="Default" Path="Language.LookUpValues[0].Description" Data="" />
+    <Item34 Ref="262" Component="#Ref-1" Culture="en" Path="Language.LookUpValues[0].Description" Data="English" />
+    <Item35 Ref="263" Component="#Ref-1" Culture="Default" Path="Language.LookUpValues[1].Description" Data="" />
+    <Item36 Ref="264" Component="#Ref-1" Culture="en" Path="Language.LookUpValues[1].Description" Data="German" />
+    <Item37 Ref="265" Component="#Ref-1" Culture="Default" Path="Language.LookUpValues[2].Description" Data="" />
+    <Item38 Ref="266" Component="#Ref-1" Culture="en" Path="Language.LookUpValues[2].Description" Data="French" />
+    <Item39 Ref="267" Component="#Ref-1" Culture="Default" Path="Language.LookUpValues[3].Description" Data="" />
+    <Item40 Ref="268" Component="#Ref-1" Culture="en" Path="Language.LookUpValues[3].Description" Data="Italian" />
+    <Item41 Ref="269" Component="#Ref-1" Culture="Default" Path="Margins" Data="0, 0, 0, 1" />
+    <Item42 Ref="270" Component="#Ref-1" Culture="Default" Path="PaperKind" Data="A4" />
+    <Item43 Ref="271" Component="#Ref-1" Culture="en" Path="PaperKind" Data="A4" />
+    <Item44 Ref="272" Component="#Ref-60" Culture="Default" Path="Font" Data="Arial, 9.75pt, style=Bold" />
+    <Item45 Ref="273" Component="#Ref-60" Culture="Default" Path="LocationFloat" Data="4,785" />
+    <Item46 Ref="274" Component="#Ref-60" Culture="Default" Path="SizeF" Data="1594.944,55" />
+    <Item47 Ref="275" Component="#Ref-70" Culture="Default" Path="Text" Data="Total / CHF" />
+    <Item48 Ref="276" Component="#Ref-70" Culture="Default" Path="Weight" Data="0.19831058265581425" />
+    <Item49 Ref="277" Component="#Ref-64" Culture="Default" Path="Text" Data="Item" />
+    <Item50 Ref="278" Component="#Ref-64" Culture="Default" Path="Weight" Data="0.10957741447328723" />
+    <Item51 Ref="279" Component="#Ref-66" Culture="Default" Path="Text" Data="Description" />
+    <Item52 Ref="280" Component="#Ref-66" Culture="Default" Path="Weight" Data="0.38006628284923649" />
+    <Item53 Ref="281" Component="#Ref-67" Culture="Default" Path="Text" Data="Hours" />
+    <Item54 Ref="282" Component="#Ref-67" Culture="Default" Path="Weight" Data="0.13087735548097323" />
+    <Item55 Ref="283" Component="#Ref-69" Culture="Default" Path="Text" Data="Rate per hour / CHF" />
+    <Item56 Ref="284" Component="#Ref-69" Culture="Default" Path="Weight" Data="0.35736028131103592" />
+    <Item57 Ref="285" Component="#Ref-61" Culture="Default" Path="Weight" Data="0.48208887438992409" />
+    <Item58 Ref="286" Component="#Ref-5" Culture="Default" Path="HeightF" Data="0" />
+    <Item59 Ref="287" Component="#Ref-220" Culture="Default" Path="Font" Data="Arial, 9.75pt, style=Bold, Underline" />
+    <Item60 Ref="288" Component="#Ref-220" Culture="Default" Path="LocationFloat" Data="251,75" />
+    <Item61 Ref="289" Component="#Ref-220" Culture="Default" Path="SizeF" Data="1569.46,115" />
+    <Item62 Ref="290" Component="#Ref-59" Culture="Default" Path="LocationFloat" Data="3.051758E-05,549.9999" />
+    <Item63 Ref="291" Component="#Ref-59" Culture="Default" Path="SizeF" Data="1620.111,91.0116" />
+    <Item64 Ref="292" Component="#Ref-59" Culture="Default" Path="Text" Data="Dear Ms. Rutschmann,&#xD;&#xA;Here is your invoice." />
+    <Item65 Ref="293" Component="#Ref-121" Culture="Default" Path="Font" Data="Arial, 11pt, style=Bold" />
+    <Item66 Ref="294" Component="#Ref-121" Culture="Default" Path="LocationFloat" Data="50,50.00002" />
+    <Item67 Ref="295" Component="#Ref-121" Culture="de" Path="LocationFloat" Data="50,50.00002" />
+    <Item68 Ref="296" Component="#Ref-121" Culture="fr" Path="LocationFloat" Data="49.99999,50.00005" />
+    <Item69 Ref="297" Component="#Ref-121" Culture="it" Path="LocationFloat" Data="49.99999,50.00005" />
+    <Item70 Ref="298" Component="#Ref-121" Culture="Default" Path="SizeF" Data="520.0115,62.46655" />
+    <Item71 Ref="299" Component="#Ref-121" Culture="de" Path="SizeF" Data="515.861,62.46655" />
+    <Item72 Ref="300" Component="#Ref-121" Culture="fr" Path="SizeF" Data="515.861,62.46656" />
+    <Item73 Ref="301" Component="#Ref-121" Culture="it" Path="SizeF" Data="515.861,62.46656" />
+    <Item74 Ref="302" Component="#Ref-121" Culture="Default" Path="Text" Data="Receipt" />
+    <Item75 Ref="303" Component="#Ref-121" Culture="de" Path="Text" Data="Empfangsschein" />
+    <Item76 Ref="304" Component="#Ref-121" Culture="fr" Path="Text" Data="Récépissé" />
+    <Item77 Ref="305" Component="#Ref-121" Culture="it" Path="Text" Data="Ricevuta" />
+    <Item78 Ref="306" Component="#Ref-78" Culture="Default" Path="LocationFloat" Data="49.99998,891.4" />
+    <Item79 Ref="307" Component="#Ref-78" Culture="Default" Path="SizeF" Data="520,29.02008" />
+    <Item80 Ref="308" Component="#Ref-78" Culture="Default" Path="Text" Data="Acceptance point" />
+    <Item81 Ref="309" Component="#Ref-78" Culture="de" Path="Text" Data="Annahmestelle" />
+    <Item82 Ref="310" Component="#Ref-78" Culture="fr" Path="Text" Data="Point de dépôt" />
+    <Item83 Ref="311" Component="#Ref-78" Culture="it" Path="Text" Data="Punto di accettazione" />
+    <Item84 Ref="312" Component="#Ref-207" Culture="Default" Path="LocationFloat" Data="0,195" />
+    <Item85 Ref="313" Component="#Ref-207" Culture="Default" Path="SizeF" Data="386.2916,92.81583" />
+    <Item86 Ref="314" Component="#Ref-207" Culture="Default" Path="Text" Data="Yours sincerely,&#xD;&#xA;Henri Schmid" />
+    <Item87 Ref="315" Component="#Ref-218" Culture="Default" Path="LocationFloat" Data="0,130" />
+    <Item88 Ref="316" Component="#Ref-218" Culture="Default" Path="SizeF" Data="771.3105,57.4782" />
+    <Item89 Ref="317" Component="#Ref-218" Culture="Default" Path="Text" Data="This invoice should be paid within 30 days." />
+    <Item90 Ref="318" Component="#Ref-206" Culture="Default" Path="LocationFloat" Data="247,0" />
+    <Item91 Ref="319" Component="#Ref-206" Culture="Default" Path="SizeF" Data="1620.111,361.8483" />
+    <Item92 Ref="320" Component="#Ref-80" Culture="Default" Path="LocationFloat" Data="49.99999,132.4667" />
+    <Item93 Ref="321" Component="#Ref-80" Culture="Default" Path="SizeF" Data="520.0115,447.4619" />
+    <Item94 Ref="322" Component="#Ref-41" Culture="Default" Path="LocationFloat" Data="4,4" />
+    <Item95 Ref="323" Component="#Ref-41" Culture="Default" Path="SizeF" Data="131.3295,133.706" />
+    <Item96 Ref="324" Component="#Ref-108" Culture="Default" Path="LocationFloat" Data="49.99999,680.0001" />
+    <Item97 Ref="325" Component="#Ref-108" Culture="Default" Path="SizeF" Data="520.0115,70" />
+    <Item98 Ref="326" Component="#Ref-208" Culture="Default" Path="LocationFloat" Data="4,5" />
+    <Item99 Ref="327" Component="#Ref-208" Culture="Default" Path="SizeF" Data="1594.944,63.5" />
+    <Item100 Ref="328" Component="#Ref-8" Culture="Default" Path="LocationFloat" Data="0,157" />
+    <Item101 Ref="329" Component="#Ref-8" Culture="Default" Path="SizeF" Data="949.8542,240.5" />
+    <Item102 Ref="330" Component="#Ref-51" Culture="Default" Path="LocationFloat" Data="1099,0" />
+    <Item103 Ref="331" Component="#Ref-51" Culture="Default" Path="SizeF" Data="521.111,127" />
+    <Item104 Ref="332" Component="#Ref-43" Culture="Default" Path="LocationFloat" Data="0,680" />
+    <Item105 Ref="333" Component="#Ref-43" Culture="Default" Path="SizeF" Data="508,79.375" />
+    <Item106 Ref="334" Component="#Ref-126" Culture="Default" Path="LocationFloat" Data="0,0" />
+    <Item107 Ref="335" Component="#Ref-126" Culture="Default" Path="SizeF" Data="717.1587,455" />
+    <Item108 Ref="336" Component="#Ref-160" Culture="Default" Path="LocationFloat" Data="50,680" />
+    <Item109 Ref="337" Component="#Ref-160" Culture="Default" Path="SizeF" Data="460,70" />
+    <Item110 Ref="338" Component="#Ref-81" Culture="Default" Path="LocationFloat" Data="0,0" />
+    <Item111 Ref="339" Component="#Ref-81" Culture="Default" Path="SizeF" Data="515.8609,355" />
+    <Item112 Ref="340" Component="#Ref-183" Culture="Default" Path="LocationFloat" Data="251,0" />
+    <Item113 Ref="341" Component="#Ref-183" Culture="Default" Path="SizeF" Data="1594.944,69" />
+    <Item114 Ref="342" Component="#Ref-33" Culture="Default" Path="LocationFloat" Data="200,0" />
+    <Item115 Ref="343" Component="#Ref-33" Culture="Default" Path="SizeF" Data="758.8168,127" />
+    <Item116 Ref="344" Component="#Ref-12" Culture="Default" Path="Text" Data="xrTableCell10" />
+    <Item117 Ref="345" Component="#Ref-12" Culture="Default" Path="Weight" Data="1.5810411946113154" />
+    <Item118 Ref="346" Component="#Ref-22" Culture="Default" Path="Font" Data="Arial, 9.75pt, style=Bold" />
+    <Item119 Ref="347" Component="#Ref-22" Culture="Default" Path="Text" Data="Internet:" />
+    <Item120 Ref="348" Component="#Ref-22" Culture="Default" Path="Weight" Data="0.41895880538868469" />
+    <Item121 Ref="349" Component="#Ref-24" Culture="Default" Path="Text" Data="xrTableCell12" />
+    <Item122 Ref="350" Component="#Ref-24" Culture="Default" Path="Weight" Data="1.5810411946113154" />
+    <Item123 Ref="351" Component="#Ref-28" Culture="Default" Path="Font" Data="Arial, 9.75pt, style=Bold" />
+    <Item124 Ref="352" Component="#Ref-28" Culture="Default" Path="Text" Data="Date:" />
+    <Item125 Ref="353" Component="#Ref-28" Culture="Default" Path="Weight" Data="0.41895880538868469" />
+    <Item126 Ref="354" Component="#Ref-30" Culture="Default" Path="TextFormatString" Data="{0:d/M/yyyy}" />
+    <Item127 Ref="355" Component="#Ref-30" Culture="Default" Path="Weight" Data="1.5810411946113154" />
+    <Item128 Ref="356" Component="#Ref-185" Culture="Default" Path="Weight" Data="0.014410900263914381" />
+    <Item129 Ref="357" Component="#Ref-131" Culture="Default" Path="Text" Data="xrTableCell16" />
+    <Item130 Ref="358" Component="#Ref-131" Culture="Default" Path="Weight" Data="1" />
+    <Item131 Ref="359" Component="#Ref-83" Culture="Default" Path="Text" Data="Account / Payable to" />
+    <Item132 Ref="360" Component="#Ref-83" Culture="de" Path="Text" Data="Konto / Zahlbar an" />
+    <Item133 Ref="361" Component="#Ref-83" Culture="fr" Path="Text" Data="Compte / Payable à" />
+    <Item134 Ref="362" Component="#Ref-83" Culture="it" Path="Text" Data="Conto / Pagabile a" />
+    <Item135 Ref="363" Component="#Ref-83" Culture="Default" Path="Weight" Data="1" />
+    <Item136 Ref="364" Component="#Ref-203" Culture="Default" Path="Weight" Data="0.0095608846128444058" />
+    <Item137 Ref="365" Component="#Ref-57" Culture="Default" Path="Text" Data="xrTableCell19" />
+    <Item138 Ref="366" Component="#Ref-57" Culture="Default" Path="Weight" Data="1" />
+    <Item139 Ref="367" Component="#Ref-53" Culture="Default" Path="Text" Data="xrTableCell20" />
+    <Item140 Ref="368" Component="#Ref-53" Culture="Default" Path="Weight" Data="1" />
+    <Item141 Ref="369" Component="#Ref-86" Culture="Default" Path="Text" Data="xrTableCell16" />
+    <Item142 Ref="370" Component="#Ref-86" Culture="Default" Path="Weight" Data="1" />
+    <Item143 Ref="371" Component="#Ref-152" Culture="Default" Path="Text" Data="Payable by" />
+    <Item144 Ref="372" Component="#Ref-152" Culture="de" Path="Text" Data="Zahlbar durch" />
+    <Item145 Ref="373" Component="#Ref-152" Culture="fr" Path="Text" Data="Payable par" />
+    <Item146 Ref="374" Component="#Ref-152" Culture="it" Path="Text" Data="Pagabile da" />
+    <Item147 Ref="375" Component="#Ref-152" Culture="Default" Path="Weight" Data="1" />
+    <Item148 Ref="376" Component="#Ref-155" Culture="Default" Path="Text" Data="xrTableCell23" />
+    <Item149 Ref="377" Component="#Ref-155" Culture="Default" Path="Weight" Data="1" />
+    <Item150 Ref="378" Component="#Ref-148" Culture="Default" Path="Text" Data="xrTableCell24" />
+    <Item151 Ref="379" Component="#Ref-148" Culture="Default" Path="Weight" Data="1" />
+    <Item152 Ref="380" Component="#Ref-128" Culture="Default" Path="Text" Data="Account / Payable to" />
+    <Item153 Ref="381" Component="#Ref-128" Culture="de" Path="Text" Data="Konto / Zahlbar an" />
+    <Item154 Ref="382" Component="#Ref-128" Culture="fr" Path="Text" Data="Compte / Payable à" />
+    <Item155 Ref="383" Component="#Ref-128" Culture="it" Path="Text" Data="Conto / Pagabile a" />
+    <Item156 Ref="384" Component="#Ref-128" Culture="Default" Path="Weight" Data="1" />
+    <Item157 Ref="385" Component="#Ref-134" Culture="Default" Path="Text" Data="xrTableCell26" />
+    <Item158 Ref="386" Component="#Ref-134" Culture="Default" Path="Weight" Data="1" />
+    <Item159 Ref="387" Component="#Ref-141" Culture="Default" Path="Text" Data="xrTableCell27" />
+    <Item160 Ref="388" Component="#Ref-141" Culture="Default" Path="Weight" Data="1" />
+    <Item161 Ref="389" Component="#Ref-145" Culture="Default" Path="Text" Data="Additional Information" />
+    <Item162 Ref="390" Component="#Ref-145" Culture="de" Path="Text" Data="Zusätzliche Informationen" />
+    <Item163 Ref="391" Component="#Ref-145" Culture="fr" Path="Text" Data="Informations additionnelles" />
+    <Item164 Ref="392" Component="#Ref-145" Culture="it" Path="Text" Data="Informazioni aggiuntive" />
+    <Item165 Ref="393" Component="#Ref-145" Culture="Default" Path="Weight" Data="1" />
+    <Item166 Ref="394" Component="#Ref-89" Culture="Default" Path="Text" Data="xrTableCell26" />
+    <Item167 Ref="395" Component="#Ref-89" Culture="Default" Path="Weight" Data="1" />
+    <Item168 Ref="396" Component="#Ref-62" Culture="Default" Path="Weight" Data="0.013492589501597442" />
+    <Item169 Ref="397" Component="#Ref-138" Culture="Default" Path="Text" Data="Reference" />
+    <Item170 Ref="398" Component="#Ref-138" Culture="fr" Path="Text" Data="Référence" />
+    <Item171 Ref="399" Component="#Ref-138" Culture="it" Path="Text" Data="Riferimento" />
+    <Item172 Ref="400" Component="#Ref-138" Culture="Default" Path="Weight" Data="1" />
+    <Item173 Ref="401" Component="#Ref-167" Culture="Default" Path="Text" Data="xrTableCell31" />
+    <Item174 Ref="402" Component="#Ref-167" Culture="Default" Path="Weight" Data="0.80208317313607291" />
+    <Item175 Ref="403" Component="#Ref-170" Culture="Default" Path="Text" Data="xrTableCell32" />
+    <Item176 Ref="404" Component="#Ref-170" Culture="Default" Path="TextFormatString" Data="{0:# ###.00}" />
+    <Item177 Ref="405" Component="#Ref-170" Culture="Default" Path="Weight" Data="1.1882080316120436" />
+    <Item178 Ref="406" Component="#Ref-162" Culture="Default" Path="Text" Data="Currency" />
+    <Item179 Ref="407" Component="#Ref-162" Culture="de" Path="Text" Data="Währung" />
+    <Item180 Ref="408" Component="#Ref-162" Culture="fr" Path="Text" Data="Monnaie" />
+    <Item181 Ref="409" Component="#Ref-162" Culture="it" Path="Text" Data="Valuta" />
+    <Item182 Ref="410" Component="#Ref-162" Culture="Default" Path="Weight" Data="0.80208317313607291" />
+    <Item183 Ref="411" Component="#Ref-164" Culture="Default" Path="Text" Data="Amount" />
+    <Item184 Ref="412" Component="#Ref-164" Culture="de" Path="Text" Data="Betrag" />
+    <Item185 Ref="413" Component="#Ref-164" Culture="fr" Path="Text" Data="Montant" />
+    <Item186 Ref="414" Component="#Ref-164" Culture="it" Path="Text" Data="Importo" />
+    <Item187 Ref="415" Component="#Ref-164" Culture="Default" Path="Weight" Data="1.1882080316120436" />
+    <Item188 Ref="416" Component="#Ref-93" Culture="Default" Path="Text" Data="Reference" />
+    <Item189 Ref="417" Component="#Ref-93" Culture="de" Path="Text" Data="Referenz" />
+    <Item190 Ref="418" Component="#Ref-93" Culture="fr" Path="Text" Data="Référence" />
+    <Item191 Ref="419" Component="#Ref-93" Culture="it" Path="Text" Data="Riferimento" />
+    <Item192 Ref="420" Component="#Ref-93" Culture="Default" Path="Weight" Data="1" />
+    <Item193 Ref="421" Component="#Ref-191" Culture="Default" Path="Text" Data="xrTableCell36" />
+    <Item194 Ref="422" Component="#Ref-191" Culture="Default" Path="Weight" Data="0.34762144244995119" />
+    <Item195 Ref="423" Component="#Ref-96" Culture="Default" Path="Text" Data="xrTableCell27" />
+    <Item196 Ref="424" Component="#Ref-96" Culture="Default" Path="Weight" Data="1" />
+    <Item197 Ref="425" Component="#Ref-194" Culture="Default" Path="Text" Data="xrTableCell38" />
+    <Item198 Ref="426" Component="#Ref-194" Culture="Default" Path="Weight" Data="0.11970476113132902" />
+    <Item199 Ref="427" Component="#Ref-197" Culture="Default" Path="Text" Data="xrTableCell39" />
+    <Item200 Ref="428" Component="#Ref-197" Culture="Default" Path="TextFormatString" Data="{0:#.00}" />
+    <Item201 Ref="429" Component="#Ref-197" Culture="Default" Path="Weight" Data="0.32685383084975694" />
+    <Item202 Ref="430" Component="#Ref-45" Culture="Default" Path="Font" Data="Arial, 13pt, style=Bold" />
+    <Item203 Ref="431" Component="#Ref-45" Culture="Default" Path="Text" Data="Bill no." />
+    <Item204 Ref="432" Component="#Ref-45" Culture="Default" Path="Weight" Data="0.67903300357128182" />
+    <Item205 Ref="433" Component="#Ref-200" Culture="Default" Path="Text" Data="xrTableCell40" />
+    <Item206 Ref="434" Component="#Ref-200" Culture="Default" Path="TextFormatString" Data="{0:# ###.00}" />
+    <Item207 Ref="435" Component="#Ref-200" Culture="Default" Path="Weight" Data="0.18162107685750176" />
+    <Item208 Ref="436" Component="#Ref-187" Culture="Default" Path="Weight" Data="0.098153071793592353" />
+    <Item209 Ref="437" Component="#Ref-35" Culture="Default" Path="Text" Data="xrTableCell20" />
+    <Item210 Ref="438" Component="#Ref-35" Culture="Default" Path="Weight" Data="1" />
+    <Item211 Ref="439" Component="#Ref-39" Culture="Default" Path="Text" Data="xrTableCell19" />
+    <Item212 Ref="440" Component="#Ref-39" Culture="Default" Path="Weight" Data="1" />
+    <Item213 Ref="441" Component="#Ref-110" Culture="Default" Path="Text" Data="Currency" />
+    <Item214 Ref="442" Component="#Ref-110" Culture="de" Path="Text" Data="Währung" />
+    <Item215 Ref="443" Component="#Ref-110" Culture="fr" Path="Text" Data="Monnaie" />
+    <Item216 Ref="444" Component="#Ref-110" Culture="it" Path="Text" Data="Valuta" />
+    <Item217 Ref="445" Component="#Ref-110" Culture="Default" Path="Weight" Data="0.4326720228407287" />
+    <Item218 Ref="446" Component="#Ref-112" Culture="Default" Path="Text" Data="Amount" />
+    <Item219 Ref="447" Component="#Ref-112" Culture="de" Path="Text" Data="Betrag" />
+    <Item220 Ref="448" Component="#Ref-112" Culture="fr" Path="Text" Data="Montant" />
+    <Item221 Ref="449" Component="#Ref-112" Culture="it" Path="Text" Data="Importo" />
+    <Item222 Ref="450" Component="#Ref-112" Culture="Default" Path="Weight" Data="1.8172720299487004" />
+    <Item223 Ref="451" Component="#Ref-115" Culture="Default" Path="Text" Data="xrTableCell31" />
+    <Item224 Ref="452" Component="#Ref-115" Culture="Default" Path="Weight" Data="0.43267200103219916" />
+    <Item225 Ref="453" Component="#Ref-118" Culture="Default" Path="Text" Data="xrTableCell32" />
+    <Item226 Ref="454" Component="#Ref-118" Culture="Default" Path="TextFormatString" Data="{0:# ###.00}" />
+    <Item227 Ref="455" Component="#Ref-118" Culture="Default" Path="Weight" Data="1.81727205175723" />
+    <Item228 Ref="456" Component="#Ref-210" Culture="Default" Path="Font" Data="Arial, 9.75pt, style=Bold" />
+    <Item229 Ref="457" Component="#Ref-210" Culture="Default" Path="Text" Data="Bill amount [including VAT]" />
+    <Item230 Ref="458" Component="#Ref-210" Culture="Default" Path="Weight" Data="5.1858913097621775" />
+    <Item231 Ref="459" Component="#Ref-16" Culture="Default" Path="Font" Data="Arial, 9.75pt, style=Bold" />
+    <Item232 Ref="460" Component="#Ref-16" Culture="Default" Path="Text" Data="Email:" />
+    <Item233 Ref="461" Component="#Ref-16" Culture="Default" Path="Weight" Data="0.41895874113128911" />
+    <Item234 Ref="462" Component="#Ref-212" Culture="Default" Path="Font" Data="Arial, 9.75pt, style=Bold" />
+    <Item235 Ref="463" Component="#Ref-212" Culture="Default" Path="TextFormatString" Data="{0:# ###.00}" />
+    <Item236 Ref="464" Component="#Ref-212" Culture="Default" Path="Weight" Data="1.0387352098795109" />
+    <Item237 Ref="465" Component="#Ref-100" Culture="Default" Path="Text" Data="Payable by" />
+    <Item238 Ref="466" Component="#Ref-100" Culture="de" Path="Text" Data="Zahlbar durch" />
+    <Item239 Ref="467" Component="#Ref-100" Culture="fr" Path="Text" Data="Payable par" />
+    <Item240 Ref="468" Component="#Ref-100" Culture="it" Path="Text" Data="Pagabile da" />
+    <Item241 Ref="469" Component="#Ref-100" Culture="Default" Path="Weight" Data="1" />
+    <Item242 Ref="470" Component="#Ref-103" Culture="Default" Path="Text" Data="xrTableCell23" />
+    <Item243 Ref="471" Component="#Ref-103" Culture="Default" Path="Weight" Data="1" />
+    <Item244 Ref="472" Component="#Ref-215" Culture="Default" Path="Font" Data="Arial, 9.75pt, style=Bold" />
+    <Item245 Ref="473" Component="#Ref-215" Culture="Default" Path="Weight" Data="0.054680721675451571" />
+    <Item246 Ref="474" Component="#Ref-18" Culture="Default" Path="Text" Data="xrTableCell6" />
+    <Item247 Ref="475" Component="#Ref-18" Culture="Default" Path="Weight" Data="1.5810412588687111" />
+    <Item248 Ref="476" Component="#Ref-71" Culture="Default" Path="Weight" Data="0.010715141189104577" />
+    <Item249 Ref="477" Component="#Ref-47" Culture="Default" Path="Font" Data="Arial, 13pt, style=Bold" />
+    <Item250 Ref="478" Component="#Ref-47" Culture="Default" Path="Weight" Data="1.3209669964287181" />
+    <Item251 Ref="479" Component="#Ref-10" Culture="Default" Path="Font" Data="Arial, 9.75pt, style=Bold" />
+    <Item252 Ref="480" Component="#Ref-10" Culture="Default" Path="Text" Data="Phone:" />
+    <Item253 Ref="481" Component="#Ref-10" Culture="Default" Path="Weight" Data="0.41895880538868469" />
+    <Item254 Ref="482" Component="#Ref-56" Culture="Default" Path="Weight" Data="1" />
+    <Item255 Ref="483" Component="#Ref-52" Culture="Default" Path="Weight" Data="1" />
+    <Item256 Ref="484" Component="#Ref-44" Culture="Default" Path="Weight" Data="1" />
+    <Item257 Ref="485" Component="#Ref-130" Culture="Default" Path="Weight" Data="0.070527886894908659" />
+    <Item258 Ref="486" Component="#Ref-88" Culture="Default" Path="Weight" Data="0.070527886894908645" />
+    <Item259 Ref="487" Component="#Ref-92" Culture="Default" Path="Weight" Data="0.057704634732198" />
+    <Item260 Ref="488" Component="#Ref-151" Culture="Default" Path="Weight" Data="0.057704634732198029" />
+    <Item261 Ref="489" Component="#Ref-154" Culture="Default" Path="Weight" Data="0.070527886894908659" />
+    <Item262 Ref="490" Component="#Ref-147" Culture="Default" Path="Weight" Data="0.070527886894908659" />
+    <Item263 Ref="491" Component="#Ref-127" Culture="Default" Path="Weight" Data="0.057704634732197987" />
+    <Item264 Ref="492" Component="#Ref-109" Culture="Default" Path="Weight" Data="0.47244094488188981" />
+    <Item265 Ref="493" Component="#Ref-133" Culture="Default" Path="Weight" Data="0.070527886894908645" />
+    <Item266 Ref="494" Component="#Ref-140" Culture="Default" Path="Weight" Data="0.070527886894908631" />
+    <Item267 Ref="495" Component="#Ref-144" Culture="Default" Path="Weight" Data="0.057704634732197974" />
+    <Item268 Ref="496" Component="#Ref-95" Culture="Default" Path="Weight" Data="0.070527886894908631" />
+    <Item269 Ref="497" Component="#Ref-137" Culture="Default" Path="Weight" Data="0.057704634732198" />
+    <Item270 Ref="498" Component="#Ref-166" Culture="Default" Path="Weight" Data="0.62992125984251968" />
+    <Item271 Ref="499" Component="#Ref-161" Culture="Default" Path="Weight" Data="0.47244094488188981" />
+    <Item272 Ref="500" Component="#Ref-209" Culture="Default" Path="Weight" Data="1" />
+    <Item273 Ref="501" Component="#Ref-184" Culture="Default" Path="Weight" Data="0.64460233140750589" />
+    <Item274 Ref="502" Component="#Ref-15" Culture="Default" Path="Weight" Data="1" />
+    <Item275 Ref="503" Component="#Ref-34" Culture="Default" Path="Weight" Data="1" />
+    <Item276 Ref="504" Component="#Ref-38" Culture="Default" Path="Weight" Data="1" />
+    <Item277 Ref="505" Component="#Ref-99" Culture="Default" Path="Weight" Data="0.057704634732198029" />
+    <Item278 Ref="506" Component="#Ref-102" Culture="Default" Path="Weight" Data="0.070527886894908659" />
+    <Item279 Ref="507" Component="#Ref-114" Culture="Default" Path="Weight" Data="0.62992125984251968" />
+    <Item280 Ref="508" Component="#Ref-9" Culture="Default" Path="Weight" Data="1" />
+    <Item281 Ref="509" Component="#Ref-21" Culture="Default" Path="Weight" Data="0.99999999999999989" />
+    <Item282 Ref="510" Component="#Ref-27" Culture="Default" Path="Weight" Data="0.78740157480314954" />
+    <Item283 Ref="511" Component="#Ref-82" Culture="Default" Path="Weight" Data="0.057704634732197987" />
+    <Item284 Ref="512" Component="#Ref-85" Culture="Default" Path="Weight" Data="0.070527886894908659" />
+  </LocalizationItems>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v24.2" Name="objectDataSource1" Base64="PE9iamVjdERhdGFTb3VyY2UgTmFtZT0ib2JqZWN0RGF0YVNvdXJjZTEiPjxEYXRhU291cmNlIFR5cGU9Ilh0cmFSZXBvcnRzRGVtb3MuU3dpc3NRUkNvZGUuQmlsbERTLCBEZXZFeHByZXNzLkRlbW9SZXBvcnRzLnYyNC4yLCBWZXJzaW9uPTI0LjIuNS4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTRjM2JjNDQxNTFiZTRiNDciIC8+PERhdGFNZW1iZXI+RGF0YVNvdXJjZTwvRGF0YU1lbWJlcj48L09iamVjdERhdGFTb3VyY2U+" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 Ref="2" ObjectType="DevExpress.XtraReports.Parameters.StaticListLookUpSettings, DevExpress.Printing.v24.2.Core">
+      <LookUpValues>
+        <Item1 Ref="514" Value="#Ref-513" />
+        <Item2 Ref="516" Value="#Ref-515" />
+        <Item3 Ref="518" Value="#Ref-517" />
+        <Item4 Ref="520" Value="#Ref-519" />
+      </LookUpValues>
+    </Item1>
+    <Item2 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="513" Content="en" Type="System.String" />
+    <Item3 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="515" Content="de" Type="System.String" />
+    <Item4 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="517" Content="fr" Type="System.String" />
+    <Item5 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="519" Content="it" Type="System.String" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataModel Name="NWindFoodsModel" ContextName="NWindFoodsModelContext" CodeGeneratorEntityRegistrationType="DeclarativeAttributes">
+	<Entities>
+		<Entity Name="Categories" TableName="Categories">
+			<Property Name="CategoryID" ColumnName="CategoryID" DataType="Integer" GeneratorType="Identity" PrimaryKey="1"/>
+			<Property Name="CategoryName" ColumnName="CategoryName" MaxLength="15"/>
+			<Property Name="Description" ColumnName="Description" Blob="1" Nullable="1"/>
+			<Property Name="Picture" ColumnName="Picture" DataType="TBytes" Nullable="1"/>
+			<Property Name="Icon_17" ColumnName="Icon_17" DataType="TBytes" Nullable="1"/>
+			<Property Name="Icon_25" ColumnName="Icon_25" DataType="TBytes" Nullable="1"/>
+		</Entity>
+		<Entity Name="Products" TableName="Products">
+			<Property Name="ProductID" ColumnName="ProductID" DataType="Integer" GeneratorType="Identity" PrimaryKey="1"/>
+			<Property Name="ProductName" ColumnName="ProductName" MaxLength="40"/>
+			<Property Name="SupplierID" ColumnName="SupplierID" DataType="Integer" DefaultValue="0" Nullable="1"/>
+			<Property Name="CategoryID" ColumnName="CategoryID" DataType="Integer" Entity="Categories" DefaultValue="0" Nullable="1"/>
+			<Property Name="QuantityPerUnit" ColumnName="QuantityPerUnit" MaxLength="20" Nullable="1"/>
+			<Property Name="UnitPrice" ColumnName="UnitPrice" DataType="Currency" DefaultValue="0" Nullable="1"/>
+			<Property Name="UnitsInStock" ColumnName="UnitsInStock" DataType="SmallInt" DefaultValue="0" Nullable="1"/>
+			<Property Name="UnitsOnOrder" ColumnName="UnitsOnOrder" DataType="SmallInt" DefaultValue="0" Nullable="1"/>
+			<Property Name="ReorderLevel" ColumnName="ReorderLevel" DataType="SmallInt" DefaultValue="0" Nullable="1"/>
+			<Property Name="Discontinued" ColumnName="Discontinued" DataType="Boolean" DefaultValue="=No" MaxLength="2"/>
+			<Property Name="EAN13" ColumnName="EAN13" DefaultValue="0" MaxLength="12" Nullable="1"/>
+		</Entity>
+	</Entities>
+	<Associations>
+		<Association Name="Categories_Products" Entity1="Categories" Entity2="Products" Entity1CollectionPropertyName="Products_Collection" Type="OneToMany" Entity2RefrenceProperty="CategoryID"/>
+	</Associations>
+</DataModel>
+<Diagram>
+	<Entities>
+		<Item Name="Categories" Expanded="True" Left="32" Top="112" Width="176" Height="204"/>
+		<Item Name="Products" Expanded="True" Left="336" Top="32" Width="160" Height="304"/>
+	</Entities>
+</Diagram>
+<DatabaseStructure ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\VCL\2019.2\Demos\Installation\EMF\Data\nwind_foods.mdb;">
+	<Tables>
+		<Table Name="Categories">
+			<Column Name="CategoryID" DataType="Int32" PrimaryKey="1"/>
+			<Column Name="CategoryName" DataType="String"/>
+			<Column Name="Description" DataType="String"/>
+			<Column Name="Picture" DataType="ByteArray"/>
+			<Column Name="Icon_17" DataType="ByteArray"/>
+			<Column Name="Icon_25" DataType="ByteArray"/>
+		</Table>
+		<Table Name="Products">
+			<ForeignKeys>
+				<ForeignKey PrimaryKeyTable="Categories" PrimaryKeyTableKeyColumns="CategoryID" KeyColumns="CategoryID"/>
+				<ForeignKey PrimaryKeyTable="Suppliers" PrimaryKeyTableKeyColumns="SupplierID" KeyColumns="SupplierID"/>
+			</ForeignKeys>
+			<Column Name="ProductID" DataType="Int32" PrimaryKey="1"/>
+			<Column Name="ProductName" DataType="String"/>
+			<Column Name="SupplierID" DataType="Int32"/>
+			<Column Name="CategoryID" DataType="Int32"/>
+			<Column Name="QuantityPerUnit" DataType="String"/>
+			<Column Name="UnitPrice" DataType="Decimal"/>
+			<Column Name="UnitsInStock" DataType="Int16"/>
+			<Column Name="UnitsOnOrder" DataType="Int16"/>
+			<Column Name="ReorderLevel" DataType="Int16"/>
+			<Column Name="Discontinued" DataType="Boolean"/>
+			<Column Name="EAN13" DataType="String"/>
+		</Table>
+		<Table Name="Suppliers">
+			<Column Name="SupplierID" DataType="Int32" PrimaryKey="1"/>
+			<Column Name="CompanyName" DataType="String"/>
+			<Column Name="ContactName" DataType="String"/>
+			<Column Name="ContactTitle" DataType="String"/>
+			<Column Name="Address" DataType="String"/>
+			<Column Name="City" DataType="String"/>
+			<Column Name="Region" DataType="String"/>
+			<Column Name="PostalCode" DataType="String"/>
+			<Column Name="Country" DataType="String"/>
+			<Column Name="Phone" DataType="String"/>
+			<Column Name="Fax" DataType="String"/>
+			<Column Name="HomePage" DataType="String"/>
+		</Table>
+	</Tables>
+</DatabaseStructure>

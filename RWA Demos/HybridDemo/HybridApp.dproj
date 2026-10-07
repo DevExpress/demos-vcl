@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<ProjectGuid>{DE000000-0000-0000-0000-000081F71D17}</ProjectGuid>
+		<MainSource>HybridApp.dpr</MainSource>
+		<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		<ProjectVersion>16.1</ProjectVersion>
+		<Base>True</Base>
+		<Platform Condition="'$(Platform)'==''">Win32</Platform>
+		<TargetedPlatforms>3</TargetedPlatforms>
+		<AppType>Application</AppType>
+		<FrameworkType>VCL</FrameworkType>
+		<Config Condition="'$(Config)'==''">Base</Config>
+		<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		<ProjectVersion>20.4</ProjectVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+		<Base>true</Base>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+		<Base>true</Base>
+	</PropertyGroup>
+	<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+		<Base_Win32>true</Base_Win32>
+		<CfgParent>Base</CfgParent>
+		<Base>true</Base>
+	</PropertyGroup>
+	<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+		<Base_Win64>true</Base_Win64>
+		<CfgParent>Base</CfgParent>
+		<Base>true</Base>
+	</PropertyGroup>
+	<PropertyGroup Condition="('$(Platform)'=='Win64x' and '$(Base)'=='true') or '$(Base_Win64x)'!=''">
+		<Base_Win64x>true</Base_Win64x>
+		<CfgParent>Base</CfgParent>
+		<Base>true</Base>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+		<Cfg_1>true</Cfg_1>
+		<CfgParent>Base</CfgParent>
+		<Base>true</Base>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+		<Cfg_2>true</Cfg_2>
+		<CfgParent>Base</CfgParent>
+		<Base>true</Base>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Base)'!=''">
+		<DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+		<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+		<AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+		<AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+		<DCC_Namespace>WinApi;Vcl;System;System.Win;Vcl.Imaging;Data;Data.Win;Bde;Xml;Xml.Win;Vcl.Shell;VclTee;Datasnap;IBX;Vcl.Samples;$(DCC_Namespace)</DCC_Namespace>  <DCC_ExeOutput>.\</DCC_ExeOutput>
+    <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+    <VerInfo_Locale>1033</VerInfo_Locale>
+    <VerInfo_MajorVer>2026</VerInfo_MajorVer>
+    <VerInfo_MinorVer>1</VerInfo_MinorVer>
+    <VerInfo_Release>5</VerInfo_Release>
+    <VerInfo_Keys>CompanyName=Developer Express Inc.;FileDescription=$(MSBuildProjectName);FileVersion=2026.1.0.0;InternalName=;LegalCopyright=Copyright (c) 1998-2026 Developer Express Inc.;LegalTrademarks=;OriginalFilename=HybridApp.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=HybridApp;ProductVersion=2026.1;Comments=</VerInfo_Keys>
+  </PropertyGroup>
+	<ProjectExtensions>
+		<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+		<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+		<BorlandProject>
+			<Delphi.Personality>
+				<Source>
+					<Source Name="MainSource">HybridApp.dpr</Source>
+				</Source>
+			</Delphi.Personality>
+			<Platforms>
+				<Platform value="Win32">True</Platform>
+				<Platform value="Win64">True</Platform>
+				<Platform value="Win64x">True</Platform>
+			</Platforms>
+		</BorlandProject>
+		<ProjectFileVersion>12</ProjectFileVersion>
+	</ProjectExtensions>
+</Project>

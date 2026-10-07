@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Champions League Statistics" Alignment="Left" />
+  <DataSources>
+    <ExtractFileDataSource ComponentName="dashboardExtractDataSource1" Name="Data">
+      <CalculatedFields>
+        <CalculatedField Name="Goals difference" Expression="ToInt([Goals_for] - [Goals_against])" DataType="Auto" />
+        <CalculatedField Name="Points" Expression="ToInt(3 * [Won] + [Drawn])" DataType="Auto" />
+      </CalculatedFields>
+      <Filter>[Season] In (?Seasons)</Filter>
+      <FileName>|DataDirectory|ChampionsLeagueStatistics.dat</FileName>
+      <Parameters />
+      <SavedSchema>
+        <Column>
+          <Name>Club</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Country</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Season</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Drawn</Name>
+          <Type>System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Goals_against</Name>
+          <Type>System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Goals_for</Name>
+          <Type>System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Lost</Name>
+          <Type>System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Won</Name>
+          <Type>System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+      </SavedSchema>
+    </ExtractFileDataSource>
+  </DataSources>
+  <Parameters>
+    <Parameter Name="Seasons" AllowMultiselect="true">
+      <Values>
+        <Value>2018-19</Value>
+        <Value>2017-18</Value>
+        <Value>2016-17</Value>
+      </Values>
+      <DynamicListLookUpSettings DataSourceName="dashboardExtractDataSource1" ValueMember="Season" DisplayMember="Season" SortByMember="Season" SortOrder="Descending" />
+    </Parameter>
+  </Parameters>
+  <Items>
+    <ScatterChart ComponentName="scatterChartLeagueStatistics" Name="League Statistics by Country/Club" ShowCaption="false" ParentContainer="groupCountryStatistics" DataSource="dashboardExtractDataSource1">
+      <InteractivityOptions MasterFilterMode="Single" IsDrillDownEnabled="true" />
+      <DataItems>
+        <Measure DataMember="Goals_for" Name="Goals Scored" DefaultId="DataItem0" />
+        <Measure DataMember="Goals_against" Name="Goals Conceded" DefaultId="DataItem1" />
+        <Measure DataMember="Points" Name="Points" DefaultId="DataItem2" />
+        <Dimension DataMember="Country" ColoringMode="Hue" DefaultId="DataItem3" />
+        <Dimension DataMember="Club" DefaultId="DataItem4" />
+      </DataItems>
+      <ChartLegend Visible="false" />
+      <AxisX LogarithmicBase="Base5" />
+      <PointLabelOptions Position="Inside" Visible="true" />
+      <MeasureX DefaultId="DataItem0" />
+      <MeasureY DefaultId="DataItem1" />
+      <MeasureWeight DefaultId="DataItem2" />
+      <Dimensions>
+        <Dimension DefaultId="DataItem3" />
+        <Dimension DefaultId="DataItem4" />
+      </Dimensions>
+    </ScatterChart>
+    <Pivot ComponentName="pivotGoalDifference" Name="Goal Difference by Club" ShowCaption="false" ParentContainer="groupGoalDifference" DataSource="dashboardExtractDataSource1">
+      <DataItems>
+        <Measure DataMember="Goals difference" Name="Goals Difference" DefaultId="DataItem0" />
+        <Dimension DataMember="Season" SortOrder="Descending"  DefaultId="DataItem2" />
+        <Dimension DataMember="Club" SortOrder="Descending" SortByMeasure="DataItem0" DefaultId="DataItem3" />
+      </DataItems>
+      <FormatRules>
+        <PivotItemFormatRule Name="FormatRule 5" DataItem="DataItem0">
+          <FormatConditionBar>
+            <NegativeStyleSettings PredefinedColor="Red" />
+            <StyleSettings PredefinedColor="Green" />
+            <BarOptions />
+          </FormatConditionBar>
+          <PivotItemFormatRuleLevel />
+        </PivotItemFormatRule>
+      </FormatRules>
+      <Columns>
+        <Column DefaultId="DataItem2" />
+      </Columns>
+      <Rows>
+        <Row DefaultId="DataItem3" />
+      </Rows>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+      <ShowColumnGrandTotals>false</ShowColumnGrandTotals>
+      <ShowRowGrandTotals>false</ShowRowGrandTotals>
+      <ShowColumnTotals>false</ShowColumnTotals>
+    </Pivot>
+    <ComboBox ComponentName="comboBoxCountries" Name="Countries" ShowCaption="false" ParentContainer="groupGoalDifference" DataSource="dashboardExtractDataSource1" EnableSearch="true" ComboBoxType="Checked">
+      <DataItems>
+        <Dimension DataMember="Country" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <Chart ComponentName="chartStatisticsBySeason" Name="Country/Club Statistics by Season" ShowCaption="false" ParentContainer="groupCountryStatistics" DataSource="dashboardExtractDataSource1" Rotated="true">
+      <ColoringOptions MeasuresColoringMode="None" UseGlobalColors="false" />
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="Season" ColoringMode="Hue" DefaultId="DataItem0" />
+        <Measure DataMember="Goals_for" Name="Goals Scored" DefaultId="DataItem3" />
+        <Measure DataMember="Goals_against" Name="Goals Conceded" DefaultId="DataItem4" />
+        <Measure DataMember="Points" Name="Points" DefaultId="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem2" />
+              <PointLabelOptions Position="Inside" ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+        <Pane Name="Pane 2">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem3" />
+              <PointLabelOptions Position="Inside" ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+        <Pane Name="Pane 3">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem4" />
+              <PointLabelOptions Position="Inside" ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+      <AxisX TitleVisible="true" />
+    </Chart>
+  </Items>
+  <Groups>
+    <Group ComponentName="groupGoalDifference" Name="Goal Difference" />
+    <Group ComponentName="groupCountryStatistics" Name="Country/Club Statistics">
+      <InteractivityOptions IsMasterFilter="true" />
+    </Group>
+  </Groups>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical" DashboardItem="groupCountryStatistics" Weight="56.919468334636434">
+        <LayoutItem DashboardItem="scatterChartLeagueStatistics" Weight="68.123393316195376" />
+        <LayoutItem DashboardItem="chartStatisticsBySeason" Weight="31.876606683804628" />
+      </LayoutGroup>
+      <LayoutGroup Orientation="Vertical" DashboardItem="groupGoalDifference" Weight="43.080531665363566">
+        <LayoutItem DashboardItem="comboBoxCountries" Weight="4.1131105398457581" />
+        <LayoutItem DashboardItem="pivotGoalDifference" Weight="95.886889460154237" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+    <Description>["The dashboard displays the UEFA Champions League statistics by football clubs for three seasons.","The scatter chart visualizes league statistics for countries whose clubs participated at least in one season. Select a bubble to see country statistics by season on the Bar Chart in the bottom or drill down to a detailed statistic by club. The pivot table shows goal difference statistics by clubs for all seasons. The combo box allows you to filter the pivot by countries."]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/117172/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/dashboard-item-group","text":"Dashboard Group"},{"href":"https://docs.devexpress.com/Dashboard/117160/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/scatter-chart","text":"Scatter Chart"},{"href":"https://docs.devexpress.com/Dashboard/117165/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/pivot","text":"Pivot with Conditional Formatting"}]</Links>
+  </CustomProperties>
+</Dashboard>

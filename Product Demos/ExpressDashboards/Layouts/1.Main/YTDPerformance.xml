@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="YTD Performance" Alignment="Left" />
+  <DataSources>
+    <JsonDataSource Name="Sales" ConnectionName="SalesConnection" RootElement="Sales" ComponentName="dsSales">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="Sales" Selected="true" NodeType="Array">
+            <Node Name="Category" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="CurrentDate" Type="System.Nullable`1[System.DateTime]" Selected="true" NodeType="Property" />
+            <Node Name="RecId" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="Sales" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="SalesTarget" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="true" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+      <CalculatedFields>
+        <CalculatedField Name="YTD Difference" Expression="[YTD Current Year] - [YTD Previous Year]" DataType="Auto" />
+        <CalculatedField Name="YearCorrected" Expression="AddYears([CurrentDate], DateDiffYear([CurrentDate], Now()) )" DataType="Auto" />
+        <CalculatedField Name="YTD Current Year" Expression="filter(Sum([Sales]), IsYearToDate([CurrentDate]))" DataType="Auto" />
+        <CalculatedField Name="YTD Previous Year" Expression="filter(Sum([Sales]), IsYearToDate(AddYears([CurrentDate], 1)))" DataType="Auto" />
+        <CalculatedField Name="PreviousYearDynamic" Expression="Min(&#xA;aggr(&#xA;&#x9;Sum([Sales]),&#xA;&#x9;joinRule(&#xA;&#x9;&#x9;GetDateMonthYear([CurrentDate]),&#xA;&#x9;&#x9;GetDateMonthYear(AddYears([CurrentDate], -1))&#xA;&#x9;)&#xA;))" DataType="Auto" />
+        <CalculatedField Name="StartDateToShowHistory" Expression="aggr(Min(AddYears([CurrentDate], 1)))" DataType="Auto" />
+      </CalculatedFields>
+    </JsonDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="States" ShowCaption="false" DataSource="dsSales">
+      <InteractivityOptions MasterFilterMode="Single" />
+      <DataItems>
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="None" DefaultId="DataItem1" />
+        <Measure DataMember="Sales" Name="YTD Sales" FilterString="IsYearToDate([DataItem1])" DefaultId="DataItem2" />
+        <Measure DataMember="Sales" Name="Prev YTD Sales" FilterString="IsYearToDate(AddYears([DataItem1], 1))" DefaultId="DataItem3" />
+        <Dimension DataMember="State" SortByMeasure="DataItem4" DefaultId="DataItem0" />
+        <Measure DataMember="YTD Difference" DefaultId="DataItem4" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension DefaultId="DataItem1" />
+      </HiddenDimensions>
+      <HiddenMeasures>
+        <Measure DefaultId="DataItem4" />
+      </HiddenMeasures>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDeltaColumn Name="YTD Sales (Current vs Previous Year)">
+          <ActualValue DefaultId="DataItem2" />
+          <TargetValue DefaultId="DataItem3" />
+        </GridDeltaColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+    <Chart ComponentName="chartDashboardItem1" Name="YTD Sales: Current vs Previous Year" ParentContainer="dashboardTabPage1" DataSource="dsSales" FilterString="IsYearToDate([DataItem0])">
+      <ColoringOptions MeasuresColoringMode="Hue" UseGlobalColors="false" />
+      <DataItems>
+        <Dimension DataMember="YearCorrected" DateTimeGroupInterval="MonthYear" DefaultId="DataItem0" />
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="None" DefaultId="DataItem2" />
+        <Measure DataMember="YTD Current Year" DefaultId="DataItem7" />
+        <Measure DataMember="YTD Previous Year" Name="Month Of Previous Year" DefaultId="DataItem6" />
+        <Measure DataMember="Sales" Name="Previous YTD Total" FilterString="IsYearToDate(AddYears([DataItem2], 1))" DefaultId="DataItem5">
+          <Calculation>
+            <RunningTotal />
+          </Calculation>
+          <WindowDefinition>
+            <ChartWindowDefinition />
+          </WindowDefinition>
+        </Measure>
+        <Measure DataMember="Sales" Name="Current YTD Total" FilterString="IsYearToDate([DataItem2])" DefaultId="DataItem4">
+          <Calculation>
+            <RunningTotal />
+          </Calculation>
+          <WindowDefinition>
+            <ChartWindowDefinition />
+          </WindowDefinition>
+        </Measure>
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension DefaultId="DataItem2" />
+      </HiddenDimensions>
+      <FormatRules>
+        <ChartItemFormatRule Name="Format Rule 1" DataItem="DataItem7" DisplayName="Current Month (Good)" SeriesId="DataItem7">
+          <FormatConditionExpression Expression="[DataItem7] &gt; [DataItem6]">
+            <ColorStyleSettings Color="-12281976" PredefinedColor="Custom" />
+          </FormatConditionExpression>
+        </ChartItemFormatRule>
+        <ChartItemFormatRule Name="Format Rule 2" DataItem="DataItem7" DisplayName="Current Month (Bad)" SeriesId="DataItem7">
+          <FormatConditionExpression Expression="[DataItem7] &lt;= [DataItem6]">
+            <ColorStyleSettings Color="-2266245" PredefinedColor="Custom" />
+          </FormatConditionExpression>
+        </ChartItemFormatRule>
+      </FormatRules>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <ColorScheme>
+        <Entry DataSource="dsSales" Color="-4662301">
+          <MeasureKey>
+            <Definition DataMember="Sales" FilterString="IsYearToDate(AddYears([DataItem2], 1))">
+              <Definitions>
+                <DimensionDefinition Name="DataItem2" DataMember="CurrentDate" DateTimeGroupInterval="None" />
+              </Definitions>
+              <Calculation>
+                <RunningTotal />
+              </Calculation>
+              <WindowDefinition>
+                <ChartWindowDefinition />
+              </WindowDefinition>
+            </Definition>
+          </MeasureKey>
+        </Entry>
+        <Entry DataSource="dsSales" Color="-13396049">
+          <MeasureKey>
+            <Definition DataMember="Sales" FilterString="IsYearToDate([DataItem2])">
+              <Definitions>
+                <DimensionDefinition Name="DataItem2" DataMember="CurrentDate" DateTimeGroupInterval="None" />
+              </Definitions>
+              <Calculation>
+                <RunningTotal />
+              </Calculation>
+              <WindowDefinition>
+                <ChartWindowDefinition />
+              </WindowDefinition>
+            </Definition>
+          </MeasureKey>
+        </Entry>
+        <Entry DataSource="dsSales" Color="-12281976">
+          <MeasureKey>
+            <Definition DataMember="GoodPeriod" />
+          </MeasureKey>
+        </Entry>
+        <Entry DataSource="dsSales" Color="-2266245">
+          <MeasureKey>
+            <Definition DataMember="BadPeriod" />
+          </MeasureKey>
+        </Entry>
+        <Entry DataSource="dsSales" Color="-4662301">
+          <MeasureKey>
+            <Definition DataMember="YTD Previous Year" />
+          </MeasureKey>
+        </Entry>
+        <Entry DataSource="dsSales" Color="16777215">
+          <MeasureKey>
+            <Definition DataMember="YTD Current Year" />
+          </MeasureKey>
+        </Entry>
+      </ColorScheme>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false">
+            <NumericFormat FormatType="Currency" />
+          </AxisY>
+          <Series>
+            <Simple SeriesType="Line">
+              <Value DefaultId="DataItem5" />
+              <PointLabelOptions ContentType="Value" />
+            </Simple>
+            <Simple SeriesType="Line">
+              <Value DefaultId="DataItem4" />
+              <PointLabelOptions ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+        <Pane Name="Pane 2">
+          <AxisY TitleVisible="false">
+            <NumericFormat FormatType="Currency" />
+          </AxisY>
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem7" />
+              <PointLabelOptions OverlappingMode="None" Position="Inside" ContentType="Value" />
+            </Simple>
+            <Simple SeriesType="Point">
+              <Value DefaultId="DataItem6" />
+              <PointLabelOptions OverlappingMode="None" ContentType="Value" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend InsidePosition="TopLeftHorizontal" OutsidePosition="TopRightVertical" />
+    </Chart>
+    <TabContainer ComponentName="tabContainerDashboardItem1" Name="YTD Sales Details">
+      <Pages>
+        <Page ComponentName="dashboardTabPage1" Name="YTD Sales" />
+        <Page ComponentName="dashboardTabPage3" Name="YTD History" />
+      </Pages>
+    </TabContainer>
+    <Chart ComponentName="chartDashboardItem2" Name="Historical Trends: Multi-Year Sales Comparison " ParentContainer="dashboardTabPage3" DataSource="dsSales" VisibleDataFilterString="[DataItem3] &gt;= [DataItem4]">
+      <ColoringOptions UseGlobalColors="false" />
+      <DataItems>
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="MonthYear" DefaultId="DataItem0" />
+        <Dimension DataMember="StartDateToShowHistory" DateTimeGroupInterval="None" DefaultId="DataItem4" />
+        <Measure DataMember="Sales" Name="Sales" DefaultId="DataItem1" />
+        <Measure DataMember="PreviousYearDynamic" Name="Previous Year Sales" DefaultId="DataItem2" />
+        <Dimension DataMember="CurrentDate" DateTimeGroupInterval="None" DefaultId="DataItem3" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension DefaultId="DataItem3" />
+        <Dimension DefaultId="DataItem4" />
+      </HiddenDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <ColorScheme>
+        <Entry DataSource="dsSales" Color="-13396049">
+          <MeasureKey>
+            <Definition DataMember="Sales" />
+          </MeasureKey>
+        </Entry>
+      </ColorScheme>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY TitleVisible="false" />
+          <Series>
+            <Simple SeriesType="Area">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+            <Simple Name="Sales Previous Year" SeriesType="Line">
+              <Value DefaultId="DataItem2" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend IsInsidePosition="true" InsidePosition="TopLeftHorizontal" OutsidePosition="TopRightVertical" />
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Weight="100">
+      <LayoutItem DashboardItem="gridDashboardItem1" Weight="22.730317263055465" />
+      <LayoutTabContainer DashboardItem="tabContainerDashboardItem1" Weight="77.269682736944532">
+        <LayoutTabPage Orientation="Vertical" DashboardItem="dashboardTabPage1" Weight="100">
+          <LayoutItem DashboardItem="chartDashboardItem1" Weight="100" />
+        </LayoutTabPage>
+        <LayoutTabPage Orientation="Vertical" DashboardItem="dashboardTabPage3" Weight="100">
+          <LayoutItem DashboardItem="chartDashboardItem2" Weight="100" />
+        </LayoutTabPage>
+      </LayoutTabContainer>
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+	  <Description>["This dashboard helps illustrate use of Parallel Periods - An indispensable feature designed to help you compare values between different time periods.", "Option 1: With the Measure Filter, you can compare data between predefined DateTime periods. Click a measure in the Designer and add filters to display values for the specified date period. Check the YTD Sales Comparison Chart. Thanks to conditional formatting support within Dashboard Charts, users can easily distinguish leading sales from lagging sales.", "Option 2: If using calculated fields, you can use the joinRule function (in aggregation) to shift the Measure value by the DateTime axis. This feature allows you to compare values between dynamic date periods. We leveraged this capability in our Multi-Year Sales Comparison chart. We also applied a Visible Data Filter to limit displayed data and chose to hide first year of sales information."]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/117032/web-dashboard/create-dashboards-on-the-web/data-shaping/filtering", "text":"Measure Filter"}, {"href":"https://docs.devexpress.com/Dashboard/117032/web-dashboard/create-dashboards-on-the-web/data-shaping/filtering", "text":"Visible Data Filter"}, {"href":"https://docs.devexpress.com/Dashboard/402203/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/chart/conditional-formatting", "text": "Chart Conditional Formatting"}, {"href":"https://docs.devexpress.com/Dashboard/115870/common-features/advanced-analytics/aggregations/intermediate-level-aggregations", "text":"joinRule"}]</Links>
+  </CustomProperties>
+</Dashboard>

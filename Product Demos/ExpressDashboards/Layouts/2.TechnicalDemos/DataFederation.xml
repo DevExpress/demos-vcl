@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Data Federation - Technical Demo" Alignment="Left" />
+  <DataSources>
+    <ExcelDataSource Name="Excel Data Source 1" FileName="|DataDirectory|\Data\SalesOverviewSensitiveData.xlsx" ComponentName="dashboardExcelDataSource1">
+      <Options Type="DevExpress.DataAccess.Excel.ExcelSourceOptions" SkipEmptyRows="true" UseFirstRowAsHeader="true" SkipHiddenColumns="true" SkipHiddenRows="true">
+        <ImportSettings Type="DevExpress.DataAccess.Excel.ExcelWorksheetSettings" WorksheetName="Sheet1" />
+      </Options>
+      <Schema>
+        <FieldInfo Name="Category" Type="System.String" Selected="true" />
+        <FieldInfo Name="Manager" Type="System.String" Selected="true" />
+      </Schema>
+      <ResultSchema>
+        <View>
+          <Field Name="Category" Type="String" />
+          <Field Name="Manager" Type="String" />
+        </View>
+      </ResultSchema>
+    </ExcelDataSource>
+    <ObjectDataSource Name="Sales" ComponentName="dsSales">
+      <DataMember>DataItem</DataMember>
+    </ObjectDataSource>
+    <FederationDataSource Name="Federation Data Source 1" ComponentName="dashboardFederationDataSource1">
+      <Sources>
+        <Source Name="Excel Data Source 1">
+          <DataSource>dashboardExcelDataSource1</DataSource>
+          <DataMember></DataMember>
+        </Source>
+        <Source Name="Sales">
+          <DataSource>dsSales</DataSource>
+        </Source>
+      </Sources>
+      <Queries>
+        <Query Alias="FederatedQuery" QueryType="SelectNode">
+          <Root Alias="Excel Data Source 1" QueryType="SourceNode" SourceName="Excel Data Source 1" />
+          <SubNodes>
+            <JoinElement Condition="[Sales.Category] = [Excel Data Source 1.Category]">
+              <Query Alias="Sales" QueryType="SourceNode" SourceName="Sales" />
+            </JoinElement>
+          </SubNodes>
+          <Expressions>
+            <Expression ExpressionType="SelectColumnExpression" Name="Manager" NodeAlias="Excel Data Source 1" />            
+            <Expression ExpressionType="SelectColumnExpression" Name="Category" NodeAlias="Sales" />
+            <Expression ExpressionType="SelectColumnExpression" Name="CurrentDate" NodeAlias="Sales" />
+            <Expression ExpressionType="SelectColumnExpression" Name="Sales" NodeAlias="Sales" />
+            <Expression ExpressionType="SelectColumnExpression" Name="SalesTarget" NodeAlias="Sales" />
+            <Expression ExpressionType="SelectColumnExpression" Name="State" NodeAlias="Sales" />
+          </Expressions>
+        </Query>
+      </Queries>
+    </FederationDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="Sales Data - Object Data Source " DataSource="dsSales">
+      <DataItems>
+        <Dimension DataMember="Category" DefaultId="DataItem0" />
+        <Measure DataMember="Sales" DefaultId="DataItem1" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+    <Grid ComponentName="gridDashboardItem3" Name="Grid 1" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="dashboardFederationDataSource1" DataMember="FederatedQuery">
+      <DataItems>
+        <Dimension DataMember="Manager" DefaultId="DataItem0" />
+        <Measure DataMember="Sales" DefaultId="DataItem1" />
+        <Measure DataMember="SalesTarget" DefaultId="DataItem2" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDeltaColumn>
+          <ActualValue DefaultId="DataItem1" />
+          <TargetValue DefaultId="DataItem2" />
+        </GridDeltaColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+    <Grid ComponentName="gridDashboardItem2" Name="Human Resources Data - Excel Data Source" DataSource="dashboardExcelDataSource1">
+      <DataItems>
+        <Dimension DataMember="Category" DefaultId="DataItem0" />
+        <Dimension DataMember="Manager" DefaultId="DataItem1" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+    <Chart ComponentName="chartDashboardItem2" Name="Chart 2" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="dashboardFederationDataSource1" DataMember="FederatedQuery">
+      <DataItems>
+        <Measure DataMember="Sales" DefaultId="DataItem0" />
+        <Dimension DataMember="Manager" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+  </Items>
+  <Groups>
+    <Group ComponentName="groupDashboardItem1" Name="Data Federation" />
+  </Groups>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical">
+        <LayoutGroup Weight="0.56419316843345113">
+          <LayoutItem DashboardItem="gridDashboardItem1" />
+          <LayoutItem DashboardItem="gridDashboardItem2" />
+        </LayoutGroup>
+        <LayoutGroup DashboardItem="groupDashboardItem1" Weight="1.4358068315665489">
+          <LayoutItem DashboardItem="gridDashboardItem3" />
+          <LayoutItem DashboardItem="chartDashboardItem2" />
+        </LayoutGroup>
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+    <Description>["This dashboard shows how to work with DashboardFederatedDataSource that aggregates data from distributed sources.","  The dashboard is bound to a Federation Data Source that integrates data from the Excel and Object data sources with a federated query."]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.DashboardFederationDataSource","text":"Dashboard Federation Data Source"}]</Links>
+  </CustomProperties>
+</Dashboard>

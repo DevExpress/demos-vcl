@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="24.2.5.0" Ref="0" ControlType="XtraReportsDemos.SalesSummary.Report, DevExpress.DemoReports.v24.2, Version=24.2.5.0, Culture=neutral, PublicKeyToken=4c3bc44151be4b47" Name="SalesSummaryReport" DisplayName="Sales Summary" VerticalContentSplitting="Smart" HorizontalContentSplitting="Smart" Landscape="true" Margins="100, 100, 100, 94" PageWidth="1100" PageHeight="850" Version="24.2" RequestParameters="false">
+  <Parameters>
+    <Item1 Ref="3" Description="Country" ValueSourceSettings="#Ref-1" MultiValue="true" SelectAllValues="true" ValueInfo="USA|UK" Name="country" />
+    <Item2 Ref="5" Description="Salespeople" ValueSourceSettings="#Ref-4" MultiValue="true" SelectAllValues="true" ValueInfo="Nancy Davolio|Andrew Fuller|Janet Leverling|Margaret Peacock|Steven Buchanan|Michael Suyama|Robert King|Laura Callahan|Anne Dodsworth" Name="salespeople" />
+    <Item3 Ref="7" Description="Enable filter" ValueInfo="False" Name="enableFilter" Type="#Ref-6" />
+    <Item4 Ref="9" Description="Categories" ValueSourceSettings="#Ref-8" MultiValue="true" SelectAllValues="true" ValueInfo="Beverages|Condiments|Confections|Dairy Products|Grains/Cereals|Meat/Poultry|Produce|Seafood" Name="categories">
+      <ExpressionBindings>
+        <Item1 Ref="10" PropertyName="Enabled" Expression="?enableFilter" />
+      </ExpressionBindings>
+    </Item4>
+  </Parameters>
+  <Bands>
+    <Item1 Ref="11" ControlType="DetailBand" Name="Detail" HeightF="113">
+      <Controls>
+        <Item1 Ref="13" ControlType="XRCrossTab" Name="crossTab1" GeneralStyleName="crossTabGeneralStyle1" DataAreaStyleName="crossTabDataStyle1" HeaderAreaStyleName="crossTabHeaderStyle1" TotalAreaStyleName="crossTabTotalStyle1" DataSource="#Ref-12" DataMember="SalesPerson" FilterString="[FullName] In (?salespeople) And Iif(?enableFilter, [CategoryName] In (?categories), True)" SizeF="641.7374,113" LocationFloat="0,0">
+          <Parameters>
+            <Item1 Ref="15" Name="enableFilter" Parameter="#Ref-7" />
+            <Item2 Ref="16" Name="categories" Parameter="#Ref-9" />
+            <Item3 Ref="17" Name="salespeople" Parameter="#Ref-5" />
+          </Parameters>
+          <PrintOptions Ref="18" RepeatColumnHeaders="false" PrintTotalsForSingleValues="false" />
+          <RowFields>
+            <Item1 Ref="19" GroupInterval="DateQuarter" FieldName="OrderDate" />
+            <Item2 Ref="20" FieldName="CategoryName" />
+          </RowFields>
+          <ColumnFields>
+            <Item1 Ref="21" FieldName="Country" />
+            <Item2 Ref="22" FieldName="FullName" />
+          </ColumnFields>
+          <DataFields>
+            <Item1 Ref="23" FieldName="ExtendedPrice" />
+          </DataFields>
+          <ColumnDefinitions>
+            <Item1 Ref="24" Width="127.5552" />
+            <Item2 Ref="25" Width="118.1822" />
+            <Item3 Ref="26" Width="130" />
+            <Item4 Ref="27" Width="133" />
+            <Item5 Ref="28" Width="133" />
+          </ColumnDefinitions>
+          <RowDefinitions>
+            <Item1 Ref="29" Height="22.6" />
+            <Item2 Ref="30" Height="22.6" />
+            <Item3 Ref="31" Height="22.6" />
+            <Item4 Ref="32" Height="22.6" />
+            <Item5 Ref="33" Height="22.6" />
+          </RowDefinitions>
+          <Cells>
+            <Item1 Ref="34" ControlType="XRCrossTabCell" Name="crossTabCell1" ColumnIndex="0" RowIndex="0" RowSpan="2" Text="Order Date" TextAlignment="MiddleLeft" />
+            <Item2 Ref="35" ControlType="XRCrossTabCell" Name="crossTabCell2" TextFormatString="{0:c}" ColumnIndex="2" RowIndex="2" TextAlignment="MiddleRight" />
+            <Item3 Ref="36" ControlType="XRCrossTabCell" Name="crossTabCell3" ColumnIndex="2" RowIndex="0" TextAlignment="MiddleLeft" />
+            <Item4 Ref="37" ControlType="XRCrossTabCell" Name="crossTabCell4" ColumnIndex="4" RowIndex="0" RowSpan="2" Text="Grand Total" TextAlignment="MiddleLeft">
+              <ExpressionBindings>
+                <Item1 Ref="38" EventName="BeforePrint" PropertyName="ColumnVisible" Expression="not ?enableFilter" />
+              </ExpressionBindings>
+            </Item4>
+            <Item5 Ref="39" ControlType="XRCrossTabCell" Name="crossTabCell5" TextFormatString="{0:c}" ColumnIndex="4" RowIndex="2" TextAlignment="MiddleRight" />
+            <Item6 Ref="40" ControlType="XRCrossTabCell" Name="crossTabCell6" TextFormatString="Quarter {0}" ColumnIndex="0" RowIndex="2" TextAlignment="TopLeft" />
+            <Item7 Ref="41" ControlType="XRCrossTabCell" Name="crossTabCell7" ColumnIndex="0" RowIndex="4" ColumnSpan="2" Text="Grand Total" TextAlignment="MiddleLeft" />
+            <Item8 Ref="42" ControlType="XRCrossTabCell" Name="crossTabCell8" TextFormatString="{0:c}" ColumnIndex="2" RowIndex="4" TextAlignment="MiddleRight" />
+            <Item9 Ref="43" ControlType="XRCrossTabCell" Name="crossTabCell9" TextFormatString="{0:c}" ColumnIndex="4" RowIndex="4" TextAlignment="MiddleRight">
+              <ExpressionBindings>
+                <Item1 Ref="44" EventName="BeforePrint" PropertyName="RowVisible" Expression="not ?enableFilter" />
+              </ExpressionBindings>
+            </Item9>
+            <Item10 Ref="45" ControlType="XRCrossTabCell" Name="crossTabCell10" ColumnIndex="2" RowIndex="1" TextAlignment="MiddleLeft" />
+            <Item11 Ref="46" ControlType="XRCrossTabCell" Name="crossTabCell11" TextFormatString="Total {0}" ColumnIndex="3" RowIndex="0" RowSpan="2" TextAlignment="MiddleLeft" />
+            <Item12 Ref="47" ControlType="XRCrossTabCell" Name="crossTabCell12" TextFormatString="{0:c}" ColumnIndex="3" RowIndex="2" TextAlignment="MiddleRight" Font="Calibri, 9pt, style=Bold" BackColor="White" />
+            <Item13 Ref="48" ControlType="XRCrossTabCell" Name="crossTabCell13" TextFormatString="{0:c}" ColumnIndex="3" RowIndex="4" TextAlignment="MiddleRight" />
+            <Item14 Ref="49" ControlType="XRCrossTabCell" Name="crossTabCell14" ColumnIndex="1" RowIndex="0" RowSpan="2" Text="Category Name" TextAlignment="MiddleLeft" />
+            <Item15 Ref="50" ControlType="XRCrossTabCell" Name="crossTabCell15" ColumnIndex="1" RowIndex="2" TextAlignment="MiddleLeft" />
+            <Item16 Ref="51" ControlType="XRCrossTabCell" Name="crossTabCell16" TextFormatString="Total {0}" ColumnIndex="0" RowIndex="3" ColumnSpan="2" TextAlignment="MiddleLeft" />
+            <Item17 Ref="52" ControlType="XRCrossTabCell" Name="crossTabCell17" TextFormatString="{0:c}" ColumnIndex="2" RowIndex="3" TextAlignment="MiddleRight" Font="Calibri, 9pt, style=Bold" BackColor="White" />
+            <Item18 Ref="53" ControlType="XRCrossTabCell" Name="crossTabCell18" TextFormatString="{0:c}" ColumnIndex="3" RowIndex="3" TextAlignment="MiddleRight" Font="Calibri, 9pt, style=Bold" BackColor="White" BorderColor="255,160,160,160" Borders="All" BorderWidth="1" />
+            <Item19 Ref="54" ControlType="XRCrossTabCell" Name="crossTabCell19" TextFormatString="{0:c}" ColumnIndex="4" RowIndex="3" TextAlignment="MiddleRight" />
+          </Cells>
+        </Item1>
+      </Controls>
+    </Item1>
+    <Item2 Ref="55" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="94">
+      <Controls>
+        <Item1 Ref="56" ControlType="XRPictureBox" Name="xrPictureBox1" ImageSource="svg,77u/PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4NCjxzdmcgd2lkdGg9IjE1MHB4IiBoZWlnaHQ9IjMwcHgiIHZpZXdCb3g9IjAgMCAxNTAgMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0ibm9uZSI+DQogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxNTAiIGhlaWdodD0iMzAiIGZpbGw9IiNFNUU1RTUiIC8+DQogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxNTAiIGhlaWdodD0iMzAiIGZpbGw9IndoaXRlIiAvPg0KICA8cGF0aCBkPSJNMi45NjI5NSAyNS4wNzMxSDI2LjE2MTVWNS4xNjY0OEgyLjk2Mjk1VjI1LjA3MzFaIiBmaWxsPSJ3aGl0ZSIgLz4NCiAgPHBhdGggZD0iTTM3LjYzNTIgMjAuMzY3MkMzNy4yMTIyIDIwLjM2NzIgMzYuNzQ2NyAyMC4zNjcyIDM2LjQyOTggMjAuMzAyVjguNjE0MjlDMzYuNzY4IDguNTUwNzkgMzcuMjU0MiA4LjQ4NTMzIDM3LjkwOTUgOC40ODUzM0M0MC44MDY5IDguNDg1MzMgNDIuNjA0NCAxMC4zNDk4IDQyLjYwNDQgMTQuMTIzMkM0Mi42MDQ0IDE4LjUwMzEgNDAuNjE2NSAyMC4zODkgMzcuNjM1MiAyMC4zNjcyVjIwLjM2NzJaTTM3LjUyOTUgNS45NjkzMkMzNS45NDM1IDUuOTY5MzIgMzQuNDYzNCA2LjEwMDA2IDMzLjMyMDggNi4zMTcwMlYyMi43MDhDMzQuMTQ1NiAyMi44MTc4IDM1LjM1MTEgMjIuOTI2NiAzNi44NTI5IDIyLjkyNjZDMzkuNjg1OCAyMi45MjY2IDQxLjk0OTMgMjIuMjUzMSA0My40Mjk2IDIwLjg4ODRDNDQuNjc2OSAxOS43Mzc3IDQ1Ljg4MjMgMTcuNjU3NiA0NS44ODIzIDE0LjA3ODFDNDUuODgyMyAxMS4wNjQzIDQ0Ljk3MzIgOS4wMDQ1MSA0My40Mjk2IDcuNzA0ODdDNDIuMDc2NCA2LjU1NTk2IDQwLjIzNTcgNS45NjkzMiAzNy41Mjk1IDUuOTY5MzIiIGZpbGw9IiMzOTM1MzYiIC8+DQogIDxwYXRoIGQ9Ik01MC40Mzc3IDE1LjQ2NjFDNTAuNTIyMiAxNC4yNzM5IDUxLjE1NyAxMi42Njk1IDUyLjY1ODMgMTIuNjY5NUM1NC4yMDIgMTIuNjY5NSA1NC42ODg5IDE0LjIwODYgNTQuNjY3NiAxNS40NjYxSDUwLjQzNzdaTTUyLjg0ODQgMTAuNDM2N0M0OS40MDIyIDEwLjQzNjcgNDcuNDU2IDEzLjQyOTYgNDcuNDU2IDE2Ljg5ODFDNDcuNDU2IDIwLjY0ODEgNDkuNTI4NSAyMi45OTA5IDUzLjE2NjQgMjIuOTkwOUM1NC42MjU3IDIyLjk5MDkgNTUuOTk5NSAyMi43MjkyIDU2Ljk3MjggMjIuMjk4Mkw1Ni41Mjg0IDIwLjA4NUM1NS43MjQ5IDIwLjM2NzIgNTQuODE1OCAyMC41ODQyIDUzLjY1MjggMjAuNTg0MkM1MS45NjA4IDIwLjU4NDIgNTAuNTIyMiAxOS43NjA3IDUwLjQzNzcgMTcuNzAwMUg1Ny40Nzk1QzU3LjU0MzcgMTcuMzU0IDU3LjU2NDkgMTYuODk4MSA1Ny41NjQ5IDE2LjQyMThDNTcuNTY0OSAxMi41MTc4IDU1LjcwMzcgMTAuNDM2NyA1Mi44NDg0IDEwLjQzNjciIGZpbGw9IiMzOTM1MzYiIC8+DQogIDxwYXRoIGQ9Ik02Ni4zMDQ3IDEwLjY5NjRMNjQuODI1MiAxNi41NTA0QzY0LjU3MDQgMTcuNjE0MSA2NC4zNTkgMTguNTg5OCA2NC4xNjg0IDE5LjYyODlINjQuMTA2MkM2My45MTYgMTguNTg5OCA2My43MDM3IDE3LjU5MjMgNjMuNDQ5OSAxNi41NTA0TDYxLjkwNjIgMTAuNjk2NEg1OC41NDM3TDYyLjQ5ODggMjIuNzc0M0g2NS41MjI1TDY5LjU0MDcgMTAuNjk2NEg2Ni4zMDQ3IiBmaWxsPSIjMzkzNTM2IiAvPg0KICA8cGF0aCBkPSJNNC41NjMwNyAyMS42NjczQzMuOTY5NTEgMjIuNDIzNiAzLjUyODE1IDIzLjA5MzcgMy4xOTE5MyAyMy43MjE3QzMuMTA4NzkgMjMuODc0IDIuOTYyOTUgMjQuMzI3OSAyLjk2Mjk1IDI0LjYzMDlWMjUuMDczMUMyLjk2Mjk1IDI1LjgyNjEgMy41NjQyMyAyNi40NDQyIDQuMzAwNzIgMjYuNDQ0MkgyNC44MjQ4QzI1LjU2MDYgMjYuNDQ0MiAyNi4xNjE1IDI1LjgyNjEgMjYuMTYxNSAyNS4wNzMxVjguODgxNjhDMTQuOTE0MiAxMC45MTQ5IDguMDk3NzcgMTcuMTU5NiA0LjU2MzA3IDIxLjY2NzNaIiBmaWxsPSIjMzkzNTM2IiAvPg0KICA8cGF0aCBkPSJNNzQuNDczMSAxNS40NDQ0SDc5Ljc4MzdWMTIuODIxOEg3NC40NzMxVjguNzg4OTJIODAuMTAwOFY2LjEwMDA1SDcxLjM0NDJWMjIuNzc0M0g4MC40Mzg1VjIwLjA4NUg3NC40NzMxVjE1LjQ0NDQiIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik05Mi4yNjU3IDEwLjY5NjRIODguOTQ0N0w4Ny44ODY0IDEyLjg2NDNDODcuNTkwMSAxMy40OTM2IDg3LjMxNyAxNC4xNDQ2IDg3LjAyMTIgMTQuNzkzN0g4Ni45Nzc4Qzg2LjY4MSAxNC4xODg1IDg2LjQwODQgMTMuNTU3NSA4Ni4wNjkxIDEyLjg4Nkw4NC45NDkxIDEwLjY5NjRIODEuNDgxNUw4NC45Njk5IDE2LjY2MDJMODEuMzk1MSAyMi43NzQzSDg0LjczNThMODUuODM2NSAyMC40MzI1Qzg2LjEzMTggMTkuODAyNiA4Ni40Mjg2IDE5LjE3MyA4Ni43MDM3IDE4LjUyNDVIODYuNzQ3MUM4Ny4wNDM0IDE5LjE3MyA4Ny4zMTcgMTkuODAyNiA4Ny42MzM2IDIwLjQzMjVMODguNzk2IDIyLjc3NDNIOTIuMzA4MUw4OC43NTUxIDE2LjUyODlMOTIuMjY1NyAxMC42OTY0WiIgZmlsbD0iI0Y0NzIxNiIgLz4NCiAgPHBhdGggZD0iTTk5LjEwMjcgMjAuNDk1OEM5OC4wNDQ5IDIwLjQ5NTggOTcuMDA4NCAxOS42NTIzIDk3LjAwODQgMTcuODk1NVYxNS42Mzk2Qzk3LjAwODQgMTQuMTg4NSA5Ny45NjA1IDEzLjAxNjIgOTkuMTY2NCAxMy4wMTYyQzEwMC43MDkgMTMuMDE2MiAxMDEuNTEzIDE0LjU3ODEgMTAxLjUxMyAxNi43MjU0QzEwMS41MTMgMTguODkyOCAxMDAuNjg4IDIwLjQ5NTggOTkuMTAyNyAyMC40OTU4Wk0xMDAuMjAyIDEwLjQzNjdDOTguNjc4NSAxMC40MzY3IDk3LjQ3MzYgMTEuMTA5MyA5Ni43MTI2IDEyLjM0NDFIOTYuNjY5MUw5Ni41MjE1IDEwLjY5NjRIOTMuNzkzMUM5My44MzYxIDExLjgwMjQgOTMuODc5IDEzLjA4MDkgOTMuODc5IDE0LjY0MzhWMjcuNjEwMUg5Ny4wMDg0VjIxLjYwMzRIOTcuMDUxNEM5Ny41NTggMjIuNDA0MSA5OC41NTMxIDIzLjAxMjYgOTkuODQxIDIzLjAxMjZDMTAyLjIzMSAyMy4wMTI2IDEwNC42ODQgMjEuMDYxNSAxMDQuNjg0IDE2LjYxNTNDMTA0LjY4NCAxMi45MDg0IDEwMi43ODIgMTAuNDM2NyAxMDAuMjAyIDEwLjQzNjciIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xMDkuNzA1IDEyLjgwMDZIMTA5LjYxOEwxMDkuNDkzIDEwLjY5NjRIMTA2LjgwNkMxMDYuODQ5IDExLjc3OTQgMTA2Ljg5MSAxMi45NzM3IDEwNi44OTEgMTQuNDY5M1YyMi43NzQzSDExMC4wMjJWMTYuNTI4OUMxMTAuMDIyIDE0LjQ2OTMgMTExLjA5OCAxMy40OTM2IDExMi41MTYgMTMuNDkzNkMxMTIuODM1IDEzLjQ5MzYgMTEzLjA4OCAxMy41MTUgMTEzLjMyMSAxMy41NTc1VjEwLjUwMUMxMTMuMTA5IDEwLjQ1NzQgMTEyLjkxNyAxMC40MzY3IDExMi42MjIgMTAuNDM2N0MxMTEuNTIyIDEwLjQzNjcgMTEwLjI1NSAxMS4yMzc3IDEwOS43MDUgMTIuODAwNloiIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xMTcuNDA1IDE1LjQ2NjFDMTE3LjQ5MSAxNC4yNzM5IDExOC4xMjUgMTIuNjY5NSAxMTkuNjI2IDEyLjY2OTVDMTIxLjE3IDEyLjY2OTUgMTIxLjY1NyAxNC4yMDg2IDEyMS42MzYgMTUuNDY2MUgxMTcuNDA1Wk0xMTkuODE2IDEwLjQzNjdDMTE2LjM2OSAxMC40MzY3IDExNC40MjQgMTMuNDI5NiAxMTQuNDI0IDE2Ljg5ODFDMTE0LjQyNCAyMC42NDgxIDExNi40OTUgMjIuOTkwOSAxMjAuMTM0IDIyLjk5MDlDMTIxLjU5MyAyMi45OTA5IDEyMi45NjcgMjIuNzI5MiAxMjMuOTQxIDIyLjI5ODJMMTIzLjQ5NyAyMC4wODVDMTIyLjY5MyAyMC4zNjcyIDEyMS43ODQgMjAuNTg0MiAxMjAuNjIxIDIwLjU4NDJDMTE4LjkyOSAyMC41ODQyIDExNy40OTEgMTkuNzYwNyAxMTcuNDA1IDE3LjcwMDFIMTI0LjQ0OEMxMjQuNTExIDE3LjM1NCAxMjQuNTMzIDE2Ljg5ODEgMTI0LjUzMyAxNi40MjE4QzEyNC41MzMgMTIuNTE3OCAxMjIuNjcgMTAuNDM2NyAxMTkuODE2IDEwLjQzNjciIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xMzEuMDMxIDE1LjQ4OTNDMTI5LjY3OCAxNC45MDI4IDEyOS4yMzQgMTQuNTU1MyAxMjkuMjM0IDEzLjg4NDlDMTI5LjIzNCAxMy4yMzI4IDEyOS43NDEgMTIuNzM1MyAxMzAuNjkxIDEyLjczNTNDMTMxLjU4IDEyLjczNTMgMTMyLjQwNiAxMy4wODA5IDEzMi45MTMgMTMuMzYzMUwxMzMuNTA2IDExLjEwOTNDMTMyLjgyOSAxMC43NDAxIDEzMS43OTQgMTAuNDM2NyAxMzAuNTg4IDEwLjQzNjdDMTI3Ljk2NCAxMC40MzY3IDEyNi4yNzQgMTIuMDgzNiAxMjYuMjc0IDE0LjI1MTdDMTI2LjI3NCAxNS41NzU5IDEyNy4wNzUgMTYuODU0IDEyOS4yNzYgMTcuNzY0NEMxMzAuNTY2IDE4LjMyODEgMTMwLjk2NyAxOC43MTgzIDEzMC45NjcgMTkuNDU1NEMxMzAuOTY3IDIwLjE5NDggMTMwLjQ0MSAyMC42NzEyIDEyOS4zMzggMjAuNjcxMkMxMjguMzY3IDIwLjY3MTIgMTI3LjIwMiAyMC4yMzY3IDEyNi41OSAxOS44NjcyTDEyNS45OTggMjIuMTg3OEMxMjYuNzc5IDIyLjY2NjkgMTI4LjAzIDIyLjk5MDkgMTI5LjMxOCAyMi45OTA5QzEzMi4yNTkgMjIuOTkwOSAxMzMuOTQ5IDIxLjQ3MTkgMTMzLjk0OSAxOS4xNzNDMTMzLjk0OSAxNy41MDU3IDEzMy4wMTkgMTYuMzMyOCAxMzEuMDMxIDE1LjQ4OTNaIiBmaWxsPSIjRjQ3MjE2IiAvPg0KICA8cGF0aCBkPSJNMTQwLjQwNSAxNS40ODkzQzEzOS4wNTEgMTQuOTAyOCAxMzguNjA5IDE0LjU1NTMgMTM4LjYwOSAxMy44ODQ5QzEzOC42MDkgMTMuMjMyOCAxMzkuMTE2IDEyLjczNTMgMTQwLjA2NyAxMi43MzUzQzE0MC45NTQgMTIuNzM1MyAxNDEuNzgxIDEzLjA4MDkgMTQyLjI4NyAxMy4zNjMxTDE0Mi44OCAxMS4xMDkzQzE0Mi4yMDMgMTAuNzQwMSAxNDEuMTY3IDEwLjQzNjcgMTM5Ljk2MyAxMC40MzY3QzEzNy4zMzggMTAuNDM2NyAxMzUuNjQ3IDEyLjA4MzYgMTM1LjY0NyAxNC4yNTE3QzEzNS42NDcgMTUuNTc1OSAxMzYuNDQ5IDE2Ljg1NCAxMzguNjUgMTcuNzY0NEMxMzkuOTM5IDE4LjMyODEgMTQwLjM0MSAxOC43MTgzIDE0MC4zNDEgMTkuNDU1NEMxNDAuMzQxIDIwLjE5NDggMTM5LjgxNCAyMC42NzEyIDEzOC43MTMgMjAuNjcxMkMxMzcuNzQxIDIwLjY3MTIgMTM2LjU3NiAyMC4yMzY3IDEzNS45NjQgMTkuODY3MkwxMzUuMzcyIDIyLjE4NzhDMTM2LjE1MyAyMi42NjY5IDEzNy40MDQgMjIuOTkwOSAxMzguNjkyIDIyLjk5MDlDMTQxLjYzMiAyMi45OTA5IDE0My4zMjMgMjEuNDcxOSAxNDMuMzIzIDE5LjE3M0MxNDMuMzIzIDE3LjUwNTcgMTQyLjM5NCAxNi4zMzI4IDE0MC40MDUgMTUuNDg5MyIgZmlsbD0iI0Y0NzIxNiIgLz4NCiAgPHBhdGggZD0iTTI0LjgyNDggMi42NTg1OEg0LjMwMDcyQzMuNTY0MjMgMi42NTg1OCAyLjk2Mjk1IDMuMjc1NDkgMi45NjI5NSA0LjAzMlYxNi42NDY1QzcuMDI1MDYgMTIuMjY2NiAxNC4yNTU0IDcuNDgxNTcgMjUuMjc5NyA2LjE3NzE2QzI1LjU3MjEgNi4xNDM1NCAyNi4xNjE1IDYuMDA0MSAyNi4xNjE1IDUuMTY2NDhWNC4wMzJDMjYuMTYxNSAzLjI3NTQ5IDI1LjU2MDYgMi42NTg1OCAyNC44MjQ4IDIuNjU4NTgiIGZpbGw9IiNGNDcyMTYiIC8+DQogIDxwYXRoIGQ9Ik0xNDYuMDM3IDkuNzY1NzdIMTQ1LjczOVY5LjEyNjk0SDE0NS45ODZDMTQ2LjI2MyA5LjEyNjk0IDE0Ni40MDEgOS4yMzE3NSAxNDYuNDAxIDkuNDQxNjJDMTQ2LjQwMSA5LjUzOTM0IDE0Ni4zNjggOS42MTc2MiAxNDYuMzAzIDkuNjc2OTZDMTQ2LjIzOCA5LjczNjEgMTQ2LjE0OSA5Ljc2NTc3IDE0Ni4wMzcgOS43NjU3N1pNMTQ2LjMzNCA5Ljk4ODFWOS45Nzg1OEMxNDYuNjggOS44ODk5OCAxNDYuODUzIDkuNjk0NzkgMTQ2Ljg1MyA5LjM5MTk1QzE0Ni44NTMgOS4xOTc3MiAxNDYuNzgzIDkuMDQ2MDMgMTQ2LjY0MSA4LjkzNjY2QzE0Ni40OTkgOC44MjY4OSAxNDYuMjkzIDguNzcyMSAxNDYuMDIzIDguNzcyMUgxNDUuMzE5VjEwLjk4MTRIMTQ1LjczOVYxMC4wOTQ1SDE0NS45MjNDMTQ2LjA1NiAxMC4wOTQ1IDE0Ni4xNiAxMC4yMDQxIDE0Ni4yMzUgMTAuNDIzMkwxNDYuNDI5IDEwLjk4MTRIMTQ2LjkyOUwxNDYuNjcxIDEwLjM1MjRDMTQ2LjU4NyAxMC4xNDU3IDE0Ni40NzQgMTAuMDI0MyAxNDYuMzM0IDkuOTg4MSIgZmlsbD0iI0Y0NzIxNiIgLz4NCiAgPHBhdGggZD0iTTE0Ny4wOTQgMTAuOTcyOUMxNDYuODA4IDExLjI2MjQgMTQ2LjQ2IDExLjQwNzQgMTQ2LjA1IDExLjQwNzRDMTQ1LjYzNyAxMS40MDc0IDE0NS4yODcgMTEuMjY0MiAxNDUuMDAxIDEwLjk3OEMxNDQuNzE1IDEwLjY5MTYgMTQ0LjU3MiAxMC4zMzI1IDE0NC41NzIgOS45MDA0NkMxNDQuNTcyIDkuNDc2MjEgMTQ0LjcxMiA5LjExOTA1IDE0NC45OTMgOC44Mjg2N0MxNDUuMjc0IDguNTM4NzQgMTQ1LjYyNiA4LjM5MzU4IDE0Ni4wNSA4LjM5MzU4QzE0Ni40NjggOC4zOTM1OCAxNDYuODE3IDguNTM3NTMgMTQ3LjEgOC44MjU1M0MxNDcuMzgzIDkuMTEzMTIgMTQ3LjUyNCA5LjQ3MTUgMTQ3LjUyNCA5LjkwMDQ2QzE0Ny41MjQgMTAuMzI2MyAxNDcuMzgyIDEwLjY4MzcgMTQ3LjA5NCAxMC45NzI5VjEwLjk3MjlaTTE0Ny4zMDIgOC42Mzk2QzE0Ni45NjcgOC4zMDgzMSAxNDYuNTU0IDguMTQyOTUgMTQ2LjA2IDguMTQyOTVDMTQ1LjU2IDguMTQyOTUgMTQ1LjE0IDguMzEzNjggMTQ0LjgwMSA4LjY1NTI1QzE0NC40NjIgOC45OTY0MSAxNDQuMjkyIDkuNDEzMTIgMTQ0LjI5MiA5LjkwNTIyQzE0NC4yOTIgMTAuNDExNiAxNDQuNDYgMTAuODI4OSAxNDQuNzk1IDExLjE1NzZDMTQ1LjEyOSAxMS40ODY1IDE0NS41NDYgMTEuNjUwOSAxNDYuMDQ1IDExLjY1MDlDMTQ2LjUzNiAxMS42NTA5IDE0Ni45NTIgMTEuNDgxMiAxNDcuMjkzIDExLjE0MjRDMTQ3LjYzNCAxMC44MDMzIDE0Ny44MDQgMTAuMzg2MiAxNDcuODA0IDkuODkwNzlDMTQ3LjgwNCA5LjM4ODAxIDE0Ny42MzcgOC45NzA2OSAxNDcuMzAyIDguNjM5NiIgZmlsbD0iI0Y0NzIxNiIgLz4NCjwvc3ZnPg==" Sizing="AutoSize" UseImageResolution="false" NavigateUrl="http://www.devexpress.com/Products/NET/Reporting/" SizeF="156.25,31.25" LocationFloat="382.3333,38.3333" />
+        <Item2 Ref="57" ControlType="XRPageInfo" Name="xrPageInfo1" TextFormatString="Page : {0 } / {1}" TextAlignment="MiddleCenter" SizeF="118.1389,24.63888" LocationFloat="771.861,10.00002" Font="Calibri, 10pt, style=Bold" ForeColor="255,75,75,75">
+          <StylePriority Ref="58" UseFont="false" UseForeColor="false" UsePadding="false" UseBorders="false" />
+        </Item2>
+      </Controls>
+    </Item2>
+    <Item3 Ref="59" ControlType="TopMarginBand" Name="topMarginBand1">
+      <Controls>
+        <Item1 Ref="60" ControlType="XRLabel" Name="xrLabel2" Text="Sales Summary by Year" TextAlignment="BottomCenter" SizeF="324,42" LocationFloat="280.1805,36.47224" Font="Calibri, 21.75pt" ForeColor="255,75,75,75" Padding="2,2,0,0,100">
+          <StylePriority Ref="61" UseFont="false" UseForeColor="false" />
+        </Item1>
+      </Controls>
+    </Item3>
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="62" Name="crossTabGeneralStyle1" BorderStyle="Inset" Padding="2,2,0,0,100" Font="Calibri, 9pt" ForeColor="255,75,75,75" BorderColor="255,160,160,160" Sides="All" StringFormat="Near;Near;0;None;Character;GenericDefault" />
+    <Item2 Ref="63" Name="crossTabHeaderStyle1" BorderStyle="Inset" Font="Calibri, 9pt, style=Bold" BackColor="255,242,242,242" StringFormat="Near;Center;0;None;Character;GenericDefault" TextAlignment="MiddleLeft" />
+    <Item3 Ref="64" Name="crossTabDataStyle1" BorderStyle="Inset" BackColor="White" StringFormat="Far;Center;0;None;Character;GenericDefault" TextAlignment="MiddleRight" />
+    <Item4 Ref="65" Name="crossTabTotalStyle1" BorderStyle="Inset" Font="Calibri, 9pt, style=Bold" BackColor="255,242,242,242" StringFormat="Far;Center;0;None;Character;GenericDefault" TextAlignment="MiddleRight" />
+  </StyleSheet>
+  <ParameterPanelLayoutItems>
+    <Item1 Ref="66" LayoutItemType="Group" Title="Salesperson filter">
+      <Items>
+        <Item1 Ref="67" LayoutItemType="Parameter" Parameter="#Ref-3" />
+        <Item2 Ref="68" LayoutItemType="Parameter" Parameter="#Ref-5" />
+      </Items>
+    </Item1>
+    <Item2 Ref="69" LayoutItemType="Group" Title="Category filter" Orientation="Horizontal">
+      <Items>
+        <Item1 Ref="70" LayoutItemType="Parameter" LabelOrientation="Vertical" Parameter="#Ref-7" />
+        <Item2 Ref="71" LayoutItemType="Parameter" LabelOrientation="Vertical" Parameter="#Ref-9" />
+      </Items>
+    </Item2>
+  </ParameterPanelLayoutItems>
+  <ComponentStorage>
+    <Item1 Ref="12" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v24.2" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9Ik5XaW5kQ29ubmVjdGlvblN0cmluZyIgRnJvbUFwcENvbmZpZz0idHJ1ZSIgLz48UXVlcnkgVHlwZT0iU2VsZWN0UXVlcnkiIE5hbWU9IlNhbGVzUGVyc29uIj48VGFibGVzPjxUYWJsZSBOYW1lPSJTYWxlc1BlcnNvbiIgLz48L1RhYmxlcz48Q29sdW1ucz48Q29sdW1uIFRhYmxlPSJTYWxlc1BlcnNvbiIgTmFtZT0iT3JkZXJJRCIgLz48Q29sdW1uIFRhYmxlPSJTYWxlc1BlcnNvbiIgTmFtZT0iQ291bnRyeSIgLz48Q29sdW1uIFRhYmxlPSJTYWxlc1BlcnNvbiIgTmFtZT0iRmlyc3ROYW1lIiAvPjxDb2x1bW4gVGFibGU9IlNhbGVzUGVyc29uIiBOYW1lPSJMYXN0TmFtZSIgLz48Q29sdW1uIFRhYmxlPSJTYWxlc1BlcnNvbiIgTmFtZT0iUHJvZHVjdE5hbWUiIC8+PENvbHVtbiBUYWJsZT0iU2FsZXNQZXJzb24iIE5hbWU9IkNhdGVnb3J5TmFtZSIgLz48Q29sdW1uIFRhYmxlPSJTYWxlc1BlcnNvbiIgTmFtZT0iT3JkZXJEYXRlIiAvPjxDb2x1bW4gVGFibGU9IlNhbGVzUGVyc29uIiBOYW1lPSJVbml0UHJpY2UiIC8+PENvbHVtbiBUYWJsZT0iU2FsZXNQZXJzb24iIE5hbWU9IlF1YW50aXR5IiAvPjxDb2x1bW4gVGFibGU9IlNhbGVzUGVyc29uIiBOYW1lPSJEaXNjb3VudCIgLz48Q29sdW1uIFRhYmxlPSJTYWxlc1BlcnNvbiIgTmFtZT0iRXh0ZW5kZWRQcmljZSIgLz48Q29sdW1uIFRhYmxlPSJTYWxlc1BlcnNvbiIgTmFtZT0iRnVsbE5hbWUiIC8+PC9Db2x1bW5zPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlMSI+PFZpZXcgTmFtZT0iU2FsZXNQZXJzb24iPjxGaWVsZCBOYW1lPSJPcmRlcklEIiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0iQ291bnRyeSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGaXJzdE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTGFzdE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUHJvZHVjdE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ2F0ZWdvcnlOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9yZGVyRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IlVuaXRQcmljZSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iUXVhbnRpdHkiIFR5cGU9IkludDE2IiAvPjxGaWVsZCBOYW1lPSJEaXNjb3VudCIgVHlwZT0iRG91YmxlIiAvPjxGaWVsZCBOYW1lPSJFeHRlbmRlZFByaWNlIiBUeXBlPSJVbmtub3duIiAvPjxGaWVsZCBOYW1lPSJGdWxsTmFtZSIgVHlwZT0iVW5rbm93biIgLz48L1ZpZXc+PC9EYXRhU2V0PjwvUmVzdWx0U2NoZW1hPjxDb25uZWN0aW9uT3B0aW9ucyBDbG9zZUNvbm5lY3Rpb249InRydWUiIC8+PC9TcWxEYXRhU291cmNlPg==" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 Ref="1" ObjectType="DevExpress.XtraReports.Parameters.DynamicListLookUpSettings, DevExpress.Printing.v24.2.Core" DataSource="#Ref-12" DataMember="SalesPerson" ValueMember="Country" DisplayMember="Country" />
+    <Item2 Ref="4" ObjectType="DevExpress.XtraReports.Parameters.DynamicListLookUpSettings, DevExpress.Printing.v24.2.Core" DataSource="#Ref-12" DataMember="SalesPerson" ValueMember="FullName" DisplayMember="FullName" FilterString="[Country] In (?country)" />
+    <Item3 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v24.2" Ref="6" Content="System.Boolean" Type="System.Type" />
+    <Item4 Ref="8" ObjectType="DevExpress.XtraReports.Parameters.DynamicListLookUpSettings, DevExpress.Printing.v24.2.Core" DataSource="#Ref-12" DataMember="SalesPerson" ValueMember="CategoryName" DisplayMember="CategoryName" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

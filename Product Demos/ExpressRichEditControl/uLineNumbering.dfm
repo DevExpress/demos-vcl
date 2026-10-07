@@ -1,0 +1,2 @@
+inherited frmRichEditLineNumbering: TfrmRichEditLineNumbering
+end

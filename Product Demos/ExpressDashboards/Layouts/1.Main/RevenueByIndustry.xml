@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Revenue by Industry" Alignment="Left" />
+  <DataSources>
+    <JsonDataSource Name="Statistics" ConnectionName="RevenueByIndustryConnection" RootElement="mdRevenueByIndustry" ComponentName="dsStatistics">
+      <Schema>
+        <Node Name="root" Selected="false" NodeType="Object" DiscoveryLimitApplied="true">
+          <Node Name="mdRevenueByIndustry" Selected="true" NodeType="Array">
+            <Node Name="City" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="Industry" Type="System.String" Selected="true" NodeType="Property" />
+            <Node Name="Latitude" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="Longitude" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="RecId" Type="System.Nullable`1[System.Int64]" Selected="true" NodeType="Property" />
+            <Node Name="Revenue" Type="System.Nullable`1[System.Double]" Selected="true" NodeType="Property" />
+            <Node Name="State" Type="System.String" Selected="true" NodeType="Property" />
+          </Node>
+        </Node>
+      </Schema>
+    </JsonDataSource>
+  </DataSources>
+  <Items>
+    <GeoPointMap ComponentName="mapRevenueByCity" Name="Revenue by City" DataSource="dsStatistics" ShapefileArea="USA" ShapeTitleAttributeName="NAME" EnableClustering="true">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="Latitude" DefaultId="DataItem0" />
+        <Dimension DataMember="Longitude" DefaultId="DataItem1" />
+        <Measure DataMember="Revenue" Name="Revenue" DefaultId="DataItem2">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+        <Dimension DataMember="City" DefaultId="DataItem3" />
+        <Dimension DataMember="Industry" DefaultId="DataItem4" />
+      </DataItems>
+      <ViewArea TopLatitude="49.369672064487254" BottomLatitude="24.542349340056283" LeftLongitude="-124.70997774915153" RightLongitude="-66.987022055984482" CenterPointLatitude="37.995066405185554" CenterPointLongitude="-95.848499902568008" />
+      <MapLegend />
+      <WeightedLegend />
+      <Latitude DefaultId="DataItem0" />
+      <Longitude DefaultId="DataItem1" />
+      <TooltipDimensions>
+        <TooltipDimension DefaultId="DataItem3" />
+        <TooltipDimension DefaultId="DataItem4" />
+      </TooltipDimensions>
+      <Value DefaultId="DataItem2" />
+    </GeoPointMap>
+    <ListBox ComponentName="listBoxIndustry" Name="Industry" DataSource="dsStatistics" EnableSearch="true">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="Industry" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="listBoxIndustry" Weight="17.036379769299025" />
+      <LayoutItem DashboardItem="mapRevenueByCity" Weight="82.963620230700982" />
+    </LayoutGroup>
+  </LayoutTree>
+  <CustomProperties>
+    <Description>["The dashboard displays revenue data by industry.","The list box on the left lists US industries, while the map indicates revenues for all industries based on geographical locations. You can select list box values to view revenue distribution for specific industries. The map supports clustering which is used to aggregate bubbles based on map size or zoom level."]</Description>
+    <Links>[{"href":"https://docs.devexpress.com/Dashboard/117367/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/filter-elements/filter-elements-overview","text":"Filter Elements"},{"href":"https://docs.devexpress.com/Dashboard/117167/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/geo-point-maps","text":"Geo Point Maps"},{"href":"https://docs.devexpress.com/Dashboard/117390/web-dashboard/create-dashboards-on-the-web/dashboard-item-settings/geo-point-maps/clustering","text":"Clustering"}]</Links>
+  </CustomProperties>
+</Dashboard>
